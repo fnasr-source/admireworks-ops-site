@@ -1,0 +1,205 @@
+/* GENERATED FILE. Do not edit.
+ * Projected from apps/client-portal/public/strategies/_engine/v1/tokens.css by
+ * scripts/build-scroll-tokens.mjs. Edit the source, then re-run.
+ *
+ * Only the @font-face URLs differ: they point at my.admireworks.com, because the
+ * licensed face files are deliberately NOT copied into the public ops-site repo.
+ * 9 URLs rewritten.
+ */
+/* ==========================================================================
+   Admireworks StoryOS — Brand Tokens (shared, v1)
+   Single source of truth for palette, typography, spacing across ALL decks.
+   Per-deck CSS overrides are forbidden. To tweak a deck, change a token here.
+   ========================================================================== */
+
+/* ---------- FONT FACES ---------- */
+@font-face { font-family: 'Jaymont'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/jaymont/Jaymont Light.otf') format('opentype'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Jaymont'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/jaymont/Jaymont Medium.otf') format('opentype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Jaymont'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/jaymont/Jaymont Bold.otf') format('opentype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Jaymont'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/jaymont/Jaymont Black.otf') format('opentype'); font-weight: 900; font-display: swap; }
+@font-face { font-family: 'Akkurat Pro'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/akkurat-pro/Akkurat Pro-Light.otf') format('opentype'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Akkurat Pro'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/akkurat-pro/Akkurat Pro-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Akkurat Pro'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/akkurat-pro/Akkurat Pro-Bold.otf') format('opentype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Noor'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/noor/Noor Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Noor'; src: url('https://my.admireworks.com/strategies/_engine/v1/assets/fonts/noor/Noor Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+/* ---------- ADMIRE8 BRAND TOKENS ---------- */
+:root {
+  /* Primary palette */
+  --aw-navy: #001a70;
+  --aw-gold: #cc9f53;
+  --aw-gold-light: #e8c97d;
+
+  /* Accent palette (per CLAUDE.md ADMIRE8) */
+  --accent-emerald: #2d5a3d;
+  --accent-berry-blue: #44756a;
+  --accent-tomato: #d44315;
+  --accent-apricot: #ea5c2e;
+  --accent-mango: #fab700;
+  --accent-jumeirah: #66bc99;
+
+  /* Neutrals */
+  --off-white: #faf9f7;
+  --cream: #f5f2ed;
+  --cream-dark: #ece7df;
+  --charcoal: #3a3835;
+  --charcoal-light: #5a5753;
+  --white: #ffffff;
+
+  /* ---------- TYPOGRAPHY ----------
+     Latin-first defaults. See the locale block below for what happens on an
+     Arabic deck, and why it is done by redefining these two tokens rather than
+     by writing a per-class rule.
+
+     Measured glyph coverage of the three brand faces, which is the whole
+     reason this section is shaped the way it is:
+       Jaymont        0 Arabic glyphs,  58 Latin
+       Akkurat Pro    0 Arabic glyphs,  58 Latin
+       Noor          73 Arabic glyphs,   4 Latin
+
+     CSS font fallback is per character, not per element. So a stack that leads
+     with Noor and appends a Latin face renders Arabic in Noor and any Latin
+     token inside that same string (a brand name, "ROAS", a numeral) in the
+     Latin face, instead of dropping it to whatever the viewer's OS supplies.
+     That per-character hand-off is the point of the ordering below, and it
+     works in both directions. Noor is appended to the LATIN stacks as well, so
+     an Arabic word that appears in an otherwise-English field renders in Noor
+     instead of dropping to the OS default. That is the common case and it needs
+     no markup: no lang attribute, no locale, no renderer change. It is why this
+     file carries the Arabic fix rather than app.js. */
+  --font-headline: 'Jaymont', 'Noor', Georgia, serif;
+  --font-body: 'Akkurat Pro', 'Helvetica Neue', 'Noor', sans-serif;
+
+  /* Arabic-first stacks. Noor leads; the Latin brand faces are appended purely
+     to catch embedded Latin, never as the primary voice. */
+  --font-headline-ar: 'Noor', 'Jaymont', Georgia, serif;
+  --font-body-ar: 'Noor', 'Akkurat Pro', 'Helvetica Neue', sans-serif;
+
+  /* Kept for the bilingual pair slot (the `_ar` classes) on `locale: 'bi'`
+     decks, where Arabic sits beside Latin rather than replacing it. */
+  --font-arabic: 'Noor', 'Akkurat Pro', sans-serif;
+
+  /* ---------- BILINGUAL PAIRING ----------
+     On a `bi` deck the Arabic line is the Latin line's equal, not its caption.
+     It used to be set at roughly half the Latin size at opacity 0.5 to 0.75,
+     which read as a footnote and is the reason Arabic looked like an
+     afterthought in every bilingual deck we shipped.
+
+     Each `_ar` rule now sizes itself from its Latin sibling's own clamp()
+     multiplied by this one number, so the pairing is legible in the source and
+     tunable in one place. It sits just under 1 because Arabic script carries
+     more visual mass than Latin at the same pixel size; 0.92 is where the two
+     read as equal rather than where they measure equal. */
+  --ar-pair-scale: 0.92;
+
+  /* Noor sits on a shorter ascender than Jaymont, so an Arabic line paired with
+     a Latin one reads as slightly high even at matched optical size. The lift
+     drops it onto the Latin baseline. Small enough to look like nothing and
+     wrong enough to notice when absent. */
+  --ar-pair-lift: 0.012em;
+
+  /* For genuinely supporting Arabic lines (a cover tagline), where the recession
+     is typographic hierarchy rather than a statement about the language. Any
+     Arabic that carries meaning belongs at full opacity. */
+  --ar-support-opacity: 0.75;
+
+  /* ==========================================================================
+     TYPE SCALE
+     From the Claude Design pass, 2026-08-31. One ratio (1.25), one fluid base,
+     nine named steps, replacing the 266 ad hoc clamp() values currently spread
+     through styles.css.
+
+     WHY cqw AND NOT vw. The design handoff justified this by saying the slide
+     is a fixed canvas scaled to fit, so vw would shrink a second time. That is
+     not true of this engine: setupScaling() is a no-op and .slide is width:100%,
+     genuinely responsive. The real reason is presenter mode. There, .viewport
+     becomes `grid-template-columns: 1fr 340px`, so at a 1440px window the slide
+     box is about 1100px while vw still reads 1440. Type sized in vw is then
+     roughly 30% larger than the box holding it. cqw reads the slide box itself,
+     so the ramp is identical in the deck, in presenter mode, in the ?mode=embed
+     iframe and in the ?pdf=1 capture.
+
+     This requires container-type on .slide, which is set in styles.css. If that
+     declaration is ever removed, every cqw here silently resolves to 0 and the
+     deck renders at the clamp minimum. Do not separate them. */
+  /* --fs-root is the unscaled ramp. --fs-base is what every other step derives
+     from, and it is re-declared per slide in styles.css so fit-then-refuse can
+     shrink a whole slide by one multiplier without disturbing the 1.25 ratio.
+     Custom properties resolve per element, so redefining --fs-base on .slide
+     makes every --fs-* below it recompute automatically. */
+  --fs-root:      clamp(19px, 1.98cqw, 38px);
+  --fs-base:      var(--fs-root);
+  --fs-micro:     calc(var(--fs-base) / 1.5625);   /* 24px at 1920. The floor. */
+  --fs-caption:   calc(var(--fs-base) / 1.25);     /*  30 */
+  --fs-body:      var(--fs-base);                  /*  38 */
+  --fs-lede:      calc(var(--fs-base) * 1.25);     /*  47 */
+  --fs-subhead:   calc(var(--fs-base) * 1.5625);   /*  59 */
+  --fs-title:     calc(var(--fs-base) * 1.9531);   /*  74. Ceiling for prose. */
+  --fs-statement: calc(var(--fs-base) * 2.4414);   /*  92 */
+  --fs-display:   calc(var(--fs-base) * 3.0518);   /* 115 */
+  --fs-figure:    calc(var(--fs-base) * 3.8147);   /* 144. Hero numeral. */
+
+  /* ==========================================================================
+     SPACING SCALE
+     Ratio 1.5 from an 8px root, rounded to whole pixels so nothing lands on a
+     half. --sp-7 is the slide gutter, in every language. --sp-5 is the only gap
+     in a grid of images. --sp-2 is the one tight space: caption-to-image and
+     label-to-figure. */
+  --sp-1: 8px;
+  --sp-2: 12px;
+  --sp-3: 18px;
+  --sp-4: 28px;
+  --sp-5: 42px;
+  --sp-6: 64px;
+  --sp-7: 96px;
+  --sp-8: 144px;
+
+  /* Legacy padding tokens. Still referenced by the 266 un-migrated clamps in
+     styles.css, so they stay until those are cut over layout by layout. New
+     work uses --sp-*. */
+  --pad-x: clamp(20px, 5vw, 100px);
+  --pad-y: clamp(24px, 4vw, 72px);
+}
+
+/* ==========================================================================
+   LOCALE
+   Driven by `meta.locale` in the deck's content.json, which app.js resolves
+   onto <html lang dir>. See docs/PROPOSAL-DESIGN-SYSTEM.md section 2.
+   ========================================================================== */
+
+/* On an Arabic deck, redefine the two typography tokens rather than chasing
+   individual classes.
+
+   WHY. Of the 133 primary text classes in styles.css, 93 had no Arabic
+   treatment and were rendering Arabic through faces with zero Arabic glyphs.
+   78 of those inherit font-family, so the `body` rule below reaches them. The
+   other 15 reference var(--font-headline) or var(--font-body) explicitly, so
+   redefining the tokens reaches those too. Two declarations close a 93-class
+   gap, and, more importantly, a class added tomorrow is covered automatically
+   instead of joining the backlog.
+
+   `:root[dir="rtl"]` rather than `[dir="rtl"]`: the attribute normally sits on
+   <html>, which IS :root, so a bare attribute selector would tie on
+   specificity with the :root block above and be decided by source order. The
+   compound selector wins outright and does not depend on where this block
+   sits in the file. */
+:root[dir="rtl"] {
+  --font-headline: var(--font-headline-ar);
+  --font-body: var(--font-body-ar);
+}
+
+:root[dir="rtl"] body {
+  font-family: var(--font-body);
+}
+
+/* The safety net for the other direction: an Arabic string inside a deck whose
+   locale is `en` or `bi`. app.js marks those runs with lang="ar"; this routes
+   them to the Arabic stack without the deck having to flip direction. A deck
+   that never emits lang="ar" is unaffected. */
+:lang(ar) {
+  font-family: var(--font-body-ar);
+}
+
+:lang(ar) h1, :lang(ar) h2, :lang(ar) h3 {
+  font-family: var(--font-headline-ar);
+}

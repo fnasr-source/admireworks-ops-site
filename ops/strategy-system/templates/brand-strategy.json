@@ -1,0 +1,90 @@
+{
+  "id": "brand-strategy",
+  "name": "Brand Strategy",
+  "description": "Brand positioning, identity, and messaging framework.",
+  "framework": "brand",
+  "locale": "en",
+  "slides": [
+    {
+      "order": 0,
+      "layout": "cover",
+      "content": { "title": "Brand Strategy", "subtitle": "Brand Positioning & Identity Framework", "client": "Client Name", "date": "2026" },
+      "presenterNotes": "Welcome the client. This deck covers their brand strategy."
+    },
+    {
+      "order": 1000,
+      "layout": "section-divider",
+      "content": { "section_number": "01", "title": "Brand Foundation" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 2000,
+      "layout": "title-bullets",
+      "content": {
+        "title": "Brand Vision & Mission",
+        "bullets": ["Vision: [Insert long-term vision]", "Mission: [Insert day-to-day mission]", "Values: [Core brand values]"]
+      },
+      "presenterNotes": "Discuss where the brand wants to be in 5-10 years."
+    },
+    {
+      "order": 3000,
+      "layout": "section-divider",
+      "content": { "section_number": "02", "title": "Target Audience" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 4000,
+      "layout": "persona",
+      "content": {
+        "name": "Primary Persona",
+        "age": "25–40",
+        "role": "Decision Maker",
+        "pain_points": ["Pain point 1", "Pain point 2", "Pain point 3"],
+        "goals": ["Goal 1", "Goal 2"],
+        "quote": "Insert a representative quote from this persona."
+      },
+      "presenterNotes": "Walk through the primary customer avatar."
+    },
+    {
+      "order": 5000,
+      "layout": "section-divider",
+      "content": { "section_number": "03", "title": "Brand Positioning" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 6000,
+      "layout": "title-body",
+      "content": {
+        "title": "Positioning Statement",
+        "body": "For [target audience] who [need/desire], [Brand Name] is the [category] that [key benefit] because [reason to believe]."
+      },
+      "presenterNotes": "Read the positioning statement aloud and discuss."
+    },
+    {
+      "order": 7000,
+      "layout": "section-divider",
+      "content": { "section_number": "04", "title": "Messaging Framework" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 8000,
+      "layout": "title-bullets",
+      "content": {
+        "title": "Core Messages",
+        "bullets": ["Message 1: [Primary brand promise]", "Message 2: [Supporting proof point]", "Message 3: [Emotional driver]", "Message 4: [Rational differentiator]"]
+      },
+      "presenterNotes": "These are the messages that all communications should reinforce."
+    },
+    {
+      "order": 9000,
+      "layout": "closing",
+      "content": {
+        "title": "Next Steps",
+        "subtitle": "Let's build something admirable.",
+        "cta": "Schedule a follow-up call",
+        "contact": "hello@admireworks.com"
+      },
+      "presenterNotes": "End with clear action items and agreed next steps."
+    }
+  ]
+}

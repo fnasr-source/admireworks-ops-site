@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Maison Ein: Prospecting Handoff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #E7E4DD;
+    --bg-elevated: #F3F1EB;
+    --bg-card: #FBFAF7;
+    --ink: #221E1A;
+    --ink-soft: #5B5349;
+    --ink-faint: #8C8478;
+    --line: #D2CDC2;
+    --accent: #6E2A26;
+    --accent-soft: #F0DAD3;
+    --brass: #8C6F42;
+    --status-bg: #F3E3C2;
+    --status-ink: #6E4E12;
+    --shadow: 0 1px 2px rgba(34, 30, 26, 0.06), 0 8px 24px rgba(34, 30, 26, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1C1815;
+      --bg-elevated: #241E19;
+      --bg-card: #2A2320;
+      --ink: #EDE8E0;
+      --ink-soft: #B3A99C;
+      --ink-faint: #7D7468;
+      --line: #3A322A;
+      --accent: #D08A80;
+      --accent-soft: #3A2420;
+      --brass: #C9A467;
+      --status-bg: #3D3218;
+      --status-ink: #E8C878;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1C1815;
+    --bg-elevated: #241E19;
+    --bg-card: #2A2320;
+    --ink: #EDE8E0;
+    --ink-soft: #B3A99C;
+    --ink-faint: #7D7468;
+    --line: #3A322A;
+    --accent: #D08A80;
+    --accent-soft: #3A2420;
+    --brass: #C9A467;
+    --status-bg: #3D3218;
+    --status-ink: #E8C878;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.25);
+  }
+  :root[data-theme="light"] {
+    --bg: #E7E4DD;
+    --bg-elevated: #F3F1EB;
+    --bg-card: #FBFAF7;
+    --ink: #221E1A;
+    --ink-soft: #5B5349;
+    --ink-faint: #8C8478;
+    --line: #D2CDC2;
+    --accent: #6E2A26;
+    --accent-soft: #F0DAD3;
+    --brass: #8C6F42;
+    --status-bg: #F3E3C2;
+    --status-ink: #6E4E12;
+    --shadow: 0 1px 2px rgba(34, 30, 26, 0.06), 0 8px 24px rgba(34, 30, 26, 0.05);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", Georgia, serif;
+  }
+  .ar {
+    direction: rtl;
+    text-align: right;
+    font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, Arial, sans-serif;
+    unicode-bidi: plaintext;
+  }
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px 96px; }
+
+  /* header */
+  .masthead { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--brass); font-weight: 600;
+  }
+  h1.serif {
+    font-size: clamp(30px, 4vw, 42px); margin: 0; text-wrap: balance; font-weight: 500;
+  }
+  .subhead { color: var(--ink-soft); font-size: 15px; max-width: 62ch; }
+
+  .status-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 20px 0 0; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--status-bg); color: var(--status-ink);
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em;
+    padding: 5px 11px; border-radius: 100px;
+  }
+  .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .updated { color: var(--ink-faint); font-size: 12.5px; }
+
+  /* vitals grid */
+  .vitals {
+    margin-top: 28px; background: var(--bg-elevated); border: 1px solid var(--line);
+    border-radius: 10px; padding: 20px 24px; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px 24px;
+  }
+  .vital dt { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint); margin-bottom: 4px; }
+  .vital dd { margin: 0; font-size: 14.5px; font-weight: 600; }
+  .vital dd.mono { font-weight: 500; font-size: 13px; }
+
+  /* nav */
+  nav.toc {
+    display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 32px 0 0;
+    padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    font-size: 13.5px;
+  }
+  nav.toc a { color: var(--ink-soft); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); }
+
+  section { margin-top: 64px; }
+  section > h2.serif {
+    font-size: 24px; font-weight: 500; margin: 0 0 6px; text-wrap: balance;
+  }
+  section > .section-note { color: var(--ink-soft); font-size: 14px; max-width: 68ch; margin-bottom: 28px; }
+
+  /* ad cards */
+  .card {
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: var(--shadow); padding: 0; margin-bottom: 22px; overflow: hidden;
+  }
+  .card-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 16px 20px; border-bottom: 1px solid var(--line);
+  }
+  .card-title { font-size: 16px; font-weight: 600; }
+  .card-title .num { color: var(--brass); font-variant-numeric: tabular-nums; margin-right: 8px; }
+  .card-eng { font-size: 12.5px; color: var(--ink-faint); background: var(--accent-soft); padding: 3px 9px; border-radius: 100px; white-space: nowrap; }
+
+  .card-body { display: grid; grid-template-columns: 200px 1fr; gap: 0; }
+  @media (max-width: 620px) { .card-body { grid-template-columns: 1fr; } }
+
+  .art { display: flex; gap: 8px; padding: 18px; background: var(--bg-elevated); align-items: flex-start; justify-content: center; }
+  .art img { width: 84px; height: auto; border-radius: 6px; border: 1px solid var(--line); display: block; }
+  .art figure { margin: 0; text-align: center; }
+  .art figcaption { font-size: 10.5px; color: var(--ink-faint); margin-top: 5px; }
+
+  .copy { padding: 18px 22px; display: flex; flex-direction: column; gap: 14px; }
+  .copy .ar { font-size: 15.5px; white-space: pre-line; }
+  .field-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint); margin-bottom: 4px; }
+  .headline { font-size: 15px; font-weight: 600; }
+  .en-desc { font-size: 13px; color: var(--ink-soft); }
+  .cta-row { display: flex; align-items: center; gap: 10px; font-size: 13px; flex-wrap: wrap; }
+  .cta-btn { background: var(--accent); color: #fff; padding: 4px 12px; border-radius: 6px; font-weight: 600; font-size: 12.5px; }
+  .fix-note { font-size: 12.5px; background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 8px 12px; border-radius: 0 6px 6px 0; color: var(--ink); }
+
+  .ids { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 11.5px; color: var(--ink-faint); padding: 12px 22px 16px; border-top: 1px solid var(--line); }
+  .ids b { color: var(--ink-soft); font-weight: 600; }
+
+  .permalink { font-size: 13px; }
+
+  /* held out */
+  .held-out {
+    border: 1px dashed var(--line); border-radius: 12px; padding: 18px 20px; margin-top: 24px;
+    color: var(--ink-soft); font-size: 13.5px; background: var(--bg-elevated);
+  }
+  .held-out strong { color: var(--ink); }
+
+  /* copy blocks (retargeting / carousel) */
+  .copy-block { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; }
+  .copy-block h3 { font-size: 14.5px; margin: 0 0 10px; font-weight: 600; }
+  .carousel-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 10px; margin-top: 10px; }
+  .carousel-card { background: var(--bg-elevated); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+  .carousel-card .n { font-size: 10.5px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* fixes log */
+  .fixlist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .fixlist li { border-left: 3px solid var(--brass); padding-left: 14px; font-size: 14px; }
+  .fixlist .before { color: var(--ink-faint); text-decoration: line-through; }
+  .fixlist .after { color: var(--accent); font-weight: 600; }
+  .fixlist .why { color: var(--ink-soft); font-size: 13px; margin-top: 2px; }
+
+  /* appendix table */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; min-width: 640px; }
+  th, td { text-align: left; padding: 9px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); background: var(--bg-elevated); }
+  tr:last-child td { border-bottom: none; }
+
+  footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-faint); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="eyebrow">Admireworks &middot; Internal handoff</div>
+    <h1 class="serif">Maison Ein: Prospecting Campaign</h1>
+    <p class="subhead">Everything live in the ad account right now: all 8 final ads, full Arabic/English copy, the corrected wording, and the object IDs to find each thing in Ads Manager. Built for handoff to whoever picks up the campaign next.</p>
+  </div>
+
+  <div class="status-row">
+    <span class="pill">PAUSED, zero spend, awaiting explicit go-live</span>
+    <span class="updated">Currency: USD &middot; Updated 2026-07-08</span>
+  </div>
+
+  <dl class="vitals">
+    <div class="vital"><dt>Ad account</dt><dd class="mono">act_854742840194637</dd></div>
+    <div class="vital"><dt>Campaign</dt><dd class="mono">120250038065640030</dd></div>
+    <div class="vital"><dt>Ad set</dt><dd class="mono">120250038095120030</dd></div>
+    <div class="vital"><dt>Identity</dt><dd>@maisonein (17841477429272017)</dd></div>
+    <div class="vital"><dt>Budget</dt><dd>$55.00/day, CBO</dd></div>
+    <div class="vital"><dt>Bid strategy</dt><dd>Lowest cost, no cap</dd></div>
+    <div class="vital"><dt>Placements</dt><dd>Instagram only (all surfaces)</dd></div>
+    <div class="vital"><dt>Audience</dt><dd>Advantage+, women 25 to 65, KSA</dd></div>
+    <div class="vital"><dt>Optimization</dt><dd>Purchase (7-day click)</dd></div>
+    <div class="vital"><dt>Pixel</dt><dd class="mono">1016905046854956</dd></div>
+  </dl>
+
+  <nav class="toc">
+    <a href="#statics">Static concept ads (3)</a>
+    <a href="#existing">Existing-post ads (5)</a>
+    <a href="#held-out">Held-out alternate</a>
+    <a href="#retargeting">Retargeting copy</a>
+    <a href="#carousel">Carousel (built, not deployed)</a>
+    <a href="#fixes">Copy fixes made</a>
+    <a href="#appendix">Object ID appendix</a>
+  </nav>
+
+  <section id="statics">
+    <h2 class="serif">Static concept ads</h2>
+    <p class="section-note">Three crafted prospecting concepts, rebuilt from scratch under the @maisonein identity: multi-ratio (4:5 feed, 9:16 story/reels), no motion, no Meta creative enhancements. Each carries a price range and the Tabby installment mention that the organic posts don't.</p>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><span class="num">01</span>Editorial Hero</div>
+        <span class="card-eng">Quiet luxury, cold hook</span>
+      </div>
+      <div class="card-body">
+        <div class="art">
+          <figure><img src="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/maison-ein/2026-07/statics/editorial-hero-1196-4x5.jpg" alt="Editorial hero, 4:5 feed crop" /><figcaption>Feed 4:5</figcaption></figure>
+          <figure><img src="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/maison-ein/2026-07/statics/editorial-hero-1196-9x16.jpg" alt="Editorial hero, 9:16 story crop" /><figcaption>Story 9:16</figcaption></figure>
+        </div>
+        <div class="copy">
+          <div>
+            <div class="field-label">Primary text</div>
+            <p class="ar">في الغرفة، لا أحد يسأل من صممها.
+الجميع يشعرون بها فقط.
+
+دار عين: قطعة واحدة تحمل حضوراً هادئاً، نسيج يتحرك معكِ، تفصيل مصمم ليُلاحظ عن قرب لا عن بعد.
+
+من ALBA إلى AÉRA، ثمانية تصاميم بين 500 و672 ريال، بالتقسيط مع Tabby.
+
+هذه ليست إطلالة تُعلن عن نفسها. هي إطلالة يتذكرها من رآها.</p>
+          </div>
+          <div>
+            <div class="field-label">Headline</div>
+            <div class="headline ar">دار عين: حضور لا يحتاج إلى صوت</div>
+          </div>
+          <div>
+            <div class="field-label">Link description (EN)</div>
+            <div class="en-desc">Maison Ein presents elevated occasion pieces where craftsmanship is given time, creating refined silhouettes with a more intimate sense of presence.</div>
+          </div>
+          <div class="cta-row"><span class="cta-btn">Learn More</span><a class="permalink" href="https://einabayaa.com/ar-sa/categories/1541842/%D8%AF%D8%A7%D8%B1-%D8%B9%D9%8A%D9%86?utm_source=meta&utm_medium=paid_social&utm_campaign=AW_MAISON-EIN_2026-07&utm_content=concept1_hero_v4">einabayaa.com/ar-sa/&hellip;/دار-عين</a></div>
+        </div>
+      </div>
+      <div class="ids"><span><b>Creative</b> 1349262646676488</span><span><b>Ad</b> 120250174321020030</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><span class="num">02</span>Fabric &amp; Craft</div>
+        <span class="card-eng">Trust, quality detail</span>
+      </div>
+      <div class="card-body">
+        <div class="art">
+          <figure><img src="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/maison-ein/2026-07/statics/fabric-craft-4805-4x5.jpg" alt="Fabric and craft detail, 4:5 feed crop" /><figcaption>Feed 4:5</figcaption></figure>
+          <figure><img src="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/maison-ein/2026-07/statics/fabric-craft-4805-9x16.jpg" alt="Fabric and craft detail, 9:16 story crop" /><figcaption>Story 9:16</figcaption></figure>
+        </div>
+        <div class="copy">
+          <div>
+            <div class="field-label">Primary text</div>
+            <p class="ar">قبل أن تلمسيها، صُممت كل درزة لتُرى عن قرب.
+
+في دار عين، الكتف المكشوف، الطيات، الأزرار الخلفية: لكل تفصيل سبب.
+
+هذا هو الفرق بين قطعة تُشترى وقطعة تُختار. هذا هو الحضور الهادئ الذي لا يُرى إلا عن قرب.
+
+من 500 إلى 672 ريال، بالتقسيط مع Tabby.</p>
+          </div>
+          <div>
+            <div class="field-label">Headline</div>
+            <div class="headline ar">درزة واحدة، فرق واضح</div>
+          </div>
+          <div class="fix-note"><b>Fixed:</b> the client flagged "الكشكشة" (a market-sewing term) in a live screenshot. Replaced with "الطيات" (atelier register). Also corrected "تلمسها" to "تلمسيها" for consistent feminine address.</div>
+          <div class="cta-row"><span class="cta-btn">Learn More</span><a class="permalink" href="https://einabayaa.com/ar-sa/categories/1541842/%D8%AF%D8%A7%D8%B1-%D8%B9%D9%8A%D9%86?utm_source=meta&utm_medium=paid_social&utm_campaign=AW_MAISON-EIN_2026-07&utm_content=concept2_fabric_v4">einabayaa.com/ar-sa/&hellip;/دار-عين</a></div>
+        </div>
+      </div>
+      <div class="ids"><span><b>Creative</b> 1021691790819954</span><span><b>Ad</b> 120250174321050030</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><span class="num">03</span>Maison Ein Story</div>
+        <span class="card-eng">Identity, house</span>
+      </div>
+      <div class="card-body">
+        <div class="art">
+          <figure><img src="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/maison-ein/2026-07/statics/maison-story-1126-4x5.jpg" alt="Maison Ein story group, 4:5 feed crop" /><figcaption>Feed 4:5</figcaption></figure>
+          <figure><img src="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/maison-ein/2026-07/statics/maison-story-1126-9x16.jpg" alt="Maison Ein story group, 9:16 story crop" /><figcaption>Story 9:16</figcaption></figure>
+        </div>
+        <div class="copy">
+          <div>
+            <div class="field-label">Primary text</div>
+            <p class="ar">أربع نساء، تصميم واحد يجمعهن: الثقة الهادئة.
+
+دار عين ليست مجرد قطع، هي بيت صُمم لمن تعرف قيمة التفاصيل.
+
+من إطلالة إلى أخرى، الخيط نفسه: حضور لا يحتاج إلى صوت عالٍ.
+
+تعرّفي على المجموعة كاملة.</p>
+          </div>
+          <div>
+            <div class="field-label">Headline</div>
+            <div class="headline ar">دار عين: بيت واحد، حضور واحد</div>
+          </div>
+          <div class="fix-note"><b>Fixed:</b> a transcription typo in the live text read "صوت عالِف" (corrupted), corrected to "صوت عالٍ". Also replaced the closing line's AI-tell calque "اكتشفي المجموعة كاملة" with "تعرّفي على المجموعة كاملة".</div>
+          <div class="cta-row"><span class="cta-btn">Learn More</span><a class="permalink" href="https://einabayaa.com/ar-sa/categories/1541842/%D8%AF%D8%A7%D8%B1-%D8%B9%D9%8A%D9%86?utm_source=meta&utm_medium=paid_social&utm_campaign=AW_MAISON-EIN_2026-07&utm_content=concept3_story_v4">einabayaa.com/ar-sa/&hellip;/دار-عين</a></div>
+        </div>
+      </div>
+      <div class="ids"><span><b>Creative</b> 1699589897787569</span><span><b>Ad</b> 120250174321040030</span></div>
+    </div>
+  </section>
+
+  <section id="existing">
+    <h2 class="serif">Existing-post ads</h2>
+    <p class="section-note">Five of @maisonein's own published Instagram posts, boosted as-is (real captions, real engagement) with a Learn More button added on top pointing at the collection page. No new copy written for these, the caption is exactly what's already live on the post.</p>
+
+    <div class="card">
+      <div class="card-head"><div class="card-title">Pieces Born</div><span class="card-eng">27 likes, feed image</span></div>
+      <div class="copy" style="padding:20px 22px;">
+        <p class="ar">بين البساطة والتميّز، تولد قطع دار عين.</p>
+        <p class="en-desc">Timeless silhouettes, crafted with intention and refined grace.</p>
+        <a class="permalink" href="https://www.instagram.com/p/DZlAkXAI1pZ/">instagram.com/p/DZlAkXAI1pZ</a>
+      </div>
+      <div class="ids"><span><b>Creative</b> 1437612274800250</span><span><b>Ad</b> 120250173817050030</span><span><b>Media ID</b> 18120250726809657</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="card-title">Details Speak</div><span class="card-eng">25 likes, 2 comments, feed image</span></div>
+      <div class="copy" style="padding:20px 22px;">
+        <p class="ar">حين تتحدث التفاصيل.
+تصميم يجمع بين البنية الراقية وانسيابية الحركة،
+
+من دار عين</p>
+        <p class="en-desc">When details speak. A design that blends refined structure with effortless movement. From Maison Ein.</p>
+        <a class="permalink" href="https://www.instagram.com/p/DaK41JoIsTX/">instagram.com/p/DaK41JoIsTX</a>
+      </div>
+      <div class="ids"><span><b>Creative</b> 4005401632924491</span><span><b>Ad</b> 120250173806060030</span><span><b>Media ID</b> 18595202731056563</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="card-title">Contemporary Luxury</div><span class="card-eng">21 likes, feed image</span></div>
+      <div class="copy" style="padding:20px 22px;">
+        <p class="ar">بتصاميم راقية وخطوطٍ نقية، تُجسد دار عين مفهوم الفخامة المعاصرة.</p>
+        <p class="en-desc">Designed with refined silhouettes and understated details that speak for themselves.</p>
+        <a class="permalink" href="https://www.instagram.com/p/DZ_G-sLIsZh/">instagram.com/p/DZ_G-sLIsZh</a>
+      </div>
+      <div class="ids"><span><b>Creative</b> 1527680615667665</span><span><b>Ad</b> 120250173806320030</span><span><b>Media ID</b> 17926581780353227</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="card-title">Strength &amp; Fluidity</div><span class="card-eng">19 likes, carousel</span></div>
+      <div class="copy" style="padding:20px 22px;">
+        <p class="en-desc">Where strength meets fluidity. The vision of Maison Ein.</p>
+        <p class="ar">انسيابيةٌ تُوازن بين القوة والخفة، ضمن رؤية دار عين.</p>
+        <a class="permalink" href="https://www.instagram.com/p/DaYJhQYCHLj/">instagram.com/p/DaYJhQYCHLj</a>
+      </div>
+      <div class="ids"><span><b>Creative</b> 2072524480360217</span><span><b>Ad</b> 120250173806130030</span><span><b>Media ID</b> 18008519540744003</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><div class="card-title">Quiet Luxury</div><span class="card-eng">7 likes, feed image, kept for message fit</span></div>
+      <div class="copy" style="padding:20px 22px;">
+        <p class="en-desc">Defined lines, effortless grace. A refined piece that embodies the quiet luxury of Dar Ein. Elegance that's felt before it's seen.</p>
+        <p class="ar">خطوط تنساق بثقة&hellip; تفاصيل ناعمة تُعيد تعريف الأناقة اليومية بروح دار عين. قطعة تُبرز حضورك بدون مبالغة، فقط فخامة تُرى وتُحس.</p>
+        <a class="permalink" href="https://www.instagram.com/p/DR4khiKCNU6/">instagram.com/p/DR4khiKCNU6</a>
+      </div>
+      <div class="ids"><span><b>Creative</b> 1761529781949511</span><span><b>Ad</b> 120250173806250030</span><span><b>Media ID</b> 18047750384450667</span></div>
+    </div>
+  </section>
+
+  <div id="held-out" class="held-out">
+    <strong>Held out, not included:</strong> @maisonein's single highest-engagement post (25 likes) is a carousel naming and thanking Princess Haifa bint Mohammed Al Saud for wearing the piece. Not added to the paid rotation, since boosting a named public figure's endorsement as a paid ad is a different call than boosting ordinary organic content and needs an explicit client OK first. Permalink: <a href="https://www.instagram.com/p/DQ30ul_CBUm/">instagram.com/p/DQ30ul_CBUm</a>, media ID <span class="mono">18077882768142588</span>.
+  </div>
+
+  <section id="retargeting">
+    <h2 class="serif">Retargeting copy</h2>
+    <p class="section-note">Not part of this session's build, warm-audience campaign untouched, kept paused. Included here for reference since it's part of the current copy set. Passed the arabic-copy-review gate as-is.</p>
+    <div class="copy-block">
+      <h3>Warm audience, site visitors plus add-to-cart, 30d</h3>
+      <p class="ar">القطعة اللي اخترتيها من دار عين بعدها موجودة.
+
+كمّلي طلبك من هنا، بالتقسيط مع Tabby من 500 ريال.</p>
+      <div class="field-label" style="margin-top:10px;">Headline</div>
+      <div class="headline ar">بعدها موجودة</div>
+    </div>
+  </section>
+
+  <section id="carousel">
+    <h2 class="serif">Carousel, "The Collection"</h2>
+    <p class="section-note">Spec ready, not yet built as live ads (fast-follow). Six cards, editorial hook into four hero SKUs.</p>
+    <div class="carousel-cards">
+      <div class="carousel-card"><div class="n">Card 1</div><span class="ar">دار عين</span></div>
+      <div class="carousel-card"><div class="n">Card 2, fixed</div><span class="ar">فصل جديد، حضور جديد</span></div>
+      <div class="carousel-card"><div class="n">Card 3</div>AÉRA, 672 SAR</div>
+      <div class="carousel-card"><div class="n">Card 4</div>ÉTOILE, 630 SAR</div>
+      <div class="carousel-card"><div class="n">Card 5</div>NÉRA, 534 SAR</div>
+      <div class="carousel-card"><div class="n">Card 6</div>ALBA, 500 SAR</div>
+    </div>
+    <p class="section-note" style="margin-top:14px;">Card 2 was originally "فصل جديد من الفخامة", a bare luxury-noun claim with no concrete detail. Replaced with "فصل جديد، حضور جديد" to carry the brand's own "حضور" (presence) metaphor instead.</p>
+  </section>
+
+  <section id="fixes">
+    <h2 class="serif">Every copy fix made this pass</h2>
+    <p class="section-note">Full adversarial GULF-RETAIL review plus a diff against the live (not just drafted) creative text. Two of these five were only visible on the live ad objects, not the source file.</p>
+    <ul class="fixlist">
+      <li><span class="before">الكشكشة</span> to <span class="after">الطيات</span><div class="why">Client flagged this exact word live ("الكشكشة؟"). Market-sewing term, wrong register for quiet luxury. Concept 2, primary text.</div></li>
+      <li><span class="before">تلمسها</span> to <span class="after">تلمسيها</span><div class="why">Live creative had drifted from the source draft to a non-feminine form. Restored consistent direct feminine address. Concept 2, opening line.</div></li>
+      <li><span class="before">صوت عالِف</span> to <span class="after">صوت عالٍ</span><div class="why">A corrupted word in the live creative, invisible until diffed against the source file. Concept 3, closing line.</div></li>
+      <li><span class="before">اكتشفي المجموعة كاملة</span> to <span class="after">تعرّفي على المجموعة كاملة</span><div class="why">"Discover the collection" is a stock AI-tell phrase. Echoes the card's own link-description verb instead. Concept 3, closing CTA line.</div></li>
+      <li><span class="before">فصل جديد من الفخامة</span> to <span class="after">فصل جديد، حضور جديد</span><div class="why">Bare luxury-noun declaration with no concrete detail. Carries the brand's own "حضور" metaphor instead. Carousel, Card 2.</div></li>
+    </ul>
+  </section>
+
+  <section id="appendix">
+    <h2 class="serif">Object ID appendix</h2>
+    <p class="section-note">Every live ad, creative, and ad ID in one place for quick lookup in Ads Manager.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Ad name</th><th>Type</th><th>Ad ID</th><th>Creative ID</th></tr></thead>
+        <tbody>
+          <tr><td>Concept1-EditorialHero-v4</td><td>Static</td><td class="mono">120250174321020030</td><td class="mono">1349262646676488</td></tr>
+          <tr><td>Concept2-FabricCraft-v4</td><td>Static</td><td class="mono">120250174321050030</td><td class="mono">1021691790819954</td></tr>
+          <tr><td>Concept3-MaisonStory-v4</td><td>Static</td><td class="mono">120250174321040030</td><td class="mono">1699589897787569</td></tr>
+          <tr><td>ExistingPost-PiecesBorn</td><td>Existing post</td><td class="mono">120250173817050030</td><td class="mono">1437612274800250</td></tr>
+          <tr><td>ExistingPost-DetailsSpeak</td><td>Existing post</td><td class="mono">120250173806060030</td><td class="mono">4005401632924491</td></tr>
+          <tr><td>ExistingPost-ContemporaryLuxury</td><td>Existing post</td><td class="mono">120250173806320030</td><td class="mono">1527680615667665</td></tr>
+          <tr><td>ExistingPost-StrengthFluidity</td><td>Existing post</td><td class="mono">120250173806130030</td><td class="mono">2072524480360217</td></tr>
+          <tr><td>ExistingPost-QuietLuxury</td><td>Existing post</td><td class="mono">120250173806250030</td><td class="mono">1761529781949511</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    Admireworks, Maison Ein (EIN-001), Meta ad account act_854742840194637, all figures in USD. Campaign is PAUSED, zero spend, awaiting explicit go-live.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "mond-youtube-monitor",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test:youtube-parse": "node tests/test-youtube-parse.js && node tests/verify-html.js",
+    "discover": "node src/discovery.js",
+    "extract": "node src/extractor.js",
+    "generate": "node src/generator.js",
+    "build:dashboard": "node src/discovery.js && node src/extractor.js && node src/generator.js"
+  }
+}

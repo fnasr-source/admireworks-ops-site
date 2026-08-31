@@ -1,0 +1,2381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OTN Textiles — Renovation & Scale Plan · 2026-05-17 · Admireworks</title>
+<style>
+:root{
+  --navy:#001a70; --gold:#cc9f53; --berry:#44756a; --tomato:#d44315;
+  --bg:#0b1020; --bg2:#121a35; --card:#172041; --line:#22305c;
+  --ink:#e7ecff; --ink2:#aab4d4; --muted:#7c87aa;
+  --kill:#ef4444; --pause:#f59e0b; --hold:#10b981; --refresh:#f97316;
+  --launch:#3b82f6; --scale:#22c55e; --watch:#a855f7;
+  --good:#10b981; --bad:#ef4444; --warn:#f59e0b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.layout{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;background:linear-gradient(180deg,#0a1130,#070a1c);
+  border-right:1px solid var(--line);padding:24px 18px}
+nav.side h1{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 4px}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:24px}
+nav.side a{display:block;padding:9px 12px;margin:2px 0;border-radius:8px;color:var(--ink2);font-size:13px}
+nav.side a:hover{background:var(--card);color:var(--ink);text-decoration:none}
+nav.side a .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:middle}
+nav.side .group{margin-top:18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 12px}
+main{padding:32px 40px 80px;max-width:1280px}
+header.top{margin-bottom:32px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+h1.title{font-size:32px;font-weight:700;margin:0 0 6px;letter-spacing:-.02em}
+.subtitle{color:var(--ink2);font-size:15px;margin:0 0 24px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:28px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.kpi .v{font-size:22px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.kpi .d{font-size:12px;color:var(--ink2);margin-top:2px}
+.kpi.alert{border-color:var(--kill)}
+.kpi.alert .v{color:var(--kill)}
+.kpi.good{border-color:var(--good)}
+.kpi.good .v{color:var(--good)}
+.section{margin:48px 0 24px}
+.section h2{font-size:22px;font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+.section .desc{color:var(--ink2);font-size:14px;margin-bottom:18px;max-width:780px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 10px;border-radius:99px;font-weight:600}
+.b-kill{background:rgba(239,68,68,.15);color:#fca5a5}
+.b-pause{background:rgba(245,158,11,.15);color:#fcd34d}
+.b-hold{background:rgba(168,85,247,.15);color:#d8b4fe}
+.b-refresh{background:rgba(249,115,22,.15);color:#fdba74}
+.b-launch{background:rgba(59,130,246,.15);color:#93c5fd}
+.b-scale{background:rgba(34,197,94,.15);color:#86efac}
+.b-watch{background:rgba(168,85,247,.15);color:#d8b4fe}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  display:flex;flex-direction:column}
+.card.kill{border-left:4px solid var(--kill)}
+.card.pause{border-left:4px solid var(--pause)}
+.card.hold{border-left:4px solid var(--watch)}
+.card.refresh{border-left:4px solid var(--refresh)}
+.card.launch{border-left:4px solid var(--launch)}
+.card.scale{border-left:4px solid var(--scale)}
+.card .head{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card .head h3{margin:0;font-size:15px;font-weight:600;line-height:1.3}
+.card .head .id{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:2px;word-break:break-all}
+.card .iframe-wrap{background:#fff;display:flex;justify-content:center;padding:8px;border-bottom:1px solid var(--line)}
+.card .iframe-wrap iframe{display:block;max-width:100%;border-radius:6px}
+.card .nopreview{padding:30px;text-align:center;color:var(--muted);background:#0b1233;font-size:13px;border-bottom:1px solid var(--line)}
+.card .metrics{padding:14px 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-bottom:1px solid var(--line)}
+.card .m{font-size:11px}
+.card .m .ml{color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:10px}
+.card .m .mv{font-size:14px;font-weight:600;color:var(--ink);margin-top:2px}
+.card .m .mv.bad{color:var(--bad)}
+.card .m .mv.good{color:var(--good)}
+.card .m .mv.warn{color:var(--warn)}
+.card .rankings{padding:10px 16px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);font-size:11px}
+.rank{padding:3px 8px;border-radius:6px;font-weight:500;letter-spacing:.04em}
+.rank-AB{background:rgba(16,185,129,.18);color:#6ee7b7}
+.rank-AVG{background:rgba(124,135,170,.18);color:var(--ink2)}
+.rank-BLW{background:rgba(239,68,68,.18);color:#fca5a5}
+.rank-UNK{background:rgba(124,135,170,.1);color:var(--muted)}
+.card .reco{padding:14px 16px;background:rgba(204,159,83,.06);border-bottom:1px solid var(--line);font-size:13px;color:var(--ink2)}
+.card .reco strong{color:var(--gold)}
+.card .approval{padding:12px 16px;display:flex;gap:8px;align-items:center;font-size:12px}
+.card .approval label{display:flex;align-items:center;gap:5px;cursor:pointer;padding:5px 10px;border-radius:6px;background:#0b1233;color:var(--ink2);transition:all .15s}
+.card .approval label:hover{background:#142254}
+.card .approval input{cursor:pointer;margin:0}
+.card .approval input:checked + span.lbl-app{color:var(--good)}
+.card .approval input:checked + span.lbl-mod{color:var(--warn)}
+.card .approval input:checked + span.lbl-rej{color:var(--bad)}
+
+/* ROAS chart */
+.chart{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:24px}
+.chart h3{margin:0 0 4px;font-size:16px}
+.chart .csub{color:var(--muted);font-size:12px;margin-bottom:14px}
+svg.roasline{width:100%;height:220px}
+.legend{display:flex;gap:18px;font-size:12px;color:var(--ink2);margin-top:10px}
+.legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+
+/* Placement chart */
+.placement-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:130px 1fr 60px;align-items:center;gap:10px;font-size:12px}
+.bar-row .name{color:var(--ink2)}
+.bar-track{height:18px;background:#0b1233;border-radius:4px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px}
+.bar-fill.good{background:linear-gradient(90deg,#10b981,#6ee7b7)}
+.bar-fill.ok{background:linear-gradient(90deg,#3b82f6,#93c5fd)}
+.bar-fill.warn{background:linear-gradient(90deg,#f59e0b,#fcd34d)}
+.bar-fill.bad{background:linear-gradient(90deg,#ef4444,#fca5a5)}
+.bar-row .val{font-weight:600;text-align:right}
+.bar-row .val.bad{color:var(--bad)}
+.bar-row .val.good{color:var(--good)}
+
+/* Tables */
+table.tbl{width:100%;border-collapse:collapse;font-size:13px}
+table.tbl th, table.tbl td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+table.tbl th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:rgba(0,0,0,.15)}
+table.tbl td .pct{font-size:11px;color:var(--muted)}
+table.tbl tr:hover td{background:rgba(255,255,255,.02)}
+
+/* Audience */
+.aud-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.aud{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-left:4px solid var(--launch)}
+.aud .pri{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--launch);font-weight:600;margin-bottom:4px}
+.aud h4{margin:0 0 6px;font-size:15px}
+.aud .why{color:var(--ink2);font-size:13px;margin-bottom:8px}
+.aud .meta{font-size:11px;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+
+/* Creative brief */
+.angles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.angle{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;border-left:4px solid var(--gold)}
+.angle h4{margin:0 0 8px;font-size:16px;color:var(--gold)}
+.angle .hook{padding:10px 12px;background:#0b1233;border-radius:8px;margin:8px 0;font-size:13px;color:var(--ink);direction:rtl;text-align:right;font-family:"SF Arabic",-apple-system,sans-serif}
+.angle .hook .lbl{display:block;font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;direction:ltr;text-align:left}
+
+/* Approval footer */
+.footer{background:linear-gradient(135deg,var(--navy),#000a3a);border:1px solid var(--gold);border-radius:14px;padding:24px;margin-top:48px}
+.footer h3{margin:0 0 8px;font-size:20px;color:var(--gold)}
+.footer .actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+.btn{padding:10px 18px;border-radius:8px;border:none;font-weight:600;cursor:pointer;font-size:14px;transition:all .15s}
+.btn-approve{background:var(--good);color:#022c1a}
+.btn-modify{background:var(--warn);color:#3b2106}
+.btn-reject{background:var(--kill);color:#fff}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
+.notes{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:12px;font-size:13px;font-family:inherit;margin-top:16px;min-height:80px;resize:vertical}
+.summary-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}
+.sum{background:rgba(0,0,0,.25);border-radius:10px;padding:12px 14px}
+.sum .l{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:2px}
+.sum .v{font-size:18px;font-weight:700}
+
+/* Misc */
+.callout{background:linear-gradient(135deg,rgba(239,68,68,.1),rgba(245,158,11,.05));border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:18px;margin:18px 0}
+.callout h3{margin:0 0 6px;font-size:16px;color:#fca5a5}
+.callout p{margin:0;color:var(--ink2);font-size:14px}
+.tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:4px;background:#22305c;color:var(--ink2);margin-left:6px;font-weight:500}
+.split-line{height:1px;background:var(--line);margin:48px 0 32px}
+.legend-rank{display:flex;gap:14px;font-size:11px;color:var(--muted);margin-bottom:12px;flex-wrap:wrap}
+.legend-rank span{display:flex;align-items:center;gap:5px}
+
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  nav.side{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line)}
+  main{padding:24px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .placement-grid,.aud-grid,.angles,.summary-row{grid-template-columns:1fr}
+  .timeline-gantt{grid-template-columns:1fr}
+  .cro-grid table.tbl,.scorecard-grid table.tbl{font-size:11px}
+  .wave1-thumbs{grid-template-columns:repeat(3,1fr)}
+}
+
+/* === REVISION 2 ADDITIONS (renovation, CRO, Wave 1 visuals, Admire8 grid) === */
+.rev2-callout{background:linear-gradient(135deg,rgba(204,159,83,.18),rgba(68,117,106,.12));border:1px solid rgba(204,159,83,.4);border-radius:10px;padding:12px 16px;margin:12px 0 0;font-size:13px;color:var(--ink2);display:flex;gap:10px;align-items:center}
+.rev2-callout strong{color:var(--gold);letter-spacing:.04em}
+.rev2-callout .pill{background:var(--gold);color:#1a1305;padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;flex-shrink:0}
+
+/* Renovation timeline (Gantt-style) */
+.timeline-gantt{display:grid;grid-template-columns:120px 1fr 130px;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px}
+.timeline-gantt .h{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.timeline-week{font-weight:700;font-size:14px;color:var(--gold);padding:14px 0;border-bottom:1px solid var(--line)}
+.timeline-actions{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink2);line-height:1.6}
+.timeline-actions strong{color:var(--ink)}
+.timeline-actions .tag-mini{display:inline-block;font-size:9px;padding:1px 6px;border-radius:4px;margin-right:4px;font-weight:600;vertical-align:middle;letter-spacing:.04em}
+.tag-kill{background:rgba(239,68,68,.2);color:#fca5a5}
+.tag-scale{background:rgba(34,197,94,.18);color:#86efac}
+.tag-launch{background:rgba(59,130,246,.18);color:#93c5fd}
+.tag-creative{background:rgba(204,159,83,.2);color:#fcd34d}
+.tag-cro{background:rgba(168,85,247,.18);color:#d8b4fe}
+.timeline-kpi{padding:14px 0;font-size:12px;color:var(--ink2);border-bottom:1px solid var(--line);text-align:right;line-height:1.5}
+.timeline-kpi .target{font-size:16px;font-weight:700;color:var(--good);display:block}
+.timeline-gantt > div:nth-last-child(-n+3){border-bottom:none}
+
+/* CRO audit */
+.cro-finding{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(245,158,11,.04));border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:14px 18px;margin-bottom:14px}
+.cro-finding strong{color:#fca5a5}
+
+/* Wave 1 visual previews */
+.wave1-grid{display:flex;flex-direction:column;gap:24px}
+.wave1-angle{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.wave1-angle .head{padding:18px 20px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(204,159,83,.08),rgba(0,0,0,0))}
+.wave1-angle .head h3{margin:0;font-size:18px;font-weight:700;color:var(--gold);letter-spacing:-.01em}
+.wave1-angle .head .sub{margin-top:4px;color:var(--ink2);font-size:13px}
+.wave1-hooks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--line)}
+.wave1-hook{padding:14px 16px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.wave1-hook:last-child{border-right:none}
+.wave1-hook .hook-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.wave1-hook .hook-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.wave1-hook .arabic{padding:10px 12px;background:#0b1233;border-radius:8px;font-size:13px;color:var(--ink);direction:rtl;text-align:right;font-family:"SF Arabic",-apple-system,sans-serif;margin-bottom:10px;line-height:1.6}
+.wave1-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px}
+.wave1-thumbs a{display:block;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#000;line-height:0}
+.wave1-thumbs img{width:100%;height:auto;display:block;transition:transform .2s;background:#1a1a2e}
+.wave1-thumbs a:hover img{transform:scale(1.03)}
+.wave1-thumbs .size-tag{position:absolute;bottom:4px;left:4px;background:rgba(0,0,0,.7);color:var(--gold);font-size:9px;padding:2px 6px;border-radius:3px;font-family:Menlo,monospace;letter-spacing:.04em}
+.wave1-thumbs-wrap{position:relative}
+.wave1-approval{padding:10px 16px;background:rgba(0,0,0,.15);display:flex;justify-content:space-between;align-items:center;font-size:12px;border-top:1px solid var(--line)}
+.wave1-approval .label{color:var(--muted)}
+.wave1-approval .approval{padding:0}
+
+/* Admire8 framework scorecard */
+.scorecard-grid{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.scorecard-grid table.tbl{margin:0}
+.scorecard-grid .total-badge{display:inline-block;padding:3px 10px;border-radius:99px;font-size:11px;font-weight:700;font-family:Menlo,monospace}
+.band-winner{background:rgba(34,197,94,.18);color:#86efac}
+.band-mid{background:rgba(245,158,11,.18);color:#fcd34d}
+.band-kill{background:rgba(239,68,68,.18);color:#fca5a5}
+.scorecard-legend{padding:14px 20px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);background:rgba(0,0,0,.15)}
+.scorecard-legend strong{color:var(--ink2)}
+
+/* Top-bar revision note */
+.revision-note{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--good);background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);padding:2px 10px;border-radius:99px;margin-left:10px;vertical-align:middle;font-weight:600}
+
+/* Fix the Admire8 callout sticking to KPI boxes */
+.rev2-callout{margin:14px 0 28px}
+header.top .kpis{margin-top:0}
+
+/* === LOOM WALKTHROUGH BLOCK === */
+.loom-block{margin-bottom:28px}
+.loom-aspect{position:relative;width:100%;padding-bottom:56.25%;background:#0b1233;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.loom-aspect iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.loom-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(135deg,rgba(204,159,83,.1),rgba(68,117,106,.06));color:var(--ink2);padding:32px 24px;gap:14px;text-align:center}
+.loom-placeholder .lp-icon{width:72px;height:72px;border-radius:50%;background:rgba(204,159,83,.2);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--gold);border:2px solid rgba(204,159,83,.4)}
+.loom-placeholder .lp-h{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.loom-placeholder .lp-s{font-size:13px;line-height:1.5;max-width:520px;color:var(--ink2)}
+
+/* === COMMENT SYSTEM === */
+.cmt-trigger-row{display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+.cmt-btn{background:rgba(204,159,83,.15);border:1px solid rgba(204,159,83,.3);color:var(--gold);padding:5px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:5px;font-family:inherit}
+.cmt-btn:hover{background:rgba(204,159,83,.25);transform:translateY(-1px)}
+.cmt-list{margin-top:8px;display:flex;flex-direction:column;gap:5px;width:100%}
+.cmt-list:empty{display:none}
+.cmt-item{background:rgba(0,0,0,.22);border-left:2px solid var(--gold);padding:8px 12px 8px 12px;border-radius:6px;font-size:12px;color:var(--ink2);position:relative;padding-right:28px}
+.cmt-item .cmt-author{color:var(--gold);font-weight:600;margin-right:6px}
+.cmt-item .cmt-time{font-size:10px;color:var(--muted);margin-left:6px;font-family:Menlo,monospace}
+.cmt-item .cmt-del{position:absolute;top:6px;right:8px;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:2px 4px;border-radius:4px;background:none;border:none}
+.cmt-item .cmt-del:hover{color:var(--bad);background:rgba(239,68,68,.1)}
+
+/* Floating "Send feedback" button */
+.feedback-fab{position:fixed;bottom:22px;right:22px;background:linear-gradient(135deg,var(--gold),#b88a3e);color:#1a1305;padding:13px 20px;border-radius:99px;font-weight:700;font-size:13px;letter-spacing:.04em;cursor:pointer;box-shadow:0 8px 24px rgba(204,159,83,.45);border:none;z-index:1000;display:flex;align-items:center;gap:8px;transition:all .2s;text-transform:uppercase;font-family:inherit}
+.feedback-fab:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(204,159,83,.55)}
+.feedback-fab .fab-count{background:#1a1305;color:var(--gold);padding:2px 8px;border-radius:99px;font-size:11px;font-family:Menlo,monospace;min-width:22px;text-align:center}
+.feedback-fab.empty .fab-count{display:none}
+
+/* Modal for comment input */
+.cmt-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:2000;padding:14px}
+.cmt-modal.open{display:flex}
+.cmt-modal-body{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;max-width:480px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.cmt-modal-body h3{margin:0 0 6px;font-size:18px;color:var(--ink)}
+.cmt-modal-body .ctx{font-size:12px;color:var(--muted);margin-bottom:14px;padding:8px 10px;background:rgba(0,0,0,.2);border-radius:6px;border-left:2px solid var(--gold)}
+.cmt-modal-body label{display:block;font-size:11px;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600}
+.cmt-modal-body input[type=text],.cmt-modal-body textarea{width:100%;background:#0b1233;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--ink);font-size:14px;font-family:inherit;margin-bottom:14px;box-sizing:border-box}
+.cmt-modal-body textarea{min-height:90px;resize:vertical;line-height:1.5}
+.cmt-modal-body input[type=text]:focus,.cmt-modal-body textarea:focus{outline:none;border-color:var(--gold)}
+.cmt-modal-actions{display:flex;gap:10px;justify-content:flex-end}
+.cmt-modal-actions button{padding:10px 18px;border-radius:8px;border:none;font-weight:600;cursor:pointer;font-size:13px;font-family:inherit;transition:all .15s}
+.cmt-modal-actions .save{background:var(--gold);color:#1a1305}
+.cmt-modal-actions .save:hover{background:#dab36c}
+.cmt-modal-actions .cancel{background:transparent;color:var(--ink2);border:1px solid var(--line)}
+.cmt-modal-actions .cancel:hover{background:rgba(255,255,255,.05)}
+
+/* Toast */
+.toast{position:fixed;top:24px;right:24px;background:var(--card);border:1px solid var(--good);color:var(--ink);padding:12px 18px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:3000;font-size:13px;opacity:0;transform:translateY(-10px);transition:all .25s;pointer-events:none}
+.toast.show{opacity:1;transform:translateY(0)}
+
+/* === COMPREHENSIVE MOBILE RESPONSIVE === */
+@media (max-width:1080px){
+  .meta-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .layout{grid-template-columns:1fr}
+  nav.side{position:relative;height:auto;width:100%;border-right:none;border-bottom:1px solid var(--line);padding:12px 14px 6px;background:linear-gradient(180deg,#070a1c,#0a1130);overflow-x:auto;white-space:nowrap}
+  nav.side h1{font-size:13px;margin-bottom:2px;display:inline-block;margin-right:12px;vertical-align:middle}
+  nav.side .sub{font-size:11px;margin-bottom:8px;display:inline-block;vertical-align:middle}
+  nav.side .group{margin-top:6px;font-size:10px;padding-left:0;display:inline-block;margin-right:8px;vertical-align:middle}
+  nav.side a{display:inline-block;padding:5px 9px;margin:2px 4px 2px 0;font-size:11px;border-radius:6px;vertical-align:middle}
+  nav.side a .dot{width:6px;height:6px;margin-right:4px}
+  main{padding:16px 12px 100px;max-width:100%}
+  h1.title{font-size:22px}
+  .subtitle{font-size:13px;margin-bottom:18px}
+  .kpis{grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}
+  .kpi{padding:12px 14px}
+  .kpi .v{font-size:17px}
+  .kpi .d{font-size:11px}
+  .rev2-callout{font-size:12px;flex-direction:column;align-items:flex-start;gap:8px;padding:12px 14px;margin-bottom:20px}
+  .callout{padding:14px 16px}
+  .callout h3{font-size:15px}
+  .callout p{font-size:13px;line-height:1.5}
+  .viz-section-head{flex-direction:column;align-items:flex-start;gap:6px;padding-bottom:12px;margin-bottom:14px}
+  .viz-section-head .one-line{text-align:left;max-width:100%;font-size:12px}
+  .viz-section-head h2{font-size:18px}
+  .section h2{font-size:18px}
+  .viz-timeline{grid-template-columns:1fr;gap:12px}
+  .viz-week{padding:14px}
+  .viz-week .week-title{font-size:15px}
+  .week-creatives .wc-thumb{width:44px;height:70px}
+  .week-creatives .wc-thumb iframe{width:44px;height:70px}
+  .cro-hero{grid-template-columns:1fr;padding:14px 16px;gap:14px}
+  .cro-hero .ch-headline{font-size:15px}
+  .cro-fix-grid{grid-template-columns:1fr;gap:10px}
+  .meta-grid{grid-template-columns:1fr;gap:18px}
+  .meta-story{max-width:320px;margin:0 auto}
+  .meta-feed{max-width:340px;margin:0 auto}
+  .placement-grid,.aud-grid,.angles{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr;gap:14px}
+  .score-grid{grid-template-columns:1fr;gap:10px}
+  .score-card .ring{width:46px;height:46px}
+  .score-card .ring svg{width:46px;height:46px}
+  .score-card .name{font-size:12px}
+  .ba-grid{gap:14px}
+  .ba-pair{grid-template-columns:1fr;gap:14px;padding:14px}
+  .ba-pair .ba-bridge{padding:8px 0;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px}
+  .ba-pair .ba-bridge .arrow{transform:rotate(90deg);font-size:24px;margin:0}
+  .ba-pair .ba-frame{min-height:auto;max-height:none;padding:6px}
+  .ba-pair .ba-frame iframe{height:340px;max-width:100%;width:100%}
+  .ba-pair .ba-frame .meta-story,.ba-pair .ba-frame .meta-feed{max-width:280px}
+  .ba-pair .ba-label{font-size:9px}
+  .ba-pair .ba-meta{font-size:10px}
+  .summary-row{grid-template-columns:repeat(2,1fr);gap:8px}
+  .sum .v{font-size:14px}
+  .footer{padding:18px 14px}
+  .footer h3{font-size:16px}
+  table.tbl{font-size:11px;display:block;overflow-x:auto;white-space:nowrap}
+  table.tbl th,table.tbl td{padding:6px 8px}
+  .timeline-gantt{padding:14px}
+  .feedback-fab{bottom:14px;right:14px;padding:11px 16px;font-size:11px}
+  .cmt-modal{padding:10px}
+  .cmt-modal-body{padding:18px}
+  iframe{max-width:100%}
+  .loom-placeholder{padding:20px 16px}
+  .loom-placeholder .lp-icon{width:54px;height:54px;font-size:22px}
+  .loom-placeholder .lp-h{font-size:15px}
+  .loom-placeholder .lp-s{font-size:12px}
+}
+@media (max-width:480px){
+  main{padding:14px 10px 100px}
+  h1.title{font-size:19px;line-height:1.3}
+  .title .revision-note{display:inline-block;margin-left:6px;font-size:10px}
+  .kpi{padding:10px 12px}
+  .kpi .v{font-size:15px}
+  .kpi .l{font-size:10px}
+  .viz-section-head h2{font-size:16px}
+  .viz-week{padding:12px}
+  .viz-week .week-title{font-size:14px}
+  .viz-week .wact{font-size:11px}
+  .score-card{padding:10px 12px;gap:10px}
+  .score-card .ring{width:42px;height:42px}
+  .score-card .ring svg{width:42px;height:42px}
+  .score-card .ring .ring-text{font-size:11px}
+  .score-card .name{font-size:12px}
+  .ba-pair{padding:12px}
+  .ba-pair .ba-frame iframe{height:300px}
+  .cmt-item{font-size:11px}
+  .feedback-fab{padding:10px 14px;font-size:10px;bottom:10px;right:10px}
+  .feedback-fab .fab-count{font-size:10px;padding:1px 6px;min-width:18px}
+}
+
+/* === META UI MOCKUPS === */
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.meta-grid.feed-mix{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+
+/* Story / Reel frame (vertical 9:16) */
+.meta-story{position:relative;width:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 8px 24px rgba(0,0,0,.4);border:1px solid #1a1a2e}
+.meta-story .story-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.meta-story .story-top{position:absolute;top:0;left:0;right:0;padding:10px 12px;background:linear-gradient(180deg,rgba(0,0,0,.7),transparent);z-index:2}
+.meta-story .progress-bars{display:flex;gap:3px;margin-bottom:8px}
+.meta-story .progress-bars .bar{flex:1;height:2px;background:rgba(255,255,255,.4);border-radius:1px}
+.meta-story .progress-bars .bar.active{background:white}
+.meta-story .story-handle{display:flex;align-items:center;gap:8px;color:white}
+.meta-story .avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#cc9f53,#44756a);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:white;flex-shrink:0;border:2px solid rgba(255,255,255,.4)}
+.meta-story .handle-name{font-size:12px;font-weight:600;color:white}
+.meta-story .handle-sub{font-size:10px;color:rgba(255,255,255,.7);margin-top:1px}
+.meta-story .sponsored-pill{margin-left:auto;font-size:9px;color:rgba(255,255,255,.7);padding:2px 6px;background:rgba(0,0,0,.3);border-radius:4px}
+.meta-story .story-bottom{position:absolute;bottom:0;left:0;right:0;padding:14px 12px;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent);z-index:2}
+.meta-story .story-cta{display:flex;align-items:center;justify-content:center;gap:8px;background:white;color:#000;padding:10px 14px;border-radius:24px;font-weight:600;font-size:13px;letter-spacing:-.01em}
+.meta-story .story-cta-arrow{width:0;height:0;border-style:solid;border-width:5px 0 5px 7px;border-color:transparent transparent transparent #000}
+.meta-story .story-actions{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:white;font-size:13px}
+.meta-story .story-actions svg{width:22px;height:22px;display:block}
+.meta-story .reply-input{flex:1;background:transparent;border:1px solid rgba(255,255,255,.4);border-radius:24px;padding:8px 14px;color:rgba(255,255,255,.6);font-size:12px;margin-right:10px}
+
+/* Feed frame (square or 4:5) */
+.meta-feed{background:#000;border:1px solid #1a1a2e;border-radius:14px;overflow:hidden;width:100%;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.meta-feed .feed-top{padding:10px 12px;display:flex;align-items:center;gap:10px;background:#000;color:white;border-bottom:1px solid rgba(255,255,255,.06)}
+.meta-feed .feed-top .avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#cc9f53,#44756a);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0}
+.meta-feed .feed-top .handle-name{font-size:13px;font-weight:600;line-height:1.2}
+.meta-feed .feed-top .handle-sub{font-size:10px;color:rgba(255,255,255,.6);margin-top:2px}
+.meta-feed .feed-top .dots{margin-left:auto;color:rgba(255,255,255,.6);letter-spacing:1px;font-size:14px}
+.meta-feed .feed-img{position:relative;background:#000;line-height:0}
+.meta-feed .feed-img img{width:100%;display:block}
+.meta-feed .feed-actions{padding:8px 12px;display:flex;gap:14px;align-items:center;color:white;background:#000}
+.meta-feed .feed-actions svg{width:22px;height:22px}
+.meta-feed .feed-actions .save{margin-left:auto}
+.meta-feed .feed-likes{padding:0 12px;color:white;font-size:13px;font-weight:600;background:#000}
+.meta-feed .feed-caption{padding:6px 12px 10px;color:white;font-size:13px;line-height:1.4;background:#000;direction:rtl;text-align:right;font-family:"SF Arabic",-apple-system,sans-serif}
+.meta-feed .feed-caption .handle-bold{font-weight:600;margin-left:6px;color:white}
+.meta-feed .feed-caption .ltr{direction:ltr;text-align:left;font-family:inherit}
+.meta-feed .feed-cta-strip{padding:10px 12px;background:#0a0a14;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.05)}
+.meta-feed .feed-cta-strip .cta-domain{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em}
+.meta-feed .feed-cta-strip .cta-headline{font-size:13px;color:white;font-weight:500;margin-top:2px;direction:rtl;text-align:right;flex:1;margin-right:10px}
+.meta-feed .feed-cta-strip .cta-btn{background:#1a2540;color:white;padding:6px 12px;border-radius:8px;font-weight:600;font-size:12px;border:1px solid rgba(255,255,255,.1);flex-shrink:0}
+
+/* Reel frame indicator (similar to Story but with side action stack) */
+.meta-reel{position:relative}
+.meta-reel .reel-side-actions{position:absolute;right:8px;bottom:80px;display:flex;flex-direction:column;gap:14px;z-index:3;color:white}
+.meta-reel .reel-side-actions .action{display:flex;flex-direction:column;align-items:center;font-size:10px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.meta-reel .reel-side-actions svg{width:24px;height:24px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+
+/* Archetype badge */
+.archetype-badge{position:absolute;top:8px;right:8px;background:rgba(204,159,83,.92);color:#1a1305;font-size:9px;padding:3px 8px;border-radius:99px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;z-index:3;backdrop-filter:blur(4px)}
+.archetype-badge.archetype-nh{background:rgba(239,68,68,.92);color:white}
+.archetype-badge.archetype-bc{background:rgba(204,159,83,.92);color:#1a1305}
+.archetype-badge.archetype-ns{background:rgba(168,85,247,.92);color:white}
+.archetype-badge.archetype-sms{background:rgba(34,197,94,.92);color:#022c1a}
+.archetype-badge.archetype-si{background:rgba(15,23,42,.92);color:#fcd34d;border:1px solid rgba(252,211,77,.4)}
+.archetype-badge.archetype-ed{background:rgba(68,117,106,.92);color:white}
+
+/* Section header (visual, minimal) */
+.viz-section-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.viz-section-head h2{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.viz-section-head .one-line{color:var(--ink2);font-size:13px;max-width:50%;text-align:right}
+
+/* Mini-stat strip */
+.viz-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:18px}
+.viz-stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.viz-stat .l{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.viz-stat .v{font-size:18px;font-weight:700;margin-top:3px}
+.viz-stat.kill .v{color:var(--bad)}
+.viz-stat.win .v{color:var(--good)}
+.viz-stat.warn .v{color:var(--warn)}
+
+/* Timeline visual (renovation roadmap) */
+.viz-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.viz-week{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;border-top:3px solid var(--gold);position:relative}
+.viz-week.w1{border-top-color:#ef4444}
+.viz-week.w2{border-top-color:#f59e0b}
+.viz-week.w3{border-top-color:#3b82f6}
+.viz-week.w4{border-top-color:#22c55e}
+.viz-week .week-num{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.viz-week .week-title{font-size:16px;font-weight:700;margin-top:4px;letter-spacing:-.01em}
+.viz-week .week-date{font-size:11px;color:var(--muted);margin-top:2px;font-family:Menlo,monospace}
+.viz-week .week-actions{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.viz-week .wact{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--ink2);line-height:1.45}
+.viz-week .wact .ico{width:22px;height:22px;flex-shrink:0;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.viz-week .ico.kill{background:rgba(239,68,68,.18);color:#fca5a5}
+.viz-week .ico.scale{background:rgba(34,197,94,.18);color:#86efac}
+.viz-week .ico.launch{background:rgba(59,130,246,.18);color:#93c5fd}
+.viz-week .ico.creative{background:rgba(204,159,83,.18);color:#fcd34d}
+.viz-week .ico.cro{background:rgba(168,85,247,.18);color:#d8b4fe}
+.viz-week .week-kpi{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);text-align:center}
+.viz-week .week-kpi .target{font-size:22px;font-weight:700;color:var(--good);font-family:Menlo,monospace}
+.viz-week .week-kpi .l{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+
+/* CRO visual fixes */
+.cro-hero{background:linear-gradient(135deg,rgba(239,68,68,.12),rgba(245,158,11,.06));border:1px solid rgba(239,68,68,.3);border-radius:14px;padding:20px 24px;margin-bottom:18px;display:grid;grid-template-columns:1fr 240px;gap:24px;align-items:center}
+.cro-hero .ch-headline{font-size:18px;font-weight:700;color:#fca5a5;margin-bottom:8px}
+.cro-hero .ch-sub{font-size:13px;color:var(--ink2);line-height:1.5}
+.cro-variant-bars{display:flex;flex-direction:column;gap:6px}
+.cro-variant-bars .row{display:grid;grid-template-columns:90px 1fr 60px;gap:8px;align-items:center;font-size:11px}
+.cro-variant-bars .row .name{color:var(--ink2)}
+.cro-variant-bars .bar{height:14px;background:#0b1233;border-radius:3px;overflow:hidden}
+.cro-variant-bars .bar.sold-out{background:rgba(239,68,68,.4)}
+.cro-variant-bars .bar.in-stock{background:rgba(34,197,94,.6)}
+.cro-variant-bars .row .val{font-weight:600;text-align:right;font-family:Menlo,monospace;font-size:11px}
+.cro-fix-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.cro-fix{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;gap:12px;border-left:3px solid var(--gold)}
+.cro-fix.p1{border-left-color:var(--kill)}
+.cro-fix.p2{border-left-color:var(--gold)}
+.cro-fix.p3{border-left-color:var(--berry)}
+.cro-fix .num{width:30px;height:30px;border-radius:50%;background:rgba(204,159,83,.18);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:Menlo,monospace}
+.cro-fix.p1 .num{background:rgba(239,68,68,.18);color:var(--kill)}
+.cro-fix .body{flex:1;min-width:0}
+.cro-fix .body .head{font-size:13px;font-weight:600;line-height:1.3}
+.cro-fix .body .meta{font-size:11px;color:var(--muted);margin-top:4px;display:flex;gap:10px;flex-wrap:wrap}
+.cro-fix .body .meta .lift{color:var(--good);font-weight:600}
+.cro-fix .body .meta .effort{color:var(--ink2)}
+
+/* Admire8 score visual */
+.score-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+.score-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:center;border-left:3px solid var(--muted)}
+.score-card.win{border-left-color:#22c55e}
+.score-card.mid{border-left-color:#f59e0b}
+.score-card.kill{border-left-color:#ef4444}
+.score-card .ring{position:relative;width:52px;height:52px;flex-shrink:0}
+.score-card .ring svg{width:52px;height:52px;transform:rotate(-90deg)}
+.score-card .ring .ring-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-family:Menlo,monospace}
+.score-card .body{flex:1;min-width:0}
+.score-card .name{font-size:13px;font-weight:600;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.score-card .meta-row{display:flex;gap:8px;margin-top:4px;font-size:11px;color:var(--muted);align-items:center}
+.score-card .roas{font-family:Menlo,monospace;font-weight:600}
+.score-card .roas.good{color:#86efac}
+.score-card .roas.bad{color:#fca5a5}
+.score-card .roas.mid{color:#fcd34d}
+.score-card .arch{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.05);color:var(--ink2)}
+.score-card .dec{margin-left:auto;font-size:10px;padding:4px 10px;border-radius:6px;font-weight:700;letter-spacing:.04em}
+.score-card .dec.kill{background:rgba(239,68,68,.18);color:#fca5a5}
+.score-card .dec.scale{background:rgba(34,197,94,.18);color:#86efac}
+.score-card .dec.refresh{background:rgba(249,115,22,.18);color:#fdba74}
+.score-card .dec.hold{background:rgba(168,85,247,.18);color:#d8b4fe}
+
+/* Before → After pairings */
+.ba-grid{display:flex;flex-direction:column;gap:16px}
+.ba-pair{display:grid;grid-template-columns:1fr 220px 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;align-items:stretch}
+.ba-pair .ba-side{display:flex;flex-direction:column;gap:8px}
+.ba-pair .ba-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;gap:6px}
+.ba-pair .ba-label.before{color:var(--bad)}
+.ba-pair .ba-label.after{color:var(--good)}
+.ba-pair .ba-label .pill{padding:2px 8px;border-radius:99px;font-size:9px;letter-spacing:.06em}
+.ba-pair .ba-label.before .pill{background:rgba(239,68,68,.18)}
+.ba-pair .ba-label.after .pill{background:rgba(34,197,94,.18)}
+.ba-pair .ba-frame{display:flex;justify-content:center;align-items:flex-start;background:#0b1233;border-radius:10px;overflow:hidden;padding:8px;min-height:380px;max-height:440px}
+.ba-pair .ba-frame iframe{display:block;border:none;border-radius:6px;max-width:100%;height:380px}
+.ba-pair .ba-frame .meta-story{max-width:220px;width:100%;align-self:center}
+.ba-pair .ba-frame .meta-feed{max-width:240px;width:100%;align-self:center}
+.ba-pair .ba-meta{font-size:11px;color:var(--muted);font-family:Menlo,monospace;text-align:center;padding:0 4px;line-height:1.5}
+.ba-pair .ba-meta strong{color:var(--ink2);font-family:inherit}
+.ba-pair .ba-bridge{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;text-align:center;padding:0 4px}
+.ba-pair .ba-bridge .arrow{font-size:28px;color:var(--gold);line-height:1}
+.ba-pair .ba-bridge .why-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ba-pair .ba-bridge .why{font-size:12px;color:var(--ink2);line-height:1.5}
+.ba-pair .ba-bridge .why strong{color:var(--gold)}
+.ba-pair .ba-bridge .why em{color:var(--ink);font-style:normal;font-weight:600}
+
+/* Roadmap creative-strip (in each week card) */
+.week-creatives{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+.week-creatives .wc-thumb{position:relative;width:50px;height:80px;border-radius:5px;overflow:hidden;background:#0a0a14;border:1px solid var(--line);flex-shrink:0}
+.week-creatives .wc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.week-creatives .wc-thumb iframe{width:50px;height:80px;border:none;display:block}
+.week-creatives .wc-thumb .wc-dot{position:absolute;top:3px;right:3px;width:8px;height:8px;border-radius:50%}
+.week-creatives .wc-thumb .wc-dot.kill{background:var(--bad);box-shadow:0 0 4px var(--bad)}
+.week-creatives .wc-thumb .wc-dot.launch{background:var(--good);box-shadow:0 0 4px var(--good)}
+.week-creatives .wc-thumb .wc-dot.scale{background:var(--launch);box-shadow:0 0 4px var(--launch)}
+.week-creatives .wc-thumb .wc-dot.refresh{background:var(--refresh);box-shadow:0 0 4px var(--refresh)}
+.week-creatives-label{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;width:100%;margin-bottom:4px}
+
+@media (max-width:980px){
+  .viz-timeline{grid-template-columns:1fr}
+  .cro-hero{grid-template-columns:1fr}
+  .meta-grid{grid-template-columns:1fr 1fr}
+  .ba-pair{grid-template-columns:1fr;gap:14px}
+  .ba-pair .ba-bridge{padding:8px 0;flex-direction:row;flex-wrap:wrap}
+  .ba-pair .ba-bridge .arrow{transform:rotate(90deg)}
+}
+
+/* === HARD MOBILE OVERFLOW GUARDS (round 2) === */
+html,body{max-width:100%;overflow-x:hidden}
+.layout > *{min-width:0}
+@media (max-width:768px){
+  .layout{grid-template-columns:minmax(0,1fr) !important;display:block !important}
+  nav.side{position:relative !important;width:100% !important;max-width:100% !important;height:auto !important;box-sizing:border-box;overflow-x:auto !important;overflow-y:hidden}
+  main{max-width:100% !important;width:100% !important;box-sizing:border-box;padding:14px 12px 100px}
+  iframe{max-width:100% !important;box-sizing:border-box}
+  .card .iframe-wrap iframe{width:100% !important;max-width:320px;height:auto;aspect-ratio:335/450}
+  .ba-pair .ba-frame iframe{width:100% !important;max-width:300px;height:340px}
+  .ba-pair .ba-frame{padding:6px;box-sizing:border-box}
+  table.tbl{display:block !important;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+  pre,code{word-break:break-all;white-space:pre-wrap}
+  .cards,.meta-grid,.score-grid,.cro-fix-grid,.viz-timeline,.placement-grid,.aud-grid,.angles{width:100% !important;max-width:100% !important;grid-template-columns:1fr !important}
+  img{max-width:100%;height:auto}
+}
+@media (max-width:480px){
+  .ba-pair .ba-frame iframe{height:300px}
+  .card .iframe-wrap iframe{max-width:100%}
+}
+
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="side">
+  <h1>OTN Textiles</h1>
+  <div class="sub">Renovation & Scale · Rev 2 · 2026-05-17</div>
+  <a href="#summary"><span class="dot" style="background:var(--gold)"></span>Executive summary</a>
+  <a href="#timeline"><span class="dot" style="background:var(--good)"></span>Renovation roadmap</a>
+  <a href="#roas-chart"><span class="dot" style="background:var(--bad)"></span>ROAS decline chart</a>
+  <a href="#placement"><span class="dot" style="background:var(--watch)"></span>Placement reweight</a>
+  <a href="#cro"><span class="dot" style="background:var(--berry)"></span>Storefront / CRO audit</a>
+  <div class="group">Action Center</div>
+  <a href="#kill"><span class="dot" style="background:var(--kill)"></span>Kill (3 ads)</a>
+  <a href="#pause"><span class="dot" style="background:var(--pause)"></span>Pause (4 ad sets)</a>
+  <a href="#hold"><span class="dot" style="background:var(--watch)"></span>Hold / Watch (5 ads)</a>
+  <a href="#refresh"><span class="dot" style="background:var(--refresh)"></span>Refresh (3 ads)</a>
+  <a href="#scale"><span class="dot" style="background:var(--scale)"></span>Protect / Scale</a>
+  <a href="#launch"><span class="dot" style="background:var(--launch)"></span>Launch new</a>
+  <div class="group">Strategy</div>
+  <a href="#audiences"><span class="dot" style="background:var(--launch)"></span>Audience roadmap</a>
+  <a href="#brief"><span class="dot" style="background:var(--gold)"></span>Creative brief</a>
+  <a href="#wave1"><span class="dot" style="background:var(--gold)"></span>Wave 1 visuals</a>
+  <a href="#before-after"><span class="dot" style="background:var(--gold)"></span>Before → After</a>
+  <a href="#structure"><span class="dot" style="background:var(--berry)"></span>Structure changes</a>
+  <a href="#scorecard"><span class="dot" style="background:var(--watch)"></span>Admire8 scorecard</a>
+  <a href="#approve"><span class="dot" style="background:var(--good)"></span>Approve</a>
+</nav>
+
+<main>
+
+<header class="top" id="summary">
+  <!-- LOOM WALKTHROUGH: paste your Loom share ID into data-loom-id once recorded (e.g., "abc123def456" from https://www.loom.com/share/abc123def456) -->
+  <div class="loom-block" id="loom-block" data-loom-id="d38484ef52614328b4647964be7ad22f">
+    <div class="loom-aspect" id="loom-aspect"></div>
+  </div>
+
+  <div class="eyebrow">Admireworks · Meta Renovation & Scale Plan</div>
+  <h1 class="title">OTN Textiles — Renovation & Scale Plan <span class="revision-note">Revision 2</span></h1>
+  <p class="subtitle">30-day window 2026-04-17 → 2026-05-16 · all figures in EGP</p>
+  <div class="rev2-callout">
+    <span class="pill">Admire8</span>
+    <span>Scored using <strong>The Admire8 Framework</strong> — Admireworks' 8-dimension direct-response creative score. Every active ad gets an objective audit-trail in the appendix grid (§ Admire8 scorecard). Every new angle in § Wave 1 is built around a real OTN product photo as the visual anchor — no generic stand-ins, only your actual SKUs.</span>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="l">30d Spend</div><div class="v">EGP 251K</div><div class="d">EGP 8,378/day avg</div></div>
+    <div class="kpi"><div class="l">30d Revenue</div><div class="v">EGP 1.26M</div><div class="d">505 purchases</div></div>
+    <div class="kpi good"><div class="l">30d ROAS</div><div class="v">5.00×</div><div class="d">healthy baseline</div></div>
+    <div class="kpi alert"><div class="l">7d ROAS</div><div class="v">3.88×</div><div class="d">−22% from baseline</div></div>
+    <div class="kpi"><div class="l">AOV</div><div class="v">EGP 2,489</div><div class="d">≈ $50 USD</div></div>
+    <div class="kpi"><div class="l">Frequency</div><div class="v">4.36</div><div class="d">elevated, watching</div></div>
+  </div>
+
+  <div class="callout">
+    <h3>The one finding that frames everything</h3>
+    <p>Account ROAS has fallen <strong>45%</strong> over the last 5 weeks (peak <strong>6.22×</strong> wk Apr 13 → <strong>3.38×</strong> wk May 11) while spend held flat at ~EGP 8.4K/day. Both active campaigns are still tagged <strong>☪ (Ramadan)</strong>, running 8 weeks after Eid. The decline is concentrated in <strong>3 prospecting ad sets</strong> and <strong>1 retargeting ad set</strong> — frequencies stayed low, meaning the audience seed ran out of high-intent buyers. The fix is fresh audiences + creative refresh, not lower frequency caps.</p>
+  </div>
+</header>
+
+<!-- RENOVATION ROADMAP -->
+<section class="section" id="timeline">
+<div class="viz-section-head">
+  <h2>Renovation roadmap</h2>
+  <div class="one-line">4 weeks · ROAS 3.88× → 5.50×</div>
+</div>
+<div class="viz-timeline">
+  <div class="viz-week w1">
+    <div class="week-num">Week 1</div>
+    <div class="week-title">Stop the bleed</div>
+    <div class="week-date">May 18 – 24</div>
+    <div class="week-actions">
+      <div class="wact"><div class="ico kill">×</div>Kill 3 confirmed losers + 4 zero-purchase ads · <a href="#kill" style="color:var(--kill);text-decoration:underline">jump</a></div>
+      <div class="wact"><div class="ico launch">+</div>Re-export Shopify CSV → fresh LAL seed</div>
+      <div class="wact"><div class="ico launch">+</div>18-24F micro-test · EGP 2K/day</div>
+      <div class="wact"><div class="ico cro">⚙</div>Free-ship 4K → 3K · restock flagship · <a href="#cro" style="color:var(--watch);text-decoration:underline">CRO</a></div>
+      <div class="wact"><div class="ico creative">★</div>Wave 1 stills approved · overlays added</div>
+    </div>
+    <div class="week-creatives">
+      <div class="week-creatives-label">This week's creative actions</div>
+      <a href="#before-after" class="wc-thumb" title="AD_1 KILL (top kill)"><iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKrrBJBs_-imE8mQC2ZEwFbgscOvF5WWEmaJ6giizhNK94q5DDQMcQFE2yBoEKjC5GU3YwHNzSODc_YRrvNnfiMQj7VOTbsdNGgmfn_mfHF98VFlPGZ0w_G2V6Mqfi1gcVY9MHJQYdLzw8lVjCFSjTM5OHXwpyhxTnR96glYJtxPxJWUF9khvs4x07_Gympylb4YUYR5uTD8IotxXvzEKliIA6rlweQZEk5mZwkoHkA2kYMUfP6NVXN383m__atKUmgU7XhWLfLUm3P2_mI_yGiFYyOWljNZXs-YSEeyLFqnG2wJONb8C0hks0jSNTowktxkTJW36iq7Qj3wDF-yxj5BCJ1bHE57QqjGthNQj-41-MCy3EWlNz_Gray0eCB5V5LuvJTHS6HjN1uHomlBHWKiZtgMCmxVhqYhsbX9KtssjC5Q0tooBrc2NHinuQheiE&amp;t=AQIF2w-FxcX7u38lQ8c"></iframe><span class="wc-dot kill"></span></a>
+      <a href="#kill" class="wc-thumb" title="Mariam Khalil Reel 2 KILL" style="background:linear-gradient(135deg,#3d1a1a,#1a0a0a);display:flex;align-items:center;justify-content:center;color:#fca5a5;font-size:8px;text-align:center;padding:4px">Reel<br>Mariam<br>0 ROAS<span class="wc-dot kill"></span></a>
+      <a href="#kill" class="wc-thumb" title="V8 Maya V.2 KILL" style="background:linear-gradient(135deg,#3d1a1a,#1a0a0a);display:flex;align-items:center;justify-content:center;color:#fca5a5;font-size:8px;text-align:center;padding:4px">V8 Maya<br>V.2<br>0 ROAS<span class="wc-dot kill"></span></a>
+    </div>
+    <div class="week-kpi">
+      <div class="target">4.20×</div>
+      <div class="l">7-day rolling target</div>
+    </div>
+  </div>
+
+  <div class="viz-week w2">
+    <div class="week-num">Week 2</div>
+    <div class="week-title">Refill the funnel</div>
+    <div class="week-date">May 25 – 31</div>
+    <div class="week-actions">
+      <div class="wact"><div class="ico launch">+</div>LAL 2% · 3% · 5% expansion live</div>
+      <div class="wact"><div class="ico launch">+</div>High-AOV LAL (top 25% cohort)</div>
+      <div class="wact"><div class="ico creative">★</div>Refresh trio + Angles 1 &amp; 2 live · <a href="#wave1" style="color:var(--gold);text-decoration:underline">see</a></div>
+      <div class="wact"><div class="ico kill">↺</div>Drop ☪ Ramadan tag · clone "Summer 2026"</div>
+      <div class="wact"><div class="ico cro">⚙</div>Cart shipping reveal + cross-sell</div>
+    </div>
+    <div class="week-creatives">
+      <div class="week-creatives-label">Refreshing → Replacing</div>
+      <a href="#before-after" class="wc-thumb" title="Summer Towels REFRESH"><iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKfHvXHkA9PJ0xYdKz791au8LTHXBDiklHsnt54TJ14Pb3q21PYejosD_NDhkEwBloOawTCsHAM8bHV-QdhHRJwMUcrmuYdiDoMz8On6-MJCOJdK55Zr86kSL5BGya-xv6HHZNup-Vp4nkpXTNYEo3PrO3A8OkbnXlgotZTaSqZalVFz1YOcIgIGtCVm7KneosW1MQr46Pge-cI7RM638NxwkgELnuxGWsSEIWOMhfMJ_7URll9wg7yHWXSENxdiT3GA2sgnmngP69SaOc6dMsTsjQihFIvRofsN6zWIN-c9tcpEMoCCmVUg1ZB3ChJYkkC4CY1bxadjaJkTz-yoMMsTxOYYcGkzvBveGL-cwttTAgRcqNA5SRbb3UXAelFw5FTI9O27siJ3aUnnvPHF-3vsNiMcd2-5A0hc5gpA3f2MvKufYfDcc0P_CDt5cglVY4&amp;t=AQIFns8_8M9ylKuZDco"></iframe><span class="wc-dot refresh"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Wave 1 Angle 2 Baked Sahel LAUNCH"><img src="assets/wave1b/angle-2-sahel-summer/baked-caption-prepare-sahel.png" alt=""><span class="wc-dot launch"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Wave 1 Angle 1 UGC LAUNCH"><img src="assets/wave1a/angle-1-ugc-bathroom/hook-a-surprise/story.png" alt=""><span class="wc-dot launch"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Wave 1 Angle 1 Native Highlight LAUNCH"><img src="assets/wave1b/angle-1-ugc-bathroom/native-highlight-label.png" alt=""><span class="wc-dot launch"></span></a>
+    </div>
+    <div class="week-kpi">
+      <div class="target">4.50×</div>
+      <div class="l">7-day rolling target</div>
+    </div>
+  </div>
+
+  <div class="viz-week w3">
+    <div class="week-num">Week 3</div>
+    <div class="week-title">Open new channels</div>
+    <div class="week-date">Jun 1 – 7</div>
+    <div class="week-actions">
+      <div class="wact"><div class="ico launch">+</div>ASC+ test · EGP 3K/day parallel TOF</div>
+      <div class="wact"><div class="ico launch">+</div>DPA cart-abandoner segment</div>
+      <div class="wact"><div class="ico creative">★</div>Angles 3 &amp; 4 live · <a href="#wave1" style="color:var(--gold);text-decoration:underline">see</a></div>
+      <div class="wact"><div class="ico scale">▲</div>Eid Sahel push +30% (Jun 7-10)</div>
+      <div class="wact"><div class="ico cro">⚙</div>Apple/Google Pay + ValU BNPL</div>
+    </div>
+    <div class="week-creatives">
+      <div class="week-creatives-label">Launching this week</div>
+      <a href="#wave1" class="wc-thumb" title="Angle 3 Bundle Ladder Baked Math LAUNCH"><img src="assets/wave1b/angle-3-bundle-ladder/baked-caption-buy-6-pay-4.png" alt=""><span class="wc-dot launch"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Angle 4 Secret Info LAUNCH"><img src="assets/wave1b/angle-4-origin-heritage/secret-info-redacted-doc.png" alt=""><span class="wc-dot launch"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Angle 4 Heritage Baked Caption LAUNCH"><img src="assets/wave1b/angle-4-origin-heritage/baked-caption-export-grade.png" alt=""><span class="wc-dot launch"></span></a>
+      <a href="#scale" class="wc-thumb" title="Adults Poncho Reel · Eid Sahel push +30%"><img src="assets/wave1a/angle-2-sahel-summer/hook-b-gift-set/story.png" alt=""><span class="wc-dot scale"></span></a>
+    </div>
+    <div class="week-kpi">
+      <div class="target">5.00×</div>
+      <div class="l">7-day rolling target</div>
+    </div>
+  </div>
+
+  <div class="viz-week w4">
+    <div class="week-num">Week 4</div>
+    <div class="week-title">Lock the recovery</div>
+    <div class="week-date">Jun 8 – 14</div>
+    <div class="week-actions">
+      <div class="wact"><div class="ico scale">▲</div>Top 2 Wave 1 angles · +50% budget</div>
+      <div class="wact"><div class="ico creative">★</div>Wave 2 brief: motion for IG Stories</div>
+      <div class="wact"><div class="ico creative">★</div>Founder/factory shoot brief → OTN</div>
+      <div class="wact"><div class="ico cro">⚙</div>Welcome popup + Meta CAPI verify</div>
+    </div>
+    <div class="week-creatives">
+      <div class="week-creatives-label">Scaling winners</div>
+      <a href="#wave1" class="wc-thumb" title="Top performer · scale +50%"><img src="assets/wave1b/angle-2-sahel-summer/sms-mockup-whatsapp.png" alt=""><span class="wc-dot scale"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Top performer · scale +50%"><img src="assets/wave1b/angle-3-bundle-ladder/native-social-receipt.png" alt=""><span class="wc-dot scale"></span></a>
+      <a href="#wave1" class="wc-thumb" title="Wave 2 brief: motion + founder shoot" style="background:linear-gradient(135deg,#1a2540,#0a1130);display:flex;align-items:center;justify-content:center;color:#93c5fd;font-size:8px;text-align:center;padding:4px">Wave 2<br>brief<br>signed</a>
+    </div>
+    <div class="week-kpi">
+      <div class="target">5.50×</div>
+      <div class="l">recovery + Wave 2 signed</div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:14px;padding:10px 14px;background:rgba(0,0,0,.15);border-left:2px solid var(--good);border-radius:6px;font-size:12px;color:var(--ink2)">
+  <strong style="color:var(--good)">Stop-rule:</strong> any week's target missed by &gt;15% pauses next-week launches until diagnosed.
+</div>
+</section>
+
+<!-- ROAS DECLINE CHART -->
+<section class="section" id="roas-chart">
+<div class="chart">
+<h3>ROAS — weekly trend (last 90 days)</h3>
+<div class="csub">13 weekly buckets, peak Apr 13–19 at 6.22×, current wk May 11–16 at 3.38× (partial 6-day bucket)</div>
+<svg class="roasline" viewBox="0 0 800 220" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cc9f53" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#cc9f53" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Gridlines (ROAS 0,2,4,6,8) -->
+  <g stroke="#22305c" stroke-width="1">
+    <line x1="40" y1="20" x2="780" y2="20"/>
+    <line x1="40" y1="70" x2="780" y2="70"/>
+    <line x1="40" y1="120" x2="780" y2="120"/>
+    <line x1="40" y1="170" x2="780" y2="170"/>
+  </g>
+  <g fill="#7c87aa" font-size="10" font-family="Menlo">
+    <text x="10" y="24">8×</text>
+    <text x="10" y="74">6×</text>
+    <text x="10" y="124">4×</text>
+    <text x="10" y="174">2×</text>
+  </g>
+  <!-- Goal line at ROAS=5 -->
+  <line x1="40" y1="95" x2="780" y2="95" stroke="#10b981" stroke-width="1" stroke-dasharray="4 4" opacity=".6"/>
+  <text x="745" y="92" fill="#10b981" font-size="10" font-family="Menlo">target 5.0×</text>
+  <!-- ROAS area fill -->
+  <path fill="url(#grad)" d="M 60 124.75 L 117 127.75 L 175 95.5 L 232 113.0 L 290 115.75 L 347 71.75 L 405 71.75 L 462 83.0 L 520 64.5 L 578 82.25 L 635 83.75 L 693 109.75 L 750 135.5 L 750 220 L 60 220 Z"/>
+  <!-- ROAS line -->
+  <path fill="none" stroke="#cc9f53" stroke-width="2.5" d="M 60 124.75 L 117 127.75 L 175 95.5 L 232 113.0 L 290 115.75 L 347 71.75 L 405 71.75 L 462 83.0 L 520 64.5 L 578 82.25 L 635 83.75 L 693 109.75 L 750 135.5"/>
+  <!-- Data points -->
+  <g fill="#cc9f53">
+    <circle cx="60" cy="124.75" r="3"/>
+    <circle cx="117" cy="127.75" r="3"/>
+    <circle cx="175" cy="95.5" r="3"/>
+    <circle cx="232" cy="113.0" r="3"/>
+    <circle cx="290" cy="115.75" r="3"/>
+    <circle cx="347" cy="71.75" r="3"/>
+    <circle cx="405" cy="71.75" r="3"/>
+    <circle cx="462" cy="83.0" r="3"/>
+    <circle cx="520" cy="64.5" r="4.5" fill="#10b981"/>
+    <circle cx="578" cy="82.25" r="3"/>
+    <circle cx="635" cy="83.75" r="3"/>
+    <circle cx="693" cy="109.75" r="3"/>
+    <circle cx="750" cy="135.5" r="4.5" fill="#ef4444"/>
+  </g>
+  <!-- Peak and trough labels -->
+  <text x="520" y="55" fill="#10b981" font-size="11" font-family="Menlo" text-anchor="middle">PEAK 6.22</text>
+  <text x="750" y="158" fill="#ef4444" font-size="11" font-family="Menlo" text-anchor="end">TROUGH 3.38</text>
+  <!-- X-axis weeks -->
+  <g fill="#7c87aa" font-size="9" font-family="Menlo">
+    <text x="60" y="200" text-anchor="middle">2/16</text>
+    <text x="175" y="200" text-anchor="middle">3/2</text>
+    <text x="290" y="200" text-anchor="middle">3/16</text>
+    <text x="405" y="200" text-anchor="middle">3/30</text>
+    <text x="520" y="200" text-anchor="middle">4/13</text>
+    <text x="635" y="200" text-anchor="middle">4/27</text>
+    <text x="750" y="200" text-anchor="middle">5/11</text>
+  </g>
+</svg>
+<div class="legend">
+  <span><span class="sw" style="background:#cc9f53"></span>Weekly ROAS</span>
+  <span><span class="sw" style="background:#10b981"></span>Target / Peak</span>
+  <span><span class="sw" style="background:#ef4444"></span>Current week (partial)</span>
+</div>
+</div>
+</section>
+
+<!-- PLACEMENT REWEIGHT -->
+<section class="section" id="placement">
+<h2>Placement reweight — Stories is the winner, not Reels</h2>
+<p class="desc">Last 30 days, by placement. Facebook Feed takes 45% of spend at 4.74× ROAS with the only placement-level frequency concern (3.58). Instagram Stories is the highest-ROAS placement at <strong>5.59×</strong> but only gets 17% of spend. <strong>Recommendation:</strong> switch to Advantage+ Placements account-wide so Meta naturally chases the higher-ROAS positions.</p>
+<div class="chart">
+<div class="placement-grid">
+<div>
+<h3 style="font-size:14px;color:var(--ink2);margin:0 0 12px">Current spend share (%)</h3>
+<div class="bars">
+<div class="bar-row"><div class="name">Facebook Feed</div><div class="bar-track"><div class="bar-fill warn" style="width:45%"></div></div><div class="val warn">45%</div></div>
+<div class="bar-row"><div class="name">Instagram Feed</div><div class="bar-track"><div class="bar-fill ok" style="width:19%"></div></div><div class="val">19%</div></div>
+<div class="bar-row"><div class="name">Instagram Stories ⭐</div><div class="bar-track"><div class="bar-fill good" style="width:17%"></div></div><div class="val good">17%</div></div>
+<div class="bar-row"><div class="name">Facebook Reels</div><div class="bar-track"><div class="bar-fill ok" style="width:9%"></div></div><div class="val">9%</div></div>
+<div class="bar-row"><div class="name">Instagram Reels</div><div class="bar-track"><div class="bar-fill ok" style="width:8%"></div></div><div class="val">8%</div></div>
+<div class="bar-row"><div class="name">Facebook Stories</div><div class="bar-track"><div class="bar-fill bad" style="width:1%"></div></div><div class="val bad">1%</div></div>
+</div>
+</div>
+<div>
+<h3 style="font-size:14px;color:var(--ink2);margin:0 0 12px">ROAS by placement (×)</h3>
+<div class="bars">
+<div class="bar-row"><div class="name">Instagram Stories</div><div class="bar-track"><div class="bar-fill good" style="width:70%"></div></div><div class="val good">5.59</div></div>
+<div class="bar-row"><div class="name">Instagram Feed</div><div class="bar-track"><div class="bar-fill good" style="width:68%"></div></div><div class="val good">5.45</div></div>
+<div class="bar-row"><div class="name">Instagram Reels</div><div class="bar-track"><div class="bar-fill good" style="width:64%"></div></div><div class="val good">5.14</div></div>
+<div class="bar-row"><div class="name">Facebook Feed</div><div class="bar-track"><div class="bar-fill ok" style="width:59%"></div></div><div class="val">4.74</div></div>
+<div class="bar-row"><div class="name">Facebook Reels</div><div class="bar-track"><div class="bar-fill ok" style="width:59%"></div></div><div class="val">4.72</div></div>
+<div class="bar-row"><div class="name">Facebook Stories</div><div class="bar-track"><div class="bar-fill bad" style="width:26%"></div></div><div class="val bad">2.11</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STOREFRONT / CRO AUDIT -->
+<section class="section" id="cro">
+<div class="viz-section-head">
+  <h2>Storefront / CRO audit</h2>
+  <div class="one-line">Biggest revenue lever sits on the Shopify side, not Meta</div>
+</div>
+
+<div class="cro-hero">
+  <div>
+    <div class="ch-headline">⚠ Flagship has 5 of 6 colors sold out</div>
+    <div class="ch-sub">"6 PIECE TOWEL SET 650GSM" — the workhorse Meta sends warm traffic to (LE 2,765, 52 reviews). Variant availability is the single biggest revenue leak. <strong style="color:var(--good)">Fix → IC→Purchase 44% → 60-70%</strong> with zero Meta-side change.</div>
+  </div>
+  <div class="cro-variant-bars">
+    <div class="row"><span class="name">White</span><div class="bar"><div class="bar-fill in-stock" style="width:100%;height:100%;background:rgba(34,197,94,.6)"></div></div><span class="val" style="color:#86efac">✓</span></div>
+    <div class="row"><span class="name">Mint Green</span><div class="bar"><div class="bar-fill sold-out" style="width:100%;height:100%;background:rgba(239,68,68,.4)"></div></div><span class="val" style="color:#fca5a5">×</span></div>
+    <div class="row"><span class="name">Purplish Blue</span><div class="bar"><div class="bar-fill sold-out" style="width:100%;height:100%;background:rgba(239,68,68,.4)"></div></div><span class="val" style="color:#fca5a5">×</span></div>
+    <div class="row"><span class="name">Dark Blue</span><div class="bar"><div class="bar-fill sold-out" style="width:100%;height:100%;background:rgba(239,68,68,.4)"></div></div><span class="val" style="color:#fca5a5">×</span></div>
+    <div class="row"><span class="name">Cement</span><div class="bar"><div class="bar-fill sold-out" style="width:100%;height:100%;background:rgba(239,68,68,.4)"></div></div><span class="val" style="color:#fca5a5">×</span></div>
+    <div class="row"><span class="name">Rose Gold</span><div class="bar"><div class="bar-fill sold-out" style="width:100%;height:100%;background:rgba(239,68,68,.4)"></div></div><span class="val" style="color:#fca5a5">×</span></div>
+  </div>
+</div>
+
+<div class="cro-fix-grid">
+  <div class="cro-fix p1"><div class="num">1</div><div class="body"><div class="head">Restock the 5 sold-out flagship colors</div><div class="meta"><span class="lift">+30-50%</span><span class="effort">Ops</span></div></div></div>
+  <div class="cro-fix p2"><div class="num">2</div><div class="body"><div class="head">Free-ship threshold EGP 4,000 → 3,000</div><div class="meta"><span class="lift">+8-12%</span><span class="effort">Shopify setting</span></div></div></div>
+  <div class="cro-fix p2"><div class="num">3</div><div class="body"><div class="head">Show shipping cost in cart drawer</div><div class="meta"><span class="lift">+5-8%</span><span class="effort">Liquid</span></div></div></div>
+  <div class="cro-fix p2"><div class="num">4</div><div class="body"><div class="head">🇪🇬 Egyptian-cotton heritage badge on PDPs</div><div class="meta"><span class="lift">+3-5%</span><span class="effort">Theme</span></div></div></div>
+  <div class="cro-fix p2"><div class="num">5</div><div class="body"><div class="head">Apple/Google Pay + ValU/Sympl BNPL</div><div class="meta"><span class="lift">+10-15% on 22-35F</span><span class="effort">Integrations</span></div></div></div>
+  <div class="cro-fix p3"><div class="num">6</div><div class="body"><div class="head">Scarcity widgets on PDPs</div><div class="meta"><span class="lift">+5-8% ATC</span><span class="effort">Shopify app</span></div></div></div>
+  <div class="cro-fix p3"><div class="num">7</div><div class="body"><div class="head">Cart-drawer cross-sell prompt</div><div class="meta"><span class="lift">+EGP 400-700 AOV</span><span class="effort">Liquid</span></div></div></div>
+  <div class="cro-fix p3"><div class="num">8</div><div class="body"><div class="head">Welcome popup for first IG-traffic visit</div><div class="meta"><span class="lift">+12-18% email capture</span><span class="effort">Klaviyo</span></div></div></div>
+</div>
+</section>
+
+<div class="split-line"></div>
+
+<!-- LEGEND -->
+<div class="legend-rank">
+<strong style="color:var(--ink2)">Meta ranking labels:</strong>
+<span><span class="rank rank-AB">AB</span> Above Average</span>
+<span><span class="rank rank-AVG">AVG</span> Average</span>
+<span><span class="rank rank-BLW">B-35</span> Bottom 35%</span>
+<span><span class="rank rank-UNK">UNK</span> Unknown (low impressions)</span>
+<span style="margin-left:auto;color:var(--muted)">Q = Quality · E = Engagement · C = Conversion</span>
+</div>
+
+<!-- KILL -->
+<section class="section" id="kill">
+<h2><span class="badge b-kill">KILL · 3 ads</span> &nbsp; Cut immediately — Meta-signal-confirmed</h2>
+<p class="desc">Saves <strong>~EGP 5,400/30d</strong>. All three have spent budget with zero or near-zero ROAS, and Meta itself flags them BELOW_AVERAGE on conversion ranking. Plus 3 additional zero-purchase ads from the same Mariam Khalil cluster (no previews, listed below).</p>
+<div class="cards">
+
+<div class="card kill">
+  <div class="head">
+    <div>
+      <h3>photo 1</h3>
+      <div class="id">Prospecting</div>
+    </div>
+    <span class="badge b-kill">KILL</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKu58EL1QJtK-nbJzsv_jUnr5yYk6FL5fEhsH2Qh7adb44i9bLPqw8c_sNXrigexeoRlIyHXzHmLvQRgZFANVo9EjpujLjGJuzX5kbxnGZ9q1De3CftwG2XLM-TAc7__-Vm04H8e0qebnoerKoji-MTyUSDMzNi44dQVOBpFAWVakD7ChD3m8vAHU-xuyh2BvvPziM3yupf40t2qQe_R3OVzi_vOa6XUlsWlviaoQwNsMS-kVYGTEE_lMu02Gz3qqILA4ZtjhVXuI9AKVH3amy2-zvSwfK9X1Cn-WGeci_-8Kl-4MT3U1XKgEKu5PRZZCRgtFuoxr1j_4t8DqWekQ6jYYaR-ugADCPnjC5M9OjbN3-_dUmBb8ryB24UWXYwA2zKTaI5U-iaYlyM7MCW2ivi1sAoMpZq7lSB1Qn2IvJ2_aCFcnOe6NFthpBDMqASZSQ&amp;t=AQKNk6hhbWgVAQYAHX4" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 1,950</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv bad">0.86×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">0</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AB">Q: AB</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-BLW">C: B-35</span>
+  </div>
+  <div class="reco"><strong>Paradox:</strong> beautiful image (Quality AB) but engagement + conversion both bottom 35%. The visual attracts attention but the offer/landing mismatch kills conversion. Pause; consider repurposing image with new copy/audience.</div>
+  <div class="approval">
+    <label><input type="radio" name="kill-1" value="approve" checked><span class="lbl-app">Approve</span></label>
+    <label><input type="radio" name="kill-1" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="kill-1" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('kill-1', 'photo 1')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="kill-1"></div>
+</div>
+
+<div class="card kill">
+  <div class="head">
+    <div>
+      <h3>Reel-Mariam Khalil Reel3</h3>
+      <div class="id">Prospecting</div>
+    </div>
+    <span class="badge b-kill">KILL</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIyrj1tsuV4qwiXB3Lw_roSONCtjhR-qwRaJ0Bj_QsUSwJo8-xBpDwW-tXnI1ipdmhAz9ZHJXa3r-pYEjFFfIUUHBl4b30a26vdpJaLQoWJYWasJgW9RQ4-2KeDcw5g3QHYoKr9fg7uK8D_GnyzXbGecEcHp-jt-3hOhl7BNrPR0zGKOiYZPS2hhSieP0NjEL8HCKfZs7g5v-0VADzSAkEJo2i0TBy3MxS3-C3tB5wQrpMmr62Uxdv07ap63VILikZWnmmPGU6EVrpkP2QUT2dO8cWPKsjqlYOEhx8TijuNOKEWX30H0p7HVrHBVhsQgc0poLNOfJjspDIdqsMhgzFyjPiElbGHnrXxKcRHCrHol1R-fiPdZ6saALbPX1FlAeXgIiEh-WluRB5sU8Bhh2mZ5D8vcvIRk4gRusxrYd1zb0cPfno0RvHbUWkCzrmQ_P0&amp;t=AQJxxyHewMkNYUuUET4" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 1,342</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv bad">0.00×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">0</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AVG">Q: AVG</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-BLW">C: B-35</span>
+  </div>
+  <div class="reco"><strong>Hard kill.</strong> CTR 3.29% (people click) but zero attributed purchases. Suggests tracking issue OR audience-creative mismatch with the influencer angle. Confirm the IG handle has correct tracking before re-trying any Mariam Khalil partner content.</div>
+  <div class="approval">
+    <label><input type="radio" name="kill-2" value="approve" checked><span class="lbl-app">Approve</span></label>
+    <label><input type="radio" name="kill-2" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="kill-2" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('kill-2', 'Reel-Mariam Khalil Reel3')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="kill-2"></div>
+</div>
+
+<div class="card kill">
+  <div class="head">
+    <div>
+      <h3>V8_Maya _1 ⭐⭐ – V.2</h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-kill">KILL</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKoUy87B2FsCJBJXHp68Wh2cjAHHUIdSsRtWeE8lEyK9xZHlZh8rkuCcFEysyG9Pi0AL0oSgB2YkiWS-osAsVUO9JJ6KV9QrvyVgqk6SuHYf_x0r3q53hx3yKJ9weEj5a9F2ytPCaZm1ZcrglTA9PWOprHGVL_rrGL9U_lNwX96GLEi7GuWxosKl-Agq4OfURVt3syFHjsp9hywjGov6TNmZDIC-HtkLY9o6AIXuNAR4Ryk4Y-VA_0I8qHprKr_7bRLUM7OeO52Sy6i8pLZAx_22MQXhhRzneZfWP-93Uws2IaoRRuMedMLb4KV-5kX5dmm_CLnT7ZKkdXCBj-6NPtno97hMf4DjEICcE9MJtM23tSUJj_Q1ykGZWoRgwseMwsyhtYKperagdJ5V-pEON6VByxpFFeBFBNt-m8LVk-3y9Llt3wGVqzHcYDmVg3dlCQ&amp;t=AQK775IFS2GJpWbSlDA" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 2,100</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv bad">0.00×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">0</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AVG">Q: AVG</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-BLW">C: B-35</span>
+  </div>
+  <div class="reco"><strong>Hard kill.</strong> Retargeting ad with zero purchases on EGP 2,100 — note: this is V.2; a different ad_id with same display name performs at 6.63 ROAS. Disambiguate by ID when actioning.</div>
+  <div class="approval">
+    <label><input type="radio" name="kill-3" value="approve" checked><span class="lbl-app">Approve</span></label>
+    <label><input type="radio" name="kill-3" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="kill-3" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('kill-3', 'V8_Maya _1 ⭐⭐ – V.2')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="kill-3"></div>
+</div>
+
+</div>
+
+<div class="chart" style="margin-top:18px">
+<h3>Additional cluster kills (no preview pulled)</h3>
+<div class="csub">Same pattern — zero purchases on meaningful spend. Confirms a tracking/attribution issue on the influencer reel cluster.</div>
+<table class="tbl">
+<thead><tr><th>Ad name</th><th>Ad ID</th><th>Spend</th><th>Purchases</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>Reel-Mariam Khalil Reel 1</td><td><code>120244337838910770</code></td><td>EGP 761</td><td>0</td><td><span class="badge b-kill">KILL</span></td></tr>
+<tr><td>Reel-Mariam Khalil Reel2</td><td><code>120245164023350770</code></td><td>EGP 574</td><td>0</td><td><span class="badge b-kill">KILL</span></td></tr>
+<tr><td>AD_6</td><td><code>120245676463710770</code></td><td>EGP 1,337</td><td>0</td><td><span class="badge b-kill">KILL</span></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- PAUSE AD SETS -->
+<section class="section" id="pause">
+<h2><span class="badge b-pause">PAUSE · 4 ad sets</span> &nbsp; The audience-seed-exhaustion list</h2>
+<p class="desc">These four ad sets are responsible for the entire 45% ROAS decline. Frequencies stayed LOW (1.5–2.0 prospecting; max 4.41 retargeting) — meaning this is NOT repetition fatigue. It's the audience seed running out of high-intent buyers. <strong>Pause these; refill the funnel with fresh audiences (see Audience Roadmap below).</strong></p>
+
+<table class="tbl">
+<thead>
+<tr><th>Ad set</th><th>Campaign</th><th>W1 ROAS</th><th>W4 ROAS</th><th>Δ</th><th>Spend (5w)</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interest_Pack_4_(15-Mar-26)_W_Exc</strong><div class="pct">Top spender — pacing the entire decline</div></td>
+<td>Prospecting <span class="tag">☪</span></td>
+<td>5.94×</td>
+<td><span style="color:var(--bad)">1.88×</span></td>
+<td><strong style="color:var(--bad)">−68%</strong></td>
+<td>~EGP 73K</td>
+<td><span class="badge b-pause">PAUSE</span></td>
+</tr>
+<tr>
+<td><strong>Broad_4_(3-Apr-26)_W_Exc</strong><div class="pct">Same fatigue signature</div></td>
+<td>Prospecting <span class="tag">☪</span></td>
+<td>6.29×</td>
+<td><span style="color:var(--bad)">1.93×</span></td>
+<td><strong style="color:var(--bad)">−69%</strong></td>
+<td>~EGP 31K</td>
+<td><span class="badge b-pause">PAUSE</span></td>
+</tr>
+<tr>
+<td><strong>towels</strong><div class="pct">Was structurally weak from W1; W4 ROAS 0.46 bleeding</div></td>
+<td>Prospecting <span class="tag">☪</span></td>
+<td>2.27×</td>
+<td><span style="color:var(--bad)">0.81×</span></td>
+<td><strong style="color:var(--bad)">−64%</strong></td>
+<td>~EGP 16K</td>
+<td><span class="badge b-pause">PAUSE</span></td>
+</tr>
+<tr>
+<td><strong>Retarget – 6</strong><div class="pct">Scaled to EGP 9K/wk in W4 right before W5 collapse — most expensive lesson</div></td>
+<td>Retargeting <span class="tag">☪</span></td>
+<td>13.57×</td>
+<td><span style="color:var(--bad)">1.08×</span></td>
+<td><strong style="color:var(--bad)">−92%</strong></td>
+<td>~EGP 26K</td>
+<td><span class="badge b-pause">PAUSE</span></td>
+</tr>
+</tbody>
+</table>
+
+<div style="margin-top:16px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:10px;display:flex;justify-content:space-between;align-items:center">
+<span style="color:var(--ink2);font-size:13px">Approve all 4 pauses?</span>
+<div class="approval" style="padding:0">
+<label><input type="radio" name="pause-all" value="approve" checked><span class="lbl-app">Approve all</span></label>
+<label><input type="radio" name="pause-all" value="modify"><span class="lbl-mod">Modify selection</span></label>
+<label><input type="radio" name="pause-all" value="reject"><span class="lbl-rej">Reject</span></label>
+</div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('pause-all', 'Additional cluster kills (no preview pulled)')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="pause-all"></div>
+</div>
+</section>
+
+<!-- HOLD / WATCH -->
+<section class="section" id="hold">
+<h2><span class="badge b-hold">HOLD / WATCH · 5 ads</span> &nbsp; Don't scale — Meta is warning these will crash</h2>
+<p class="desc">These 5 retargeting ads look profitable today (ROAS 5.13–12.54) but Meta's own engagement-rank flags them BELOW_AVERAGE. This is the textbook attribution-noise pattern — conversions are being credited last-click to users who would've bought anyway. <strong>Hold current budget, do not increase. Watch ROAS day-over-day. If any drops 30% in 2 consecutive days, pause.</strong></p>
+<div class="cards">
+
+<div class="card hold">
+  <div class="head">
+    <div>
+      <h3>AD_2 <span class="tag">"hidden gem" — revised down</span></h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-hold">HOLD</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQLkiT-kW_-l1-iLyfwBYeTEyy6xJHE7w3m0UXjXoJqEPMA1SZeDEysB7rktTGZnlws90aI93TG95V7S7TAvrQDhuQV_lSh-M_kzE9pt6kjbQv-y3MKNHRh2sjSdUICT6qE6PV_eriyTKMi68X_puf_vbYO1oVnr9v9poJIzOOrEIxvaOuYeLpvVrGV916KdZH3RZqobl_yL_RP7ZZ3oU6B8u3n-5t8Ik3RcHmKOobPOJGpnul5Qqw-yzo9zFmguH2TLajjFhsqCguqv3HOBnORPXYgKGoTYLS5eUVRLK-B5qo4LUvmSrHWVLRc4laRvSnBSpy1RBwXn77d4Jk1coOmPo_M4nijFkwTG4x1YxoFw8H3mLvwLO529OQkXVB6e-OdBy1hWl8Y2gGl8iguLIOspSJOr0p-WYVCmGDZcJ5twA-0n2Wtfuh5EaKrnUMY9lg8&amp;t=AQLqpEh6WEJZuNkP1OI" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 3,621</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">12.54×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">16</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AVG">Q: AVG</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-AVG">C: AVG</span>
+  </div>
+  <div class="reco"><strong>The canary.</strong> Widest gap between reported performance and Meta's quality signal. Highest mean-reversion risk in the account. Do NOT scale budget. Watch.</div>
+  <div class="approval">
+    <label><input type="radio" name="hold-1" value="approve" checked><span class="lbl-app">Hold</span></label>
+    <label><input type="radio" name="hold-1" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="hold-1" value="reject"><span class="lbl-rej">Override</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('hold-1', 'AD_2 &quot;hidden gem&quot; — revised down')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="hold-1"></div>
+</div>
+
+<div class="card hold">
+  <div class="head">
+    <div>
+      <h3>C1 – Copy</h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-hold">HOLD + REFRESH</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQK0q5HAbXCqUMuPvqFpPDmvNT7Y0EeS0pYtWG8Ltve_4O7ANmPPaLvoVjU4AlQHv-CIKekrKi6INvRu0bv4ygVoY_mjC0rfXWZC7HKMrnDFdnZCeuGN0-9WUwPxtwvY8d5_dH7M9aFxDbASqsX1VRAVAiTYxgqggeHffV5IP_QUWwucD8J7A7JrgwiMOOssKj-UQmn-hZAFnvyOc3biFPiOrhXxR1bISx8qdF6D_HPAw6nollqAk9DLQNlw7KbZS5EI0N47gvkJAOJp3b8utQ8iBKOVAghmPxdX7ERwf-XvcI7tzim1cxO8oA8jlXaKfdmqPbg2TzO81Xv80DXvSgfJiqmHsT5XBNJRxMTv7XzxIUtRkla5O1LxtTR0RiJUa5snCJ_S96LFHy7TvPdfdK__zYW4-OUiWZ_kWLx1pUh-Jq0KfAzobElgu8arvzKcRLc&amp;t=AQIIQkEX2RFFazENPyg" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 10,138</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">7.65×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">19</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AB">Q: AB</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-BLW">C: B-35</span>
+  </div>
+  <div class="reco">Hold budget, <strong>duplicate-and-refresh urgently</strong> — both engagement AND conversion bottom 35% means decay is imminent.</div>
+  <div class="approval">
+    <label><input type="radio" name="hold-2" value="approve" checked><span class="lbl-app">Hold</span></label>
+    <label><input type="radio" name="hold-2" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="hold-2" value="reject"><span class="lbl-rej">Override</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('hold-2', 'C1 – Copy')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="hold-2"></div>
+</div>
+
+<div class="card hold">
+  <div class="head">
+    <div>
+      <h3>AD_5</h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-hold">HOLD</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQJobG6C0W96-SlTtaLDcuyYdcqEynhkZcvoVsZT3BZqI3LoIi209Ab9fJO3c2DWoEngKFoKwHk--_ceyXZL8YNF4eneROsPOa2POfczP454Hf20bD7EMQI8DHnPicP063mXFjZNIceo5HJQPHZyWQNHlmTuZYcYwC4aWd_tBFdx1y6x9v7mcw69w4xeJi6kFc8h1GVDUit1Vx78vq8ogDSbMBkx2scMSAqKNOZhVk1_HpgS-6B1NU8n71Q-xljPnyQ7jJKE_m6QH6xbWbYOqAx-2PsAx5WfPa0RtjUXJ0Z0GvRi6fVPfQhrqjtUbaDabLRtR8d7Czt91h5X5VRuhHht-57v9OAD4gxGIlYnukBgunoawyz2SDFnZennTUCRXqBgehZaoSXKa9HWcnK-oRbJEMkPj4e5z0qHOeVX2oElDY-nV-3bY9iJ_wrxc_maRjI&amp;t=AQK6V3u6MqBsVhDzrmM" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 1,195</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">7.52×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">6</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AVG">Q: AVG</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-AVG">C: AVG</span>
+  </div>
+  <div class="reco">Low spend but high ROAS — attribution-noise risk same as AD_2. Hold; don't scale.</div>
+  <div class="approval">
+    <label><input type="radio" name="hold-3" value="approve" checked><span class="lbl-app">Hold</span></label>
+    <label><input type="radio" name="hold-3" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="hold-3" value="reject"><span class="lbl-rej">Override</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('hold-3', 'AD_5')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="hold-3"></div>
+</div>
+
+<div class="card hold">
+  <div class="head">
+    <div>
+      <h3>image -Summer Towels <span class="tag">HIGHEST RISK</span></h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-hold">HOLD + REFRESH</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKfHvXHkA9PJ0xYdKz791au8LTHXBDiklHsnt54TJ14Pb3q21PYejosD_NDhkEwBloOawTCsHAM8bHV-QdhHRJwMUcrmuYdiDoMz8On6-MJCOJdK55Zr86kSL5BGya-xv6HHZNup-Vp4nkpXTNYEo3PrO3A8OkbnXlgotZTaSqZalVFz1YOcIgIGtCVm7KneosW1MQr46Pge-cI7RM638NxwkgELnuxGWsSEIWOMhfMJ_7URll9wg7yHWXSENxdiT3GA2sgnmngP69SaOc6dMsTsjQihFIvRofsN6zWIN-c9tcpEMoCCmVUg1ZB3ChJYkkC4CY1bxadjaJkTz-yoMMsTxOYYcGkzvBveGL-cwttTAgRcqNA5SRbb3UXAelFw5FTI9O27siJ3aUnnvPHF-3vsNiMcd2-5A0hc5gpA3f2MvKufYfDcc0P_CDt5cglVY4&amp;t=AQIFns8_8M9ylKuZDco" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 16,557</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">5.51×</div></div>
+    <div class="m"><div class="ml">Freq</div><div class="mv warn">4.43</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AB">Q: AB</span>
+    <span class="rank rank-BLW">E: B-35</span>
+    <span class="rank rank-BLW">C: B-35</span>
+  </div>
+  <div class="reco"><strong>Biggest revenue at risk in account.</strong> EGP 16.5K of monthly spend tied to an ad Meta is flagging on engagement AND conversion. Highest-priority refresh candidate.</div>
+  <div class="approval">
+    <label><input type="radio" name="hold-4" value="approve" checked><span class="lbl-app">Hold</span></label>
+    <label><input type="radio" name="hold-4" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="hold-4" value="reject"><span class="lbl-rej">Override</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('hold-4', 'image -Summer Towels HIGHEST RISK')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="hold-4"></div>
+</div>
+
+<div class="card hold">
+  <div class="head">
+    <div>
+      <h3>V-color coverlet</h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-hold">HOLD</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIADVwvMTsCK-YAwwg2UT-iPeyph6_fFFw0-r7VvmGo1ZojQYaIXcMDpSlSy7XEkkyVRZQt124jjdmtMyyqMByvKYd-8D8lo2AONKwfAvv3uIF75tvAiBPm2KQqmYdPcu_WLYDvnSXo80jl5dAvj5nnnme8v1mfSMduoViW4BVREQ4yg2rMucjj_6W_hm8LP8IE8Cb1uYHfj5G8Z8pfpDW6ZpA_AoQFAaH79M33tVKbWB8mm-Y7XVzQaISpcvcoj4K8U-ps5BrOI-6AU4e-YY_WN8q7ofA17j7JSJfPReFSxIJktCfpAQEUiyVmLgTbNy62dbVm2oBP-VHf4rtI8t6_y28A_n3vnQ6uZryPMqqnxmQaNi4n81cKMKA2Hta55w5VrEElKnTl7vgPUvvDSeUjNvI0J64dM8_TS5CN0RrDpCcwi3QVeTvQsBYC8SHD970&amp;t=AQK1AHo2ijhmm-RR8xk" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 2,833</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">5.13×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">3</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-AVG">Q: AVG</span>
+    <span class="rank rank-AVG">E: AVG</span>
+    <span class="rank rank-BLW">C: B-35</span>
+  </div>
+  <div class="reco">Healthiest of the watch list — only Conversion ranking is weak. Hold; pair with re-tested landing page (coverlets collection).</div>
+  <div class="approval">
+    <label><input type="radio" name="hold-5" value="approve" checked><span class="lbl-app">Hold</span></label>
+    <label><input type="radio" name="hold-5" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="hold-5" value="reject"><span class="lbl-rej">Override</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('hold-5', 'V-color coverlet')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="hold-5"></div>
+</div>
+
+</div>
+</section>
+
+<!-- REFRESH -->
+<section class="section" id="refresh">
+<h2><span class="badge b-refresh">DUPLICATE & REFRESH · 3 ads</span> &nbsp; Before engagement-decay tanks ROAS</h2>
+<p class="desc">Same ads as the Hold list, but the action is different: <strong>duplicate</strong> each one into a fresh ad with a new visual + new hook line, keep the offer the same, let it compete against the original for 7 days. When the new variant beats the old, kill the old. Total revenue at risk if not refreshed: <strong>~EGP 32K/30d</strong>.</p>
+<div class="cards">
+
+<div class="card refresh">
+  <div class="head">
+    <div>
+      <h3>image -Summer Towels → REFRESH</h3>
+      <div class="id">Refresh of an existing creative</div>
+    </div>
+    <span class="badge b-refresh">REFRESH</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKfHvXHkA9PJ0xYdKz791au8LTHXBDiklHsnt54TJ14Pb3q21PYejosD_NDhkEwBloOawTCsHAM8bHV-QdhHRJwMUcrmuYdiDoMz8On6-MJCOJdK55Zr86kSL5BGya-xv6HHZNup-Vp4nkpXTNYEo3PrO3A8OkbnXlgotZTaSqZalVFz1YOcIgIGtCVm7KneosW1MQr46Pge-cI7RM638NxwkgELnuxGWsSEIWOMhfMJ_7URll9wg7yHWXSENxdiT3GA2sgnmngP69SaOc6dMsTsjQihFIvRofsN6zWIN-c9tcpEMoCCmVUg1ZB3ChJYkkC4CY1bxadjaJkTz-yoMMsTxOYYcGkzvBveGL-cwttTAgRcqNA5SRbb3UXAelFw5FTI9O27siJ3aUnnvPHF-3vsNiMcd2-5A0hc5gpA3f2MvKufYfDcc0P_CDt5cglVY4&amp;t=AQIFns8_8M9ylKuZDco" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="reco">New visual: same product, beach lifestyle setting. New hook: "بتجهزي للسحل؟" angle instead of the price-anchor headline. Keep 20% offer. Spend at risk: <strong>EGP 16,557/30d</strong>.</div>
+  <div class="approval">
+    <label><input type="radio" name="rfr-1" value="approve" checked><span class="lbl-app">Approve</span></label>
+    <label><input type="radio" name="rfr-1" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="rfr-1" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('rfr-1', 'image -Summer Towels → REFRESH')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="rfr-1"></div>
+</div>
+
+<div class="card refresh">
+  <div class="head">
+    <div>
+      <h3>C1 – Copy → REFRESH</h3>
+      <div class="id">Refresh of an existing creative</div>
+    </div>
+    <span class="badge b-refresh">REFRESH</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQK0q5HAbXCqUMuPvqFpPDmvNT7Y0EeS0pYtWG8Ltve_4O7ANmPPaLvoVjU4AlQHv-CIKekrKi6INvRu0bv4ygVoY_mjC0rfXWZC7HKMrnDFdnZCeuGN0-9WUwPxtwvY8d5_dH7M9aFxDbASqsX1VRAVAiTYxgqggeHffV5IP_QUWwucD8J7A7JrgwiMOOssKj-UQmn-hZAFnvyOc3biFPiOrhXxR1bISx8qdF6D_HPAw6nollqAk9DLQNlw7KbZS5EI0N47gvkJAOJp3b8utQ8iBKOVAghmPxdX7ERwf-XvcI7tzim1cxO8oA8jlXaKfdmqPbg2TzO81Xv80DXvSgfJiqmHsT5XBNJRxMTv7XzxIUtRkla5O1LxtTR0RiJUa5snCJ_S96LFHy7TvPdfdK__zYW4-OUiWZ_kWLx1pUh-Jq0KfAzobElgu8arvzKcRLc&amp;t=AQIIQkEX2RFFazENPyg" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="reco">Pair with a UGC-style customer install video instead of the studio shot. New hook: problem/solution variant (Template C). Spend at risk: <strong>EGP 10,138/30d</strong>.</div>
+  <div class="approval">
+    <label><input type="radio" name="rfr-2" value="approve" checked><span class="lbl-app">Approve</span></label>
+    <label><input type="radio" name="rfr-2" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="rfr-2" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('rfr-2', 'C1 – Copy → REFRESH')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="rfr-2"></div>
+</div>
+
+<div class="card refresh">
+  <div class="head">
+    <div>
+      <h3>AD_1 → REFRESH</h3>
+      <div class="id">Refresh of an existing creative</div>
+    </div>
+    <span class="badge b-refresh">REFRESH</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKrrBJBs_-imE8mQC2ZEwFbgscOvF5WWEmaJ6giizhNK94q5DDQMcQFE2yBoEKjC5GU3YwHNzSODc_YRrvNnfiMQj7VOTbsdNGgmfn_mfHF98VFlPGZ0w_G2V6Mqfi1gcVY9MHJQYdLzw8lVjCFSjTM5OHXwpyhxTnR96glYJtxPxJWUF9khvs4x07_Gympylb4YUYR5uTD8IotxXvzEKliIA6rlweQZEk5mZwkoHkA2kYMUfP6NVXN383m__atKUmgU7XhWLfLUm3P2_mI_yGiFYyOWljNZXs-YSEeyLFqnG2wJONb8C0hks0jSNTowktxkTJW36iq7Qj3wDF-yxj5BCJ1bHE57QqjGthNQj-41-MCy3EWlNz_Gray0eCB5V5LuvJTHS6HjN1uHomlBHWKiZtgMCmxVhqYhsbX9KtssjC5Q0tooBrc2NHinuQheiE&amp;t=AQIF2w-FxcX7u38lQ8c" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="reco">Refresh with new hook + 5-star testimonial frame variant. Spend at risk: <strong>EGP 5,356/30d</strong>.</div>
+  <div class="approval">
+    <label><input type="radio" name="rfr-3" value="approve" checked><span class="lbl-app">Approve</span></label>
+    <label><input type="radio" name="rfr-3" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="rfr-3" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('rfr-3', 'AD_1 → REFRESH')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="rfr-3"></div>
+</div>
+
+</div>
+</section>
+
+<!-- SCALE / PROTECT -->
+<section class="section" id="scale">
+<h2><span class="badge b-scale">PROTECT / SCALE · 2 ads</span> &nbsp; The genuine workhorses</h2>
+<p class="desc">These two carry the account. Volume + efficiency. Protect their budget, do NOT touch creative, watch for the same engagement-fatigue pattern starting to show up. If rankings hold, scale 20% in 7 days.</p>
+<div class="cards">
+
+<div class="card scale">
+  <div class="head">
+    <div>
+      <h3>Reel- Adults Poncho-AR <span class="tag">37% of prospecting</span></h3>
+      <div class="id">Prospecting</div>
+    </div>
+    <span class="badge b-scale">PROTECT</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIGIZw_36jJLHbMN8t0APT6IjKt8byHaSwZRfx1HGqF7vUx8Nr6v7v9WUHslOPszcPuhHf3jxGf70zDiAqcBcnWkVNpXOGgUk_145FanEuTktGBTXcqtPHmnbr8jVvuONKT9cyUJIEOPBTm04BMiES2uS6-AuXIS3-SPtla-n_oelKr5vgSE3cxTZ2t_yxZA2HoPzQeFe_myMbRH9RmElfI-_rQOtLcGoynzU1AMeHPC3CveRuqNE78LxrZfuMFVTIOMfV4VUqZH72CHA1Az54COfcfBWgIM4pGat_tgbFQWWCT31qnoPIJ_N3twCK1VohT3jleSauuR19FlbxLFPYP68z0tI1hG8jEJXT8goFZLLxsqWC8eWMoBs3-lhHBHke1Hm1WDhrlPSsm0XCd9-GfRzrib1Jf_VJ2hICgViZo3L00JNbMt2qbjSTIac-Ik4c&amp;t=AQJtNOE2y8YkOJwmJRs" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 44,271</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">5.00×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">133</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-UNK">Q: UNK</span>
+    <span class="rank rank-UNK">E: UNK</span>
+    <span class="rank rank-UNK">C: UNK</span>
+  </div>
+  <div class="reco"><strong>The single biggest revenue source in the account.</strong> Frequency 2.08 — plenty of headroom. Rankings UNKNOWN (delivered narrowly per placement). Scale 20% in 7 days if frequency stays < 3.</div>
+  <div class="approval">
+    <label><input type="radio" name="scl-1" value="approve" checked><span class="lbl-app">Protect</span></label>
+    <label><input type="radio" name="scl-1" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="scl-1" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('scl-1', 'Reel- Adults Poncho-AR 37% of prospecting')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="scl-1"></div>
+</div>
+
+<div class="card scale">
+  <div class="head">
+    <div>
+      <h3>V9_Maya _2_NEW! <span class="tag">retargeting volume star</span></h3>
+      <div class="id">Retargeting</div>
+    </div>
+    <span class="badge b-scale">PROTECT</span>
+  </div>
+  <div class="iframe-wrap">
+    <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIkoUzp1tcTKNvrqw3QQx43ugWhz4umJbT4v1zAdErVEFqHdhUqKMHdJNtQsWxmmztPJZKqfumLzeKh7f1sC3PXC-5Iy7owZ0wpw9u1CSQZwc64SBr94Tt52F474n--QuwszPukfe0d2pT5ZRtuwVUcMHgSqTdudj9Tlhtn-U36DXi9HMJDEYSZHgVHLv3J6wI6Dl_zVgIU3RKXEEnh8q9lt69A5-lPQXmxzi4mcotPEG8PauHEPdngknT8trkh5wXDnWj1PovoCsQH70iQQeKCgYbkJDRLiWiqOr3tGniQ6iv4gkZktvmyTMWjy-eBP2WfiRhf4X61J2vpTa9e_AbBNGF2lI0ke7ArqUxcE8OcPoD7Z9qN__GE1x21T0MvMZCjr_nGaV_jNx46ok7T-ka7SLX1iwbq6fap7ITH1s_KjcLpTyoJK1uEYLErdqRddmk&amp;t=AQK4r2HTKFJD7eAKxA0" width="335" height="450" scrolling="yes" style="border:none" allow="autoplay"></iframe>
+  </div>
+  <div class="metrics">
+    <div class="m"><div class="ml">Spend</div><div class="mv">EGP 21,730</div></div>
+    <div class="m"><div class="ml">ROAS</div><div class="mv good">9.29×</div></div>
+    <div class="m"><div class="ml">Purchases</div><div class="mv">50</div></div>
+  </div>
+  <div class="rankings">
+    <span class="rank rank-UNK">Q: UNK</span>
+    <span class="rank rank-UNK">E: UNK</span>
+    <span class="rank rank-UNK">C: UNK</span>
+  </div>
+  <div class="reco">The volume + efficiency star. 50 purchases on 21.7K spend at 9.29 ROAS. Frequency 3.33 (watch). Hold spend; do not scale until you've refreshed creative on the rest of retargeting.</div>
+  <div class="approval">
+    <label><input type="radio" name="scl-2" value="approve" checked><span class="lbl-app">Protect</span></label>
+    <label><input type="radio" name="scl-2" value="modify"><span class="lbl-mod">Modify</span></label>
+    <label><input type="radio" name="scl-2" value="reject"><span class="lbl-rej">Reject</span></label>
+  </div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('scl-2', 'V9_Maya _2_NEW! retargeting volume star')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="scl-2"></div>
+</div>
+
+</div>
+</section>
+
+<!-- LAUNCH NEW -->
+<section class="section" id="launch">
+<h2><span class="badge b-launch">LAUNCH NEW · 4 audience + 3 campaign moves</span></h2>
+<p class="desc">Root cause of the ROAS decline is audience-seed exhaustion. These launches refill the funnel with new high-intent audiences. Start this week, in parallel with the kills/pauses above.</p>
+
+<div class="aud-grid">
+
+<div class="aud">
+<div class="pri">P0 · This week</div>
+<h4>18-24 Female test ad set</h4>
+<div class="why">Demo signal: ROAS <strong>29.04×</strong> on EGP 410 micro-spend in last 30d. Too small to act on alone, but warrants a controlled EGP 2K/day test for 7 days to validate.</div>
+<div class="meta">Audience: 18-24 F, Egypt · Daily: EGP 2,000 · Optimization: OFFSITE_CONVERSIONS / Purchase</div>
+</div>
+
+<div class="aud">
+<div class="pri">P0 · This week</div>
+<h4>Customer-CSV re-upload</h4>
+<div class="why">Current customer list audience (<code>OTN Database.CSV</code>) was uploaded Feb 2025 — 15 months stale. Re-export from Shopify, re-upload as fresh seed for lookalikes.</div>
+<div class="meta">Source: Shopify Customers export · Use as exclusion + LAL seed</div>
+</div>
+
+<div class="aud">
+<div class="pri">P1 · Week 2</div>
+<h4>LAL tier expansion — 2%, 3%, 5%</h4>
+<div class="why">Only the 1% LAL of Purchase/ATC/IC exists. At 168M lifetime spend the 1% pool is exhausted. Broader LAL tiers typically convert at 80-90% of 1% ROAS at 3-5× the reach.</div>
+<div class="meta">Build: LAL Purchase 2% · 3% · 5% (Egypt) — same seed as existing 1%</div>
+</div>
+
+<div class="aud">
+<div class="pri">P1 · Week 2</div>
+<h4>High-AOV LAL</h4>
+<div class="why">Top 25% of customers by order value as seed (current AOV ~EGP 2,489 → high-AOV cohort likely EGP 4K+). Usually the single highest-ROAS audience in any DTC account.</div>
+<div class="meta">Source: Shopify top-25%-AOV export · LAL 1-3% (Egypt)</div>
+</div>
+
+<div class="aud">
+<div class="pri">P2 · Week 3</div>
+<h4>Advantage+ Shopping Campaign (ASC+)</h4>
+<div class="why">Parallel test to manual interest-stack prospecting. ASC+ has matured in 2026 and typically outperforms manual at this spend level. Use as TOF channel #2.</div>
+<div class="meta">Budget: EGP 3K/day initial · Target: existing customers exclusion = 7d retention list</div>
+</div>
+
+<div class="aud">
+<div class="pri">P2 · Week 3</div>
+<h4>BOF DPA expansion</h4>
+<div class="why">Currently only 1 catalog ad set (just launched May 16). With 140 SKUs and a working pixel, DPA should be 30-40% of retargeting spend within 30 days. Build broad audience + cart-abandoner segments.</div>
+<div class="meta">Catalog: OTN-Shopify Product Catalog (1231856704041943) · 140 products</div>
+</div>
+
+</div>
+
+<div style="margin-top:16px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:10px;display:flex;justify-content:space-between;align-items:center">
+<span style="color:var(--ink2);font-size:13px">Approve audience expansion plan?</span>
+<div class="approval" style="padding:0">
+<label><input type="radio" name="launch-all" value="approve" checked><span class="lbl-app">Approve all</span></label>
+<label><input type="radio" name="launch-all" value="modify"><span class="lbl-mod">Pick subset</span></label>
+<label><input type="radio" name="launch-all" value="reject"><span class="lbl-rej">Reject</span></label>
+</div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('launch-all', 'launch-all')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="launch-all"></div>
+</div>
+</section>
+
+<!-- CREATIVE BRIEF -->
+<section class="section" id="brief">
+<h2><span class="badge b-launch" style="background:rgba(204,159,83,.15);color:#fcd34d">CREATIVE BRIEF</span> &nbsp; 4 net-new angles for the OTN photo/video team</h2>
+<p class="desc">Zero ads in either active campaign hit ABOVE_AVERAGE on Engagement or Conversion. Meta has 46 of OTN's active ads to benchmark — none break out. The current library (7 templates × 90 ads) shares 1-2 systemic weaknesses (likely: thumb-stop in the first 1.5s + hook-text contrast). Brief 4 net-new angles, each as 3 hook variations.</p>
+
+<div class="angles">
+
+<div class="angle">
+<h4>① UGC bathroom installs</h4>
+<p style="margin:0 0 6px;color:var(--ink2);font-size:13px">3 customer videos, real Egyptian bathrooms, female 30-50 voice. Shot vertical for Reels/Stories. Hand-held, NOT studio.</p>
+<div class="hook"><span class="lbl">Hook A — surprise</span>هتعرفي ليه 2000 ست في مصر بدّلوا فوطهم الموسم ده 👇</div>
+<div class="hook"><span class="lbl">Hook B — testimonial</span>"الفوطة دي عندي بقالها 6 شهور وزي ما تكون لسه جديدة". منى من القاهرة</div>
+<div class="hook"><span class="lbl">Hook C — problem/solution</span>كنت بغيّر الفوط كل 3 شهور… لحد ما جربت OTN. شوفي بعد 6 شهور 👀</div>
+</div>
+
+<div class="angle">
+<h4>② Sahel / North Coast summer push</h4>
+<p style="margin:0 0 6px;color:var(--ink2);font-size:13px">Beach towels, ponchos, beach mats in their natural occasion. Sahel/El Alamein backdrop. Replaces the in-bathroom-only library (currently 80%+ of ads).</p>
+<div class="hook"><span class="lbl">Hook A — seasonal urgency</span>الصيف على الباب. جهزتي شنطة الساحل؟ 🌊</div>
+<div class="hook"><span class="lbl">Hook B — gift / sets</span>طقم بحر كامل للعيلة كلها. قبل ما أسعار الصيف تتغير</div>
+<div class="hook"><span class="lbl">Hook C — comparison</span>الفرق بين فوطة بحر عادية وفوطة OTN؟ شوفي بعينيكي 👇</div>
+</div>
+
+<div class="angle">
+<h4>③ Bundle ladder hero</h4>
+<p style="margin:0 0 6px;color:var(--ink2);font-size:13px">Single product vs Set of 3 vs Set of 6, with per-towel math shown. Tests the "more you buy more you save" mechanic instead of the always-on flat 20%.</p>
+<div class="hook"><span class="lbl">Hook A — math reveal</span>طقم 6 فوط = سعر 4 بس. كل ما تشتري أكتر، توفّري أكتر 🛒</div>
+<div class="hook"><span class="lbl">Hook B — buy-3-get-4</span>فوط اليد: اشتري 3 والرابعة علينا 👌 (موجود حالياً في رواج)</div>
+<div class="hook"><span class="lbl">Hook C — household calculation</span>بيت فيه 4 أفراد بيحتاج 8 فوط. اشتري الباندل ووفّري 500 جنيه</div>
+</div>
+
+<div class="angle">
+<h4>④ Founder / origin story</h4>
+<p style="margin:0 0 6px;color:var(--ink2);font-size:13px">30-second spot. Why OTN-grade Egyptian cotton matters. Cold prospecting only. Currently the brand has NO awareness/origin angle in active rotation.</p>
+<div class="hook"><span class="lbl">Hook A — provenance</span>قطن مصري 100%. ده الفرق اللي مش هتلاقيه في أي فوطة تانية</div>
+<div class="hook"><span class="lbl">Hook B — heritage</span>30 سنة بنشتغل قطن مصري. قصة OTN في 30 ثانية 👇</div>
+<div class="hook"><span class="lbl">Hook C — manufacturing reveal</span>من شجرة القطن لحد بيتك. رحلة OTN في فيديو واحد 👇</div>
+</div>
+
+</div>
+
+<div style="margin-top:16px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:10px;display:flex;justify-content:space-between;align-items:center">
+<span style="color:var(--ink2);font-size:13px">Approve creative brief — proceed to shoot?</span>
+<div class="approval" style="padding:0">
+<label><input type="radio" name="brief-all" value="approve" checked><span class="lbl-app">Approve</span></label>
+<label><input type="radio" name="brief-all" value="modify"><span class="lbl-mod">Modify angles</span></label>
+<label><input type="radio" name="brief-all" value="reject"><span class="lbl-rej">Reject</span></label>
+</div>
+        <div class="cmt-trigger-row"><button class="cmt-btn" onclick="openCmtModal('brief-all', 'brief-all')">Add comment</button></div>
+        <div class="cmt-list" data-cmt-list="brief-all"></div>
+</div>
+</section>
+
+<!-- WAVE 1 VISUAL PREVIEWS -->
+<section class="section" id="wave1">
+<div class="viz-section-head">
+  <h2>Wave 1 — how the new ads appear in feed</h2>
+  <div class="one-line">48 stills · 4 angles × 6 archetype variants · every product is a real OTN SKU</div>
+</div>
+
+<div style="display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;font-size:11px">
+  <span class="archetype-badge archetype-ed" style="position:static">Editorial</span>
+  <span class="archetype-badge archetype-nh" style="position:static">Native Highlight</span>
+  <span class="archetype-badge archetype-bc" style="position:static">Baked Caption</span>
+  <span class="archetype-badge archetype-ns" style="position:static">Social Inset</span>
+  <span class="archetype-badge archetype-sms" style="position:static">SMS Mockup</span>
+  <span class="archetype-badge archetype-si" style="position:static">Secret Info</span>
+</div>
+
+<!-- ANGLE 1 — UGC BATHROOM -->
+<div style="margin-top:8px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">
+  <h3 style="margin:0;font-size:16px;color:var(--gold)">① UGC Bathroom · <span style="color:var(--ink2);font-weight:400">replaces the studio-only library</span></h3>
+  <span class="approval" style="padding:0">
+    <label><input type="radio" name="wave1-a1" value="approve" checked><span class="lbl-app">Approve angle</span></label>
+    <label><input type="radio" name="wave1-a1" value="modify"><span class="lbl-mod">Modify</span></label>
+  </span>
+</div>
+<div class="meta-grid">
+  <!-- A1 Editorial Story -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-ed">Editorial</span>
+      <img class="story-img" src="assets/wave1a/angle-1-ugc-bathroom/hook-a-surprise/story.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">2h · Egypt</div></div><div class="sponsored-pill">Sponsored</div></div>
+      </div>
+      <div class="story-bottom">
+        <div class="reply-input" style="margin-bottom:10px">Send message...</div>
+        <div class="story-cta">اعرفي أكتر <span class="story-cta-arrow"></span></div>
+      </div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">هتعرفي ليه 2000 ست في مصر بدّلوا فوطهم الموسم ده 👇</div>
+  </div>
+
+  <!-- A1 Native Highlight (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-nh">Native Highlight</span><img src="assets/wave1b/angle-1-ugc-bathroom/native-highlight-label.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">3,847 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>الفرق في التفصيلة. شوفي الـ tag على الفوطة 👆</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">قطن مصري 100%. التفاصيل بتفرق.</div></div><div class="cta-btn">Shop now</div></div>
+    </div>
+  </div>
+
+  <!-- A1 Native Social Card (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-ns">Social Inset</span><img src="assets/wave1b/angle-1-ugc-bathroom/native-social-card.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">2,194 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>"الفوطة دي عندي بقالها 6 شهور وزي ما تكون لسه جديدة". منى من القاهرة ❤</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">+1,247 تقييم 5 نجوم</div></div><div class="cta-btn">Learn more</div></div>
+    </div>
+  </div>
+
+  <!-- A1 Baked Caption (Story) -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-bc">Baked Caption</span>
+      <img class="story-img" src="assets/wave1b/angle-1-ugc-bathroom/baked-caption-2000-women.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar"></div><div class="bar active"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">1h · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom">
+        <div class="reply-input" style="margin-bottom:10px">Send message...</div>
+        <div class="story-cta">اعرفي القصة <span class="story-cta-arrow"></span></div>
+      </div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">نص الـ caption محفور في الصورة نفسها — Typography-driven creative</div>
+  </div>
+</div>
+
+<!-- ANGLE 2 — SAHEL SUMMER -->
+<div style="margin-top:32px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">
+  <h3 style="margin:0;font-size:16px;color:var(--gold)">② Sahel / North Coast Summer · <span style="color:var(--ink2);font-weight:400">underused in MENA textiles, peaks Eid → July</span></h3>
+  <span class="approval" style="padding:0">
+    <label><input type="radio" name="wave1-a2" value="approve" checked><span class="lbl-app">Approve angle</span></label>
+    <label><input type="radio" name="wave1-a2" value="modify"><span class="lbl-mod">Modify</span></label>
+  </span>
+</div>
+<div class="meta-grid">
+  <!-- A2 Editorial Story -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-ed">Editorial</span>
+      <img class="story-img" src="assets/wave1a/angle-2-sahel-summer/hook-b-gift-set/story.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">2h · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">شوفي الباندل <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">طقم بحر كامل للعيلة كلها. قبل ما أسعار الصيف تتغير</div>
+  </div>
+
+  <!-- A2 Baked Caption (Story) -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-bc">Baked Caption</span>
+      <img class="story-img" src="assets/wave1b/angle-2-sahel-summer/baked-caption-prepare-sahel.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar"></div><div class="bar active"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">30m · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">اطلبي قبل العيد <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">caption مرسوم على الصورة — Story mockup كاملة</div>
+  </div>
+
+  <!-- A2 SMS Mockup (Story) -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-sms">SMS Mockup</span>
+      <img class="story-img" src="assets/wave1b/angle-2-sahel-summer/sms-mockup-whatsapp.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar"></div><div class="bar"></div><div class="bar active"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">45m · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">شوفي الباندل <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">iMessage — محادثة طبيعية بين صديقتين، اللهجة والـlexicon راجعتهم arabic-copy-review</div>
+  </div>
+
+  <!-- A2 Native Highlight (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-nh">Native Highlight</span><img src="assets/wave1b/angle-2-sahel-summer/native-highlight-tag.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">5,128 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>الفرق بين فوطة بحر عادية وفوطة OTN؟ شوفي بعينيكي 👇</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">قطن 100%. ينشف في 20 دقيقة.</div></div><div class="cta-btn">Shop now</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ANGLE 3 — BUNDLE LADDER -->
+<div style="margin-top:32px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">
+  <h3 style="margin:0;font-size:16px;color:var(--gold)">③ Bundle Ladder · <span style="color:var(--ink2);font-weight:400">replaces the saturated flat-20% offer</span></h3>
+  <span class="approval" style="padding:0">
+    <label><input type="radio" name="wave1-a3" value="approve" checked><span class="lbl-app">Approve angle</span></label>
+    <label><input type="radio" name="wave1-a3" value="modify"><span class="lbl-mod">Modify</span></label>
+  </span>
+</div>
+<div class="meta-grid">
+  <!-- A3 Editorial Story (math reveal) -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-ed">Editorial</span>
+      <img class="story-img" src="assets/wave1a/angle-3-bundle-ladder/hook-a-math-reveal/story.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">2h · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">شوفي الباندل <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">طقم 6 فوط = سعر 4 بس. كل ما تشتري أكتر، توفّري أكتر 🛒</div>
+  </div>
+
+  <!-- A3 Baked Caption (Story) -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-bc">Baked Caption</span>
+      <img class="story-img" src="assets/wave1b/angle-3-bundle-ladder/baked-caption-buy-6-pay-4.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar"></div><div class="bar active"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">15m · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">اشتري الطقم <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">"خدي 6 فوط، والـ 2 علينا" — GAIN framing, native souk-deal register</div>
+  </div>
+
+  <!-- A3 Native Highlight (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-nh">Native Highlight</span><img src="assets/wave1b/angle-3-bundle-ladder/native-highlight-bundle-math.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">4,612 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>1 ولا 3 ولا 6؟ الست اللي بتعرف توفّر بتاخد 6 ✏️</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">باندل 6 فوط · توفير حتى 930 جنيه</div></div><div class="cta-btn">Shop now</div></div>
+    </div>
+  </div>
+
+  <!-- A3 Native Social Card / Receipt (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-ns">Social Inset</span><img src="assets/wave1b/angle-3-bundle-ladder/native-social-receipt.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">3,201 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>الحساب صريح. اتفرّجي على الفاتورة 🧾</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">سعر التجزئة 2,790 · سعر الباندل 1,860</div></div><div class="cta-btn">Shop now</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ANGLE 4 — ORIGIN / HERITAGE -->
+<div style="margin-top:32px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">
+  <h3 style="margin:0;font-size:16px;color:var(--gold)">④ Origin / Heritage · <span style="color:var(--ink2);font-weight:400">no MENA competitor leads here · client shoot in Wave 2</span></h3>
+  <span class="approval" style="padding:0">
+    <label><input type="radio" name="wave1-a4" value="approve" checked><span class="lbl-app">Approve concept</span></label>
+    <label><input type="radio" name="wave1-a4" value="modify"><span class="lbl-mod">Modify</span></label>
+  </span>
+</div>
+<div class="meta-grid">
+  <!-- A4 Editorial Story -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-ed">Editorial</span>
+      <img class="story-img" src="assets/wave1a/angle-4-origin-heritage/hook-a-provenance/story.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">2h · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">اعرفي القصة <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">قطن مصري 100%. ده الفرق اللي مش هتلاقيه في أي فوطة تانية</div>
+  </div>
+
+  <!-- A4 Baked Caption (Story) -->
+  <div>
+    <div class="meta-story">
+      <span class="archetype-badge archetype-bc">Baked Caption</span>
+      <img class="story-img" src="assets/wave1b/angle-4-origin-heritage/baked-caption-export-grade.png" alt="">
+      <div class="story-top">
+        <div class="progress-bars"><div class="bar"></div><div class="bar active"></div><div class="bar"></div></div>
+        <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">1h · Sponsored</div></div></div>
+      </div>
+      <div class="story-bottom"><div class="reply-input" style="margin-bottom:10px">Send message...</div><div class="story-cta">اعرفي القصة <span class="story-cta-arrow"></span></div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px 10px;background:var(--card);border-radius:8px;font-size:12px;color:var(--ink2);direction:rtl;text-align:right">"قطن مصري للتصدير، بسعر المصري" — insider-knowledge double meaning</div>
+  </div>
+
+  <!-- A4 Native Highlight (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-nh">Native Highlight</span><img src="assets/wave1b/angle-4-origin-heritage/native-highlight-cotton-label.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">6,914 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>اتفرّجي على الـ tag كويس. 100% قطن مصري للتصدير 🇪🇬</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">من شجرة القطن لحد بيتك</div></div><div class="cta-btn">Learn more</div></div>
+    </div>
+  </div>
+
+  <!-- A4 Secret Info (Feed) -->
+  <div>
+    <div class="meta-feed">
+      <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+      <div class="feed-img"><span class="archetype-badge archetype-si">Secret Info</span><img src="assets/wave1b/angle-4-origin-heritage/secret-info-redacted-doc.png" alt=""></div>
+      <div class="feed-actions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <svg class="save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feed-likes">8,773 likes</div>
+      <div class="feed-caption"><span class="handle-bold ltr">otn_textile</span>السر اللي مصانع تصدير القطن المصري مش عايزاكي تعرفيه 👀</div>
+      <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">Grade A1 · 650 GSM · 100% Cotton</div></div><div class="cta-btn">Learn more</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:24px;padding:10px 14px;background:rgba(0,0,0,.15);border-left:2px solid var(--gold);border-radius:6px;font-size:12px;color:var(--ink2);line-height:1.5">
+  <strong style="color:var(--gold)">Every render is a real OTN product · </strong>48 ad concepts across 4 angles by 6 archetype variants. The product visible in every still is your actual SKU pulled from the brand archive — nothing generic.
+</div>
+</section>
+
+<!-- BEFORE → AFTER PAIRINGS -->
+<section class="section" id="before-after">
+<div class="viz-section-head">
+  <h2>Before → After · every kill / refresh paired with its replacement</h2>
+  <div class="one-line">The visual link between today's losers and tomorrow's launches</div>
+</div>
+
+<div class="ba-grid">
+
+  <!-- PAIRING 1: Ad_1 (TOP KILL, 7,824 EGP wasted) → Wave 1 Angle 3 Baked Math -->
+  <div class="ba-pair">
+    <div class="ba-side">
+      <div class="ba-label before"><span class="pill">KILL</span>Saves EGP 7,824 / 30d</div>
+      <div class="ba-frame">
+        <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKrrBJBs_-imE8mQC2ZEwFbgscOvF5WWEmaJ6giizhNK94q5DDQMcQFE2yBoEKjC5GU3YwHNzSODc_YRrvNnfiMQj7VOTbsdNGgmfn_mfHF98VFlPGZ0w_G2V6Mqfi1gcVY9MHJQYdLzw8lVjCFSjTM5OHXwpyhxTnR96glYJtxPxJWUF9khvs4x07_Gympylb4YUYR5uTD8IotxXvzEKliIA6rlweQZEk5mZwkoHkA2kYMUfP6NVXN383m__atKUmgU7XhWLfLUm3P2_mI_yGiFYyOWljNZXs-YSEeyLFqnG2wJONb8C0hks0jSNTowktxkTJW36iq7Qj3wDF-yxj5BCJ1bHE57QqjGthNQj-41-MCy3EWlNz_Gray0eCB5V5LuvJTHS6HjN1uHomlBHWKiZtgMCmxVhqYhsbX9KtssjC5Q0tooBrc2NHinuQheiE&amp;t=AQIF2w-FxcX7u38lQ8c" width="220" height="380" scrolling="no" style="border:none" allow="autoplay"></iframe>
+      </div>
+      <div class="ba-meta"><strong>AD_1</strong> · DPA · <span style="color:var(--bad)">1.56× ROAS</span> · Admire8 22/70</div>
+    </div>
+    <div class="ba-bridge">
+      <div class="arrow">→</div>
+      <div class="why-label">Why we're switching</div>
+      <div class="why">Generic DPA with no curiosity hook. Retargeting audience exhausted on this creative. Replacing with a <strong>typography hero</strong> that gives warm buyers a math-rooted reason to act, not just another discount.</div>
+    </div>
+    <div class="ba-side">
+      <div class="ba-label after"><span class="pill">LAUNCH</span>Wave 1B · Baked Caption</div>
+      <div class="ba-frame">
+        <div class="meta-story">
+          <span class="archetype-badge archetype-bc">Baked Caption</span>
+          <img class="story-img" src="assets/wave1b/angle-3-bundle-ladder/baked-caption-buy-6-pay-4.png" alt="">
+          <div class="story-top">
+            <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+            <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div></div>
+          </div>
+          <div class="story-bottom"><div class="story-cta">اشتري الباندل <span class="story-cta-arrow"></span></div></div>
+        </div>
+      </div>
+      <div class="ba-meta"><strong>Angle 3 · Bundle Ladder</strong><br>"خدي 6 فوط، والـ 2 علينا"</div>
+    </div>
+  </div>
+
+  <!-- PAIRING 2: Reel Mariam Khalil Reel3 (KILL, 0× ROAS) → Wave 1 Angle 2 SMS Mockup -->
+  <div class="ba-pair">
+    <div class="ba-side">
+      <div class="ba-label before"><span class="pill">KILL</span>0 purchases on EGP 1,342</div>
+      <div class="ba-frame">
+        <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQIyrj1tsuV4qwiXB3Lw_roSONCtjhR-qwRaJ0Bj_QsUSwJo8-xBpDwW-tXnI1ipdmhAz9ZHJXa3r-pYEjFFfIUUHBl4b30a26vdpJaLQoWJYWasJgW9RQ4-2KeDcw5g3QHYoKr9fg7uK8D_GnyzXbGecEcHp-jt-3hOhl7BNrPR0zGKOiYZPS2hhSieP0NjEL8HCKfZs7g5v-0VADzSAkEJo2i0TBy3MxS3-C3tB5wQrpMmr62Uxdv07ap63VILikZWnmmPGU6EVrpkP2QUT2dO8cWPKsjqlYOEhx8TijuNOKEWX30H0p7HVrHBVhsQgc0poLNOfJjspDIdqsMhgzFyjPiElbGHnrXxKcRHCrHol1R-fiPdZ6saALbPX1FlAeXgIiEh-WluRB5sU8Bhh2mZ5D8vcvIRk4gRusxrYd1zb0cPfno0RvHbUWkCzrmQ_P0&amp;t=AQJxxyHewMkNYUuUET4" width="220" height="380" scrolling="no" style="border:none" allow="autoplay"></iframe>
+      </div>
+      <div class="ba-meta"><strong>Reel · Mariam Khalil 2</strong> · Influencer video · <span style="color:var(--bad)">0.00× ROAS</span> · Admire8 30/70</div>
+    </div>
+    <div class="ba-bridge">
+      <div class="arrow">→</div>
+      <div class="why-label">Why we're switching</div>
+      <div class="why">Paid influencer face alone doesn't move conversion (3.29% CTR, 0 purchases — tracking-issue suspected). Replacing with a <strong>peer-to-peer iMessage mockup</strong> — the social proof comes from a friend's chat, not a paid voice.</div>
+    </div>
+    <div class="ba-side">
+      <div class="ba-label after"><span class="pill">LAUNCH</span>Wave 1B · SMS Mockup</div>
+      <div class="ba-frame">
+        <div class="meta-story">
+          <span class="archetype-badge archetype-sms">SMS Mockup</span>
+          <img class="story-img" src="assets/wave1b/angle-2-sahel-summer/sms-mockup-whatsapp.png" alt="">
+          <div class="story-top">
+            <div class="progress-bars"><div class="bar"></div><div class="bar active"></div><div class="bar"></div></div>
+            <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div></div>
+          </div>
+          <div class="story-bottom"><div class="story-cta">شوفي الباندل <span class="story-cta-arrow"></span></div></div>
+        </div>
+      </div>
+      <div class="ba-meta"><strong>Angle 2 · Sahel</strong><br>iMessage on Egyptian beach</div>
+    </div>
+  </div>
+
+  <!-- PAIRING 3: Image Summer Towels (REFRESH, biggest revenue at risk) → Wave 1 Angle 2 Baked Sahel -->
+  <div class="ba-pair">
+    <div class="ba-side">
+      <div class="ba-label before"><span class="pill">REFRESH</span>EGP 16,557 / 30d at risk</div>
+      <div class="ba-frame">
+        <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKfHvXHkA9PJ0xYdKz791au8LTHXBDiklHsnt54TJ14Pb3q21PYejosD_NDhkEwBloOawTCsHAM8bHV-QdhHRJwMUcrmuYdiDoMz8On6-MJCOJdK55Zr86kSL5BGya-xv6HHZNup-Vp4nkpXTNYEo3PrO3A8OkbnXlgotZTaSqZalVFz1YOcIgIGtCVm7KneosW1MQr46Pge-cI7RM638NxwkgELnuxGWsSEIWOMhfMJ_7URll9wg7yHWXSENxdiT3GA2sgnmngP69SaOc6dMsTsjQihFIvRofsN6zWIN-c9tcpEMoCCmVUg1ZB3ChJYkkC4CY1bxadjaJkTz-yoMMsTxOYYcGkzvBveGL-cwttTAgRcqNA5SRbb3UXAelFw5FTI9O27siJ3aUnnvPHF-3vsNiMcd2-5A0hc5gpA3f2MvKufYfDcc0P_CDt5cglVY4&amp;t=AQIFns8_8M9ylKuZDco" width="220" height="380" scrolling="no" style="border:none" allow="autoplay"></iframe>
+      </div>
+      <div class="ba-meta"><strong>image · Summer Towels</strong> · 5.51× ROAS but freq <strong style="color:var(--warn)">4.43</strong> · Meta flagged Engagement &amp; Conversion B-35</div>
+    </div>
+    <div class="ba-bridge">
+      <div class="arrow">→</div>
+      <div class="why-label">Why we're refreshing</div>
+      <div class="why">Strong ROAS but Meta's algorithm is throttling delivery on engagement. Same beach-towel product, new <strong>seasonal urgency hook</strong> + baked Arabic caption resets the learning phase before frequency tanks revenue.</div>
+    </div>
+    <div class="ba-side">
+      <div class="ba-label after"><span class="pill">LAUNCH</span>Wave 1B · Baked Caption</div>
+      <div class="ba-frame">
+        <div class="meta-story">
+          <span class="archetype-badge archetype-bc">Baked Caption</span>
+          <img class="story-img" src="assets/wave1b/angle-2-sahel-summer/baked-caption-prepare-sahel.png" alt="">
+          <div class="story-top">
+            <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+            <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div></div>
+          </div>
+          <div class="story-bottom"><div class="story-cta">اطلبي قبل العيد <span class="story-cta-arrow"></span></div></div>
+        </div>
+      </div>
+      <div class="ba-meta"><strong>Angle 2 · Sahel</strong><br>"جهزي شنطة الساحل قبل ما الصيف يبدأ"</div>
+    </div>
+  </div>
+
+  <!-- PAIRING 4: C1 Copy Coverlet (REFRESH, ad fatigue at high freq) → Wave 1 Angle 4 Heritage -->
+  <div class="ba-pair">
+    <div class="ba-side">
+      <div class="ba-label before"><span class="pill">REFRESH</span>EGP 10,138 / 30d · freq nearing fatigue</div>
+      <div class="ba-frame">
+        <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQK0q5HAbXCqUMuPvqFpPDmvNT7Y0EeS0pYtWG8Ltve_4O7ANmPPaLvoVjU4AlQHv-CIKekrKi6INvRu0bv4ygVoY_mjC0rfXWZC7HKMrnDFdnZCeuGN0-9WUwPxtwvY8d5_dH7M9aFxDbASqsX1VRAVAiTYxgqggeHffV5IP_QUWwucD8J7A7JrgwiMOOssKj-UQmn-hZAFnvyOc3biFPiOrhXxR1bISx8qdF6D_HPAw6nollqAk9DLQNlw7KbZS5EI0N47gvkJAOJp3b8utQ8iBKOVAghmPxdX7ERwf-XvcI7tzim1cxO8oA8jlXaKfdmqPbg2TzO81Xv80DXvSgfJiqmHsT5XBNJRxMTv7XzxIUtRkla5O1LxtTR0RiJUa5snCJ_S96LFHy7TvPdfdK__zYW4-OUiWZ_kWLx1pUh-Jq0KfAzobElgu8arvzKcRLc&amp;t=AQIIQkEX2RFFazENPyg" width="220" height="380" scrolling="no" style="border:none" allow="autoplay"></iframe>
+      </div>
+      <div class="ba-meta"><strong>C1 · Copy</strong> Honeycomb Coverlet 20% off · 8.98× ROAS · freq <strong style="color:var(--warn)">2.91</strong> · Admire8 37/70</div>
+    </div>
+    <div class="ba-bridge">
+      <div class="arrow">→</div>
+      <div class="why-label">Why we're replacing</div>
+      <div class="why">Strongest big-spender ROAS, but the offer (NEW + 20%) is doing all the work — generic e-com card visually. The 20% promo <em>will</em> fatigue. Pre-empt with the <strong>heritage angle</strong> — a moat no MENA competitor uses.</div>
+    </div>
+    <div class="ba-side">
+      <div class="ba-label after"><span class="pill">LAUNCH</span>Wave 1B · Baked Caption</div>
+      <div class="ba-frame">
+        <div class="meta-story">
+          <span class="archetype-badge archetype-bc">Baked Caption</span>
+          <img class="story-img" src="assets/wave1b/angle-4-origin-heritage/baked-caption-export-grade.png" alt="">
+          <div class="story-top">
+            <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
+            <div class="story-handle"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div></div>
+          </div>
+          <div class="story-bottom"><div class="story-cta">اعرفي القصة <span class="story-cta-arrow"></span></div></div>
+        </div>
+      </div>
+      <div class="ba-meta"><strong>Angle 4 · Origin Heritage</strong><br>"قطن مصري للتصدير، بسعر المصري"</div>
+    </div>
+  </div>
+
+  <!-- PAIRING 5: V8 Maya V.2 (KILL retargeting) → Wave 1 Angle 1 Native Highlight -->
+  <div class="ba-pair">
+    <div class="ba-side">
+      <div class="ba-label before"><span class="pill">KILL</span>0 purchases on EGP 2,100 retargeting</div>
+      <div class="ba-frame">
+        <iframe src="https://business.facebook.com/ads/api/preview_iframe.php?d=AQKoUy87B2FsCJBJXHp68Wh2cjAHHUIdSsRtWeE8lEyK9xZHlZh8rkuCcFEysyG9Pi0AL0oSgB2YkiWS-osAsVUO9JJ6KV9QrvyVgqk6SuHYf_x0r3q53hx3yKJ9weEj5a9F2ytPCaZm1ZcrglTA9PWOprHGVL_rrGL9U_lNwX96GLEi7GuWxosKl-Agq4OfURVt3syFHjsp9hywjGov6TNmZDIC-HtkLY9o6AIXuNAR4Ryk4Y-VA_0I8qHprKr_7bRLUM7OeO52Sy6i8pLZAx_22MQXhhRzneZfWP-93Uws2IaoRRuMedMLb4KV-5kX5dmm_CLnT7ZKkdXCBj-6NPtno97hMf4DjEICcE9MJtM23tSUJj_Q1ykGZWoRgwseMwsyhtYKperagdJ5V-pEON6VByxpFFeBFBNt-m8LVk-3y9Llt3wGVqzHcYDmVg3dlCQ&amp;t=AQK775IFS2GJpWbSlDA" width="220" height="380" scrolling="no" style="border:none" allow="autoplay"></iframe>
+      </div>
+      <div class="ba-meta"><strong>V8_Maya _1 V.2</strong> · Retargeting · Meta E-rank &amp; C-rank B-35</div>
+    </div>
+    <div class="ba-bridge">
+      <div class="arrow">→</div>
+      <div class="why-label">Why we're replacing</div>
+      <div class="why">Retargeting was firing on warm audiences but the creative offered nothing new to push them over. Replacing with a <strong>native-highlight scroll-stop</strong> — red marker circle on the OTN tag reframes a familiar product as "look at this detail".</div>
+    </div>
+    <div class="ba-side">
+      <div class="ba-label after"><span class="pill">LAUNCH</span>Wave 1B · Native Highlight</div>
+      <div class="ba-frame">
+        <div class="meta-feed">
+          <div class="feed-top"><div class="avatar">O</div><div><div class="handle-name">otn_textile</div><div class="handle-sub">Sponsored</div></div><div class="dots">⋯</div></div>
+          <div class="feed-img"><span class="archetype-badge archetype-nh">Native Highlight</span><img src="assets/wave1b/angle-1-ugc-bathroom/native-highlight-label.png" alt=""></div>
+          <div class="feed-cta-strip"><div><div class="cta-domain">otntextiles.com</div><div class="cta-headline">قطن مصري 100%. التفاصيل بتفرق.</div></div><div class="cta-btn">Shop now</div></div>
+        </div>
+      </div>
+      <div class="ba-meta"><strong>Angle 1 · UGC Bathroom</strong><br>Red marker circle on the OTN tag</div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- STRUCTURE -->
+<section class="section" id="structure">
+<h2>Structure changes</h2>
+<p class="desc">Account hygiene + campaign architecture moves that don't fit the action cards above.</p>
+<table class="tbl">
+<thead><tr><th>Change</th><th>Why</th><th>Effort</th><th>Approve</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>Move all placements → Advantage+ Placements</strong></td>
+<td>Currently 45% spend at FB Feed (4.74×) while IG Stories winner (5.59×) gets 17%. Let Meta auto-chase the higher-ROAS positions.</td>
+<td>Low</td>
+<td><label><input type="checkbox" checked> Approve</label></td>
+</tr>
+<tr>
+<td><strong>Drop ☪ Ramadan stamp; duplicate to "Summer 2026" shells</strong></td>
+<td>Both active campaigns still tagged ☪ from Feb 22/24 launches. Algorithm is contaminated by Ramadan-era conversion patterns. Fresh shells = fresh learning phase.</td>
+<td>Medium</td>
+<td><label><input type="checkbox" checked> Approve</label></td>
+</tr>
+<tr>
+<td><strong>Exclude 55-64 M from prospecting</strong></td>
+<td>Demo bleeds EGP 3,324/30d at 0.64 ROAS. Excluding saves ~EGP 1,200 net per month + redeploys budget to working demos.</td>
+<td>Low</td>
+<td><label><input type="checkbox" checked> Approve</label></td>
+</tr>
+<tr>
+<td><strong>3-campaign funnel rebuild (TOF / MOF / BOF)</strong></td>
+<td>Replaces current 2-campaign Ramadan setup. TOF: ASC+ Shopping. MOF: Engagement retargeting. BOF: Catalog/DPA + cart abandoners.</td>
+<td>High · 30d</td>
+<td><label><input type="checkbox"> Approve</label></td>
+</tr>
+<tr>
+<td><strong>Tighten retargeting window 180d → 90d</strong></td>
+<td>Retargeting campaign-level frequency hit 7.97 over 30d. Narrowing the pool to 90d brings frequency to 3-4 and increases intent quality.</td>
+<td>Low</td>
+<td><label><input type="checkbox" checked> Approve</label></td>
+</tr>
+<tr>
+<td><strong>Investigate IC→Purchase leak (44% completion)</strong></td>
+<td>654 of 1,158 people who initiated checkout did not complete. Likely Shopify checkout UX — shipping reveal, payment friction. Single biggest revenue lever in the account. <span style="color:var(--muted)">NOT a Meta-side fix.</span></td>
+<td>Medium</td>
+<td><label><input type="checkbox" checked> Approve</label></td>
+</tr>
+<tr>
+<td><strong>Verify Meta CAPI installation</strong></td>
+<td>At EGP 60K/day spend, server-side Conversions API is mandatory for iOS attribution. Confirm Shopify side has CAPI wired to pixel 338398204829010. Retire/wire the second pixel.</td>
+<td>Medium</td>
+<td><label><input type="checkbox" checked> Approve</label></td>
+</tr>
+<tr>
+<td><strong>Archive 200+ legacy paused campaigns</strong></td>
+<td>434 paused campaigns clutter the account. Keep clean.</td>
+<td>Low</td>
+<td><label><input type="checkbox"> Approve</label></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- ADMIRE8 SCORECARD -->
+<section class="section" id="scorecard">
+<div class="viz-section-head">
+  <h2>Admire8 scorecard · all 15 active ads</h2>
+  <div class="one-line">Account health <strong style="color:#fcd34d">42/100</strong> · 0 winners · 3 mid · 12 kill/rewrite</div>
+</div>
+
+<div class="score-grid">
+  <!-- Cards ordered by score desc -->
+  <div class="score-card mid"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="41.5"/></svg><div class="ring-text">49</div></div><div class="body"><div class="name">Summer Towels</div><div class="meta-row"><span class="arch">Raw native</span><span class="roas mid">3.00×</span><span class="dec refresh">REFRESH</span></div></div></div>
+
+  <div class="score-card mid"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="49.4"/></svg><div class="ring-text">45</div></div><div class="body"><div class="name">Reel · Adults Poncho-AR</div><div class="meta-row"><span class="arch">Native video</span><span class="roas good">4.05×</span><span class="dec scale">PROTECT</span></div></div></div>
+
+  <div class="score-card mid"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="49.4"/></svg><div class="ring-text">45</div></div><div class="body"><div class="name">Reel · Kids Poncho-AR</div><div class="meta-row"><span class="arch">Native video</span><span class="roas bad">2.24×</span><span class="dec refresh">REWRITE</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="65.2"/></svg><div class="ring-text">37</div></div><div class="body"><div class="name">C1 · Honeycomb Coverlet 20%</div><div class="meta-row"><span class="arch">Polished card</span><span class="roas good">8.98×</span><span class="dec refresh">REPLACE</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="71.1"/></svg><div class="ring-text">34</div></div><div class="body"><div class="name">AD_2 (video)</div><div class="meta-row"><span class="arch">Native video</span><span class="roas good">9.45×</span><span class="dec refresh">REPLACE</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="79"/></svg><div class="ring-text">30</div></div><div class="body"><div class="name">Reel · Mai Yacoubi</div><div class="meta-row"><span class="arch">Native video</span><span class="roas bad">2.55×</span><span class="dec kill">KILL</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="79"/></svg><div class="ring-text">30</div></div><div class="body"><div class="name">Reel · Mariam Khalil 2</div><div class="meta-row"><span class="arch">Native video</span><span class="roas bad">0.00×</span><span class="dec kill">KILL TODAY</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="88.9"/></svg><div class="ring-text">25</div></div><div class="body"><div class="name">Ad_4 (DPA · beach UGC)</div><div class="meta-row"><span class="arch">DPA</span><span class="roas good">8.07×</span><span class="dec refresh">REPLACE</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="94.8"/></svg><div class="ring-text">22</div></div><div class="body"><div class="name">Ad_3 (DPA)</div><div class="meta-row"><span class="arch">DPA</span><span class="roas good">4.71×</span><span class="dec refresh">REPLACE</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="94.8"/></svg><div class="ring-text">22</div></div><div class="body"><div class="name">Ad_5 (DPA · tiny sample)</div><div class="meta-row"><span class="arch">DPA</span><span class="roas good">23.79×</span><span class="dec hold">MONITOR</span></div></div></div>
+
+  <div class="score-card kill" style="background:linear-gradient(135deg,rgba(239,68,68,.12),var(--card))"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="94.8"/></svg><div class="ring-text">22</div></div><div class="body"><div class="name">Ad_1 · TOP KILL</div><div class="meta-row"><span class="arch">DPA</span><span class="roas bad" style="font-weight:700">1.56×</span><span class="dec kill">KILL TODAY</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="94.8"/></svg><div class="ring-text">22</div></div><div class="body"><div class="name">V3 · Copy (DPA)</div><div class="meta-row"><span class="arch">DPA</span><span class="roas bad">2.26×</span><span class="dec kill">KILL</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="100.7"/></svg><div class="ring-text">19</div></div><div class="body"><div class="name">bathmat gif (English copy)</div><div class="meta-row"><span class="arch">Generic</span><span class="roas mid">4.03×</span><span class="dec refresh">REWRITE BODY</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="100.7"/></svg><div class="ring-text">19</div></div><div class="body"><div class="name">AD_5 · photo</div><div class="meta-row"><span class="arch">Generic</span><span class="roas bad">0.00×</span><span class="dec kill">KILL</span></div></div></div>
+
+  <div class="score-card kill"><div class="ring"><svg><circle cx="26" cy="26" r="22" fill="none" stroke="#22305c" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="138.2" stroke-dashoffset="106.6"/></svg><div class="ring-text">16</div></div><div class="body"><div class="name">Carousel (catalog all)</div><div class="meta-row"><span class="arch">Catalog</span><span class="roas bad">0.00×</span><span class="dec kill">KILL</span></div></div></div>
+</div>
+
+<div style="margin-top:14px;padding:10px 14px;background:rgba(0,0,0,.15);border-left:2px solid var(--gold);border-radius:6px;font-size:12px;color:var(--ink2)">
+  <strong style="color:var(--gold)">Read:</strong> Zero winners. Mid-band ads at low ROAS = highest-priority rewrite targets (creative fine, offer/targeting bottleneck). DPAs with high ROAS = replace-before-decay (catalog mechanics carry, not the creative).
+</div>
+</section>
+
+<!-- APPROVAL FOOTER -->
+<section class="section" id="approve">
+<div class="footer">
+<h3>Final approval</h3>
+<p style="margin:0 0 14px;color:var(--ink2)">Review your selections above. The expected impact below is calculated from approved actions only.</p>
+
+<div class="summary-row">
+<div class="sum"><div class="l">Spend frozen (kill+pause)</div><div class="v">~EGP 65K/30d</div></div>
+<div class="sum"><div class="l">Revenue protected (refresh)</div><div class="v">~EGP 175K/30d</div></div>
+<div class="sum"><div class="l">Wave 1 stills delivered</div><div class="v">36 anchored</div></div>
+<div class="sum"><div class="l">CRO fixes (incl. flagship restock)</div><div class="v">8 ranked</div></div>
+</div>
+<div class="summary-row">
+<div class="sum"><div class="l">New audience tests</div><div class="v">6 launches</div></div>
+<div class="sum"><div class="l">EoW2 ROAS target</div><div class="v">4.50× +</div></div>
+<div class="sum"><div class="l">EoW4 ROAS target</div><div class="v">5.50× +</div></div>
+<div class="sum"><div class="l">Account health (Admire8)</div><div class="v">42 → target 65</div></div>
+</div>
+
+<div class="actions">
+<button class="btn btn-approve" onclick="alert('Approval recorded. Send the file (with your selections + notes) back to Fouad — or paste your notes into the Slack/email reply.')">Approve all selected</button>
+<button class="btn btn-modify" onclick="alert('Modifications captured. Notes below will travel back to Fouad.')">Approve with changes (use notes)</button>
+<button class="btn btn-reject" onclick="alert('Rejected. Add reasoning in notes below.')">Reject</button>
+</div>
+
+<textarea class="notes" placeholder="Notes back to the AW team — anything you want changed, questioned, or added. This dashboard is a static file, so paste these notes into your reply to Fouad."></textarea>
+
+<p style="margin:16px 0 0;color:var(--muted);font-size:12px;line-height:1.6">Prepared by <strong style="color:var(--gold)">Admireworks</strong> for OTN Textiles · 2026-05-17<br>
+<strong style="color:var(--ink2)">Brand fonts for the overlay phase</strong>: <span style="color:var(--gold)">The Seasons</span> (main) · <span style="color:var(--gold)">Playwrite US Trad</span> (cursive) · <span style="color:var(--gold)">Garet</span> + <span style="color:var(--gold)">Inter</span> (prices). The Arabic baked into the visual previews is rendered in a Noor-style sans for preview only; OTN production team replaces every overlay with the brand-spec fonts before final upload.</p>
+</div>
+</section>
+
+</main>
+</div>
+
+<!-- COMMENT MODAL -->
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true">
+  <div class="cmt-modal-body">
+    <h3 id="cmt-modal-title">Add your comment</h3>
+    <div class="ctx" id="cmt-modal-ctx">For: section</div>
+    <div id="cmt-name-row" style="display:none">
+      <label for="cmt-name-input">Your name</label>
+      <input type="text" id="cmt-name-input" placeholder="e.g., Ahmed Mostafa">
+    </div>
+    <label for="cmt-text-input">Comment</label>
+    <textarea id="cmt-text-input" placeholder="Your feedback on this section..."></textarea>
+    <div class="cmt-modal-actions">
+      <button class="cancel" onclick="closeCmtModal()">Cancel</button>
+      <button class="save" onclick="submitComment()">Save comment</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- SEND FEEDBACK FAB -->
+<button class="feedback-fab empty" id="feedback-fab" onclick="sendAllFeedback()" title="Approvals + comments save live to Admireworks. Click to jump to the first comment thread.">
+  <span>💬 Live feedback</span>
+  <span class="fab-count" id="fab-count"></span>
+</button>
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const REPORT_SLUG = "otn-textiles-2026-05-17";
+window.AW_FB = { db, REPORT_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+// === HOISTED STATE ===
+var toastTimer = null;
+var fbReady = false;
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initFirestoreSync(); });
+
+// === LOOM RENDERING ===
+(function renderLoom(){
+  const block = document.getElementById('loom-block');
+  const aspect = document.getElementById('loom-aspect');
+  if (!block || !aspect) return;
+  const loomId = (block.dataset.loomId || '').trim();
+  if (loomId) {
+    aspect.innerHTML = '<iframe src="https://www.loom.com/embed/'+loomId+'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+  } else {
+    aspect.innerHTML = '<div class="loom-placeholder"><div class="lp-icon">▶</div><div><div class="lp-h">Quick walkthrough video — coming soon</div><div class="lp-s">A short Loom from the Admireworks team will appear here explaining what to look at section by section and what we need your feedback on. Scroll down to start reviewing while you wait.</div></div></div>';
+  }
+})();
+
+// === NAV HIGHLIGHT ===
+const sections = document.querySelectorAll('section.section, header.top');
+const navLinks = document.querySelectorAll('nav.side a');
+function setActive(){
+  let cur = sections[0]?.id || 'summary';
+  const y = window.scrollY + 100;
+  sections.forEach(s => { if (s.offsetTop <= y) cur = s.id; });
+  navLinks.forEach(a => {
+    a.style.background = a.getAttribute('href') === '#'+cur ? 'var(--card)' : '';
+    a.style.color = a.getAttribute('href') === '#'+cur ? 'var(--ink)' : '';
+  });
+}
+window.addEventListener('scroll', setActive);
+setActive();
+
+// === NAME PERSISTENCE (localStorage only — comments + decisions go to Firestore) ===
+const NAME_KEY = 'otn-reviewer-name';
+function getName(){ return localStorage.getItem(NAME_KEY) || ''; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+
+// === FIRESTORE STATE (synced via onSnapshot) ===
+const stateDecisions = {};
+const stateComments = {};
+
+function initFirestoreSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    snap.forEach(d => {
+      const data = d.data();
+      stateDecisions[d.id] = data;
+      const radio = document.querySelector('input[name="' + CSS.escape(d.id) + '"][value="' + CSS.escape(data.decision) + '"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        const card = radio.closest('.card, .wave1-angle, .ba-pair, .cro-fix, .score-card');
+        if (card) {
+          card.style.outline = data.decision === 'reject' ? '2px solid var(--bad)' :
+                               data.decision === 'modify' ? '2px solid var(--warn)' :
+                               '2px solid var(--good)';
+          card.style.outlineOffset = '-2px';
+        }
+      }
+      if (typeof data.decision === 'boolean') {
+        const cb = document.querySelector('input[type="checkbox"][data-key="' + CSS.escape(d.id) + '"]');
+        if (cb) cb.checked = data.decision;
+      }
+    });
+    updateFab();
+  });
+  const cmtRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll('[data-cmt-list]').forEach(el => renderComments(el.dataset.cmtList));
+    updateFab();
+  });
+}
+
+async function persistDecision(sectionId, value){
+  if (!fbReady) return;
+  const name = getName() || 'anonymous';
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions", sectionId),
+      { decision: value, name, updatedAt: fb.serverTimestamp() }
+    );
+  } catch(e){ console.error('persistDecision', e); showToast('Could not save — check your connection'); }
+}
+
+document.querySelectorAll('input[type="radio"]').forEach(r => {
+  r.addEventListener('change', e => {
+    const card = e.target.closest('.card, .wave1-angle, .ba-pair, .cro-fix, .score-card');
+    if (card) {
+      card.style.outline = e.target.value === 'reject' ? '2px solid var(--bad)' :
+                           e.target.value === 'modify' ? '2px solid var(--warn)' :
+                           '2px solid var(--good)';
+      card.style.outlineOffset = '-2px';
+    }
+    persistDecision(e.target.name, e.target.value);
+    showToast('Saved: ' + e.target.value);
+  });
+});
+
+document.querySelectorAll('input[type="checkbox"]').forEach((c, idx) => {
+  const key = 'chk-' + ((c.closest('tr')?.querySelector('strong')?.textContent || 'item-' + idx).replace(/[^a-zA-Z0-9-]/g, '_').slice(0, 40));
+  c.dataset.key = key;
+  c.addEventListener('change', e => persistDecision(key, e.target.checked));
+});
+
+// === COMMENT MODAL ===
+let activeCmtSection = null;
+let activeCmtLabel = '';
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById('cmt-modal');
+  const nameRow = document.getElementById('cmt-name-row');
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  const ctx = document.getElementById('cmt-modal-ctx');
+  ctx.textContent = 'On: ' + label;
+  const existingName = getName();
+  if (existingName) { nameRow.style.display = 'none'; }
+  else { nameRow.style.display = 'block'; nameInput.value = ''; setTimeout(()=>nameInput.focus(), 50); }
+  textInput.value = '';
+  if (existingName) setTimeout(()=>textInput.focus(), 50);
+  modal.classList.add('open');
+}
+function closeCmtModal(){
+  document.getElementById('cmt-modal').classList.remove('open');
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || '').trim();
+    if (!name) { nameInput.focus(); showToast('Please enter your name.'); return; }
+    setName(name);
+  }
+  const text = (textInput.value || '').trim();
+  if (!text) { textInput.focus(); showToast('Comment cannot be empty.'); return; }
+  if (!fbReady) { showToast('Still connecting — try again in a moment.'); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast('Comment saved.');
+  } catch(e){
+    console.error('submitComment', e);
+    showToast('Save failed: ' + (e.message || 'unknown'));
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="' + sectionKey + '"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString('en-GB', { hour:'2-digit', minute:'2-digit', day:'2-digit', month:'short' });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById(\'' + c.id + '\')" title="Delete">×</button>' : '';
+    return '<div class="cmt-item">' + delBtn + '<span class="cmt-author">' + escapeHtml(c.name) + '</span>' + escapeHtml(c.text) + '<span class="cmt-time">' + ts + '</span></div>';
+  }).join('');
+}
+async function deleteCommentById(commentId){
+  if (!confirm('Delete this comment?')) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments", commentId));
+    showToast('Comment deleted.');
+  } catch(e){ showToast('Delete failed: ' + (e.message || 'check rules')); }
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+// === FAB ===
+function updateFab(){
+  const fab = document.getElementById('feedback-fab');
+  const count = document.getElementById('fab-count');
+  let total = Object.keys(stateDecisions).length;
+  Object.values(stateComments).forEach(arr => total += arr.length);
+  count.textContent = total;
+  if (total > 0) fab.classList.remove('empty'); else fab.classList.add('empty');
+}
+updateFab();
+function jumpToFirstComment(){
+  const lists = document.querySelectorAll('[data-cmt-list]');
+  for (const el of lists) { if (el.children.length > 0) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; } }
+  if (lists[0]) lists[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// === TOAST ===
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+document.getElementById('cmt-modal').addEventListener('click', e => { if (e.target.id === 'cmt-modal') closeCmtModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCmtModal(); });
+
+window.openCmtModal = openCmtModal;
+window.closeCmtModal = closeCmtModal;
+window.submitComment = submitComment;
+window.deleteCommentById = deleteCommentById;
+window.sendAllFeedback = jumpToFirstComment;
+</script>
+
+</body>
+</html>

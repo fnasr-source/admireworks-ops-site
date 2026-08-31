@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>باسقات: مراجعة الحملة الجديدة</title>
+<style>
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-SemiBold.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-Bold.woff2") format("woff2");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+:root{
+  --forest:#175734;
+  --terracotta:#BF7955;
+  --cream:#FFF8EF;
+  --ink:#22301f;
+  --muted:#6b6255;
+  --line:#e7ddcc;
+  --card:#ffffff;
+  --good:#175734;
+  --warn:#BF7955;
+  --blocked:#a33;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Madani Arabic","Segoe UI",Tahoma,sans-serif;
+  line-height:1.7;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 90px}
+header.top{padding:36px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+header.top img{height:52px;display:block;margin-bottom:22px}
+header.top h1{font-size:26px;font-weight:700;color:var(--forest);margin:0 0 10px}
+header.top p{font-size:15px;color:var(--muted);margin:0;max-width:680px}
+.howto{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:34px;font-size:14px;color:var(--ink)}
+.howto strong{color:var(--forest)}
+.nav-jump{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.nav-jump a{font-size:12.5px;color:var(--forest);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;text-decoration:none}
+.nav-jump a:hover{border-color:var(--forest)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:26px;box-shadow:0 2px 10px rgba(23,87,52,.05)}
+.card .eyebrow{font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--terracotta);text-transform:uppercase;margin-bottom:6px}
+.card h2{font-size:19px;font-weight:700;color:var(--forest);margin:0 0 8px}
+.card p.desc{font-size:14px;color:var(--muted);margin:0 0 16px}
+video{width:100%;border-radius:10px;display:block;background:#000;margin-bottom:18px}
+img.creative{width:100%;border-radius:10px;display:block;margin-bottom:10px;border:1px solid var(--line)}
+.approval{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding-top:14px;border-top:1px dashed var(--line)}
+.approval .label{font-size:13px;color:var(--muted);font-weight:600;margin-left:6px}
+.approval label.opt{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);font-size:13.5px;cursor:pointer;background:#fff;transition:.15s}
+.approval label.opt:hover{border-color:var(--forest)}
+.approval input[type=radio]{accent-color:var(--forest)}
+.approval .cmt-btn{margin-right:auto;background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13.5px;color:var(--ink);cursor:pointer;font-family:inherit}
+.approval .cmt-btn:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.cmt-list{margin-top:14px}
+.cmt-item{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:10px 40px 10px 14px;margin-bottom:8px;font-size:13.5px}
+.cmt-author{display:block;font-weight:700;color:var(--forest);font-size:12.5px;margin-bottom:2px}
+.cmt-time{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.cmt-del{position:absolute;left:8px;top:8px;background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer;line-height:1}
+footer.bottom{text-align:center;padding-top:20px;color:var(--muted);font-size:13px}
+.cmt-modal{position:fixed;inset:0;background:rgba(23,20,10,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:16px}
+.cmt-modal.open{display:flex}
+.cmt-modal-body{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;max-width:440px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.cmt-modal-body h3{margin:0 0 6px;font-size:17px;color:var(--forest)}
+.cmt-modal-body .ctx{font-size:12px;color:var(--muted);margin-bottom:14px;padding:8px 10px;background:var(--cream);border-radius:6px;border-right:3px solid var(--terracotta)}
+.cmt-modal-body label{display:block;font-size:12px;color:var(--ink);margin-bottom:6px;font-weight:600}
+.cmt-modal-body input[type=text],.cmt-modal-body textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--ink);font-size:14px;font-family:inherit;margin-bottom:14px;box-sizing:border-box;background:var(--cream)}
+.cmt-modal-body textarea{min-height:90px;resize:vertical}
+.cmt-modal-body input[type=text]:focus,.cmt-modal-body textarea:focus{outline:none;border-color:var(--forest)}
+.cmt-modal-actions{display:flex;gap:10px;justify-content:flex-start}
+.cmt-modal-actions button{padding:10px 18px;border-radius:8px;border:none;font-weight:600;cursor:pointer;font-size:13px;font-family:inherit}
+.cmt-modal-actions .save{background:var(--forest);color:#fff}
+.cmt-modal-actions .cancel{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--forest);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:3000}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.section-title{color:var(--forest);font-size:22px;margin:44px 0 6px;padding-top:20px;border-top:2px solid var(--line)}
+.section-sub{color:#5a6a5f;font-size:14px;line-height:1.9;margin:0 0 18px}
+.compare{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:16px}
+.compare-block{padding:14px 16px}
+.compare-block.before{background:#faf6ef;border-bottom:1px dashed var(--line)}
+.compare-block.after{background:#f1f8f2}
+.compare-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+.compare-block.before .compare-tag{color:var(--muted)}
+.compare-block.after .compare-tag{color:var(--forest)}
+.compare-field{font-size:13px;margin:4px 0}
+.compare-field b{color:var(--terracotta);font-weight:700}
+.new-line{background:#fff3e9;border:1px dashed var(--terracotta);border-radius:8px;padding:8px 10px;display:inline-block}
+.live-link{display:inline-block;margin-top:8px;font-size:12.5px;color:var(--forest)}
+.verdict-box{background:#fff3e9;border-right:3px solid var(--terracotta);border-radius:8px;padding:10px 14px;font-size:13.5px;margin-bottom:14px}
+.verdict-box b{color:var(--forest)}
+.blocked-box{background:#fdeeee;border-right:3px solid var(--blocked);border-radius:8px;padding:12px 14px;font-size:13.5px;margin-bottom:14px;color:#7a2626}
+.flag-box{background:#fff9ec;border-right:3px solid #c99a3a;border-radius:8px;padding:10px 14px;font-size:13px;margin-top:10px;color:#6b5420}
+.flag-box b{color:#8a6a1f}
+.blocked-box b{color:var(--blocked)}
+.primary-text{font-size:13.5px;color:var(--ink);background:var(--cream);border-radius:8px;padding:12px 14px;margin-bottom:14px;white-space:pre-line}
+table.struct{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:14px}
+table.struct th{background:var(--forest);color:#fff;padding:8px 10px;text-align:right;font-weight:600}
+table.struct td{padding:8px 10px;border-bottom:1px solid var(--line)}
+table.struct tr:nth-child(even) td{background:#faf7f2}
+.tag-active{color:var(--good);font-weight:700}
+.tag-paused{color:var(--terracotta);font-weight:700}
+@media (max-width:600px){
+  header.top h1{font-size:21px}
+  .card{padding:16px}
+  .approval{flex-direction:column;align-items:stretch}
+  .approval .cmt-btn{margin-right:0}
+  table.struct{font-size:11.5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img src="assets/logo-primary.png" alt="باسقات">
+  <h1>مراجعة الحملة الإعلانية الجديدة</h1>
+  <p>جهزنالكم كل حاجة خاصة بالحملة الجديدة في صفحة واحدة: العناوين الجديدة لصفحات الهبوط، الصور المعدّلة زي ما طلبتوا، الفيديوهين الجديدين، والخطة الكاملة لتشغيل الحملة على فيسبوك وجوجل. العناوين الجديدة والفيديو الأول (المعاش والمغتربين) منشورين بالفعل على الموقع عشان تقدروا تشوفوهم مباشرة، لكن حملات فيسبوك وجوجل الجديدة (المعاش على فيسبوك، وحملات الليدز على جوجل) لسه محتاجة موافقتكم النهائي قبل ما نشغّلها.</p>
+</header>
+
+<div class="howto">
+  <strong>إزاي تراجعوا:</strong> كل قسم فيه بطاقات، اقروا كل بطاقة واختاروا "يعتمد" أو "محتاج تعديل" تحتها. لو حابين توضحوا حاجة معينة، دوسوا "أضف تعليق". في الآخر هتلاقوا قرار نهائي واحد لتشغيل الخطة كاملة.
+</div>
+
+<div class="nav-jump">
+  <a href="#sec-headers">العناوين الجديدة</a>
+  <a href="#sec-vo">صوت الفويس أوفر</a>
+  <a href="#sec-creatives">الصور الإعلانية</a>
+  <a href="#sec-videos">الفيديوهين الجديدين</a>
+  <a href="#sec-structure">خطة التشغيل</a>
+  <a href="#sec-final">القرار النهائي</a>
+</div>
+
+<h2 class="section-title" id="sec-headers">1. العناوين الجديدة لصفحات الهبوط (٦ صفحات)</h2>
+<p class="section-sub">دي العناوين اللي بعتوها لينا، حطيناها في كل صفحة زي ما وضحتوا بالظبط، من غير ما نغير كلمة. العناوين الجديدة دي منشورة على الموقع دلوقتي عشان تقدروا تشوفوها وتتأكدوا منها مباشرة، دوسوا على "شوف الصفحة الحية" وهتلاقوا العنوان الجديد ظاهر.</p>
+
+<div class="card">
+  <div class="eyebrow">صفحة المغتربين، النسخة A</div>
+  <h2>Expat A</h2>
+  <div class="compare">
+    <div class="compare-block before">
+      <div class="compare-tag">العنوان القديم (قبل التحديث)</div>
+      <div class="compare-field">بعد كل هذه السنوات بعيدًا عن بلدك، ألا يستحق تعبك أن يعود إلى مصر في صورة أصل حقيقي؟</div>
+    </div>
+    <div class="compare-block after">
+      <div class="compare-tag">العنوان الجديد (منشور دلوقتي)</div>
+      <div class="compare-field"><b>العنوان:</b> <span class="new-line">استثمر معنا في مزرعة نخيل بدون حمل أعباء ادارتها ولا تسويق المحصول</span></div>
+      <div class="compare-field"><b>العنوان المميز:</b> <span class="new-line">نحن نقوم بزراعة مزرعتك وتسليمك العائد</span></div>
+      <div class="compare-field"><b>العنوان الفرعي:</b> بعد كل هذه السنوات بعيدًا عن بلدك، ألا يستحق تعبك أن يعود إلى مصر في صورة أصل حقيقي؟ <span style="color:var(--muted)">(العنوان القديم اتنقل هنا)</span></div>
+    </div>
+  </div>
+  <a class="live-link" href="https://start.basseqat.com/start?v=expat&ab=a" target="_blank">شوف الصفحة الحية (العنوان الجديد منشور) ↗</a>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="hdr-expat-a" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="hdr-expat-a" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('hdr-expat-a','عنوان صفحة المغتربين A')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="hdr-expat-a"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">صفحة المعاش، النسخة A</div>
+  <h2>Pension A</h2>
+  <div class="compare">
+    <div class="compare-block before">
+      <div class="compare-tag">العنوان القديم (قبل التحديث)</div>
+      <div class="compare-field">بدل قلق التقاعد .. ابدأ مرحلة الاطمئنان بأصل حقيقي يثمر لك ولابنائك</div>
+    </div>
+    <div class="compare-block after">
+      <div class="compare-tag">العنوان الجديد (منشور دلوقتي)</div>
+      <div class="compare-field"><b>شريط علوي جديد:</b> <span class="new-line">دعوة لاستثمار تشاركي متوافق مع الشريعة الإسلامية</span></div>
+      <div class="compare-field">باقي العنوان زي ما هو (بدل قلق التقاعد .. ابدأ مرحلة الاطمئنان بأصل حقيقي يثمر لك ولابنائك)</div>
+      <div class="compare-field"><b>فيديو جديد:</b> اتضاف فويس أوفر بصوتكم فوق فيديو حقيقي من المزرعة (شوفوا قسم 2 تحت)</div>
+    </div>
+  </div>
+  <a class="live-link" href="https://start.basseqat.com/start?v=pension&ab=a" target="_blank">شوف الصفحة الحية (العنوان الجديد منشور) ↗</a>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="hdr-pension-a" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="hdr-pension-a" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('hdr-pension-a','عنوان صفحة المعاش A')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="hdr-pension-a"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">صفحة المستثمر، النسخة A</div>
+  <h2>Investor A</h2>
+  <div class="compare">
+    <div class="compare-block before">
+      <div class="compare-tag">العنوان القديم (قبل التحديث)</div>
+      <div class="compare-field">المستثمر الجاد لايشتري وعودا .. بل يمتلك اصولا. استثمر في اصل زراعي حقيقي ينمو مع الوقت</div>
+    </div>
+    <div class="compare-block after">
+      <div class="compare-tag">العنوان الجديد (منشور دلوقتي)</div>
+      <div class="compare-field"><b>العنوان:</b> <span class="new-line">استثمر معنا بفدان أو أكثر في مزرعة نخيل مجدول</span></div>
+      <div class="compare-field"><b>العنوان المميز:</b> <span class="new-line">نحن نقوم بزراعة مزرعتك وتسليمك العائد من غير ادني مجهود منك</span></div>
+      <div class="compare-field">العنوان الفرعي زي ما هو (باسقات مش كلام عن المستقبل...)</div>
+    </div>
+  </div>
+  <a class="live-link" href="https://start.basseqat.com/start?v=investor&ab=a" target="_blank">شوف الصفحة الحية (العنوان الجديد منشور) ↗</a>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="hdr-investor-a" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="hdr-investor-a" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('hdr-investor-a','عنوان صفحة المستثمر A')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="hdr-investor-a"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">صفحة المغتربين، النسخة B</div>
+  <h2>Expat B</h2>
+  <div class="compare">
+    <div class="compare-block before">
+      <div class="compare-tag">العنوان القديم (قبل التحديث)</div>
+      <div class="compare-field">الغربة رحلة.. اخرها الرجوع. استثمرها في اصل يكبر في بلدك ويكون امان المستقبل</div>
+    </div>
+    <div class="compare-block after">
+      <div class="compare-tag">العنوان الجديد (منشور دلوقتي)</div>
+      <div class="compare-field"><b>شريط علوي جديد:</b> <span class="new-line">دعوة لاستثمار زراعي تشاركي متوافق مع الشريعة الإسلامية</span></div>
+      <div class="compare-field">باقي العنوان زي ما هو</div>
+    </div>
+  </div>
+  <a class="live-link" href="https://start.basseqat.com/start?v=expat&ab=b" target="_blank">شوف الصفحة الحية (العنوان الجديد منشور) ↗</a>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="hdr-expat-b" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="hdr-expat-b" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('hdr-expat-b','عنوان صفحة المغتربين B')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="hdr-expat-b"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">صفحة المعاش، النسخة B</div>
+  <h2>Pension B</h2>
+  <div class="compare">
+    <div class="compare-block before">
+      <div class="compare-tag">العنوان القديم (قبل التحديث)</div>
+      <div class="compare-field">التقاعد بداية لراحة البال .. وليس القلق. استثمر في اصل حقيقي يحفظ تعبك</div>
+    </div>
+    <div class="compare-block after">
+      <div class="compare-tag">العنوان الجديد (منشور دلوقتي)</div>
+      <div class="compare-field"><b>شريط علوي جديد:</b> <span class="new-line">استثمر معنا بفدان أو أكثر في مزرعة نخيل مجدول</span></div>
+      <div class="compare-field">باقي العنوان زي ما هو</div>
+    </div>
+  </div>
+  <a class="live-link" href="https://start.basseqat.com/start?v=pension&ab=b" target="_blank">شوف الصفحة الحية (العنوان الجديد منشور) ↗</a>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="hdr-pension-b" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="hdr-pension-b" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('hdr-pension-b','عنوان صفحة المعاش B')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="hdr-pension-b"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">صفحة المستثمر، النسخة B</div>
+  <h2>Investor B</h2>
+  <div class="compare">
+    <div class="compare-block before">
+      <div class="compare-tag">العنوان القديم (قبل التحديث)</div>
+      <div class="compare-field">مش هنوعدك بأرقام خيالية.. هنوريك أرقام مشروع شغال على الأرض من 6 سنين</div>
+    </div>
+    <div class="compare-block after">
+      <div class="compare-tag">العنوان الجديد (منشور دلوقتي)</div>
+      <div class="compare-field"><b>العنوان:</b> <span class="new-line">احنا بندعوك تستثمر معانا في استثمار زراعي تشاركي</span></div>
+      <div class="compare-field"><b>العنوان المميز:</b> <span class="new-line">بفدان أو أكتر من النخيل المجدول متوافق مع الشريعة الإسلامية</span></div>
+    </div>
+  </div>
+  <a class="live-link" href="https://start.basseqat.com/start?v=investor&ab=b" target="_blank">شوف الصفحة الحية (العنوان الجديد منشور) ↗</a>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="hdr-investor-b" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="hdr-investor-b" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('hdr-investor-b','عنوان صفحة المستثمر B')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="hdr-investor-b"></div>
+</div>
+
+<h2 class="section-title" id="sec-vo">2. صوت الفويس أوفر لصفحتي المعاش والمغتربين</h2>
+<p class="section-sub">صفحة المعاش جاهزة بالنسخة اللي بصوتكم انتوا، محول لصوت الراوي (هيثم الحكّاء). صفحة المغتربين دلوقتي بصوتكم انتوا مباشرة، من التسجيل اللي بعتوهولنا، فوق نفس الفيديو الحقيقي من المزرعة.</p>
+
+<div class="card">
+  <div class="eyebrow">صفحة المعاش</div>
+  <h2>فويس أوفر: قرب المعاش (تسجيلكم بصوت الراوي)</h2>
+  <p class="desc">دي النسخة المتفق عليها من مراجعة الصوت السابقة، جاهزة تتحط في صفحة المعاش دلوقتي.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fpension-sts-storyteller.mp4?alt=media"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-final-pension" value="approve"> يعتمد لصفحة المعاش</label>
+    <label class="opt"><input type="radio" name="vo-final-pension" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-final-pension','فويس أوفر نهائي - المعاش')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-final-pension"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">صفحة المغتربين، بصوتكم انتوا مباشرة</div>
+  <h2>فويس أوفر: المغتربين (تسجيلكم انتوا، من غير تحويل)</h2>
+  <p class="desc">استلمنا تسجيلكم، ده صوتكم انتوا زي ما هو فوق نفس الفيديو الحقيقي من المزرعة.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fexpat-raw-khaled.mp4?alt=media"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-final-expat" value="approve"> يعتمد لصفحة المغتربين</label>
+    <label class="opt"><input type="radio" name="vo-final-expat" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-final-expat','فويس أوفر نهائي - المغتربين')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-final-expat"></div>
+</div>
+
+<h2 class="section-title" id="sec-creatives">3. الصور الإعلانية (٨ صور)</h2>
+<p class="section-sub">دول الـ٨ تصاميم اللي اخترتوهم. اللي عدلناهم بناء على ملاحظاتكم (٣ من الـ٤) هتلاقوا تحتهم "قبل" و"بعد". الكلام اللي هيتحط جنب كل صورة في الإعلان هو نفس كلامكم بالظبط من غير أي تغيير.</p>
+
+<div class="card">
+  <div class="eyebrow">C2، صورة جديدة بالكامل</div>
+  <h2>مؤسس باسقات، الفحص قبل الاختيار</h2>
+  <div class="verdict-box"><b>ملاحظتكم:</b> "الغي صورة المشاريع والمكتب والبرطمانات. خلي الصورة طبيعية بالكامل مش مركبة"</div>
+  <p class="desc">قبل (الصورة المركبة اللي فيها المكتب والبرطمانات):</p>
+  <img class="creative" src="assets/before/concept2-due-diligence.png" alt="قبل">
+  <p class="desc">بعد (صورة حقيقية بالكامل، من غير أي تركيب):</p>
+  <img class="creative" src="assets/after/concept2-due-diligence.png" alt="بعد">
+  <div class="primary-text">أنا خالد ناصر الدين، رئيس مجلس إدارة باسقات. أكتر من أربعين سنة خبرة في الشراكات وثمان سنوات في الإستثمار الزراعي. أكتر حاجة اتعلمتها في الشراكة انك متشاركش غير القوي الأمين. "القوي" اللي فاهم في حرفته وصنعته وخبير فيها. والأمين اللي بيكون حريص وه بيتعامل مع مالك زي ما بيتعامل مع ماله واكتر. رفضت مشاريع كتير للمشاركة خلال السنوات الأخيرة لسبب من السببين: إما بسبب عدم توفر الأمانة في الشريك الزراعي أو في عدم خبرته ودرايته بالزراعة.
+
+المشروع اللي هتشوفه النهارده هو اللي عدى من الفحص ده. شركائي في باسقات من أصحاب الخبرة الزراعية في النخيل وهم أهل للأمانة كمان. وانت كمان من حقك تشوف الأرض والبنية الأساسية والنخيل المزروع فيها وتسأل اللي انت عايزه. حمّل دليل باسقات وتواصل معنا</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c2" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c2" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c2','C2 الفحص قبل الاختيار')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c2"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C3، تعديل وضع الجسم</div>
+  <h2>مؤسس باسقات، على أرضه</h2>
+  <div class="verdict-box"><b>ملاحظتكم:</b> "متقطعش جسمي في وسط الصورة. نزل الجسم تحت بحيث يلاصق اسفل الصورة"</div>
+  <p class="desc">قبل (الجسم متقطع في نص الصورة):</p>
+  <img class="creative" src="assets/before/concept3-owner-land.png" alt="قبل">
+  <p class="desc">بعد (الجسم لاصق تحت زي ما طلبتوا):</p>
+  <img class="creative" src="assets/after/concept3-owner-land.png" alt="بعد">
+  <div class="primary-text">لو بتدور على امتلاك أصل زراعي في مصر. باسقات مشروع نخيل مجدول في الفرافرة بإدارة كاملة من فريق متخصص. انت بتشارك، وبتتابع بالتقارير، وتيجي تزور لما تحب. ومع الوقت، اللي شاركت فيه بيبقى حاجة ليها اسم ومكان، سعرها بيزيد وبتكسب منها عائد سنوي كبير. حمّل دليل باسقات، وتواصل معنا</div>
+  <div class="flag-box"><b>ملحوظة (مش تعديل):</b> عبارة "عائد سنوي كبير" وعنوان الصورة "بعائد سنوي مرتفع" قريبين من لغة الوعد بعائد. مش هنغيرهم لإنهم كلامك انت بالظبط، بس حابين تاخد بالك منهم قبل النشر.</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c3" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c3" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c3','C3 على أرضه')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c3"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C4، معتمدة من غير تعديل</div>
+  <h2>الباب مفتوح</h2>
+  <div class="verdict-box"><b>ملاحظتكم:</b> "الصورة حلوة، الرسالة تمام"</div>
+  <img class="creative" src="assets/after/concept4-open-gate.png" alt="الباب مفتوح">
+  <div class="primary-text">أسهل حاجة تسمع كلام حلو. أصعب حاجة تلاقي حد يقولك: تعالى زور المزرعة وعاين وشوف بنفسك. في باسقات الباب مفتوح: تيجي تزور المزرعة في الفرافرة، تمشي وسط النخيل، تشوف نظم الري والطاقة الشمسية شغالين، وتقعد مع الفريق وتسأل اللي انت عايزه. ولو مش قادر تيجي دلوقتي، ممكن تتواصل معانا وهنجاوبك على كل اسئلتك بمنتهى الأمانة والشفافية.
+
+٣ نسخ ختامية حسب البرسونا (تتحط في آخر النص):
+للمغتربين: باسقات مشروع استثمار تشاركي متوافق مع الشريعة الإسلامية، يحافظ على مالك ويضمن لك [حياة كريمة لما ترجع بلدك]
+للمعاش: باسقات مشروع استثمار تشاركي متوافق مع الشريعة الإسلامية، يحافظ على مالك ويضمن لك [حياة كريمة قبل وبعد المعاش]
+للمستثمر: باسقات مشروع استثمار تشاركي متوافق مع الشريعة الإسلامية، يحافظ على مالك ويضمن لك [حياة كريمة]
+حمل دليل باسقات وتواصل معنا</div>
+  <div class="flag-box"><b>ملحوظة (مش تعديل):</b> عبارة "يضمن لك" في النسخ الختامية الثلاثة قريبة من لغة الضمان. مش هنغيرها لإنها كلامك انت بالظبط، بس حابين تاخد بالك منها قبل النشر.</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c4" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c4" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c4','C4 الباب مفتوح')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c4"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C5، عنوان وبنود جديدة وصورة حقيقية</div>
+  <h2>مشروعنا جاهز منتظر مشاركتك</h2>
+  <div class="verdict-box"><b>ملاحظتكم:</b> عنوان جديد + بنود جديدة + صورة حقيقية للبنية التحتية بدل صورة الدرون</div>
+  <p class="desc">قبل:</p>
+  <img class="creative" src="assets/before/concept5-infra-checklist.png" alt="قبل">
+  <p class="desc">بعد (عنوان، بنود، وصورة الطاقة الشمسية الحقيقية):</p>
+  <img class="creative" src="assets/after/concept5-infra-checklist.png" alt="بعد">
+  <div class="primary-text">فيه مشاريع بتجمع فلوس علشان تبدأ تجهز. مشكلتها انها ممكن تتأخر بسبب تأخر التمويل، وللأسف ممكن تفشل في بعض الأحيان. باسقات جهزت الأول، وبعدين فتحت باب المشاركة. قبل ما نسأل حد يشارك: الآبار اتحفرت، وشبكة الري اتركبت، ومحطة الطاقة الشمسية اشتغلت، والنخيل اتزرع وبقاله 6 سنين متابعة، موسم ورا موسم. الترتيب ده مش تفصيلة صغيرة. ده الفرق بين إنك تستنى وعود، وبين إنك تشوف حاجة موجودة قدامك. كل بند من دول ليه توثيق تقدر تطلبه وتراجعه. حمّل دليل باسقات من هنا وشوف البنية التحتية بالتفصيل، أو ابدأ محادثة واسألنا</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c5" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c5" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c5','C5 مشروعنا جاهز')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c5"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C6، معتمدة (من غير ملاحظة على الصورة)</div>
+  <h2>كلام على ورق | أرض شغالة</h2>
+  <img class="creative" src="assets/after/concept6-paper-vs-land.png" alt="كلام على ورق مقابل أرض شغالة">
+  <div class="primary-text">باسقات جاهزة وشغالة على الأرض. مشروع زراعي تشاركي لنخيل التمر المجدول. ممكن تشارك فيه ويكون عندك أصل منتج تحصد ثماره من غير مجهود. مش بس بنوعدك وعود على ورق، احنا بندعوك تشوف المشروع اللي شغال في الفرافرة من 6 سنوات. الأرض تخصيص من المحافظة. والبنية الأساسية مبنية وقائمة بالفعل ومش هتحمل هم الزراعة لإن اللي بيزرع شركة خبيرة بتستخدم كل الأساليب العلمية في الإنتاج وبتتعاون مع أفضل خبراء المجال.
+
+عقود المشاركة جاهزة وتمت مراجعتها ومطابقتها مع أحكام الشريعة.
+
+مستني ايه؟ حمل دليل باسقات وتواصل معنا فوراً</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c6" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c6" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c6','C6 كلام على ورق')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c6"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C7، صورة جديدة من فيديو الدرون الحقيقي</div>
+  <h2>من قلب الفرافرة</h2>
+  <div class="verdict-box"><b>ملاحظتكم:</b> "اختيار الصورة مش صح. انا عايز لقطة حقيقية من تصوير الدرون مفيهاش غير نخل"</div>
+  <p class="desc">قبل (فيها دائرة الري ومساحات فاضية):</p>
+  <img class="creative" src="assets/before/concept7-editorial-farafra.png" alt="قبل">
+  <p class="desc">بعد (من فيديو الدرون اللي بعتوهولنا، نخل بس من غير دائرة ري أو مساحات فاضية):</p>
+  <img class="creative" src="assets/after/concept7-editorial-farafra.png" alt="بعد">
+  <div class="primary-text">اللقطة دي من فوق أرض باسقات في الفرافرة. اللي بتشوفه مش تصميم ولا رسمة للمستقبل: صفوف نخيل مزروعة من سنين، وشبكة ري شغالة، وبنية تحتية موجودة فعلا. إحنا بننشر لقطات زي دي باستمرار، علشان ده أسهل رد على أي سؤال: المشروع موجود فعلا ولا لأ؟ ولو اللقطات مش كفاية بالنسبالك، تعالى عاين بنفسك أو حمّل دليل باسقات، وتواصل معانا</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c7" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c7" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c7','C7 من قلب الفرافرة')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c7"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C8، معتمدة من غير تعديل</div>
+  <h2>الغربة ليها آخر.. حضّرله</h2>
+  <div class="verdict-box"><b>ملاحظتكم:</b> "الصورة والرسالة موفقتان"</div>
+  <img class="creative" src="assets/after/concept8-departure.png" alt="الغربة ليها آخر">
+  <div class="primary-text">سنين بتعدي في الشغل والسفر، وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟ العقار غالي ومحتاج متابعة، والدهب صحيح بيحافظ على قيمته لكن مش بيجيب دخل، والفلوس في البنك التضخم بياكلها. فيه اختيار تاني ناس كتير اختارته قبلك: مشاركة في مشروع نخيل مجدول بإدارة احترافية كاملة وتقارير بتوصلك وانت في مكانك. من غير ما تحتاج تيجي، ومن غير ما حد يستعجلك. افهم الأول وبعدين قرر: حمّل دليل باسقات، أو ابدأ محادثة على الواتساب</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c8" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c8" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c8','C8 الغربة ليها آخر')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c8"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">C9، معتمدة (من غير ملاحظة على الصورة)</div>
+  <h2>سؤال حقيقي من الخليج</h2>
+  <img class="creative" src="assets/after/concept9-whatsapp-card.png" alt="مكالمة واتساب">
+  <div class="primary-text">ده سؤال حقيقي من الأسئلة اللي بتوصلنا كل يوم من ناس شغالة في الخليج وعايزة تشارك في المشروع. والإجابة ثابتة: المتابعة اليومية مش عليك. فريق باسقات في الفرافرة بيدير الزراعة والري والصيانة والحصاد وتسويق المحصول وايداع العائد في حسابك، وانت بيوصلك توثيق منتظم لكل اللي بيحصل. ولما تحب تتأكد بعينك، تيجي تزور المشروع أو تبعت حد بالنيابة عنك. مفيش سؤال بنخاف منه. اسأل اللي انت عايزه. حمّل دليل باسقات، أو ابدأ محادثة على الواتساب دلوقتي.</div>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="cr-c9" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="cr-c9" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('cr-c9','C9 سؤال من الخليج')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="cr-c9"></div>
+</div>
+
+<h2 class="section-title" id="sec-videos">4. الفيديوهين الجديدين اللي اعتمدتوهم</h2>
+<p class="section-sub">استلمنا الفيديوهين، وجهزناهم بجودة الإعلانات (H.264، 1080×1920). راجعناهم من ناحيتنا: مشهد الزيارة الجماعية في فيديو الإعلان كله من ضهر المجموعة (مفيش وشوش ظاهرة خالص)، وفيديو البودكاست المتكلم فيه هو أستاذ خالد نفسه. ده تقييمنا الداخلي، مش رد رسمي منكم على تذكرة AWD-QENN، فحبينا نعرضهملكم هنا للتأكيد النهائي.</p>
+
+<div class="card">
+  <div class="eyebrow">فيديو ١ (٣٣ ثانية)</div>
+  <h2>إعلان مباشر، صوت مصري</h2>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fcampaign-launch%2Fbasseqat-campaign-v1%2Fvideo1-33s-ad.mp4?alt=media"></video>
+  <div class="flag-box"><b>تقييمنا:</b> مشهد الزيارة الجماعية (أول ٢ ثانية) كل الأشخاص فيه بضهورهم للكاميرا، مفيش وش ظاهر خالص. المتكلم في اللقطات القريبة هو أستاذ خالد. محتاجين تأكيدكم النهائي برضه.</div>
+  <p class="desc">المكان المقترح: Reels وStories وFeed على فيسبوك وانستجرام لكل الشخصيات، وYouTube Shorts وin-feed على جوجل.</p>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vid-1" value="confirmed-no-ayman"> مؤكد، مفيهوش دكتور أيمن، يعتمد</label>
+    <label class="opt"><input type="radio" name="vid-1" value="has-ayman"> فيه دكتور أيمن، محتاج قص</label>
+    <button class="cmt-btn" onclick="openCmtModal('vid-1','فيديو ١ الإعلان المباشر')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vid-1"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">فيديو ٢ (٨٠ ثانية)</div>
+  <h2>بودكاست/حوار توعوي</h2>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fcampaign-launch%2Fbasseqat-campaign-v1%2Fvideo2-80s-podcast.mp4?alt=media"></video>
+  <div class="flag-box"><b>تقييمنا:</b> المتكلم في الفيديو ده هو أستاذ خالد (قارنا الشكل بصوره التانية اللي عندنا). محتاجين تأكيدكم النهائي برضه.</div>
+  <p class="desc">المكان المقترح: Meta video feed وRMK (بناء جمهور مشاهدي الفيديو)، وYouTube in-stream/in-feed.</p>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vid-2" value="confirmed"> مؤكد، ده أستاذ خالد، يعتمد</label>
+    <label class="opt"><input type="radio" name="vid-2" value="other"> ده حد تاني</label>
+    <button class="cmt-btn" onclick="openCmtModal('vid-2','فيديو ٢ البودكاست')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vid-2"></div>
+</div>
+
+<h2 class="section-title" id="sec-structure">5. خطة تشغيل الحملة الكاملة (الصور + الفيديو + الميزانية)</h2>
+<p class="section-sub">دي الخطة كاملة: كل حملة، ميزانيتها اليومية، الصور والفيديوهات اللي هتظهر فيها، وصفحة الهبوط اللي هتوديها. الأرقام دي مأخوذة آخر ٧ أيام (٢ يوليو ٢٠٢٦). بعد موافقتكم هنشغل بس اللي مكتوب "هتتشغل"، والباقي شغال بالفعل.</p>
+
+<div class="card">
+  <h2>فيسبوك</h2>
+  <table class="struct">
+    <tr><th>الحملة (Adset)</th><th>الحالة</th><th>الميزانية اليومية</th><th>الصور/الفيديو</th><th>صفحة الهبوط</th></tr>
+    <tr><td>Leads | EG، Followers + Investors</td><td class="tag-active">شغالة</td><td>١٢٠,٠٠٠ ج.م/يوم (٧٨٥ ج.م/ليد)</td><td>C2, C3, C5, C7 + فيديو ١</td><td>Investor A/B</td></tr>
+    <tr><td>Leads | GCC-Expats</td><td class="tag-active">شغالة</td><td>١٠٠,٠٠٠ ج.م/يوم (٥٤٥ ج.م/ليد)</td><td>C4, C6, C8, C9 + فيديو ١</td><td>Expat A/B</td></tr>
+    <tr><td>Leads | RMK (إعادة استهداف)</td><td class="tag-active">شغالة</td><td>٢٠,٠٠٠ ج.م/يوم (٣٣٧ ج.م/ليد)</td><td>فيديو ٢ (بودكاست، بناء جمهور Vid-75%)</td><td>Investor A</td></tr>
+    <tr><td>Leads | EG، Pension</td><td class="tag-paused">هتتشغل بعد الموافقة</td><td>ضمن ميزانية Leads|EG (١٢٠,٠٠٠)</td><td>C4 (نسخة المعاش) + فويس أوفر المعاش</td><td>Pension A/B</td></tr>
+  </table>
+  <h2>جوجل</h2>
+  <table class="struct">
+    <tr><th>الحملة</th><th>النوع</th><th>الحالة</th><th>الميزانية اليومية</th><th>الصور/الفيديو</th><th>صفحة الهبوط</th></tr>
+    <tr><td>GDN، توعية مصر</td><td>Display</td><td class="tag-active">شغالة</td><td>٤٨٠ ج.م</td><td>توعية، بدون تخصيص</td><td>-</td></tr>
+    <tr><td>GDN، توعية الخليج</td><td>Display</td><td class="tag-active">شغالة</td><td>٨٠٠ ج.م</td><td>توعية، بدون تخصيص</td><td>-</td></tr>
+    <tr><td>YouTube، توعية مصر</td><td>Video</td><td class="tag-active">شغالة</td><td>٢٥٠ ج.م</td><td>فيديو ٢ (بودكاست)</td><td>-</td></tr>
+    <tr><td>YouTube، توعية الخليج</td><td>Video</td><td class="tag-active">شغالة</td><td>٤٠٠ ج.م</td><td>فيديو ١ (٣٣ ثانية)</td><td>-</td></tr>
+    <tr><td>Demand Gen | Leads | EG</td><td>Demand Gen</td><td class="tag-paused">هتتشغل بعد الموافقة</td><td>٢٩٠ ج.م</td><td>C2, C3, C5, C7 + فيديو ١</td><td>Investor A</td></tr>
+    <tr><td>Performance Max | Leads | EG+GCC</td><td>PMax</td><td class="tag-paused">هتتشغل بعد الموافقة</td><td>٤٠٠ ج.م</td><td>كل الصور + الفيديوهين</td><td>Investor A + Expat A</td></tr>
+    <tr><td>Search | Leads | EG</td><td>Search</td><td class="tag-paused">هتتشغل بعد الموافقة</td><td>٩٠٠ ج.م</td><td>نص إعلاني فقط (Search)</td><td>Investor A</td></tr>
+    <tr><td>Search | Leads | GCC</td><td>Search</td><td class="tag-paused">هتتشغل بعد الموافقة</td><td>٨٠٠ ج.م</td><td>نص إعلاني فقط (Search)</td><td>Expat A</td></tr>
+  </table>
+  <p class="desc"><b>إجمالي الميزانية اليومية الحالية:</b> فيسبوك ٢٤٠,٠٠٠ ج.م + جوجل ١,٩٣٠ ج.م (شغالة) = حوالي ٢٤٢,٠٠٠ ج.م/يوم. بعد تشغيل حملات الليدز المتوقفة على جوجل هتزيد حوالي ٢,٣٩٠ ج.م/يوم كمان (Demand Gen + PMax + الـ٢ Search).</p>
+  <p class="desc"><b>التوزيع حسب الصورة:</b> C2/C3/C5/C7 (المؤسس والبنية التحتية) لمصر والمستثمرين. C4/C6 لكل الجمهور. C8/C9 (الغربة والخليج) للمغتربين. فيديو ١ (الإعلان المباشر) لكل الشخصيات على Reels/Stories/Shorts. فيديو ٢ (البودكاست) لإعادة الاستهداف ولإعلانات الفيديو الطويلة على جوجل ويوتيوب.</p>
+</div>
+
+<h2 class="section-title" id="sec-final">6. القرار النهائي</h2>
+<p class="section-sub">لما تكونوا خلصتوا مراجعة كل حاجة فوق، اختاروا هنا القرار النهائي. العناوين الجديدة منشورة بالفعل، الباقي (حملة المعاش على فيسبوك وحملات الليدز على جوجل) هيتشغل بمجرد الموافقة.</p>
+
+<div class="card">
+  <h2>موافقة على تشغيل باقي الخطة</h2>
+  <p class="desc">العناوين الجديدة والصور المعدّلة منشورة بالفعل، تقدروا تشوفوها وتتأكدوا منها من الروابط فوق. باقي عليها: تشغيل حملة المعاش على فيسبوك، وتشغيل حملات الليدز على جوجل، واستخدام الفيديوهين الجديدين في الحملات.</p>
+  <div class="approval">
+    <span class="label">القرار:</span>
+    <label class="opt"><input type="radio" name="final-decision" value="approve-all"> موافق، شغّلوا كل حاجة</label>
+    <label class="opt"><input type="radio" name="final-decision" value="hold"> استنوا، عندي تعديلات</label>
+    <button class="cmt-btn" onclick="openCmtModal('final-decision','القرار النهائي')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="final-decision"></div>
+</div>
+
+<footer class="bottom">
+  بمجرد ما توافقوا، هننشر العناوين ونشغل الحملات. لو محتاجين أي حاجة تانية قولولنا.
+</footer>
+
+</div>
+
+<!-- COMMENT MODAL -->
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true">
+  <div class="cmt-modal-body">
+    <h3 id="cmt-modal-title">أضف تعليقك</h3>
+    <div class="ctx" id="cmt-modal-ctx">على: </div>
+    <div id="cmt-name-row" style="display:none">
+      <label for="cmt-name-input">اسمك</label>
+      <input type="text" id="cmt-name-input" placeholder="مثال: خالد ناصر الدين">
+    </div>
+    <label for="cmt-text-input">التعليق</label>
+    <textarea id="cmt-text-input" placeholder="رأيك في القسم ده..."></textarea>
+    <div class="cmt-modal-actions">
+      <button class="save" onclick="submitComment()">حفظ التعليق</button>
+      <button class="cancel" onclick="closeCmtModal()">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const REPORT_SLUG = "basseqat-campaign-v1";
+window.AW_FB = { db, REPORT_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+var toastTimer = null;
+var fbReady = false;
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initFirestoreSync(); });
+
+const NAME_KEY = 'basseqat-campaign-reviewer-name';
+function getName(){ return localStorage.getItem(NAME_KEY) || ''; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+
+const stateDecisions = {};
+const stateComments = {};
+
+function initFirestoreSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    snap.forEach(d => {
+      const data = d.data();
+      stateDecisions[d.id] = data;
+      const radio = document.querySelector('input[name="' + CSS.escape(d.id) + '"][value="' + CSS.escape(data.decision) + '"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        const card = radio.closest('.card');
+        if (card) {
+          card.style.outline = (data.decision === 'modify' || data.decision === 'hold' || data.decision === 'has-ayman') ? '2px solid var(--warn)' : '2px solid var(--good)';
+          card.style.outlineOffset = '-2px';
+        }
+      }
+    });
+  });
+  const cmtRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll('[data-cmt-list]').forEach(el => renderComments(el.dataset.cmtList));
+  });
+}
+
+async function persistDecision(sectionId, value){
+  if (!fbReady) return;
+  const name = getName() || 'زائر';
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions", sectionId),
+      { decision: value, name, updatedAt: fb.serverTimestamp() }
+    );
+  } catch(e){ console.error('persistDecision', e); showToast('حصل خطأ، تأكد من الاتصال بالإنترنت'); }
+}
+
+document.querySelectorAll('input[type="radio"]').forEach(r => {
+  r.addEventListener('change', e => {
+    const card = e.target.closest('.card');
+    if (card) {
+      card.style.outline = (e.target.value === 'modify' || e.target.value === 'hold' || e.target.value === 'has-ayman') ? '2px solid var(--warn)' : '2px solid var(--good)';
+      card.style.outlineOffset = '-2px';
+    }
+    persistDecision(e.target.name, e.target.value);
+    showToast('تم الحفظ');
+  });
+});
+
+let activeCmtSection = null;
+let activeCmtLabel = '';
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById('cmt-modal');
+  const nameRow = document.getElementById('cmt-name-row');
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  const ctx = document.getElementById('cmt-modal-ctx');
+  ctx.textContent = 'على: ' + label;
+  const existingName = getName();
+  if (existingName) { nameRow.style.display = 'none'; }
+  else { nameRow.style.display = 'block'; nameInput.value = ''; setTimeout(()=>nameInput.focus(), 50); }
+  textInput.value = '';
+  if (existingName) setTimeout(()=>textInput.focus(), 50);
+  modal.classList.add('open');
+}
+function closeCmtModal(){
+  document.getElementById('cmt-modal').classList.remove('open');
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || '').trim();
+    if (!name) { nameInput.focus(); showToast('من فضلك اكتب اسمك'); return; }
+    setName(name);
+  }
+  const text = (textInput.value || '').trim();
+  if (!text) { textInput.focus(); showToast('التعليق فاضي'); return; }
+  if (!fbReady) { showToast('لسه بنتصل، جرب تاني بعد لحظة'); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast('تم حفظ التعليق');
+  } catch(e){
+    console.error('submitComment', e);
+    showToast('حصل خطأ في الحفظ');
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="' + sectionKey + '"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString('ar-EG', { hour:'2-digit', minute:'2-digit', day:'2-digit', month:'short' });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById(\'' + c.id + '\')" title="حذف">×</button>' : '';
+    return '<div class="cmt-item">' + delBtn + '<span class="cmt-author">' + escapeHtml(c.name) + '</span>' + escapeHtml(c.text) + '<span class="cmt-time">' + ts + '</span></div>';
+  }).join('');
+}
+async function deleteCommentById(commentId){
+  if (!confirm('تحذف التعليق ده؟')) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments", commentId));
+    showToast('اتحذف');
+  } catch(e){ showToast('الحذف فشل'); }
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+document.getElementById('cmt-modal').addEventListener('click', e => { if (e.target.id === 'cmt-modal') closeCmtModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCmtModal(); });
+
+window.openCmtModal = openCmtModal;
+window.closeCmtModal = closeCmtModal;
+window.submitComment = submitComment;
+window.deleteCommentById = deleteCommentById;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "videos": [
+    {
+      "id": "vid_eg_01",
+      "title": "Scaling Business in Egypt - Marketing Strategies 2026",
+      "description": "How to get more leads and customers in Egypt.",
+      "transcript": [
+        { "text": "Welcome to our channel.", "start": 0.0, "duration": 2.5 },
+        { "text": "Today we discuss how to generate leads in Egypt.", "start": 2.5, "duration": 3.0 },
+        { "text": "If you want to reach customers, you need a strong offer.", "start": 5.5, "duration": 4.0 },
+        { "text": "Here are the numbers and details.", "start": 9.5, "duration": 2.0 }
+      ]
+    },
+    {
+      "id": "vid_ksa_01",
+      "title": "Saudi Market Analysis - Growth & Customers",
+      "description": "Strategies for KSA market penetration.",
+      "transcript": [
+        { "text": "Looking at the KSA market,", "start": 0.0, "duration": 2.0 },
+        { "text": "we found that local customers prefer personalized messages.", "start": 2.0, "duration": 4.0 },
+        { "text": "Our leads generation campaign was highly successful.", "start": 6.0, "duration": 3.5 }
+      ]
+    },
+    {
+      "id": "vid_uae_01",
+      "title": "Dubai Tech Startups & Modern Leads",
+      "description": "Connecting with clients in UAE.",
+      "transcript": [
+        { "text": "In the UAE, specifically Dubai,", "start": 0.0, "duration": 3.0 },
+        { "text": "the cost per lead is different.", "start": 3.0, "duration": 2.5 },
+        { "text": "We brought new customers to our platform last month.", "start": 5.5, "duration": 3.5 }
+      ]
+    },
+    {
+      "id": "vid_arabic_01",
+      "title": "كيف تحصل على أرقام عملاء مهتمين بمنتجك",
+      "description": "شرح طريقة الحصول على أرقام عملاء مستهدفين.",
+      "transcript": [
+        { "text": "مرحباً بكم في هذا الفيديو.", "start": 0.0, "duration": 2.5 },
+        { "text": "اليوم سنتحدث عن كيفية جمع أرقام عملاء مهتمين.", "start": 2.5, "duration": 3.5 },
+        { "text": "هذه الطريقة فعالة جداً في مصر والسعودية والإمارات.", "start": 6.0, "duration": 4.0 }
+      ]
+    }
+  ]
+}

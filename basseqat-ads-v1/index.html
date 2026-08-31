@@ -1,0 +1,1925 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إعلانات بسّقات على جوجل · للمراجعة والموافقة</title>
+  <meta name="description" content="Basseqat Google Ads, ready for launch. Review and approve the 4 paused campaigns before they go live." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-primary: #175734;
+      --color-primary-dark: #0f3f25;
+      --color-secondary: #BF7955;
+      --color-cream: #FFF8EF;
+      --color-cream-tint: #FBF3E5;
+      --color-ink: #2D2D2D;
+      --color-ink-soft: #5b5b5b;
+      --color-ink-faint: #8a8a8a;
+      --color-line: #e5dccb;
+      --color-line-strong: #cbbb9a;
+      --color-success: #2f7a4e;
+      --color-amber: #d49831;
+      --color-info: #356a8a;
+      --color-bg: #ffffff;
+      --color-google-blue: #1a0dab;
+      --color-google-green: #006621;
+      --color-google-gray: #545454;
+      --font-ar: "IBM Plex Sans Arabic", "Madani Arabic", "Segoe UI", system-ui, sans-serif;
+      --font-en: "Manrope", "Helvetica Neue", Arial, sans-serif;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(23,87,52,0.06);
+      --maxw: 880px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-ar);
+      color: var(--color-ink);
+      background: var(--color-cream);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .en { font-family: var(--font-en); direction: ltr; unicode-bidi: isolate; }
+    .num { font-family: var(--font-en); font-feature-settings: "tnum" 1; direction: ltr; unicode-bidi: isolate; }
+    .muted { color: var(--color-ink-soft); }
+    .faint { color: var(--color-ink-faint); font-size: 0.85em; }
+
+    /* ============= AW header band ============= */
+    .aw-header {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 18px 24px;
+    }
+    .aw-header-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .aw-header img { height: 28px; width: auto; display: block; }
+    .header-meta {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-family: var(--font-en);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.85);
+      direction: ltr;
+    }
+    .header-meta .prepared { color: #fff; font-weight: 600; }
+    .header-meta .sep { color: rgba(255,255,255,0.5); }
+
+    /* ============= Title strip ============= */
+    .title-strip {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 44px 24px 24px;
+      text-align: right;
+    }
+    .title-ar {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin: 0 0 6px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .title-en {
+      font-family: var(--font-en);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      margin: 0 0 20px;
+      direction: ltr;
+      text-align: left;
+    }
+    .lede-ar {
+      font-size: 18px;
+      color: var(--color-ink);
+      margin: 0 0 8px;
+      max-width: 640px;
+    }
+    .lede-en {
+      font-family: var(--font-en);
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      margin: 0;
+      direction: ltr;
+      text-align: left;
+      max-width: 640px;
+    }
+
+    /* ============= Snapshot stat strip ============= */
+    .snapshot {
+      max-width: var(--maxw);
+      margin: 24px auto 0;
+      padding: 0 24px;
+    }
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      box-shadow: var(--shadow-card);
+    }
+    .snap-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      text-align: center;
+    }
+    .snap-stat strong {
+      font-family: var(--font-en);
+      font-size: 26px;
+      color: var(--color-primary);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .snap-stat .ar {
+      font-size: 13px;
+      color: var(--color-ink-soft);
+    }
+    .snap-stat .en {
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+    }
+
+    /* ============= Section heading ============= */
+    .section-heading {
+      max-width: var(--maxw);
+      margin: 48px auto 18px;
+      padding: 0 24px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .section-heading h2 {
+      font-size: 22px;
+      color: var(--color-primary);
+      margin: 0;
+      font-weight: 700;
+    }
+    .section-heading .en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+    }
+
+    /* ============= Campaign card ============= */
+    .campaign-card {
+      max-width: var(--maxw);
+      margin: 18px auto 0;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .card-head {
+      padding: 22px 24px 14px;
+      border-bottom: 1px solid var(--color-line);
+      background: linear-gradient(180deg, var(--color-cream-tint) 0%, #ffffff 100%);
+    }
+    .card-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .channel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      direction: ltr;
+    }
+    .channel-tag .icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--color-secondary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-amber);
+      background: rgba(212, 152, 49, 0.1);
+      border: 1px solid rgba(212, 152, 49, 0.3);
+      padding: 4px 10px;
+      border-radius: 100px;
+      direction: ltr;
+    }
+    .status-pill::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--color-amber);
+      border-radius: 50%;
+    }
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin: 0 0 4px;
+      line-height: 1.3;
+    }
+    .card-title-en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: left;
+      margin: 0;
+    }
+    .card-goal {
+      font-size: 15px;
+      color: var(--color-ink-soft);
+      margin: 12px 0 0;
+    }
+
+    /* ============= Card body ============= */
+    .card-body {
+      padding: 22px 24px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .meta-cell {
+      background: var(--color-cream-tint);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      text-align: right;
+    }
+    .meta-cell .label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      display: block;
+      margin-bottom: 4px;
+      direction: ltr;
+      text-align: right;
+    }
+    .meta-cell .value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-ink);
+      line-height: 1.3;
+    }
+    .meta-cell .value .num {
+      color: var(--color-primary);
+      font-size: 17px;
+    }
+    .meta-cell .note {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-ink-faint);
+      margin-top: 2px;
+      direction: ltr;
+      text-align: right;
+    }
+    .flag-row {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .flag-row .flag {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .url-chip {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-primary);
+      background: rgba(23, 87, 52, 0.08);
+      border: 1px solid rgba(23, 87, 52, 0.2);
+      padding: 3px 8px;
+      border-radius: 6px;
+      direction: ltr;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .url-chip:hover { background: rgba(23, 87, 52, 0.14); }
+
+    /* ============= Creative block ============= */
+    .creative-block {
+      margin: 24px 0;
+    }
+    .block-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      font-weight: 600;
+      margin: 0 0 10px;
+      direction: ltr;
+      text-align: right;
+    }
+    .block-sublabel {
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      margin: 0 0 14px;
+    }
+
+    /* RSA Google search-result preview */
+    .rsa-preview {
+      background: #ffffff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      direction: rtl;
+    }
+    .rsa-preview .ad-label {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: #000;
+      font-weight: 700;
+      border: 1px solid #000;
+      padding: 0px 5px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      direction: ltr;
+    }
+    .rsa-preview .ad-domain {
+      font-family: var(--font-en);
+      font-size: 13px;
+      color: var(--color-google-gray);
+      margin-bottom: 4px;
+      direction: ltr;
+      text-align: left;
+      display: block;
+    }
+    .rsa-preview .ad-headlines {
+      font-size: 19px;
+      color: var(--color-google-blue);
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+    .rsa-preview .ad-headlines .dot {
+      color: var(--color-google-gray);
+      margin: 0 4px;
+      font-weight: 400;
+    }
+    .rsa-preview .ad-desc {
+      font-size: 14.5px;
+      color: #4d5156;
+      line-height: 1.55;
+    }
+    .preview-caption {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: right;
+      margin: 4px 0 12px 4px;
+      font-style: italic;
+    }
+
+    /* Asset lists (collapsible) */
+    details.asset-list {
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 0;
+      background: #fafaf7;
+      margin-top: 14px;
+    }
+    details.asset-list[open] { background: #fff; }
+    details.asset-list summary {
+      list-style: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    details.asset-list summary::-webkit-details-marker { display: none; }
+    details.asset-list summary::after {
+      content: "+";
+      font-family: var(--font-en);
+      font-size: 18px;
+      color: var(--color-secondary);
+      transition: transform 0.15s;
+      font-weight: 400;
+    }
+    details.asset-list[open] summary::after { content: "−"; }
+    details.asset-list summary .count {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--color-ink-faint);
+      font-weight: 500;
+      direction: ltr;
+    }
+    .asset-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .asset-table tr {
+      border-top: 1px solid var(--color-line);
+    }
+    .asset-table tr:first-child { border-top: none; }
+    .asset-table td {
+      padding: 9px 16px;
+      vertical-align: top;
+    }
+    .asset-table .asset-num {
+      font-family: var(--font-en);
+      color: var(--color-ink-faint);
+      font-size: 11px;
+      width: 28px;
+      text-align: left;
+      direction: ltr;
+      padding-top: 11px;
+    }
+    .asset-table .asset-text {
+      color: var(--color-ink);
+      line-height: 1.5;
+    }
+    .asset-table .char-count {
+      font-family: var(--font-en);
+      font-size: 10px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: left;
+      width: 60px;
+      padding-top: 12px;
+      white-space: nowrap;
+    }
+    .asset-table .char-count.warn { color: var(--color-amber); }
+
+    /* Display image grid */
+    .img-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .img-grid.square { grid-template-columns: repeat(3, 1fr); }
+    .img-cell {
+      background: #f5f0e6;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 1.91 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-grid.square .img-cell { aspect-ratio: 1 / 1; }
+    .img-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .img-grid-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-ink-faint);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    /* YouTube embed */
+    .youtube-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .youtube-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-pair {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .video-pair .video-block {
+      background: var(--color-cream-tint);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }
+    .video-headline {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin: 12px 0 6px;
+      line-height: 1.4;
+    }
+    .video-desc {
+      font-size: 14.5px;
+      color: var(--color-ink-soft);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Keyword chips */
+    .kw-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .kw {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      background: var(--color-cream-tint);
+      border: 1px solid var(--color-line);
+      padding: 4px 10px;
+      border-radius: 100px;
+      color: var(--color-ink);
+    }
+    .kw .match {
+      font-family: var(--font-en);
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-faint);
+      text-transform: uppercase;
+      direction: ltr;
+    }
+
+    /* AW strategic note */
+    .aw-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-right: 3px solid var(--color-secondary);
+      background: rgba(191, 121, 91, 0.06);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      line-height: 1.7;
+    }
+    .aw-note strong {
+      color: var(--color-secondary);
+      font-weight: 600;
+      display: block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    /* ============= Approval block ============= */
+    .approval-block {
+      max-width: var(--maxw);
+      margin: 56px auto 0;
+      padding: 36px 28px;
+      background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .approval-block h2 {
+      font-size: 26px;
+      margin: 0 0 8px;
+      color: #fff;
+    }
+    .approval-block .lede {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      margin: 0 0 26px;
+      max-width: 560px;
+      margin-inline: auto;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: transform 0.1s, opacity 0.15s;
+      cursor: pointer;
+    }
+    .cta:hover { transform: translateY(-1px); }
+    .cta-primary { background: var(--color-secondary); color: #fff; }
+    .cta-secondary { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3); }
+    .cta-tertiary { background: transparent; color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.2); }
+    .cta .icon { font-size: 18px; line-height: 1; }
+
+    .next-steps {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+      text-align: right;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .next-steps h4 {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin: 0 0 10px;
+      direction: ltr;
+      text-align: right;
+    }
+    .next-steps ul {
+      margin: 0;
+      padding-right: 18px;
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.85;
+    }
+    .signature-line {
+      margin-top: 26px;
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    /* ============= AW footer ============= */
+    .aw-footer {
+      max-width: var(--maxw);
+      margin: 36px auto 28px;
+      padding: 24px 24px 0;
+      border-top: 1px solid var(--color-line-strong);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-ink-faint);
+    }
+    .aw-footer .left { direction: ltr; }
+    .aw-footer .right { direction: ltr; }
+    .aw-footer a { color: var(--color-primary); text-decoration: none; }
+    .aw-footer a:hover { text-decoration: underline; }
+
+    /* ============= Comment thread per section ============= */
+    .section-discuss {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--color-line-strong);
+    }
+    .discuss-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .discuss-header h4 {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      margin: 0;
+      font-weight: 600;
+      direction: ltr;
+      text-align: right;
+    }
+    .discuss-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: rgba(23, 87, 52, 0.08);
+      border: 1px solid rgba(23, 87, 52, 0.2);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .discuss-btn:hover { background: rgba(23, 87, 52, 0.16); }
+    .discuss-btn .ic { font-size: 14px; line-height: 1; }
+    .cmt-list { display: flex; flex-direction: column; gap: 8px; }
+    .cmt-list:empty { display: none; }
+    .cmt-item {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-right: 3px solid var(--color-secondary);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px 12px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--color-ink);
+    }
+    .cmt-author {
+      display: block;
+      font-weight: 600;
+      color: var(--color-primary);
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .cmt-time {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 10px;
+      color: var(--color-ink-faint);
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+      direction: ltr;
+      text-align: right;
+    }
+    .cmt-del {
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      width: 22px;
+      height: 22px;
+      border: 0;
+      background: transparent;
+      color: var(--color-ink-faint);
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      border-radius: 50%;
+    }
+    .cmt-del:hover { background: rgba(212, 152, 49, 0.18); color: var(--color-amber); }
+
+    /* ============= Comment modal ============= */
+    .cmt-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 63, 37, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+      direction: rtl;
+    }
+    .cmt-modal.open { display: flex; }
+    .cmt-modal-card {
+      background: #fff;
+      border-radius: var(--radius);
+      max-width: 500px;
+      width: 100%;
+      padding: 24px 24px 20px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .cmt-modal-card h3 {
+      font-size: 18px;
+      color: var(--color-primary);
+      margin: 0 0 4px;
+    }
+    .cmt-modal-card .ctx {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: right;
+      margin-bottom: 18px;
+      letter-spacing: 0.04em;
+    }
+    .cmt-modal-card label {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+      margin-bottom: 6px;
+      direction: rtl;
+      text-align: right;
+    }
+    .cmt-modal-card input[type=text],
+    .cmt-modal-card textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--color-line-strong);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--color-ink);
+      background: #fafaf7;
+      direction: rtl;
+      text-align: right;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .cmt-modal-card input[type=text]:focus,
+    .cmt-modal-card textarea:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: -1px;
+      background: #fff;
+    }
+    .cmt-modal-card textarea { min-height: 110px; }
+    .cmt-row { margin-bottom: 14px; }
+    .cmt-actions {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .cmt-actions button {
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .cmt-submit { background: var(--color-primary); color: #fff; }
+    .cmt-submit:hover { background: var(--color-primary-dark); }
+    .cmt-cancel { background: transparent; color: var(--color-ink-soft); border-color: var(--color-line-strong); }
+    .cmt-cancel:hover { background: var(--color-cream-tint); }
+
+    /* ============= Toast ============= */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--color-ink);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: none;
+      z-index: 200;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ============= Live-feedback FAB ============= */
+    .feedback-fab {
+      position: fixed;
+      bottom: 22px;
+      left: 22px;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 11px 18px;
+      border-radius: 100px;
+      border: 0;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(23, 87, 52, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 90;
+      transition: transform 0.15s;
+    }
+    .feedback-fab:hover { transform: translateY(-1px); }
+    .feedback-fab.empty {
+      background: var(--color-cream-tint);
+      color: var(--color-ink-soft);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid var(--color-line);
+    }
+    .feedback-fab .fab-count {
+      background: var(--color-secondary);
+      color: #fff;
+      padding: 1px 8px;
+      border-radius: 100px;
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-weight: 700;
+      min-width: 18px;
+      text-align: center;
+    }
+    .feedback-fab.empty .fab-count { display: none; }
+
+    /* ============= Decision state on approval block ============= */
+    .approval-block .cta.is-active {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 6px 16px rgba(0,0,0,0.2);
+      transform: translateY(-1px);
+    }
+    .approval-block .you-decided {
+      display: none;
+      margin-top: 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-sm);
+      padding: 12px 18px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .approval-block .you-decided.show { display: block; }
+    .approval-block .you-decided strong { color: #fff; font-weight: 700; }
+
+    /* ============= Responsive ============= */
+    @media (max-width: 720px) {
+      .title-ar { font-size: 26px; }
+      .snapshot-grid { grid-template-columns: repeat(2, 1fr); padding: 16px 12px; }
+      .snap-stat:nth-child(5) { grid-column: span 2; }
+      .meta-grid { grid-template-columns: 1fr; }
+      .img-grid, .img-grid.square { grid-template-columns: repeat(2, 1fr); }
+      .card-head, .card-body { padding-left: 18px; padding-right: 18px; }
+      .approval-block { padding: 28px 20px; border-radius: 0; margin-left: -8px; margin-right: -8px; }
+      .cta-row { flex-direction: column; }
+      .cta { width: 100%; justify-content: center; }
+    }
+
+    /* ============= Print stylesheet ============= */
+    @media print {
+      @page { size: A4; margin: 14mm 12mm 18mm 12mm; }
+      body { background: #fff; color: #000; font-size: 11pt; }
+      .aw-header { background: var(--color-primary) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .aw-header, .title-strip, .snapshot, .approval-block, .aw-footer { max-width: 100%; }
+      .snapshot { margin-top: 18px; }
+      .snapshot-grid { box-shadow: none; padding: 12px 10px; }
+      .campaign-card { box-shadow: none; page-break-before: always; break-before: page; margin-top: 0; max-width: 100%; }
+      .campaign-card:first-of-type { page-break-before: auto; break-before: auto; }
+      details.asset-list[open] { background: #fff; }
+      details.asset-list summary::after { display: none; }
+      details.asset-list, details.asset-list[open] {
+        background: #fff;
+      }
+      /* force all <details> open in print */
+      details:not([open]) > *:not(summary) { display: revert; }
+      .youtube-embed::after {
+        content: "Video preview: open the link to watch the actual YouTube ad.";
+        position: absolute;
+        inset: 0;
+        background: #f5f0e6;
+        color: var(--color-ink-soft);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12pt;
+      }
+      .youtube-embed iframe { display: none; }
+      .cta { display: none !important; }
+      .approval-block { background: var(--color-primary) !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-before: always; }
+      .next-steps { display: block; }
+      a[href]::after { content: ""; }
+      .aw-footer { page-break-inside: avoid; }
+      .section-heading { page-break-after: avoid; }
+      .section-discuss, .cmt-modal, .toast, .feedback-fab { display: none !important; }
+      .you-decided { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="aw-header">
+  <div class="aw-header-inner">
+    <img src="admireworks-white.png" alt="Admireworks" />
+    <div class="header-meta">
+      <span class="prepared">Prepared for Basseqat</span>
+      <span class="sep">·</span>
+      <span>v1</span>
+      <span class="sep">·</span>
+      <span>23 May 2026</span>
+    </div>
+  </div>
+</header>
+
+<section class="title-strip">
+  <h1 class="title-ar">إعلاناتك على جوجل جاهزة للإطلاق</h1>
+  <p class="title-en">Basseqat Google Ads · Ready for Launch · Awaiting Your Approval</p>
+  <p class="lede-ar">٤ حملات معدّة بالكامل ومتوقّفة (Paused). خد ٥ دقايق راجعها وقولنا قرارك, وهنخلّيها لايف.</p>
+  <p class="lede-en">4 campaigns staged and paused. Skim the 4 sections below, then choose Approve, Request Changes, or Schedule a Call at the bottom of the page.</p>
+</section>
+
+<section class="snapshot" aria-label="At a glance">
+  <div class="snapshot-grid">
+    <div class="snap-stat">
+      <strong>4</strong>
+      <span class="ar">حملات</span>
+      <span class="en">Campaigns</span>
+    </div>
+    <div class="snap-stat">
+      <strong>2 · 1 · 1</strong>
+      <span class="ar">بحث · شبكة عرض · يوتيوب</span>
+      <span class="en">Search · Display · YouTube</span>
+    </div>
+    <div class="snap-stat">
+      <strong>1,420</strong>
+      <span class="ar">جنيه/يوم</span>
+      <span class="en">EGP / day</span>
+    </div>
+    <div class="snap-stat">
+      <strong>5</strong>
+      <span class="ar">دول مستهدفة</span>
+      <span class="en">Countries</span>
+    </div>
+    <div class="snap-stat">
+      <strong>AR · EN</strong>
+      <span class="ar">لغات الاستهداف</span>
+      <span class="en">Languages</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CAMPAIGN 1: Search Egypt ===================== -->
+<div class="section-heading">
+  <h2>الحملات الأربعة بالتفصيل</h2>
+  <span class="en">Campaign Details</span>
+</div>
+
+<article class="campaign-card" id="search-egypt">
+  <div class="card-head">
+    <div class="card-meta-row">
+      <span class="channel-tag"><span class="icon">G</span>Google Search · Lead Generation</span>
+      <span class="status-pill">Paused · Awaiting approval</span>
+    </div>
+    <h3 class="card-title">إعلانات بحث · جذب ليدز من داخل مصر</h3>
+    <p class="card-title-en">Search | Basseqat | Leads | Egypt &nbsp;·&nbsp; ID 23874135517</p>
+    <p class="card-goal">بنوصل لناس بتكتب على جوجل كلمات زي "استثمار زراعي في مصر", وبنعرض عليهم الكويز عشان نقيس جدّيتهم قبل ما نتواصل.</p>
+  </div>
+
+  <div class="card-body">
+    <div class="meta-grid">
+      <div class="meta-cell">
+        <span class="label">Daily Budget</span>
+        <span class="value"><span class="num">320</span> ج.م / يوم</span>
+        <span class="note">≈ EGP 9,600 / month</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Targeting</span>
+        <span class="value">
+          <span class="flag-row">
+            <span class="flag">🇪🇬</span>
+            <span>مصر</span>
+          </span>
+        </span>
+        <span class="note">Egypt · AR + EN</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Bidding</span>
+        <span class="value">تعظيم التحويلات</span>
+        <span class="note">Maximize Conversions</span>
+      </div>
+    </div>
+
+    <div class="meta-cell" style="margin-bottom: 22px;">
+      <span class="label">Landing Page</span>
+      <a class="url-chip" href="https://start.basseqat.com/p/serious-investor" target="_blank" rel="noopener">start.basseqat.com/p/serious-investor</a>
+    </div>
+
+    <!-- RSA preview -->
+    <div class="creative-block">
+      <p class="block-label">Search Result Preview</p>
+      <p class="block-sublabel">جوجل بتركّب العناوين والأوصاف بشكل تلقائي. دي ٣ نماذج محتملة لشكل الإعلان لما يظهر للمستخدم:</p>
+
+      <div class="rsa-preview">
+        <span class="ad-label">Ad</span>
+        <span class="ad-domain">start.basseqat.com/p/serious-investor</span>
+        <div class="ad-headlines">
+          استثمار زراعي قائم بالفعل
+          <span class="dot">·</span>
+          مزرعة شغالة من ٤ سنين
+          <span class="dot">·</span>
+          باسقات &mdash; نخيل المجدول
+        </div>
+        <p class="ad-desc">اكتشف فرصة استثمار زراعي قائمة في نخيل المجدول، وأكمل الكويز لمعرفة هل يناسبك المشروع</p>
+      </div>
+
+      <div class="rsa-preview">
+        <span class="ad-label">Ad</span>
+        <span class="ad-domain">start.basseqat.com/p/serious-investor</span>
+        <div class="ad-headlines">
+          استثمر في أصل حقيقي
+          <span class="dot">·</span>
+          شوف المشروع بعينك
+          <span class="dot">·</span>
+          بدون وعود &mdash; بالدليل
+        </div>
+        <p class="ad-desc">مزرعة شغالة من ٤ سنين. مش كلام &mdash; ده واقع تشوفه بعينك.</p>
+      </div>
+
+      <div class="rsa-preview">
+        <span class="ad-label">Ad</span>
+        <span class="ad-domain">start.basseqat.com/p/serious-investor</span>
+        <div class="ad-headlines">
+          فرصة استثمار في نخيل المجدول
+          <span class="dot">·</span>
+          استثمار في التمور
+          <span class="dot">·</span>
+          تقارير شفافة ومتابعة دورية
+        </div>
+        <p class="ad-desc">مشروع حقيقي على أرض الواقع، نخيل وبنية تحتية ومتابعة واضحة. ابدأ بالكويز قبل اتخاذ القرار</p>
+      </div>
+
+      <p class="preview-caption">3 of 1,365+ possible assemblies. Google rotates and tests combinations automatically.</p>
+
+      <details class="asset-list">
+        <summary>كل العناوين (Headlines) <span class="count">15 assets · all approved by Google</span></summary>
+        <table class="asset-table">
+          <tr><td class="asset-num">01</td><td class="asset-text">استثمار زراعي قائم بالفعل</td><td class="char-count">22 / 30</td></tr>
+          <tr><td class="asset-num">02</td><td class="asset-text">اكتشف هل باسقات مناسب لك</td><td class="char-count">24 / 30</td></tr>
+          <tr><td class="asset-num">03</td><td class="asset-text">استثمر في أصل حقيقي</td><td class="char-count">19 / 30</td></tr>
+          <tr><td class="asset-num">04</td><td class="asset-text">مشروع نخيل على أرض الواقع</td><td class="char-count">25 / 30</td></tr>
+          <tr><td class="asset-num">05</td><td class="asset-text">أفضل استثمار في مصر</td><td class="char-count">19 / 30</td></tr>
+          <tr><td class="asset-num">06</td><td class="asset-text">مشروع استثماري في مصر</td><td class="char-count">21 / 30</td></tr>
+          <tr><td class="asset-num">07</td><td class="asset-text">فرصة استثمار في نخيل المجدول</td><td class="char-count">28 / 30</td></tr>
+          <tr><td class="asset-num">08</td><td class="asset-text">استثمار طويل الأجل في مصر</td><td class="char-count">24 / 30</td></tr>
+          <tr><td class="asset-num">09</td><td class="asset-text">استثمار في التمور</td><td class="char-count">17 / 30</td></tr>
+          <tr><td class="asset-num">10</td><td class="asset-text">باسقات &mdash; نخيل المجدول</td><td class="char-count">22 / 30</td></tr>
+          <tr><td class="asset-num">11</td><td class="asset-text">مزرعة شغالة من ٤ سنين</td><td class="char-count">21 / 30</td></tr>
+          <tr><td class="asset-num">12</td><td class="asset-text">شوف المشروع بعينك</td><td class="char-count">18 / 30</td></tr>
+          <tr><td class="asset-num">13</td><td class="asset-text">بدون وعود &mdash; بالدليل</td><td class="char-count">20 / 30</td></tr>
+          <tr><td class="asset-num">14</td><td class="asset-text">استثمر في مصر</td><td class="char-count">13 / 30</td></tr>
+          <tr><td class="asset-num">15</td><td class="asset-text">تقارير شفافة ومتابعة دورية</td><td class="char-count">26 / 30</td></tr>
+        </table>
+      </details>
+
+      <details class="asset-list">
+        <summary>كل الأوصاف (Descriptions) <span class="count">4 assets · all approved by Google</span></summary>
+        <table class="asset-table">
+          <tr><td class="asset-num">01</td><td class="asset-text">اكتشف فرصة استثمار زراعي قائمة في نخيل المجدول، وأكمل الكويز لمعرفة هل يناسبك المشروع</td><td class="char-count">81 / 90</td></tr>
+          <tr><td class="asset-num">02</td><td class="asset-text">مشروع حقيقي على أرض الواقع، نخيل وبنية تحتية ومتابعة واضحة. ابدأ بالكويز قبل اتخاذ القرار</td><td class="char-count">86 / 90</td></tr>
+          <tr><td class="asset-num">03</td><td class="asset-text">مزرعة شغالة من ٤ سنين. مش كلام &mdash; ده واقع تشوفه بعينك.</td><td class="char-count">55 / 90</td></tr>
+          <tr><td class="asset-num">04</td><td class="asset-text">مش هنوعدك بأرقام &mdash; هنوريك المشروع. ابدأ بالكويز واعرف هل باسقات مناسب لك.</td><td class="char-count">73 / 90</td></tr>
+        </table>
+      </details>
+
+      <details class="asset-list" open>
+        <summary>الكلمات المستهدفة (Keywords) <span class="count">15 phrase-match keywords</span></summary>
+        <div style="padding: 12px 16px;">
+          <div class="kw-grid">
+            <span class="kw">"استثمار زراعي في مصر"</span>
+            <span class="kw">"استثمار في نخيل المجدول"</span>
+            <span class="kw">"مشروع نخيل في مصر"</span>
+            <span class="kw">"فرصة استثمار زراعي"</span>
+            <span class="kw">"استثمار زراعي للمغتربين"</span>
+            <span class="kw">"استثمار في مصر للمغتربين"</span>
+            <span class="kw">"استثمار المصريين بالخارج"</span>
+            <span class="kw">"فرص استثمار للمصريين بالخارج"</span>
+            <span class="kw">"استثمار حقيقي في مصر"</span>
+            <span class="kw">"استثمار طويل الأجل في مصر"</span>
+            <span class="kw">"مشروع استثماري زراعي في مصر"</span>
+            <span class="kw">"مشروع زراعي للاستثمار"</span>
+            <span class="kw">"استثمار في النخيل"</span>
+            <span class="kw">"استثمار في التمور"</span>
+            <span class="kw">"استثمار في أصل حقيقي"</span>
+          </div>
+          <p class="faint" style="margin: 10px 0 0; text-align: right; direction: ltr;">All phrase-match. Google will trigger ads on close variants of these phrases.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="aw-note">
+      <strong>Why we built it this way</strong>
+      الحملة دي بتلتقط ناس بتدوّر بالفعل. مش بنحاول نقنع حد جديد, بنوصل لناس عندها نية واضحة. العناوين بتتجنّب الوعود بالأرقام تماماً, وبتركّز على الإثبات: "مزرعة شغالة من ٤ سنين", "شوف المشروع بعينك", "بدون وعود, بالدليل". ده يناسب صوت بسّقات الواثق وبيحمي البراند من أي شبهة "ضمان عائد".
+    </div>
+
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>Comments on this campaign</h4>
+        <button class="discuss-btn" onclick="openCmtModal('search-egypt','Search Ads · Leads from Egypt')">
+          <span class="ic">💬</span> أضف تعليق على هذه الحملة
+        </button>
+      </div>
+      <div class="cmt-list" data-cmt-list="search-egypt"></div>
+    </div>
+  </div>
+</article>
+
+<!-- ===================== CAMPAIGN 2: Search GCC ===================== -->
+<article class="campaign-card" id="search-gcc">
+  <div class="card-head">
+    <div class="card-meta-row">
+      <span class="channel-tag"><span class="icon">G</span>Google Search · Lead Generation</span>
+      <span class="status-pill">Paused · Awaiting approval</span>
+    </div>
+    <h3 class="card-title">إعلانات بحث · المصريين في الخليج</h3>
+    <p class="card-title-en">Search | Basseqat | Leads | GCC &nbsp;·&nbsp; ID 23869304561</p>
+    <p class="card-goal">بنخاطب المصريين المغتربين في الإمارات والسعودية والكويت اللي بيدوّروا على فرصة استثمار حقيقية في مصر.</p>
+  </div>
+
+  <div class="card-body">
+    <div class="meta-grid">
+      <div class="meta-cell">
+        <span class="label">Daily Budget</span>
+        <span class="value"><span class="num">250</span> ج.م / يوم</span>
+        <span class="note">≈ EGP 7,500 / month</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Targeting</span>
+        <span class="value">
+          <span class="flag-row">
+            <span class="flag">🇦🇪</span><span class="flag">🇸🇦</span><span class="flag">🇰🇼</span>
+          </span>
+        </span>
+        <span class="note">UAE · Saudi · Kuwait · AR + EN</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Bidding</span>
+        <span class="value">تعظيم التحويلات</span>
+        <span class="note">Maximize Conversions</span>
+      </div>
+    </div>
+
+    <div class="meta-cell" style="margin-bottom: 22px;">
+      <span class="label">Landing Page</span>
+      <a class="url-chip" href="https://start.basseqat.com/p/expatriates" target="_blank" rel="noopener">start.basseqat.com/p/expatriates</a>
+      <span class="note">صفحة مختلفة عن إعلان مصر, مصمّمة بصوت يناسب المصري في الخارج.</span>
+    </div>
+
+    <div class="creative-block">
+      <p class="block-label">Search Result Preview</p>
+      <p class="block-sublabel">٣ نماذج محتملة من تركيبات الإعلان لما يظهر في نتائج البحث:</p>
+
+      <div class="rsa-preview">
+        <span class="ad-label">Ad</span>
+        <span class="ad-domain">start.basseqat.com/p/expatriates</span>
+        <div class="ad-headlines">
+          استثمار للمصريين في الخليج
+          <span class="dot">·</span>
+          استثمر في مصر وأنت في الخليج
+          <span class="dot">·</span>
+          مشروع استثماري زراعي في مصر
+        </div>
+        <p class="ad-desc">لو أنت مغترب وتبحث عن استثمار حقيقي داخل مصر، أكمل الكويز واعرف هل باسقات مناسب لك</p>
+      </div>
+
+      <div class="rsa-preview">
+        <span class="ad-label">Ad</span>
+        <span class="ad-domain">start.basseqat.com/p/expatriates</span>
+        <div class="ad-headlines">
+          أصل زراعي حقيقي في مصر
+          <span class="dot">·</span>
+          نخيل مجدول على أرض الواقع
+          <span class="dot">·</span>
+          ابدأ محادثة على الواتساب
+        </div>
+        <p class="ad-desc">مشروع زراعي قائم في نخيل المجدول، مناسب للمصريين بالخارج الباحثين عن أصل ملموس طويل الأجل</p>
+      </div>
+
+      <div class="rsa-preview">
+        <span class="ad-label">Ad</span>
+        <span class="ad-domain">start.basseqat.com/p/expatriates</span>
+        <div class="ad-headlines">
+          استثمار في أصل حقيقي
+          <span class="dot">·</span>
+          مشروع نخيل يمكن متابعته
+          <span class="dot">·</span>
+          تقارير شفافة كل فترة
+        </div>
+        <p class="ad-desc">مش هنوعدك بأرقام &mdash; هنوريك المشروع. ابدأ بالكويز واعرف هل باسقات مناسب لك.</p>
+      </div>
+
+      <p class="preview-caption">3 of 1,365+ possible assemblies. Headlines and descriptions rotate.</p>
+
+      <details class="asset-list">
+        <summary>كل العناوين (Headlines) <span class="count">15 assets · all approved by Google</span></summary>
+        <table class="asset-table">
+          <tr><td class="asset-num">01</td><td class="asset-text">استثمار في أصل حقيقي</td><td class="char-count">20 / 30</td></tr>
+          <tr><td class="asset-num">02</td><td class="asset-text">مشروع استثماري زراعي في مصر</td><td class="char-count">27 / 30</td></tr>
+          <tr><td class="asset-num">03</td><td class="asset-text">استثمار طويل الأجل في مصر</td><td class="char-count">24 / 30</td></tr>
+          <tr><td class="asset-num">04</td><td class="asset-text">استثمر في مصر وأنت في الخليج</td><td class="char-count">28 / 30</td></tr>
+          <tr><td class="asset-num">05</td><td class="asset-text">اكتشف هل باسقات مناسب لك</td><td class="char-count">24 / 30</td></tr>
+          <tr><td class="asset-num">06</td><td class="asset-text">نخيل مجدول على أرض الواقع</td><td class="char-count">25 / 30</td></tr>
+          <tr><td class="asset-num">07</td><td class="asset-text">مشروع نخيل يمكن متابعته</td><td class="char-count">23 / 30</td></tr>
+          <tr><td class="asset-num">08</td><td class="asset-text">باسقات &mdash; نخيل المجدول</td><td class="char-count">22 / 30</td></tr>
+          <tr><td class="asset-num">09</td><td class="asset-text">مزرعة شغالة من ٤ سنين</td><td class="char-count">21 / 30</td></tr>
+          <tr><td class="asset-num">10</td><td class="asset-text">شوف المشروع قبل ما تقرر</td><td class="char-count">23 / 30</td></tr>
+          <tr><td class="asset-num">11</td><td class="asset-text">بدون وعود &mdash; بالدليل</td><td class="char-count">20 / 30</td></tr>
+          <tr><td class="asset-num">12</td><td class="asset-text">ابدأ محادثة على الواتساب</td><td class="char-count">23 / 30</td></tr>
+          <tr><td class="asset-num">13</td><td class="asset-text">استثمار للمصريين في الخليج</td><td class="char-count">26 / 30</td></tr>
+          <tr><td class="asset-num">14</td><td class="asset-text">تقارير شفافة كل فترة</td><td class="char-count">20 / 30</td></tr>
+          <tr><td class="asset-num">15</td><td class="asset-text">أصل زراعي حقيقي في مصر</td><td class="char-count">22 / 30</td></tr>
+        </table>
+      </details>
+
+      <details class="asset-list">
+        <summary>كل الأوصاف (Descriptions) <span class="count">4 assets · all approved by Google</span></summary>
+        <table class="asset-table">
+          <tr><td class="asset-num">01</td><td class="asset-text">لو أنت مغترب وتبحث عن استثمار حقيقي داخل مصر، أكمل الكويز واعرف هل باسقات مناسب لك</td><td class="char-count">79 / 90</td></tr>
+          <tr><td class="asset-num">02</td><td class="asset-text">مشروع زراعي قائم في نخيل المجدول، مناسب للمصريين بالخارج الباحثين عن أصل ملموس طويل الأجل</td><td class="char-count">86 / 90</td></tr>
+          <tr><td class="asset-num">03</td><td class="asset-text">مزرعة شغالة من ٤ سنين. مش كلام &mdash; ده واقع تشوفه بعينك.</td><td class="char-count">55 / 90</td></tr>
+          <tr><td class="asset-num">04</td><td class="asset-text">مش هنوعدك بأرقام &mdash; هنوريك المشروع. ابدأ بالكويز واعرف هل باسقات مناسب لك.</td><td class="char-count">73 / 90</td></tr>
+        </table>
+      </details>
+
+      <details class="asset-list" open>
+        <summary>الكلمات المستهدفة (Keywords) <span class="count">6 phrase-match keywords</span></summary>
+        <div style="padding: 12px 16px;">
+          <div class="kw-grid">
+            <span class="kw">"مشروع زراعي للاستثمار"</span>
+            <span class="kw">"استثمار في النخيل"</span>
+            <span class="kw">"استثمار في التمور"</span>
+            <span class="kw">"استثمار في أصل حقيقي"</span>
+            <span class="kw">"مشروع استثماري في مصر"</span>
+            <span class="kw">"فرصة استثمار في مصر"</span>
+          </div>
+          <p class="faint" style="margin: 10px 0 0; text-align: right; direction: ltr;">Smaller, tighter keyword set for the higher-CPC Gulf market.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="aw-note">
+      <strong>Why we built it this way</strong>
+      الجمهور هنا أغلى لكن أعلى نية. كلمات أقل وأدق, وصفحة هبوط منفصلة بصوت يحس فيها المصري في الخارج إنه متفهَّم. لاحظ إن الحملة دي مفيهاش قطر, الاستهداف الحالي هو الإمارات والسعودية والكويت. لو حابب نضيف قطر أو البحرين أو عُمان نقدر بسهولة.
+    </div>
+
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>Comments on this campaign</h4>
+        <button class="discuss-btn" onclick="openCmtModal('search-gcc','Search Ads · Leads from Gulf')">
+          <span class="ic">💬</span> أضف تعليق على هذه الحملة
+        </button>
+      </div>
+      <div class="cmt-list" data-cmt-list="search-gcc"></div>
+    </div>
+  </div>
+</article>
+
+<!-- ===================== CAMPAIGN 3: GDN Display ===================== -->
+<article class="campaign-card" id="gdn-awareness">
+  <div class="card-head">
+    <div class="card-meta-row">
+      <span class="channel-tag"><span class="icon">D</span>Google Display Network · Awareness</span>
+      <span class="status-pill">Paused · Awaiting approval</span>
+    </div>
+    <h3 class="card-title">إعلانات شبكة العرض · وعي بالمشروع</h3>
+    <p class="card-title-en">GDN | Basseqat | Awareness | Egypt + GCC &nbsp;·&nbsp; ID 23874131671</p>
+    <p class="card-goal">بنخلّي مشروع باسقات يظهر قدام الناس وهم بيتصفّحوا مواقع وتطبيقات تانية. الهدف الأساسي هنا هو الوعي مش الضغطة المباشرة.</p>
+  </div>
+
+  <div class="card-body">
+    <div class="meta-grid">
+      <div class="meta-cell">
+        <span class="label">Daily Budget</span>
+        <span class="value"><span class="num">250</span> ج.م / يوم</span>
+        <span class="note">≈ EGP 7,500 / month</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Targeting</span>
+        <span class="value">
+          <span class="flag-row">
+            <span class="flag">🇪🇬</span><span class="flag">🇦🇪</span><span class="flag">🇸🇦</span><span class="flag">🇰🇼</span>
+          </span>
+        </span>
+        <span class="note">Egypt + UAE + Saudi + Kuwait</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Bidding</span>
+        <span class="value">CPM يدوي</span>
+        <span class="note">Manual CPM</span>
+      </div>
+    </div>
+
+    <div class="meta-cell" style="margin-bottom: 22px;">
+      <span class="label">Landing Page</span>
+      <a class="url-chip" href="https://www.basseqat.com/" target="_blank" rel="noopener">basseqat.com</a>
+    </div>
+
+    <div class="creative-block">
+      <p class="block-label">Visual Creative · Ad #1</p>
+      <p class="block-sublabel">جوجل بتركّب الصور والعناوين تلقائياً في مئات الأحجام والصياغات. دي أصول الإعلان كما تم رفعها:</p>
+
+      <p class="img-grid-label">Landscape (1.91:1)</p>
+      <div class="img-grid">
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/6325908310879759549" alt="Landscape banner 1" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/8834041867950198542" alt="Landscape banner 2" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/7176147796266620589" alt="Landscape banner 3" /></div>
+      </div>
+
+      <p class="img-grid-label" style="margin-top: 16px;">Square (1:1)</p>
+      <div class="img-grid square">
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/10455930131515874908" alt="Square 1" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/5067862085088705058" alt="Square 2" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/12821577147444841047" alt="Square 3" /></div>
+      </div>
+
+      <details class="asset-list" open style="margin-top: 16px;">
+        <summary>العناوين والأوصاف <span class="count">3 headlines · 1 long headline · 2 descriptions</span></summary>
+        <div style="padding: 12px 16px;">
+          <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Short Headlines</p>
+          <ul style="margin: 0 0 12px; padding-right: 18px;">
+            <li>استثمار زراعي قائم بالفعل</li>
+            <li>أصل حقيقي على أرض الواقع</li>
+            <li>استثمار في نخيل المجدول</li>
+          </ul>
+          <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Long Headline</p>
+          <p style="margin: 0 0 12px;">اكتشف فرصة استثمار زراعي قائمة في نخيل المجدول على أرض الواقع</p>
+          <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Descriptions</p>
+          <ul style="margin: 0; padding-right: 18px;">
+            <li>تعرف على مشروع باسقات واكتشف هل الاستثمار الزراعي في نخيل المجدول مناسب لك</li>
+            <li>مشروع قائم على أرض الواقع، بنية تحتية ونخيل ومتابعة واضحة قبل اتخاذ القرار</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="creative-block">
+      <p class="block-label">Visual Creative · Ad #2</p>
+      <p class="block-sublabel">النسخة التانية, بنفس الأصول البصرية مع توسعة العناوين لـ ٤ صياغات:</p>
+
+      <p class="img-grid-label">Landscape (1.91:1)</p>
+      <div class="img-grid">
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/17199870475978125139" alt="Landscape banner 1" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/7176147796266620589" alt="Landscape banner 2" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/8834041867950198542" alt="Landscape banner 3" /></div>
+      </div>
+
+      <p class="img-grid-label" style="margin-top: 16px;">Square (1:1)</p>
+      <div class="img-grid square">
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/18274538088262625176" alt="Square 1" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/14318689170870102023" alt="Square 2" /></div>
+        <div class="img-cell"><img src="https://tpc.googlesyndication.com/simgad/7101437458902914311" alt="Square 3" /></div>
+      </div>
+
+      <details class="asset-list" style="margin-top: 16px;">
+        <summary>العناوين والأوصاف <span class="count">4 headlines · 1 long headline · 2 descriptions</span></summary>
+        <div style="padding: 12px 16px;">
+          <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Short Headlines</p>
+          <ul style="margin: 0 0 12px; padding-right: 18px;">
+            <li>استثمار في نخيل المجدول</li>
+            <li>مشروع نخيل يمكن متابعته</li>
+            <li>أصل حقيقي على أرض الواقع</li>
+            <li>اكتشف مشروع باسقات</li>
+          </ul>
+          <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Long Headline</p>
+          <p style="margin: 0 0 12px;">اكتشف فرصة استثمار زراعي قائمة في نخيل المجدول على أرض الواقع</p>
+          <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Descriptions</p>
+          <ul style="margin: 0; padding-right: 18px;">
+            <li>مشروع قائم على أرض الواقع، بنية تحتية ونخيل ومتابعة واضحة قبل اتخاذ القرار</li>
+            <li>تعرف على مشروع باسقات واكتشف هل الاستثمار الزراعي في نخيل المجدول مناسب لك</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="aw-note">
+      <strong>Why we built it this way</strong>
+      الصور كلها بتحكي قصة المكان: نخل حقيقي على الأرض, بنية تحتية, شكل واقعي مش رندر مصنوع. ده مهم لبراند بسّقات اللي مبني على "شوف المشروع بعينك". الإعلانات دي مش بتطلب ضغطة فورية, بتبني الألفة مع الاسم عشان لما الناس بعد كده تشوف إعلان البحث تبقى عارفة المشروع.
+    </div>
+
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>Comments on this campaign</h4>
+        <button class="discuss-btn" onclick="openCmtModal('gdn-awareness','Google Display Network · Awareness')">
+          <span class="ic">💬</span> أضف تعليق على هذه الحملة
+        </button>
+      </div>
+      <div class="cmt-list" data-cmt-list="gdn-awareness"></div>
+    </div>
+  </div>
+</article>
+
+<!-- ===================== CAMPAIGN 4: YouTube Video ===================== -->
+<article class="campaign-card" id="youtube-awareness">
+  <div class="card-head">
+    <div class="card-meta-row">
+      <span class="channel-tag"><span class="icon">▶</span>YouTube · Video Awareness</span>
+      <span class="status-pill">Paused · Awaiting approval</span>
+    </div>
+    <h3 class="card-title">إعلانات يوتيوب · وعي عبر الفيديو</h3>
+    <p class="card-title-en">Basseqat | YouTube | Awareness | Gulf &nbsp;·&nbsp; ID 23864443866</p>
+    <p class="card-goal">الفيديو بيوصل المعنى في ٣٠ ثانية بشكل ما إعلان مكتوب يقدر يعمله. هنا الجمهور بيشوف المشروع على أرض الواقع.</p>
+  </div>
+
+  <div class="card-body">
+    <div class="meta-grid">
+      <div class="meta-cell">
+        <span class="label">Daily Budget</span>
+        <span class="value"><span class="num">600</span> ج.م / يوم</span>
+        <span class="note">≈ EGP 18,000 / month</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Targeting</span>
+        <span class="value">
+          <span class="flag-row">
+            <span class="flag">🇸🇦</span><span class="flag">🇦🇪</span><span class="flag">🇰🇼</span><span class="flag">🇯🇴</span>
+          </span>
+        </span>
+        <span class="note">Saudi · UAE · Kuwait · Jordan</span>
+      </div>
+      <div class="meta-cell">
+        <span class="label">Bidding</span>
+        <span class="value">CPV مستهدف</span>
+        <span class="note">Target CPV</span>
+      </div>
+    </div>
+
+    <div class="creative-block">
+      <p class="block-label">Video #1 · "Investing"</p>
+      <div class="youtube-embed">
+        <iframe src="https://www.youtube.com/embed/OKtb-dqlsN0" title="Basseqat video ad 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-block" style="border-radius: var(--radius-sm); margin-top: -4px;">
+        <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Long Headline</p>
+        <p class="video-headline">استثمر في أصول حقيقية تنمو&hellip; مش مجرد أرقام</p>
+        <p style="margin: 14px 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Description</p>
+        <p class="video-desc">مش مضاربة ولا وعود&hellip; أصول حقيقية وإدارة احترافية تخلّي استثمارك ينمو بثبات</p>
+        <p class="faint" style="margin-top: 10px; direction: ltr; text-align: right;">YouTube video ID: OKtb-dqlsN0</p>
+      </div>
+    </div>
+
+    <div class="creative-block">
+      <p class="block-label">Video #2 · "استثمر في أصول حقيقية مع باسقات"</p>
+      <div class="youtube-embed">
+        <iframe src="https://www.youtube.com/embed/CmTQHYzFldE" title="Basseqat video ad 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-block" style="border-radius: var(--radius-sm); margin-top: -4px;">
+        <p style="margin: 0 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Long Headline</p>
+        <p class="video-headline">استثمر في أصول حقيقية تنمو&hellip; مش مجرد أرقام</p>
+        <p style="margin: 14px 0 4px; font-family: var(--font-en); font-size: 11px; color: var(--color-ink-faint); letter-spacing: 0.06em; text-transform: uppercase; direction: ltr; text-align: right;">Description</p>
+        <p class="video-desc">ابدأ استثمارك الزراعي بسهولة، بأصول حقيقية وتشغيل فعلي بدون ما تدير أي تفاصيل</p>
+        <p class="faint" style="margin-top: 10px; direction: ltr; text-align: right;">YouTube video ID: CmTQHYzFldE</p>
+      </div>
+    </div>
+
+    <div class="aw-note">
+      <strong>Why we built it this way</strong>
+      الفيديو بيشتغل في طبقة مختلفة عن البحث. هنا الجمهور لسه مش بيدوّر, بس وهو بيتفرّج على يوتيوب بنحطّ المشروع قدامه. خلال أول ٣ أسابيع هتلاقي زيادة في عمليات البحث المباشرة عن "بسّقات" وده يدلّ إن الإعلان بيشتغل صح. <br /><br />
+      <strong style="display: inline; font-family: inherit; letter-spacing: 0; text-transform: none; font-size: inherit; color: var(--color-secondary);">ملاحظة:</strong> الحملة اسمها "Gulf" لكن الاستهداف الحالي بيشمل الأردن مع السعودية والإمارات والكويت, ومش بيشمل قطر ولا البحرين ولا عُمان. لو حابب نعدّل التغطية الجغرافية, قولنا في خانة التعليقات تحت.
+    </div>
+
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>Comments on this campaign</h4>
+        <button class="discuss-btn" onclick="openCmtModal('youtube-awareness','YouTube Video · Awareness')">
+          <span class="ic">💬</span> أضف تعليق على هذه الحملة
+        </button>
+      </div>
+      <div class="cmt-list" data-cmt-list="youtube-awareness"></div>
+    </div>
+  </div>
+</article>
+
+<!-- ===================== Zone 3: Approval ===================== -->
+<section class="approval-block" id="approval">
+  <h2>قرارك, من فضلك</h2>
+  <p class="lede">اختار قرارك من تحت. القرار بيتسجّل عندنا فوراً وبيوصلنا إشعار. لو في أي حاجة عايز نعدّلها قبل ما تطلق, اضغط "عايز نعدّل حاجة" أو اكتب تعليقاتك تحت بالظبط على الحملة المعنية.</p>
+
+  <div class="cta-row">
+    <button type="button" class="cta cta-primary" id="cta-approve" onclick="submitDecision('approve','أوافق على الإطلاق')">
+      <span class="icon">✓</span>
+      أوافق على إطلاق الحملات
+    </button>
+    <button type="button" class="cta cta-secondary" id="cta-changes" onclick="submitDecision('changes_requested','طلب تعديلات')">
+      <span class="icon">✎</span>
+      عايز نعدّل حاجة
+    </button>
+  </div>
+
+  <div class="you-decided" id="you-decided"></div>
+
+  <div class="next-steps">
+    <h4>What happens after you approve</h4>
+    <ul>
+      <li>الحملات بتطلق لايف خلال ساعتين من قرارك.</li>
+      <li>أول ٧ أيام بنراقب الأرقام يوميًا ونعدّل لو في حاجة محتاجة تعديل.</li>
+      <li>أول تقرير أداء بيوصلك بعد ٧ أيام من الإطلاق, بقصة واضحة مش جدول أرقام.</li>
+    </ul>
+  </div>
+
+  <div class="section-discuss" style="margin-top: 26px; padding-top: 22px; border-top-color: rgba(255,255,255,0.2);">
+    <div class="discuss-header">
+      <h4 style="color: rgba(255,255,255,0.85);">General comments &amp; questions</h4>
+      <button class="discuss-btn" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;" onclick="openCmtModal('general','General comments on this deck')">
+        <span class="ic">💬</span> أضف تعليق عام
+      </button>
+    </div>
+    <div class="cmt-list" data-cmt-list="general"></div>
+  </div>
+</section>
+
+<footer class="aw-footer">
+  <div class="left">
+    Prepared by <strong style="color: var(--color-primary);">Admireworks Team</strong> for <strong style="color: var(--color-secondary);">Basseqat</strong>
+  </div>
+  <div class="right">
+    v1 · 23 May 2026 · <a href="https://ops.admireworks.com/basseqat-ads-v1/">ops.admireworks.com/basseqat-ads-v1</a>
+  </div>
+</footer>
+
+<!-- Comment modal -->
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true" aria-labelledby="cmt-modal-title">
+  <div class="cmt-modal-card">
+    <h3 id="cmt-modal-title">أضف تعليقك</h3>
+    <p class="ctx" id="cmt-modal-ctx"></p>
+    <div class="cmt-row" id="cmt-name-row">
+      <label for="cmt-name-input">اسمك (بيتسجّل مرة واحدة في المتصفح ده)</label>
+      <input type="text" id="cmt-name-input" placeholder="مثلاً: خالد ناصر الدين" />
+    </div>
+    <div class="cmt-row">
+      <label for="cmt-text-input">التعليق</label>
+      <textarea id="cmt-text-input" placeholder="اكتب اللي عايز تقوله أو تستوضحه أو تعدّله..."></textarea>
+    </div>
+    <div class="cmt-actions">
+      <button type="button" class="cmt-submit" onclick="submitComment()">إرسال</button>
+      <button type="button" class="cmt-cancel" onclick="closeCmtModal()">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Live-feedback FAB -->
+<button type="button" class="feedback-fab empty" id="feedback-fab" onclick="jumpToFirstComment()" title="Comments and decisions save live to Admireworks.">
+  <span>💬 Live feedback</span>
+  <span class="fab-count" id="fab-count">0</span>
+</button>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const DECK_SLUG = "basseqat-ads-v1";
+window.AW_FB = { db, DECK_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+// ===== State =====
+let fbReady = false;
+let toastTimer = null;
+const stateDecisions = {};
+const stateComments = {};
+const NAME_KEY = "basseqat-ads-v1-reviewer-name";
+
+function getName(){ return localStorage.getItem(NAME_KEY) || ""; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+
+// ===== Firebase sync =====
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initSync(); });
+
+function initSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    Object.keys(stateDecisions).forEach(k => delete stateDecisions[k]);
+    snap.forEach(d => { stateDecisions[d.id] = d.data(); });
+    renderDecisionState();
+    updateFab();
+  }, err => console.error("decisions onSnapshot:", err));
+
+  const cmtRef = fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll("[data-cmt-list]").forEach(el => renderComments(el.dataset.cmtList));
+    updateFab();
+  }, err => console.error("comments onSnapshot:", err));
+}
+
+// ===== Decision wiring =====
+function renderDecisionState(){
+  const approveBtn = document.getElementById("cta-approve");
+  const changesBtn = document.getElementById("cta-changes");
+  const banner = document.getElementById("you-decided");
+  approveBtn?.classList.remove("is-active");
+  changesBtn?.classList.remove("is-active");
+  const overall = stateDecisions.overall;
+  if (!overall) { if (banner) banner.classList.remove("show"); return; }
+  if (overall.decision === "approve") approveBtn?.classList.add("is-active");
+  if (overall.decision === "changes_requested") changesBtn?.classList.add("is-active");
+  if (banner) {
+    const when = overall.updatedAt && overall.updatedAt.toDate
+      ? overall.updatedAt.toDate().toLocaleString("en-GB", { hour:"2-digit", minute:"2-digit", day:"2-digit", month:"short" })
+      : "";
+    const label = overall.decision === "approve" ? "Approved" : "Changes requested";
+    banner.innerHTML = "تم تسجيل قرارك. <strong>" + escapeHtml(label) + "</strong> &mdash; " + escapeHtml(overall.name || "") + (when ? " · " + escapeHtml(when) : "");
+    banner.classList.add("show");
+  }
+}
+
+async function submitDecision(decision, label){
+  if (!fbReady) { showToast("Still connecting, try again in a moment."); return; }
+  let name = getName();
+  if (!name) {
+    name = (prompt("اسمك (هيتسجّل مرة واحدة):") || "").trim();
+    if (!name) { showToast("Please enter your name."); return; }
+    setName(name);
+  }
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions", "overall"),
+      { decision, name, updatedAt: fb.serverTimestamp() }
+    );
+    showToast("تم تسجيل قرارك: " + label);
+  } catch (e) {
+    console.error("submitDecision", e);
+    showToast("Save failed: " + (e.message || "unknown"));
+  }
+}
+window.submitDecision = submitDecision;
+
+// ===== Comments =====
+let activeCmtSection = null;
+let activeCmtLabel = "";
+
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById("cmt-modal");
+  const nameRow = document.getElementById("cmt-name-row");
+  const nameInput = document.getElementById("cmt-name-input");
+  const textInput = document.getElementById("cmt-text-input");
+  const ctx = document.getElementById("cmt-modal-ctx");
+  ctx.textContent = "On: " + label;
+  const existing = getName();
+  if (existing) { nameRow.style.display = "none"; }
+  else { nameRow.style.display = "block"; nameInput.value = ""; setTimeout(() => nameInput.focus(), 50); }
+  textInput.value = "";
+  if (existing) setTimeout(() => textInput.focus(), 50);
+  modal.classList.add("open");
+}
+function closeCmtModal(){
+  document.getElementById("cmt-modal").classList.remove("open");
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById("cmt-name-input");
+  const textInput = document.getElementById("cmt-text-input");
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || "").trim();
+    if (!name) { nameInput.focus(); showToast("اكتب اسمك من فضلك."); return; }
+    setName(name);
+  }
+  const text = (textInput.value || "").trim();
+  if (!text) { textInput.focus(); showToast("التعليق فاضي."); return; }
+  if (!fbReady) { showToast("Still connecting, try again."); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast("اتسجّل التعليق وبيوصل لـ Admireworks فوراً.");
+  } catch (e) {
+    console.error("submitComment", e);
+    showToast("Save failed: " + (e.message || "check your connection"));
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector("[data-cmt-list=\"" + sectionKey + "\"]");
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ""; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString("en-GB", { hour:"2-digit", minute:"2-digit", day:"2-digit", month:"short" });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? "<button class=\"cmt-del\" onclick=\"deleteCommentById('" + c.id + "')\" title=\"Delete\">×</button>" : "";
+    return "<div class=\"cmt-item\">" + delBtn
+      + "<span class=\"cmt-author\">" + escapeHtml(c.name) + "</span>"
+      + escapeHtml(c.text)
+      + "<span class=\"cmt-time\">" + ts + "</span></div>";
+  }).join("");
+}
+async function deleteCommentById(commentId){
+  if (!confirm("Delete this comment?")) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments", commentId));
+    showToast("تم الحذف.");
+  } catch(e){ showToast("Delete failed: " + (e.message || "check rules")); }
+}
+window.openCmtModal = openCmtModal;
+window.closeCmtModal = closeCmtModal;
+window.submitComment = submitComment;
+window.deleteCommentById = deleteCommentById;
+
+// ===== FAB =====
+function updateFab(){
+  const fab = document.getElementById("feedback-fab");
+  const count = document.getElementById("fab-count");
+  let total = Object.keys(stateDecisions).length;
+  Object.values(stateComments).forEach(arr => total += arr.length);
+  count.textContent = total;
+  if (total > 0) fab.classList.remove("empty"); else fab.classList.add("empty");
+}
+function jumpToFirstComment(){
+  const lists = document.querySelectorAll("[data-cmt-list]");
+  for (const el of lists) { if (el.children.length > 0) { el.scrollIntoView({ behavior:"smooth", block:"center" }); return; } }
+  document.getElementById("approval")?.scrollIntoView({ behavior:"smooth", block:"start" });
+}
+window.jumpToFirstComment = jumpToFirstComment;
+
+// ===== Toast =====
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+// ===== Modal dismiss =====
+document.getElementById("cmt-modal").addEventListener("click", e => { if (e.target.id === "cmt-modal") closeCmtModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeCmtModal(); });
+</script>
+
+</body>
+</html>

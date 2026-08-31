@@ -1,0 +1,2761 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تحديث ديزاين الإعلانات · باسقات · v2</title>
+  <meta name="description" content="Basseqat Google Ads creative renovation v2. Side-by-side before/after for every Display ad image, plus 2 no-cost logo fixes." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-primary: #175734;
+      --color-primary-dark: #0f3f25;
+      --color-secondary: #BF7955;
+      --color-cream: #FFF8EF;
+      --color-cream-tint: #FBF3E5;
+      --color-ink: #2D2D2D;
+      --color-ink-soft: #5b5b5b;
+      --color-ink-faint: #8a8a8a;
+      --color-line: #e5dccb;
+      --color-line-strong: #cbbb9a;
+      --color-success: #2f7a4e;
+      --color-amber: #d49831;
+      --color-info: #356a8a;
+      --color-bg: #ffffff;
+      --color-google-blue: #1a0dab;
+      --color-google-green: #006621;
+      --color-google-gray: #545454;
+      --font-ar: "IBM Plex Sans Arabic", "Madani Arabic", "Segoe UI", system-ui, sans-serif;
+      --font-en: "Manrope", "Helvetica Neue", Arial, sans-serif;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(23,87,52,0.06);
+      --maxw: 880px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-ar);
+      color: var(--color-ink);
+      background: var(--color-cream);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .en { font-family: var(--font-en); direction: ltr; unicode-bidi: isolate; }
+    .num { font-family: var(--font-en); font-feature-settings: "tnum" 1; direction: ltr; unicode-bidi: isolate; }
+    .muted { color: var(--color-ink-soft); }
+    .faint { color: var(--color-ink-faint); font-size: 0.85em; }
+
+    /* ============= AW header band ============= */
+    .aw-header {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 18px 24px;
+    }
+    .aw-header-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .aw-header img { height: 44px; width: auto; display: block; }
+    .header-meta {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-family: var(--font-en);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.85);
+      direction: ltr;
+    }
+    .header-meta .prepared { color: #fff; font-weight: 600; }
+    .header-meta .sep { color: rgba(255,255,255,0.5); }
+
+    /* ============= Title strip ============= */
+    .title-strip {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 44px 24px 24px;
+      text-align: right;
+    }
+    .title-ar {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin: 0 0 6px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .title-en {
+      font-family: var(--font-en);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      margin: 0 0 20px;
+      direction: ltr;
+      text-align: left;
+    }
+    .lede-ar {
+      font-size: 18px;
+      color: var(--color-ink);
+      margin: 0 0 8px;
+      max-width: 640px;
+    }
+    .lede-en {
+      font-family: var(--font-en);
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      margin: 0;
+      direction: ltr;
+      text-align: left;
+      max-width: 640px;
+    }
+
+    /* ============= Snapshot stat strip ============= */
+    .snapshot {
+      max-width: var(--maxw);
+      margin: 24px auto 0;
+      padding: 0 24px;
+    }
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      box-shadow: var(--shadow-card);
+    }
+    .snap-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      text-align: center;
+    }
+    .snap-stat strong {
+      font-family: var(--font-en);
+      font-size: 26px;
+      color: var(--color-primary);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .snap-stat .ar {
+      font-size: 13px;
+      color: var(--color-ink-soft);
+    }
+    .snap-stat .en {
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+    }
+
+    /* ============= Section heading ============= */
+    .section-heading {
+      max-width: var(--maxw);
+      margin: 48px auto 18px;
+      padding: 0 24px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .section-heading h2 {
+      font-size: 22px;
+      color: var(--color-primary);
+      margin: 0;
+      font-weight: 700;
+    }
+    .section-heading .en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+    }
+
+    /* ============= Campaign card ============= */
+    .campaign-card {
+      max-width: var(--maxw);
+      margin: 18px auto 0;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .card-head {
+      padding: 22px 24px 14px;
+      border-bottom: 1px solid var(--color-line);
+      background: linear-gradient(180deg, var(--color-cream-tint) 0%, #ffffff 100%);
+    }
+    .card-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .channel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      direction: ltr;
+    }
+    .channel-tag .icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--color-secondary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-amber);
+      background: rgba(212, 152, 49, 0.1);
+      border: 1px solid rgba(212, 152, 49, 0.3);
+      padding: 4px 10px;
+      border-radius: 100px;
+      direction: ltr;
+    }
+    .status-pill::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--color-amber);
+      border-radius: 50%;
+    }
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin: 0 0 4px;
+      line-height: 1.3;
+    }
+    .card-title-en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: left;
+      margin: 0;
+    }
+    .card-goal {
+      font-size: 15px;
+      color: var(--color-ink-soft);
+      margin: 12px 0 0;
+    }
+
+    /* ============= Card body ============= */
+    .card-body {
+      padding: 22px 24px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .meta-cell {
+      background: var(--color-cream-tint);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      text-align: right;
+    }
+    .meta-cell .label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      display: block;
+      margin-bottom: 4px;
+      direction: ltr;
+      text-align: right;
+    }
+    .meta-cell .value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-ink);
+      line-height: 1.3;
+    }
+    .meta-cell .value .num {
+      color: var(--color-primary);
+      font-size: 17px;
+    }
+    .meta-cell .note {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-ink-faint);
+      margin-top: 2px;
+      direction: ltr;
+      text-align: right;
+    }
+    .flag-row {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .flag-row .flag {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .url-chip {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-primary);
+      background: rgba(23, 87, 52, 0.08);
+      border: 1px solid rgba(23, 87, 52, 0.2);
+      padding: 3px 8px;
+      border-radius: 6px;
+      direction: ltr;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .url-chip:hover { background: rgba(23, 87, 52, 0.14); }
+
+    /* ============= Creative block ============= */
+    .creative-block {
+      margin: 24px 0;
+    }
+    .block-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      font-weight: 600;
+      margin: 0 0 10px;
+      direction: ltr;
+      text-align: right;
+    }
+    .block-sublabel {
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      margin: 0 0 14px;
+    }
+
+    /* RSA Google search-result preview */
+    .rsa-preview {
+      background: #ffffff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      direction: rtl;
+    }
+    .rsa-preview .ad-label {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: #000;
+      font-weight: 700;
+      border: 1px solid #000;
+      padding: 0px 5px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      direction: ltr;
+    }
+    .rsa-preview .ad-domain {
+      font-family: var(--font-en);
+      font-size: 13px;
+      color: var(--color-google-gray);
+      margin-bottom: 4px;
+      direction: ltr;
+      text-align: left;
+      display: block;
+    }
+    .rsa-preview .ad-headlines {
+      font-size: 19px;
+      color: var(--color-google-blue);
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+    .rsa-preview .ad-headlines .dot {
+      color: var(--color-google-gray);
+      margin: 0 4px;
+      font-weight: 400;
+    }
+    .rsa-preview .ad-desc {
+      font-size: 14.5px;
+      color: #4d5156;
+      line-height: 1.55;
+    }
+    .preview-caption {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: right;
+      margin: 4px 0 12px 4px;
+      font-style: italic;
+    }
+
+    /* Asset lists (collapsible) */
+    details.asset-list {
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 0;
+      background: #fafaf7;
+      margin-top: 14px;
+    }
+    details.asset-list[open] { background: #fff; }
+    details.asset-list summary {
+      list-style: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    details.asset-list summary::-webkit-details-marker { display: none; }
+    details.asset-list summary::after {
+      content: "+";
+      font-family: var(--font-en);
+      font-size: 18px;
+      color: var(--color-secondary);
+      transition: transform 0.15s;
+      font-weight: 400;
+    }
+    details.asset-list[open] summary::after { content: "−"; }
+    details.asset-list summary .count {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--color-ink-faint);
+      font-weight: 500;
+      direction: ltr;
+    }
+    .asset-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .asset-table tr {
+      border-top: 1px solid var(--color-line);
+    }
+    .asset-table tr:first-child { border-top: none; }
+    .asset-table td {
+      padding: 9px 16px;
+      vertical-align: top;
+    }
+    .asset-table .asset-num {
+      font-family: var(--font-en);
+      color: var(--color-ink-faint);
+      font-size: 11px;
+      width: 28px;
+      text-align: left;
+      direction: ltr;
+      padding-top: 11px;
+    }
+    .asset-table .asset-text {
+      color: var(--color-ink);
+      line-height: 1.5;
+    }
+    .asset-table .char-count {
+      font-family: var(--font-en);
+      font-size: 10px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: left;
+      width: 60px;
+      padding-top: 12px;
+      white-space: nowrap;
+    }
+    .asset-table .char-count.warn { color: var(--color-amber); }
+
+    /* Display image grid */
+    .img-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .img-grid.square { grid-template-columns: repeat(3, 1fr); }
+    .img-cell {
+      background: #f5f0e6;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 1.91 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-grid.square .img-cell { aspect-ratio: 1 / 1; }
+    .img-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .img-grid-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-ink-faint);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    /* YouTube embed */
+    .youtube-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .youtube-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-pair {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .video-pair .video-block {
+      background: var(--color-cream-tint);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }
+    .video-headline {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin: 12px 0 6px;
+      line-height: 1.4;
+    }
+    .video-desc {
+      font-size: 14.5px;
+      color: var(--color-ink-soft);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Keyword chips */
+    .kw-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .kw {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      background: var(--color-cream-tint);
+      border: 1px solid var(--color-line);
+      padding: 4px 10px;
+      border-radius: 100px;
+      color: var(--color-ink);
+    }
+    .kw .match {
+      font-family: var(--font-en);
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-faint);
+      text-transform: uppercase;
+      direction: ltr;
+    }
+
+    /* AW strategic note */
+    .aw-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-right: 3px solid var(--color-secondary);
+      background: rgba(191, 121, 91, 0.06);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      line-height: 1.7;
+    }
+    .aw-note strong {
+      color: var(--color-secondary);
+      font-weight: 600;
+      display: block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    /* ============= Approval block ============= */
+    .approval-block {
+      max-width: var(--maxw);
+      margin: 56px auto 0;
+      padding: 36px 28px;
+      background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .approval-block h2 {
+      font-size: 26px;
+      margin: 0 0 8px;
+      color: #fff;
+    }
+    .approval-block .lede {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      margin: 0 0 26px;
+      max-width: 560px;
+      margin-inline: auto;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: transform 0.1s, opacity 0.15s;
+      cursor: pointer;
+    }
+    .cta:hover { transform: translateY(-1px); }
+    .cta-primary { background: var(--color-secondary); color: #fff; }
+    .cta-secondary { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3); }
+    .cta-tertiary { background: transparent; color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.2); }
+    .cta .icon { font-size: 18px; line-height: 1; }
+
+    .next-steps {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+      text-align: right;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .next-steps h4 {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin: 0 0 10px;
+      direction: ltr;
+      text-align: right;
+    }
+    .next-steps ul {
+      margin: 0;
+      padding-right: 18px;
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.85;
+    }
+    .signature-line {
+      margin-top: 26px;
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    /* ============= AW footer ============= */
+    .aw-footer {
+      max-width: var(--maxw);
+      margin: 36px auto 28px;
+      padding: 24px 24px 0;
+      border-top: 1px solid var(--color-line-strong);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-ink-faint);
+    }
+    .aw-footer .left { direction: ltr; }
+    .aw-footer .right { direction: ltr; }
+    .aw-footer a { color: var(--color-primary); text-decoration: none; }
+    .aw-footer a:hover { text-decoration: underline; }
+
+    /* ============= Comment thread per section ============= */
+    .section-discuss {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--color-line-strong);
+    }
+    .discuss-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .discuss-header h4 {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      margin: 0;
+      font-weight: 600;
+      direction: ltr;
+      text-align: right;
+    }
+    .discuss-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: rgba(23, 87, 52, 0.08);
+      border: 1px solid rgba(23, 87, 52, 0.2);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .discuss-btn:hover { background: rgba(23, 87, 52, 0.16); }
+    .discuss-btn .ic { font-size: 14px; line-height: 1; }
+    .cmt-list { display: flex; flex-direction: column; gap: 8px; }
+    .cmt-list:empty { display: none; }
+    .cmt-item {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-right: 3px solid var(--color-secondary);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px 12px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--color-ink);
+    }
+    .cmt-author {
+      display: block;
+      font-weight: 600;
+      color: var(--color-primary);
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .cmt-time {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 10px;
+      color: var(--color-ink-faint);
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+      direction: ltr;
+      text-align: right;
+    }
+    .cmt-del {
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      width: 22px;
+      height: 22px;
+      border: 0;
+      background: transparent;
+      color: var(--color-ink-faint);
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      border-radius: 50%;
+    }
+    .cmt-del:hover { background: rgba(212, 152, 49, 0.18); color: var(--color-amber); }
+
+    /* ============= Comment modal ============= */
+    .cmt-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 63, 37, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+      direction: rtl;
+    }
+    .cmt-modal.open { display: flex; }
+    .cmt-modal-card {
+      background: #fff;
+      border-radius: var(--radius);
+      max-width: 500px;
+      width: 100%;
+      padding: 24px 24px 20px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .cmt-modal-card h3 {
+      font-size: 18px;
+      color: var(--color-primary);
+      margin: 0 0 4px;
+    }
+    .cmt-modal-card .ctx {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--color-ink-faint);
+      direction: ltr;
+      text-align: right;
+      margin-bottom: 18px;
+      letter-spacing: 0.04em;
+    }
+    .cmt-modal-card label {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+      margin-bottom: 6px;
+      direction: rtl;
+      text-align: right;
+    }
+    .cmt-modal-card input[type=text],
+    .cmt-modal-card textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--color-line-strong);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--color-ink);
+      background: #fafaf7;
+      direction: rtl;
+      text-align: right;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .cmt-modal-card input[type=text]:focus,
+    .cmt-modal-card textarea:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: -1px;
+      background: #fff;
+    }
+    .cmt-modal-card textarea { min-height: 110px; }
+    .cmt-row { margin-bottom: 14px; }
+    .cmt-actions {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .cmt-actions button {
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .cmt-submit { background: var(--color-primary); color: #fff; }
+    .cmt-submit:hover { background: var(--color-primary-dark); }
+    .cmt-cancel { background: transparent; color: var(--color-ink-soft); border-color: var(--color-line-strong); }
+    .cmt-cancel:hover { background: var(--color-cream-tint); }
+
+    /* ============= Toast ============= */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--color-ink);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: none;
+      z-index: 200;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ============= Live-feedback FAB ============= */
+    .feedback-fab {
+      position: fixed;
+      bottom: 22px;
+      left: 22px;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 11px 18px;
+      border-radius: 100px;
+      border: 0;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(23, 87, 52, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 90;
+      transition: transform 0.15s;
+    }
+    .feedback-fab:hover { transform: translateY(-1px); }
+    .feedback-fab.empty {
+      background: var(--color-cream-tint);
+      color: var(--color-ink-soft);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid var(--color-line);
+    }
+    .feedback-fab .fab-count {
+      background: var(--color-secondary);
+      color: #fff;
+      padding: 1px 8px;
+      border-radius: 100px;
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-weight: 700;
+      min-width: 18px;
+      text-align: center;
+    }
+    .feedback-fab.empty .fab-count { display: none; }
+
+    /* ============= Decision state on approval block ============= */
+    .approval-block .cta.is-active {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 6px 16px rgba(0,0,0,0.2);
+      transform: translateY(-1px);
+    }
+    .approval-block .you-decided {
+      display: none;
+      margin-top: 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: var(--radius-sm);
+      padding: 12px 18px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .approval-block .you-decided.show { display: block; }
+    .approval-block .you-decided strong { color: #fff; font-weight: 700; }
+
+    /* ============= Responsive ============= */
+    @media (max-width: 720px) {
+      .title-ar { font-size: 26px; }
+      .snapshot-grid { grid-template-columns: repeat(2, 1fr); padding: 16px 12px; }
+      .meta-grid { grid-template-columns: 1fr; }
+      .img-grid, .img-grid.square { grid-template-columns: repeat(2, 1fr); }
+      .card-head, .card-body { padding-left: 18px; padding-right: 18px; }
+      .approval-block { padding: 28px 20px; border-radius: 0; margin-left: -8px; margin-right: -8px; }
+      .cta-row { flex-direction: column; }
+      .cta { width: 100%; justify-content: center; }
+    }
+
+    /* ============= Print stylesheet ============= */
+    @media print {
+      @page { size: A4; margin: 14mm 12mm 18mm 12mm; }
+      body { background: #fff; color: #000; font-size: 11pt; }
+      .aw-header { background: var(--color-primary) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .aw-header, .title-strip, .snapshot, .approval-block, .aw-footer { max-width: 100%; }
+      .snapshot { margin-top: 18px; }
+      .snapshot-grid { box-shadow: none; padding: 12px 10px; }
+      .campaign-card { box-shadow: none; page-break-before: always; break-before: page; margin-top: 0; max-width: 100%; }
+      .campaign-card:first-of-type { page-break-before: auto; break-before: auto; }
+      details.asset-list[open] { background: #fff; }
+      details.asset-list summary::after { display: none; }
+      details.asset-list, details.asset-list[open] {
+        background: #fff;
+      }
+      /* force all <details> open in print */
+      details:not([open]) > *:not(summary) { display: revert; }
+      .youtube-embed::after {
+        content: "Video preview: open the link to watch the actual YouTube ad.";
+        position: absolute;
+        inset: 0;
+        background: #f5f0e6;
+        color: var(--color-ink-soft);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12pt;
+      }
+      .youtube-embed iframe { display: none; }
+      .cta { display: none !important; }
+      .approval-block { background: var(--color-primary) !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-before: always; }
+      .next-steps { display: block; }
+      a[href]::after { content: ""; }
+      .aw-footer { page-break-inside: avoid; }
+      .section-heading { page-break-after: avoid; }
+      .section-discuss, .cmt-modal, .toast, .feedback-fab { display: none !important; }
+      .you-decided { display: none !important; }
+    }
+  
+    /* ============= v2 renovation card ============= */
+    .renov-card {
+      max-width: var(--maxw);
+      margin: 18px auto 0;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .renov-head {
+      padding: 16px 22px 12px;
+      border-bottom: 1px solid var(--color-line);
+      background: linear-gradient(180deg, var(--color-cream-tint) 0%, #ffffff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .renov-head .left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .renov-id {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-faint);
+      text-transform: uppercase;
+      direction: ltr;
+    }
+    .renov-slot {
+      font-family: var(--font-en);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 100px;
+      border: 1px solid var(--color-line-strong);
+      color: var(--color-ink-soft);
+      background: #fff;
+      direction: ltr;
+    }
+    .renov-slot.landscape { background: #f0f4ef; }
+    .renov-slot.square { background: #fbf4ed; }
+    .defect-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 100px;
+      direction: ltr;
+      letter-spacing: 0.02em;
+    }
+    .chip.defect-red { background: rgba(196, 30, 42, 0.08); color: #a8242d; border: 1px solid rgba(196, 30, 42, 0.2); }
+    .chip.defect-amber { background: rgba(212, 152, 49, 0.1); color: #8a6217; border: 1px solid rgba(212, 152, 49, 0.3); }
+    .chip.ok-green { background: rgba(47, 122, 78, 0.08); color: #1f5234; border: 1px solid rgba(47, 122, 78, 0.25); }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding: 18px 22px 4px;
+    }
+    .ba-cell {
+      background: #fafaf7;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .ba-cell .ba-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 12px;
+      font-family: var(--font-en);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+      background: #fff;
+      border-bottom: 1px solid var(--color-line);
+      direction: ltr;
+    }
+    .ba-cell.before .ba-label { color: #a8242d; }
+    .ba-cell.after .ba-label { color: #1f5234; }
+    .ba-cell .ba-img-wrap {
+      background: #f5f0e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+    }
+    .ba-cell .ba-img-wrap.landscape { aspect-ratio: 1.91 / 1; }
+    .ba-cell .ba-img-wrap.square { aspect-ratio: 1 / 1; }
+    .ba-cell .ba-img-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 4px;
+    }
+    /* YouTube banner card (Zone C) */
+    .yt-banner-card {
+      max-width: var(--maxw);
+      margin: 18px auto 0;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .yt-banner-head {
+      padding: 16px 22px 12px;
+      border-bottom: 1px solid var(--color-line);
+      background: linear-gradient(180deg, var(--color-cream-tint) 0%, #ffffff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .yt-banner-title {
+      font-size: 16px;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin: 0;
+    }
+    .yt-banner-sub {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      direction: ltr;
+    }
+    .yt-banner-body {
+      padding: 22px;
+    }
+    .yt-ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .yt-ba-cell {
+      background: #fafaf7;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .yt-ba-cell .yt-label {
+      padding: 8px 12px;
+      font-family: var(--font-en);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+      background: #fff;
+      border-bottom: 1px solid var(--color-line);
+      direction: ltr;
+    }
+    .yt-ba-cell.before .yt-label { color: #a8242d; }
+    .yt-ba-cell.after .yt-label { color: #1f5234; }
+    .yt-banner-empty {
+      aspect-ratio: 5 / 1;
+      background: #f5f0e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-ink-faint);
+      font-size: 13px;
+      font-style: italic;
+    }
+    .yt-banner-img {
+      width: 100%;
+      aspect-ratio: 5 / 1;
+      object-fit: contain;
+      background: #f5f0e6;
+      display: block;
+    }
+    @media (max-width: 720px) {
+      .yt-ba-grid { grid-template-columns: 1fr; gap: 10px; }
+    }
+    .renov-body {
+      padding: 12px 22px 22px;
+    }
+    .renov-rationale {
+      font-size: 14px;
+      color: var(--color-ink-soft);
+      line-height: 1.7;
+      margin: 4px 0 14px;
+      padding: 10px 14px;
+      background: var(--color-cream-tint);
+      border-radius: var(--radius-sm);
+      border-right: 3px solid var(--color-secondary);
+    }
+    .renov-rationale strong {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    .approval-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px 0 0;
+      border-top: 1px dashed var(--color-line);
+    }
+    .ap-label {
+      font-family: var(--font-en);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      font-weight: 600;
+      align-self: center;
+      margin-left: 6px;
+      direction: ltr;
+    }
+    .ap-radio {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border: 1.5px solid var(--color-line-strong);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      background: #fff;
+      color: var(--color-ink-soft);
+      transition: all 0.12s;
+      user-select: none;
+    }
+    .ap-radio input { display: none; }
+    .ap-radio:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .ap-radio.accept-tone.selected { background: var(--color-success); color: #fff; border-color: var(--color-success); }
+    .ap-radio.regen-tone.selected { background: var(--color-amber); color: #fff; border-color: var(--color-amber); }
+    .ap-radio.hold-tone.selected { background: var(--color-ink-soft); color: #fff; border-color: var(--color-ink-soft); }
+
+    /* Logo upload card (no-cost fix) */
+    .logo-fix-card {
+      max-width: var(--maxw);
+      margin: 16px auto 0;
+      background: linear-gradient(135deg, rgba(47, 122, 78, 0.04) 0%, rgba(191, 121, 91, 0.04) 100%);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      box-shadow: var(--shadow-card);
+    }
+    .logo-fix-card h3 {
+      font-size: 18px;
+      color: var(--color-primary);
+      margin: 0 0 4px;
+      font-weight: 600;
+    }
+    .logo-fix-card .sub {
+      font-size: 13.5px;
+      color: var(--color-ink-soft);
+      margin: 0 0 16px;
+    }
+    .logo-fix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .logo-fix-cell {
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      text-align: center;
+    }
+    .logo-fix-cell img {
+      max-width: 100%;
+      max-height: 110px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 8px;
+    }
+    .logo-fix-cell .lbl {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      direction: ltr;
+    }
+
+    /* Two findings callouts */
+    .findings-strip {
+      max-width: var(--maxw);
+      margin: 32px auto 0;
+      padding: 0 24px;
+    }
+    .finding-card {
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-right: 4px solid var(--color-secondary);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-card);
+    }
+    .finding-card h3 {
+      font-size: 17px;
+      color: var(--color-primary);
+      margin: 0 0 6px;
+      font-weight: 600;
+    }
+    .finding-card .sub {
+      font-size: 14.5px;
+      color: var(--color-ink-soft);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .finding-card .sub strong { color: var(--color-ink); font-weight: 600; }
+    .finding-num {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--color-secondary);
+      margin-bottom: 4px;
+      direction: ltr;
+    }
+
+    /* Final apply block */
+    .apply-block {
+      max-width: var(--maxw);
+      margin: 36px auto 0;
+      padding: 26px 28px;
+      background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .apply-block h3 {
+      font-size: 22px;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+    .apply-block .lede {
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0 0 20px;
+      max-width: 540px;
+      margin-inline: auto;
+    }
+    .apply-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .apply-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .apply-cta:hover { transform: translateY(-1px); }
+    .apply-cta.approve { background: var(--color-secondary); color: #fff; }
+    .apply-cta.hold { background: rgba(255, 255, 255, 0.1); color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+    .apply-cta.is-active {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 720px) {
+      .ba-grid { grid-template-columns: 1fr; gap: 10px; padding: 14px 14px 0; }
+      .logo-fix-grid { grid-template-columns: 1fr; }
+      .renov-head { padding: 12px 14px 10px; }
+      .renov-body { padding: 10px 14px 16px; }
+      .renov-card { margin-right: 8px; margin-left: 8px; }
+      .findings-strip, .apply-block { padding-left: 12px; padding-right: 12px; }
+    }
+  
+    /* YouTube desktop placement mockup */
+    .yt-mockup {
+      margin: 22px 0 4px;
+      background: #f9f9f9;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      direction: ltr;
+    }
+    .yt-mockup-label {
+      font-family: var(--font-en);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      font-weight: 600;
+      margin: 0 0 10px;
+      text-align: left;
+    }
+    .yt-mockup-layout {
+      display: grid;
+      grid-template-columns: 1.78fr 1fr;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .yt-mockup-player {
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .yt-mockup-player iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .yt-mockup-rail {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .yt-mockup-banner {
+      background: #f5f0e6;
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+    .yt-mockup-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .yt-mockup-banner::before {
+      content: "Ad";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      color: #606060;
+      background: #fff;
+      padding: 1px 4px;
+      border: 1px solid #e5e5e5;
+      border-radius: 2px;
+      z-index: 2;
+    }
+    .yt-mockup-suggest {
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+    }
+    .yt-mockup-suggest .thumb {
+      width: 50%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #d4d4d4 0%, #b8b8b8 100%);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .yt-mockup-suggest .meta {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .yt-mockup-suggest .meta .t {
+      height: 8px;
+      background: #d8d8d8;
+      border-radius: 2px;
+      width: 95%;
+    }
+    .yt-mockup-suggest .meta .t.short { width: 60%; }
+    .yt-mockup-suggest .meta .ch {
+      height: 6px;
+      background: #ebebeb;
+      border-radius: 2px;
+      width: 50%;
+      margin-top: 4px;
+    }
+    .yt-mockup-caption {
+      font-family: var(--font-ar);
+      font-size: 12.5px;
+      color: var(--color-ink-soft);
+      margin: 10px 0 0;
+      direction: rtl;
+      text-align: right;
+      line-height: 1.5;
+    }
+    .yt-mockup-caption strong {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    @media (max-width: 720px) {
+      .yt-mockup-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="aw-header">
+  <div class="aw-header-inner">
+    <img src="admireworks-white.png" alt="Admireworks" />
+    <div class="header-meta">
+      <span class="prepared">Prepared for Basseqat</span>
+      <span class="sep">·</span>
+      <span>v2</span>
+      <span class="sep">·</span>
+      <span>26 May 2026</span>
+    </div>
+  </div>
+</header>
+
+
+<section class="title-strip">
+  <h1 class="title-ar">تحديث ديزاين إعلانات جوجل</h1>
+  <p class="title-en">Basseqat Google Ads · Creative Update · For Your Review</p>
+  <p class="lede-ar">لاحظتوا إن اللوجو في كذا إعلان مش واضح أو مش موجود, وإن في تصاميم فيها أيقونات سوشيال ميديا. راجعنا الـ ١٧ صورة كلها, وده اللي اقترحناه لكل واحدة بالضبط.</p>
+  <p class="lede-en">You flagged two issues on the live Display ads: missing/unclear logo, and social-media icons baked into the artwork. We audited all 17 images and propose the minimum sufficient fix for each one below.</p>
+</section>
+
+<section class="snapshot" aria-label="At a glance">
+  <div class="snapshot-grid">
+    <div class="snap-stat">
+      <strong>17</strong>
+      <span class="ar">صور تم فحصها</span>
+      <span class="en">Images reviewed</span>
+    </div>
+    <div class="snap-stat">
+      <strong>4</strong>
+      <span class="ar">إصلاحات على مستوى الإعلان</span>
+      <span class="en">Ad-level fixes</span>
+    </div>
+    <div class="snap-stat">
+      <strong>12</strong>
+      <span class="ar">صور تم تعديلها</span>
+      <span class="en">Images updated</span>
+    </div>
+    <div class="snap-stat">
+      <strong>5</strong>
+      <span class="ar">صور نظيفة كما هي</span>
+      <span class="en">Kept as-is</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Two findings ===================== -->
+<div class="section-heading">
+  <h2>السببين اللي وراء المشكلة</h2>
+  <span class="en">The two root findings</span>
+</div>
+
+<section class="findings-strip">
+  <div class="finding-card">
+    <span class="finding-num">FINDING 01</span>
+    <h3>اللوجو مش متحمّل أصلاً جوه الإعلان</h3>
+    <p class="sub">إعلانات الديسبلاي عند جوجل ليها خانة منفصلة للوجو. لمّا الخانة دي فاضية, جوجل بيكتفي بكتابة اسم "basseqat" بدل ما يعرض اللوجو. <strong>الخانتين دول فاضيين عندنا في إعلانَي الديسبلاي الاتنين</strong>. الحل: نرفع لوجو باسقات الرسمي ويبقى ظاهر في كل المواضع تلقائياً.</p>
+  </div>
+  <div class="finding-card">
+    <span class="finding-num">FINDING 02</span>
+    <h3>١٠ صور فيها أيقونات سوشيال + رابط الموقع</h3>
+    <p class="sub">في ١٠ صور من الـ ١٧ في شريط أيقونات سوشيال (فيسبوك, إنستجرام, تيك توك, يوتيوب) فوق + كلمة "www.basseqat.com" مكتوبة جنبه. في إعلانات جوجل الأيقونات دي مش قابلة للضغط أصلاً, والرابط بيكرّر الـ Display URL اللي جوجل بتعرضه تحت الصورة. الحل: <strong>نظّفنا الأيقونات والرابط من الصور</strong> وحافظنا على باقي التصميم كما هو.</p>
+  </div>
+</section>
+
+<!-- ===================== Zone A: No-cost logo upload fixes ===================== -->
+<div class="section-heading">
+  <h2>أولاً: رفع اللوجو لإعلانَي الديسبلاي</h2>
+  <span class="en">A · Logo upload for both Display ads</span>
+</div>
+
+<section class="logo-fix-card" id="logo-fix">
+  <h3>رفع لوجو باسقات الرسمي على إعلانَي الديسبلاي</h3>
+  <p class="sub">جهّزنا اللوجو في الفورماتين اللي جوجل بيطلبهم. واحد مربع وواحد ممتد, وهيشتغلوا على إعلانَي الديسبلاي مع بعض.</p>
+  <div class="logo-fix-grid">
+    <div class="logo-fix-cell">
+      <img src="assets/logos/logo-square-1200.png" alt="Square logo 1200x1200" />
+      <span class="lbl">Square slot · 1200 × 1200</span>
+    </div>
+    <div class="logo-fix-cell">
+      <img src="assets/logos/logo-landscape-1200x300.png" alt="Landscape logo 1200x300" />
+      <span class="lbl">Landscape slot · 1200 × 300</span>
+    </div>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="logo-upload-both-rdas" data-decision="approve"><input type="radio" name="logo-upload-both-rdas" />✓ موافق, ارفعهم</label>
+    <label class="ap-radio hold-tone" data-item="logo-upload-both-rdas" data-decision="hold"><input type="radio" name="logo-upload-both-rdas" />⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header">
+      <h4>تعليق على رفع اللوجو</h4>
+      <button class="discuss-btn" onclick="openCmtModal('logo-upload-both-rdas','Logo upload to both RDAs')"><span class="ic">💬</span>أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="logo-upload-both-rdas"></div>
+  </div>
+</section>
+
+<!-- ===================== Zone B: Image-by-image renovation ===================== -->
+<div class="section-heading">
+  <h2>ثانياً: مراجعة الـ ١٧ صورة واحدة واحدة</h2>
+  <span class="en">B · Image-by-image renovation</span>
+</div>
+
+
+<article class="renov-card" id="img-365071009702">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#01 · Display Ad #1</span>
+      <span class="renov-slot landscape">landscape · 1536x806</span>
+    </div>
+    <div class="defect-chips"><span class="chip ok-green">✓ Clean</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap landscape"><img src="assets/source/365071009702.png" alt="Before 365071009702" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · UNCHANGED</div>
+      <div class="ba-img-wrap landscape"><img src="assets/after/365071009702.png" alt="After 365071009702" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> الصورة نظيفة, محتفظ بيها كما هي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-365071009702" data-decision="keep_as_is"><input type="radio" name="img-365071009702" />✓ موافق كما هو</label>
+        <label class="ap-radio hold-tone" data-item="img-365071009702" data-decision="hold"><input type="radio" name="img-365071009702" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-365071009702','Image 365071009702 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-365071009702"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-365149147497">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#02 · Display Ad #1</span>
+      <span class="renov-slot square">square · 1536x1536</span>
+    </div>
+    <div class="defect-chips"><span class="chip ok-green">✓ Clean</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/365149147497.png" alt="Before 365149147497" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · UNCHANGED</div>
+      <div class="ba-img-wrap square"><img src="assets/after/365149147497.png" alt="After 365149147497" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> الصورة نظيفة, محتفظ بيها كما هي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-365149147497" data-decision="keep_as_is"><input type="radio" name="img-365149147497" />✓ موافق كما هو</label>
+        <label class="ap-radio hold-tone" data-item="img-365149147497" data-decision="hold"><input type="radio" name="img-365149147497" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-365149147497','Image 365149147497 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-365149147497"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-365158507449">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#03 · Display Ad #1</span>
+      <span class="renov-slot square">square · 768x768</span>
+    </div>
+    <div class="defect-chips"><span class="chip ok-green">✓ Clean</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/365158507449.jpg" alt="Before 365158507449" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · UNCHANGED</div>
+      <div class="ba-img-wrap square"><img src="assets/after/365158507449.jpg" alt="After 365158507449" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> الصورة نظيفة, محتفظ بيها كما هي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-365158507449" data-decision="keep_as_is"><input type="radio" name="img-365158507449" />✓ موافق كما هو</label>
+        <label class="ap-radio hold-tone" data-item="img-365158507449" data-decision="hold"><input type="radio" name="img-365158507449" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-365158507449','Image 365158507449 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-365158507449"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-364996614044">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#04 · Display Ad #1</span>
+      <span class="renov-slot square">square · 770x768</span>
+    </div>
+    <div class="defect-chips"><span class="chip ok-green">✓ Clean</span><span class="chip defect-amber">⚠️ weak logo</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/364996614044.jpg" alt="Before 364996614044" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · UNCHANGED</div>
+      <div class="ba-img-wrap square"><img src="assets/after/364996614044.jpg" alt="After 364996614044" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> الصورة نظيفة, محتفظ بيها كما هي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-364996614044" data-decision="keep_as_is"><input type="radio" name="img-364996614044" />✓ موافق كما هو</label>
+        <label class="ap-radio hold-tone" data-item="img-364996614044" data-decision="hold"><input type="radio" name="img-364996614044" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-364996614044','Image 364996614044 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-364996614044"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-364997513807">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#05 · Display Ad #1</span>
+      <span class="renov-slot square">square · 1024x1024</span>
+    </div>
+    <div class="defect-chips"><span class="chip ok-green">✓ Clean</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/364997513807.jpg" alt="Before 364997513807" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · UNCHANGED</div>
+      <div class="ba-img-wrap square"><img src="assets/after/364997513807.jpg" alt="After 364997513807" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> الصورة نظيفة, محتفظ بيها كما هي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-364997513807" data-decision="keep_as_is"><input type="radio" name="img-364997513807" />✓ موافق كما هو</label>
+        <label class="ap-radio hold-tone" data-item="img-364997513807" data-decision="hold"><input type="radio" name="img-364997513807" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-364997513807','Image 364997513807 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-364997513807"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-365158509117">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#06 · Display Ad #1</span>
+      <span class="renov-slot landscape">landscape · 1376x714</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ weak logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap landscape"><img src="assets/source/365158509117.jpg" alt="Before 365158509117" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap landscape"><img src="assets/after/365158509117.png" alt="After 365158509117" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا أيقونات السوشيال ورابط الموقع المكتوب فوق, مع الحفاظ على باقي التصميم.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-365158509117" data-decision="approve"><input type="radio" name="img-365158509117" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-365158509117" data-decision="regenerate"><input type="radio" name="img-365158509117" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-365158509117" data-decision="hold"><input type="radio" name="img-365158509117" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-365158509117','Image 365158509117 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-365158509117"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-365081233048">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#07 · Display Ad #1</span>
+      <span class="renov-slot landscape">landscape · 1376x714</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap landscape"><img src="assets/source/365081233048.jpg" alt="Before 365081233048" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap landscape"><img src="assets/after/365081233048.png" alt="After 365081233048" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا أيقونات السوشيال ورابط الموقع المكتوب فوق, مع الحفاظ على باقي التصميم.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-365081233048" data-decision="approve"><input type="radio" name="img-365081233048" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-365081233048" data-decision="regenerate"><input type="radio" name="img-365081233048" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-365081233048" data-decision="hold"><input type="radio" name="img-365081233048" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-365081233048','Image 365081233048 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-365081233048"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362635096157">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#08 · Display Ad #1</span>
+      <span class="renov-slot square">square · 1024x1024</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/362635096157.jpg" alt="Before 362635096157" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/362635096157.png" alt="After 362635096157" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا أيقونات السوشيال ورابط الموقع المكتوب فوق, مع الحفاظ على باقي التصميم.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362635096157" data-decision="approve"><input type="radio" name="img-362635096157" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362635096157" data-decision="regenerate"><input type="radio" name="img-362635096157" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362635096157" data-decision="hold"><input type="radio" name="img-362635096157" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362635096157','Image 362635096157 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362635096157"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-364997513810">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#09 · Display Ad #1</span>
+      <span class="renov-slot square">square · 1024x1024</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/364997513810.jpg" alt="Before 364997513810" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/364997513810.png" alt="After 364997513810" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا أيقونات السوشيال ورابط الموقع المكتوب فوق, مع الحفاظ على باقي التصميم.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-364997513810" data-decision="approve"><input type="radio" name="img-364997513810" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-364997513810" data-decision="regenerate"><input type="radio" name="img-364997513810" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-364997513810" data-decision="hold"><input type="radio" name="img-364997513810" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-364997513810','Image 364997513810 (Display Ad #1)')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-364997513810"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362635335626">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#10 · Display Ad #2 (paused)</span>
+      <span class="renov-slot landscape">landscape · 4000x2100</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap landscape"><img src="assets/source/362635335626.jpg" alt="Before 362635335626" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap landscape"><img src="assets/after/362635335626.jpg" alt="After 362635335626" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> أضفنا لوجو باسقات في الركن السفلي. الصورة الأصلية لمست لمسة واحدة بس.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362635335626" data-decision="approve"><input type="radio" name="img-362635335626" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362635335626" data-decision="regenerate"><input type="radio" name="img-362635335626" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362635335626" data-decision="hold"><input type="radio" name="img-362635335626" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362635335626','Image 362635335626 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362635335626"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362635343588">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#11 · Display Ad #2 (paused)</span>
+      <span class="renov-slot square">square · 3000x3000</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/362635343588.jpg" alt="Before 362635343588" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/362635343588.jpg" alt="After 362635343588" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> أضفنا لوجو باسقات في الركن السفلي. الصورة الأصلية لمست لمسة واحدة بس.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362635343588" data-decision="approve"><input type="radio" name="img-362635343588" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362635343588" data-decision="regenerate"><input type="radio" name="img-362635343588" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362635343588" data-decision="hold"><input type="radio" name="img-362635343588" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362635343588','Image 362635343588 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362635343588"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362796526314">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#12 · Display Ad #2 (paused)</span>
+      <span class="renov-slot landscape">landscape · 1536x806</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap landscape"><img src="assets/source/362796526314.png" alt="Before 362796526314" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap landscape"><img src="assets/after/362796526314.png" alt="After 362796526314" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا الأيقونات والرابط, وضفنا لوجو باسقات في الركن السفلي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362796526314" data-decision="approve"><input type="radio" name="img-362796526314" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362796526314" data-decision="regenerate"><input type="radio" name="img-362796526314" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362796526314" data-decision="hold"><input type="radio" name="img-362796526314" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362796526314','Image 362796526314 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362796526314"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362715813571">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#13 · Display Ad #2 (paused)</span>
+      <span class="renov-slot landscape">landscape · 1536x806</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap landscape"><img src="assets/source/362715813571.png" alt="Before 362715813571" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap landscape"><img src="assets/after/362715813571.png" alt="After 362715813571" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا الأيقونات والرابط, وضفنا لوجو باسقات في الركن السفلي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362715813571" data-decision="approve"><input type="radio" name="img-362715813571" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362715813571" data-decision="regenerate"><input type="radio" name="img-362715813571" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362715813571" data-decision="hold"><input type="radio" name="img-362715813571" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362715813571','Image 362715813571 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362715813571"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362796546732">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#14 · Display Ad #2 (paused)</span>
+      <span class="renov-slot square">square · 1536x1536</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/362796546732.png" alt="Before 362796546732" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/362796546732.png" alt="After 362796546732" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا الأيقونات والرابط, وضفنا لوجو باسقات في الركن السفلي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362796546732" data-decision="approve"><input type="radio" name="img-362796546732" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362796546732" data-decision="regenerate"><input type="radio" name="img-362796546732" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362796546732" data-decision="hold"><input type="radio" name="img-362796546732" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362796546732','Image 362796546732 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362796546732"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362635446053">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#15 · Display Ad #2 (paused)</span>
+      <span class="renov-slot square">square · 1536x1536</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/362635446053.png" alt="Before 362635446053" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/362635446053.png" alt="After 362635446053" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا الأيقونات والرابط, وضفنا لوجو باسقات في الركن السفلي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362635446053" data-decision="approve"><input type="radio" name="img-362635446053" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362635446053" data-decision="regenerate"><input type="radio" name="img-362635446053" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362635446053" data-decision="hold"><input type="radio" name="img-362635446053" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362635446053','Image 362635446053 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362635446053"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362635430414">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#16 · Display Ad #2 (paused)</span>
+      <span class="renov-slot square">square · 1536x1536</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/362635430414.png" alt="Before 362635430414" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/362635430414.png" alt="After 362635430414" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا الأيقونات والرابط, وضفنا لوجو باسقات في الركن السفلي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362635430414" data-decision="approve"><input type="radio" name="img-362635430414" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362635430414" data-decision="regenerate"><input type="radio" name="img-362635430414" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362635430414" data-decision="hold"><input type="radio" name="img-362635430414" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362635430414','Image 362635430414 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362635430414"></div>
+    </div>
+  </div>
+</article>
+
+<article class="renov-card" id="img-362635426037">
+  <div class="renov-head">
+    <div class="left">
+      <span class="renov-id">#17 · Display Ad #2 (paused)</span>
+      <span class="renov-slot square">square · 1536x1536</span>
+    </div>
+    <div class="defect-chips"><span class="chip defect-amber">⚠️ no logo</span><span class="chip defect-red">🚫 social icons</span><span class="chip defect-red">🚫 URL text baked in</span></div>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-cell before">
+      <div class="ba-label">BEFORE · LIVE ON GOOGLE</div>
+      <div class="ba-img-wrap square"><img src="assets/source/362635426037.png" alt="Before 362635426037" loading="lazy" /></div>
+    </div>
+    <div class="ba-cell after">
+      <div class="ba-label">AFTER · PROPOSED FIX</div>
+      <div class="ba-img-wrap square"><img src="assets/after/362635426037.png" alt="After 362635426037" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="renov-body">
+    <p class="renov-rationale"><strong>الخطة:</strong> شلنا الأيقونات والرابط, وضفنا لوجو باسقات في الركن السفلي.</p>
+    <div class="approval-row">
+        <span class="ap-label">قرارك:</span>
+        <label class="ap-radio accept-tone" data-item="img-362635426037" data-decision="approve"><input type="radio" name="img-362635426037" />✓ موافق</label>
+        <label class="ap-radio regen-tone" data-item="img-362635426037" data-decision="regenerate"><input type="radio" name="img-362635426037" />↻ اعمل نسخة تانية</label>
+        <label class="ap-radio hold-tone" data-item="img-362635426037" data-decision="hold"><input type="radio" name="img-362635426037" />⏸ توقف وعلّق</label>
+
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على الصورة دي</h4>
+        <button class="discuss-btn" onclick="openCmtModal('img-362635426037','Image 362635426037 (Display Ad #2 (paused))')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="img-362635426037"></div>
+    </div>
+  </div>
+</article>
+
+
+<!-- ===================== Zone C: YouTube companion banners ===================== -->
+<div class="section-heading">
+  <h2>ثالثاً: بانرات إعلانات اليوتيوب</h2>
+  <span class="en">C · YouTube companion banners</span>
+</div>
+
+<section class="findings-strip">
+  <div class="finding-card">
+    <span class="finding-num">FINDING 03</span>
+    <h3>إعلانات اليوتيوب الاتنين ماعندهاش بانر مصاحب</h3>
+    <p class="sub">على اليوتيوب في نسخة الديسكتوب, جوجل بيعرض بانر صغير مصاحب جنب الفيديو لمدة عرض الإعلان كله. الخانة دي عندنا فاضية في إعلانَي اليوتيوب (Ad #invest, Ad expats). الحل: <strong>صمّمنا بانرين بشكل باسقات الرسمي</strong>, واحد لكل إعلان, جاهزين للرفع.</p>
+  </div>
+</section>
+
+<article class="yt-banner-card" id="yt-banner-invest">
+  <div class="yt-banner-head">
+    <h3 class="yt-banner-title">بانر مصاحب · Ad #invest</h3>
+    <span class="yt-banner-sub">Companion banner · 5:1 strip</span>
+  </div>
+  <div class="yt-banner-body">
+    <div class="yt-ba-grid">
+      <div class="yt-ba-cell before">
+        <div class="yt-label">BEFORE · NOT UPLOADED</div>
+        <div class="yt-banner-empty">لا يوجد بانر مرفوع</div>
+      </div>
+      <div class="yt-ba-cell after">
+        <div class="yt-label">AFTER · PROPOSED BANNER</div>
+        <img class="yt-banner-img" src="assets/youtube-banners/banner-1-invest.png" alt="Proposed banner for Ad #invest" loading="lazy" />
+      </div>
+    </div>
+        <div class="yt-mockup">
+      <p class="yt-mockup-label">YouTube desktop placement preview</p>
+      <div class="yt-mockup-layout">
+        <div class="yt-mockup-player">
+          <iframe src="https://www.youtube.com/embed/OKtb-dqlsN0?rel=0&modestbranding=1" title="Ad #invest preview" allowfullscreen></iframe>
+        </div>
+        <div class="yt-mockup-rail">
+          <div class="yt-mockup-banner">
+            <img src="assets/youtube-banners/banner-1-invest.png" alt="Companion banner" />
+          </div>
+          <div class="yt-mockup-suggest">
+            <div class="thumb"></div>
+            <div class="meta"><div class="t"></div><div class="t short"></div><div class="ch"></div></div>
+          </div>
+          <div class="yt-mockup-suggest">
+            <div class="thumb"></div>
+            <div class="meta"><div class="t"></div><div class="t short"></div><div class="ch"></div></div>
+          </div>
+          <div class="yt-mockup-suggest">
+            <div class="thumb"></div>
+            <div class="meta"><div class="t"></div><div class="t short"></div><div class="ch"></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="yt-mockup-caption">البانر بيظهر فوق الـ Suggested videos في عمود اليمين بجوار الفيديو طوال مدة عرض الإعلان. <strong>ده شكله الحقيقي على نسخة الديسكتوب من اليوتيوب.</strong></p>
+    </div>
+<p class="renov-rationale" style="margin-top:14px;"><strong>الخطة:</strong> نرفع البانر ده عشان يظهر جنب الفيديو على نسخة الديسكتوب من اليوتيوب. النص: "<strong>استثمر في أصل حقيقي</strong>".</p>
+    <div class="approval-row">
+      <span class="ap-label">قرارك:</span>
+      <label class="ap-radio accept-tone" data-item="yt-banner-invest" data-decision="approve"><input type="radio" name="yt-banner-invest" />✓ موافق, ارفعه</label>
+      <label class="ap-radio regen-tone" data-item="yt-banner-invest" data-decision="regenerate"><input type="radio" name="yt-banner-invest" />↻ اعمل نسخة تانية</label>
+      <label class="ap-radio hold-tone" data-item="yt-banner-invest" data-decision="hold"><input type="radio" name="yt-banner-invest" />⏸ توقف وعلّق</label>
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على البانر ده</h4>
+        <button class="discuss-btn" onclick="openCmtModal('yt-banner-invest','Companion banner for Ad #invest')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="yt-banner-invest"></div>
+    </div>
+  </div>
+</article>
+
+<article class="yt-banner-card" id="yt-banner-expats">
+  <div class="yt-banner-head">
+    <h3 class="yt-banner-title">بانر مصاحب · Ad expats</h3>
+    <span class="yt-banner-sub">Companion banner · 5:1 strip</span>
+  </div>
+  <div class="yt-banner-body">
+    <div class="yt-ba-grid">
+      <div class="yt-ba-cell before">
+        <div class="yt-label">BEFORE · NOT UPLOADED</div>
+        <div class="yt-banner-empty">لا يوجد بانر مرفوع</div>
+      </div>
+      <div class="yt-ba-cell after">
+        <div class="yt-label">AFTER · PROPOSED BANNER</div>
+        <img class="yt-banner-img" src="assets/youtube-banners/banner-2-expats.png" alt="Proposed banner for Ad expats" loading="lazy" />
+      </div>
+    </div>
+        <div class="yt-mockup">
+      <p class="yt-mockup-label">YouTube desktop placement preview</p>
+      <div class="yt-mockup-layout">
+        <div class="yt-mockup-player">
+          <iframe src="https://www.youtube.com/embed/CmTQHYzFldE?rel=0&modestbranding=1" title="Ad expats preview" allowfullscreen></iframe>
+        </div>
+        <div class="yt-mockup-rail">
+          <div class="yt-mockup-banner">
+            <img src="assets/youtube-banners/banner-2-expats.png" alt="Companion banner" />
+          </div>
+          <div class="yt-mockup-suggest">
+            <div class="thumb"></div>
+            <div class="meta"><div class="t"></div><div class="t short"></div><div class="ch"></div></div>
+          </div>
+          <div class="yt-mockup-suggest">
+            <div class="thumb"></div>
+            <div class="meta"><div class="t"></div><div class="t short"></div><div class="ch"></div></div>
+          </div>
+          <div class="yt-mockup-suggest">
+            <div class="thumb"></div>
+            <div class="meta"><div class="t"></div><div class="t short"></div><div class="ch"></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="yt-mockup-caption">البانر بيظهر فوق الـ Suggested videos في عمود اليمين بجوار الفيديو طوال مدة عرض الإعلان. <strong>ده شكله الحقيقي على نسخة الديسكتوب من اليوتيوب.</strong></p>
+    </div>
+<p class="renov-rationale" style="margin-top:14px;"><strong>الخطة:</strong> نرفع البانر ده عشان يظهر جنب الفيديو على نسخة الديسكتوب من اليوتيوب. النص: "<strong>مزرعة شغّالة من 6 سنين</strong>".</p>
+    <div class="approval-row">
+      <span class="ap-label">قرارك:</span>
+      <label class="ap-radio accept-tone" data-item="yt-banner-expats" data-decision="approve"><input type="radio" name="yt-banner-expats" />✓ موافق, ارفعه</label>
+      <label class="ap-radio regen-tone" data-item="yt-banner-expats" data-decision="regenerate"><input type="radio" name="yt-banner-expats" />↻ اعمل نسخة تانية</label>
+      <label class="ap-radio hold-tone" data-item="yt-banner-expats" data-decision="hold"><input type="radio" name="yt-banner-expats" />⏸ توقف وعلّق</label>
+    </div>
+    <div class="section-discuss">
+      <div class="discuss-header">
+        <h4>تعليق على البانر ده</h4>
+        <button class="discuss-btn" onclick="openCmtModal('yt-banner-expats','Companion banner for Ad expats')"><span class="ic">💬</span>أضف تعليق</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="yt-banner-expats"></div>
+    </div>
+  </div>
+</article>
+
+
+<!-- ===================== Apply full plan ===================== -->
+<section class="apply-block" id="apply">
+  <h3>موافقة شاملة على الخطة كلها</h3>
+  <p class="lede">لو راجعت الكل وكلهم تمام, اضغط هنا بدل ما تتم على كل صورة لوحدها.</p>
+  <div class="apply-row">
+    <button type="button" class="apply-cta approve" id="cta-approve-all" onclick="submitItemDecision('apply-all','approve','موافقة شاملة')">
+      <span>✓</span>وافق على الخطة كلها
+    </button>
+    <button type="button" class="apply-cta hold" id="cta-hold-all" onclick="submitItemDecision('apply-all','hold','إيقاف وتعليق')">
+      <span>⏸</span>توقف وعايز نتكلم
+    </button>
+  </div>
+  <div class="next-steps" style="margin-top: 22px; max-width: 540px; margin-inline: auto;">
+    <h4 style="text-align:right;">اللي هيحصل بعد موافقتك</h4>
+    <ul style="text-align:right;">
+      <li>هنرفع لوجو باسقات للإعلانين على جوجل</li>
+      <li>كل صورة قلت عليها "موافق" هنستبدلها على جوجل بالنسخة الجديدة</li>
+      <li>الصور اللي قلت "اعمل نسخة تانية" هنرجعلك بنسخة جديدة قبل ما نستبدل أي حاجة</li>
+      <li>الصور اللي قلت "توقف وعلّق" مش هنلمسها لحد ما تقولنا</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Comment modal -->
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true" aria-labelledby="cmt-modal-title">
+  <div class="cmt-modal-card">
+    <h3 id="cmt-modal-title">أضف تعليقك</h3>
+    <p class="ctx" id="cmt-modal-ctx"></p>
+    <div class="cmt-row" id="cmt-name-row">
+      <label for="cmt-name-input">اسمك (بيتسجّل مرة واحدة في المتصفح ده)</label>
+      <input type="text" id="cmt-name-input" placeholder="مثلاً: خالد ناصر الدين" />
+    </div>
+    <div class="cmt-row">
+      <label for="cmt-text-input">التعليق</label>
+      <textarea id="cmt-text-input" placeholder="اكتب اللي عايز تقوله أو تستوضحه أو تعدّله..."></textarea>
+    </div>
+    <div class="cmt-actions">
+      <button type="button" class="cmt-submit" onclick="submitComment()">إرسال</button>
+      <button type="button" class="cmt-cancel" onclick="closeCmtModal()">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Live-feedback FAB -->
+<button type="button" class="feedback-fab empty" id="feedback-fab" onclick="jumpToFirstComment()" title="Comments and decisions save live to Admireworks.">
+  <span>💬 Live feedback</span>
+  <span class="fab-count" id="fab-count">0</span>
+</button>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const DECK_SLUG = "basseqat-ads-v2";
+window.AW_FB = { db, DECK_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+// ===== State =====
+let fbReady = false;
+let toastTimer = null;
+const stateDecisions = {};
+const stateComments = {};
+const NAME_KEY = "basseqat-ads-v2-reviewer-name";
+
+function getName(){ return localStorage.getItem(NAME_KEY) || ""; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+
+// ===== Firebase sync =====
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initSync(); });
+
+function initSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    Object.keys(stateDecisions).forEach(k => delete stateDecisions[k]);
+    snap.forEach(d => { stateDecisions[d.id] = d.data(); });
+    renderDecisionState();
+    updateFab();
+  }, err => console.error("decisions onSnapshot:", err));
+
+  const cmtRef = fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll("[data-cmt-list]").forEach(el => renderComments(el.dataset.cmtList));
+    updateFab();
+  }, err => console.error("comments onSnapshot:", err));
+}
+
+// ===== Decision wiring =====
+function renderDecisionState(){
+  renderApRadioState();
+  const approveBtn = document.getElementById("cta-approve");
+  const changesBtn = document.getElementById("cta-changes");
+  const banner = document.getElementById("you-decided");
+  approveBtn?.classList.remove("is-active");
+  changesBtn?.classList.remove("is-active");
+  const overall = stateDecisions.overall;
+  if (!overall) { if (banner) banner.classList.remove("show"); return; }
+  if (overall.decision === "approve") approveBtn?.classList.add("is-active");
+  if (overall.decision === "changes_requested") changesBtn?.classList.add("is-active");
+  if (banner) {
+    const when = overall.updatedAt && overall.updatedAt.toDate
+      ? overall.updatedAt.toDate().toLocaleString("en-GB", { hour:"2-digit", minute:"2-digit", day:"2-digit", month:"short" })
+      : "";
+    const label = overall.decision === "approve" ? "Approved" : "Changes requested";
+    banner.innerHTML = "تم تسجيل قرارك. <strong>" + escapeHtml(label) + "</strong> &mdash; " + escapeHtml(overall.name || "") + (when ? " · " + escapeHtml(when) : "");
+    banner.classList.add("show");
+  }
+}
+
+async function submitDecision(decision, label){
+  if (!fbReady) { showToast("Still connecting, try again in a moment."); return; }
+  let name = getName();
+  if (!name) {
+    name = (prompt("اسمك (هيتسجّل مرة واحدة):") || "").trim();
+    if (!name) { showToast("Please enter your name."); return; }
+    setName(name);
+  }
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions", "overall"),
+      { decision, name, updatedAt: fb.serverTimestamp() }
+    );
+    showToast("تم تسجيل قرارك: " + label);
+  } catch (e) {
+    console.error("submitDecision", e);
+    showToast("Save failed: " + (e.message || "unknown"));
+  }
+}
+window.submitDecision = submitDecision;
+
+async function submitItemDecision(itemKey, decision, label){
+  if (!fbReady) { showToast("Still connecting, try again in a moment."); return; }
+  let name = getName();
+  if (!name) {
+    name = (prompt("اسمك (هيتسجّل مرة واحدة):") || "").trim();
+    if (!name) { showToast("Please enter your name."); return; }
+    setName(name);
+  }
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions", itemKey),
+      { decision, name, updatedAt: fb.serverTimestamp() }
+    );
+    showToast("تم تسجيل قرارك: " + label);
+  } catch (e) {
+    console.error("submitItemDecision", e);
+    showToast("Save failed: " + (e.message || "unknown"));
+  }
+}
+window.submitItemDecision = submitItemDecision;
+
+// Wire up the ap-radio labels
+function attachAllRadios(){
+  document.querySelectorAll(".ap-radio").forEach(label => {
+    label.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const item = label.dataset.item;
+      const decision = label.dataset.decision;
+      const labelTextEl = label.cloneNode(true);
+      labelTextEl.querySelectorAll("input").forEach(n => n.remove());
+      const labelText = labelTextEl.textContent.trim();
+      // visual toggle within group
+      document.querySelectorAll('.ap-radio[data-item="' + CSS.escape(item) + '"]').forEach(r => r.classList.remove("selected"));
+      label.classList.add("selected");
+      await submitItemDecision(item, decision, labelText);
+    });
+  });
+}
+document.addEventListener("DOMContentLoaded", attachAllRadios);
+
+// Render selected state of ap-radios from Firestore on every snapshot
+function renderApRadioState(){
+  document.querySelectorAll(".ap-radio").forEach(r => r.classList.remove("selected"));
+  Object.entries(stateDecisions).forEach(([itemKey, data]) => {
+    const sel = '.ap-radio[data-item="' + CSS.escape(itemKey) + '"][data-decision="' + CSS.escape(data.decision) + '"]';
+    document.querySelectorAll(sel).forEach(r => r.classList.add("selected"));
+    if (itemKey === "apply-all") {
+      const a = document.getElementById("cta-approve-all");
+      const h = document.getElementById("cta-hold-all");
+      a?.classList.remove("is-active");
+      h?.classList.remove("is-active");
+      if (data.decision === "approve") a?.classList.add("is-active");
+      if (data.decision === "hold") h?.classList.add("is-active");
+    }
+  });
+}
+
+
+// ===== Comments =====
+let activeCmtSection = null;
+let activeCmtLabel = "";
+
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById("cmt-modal");
+  const nameRow = document.getElementById("cmt-name-row");
+  const nameInput = document.getElementById("cmt-name-input");
+  const textInput = document.getElementById("cmt-text-input");
+  const ctx = document.getElementById("cmt-modal-ctx");
+  ctx.textContent = "On: " + label;
+  const existing = getName();
+  if (existing) { nameRow.style.display = "none"; }
+  else { nameRow.style.display = "block"; nameInput.value = ""; setTimeout(() => nameInput.focus(), 50); }
+  textInput.value = "";
+  if (existing) setTimeout(() => textInput.focus(), 50);
+  modal.classList.add("open");
+}
+function closeCmtModal(){
+  document.getElementById("cmt-modal").classList.remove("open");
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById("cmt-name-input");
+  const textInput = document.getElementById("cmt-text-input");
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || "").trim();
+    if (!name) { nameInput.focus(); showToast("اكتب اسمك من فضلك."); return; }
+    setName(name);
+  }
+  const text = (textInput.value || "").trim();
+  if (!text) { textInput.focus(); showToast("التعليق فاضي."); return; }
+  if (!fbReady) { showToast("Still connecting, try again."); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast("اتسجّل التعليق وبيوصل لـ Admireworks فوراً.");
+  } catch (e) {
+    console.error("submitComment", e);
+    showToast("Save failed: " + (e.message || "check your connection"));
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector("[data-cmt-list=\"" + sectionKey + "\"]");
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ""; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString("en-GB", { hour:"2-digit", minute:"2-digit", day:"2-digit", month:"short" });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? "<button class=\"cmt-del\" onclick=\"deleteCommentById('" + c.id + "')\" title=\"Delete\">×</button>" : "";
+    return "<div class=\"cmt-item\">" + delBtn
+      + "<span class=\"cmt-author\">" + escapeHtml(c.name) + "</span>"
+      + escapeHtml(c.text)
+      + "<span class=\"cmt-time\">" + ts + "</span></div>";
+  }).join("");
+}
+async function deleteCommentById(commentId){
+  if (!confirm("Delete this comment?")) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments", commentId));
+    showToast("تم الحذف.");
+  } catch(e){ showToast("Delete failed: " + (e.message || "check rules")); }
+}
+window.openCmtModal = openCmtModal;
+window.closeCmtModal = closeCmtModal;
+window.submitComment = submitComment;
+window.deleteCommentById = deleteCommentById;
+
+// ===== FAB =====
+function updateFab(){
+  const fab = document.getElementById("feedback-fab");
+  const count = document.getElementById("fab-count");
+  let total = Object.keys(stateDecisions).length;
+  Object.values(stateComments).forEach(arr => total += arr.length);
+  count.textContent = total;
+  if (total > 0) fab.classList.remove("empty"); else fab.classList.add("empty");
+}
+function jumpToFirstComment(){
+  const lists = document.querySelectorAll("[data-cmt-list]");
+  for (const el of lists) { if (el.children.length > 0) { el.scrollIntoView({ behavior:"smooth", block:"center" }); return; } }
+  document.getElementById("approval")?.scrollIntoView({ behavior:"smooth", block:"start" });
+}
+window.jumpToFirstComment = jumpToFirstComment;
+
+// ===== Toast =====
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+// ===== Modal dismiss =====
+document.getElementById("cmt-modal").addEventListener("click", e => { if (e.target.id === "cmt-modal") closeCmtModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeCmtModal(); });
+</script>
+
+</body>
+</html>

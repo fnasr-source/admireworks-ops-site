@@ -1,0 +1,1588 @@
+{
+  "packages": [
+    {
+      "slug": "mond-gulf-lite",
+      "name": "MOND Gulf Lite",
+      "tierName": "Lite",
+      "family": "mond",
+      "catalogLayer": "market_variant",
+      "pricingModel": "usage_wallet",
+      "market": "gcc",
+      "commercialStage": "ongoing",
+      "scope": "shared",
+      "status": "active",
+      "description": "Self-operated core system for one brand and one pipeline.",
+      "lineItems": [
+        { "description": "MOND setup and onboarding", "qty": 1, "rate": 2500, "amount": 2500, "productCode": "MOND_GULF_LITE", "revenueCategory": "setup" },
+        { "description": "Prepaid 500-MAC wallet", "qty": 1, "rate": 500, "amount": 500, "productCode": "MOND_GULF_LITE", "revenueCategory": "wallet", "serviceCycleNumber": 1 }
+      ],
+      "subtotal": 3000,
+      "currency": "AED",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_GULF_LITE",
+      "includedMonthlyActiveContacts": 500,
+      "capacityPackSize": 500,
+      "capacityPackRate": 500,
+      "minimumWalletContacts": 500,
+      "minimumWalletAmount": 500,
+      "usageUnitRate": 1,
+      "serviceLevel": "lite",
+      "paymentMethods": ["stripe"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["mond", "gulf", "lite", "price-book-v2"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-gulf-standard",
+      "name": "MOND Gulf Standard",
+      "tierName": "Standard",
+      "family": "mond",
+      "catalogLayer": "market_variant",
+      "pricingModel": "monthly",
+      "market": "gcc",
+      "commercialStage": "ongoing",
+      "scope": "shared",
+      "status": "active",
+      "description": "Admireworks-managed system for one brand and one primary pipeline.",
+      "lineItems": [
+        { "description": "MOND setup and onboarding", "qty": 1, "rate": 5800, "amount": 5800, "productCode": "MOND_GULF_STANDARD", "revenueCategory": "setup" },
+        { "description": "Monthly MOND service", "qty": 1, "rate": 2500, "amount": 2500, "productCode": "MOND_GULF_STANDARD", "revenueCategory": "service", "serviceCycleNumber": 1 }
+      ],
+      "subtotal": 8300,
+      "currency": "AED",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_GULF_STANDARD",
+      "includedMonthlyActiveContacts": 1500,
+      "capacityPackSize": 1000,
+      "capacityPackRate": 400,
+      "serviceLevel": "standard",
+      "paymentMethods": ["stripe"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["mond", "gulf", "standard", "price-book-v2"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-gulf-pro",
+      "name": "MOND Gulf Pro",
+      "tierName": "Pro",
+      "family": "mond",
+      "catalogLayer": "market_variant",
+      "pricingModel": "monthly",
+      "market": "gcc",
+      "commercialStage": "ongoing",
+      "scope": "shared",
+      "status": "active",
+      "description": "Advanced managed system for up to three pipelines, locations or business units.",
+      "lineItems": [
+        { "description": "MOND setup and onboarding", "qty": 1, "rate": 15000, "amount": 15000, "productCode": "MOND_GULF_PRO", "revenueCategory": "setup" },
+        { "description": "Monthly MOND service", "qty": 1, "rate": 4500, "amount": 4500, "productCode": "MOND_GULF_PRO", "revenueCategory": "service", "serviceCycleNumber": 1 }
+      ],
+      "subtotal": 19500,
+      "currency": "AED",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_GULF_PRO",
+      "includedMonthlyActiveContacts": 2000,
+      "capacityPackSize": 1000,
+      "capacityPackRate": 400,
+      "serviceLevel": "pro",
+      "paymentMethods": ["stripe"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["mond", "gulf", "pro", "price-book-v2"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-egypt-lite",
+      "name": "MOND Egypt Lite",
+      "tierName": "Lite",
+      "family": "mond",
+      "catalogLayer": "market_variant",
+      "pricingModel": "usage_wallet",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "scope": "shared",
+      "status": "active",
+      "description": "Self-operated core system for one brand and one pipeline.",
+      "lineItems": [
+        { "description": "MOND setup and onboarding", "qty": 1, "rate": 12000, "amount": 12000, "productCode": "MOND_EGYPT_LITE", "revenueCategory": "setup" },
+        { "description": "Prepaid 500-MAC wallet", "qty": 1, "rate": 3500, "amount": 3500, "productCode": "MOND_EGYPT_LITE", "revenueCategory": "wallet", "serviceCycleNumber": 1 }
+      ],
+      "subtotal": 15500,
+      "currency": "EGP",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_EGYPT_LITE",
+      "includedMonthlyActiveContacts": 500,
+      "capacityPackSize": 500,
+      "capacityPackRate": 3500,
+      "minimumWalletContacts": 500,
+      "minimumWalletAmount": 3500,
+      "usageUnitRate": 7,
+      "serviceLevel": "lite",
+      "paymentMethods": ["instapay", "stripe"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["mond", "egypt", "lite", "price-book-v2"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-egypt-standard",
+      "name": "MOND Egypt Standard",
+      "tierName": "Standard",
+      "family": "mond",
+      "catalogLayer": "market_variant",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "scope": "shared",
+      "status": "active",
+      "description": "Admireworks-managed system for one brand and one primary pipeline.",
+      "lineItems": [
+        { "description": "MOND setup and onboarding", "qty": 1, "rate": 28000, "amount": 28000, "productCode": "MOND_EGYPT_STANDARD", "revenueCategory": "setup" },
+        { "description": "Monthly MOND service", "qty": 1, "rate": 18000, "amount": 18000, "productCode": "MOND_EGYPT_STANDARD", "revenueCategory": "service", "serviceCycleNumber": 1 }
+      ],
+      "subtotal": 46000,
+      "currency": "EGP",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_EGYPT_STANDARD",
+      "includedMonthlyActiveContacts": 1500,
+      "capacityPackSize": 1000,
+      "capacityPackRate": 2000,
+      "serviceLevel": "standard",
+      "paymentMethods": ["instapay", "stripe"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["mond", "egypt", "standard", "price-book-v2"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-egypt-pro",
+      "name": "MOND Egypt Pro",
+      "tierName": "Pro",
+      "family": "mond",
+      "catalogLayer": "market_variant",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "scope": "shared",
+      "status": "active",
+      "description": "Advanced managed system for up to three pipelines, locations or business units.",
+      "lineItems": [
+        { "description": "MOND setup and onboarding", "qty": 1, "rate": 50000, "amount": 50000, "productCode": "MOND_EGYPT_PRO", "revenueCategory": "setup" },
+        { "description": "Monthly MOND service", "qty": 1, "rate": 25000, "amount": 25000, "productCode": "MOND_EGYPT_PRO", "revenueCategory": "service", "serviceCycleNumber": 1 }
+      ],
+      "subtotal": 75000,
+      "currency": "EGP",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_EGYPT_PRO",
+      "includedMonthlyActiveContacts": 2000,
+      "capacityPackSize": 1000,
+      "capacityPackRate": 2000,
+      "serviceLevel": "pro",
+      "paymentMethods": ["instapay", "stripe"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["mond", "egypt", "pro", "price-book-v2"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-gulf-capacity-pack-1000",
+      "name": "MOND Gulf +1,000 MAC Pack",
+      "tierName": "Capacity Pack",
+      "family": "add_on",
+      "catalogLayer": "add_on",
+      "pricingModel": "monthly",
+      "market": "gcc",
+      "commercialStage": "upgrade",
+      "scope": "shared",
+      "status": "active",
+      "description": "Adds 1,000 monthly active contacts for one billing cycle.",
+      "lineItems": [{ "description": "+1,000 monthly active contacts", "qty": 1, "rate": 400, "amount": 400, "productCode": "MOND_GULF_PACK_1000", "revenueCategory": "capacity" }],
+      "subtotal": 400,
+      "currency": "AED",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_GULF_PACK_1000",
+      "includedMonthlyActiveContacts": 1000,
+      "capacityPackSize": 1000,
+      "capacityPackRate": 400,
+      "paymentMethods": ["stripe"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["mond", "gulf", "capacity-pack", "price-book-v2"],
+      "compatibleBaseTags": ["mond"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "mond-egypt-capacity-pack-1000",
+      "name": "MOND Egypt +1,000 MAC Pack",
+      "tierName": "Capacity Pack",
+      "family": "add_on",
+      "catalogLayer": "add_on",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "upgrade",
+      "scope": "shared",
+      "status": "active",
+      "description": "Adds 1,000 monthly active contacts for one billing cycle.",
+      "lineItems": [{ "description": "+1,000 monthly active contacts", "qty": 1, "rate": 2000, "amount": 2000, "productCode": "MOND_EGYPT_PACK_1000", "revenueCategory": "capacity" }],
+      "subtotal": 2000,
+      "currency": "EGP",
+      "billingCadence": "monthly",
+      "priceBookVersion": 2,
+      "productCode": "MOND_EGYPT_PACK_1000",
+      "includedMonthlyActiveContacts": 1000,
+      "capacityPackSize": 1000,
+      "capacityPackRate": 2000,
+      "paymentMethods": ["instapay", "stripe"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["mond", "egypt", "capacity-pack", "price-book-v2"],
+      "compatibleBaseTags": ["mond"],
+      "notes": "Generated from productPriceBooks/mond. Do not hand-edit."
+    },
+    {
+      "slug": "funnel-engine-build-egp",
+      "name": "Funnel Engine",
+      "tierName": "Build + Launch",
+      "family": "lead_gen",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Strategy, funnel build, lead capture setup, launch handover, and tracking baseline.",
+      "lineItems": [
+        {
+          "description": "Funnel strategy, build, launch handover, and tracking baseline",
+          "qty": 1,
+          "rate": 45000,
+          "amount": 45000
+        }
+      ],
+      "subtotal": 45000,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff. Ad spend is billed directly to the client.",
+      "billingClarity": {
+        "title": "What This Package Covers",
+        "dueNowLabel": "Due now to build and launch the system",
+        "scopeIncluded": [
+          "Funnel strategy and conversion structure",
+          "Landing page build and copy guidance",
+          "Lead qualification flow",
+          "Tracking setup and launch support"
+        ],
+        "scopeExcluded": [
+          "Ongoing ad management",
+          "Ad spend",
+          "Continuous optimization after launch"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "funnel", "build", "launch"]
+    },
+    {
+      "slug": "lead-gen-build-lite-egp",
+      "name": "Lead Gen System",
+      "tierName": "Lite Build",
+      "family": "lead_gen",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Lower-friction lead-generation build for clients starting with a narrower launch scope.",
+      "lineItems": [
+        {
+          "description": "Lead generation system lite build",
+          "qty": 1,
+          "rate": 28000,
+          "amount": 28000
+        }
+      ],
+      "subtotal": 28000,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff. Monthly support is billed separately if added.",
+      "billingClarity": {
+        "title": "Lite Launch Structure",
+        "dueNowLabel": "Due now to start the lite launch build",
+        "schedule": [
+          {
+            "label": "Optional monthly support after launch",
+            "value": "7,500 EGP / month"
+          }
+        ],
+        "scopeIncluded": [
+          "Lead capture structure and conversion flow",
+          "Landing page build",
+          "Basic tracking and dashboard handoff",
+          "Launch support"
+        ],
+        "scopeExcluded": [
+          "Active media buying management",
+          "Ad spend",
+          "Ongoing optimization"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "lite", "build", "launch"]
+    },
+    {
+      "slug": "monthly-support-egp",
+      "name": "Monthly Support",
+      "tierName": "Optimization + Maintenance",
+      "family": "lead_gen",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "basePackageSlug": "funnel-engine-build-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Post-launch updates, testing, and platform support.",
+      "lineItems": [
+        {
+          "description": "Monthly support, updates, and A/B testing",
+          "qty": 1,
+          "rate": 7500,
+          "amount": 7500
+        }
+      ],
+      "subtotal": 7500,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "minimumEngagementMonths": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "support", "retainer", "ongoing"]
+    },
+    {
+      "slug": "fixed-build-support-egp",
+      "name": "Fixed Build",
+      "tierName": "Monthly Support Model",
+      "family": "lead_gen",
+      "catalogLayer": "bundle",
+      "pricingModel": "phased_bundle",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "funnel-engine-build-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Build-first commercial model with monthly support continuing after launch.",
+      "lineItems": [
+        {
+          "description": "Fixed build and launch setup",
+          "qty": 1,
+          "rate": 45000,
+          "amount": 45000
+        }
+      ],
+      "subtotal": 45000,
+      "currency": "EGP",
+      "paymentTerms": "Build fee due before kickoff. Monthly support is billed separately after launch.",
+      "billingClarity": {
+        "title": "Build-First Commercial Structure",
+        "dueNowLabel": "Due now to build and launch the system",
+        "schedule": [
+          {
+            "label": "Monthly support after launch",
+            "value": "7,500 EGP / month"
+          }
+        ],
+        "scopeIncluded": [
+          "Strategy and positioning",
+          "Funnel and website structure",
+          "Lead capture workflow",
+          "Tracking baseline and KPI visibility"
+        ],
+        "scopeExcluded": [
+          "Media buying management",
+          "Ad spend"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "build", "support_model", "launch"]
+    },
+    {
+      "slug": "managed-growth-media-buying-egp",
+      "name": "Managed Growth",
+      "tierName": "Media Buying",
+      "family": "lead_gen",
+      "catalogLayer": "bundle",
+      "pricingModel": "phased_bundle",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "funnel-engine-build-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Build plus active acquisition management and media buying oversight.",
+      "lineItems": [
+        {
+          "description": "Setup and managed growth system launch",
+          "qty": 1,
+          "rate": 35000,
+          "amount": 35000
+        }
+      ],
+      "subtotal": 35000,
+      "currency": "EGP",
+      "paymentTerms": "Setup due before kickoff. Monthly continuation is billed upfront.",
+      "billingClarity": {
+        "title": "Commercial Structure",
+        "dueNowLabel": "Due now to start setup and launch",
+        "schedule": [
+          {
+            "label": "Monthly continuation",
+            "value": "17,500 EGP / month"
+          }
+        ],
+        "scopeIncluded": [
+          "Everything in Funnel Engine",
+          "Active acquisition management",
+          "Media buying management",
+          "Weekly optimization and reporting"
+        ],
+        "scopeExcluded": [
+          "Ad spend"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "managed", "ads", "launch"]
+    },
+    {
+      "slug": "managed-acquisition-monthly-egp",
+      "name": "Managed Growth",
+      "tierName": "Monthly Continuation",
+      "family": "lead_gen",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "basePackageSlug": "managed-growth-media-buying-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Ongoing acquisition management after launch for managed growth projects.",
+      "lineItems": [
+        {
+          "description": "Managed acquisition and media buying",
+          "qty": 1,
+          "rate": 17500,
+          "amount": 17500
+        }
+      ],
+      "subtotal": 17500,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "managed", "ads", "ongoing"]
+    },
+    {
+      "slug": "full-growth-partnership-start-egp",
+      "name": "Full Growth Partnership",
+      "tierName": "Start Package",
+      "family": "lead_gen",
+      "catalogLayer": "bundle",
+      "pricingModel": "phased_bundle",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "full-growth-partnership-monthly-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Setup plus month 1 retainer for the full partnership model.",
+      "lineItems": [
+        {
+          "description": "Setup fee",
+          "qty": 1,
+          "rate": 35000,
+          "amount": 35000
+        },
+        {
+          "description": "Month 1 retainer",
+          "qty": 1,
+          "rate": 32500,
+          "amount": 32500
+        }
+      ],
+      "subtotal": 67500,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff. Ongoing retainer billed monthly upfront.",
+      "billingClarity": {
+        "title": "Partnership Start Payment",
+        "dueNowLabel": "Due now to begin setup plus month 1",
+        "schedule": [
+          {
+            "label": "After month 1",
+            "value": "32,500 EGP / month"
+          }
+        ],
+        "scopeIncluded": [
+          "Full funnel build",
+          "Continuous optimization",
+          "Ads management across agreed channels",
+          "Weekly optimization and monthly review"
+        ],
+        "scopeExcluded": [
+          "Ad spend"
+        ]
+      },
+      "legacyServiceCode": "DRM+SM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "partnership", "retainer", "launch"]
+    },
+    {
+      "slug": "full-growth-partnership-monthly-egp",
+      "name": "Full Growth Partnership",
+      "tierName": "Monthly Retainer",
+      "family": "lead_gen",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Monthly continuation for full growth partnership.",
+      "lineItems": [
+        {
+          "description": "Monthly growth partnership retainer",
+          "qty": 1,
+          "rate": 32500,
+          "amount": 32500
+        }
+      ],
+      "subtotal": 32500,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM+SM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["lead_gen", "partnership", "retainer", "ongoing"]
+    },
+    {
+      "slug": "ecommerce-build-standard-egp",
+      "name": "E-Commerce Store Build",
+      "tierName": "Standard Build",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Standard Egypt-market store build and launch scope anchored from the earlier Meguiar’s proposal.",
+      "lineItems": [
+        {
+          "description": "E-commerce store build and launch setup",
+          "qty": 1,
+          "rate": 45000,
+          "amount": 45000
+        }
+      ],
+      "subtotal": 45000,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff.",
+      "billingClarity": {
+        "title": "Standard Build Scope",
+        "dueNowLabel": "Due now to begin the standard store build",
+        "scopeIncluded": [
+          "Store build and launch",
+          "Conversion structure and product journey",
+          "Tracking setup",
+          "Performance-ready handoff"
+        ],
+        "scopeExcluded": [
+          "Ongoing growth management",
+          "Ad spend",
+          "Content production"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["ecommerce", "build", "launch", "standard"]
+    },
+    {
+      "slug": "ecommerce-build-egypt-egp",
+      "name": "E-Commerce Store Build",
+      "tierName": "Launch Variant",
+      "family": "ecommerce",
+      "catalogLayer": "market_variant",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "ecommerce-build-standard-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Lower-friction Egypt-market build variant agreed for launch-stage e-commerce projects.",
+      "lineItems": [
+        {
+          "description": "E-commerce store build and launch setup",
+          "qty": 1,
+          "rate": 40000,
+          "amount": 40000
+        }
+      ],
+      "subtotal": 40000,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff.",
+      "billingClarity": {
+        "title": "Launch-Variant Build Scope",
+        "dueNowLabel": "Due now to begin build and launch setup",
+        "scopeIncluded": [
+          "Store build and launch",
+          "Tracking and reporting setup",
+          "Performance requirements handoff"
+        ],
+        "scopeExcluded": [
+          "Paid media management after launch",
+          "Ad spend",
+          "Content production"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["ecommerce", "build", "launch", "variant"]
+    },
+    {
+      "slug": "ecommerce-growth-launch-monthly-egp",
+      "name": "E-Commerce Growth Management",
+      "tierName": "Monthly Continuation",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "basePackageSlug": "ecommerce-growth-launch-egypt-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Monthly growth management and ads oversight for the launch-level Egypt-market model.",
+      "lineItems": [
+        {
+          "description": "Growth management and ads oversight — monthly",
+          "qty": 1,
+          "rate": 15000,
+          "amount": 15000
+        }
+      ],
+      "subtotal": 15000,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["ecommerce", "managed", "retainer", "ongoing"]
+    },
+    {
+      "slug": "ecommerce-growth-launch-egypt-egp",
+      "name": "E-Commerce Growth Launch",
+      "tierName": "Build + Month 1",
+      "family": "ecommerce",
+      "catalogLayer": "bundle",
+      "pricingModel": "phased_bundle",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "ecommerce-build-egypt-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Egypt-market launch bundle covering store build and month 1 management.",
+      "lineItems": [
+        {
+          "description": "E-commerce store build and launch",
+          "qty": 1,
+          "rate": 40000,
+          "amount": 40000
+        },
+        {
+          "description": "Growth management and ads oversight — month 1",
+          "qty": 1,
+          "rate": 15000,
+          "amount": 15000
+        }
+      ],
+      "subtotal": 55000,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff. Ongoing monthly management billed upfront after launch.",
+      "billingClarity": {
+        "title": "Launch Structure",
+        "dueNowLabel": "Due now to start build plus month 1 growth management",
+        "schedule": [
+          {
+            "label": "Month 2 onward",
+            "value": "15,000 EGP / month"
+          }
+        ],
+        "scopeIncluded": [
+          "Store build and launch setup",
+          "Month 1 growth management",
+          "Tracking and performance visibility",
+          "Performance-side coordination"
+        ],
+        "scopeExcluded": [
+          "Ad spend",
+          "Content production"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["ecommerce", "launch", "managed", "bundle"]
+    },
+    {
+      "slug": "ecommerce-partnership-monthly-egp",
+      "name": "E-Commerce Growth Partnership",
+      "tierName": "Monthly Retainer",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Higher-touch ongoing e-commerce partnership model based on the broader Meguiar’s proposal anchor.",
+      "lineItems": [
+        {
+          "description": "Strategy, ads, content and reporting",
+          "qty": 1,
+          "rate": 32000,
+          "amount": 32000
+        }
+      ],
+      "subtotal": 32000,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront after kickoff.",
+      "billingClarity": {
+        "title": "Monthly Partnership Scope",
+        "scopeIncluded": [
+          "Paid ads management across agreed channels",
+          "Creative direction and reporting",
+          "Performance review and optimization"
+        ],
+        "scopeExcluded": [
+          "Ad spend",
+          "New platform builds unless sold separately"
+        ]
+      },
+      "legacyServiceCode": "DRM+SM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["ecommerce", "partnership", "retainer", "ongoing"]
+    },
+    {
+      "slug": "gcc-store-rebuild-sar",
+      "name": "E-Commerce Rebuild",
+      "tierName": "Store Rebuild",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "gcc",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Standalone GCC-market website rebuild module.",
+      "lineItems": [
+        {
+          "description": "Website rebuild (Shopify / Salla / Zid)",
+          "qty": 1,
+          "rate": 24000,
+          "amount": 24000
+        }
+      ],
+      "subtotal": 24000,
+      "currency": "SAR",
+      "paymentTerms": "Due before kickoff.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "GCC",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["ecommerce", "gcc", "rebuild", "launch"]
+    },
+    {
+      "slug": "gcc-roadmap-90d-sar",
+      "name": "Growth Roadmap",
+      "tierName": "90-Day Strategy",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "gcc",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Standalone 90-day strategy and roadmap module for GCC e-commerce projects.",
+      "lineItems": [
+        {
+          "description": "90-day strategy and roadmap",
+          "qty": 1,
+          "rate": 5000,
+          "amount": 5000
+        }
+      ],
+      "subtotal": 5000,
+      "currency": "SAR",
+      "paymentTerms": "Due before strategy work begins.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "GCC",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["ecommerce", "gcc", "strategy", "launch"]
+    },
+    {
+      "slug": "gcc-tracking-setup-sar",
+      "name": "Tracking Foundation",
+      "tierName": "Precision Tracking",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "gcc",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "GCC-market precision tracking setup sold as a standalone module.",
+      "lineItems": [
+        {
+          "description": "Precision tracking setup",
+          "qty": 1,
+          "rate": 3000,
+          "amount": 3000
+        }
+      ],
+      "subtotal": 3000,
+      "currency": "SAR",
+      "paymentTerms": "Due before implementation.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "GCC",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["ecommerce", "gcc", "tracking", "launch"]
+    },
+    {
+      "slug": "gcc-ads-month1-sar",
+      "name": "Paid Ads Management",
+      "tierName": "Month 1",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "gcc",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Month 1 paid ads management for GCC-market launch programs.",
+      "lineItems": [
+        {
+          "description": "Month 1 paid ads management",
+          "qty": 1,
+          "rate": 10000,
+          "amount": 10000
+        }
+      ],
+      "subtotal": 10000,
+      "currency": "SAR",
+      "paymentTerms": "Due before launch.",
+      "legacyServiceCode": "Ad Mgt",
+      "billingCadence": "one_time",
+      "marketRegion": "GCC",
+      "platformCount": 2,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["ecommerce", "gcc", "ads", "launch"]
+    },
+    {
+      "slug": "gcc-ongoing-ads-monthly-sar",
+      "name": "Paid Ads Management",
+      "tierName": "Monthly Continuation",
+      "family": "ecommerce",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "gcc",
+      "commercialStage": "ongoing",
+      "basePackageSlug": "gcc-ads-month1-sar",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Ongoing GCC-market ads management after the initial launch month.",
+      "lineItems": [
+        {
+          "description": "Ongoing paid ads management",
+          "qty": 1,
+          "rate": 8000,
+          "amount": 8000
+        }
+      ],
+      "subtotal": 8000,
+      "currency": "SAR",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "Ad Mgt",
+      "billingCadence": "monthly",
+      "marketRegion": "GCC",
+      "platformCount": 2,
+      "minimumEngagementMonths": 6,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["ecommerce", "gcc", "ads", "ongoing"]
+    },
+    {
+      "slug": "ecommerce-launch-gcc-sar",
+      "name": "E-Commerce Growth Launch",
+      "tierName": "GCC Ramadan Bundle",
+      "family": "ecommerce",
+      "catalogLayer": "bundle",
+      "pricingModel": "phased_bundle",
+      "market": "gcc",
+      "commercialStage": "launch",
+      "basePackageSlug": "gcc-store-rebuild-sar",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "GCC launch bundle based on the Ein Abayaa Ramadan special commercial structure.",
+      "lineItems": [
+        {
+          "description": "Full custom website rebuild",
+          "qty": 1,
+          "rate": 24000,
+          "amount": 24000
+        },
+        {
+          "description": "90-day strategy and roadmap",
+          "qty": 1,
+          "rate": 5000,
+          "amount": 5000
+        },
+        {
+          "description": "Month 1 paid ads management",
+          "qty": 1,
+          "rate": 10000,
+          "amount": 10000
+        },
+        {
+          "description": "Precision tracking setup",
+          "qty": 1,
+          "rate": 3000,
+          "amount": 3000
+        }
+      ],
+      "subtotal": 42000,
+      "currency": "SAR",
+      "discount": 22000,
+      "discountLabel": "Launch bundle pricing",
+      "paymentTerms": "Project total 20,000 SAR. Proposal can be split into two payments during invoicing if needed.",
+      "billingClarity": {
+        "title": "Launch Bundle",
+        "dueNowLabel": "Client-facing proposal total before any payment split",
+        "schedule": [
+          {
+            "label": "Ongoing ads management",
+            "value": "8,000 SAR / month after month 1"
+          }
+        ],
+        "scopeIncluded": [
+          "Website rebuild",
+          "Strategy and roadmap",
+          "Month 1 paid ads management",
+          "Tracking and SEO foundation"
+        ],
+        "scopeExcluded": [
+          "Ad spend",
+          "Klaviyo or automation add-ons unless approved separately"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Saudi Arabia",
+      "platformCount": 2,
+      "minimumEngagementMonths": 6,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["ecommerce", "gcc", "launch", "bundle"]
+    },
+    {
+      "slug": "ad-management-monthly-egp",
+      "name": "Ad Management",
+      "tierName": "Monthly Retainer",
+      "family": "performance",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Standalone ad-management retainer for performance-focused client work.",
+      "lineItems": [
+        {
+          "description": "Ad management — monthly",
+          "qty": 1,
+          "rate": 12500,
+          "amount": 12500
+        }
+      ],
+      "subtotal": 12500,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "Ad Mgt",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "minimumEngagementMonths": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["performance", "ads", "retainer", "ongoing"]
+    },
+    {
+      "slug": "ad-management-3mo-egp",
+      "name": "Ad Management",
+      "tierName": "3-Month Block",
+      "family": "performance",
+      "catalogLayer": "bundle",
+      "pricingModel": "quarterly_prepay",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "ad-management-monthly-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Three-month ad management block.",
+      "lineItems": [
+        {
+          "description": "Ad management — 3 months",
+          "qty": 1,
+          "rate": 37500,
+          "amount": 37500
+        }
+      ],
+      "subtotal": 37500,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff.",
+      "legacyServiceCode": "Ad Mgt",
+      "billingCadence": "3_months",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["performance", "ads", "retainer", "quarterly"]
+    },
+    {
+      "slug": "growth-assets-bulk-egp",
+      "name": "Growth Assets",
+      "tierName": "Bulk Ownership",
+      "family": "growth_ops",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Landing pages, creative suite, and flows transferred from day one.",
+      "lineItems": [
+        {
+          "description": "Growth assets — bulk ownership package",
+          "qty": 1,
+          "rate": 45000,
+          "amount": 45000
+        }
+      ],
+      "subtotal": 45000,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["growth_ops", "assets", "ownership", "launch"]
+    },
+    {
+      "slug": "growth-system-3mo-egp",
+      "name": "Growth System",
+      "tierName": "3-Month Subscription",
+      "family": "growth_ops",
+      "catalogLayer": "core_module",
+      "pricingModel": "quarterly_prepay",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "basePackageSlug": "growth-system-monthly-egp",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Three-month subscription to the Admireworks growth system.",
+      "lineItems": [
+        {
+          "description": "Growth system subscription — 3 months",
+          "qty": 1,
+          "rate": 16500,
+          "amount": 16500
+        }
+      ],
+      "subtotal": 16500,
+      "currency": "EGP",
+      "paymentTerms": "Due before kickoff.",
+      "billingClarity": {
+        "title": "Subscription Structure",
+        "schedule": [
+          {
+            "label": "After month 3",
+            "value": "5,500 EGP / month"
+          }
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "3_months",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "minimumEngagementMonths": 3,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["growth_ops", "subscription", "system", "launch"]
+    },
+    {
+      "slug": "growth-system-monthly-egp",
+      "name": "Growth System",
+      "tierName": "Monthly Subscription",
+      "family": "growth_ops",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Monthly continuation of the growth system subscription.",
+      "lineItems": [
+        {
+          "description": "Growth system subscription — monthly",
+          "qty": 1,
+          "rate": 5500,
+          "amount": 5500
+        }
+      ],
+      "subtotal": 5500,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["growth_ops", "subscription", "system", "ongoing"]
+    },
+    {
+      "slug": "creative-pack-quarterly-egp",
+      "name": "Creative Pack",
+      "tierName": "Quarterly",
+      "family": "creative",
+      "catalogLayer": "add_on",
+      "pricingModel": "quarterly_prepay",
+      "market": "egypt",
+      "commercialStage": "upgrade",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Quarterly creative pack for performance and social use.",
+      "lineItems": [
+        {
+          "description": "Quarterly creative pack (8 videos + 4 images)",
+          "qty": 1,
+          "rate": 24000,
+          "amount": 24000
+        }
+      ],
+      "subtotal": 24000,
+      "currency": "EGP",
+      "paymentTerms": "Due before production.",
+      "legacyServiceCode": "Ad Mgt",
+      "billingCadence": "3_months",
+      "marketRegion": "Egypt",
+      "platformCount": 2,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["creative", "content", "quarterly", "add_on"]
+    },
+    {
+      "slug": "crm-setup-egp",
+      "name": "CRM System",
+      "tierName": "Setup",
+      "family": "add_on",
+      "catalogLayer": "add_on",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "CRM setup and integration package.",
+      "lineItems": [
+        {
+          "description": "CRM setup and integration",
+          "qty": 1,
+          "rate": 7500,
+          "amount": 7500
+        }
+      ],
+      "subtotal": 7500,
+      "currency": "EGP",
+      "paymentTerms": "Due before setup begins.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["add_on", "crm", "system", "launch"]
+    },
+    {
+      "slug": "crm-monthly-egp",
+      "name": "CRM System",
+      "tierName": "Monthly",
+      "family": "add_on",
+      "catalogLayer": "add_on",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Monthly CRM continuation.",
+      "lineItems": [
+        {
+          "description": "CRM monthly continuation",
+          "qty": 1,
+          "rate": 3500,
+          "amount": 3500
+        }
+      ],
+      "subtotal": 3500,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["add_on", "crm", "retainer", "ongoing"]
+    },
+    {
+      "slug": "reply-management-setup-egp",
+      "name": "Reply Management",
+      "tierName": "Setup",
+      "family": "add_on",
+      "catalogLayer": "add_on",
+      "pricingModel": "one_time",
+      "market": "egypt",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Reply management setup and integration.",
+      "lineItems": [
+        {
+          "description": "Reply management setup and integration",
+          "qty": 1,
+          "rate": 12500,
+          "amount": 12500
+        }
+      ],
+      "subtotal": 12500,
+      "currency": "EGP",
+      "paymentTerms": "Due before setup begins.",
+      "legacyServiceCode": "DRM+SM",
+      "billingCadence": "one_time",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["add_on", "reply_management", "system", "launch"]
+    },
+    {
+      "slug": "reply-management-monthly-egp",
+      "name": "Reply Management",
+      "tierName": "Monthly",
+      "family": "add_on",
+      "catalogLayer": "add_on",
+      "pricingModel": "monthly",
+      "market": "egypt",
+      "commercialStage": "ongoing",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Monthly reply management continuation.",
+      "lineItems": [
+        {
+          "description": "Reply management monthly continuation",
+          "qty": 1,
+          "rate": 5000,
+          "amount": 5000
+        }
+      ],
+      "subtotal": 5000,
+      "currency": "EGP",
+      "paymentTerms": "Monthly upfront.",
+      "legacyServiceCode": "DRM+SM",
+      "billingCadence": "monthly",
+      "marketRegion": "Egypt",
+      "platformCount": 1,
+      "sendLeadDays": 3,
+      "paymentMethods": ["instapay", "bank_transfer"],
+      "paymentRegion": "egypt",
+      "isSeeded": true,
+      "tags": ["add_on", "reply_management", "retainer", "ongoing"]
+    },
+    {
+      "slug": "mond-system-activation-aed",
+      "name": "Mond System — Activation",
+      "tierName": "Setup + Launch (3 schools / divisions)",
+      "family": "growth_ops",
+      "catalogLayer": "core_module",
+      "pricingModel": "one_time",
+      "market": "gcc",
+      "commercialStage": "launch",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "One-time activation of the Mond unified growth platform for a multi-school / multi-division client (3 schools or business units): branded admin portal, CRM with lead scoring, multi-channel landing pages per school, WhatsApp inbox + AI replies, email sequences, customer journey orchestration, and unified analytics dashboard across all ad channels.",
+      "lineItems": [
+        {
+          "description": "Mond System — branded activation, configuration, integrations, and launch (3 schools)",
+          "qty": 1,
+          "rate": 15000,
+          "amount": 15000
+        }
+      ],
+      "subtotal": 15000,
+      "currency": "AED",
+      "paymentTerms": "Activation fee may be deferred to Month 2 in trial-first engagements (only billed if Client elects to continue after the free trial month). Default: due before kickoff.",
+      "billingClarity": {
+        "title": "What This Activation Covers",
+        "dueNowLabel": "Due now to provision the platform and begin trial month",
+        "scopeIncluded": [
+          "Branded Mond admin portal provisioned for your team",
+          "CRM setup with lead scoring, tagging, and pipeline stages",
+          "Lead routing per school or division (multi-school workflow with assignment to your staff)",
+          "WhatsApp inbox integration and AI knowledge-base configuration",
+          "Email and WhatsApp template library + initial sequence setup",
+          "Customer journey orchestration (quiz/qualification → follow-up flows)",
+          "Unified analytics dashboard pulling Meta, Snapchat, Google, and TikTok data into one view",
+          "Tracking pixels, UTM scheme, and attribution baseline",
+          "User management and role-based access for your team"
+        ],
+        "scopeExcluded": [
+          "Ad spend (paid directly to platforms)",
+          "Custom feature development beyond the standard Mond modules",
+          "Hosting fees beyond Month 1 (covered by monthly platform fee)"
+        ],
+        "schedule": [
+          { "label": "Month 1 platform access (trial)", "value": "Included free with activation" },
+          { "label": "Monthly platform operations (Month 2+)", "value": "2,500 AED / month (only if continuing)" }
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "one_time",
+      "marketRegion": "GCC",
+      "platformCount": 4,
+      "sendLeadDays": 3,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["growth_ops", "mond", "activation", "launch", "education"]
+    },
+    {
+      "slug": "mond-system-monthly-aed",
+      "name": "Mond System — Monthly Operations",
+      "tierName": "Monthly Subscription (multi-school)",
+      "family": "growth_ops",
+      "catalogLayer": "core_module",
+      "pricingModel": "monthly",
+      "market": "gcc",
+      "commercialStage": "ongoing",
+      "basePackageSlug": "mond-system-activation-aed",
+      "duplicateBehavior": "shared_to_client_copy",
+      "scope": "shared",
+      "status": "active",
+      "description": "Ongoing Mond platform hosting, maintenance, security patches, content updates, new landing page additions, automation flow updates, and AI knowledge-base curation for a multi-school / multi-division client.",
+      "lineItems": [
+        {
+          "description": "Mond platform operations, maintenance, content updates, and ongoing support (multi-school)",
+          "qty": 1,
+          "rate": 4500,
+          "amount": 4500
+        }
+      ],
+      "subtotal": 4500,
+      "currency": "AED",
+      "paymentTerms": "Billed monthly starting Month 2 (Month 1 is included with Activation as a free trial).",
+      "billingClarity": {
+        "title": "What Monthly Operations Cover",
+        "dueNowLabel": "Recurring — billed monthly from Month 2",
+        "scopeIncluded": [
+          "Hosting, uptime monitoring, and security patches",
+          "Maintenance of CRM, automations, and integrations",
+          "New landing page builds and edits as scoped",
+          "WhatsApp/Email template updates",
+          "AI knowledge-base curation and tone tuning",
+          "Monthly platform performance review"
+        ],
+        "scopeExcluded": [
+          "Ad spend and ad management (separate service)",
+          "Major feature development",
+          "3rd-party tool subscription costs"
+        ]
+      },
+      "legacyServiceCode": "DRM",
+      "billingCadence": "monthly",
+      "marketRegion": "GCC",
+      "minimumEngagementMonths": 1,
+      "paymentMethods": ["stripe", "bank_transfer"],
+      "paymentRegion": "international",
+      "isSeeded": true,
+      "tags": ["growth_ops", "mond", "ongoing", "monthly", "subscription"]
+    }
+  ]
+}

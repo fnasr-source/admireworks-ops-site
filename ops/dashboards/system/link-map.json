@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-08-30T12:09:44.020Z",
+  "repo_slug": "fnasr-source/admireworks-internal-os",
+  "links": {
+    "internal_home": "https://ops.admireworks.com/ops/dashboards/index.html",
+    "proposals_hub": "https://ops.admireworks.com/ops/proposal-system/_Outgoing/_internal-crm/index.html",
+    "proposals_hub_mirror": "https://ops.admireworks.com/ops/dashboards/proposals/index.html",
+    "strategies_hub": "https://ops.admireworks.com/ops/dashboards/strategies/index.html",
+    "system_manual": "https://ops.admireworks.com/ops/dashboards/system/index.html",
+    "system_manual_md": "https://ops.admireworks.com/ops/dashboards/system/INDEX.md",
+    "proposal_registry": "https://ops.admireworks.com/ops/proposal-system/proposal-registry.csv",
+    "proposal_crm": "https://ops.admireworks.com/ops/proposal-system/proposal-crm.csv",
+    "numbering_system": "https://ops.admireworks.com/ops/proposal-system/NUMBERING-SYSTEM.md",
+    "workflow_checklist": "https://ops.admireworks.com/ops/proposal-system/WORKFLOW-CHECKLIST.md",
+    "payment_rules": "https://ops.admireworks.com/ops/proposal-system/PAYMENT-RULES.md",
+    "link_standards": "https://ops.admireworks.com/ops/proposal-system/LINK-STANDARDS.md",
+    "strategies_root": "https://ops.admireworks.com/ops/dashboards/strategies/index.html",
+    "link_map": "https://ops.admireworks.com/ops/dashboards/system/link-map.json",
+    "youtube_monitor": "https://ops.admireworks.com/youtube-monitor/index.html"
+  }
+}

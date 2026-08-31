@@ -1,0 +1,86 @@
+{
+  "id": "growth-strategy",
+  "name": "Growth Strategy",
+  "description": "Revenue growth, acquisition channels, and scaling roadmap.",
+  "framework": "growth",
+  "locale": "en",
+  "slides": [
+    {
+      "order": 0,
+      "layout": "cover",
+      "content": { "title": "Growth Strategy", "subtitle": "Acquisition, Retention & Scale", "client": "Client Name", "date": "2026" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 1000,
+      "layout": "section-divider",
+      "content": { "section_number": "01", "title": "Current State" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 2000,
+      "layout": "grid-3",
+      "content": {
+        "title": "Key Metrics",
+        "items": [
+          { "label": "Monthly Revenue", "value": "AED [X]" },
+          { "label": "Active Customers", "value": "[X]" },
+          { "label": "Avg. Order Value", "value": "AED [X]" }
+        ]
+      },
+      "presenterNotes": "Fill in actual figures before the presentation."
+    },
+    {
+      "order": 3000,
+      "layout": "section-divider",
+      "content": { "section_number": "02", "title": "Growth Opportunities" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 4000,
+      "layout": "funnel",
+      "content": {
+        "title": "Acquisition Funnel",
+        "stages": [
+          { "label": "Awareness", "description": "Paid ads, organic, referral" },
+          { "label": "Consideration", "description": "Landing page, lead magnet" },
+          { "label": "Decision", "description": "Offer, social proof, guarantee" },
+          { "label": "Retention", "description": "Onboarding, upsell, loyalty" }
+        ]
+      },
+      "presenterNotes": "Walk through each stage of the customer journey."
+    },
+    {
+      "order": 5000,
+      "layout": "section-divider",
+      "content": { "section_number": "03", "title": "90-Day Plan" },
+      "presenterNotes": ""
+    },
+    {
+      "order": 6000,
+      "layout": "title-bullets",
+      "content": {
+        "title": "Priority Initiatives",
+        "subtitle": "Next 90 days",
+        "bullets": [
+          "Initiative 1: [High-impact action]",
+          "Initiative 2: [Channel activation]",
+          "Initiative 3: [Conversion optimization]",
+          "Initiative 4: [Retention improvement]"
+        ]
+      },
+      "presenterNotes": ""
+    },
+    {
+      "order": 7000,
+      "layout": "closing",
+      "content": {
+        "title": "Growth Target",
+        "subtitle": "Where we're going together.",
+        "cta": "Let's get started",
+        "contact": "hello@admireworks.com"
+      },
+      "presenterNotes": ""
+    }
+  ]
+}

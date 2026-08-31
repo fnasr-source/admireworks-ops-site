@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genco — Ad Account Audits (2026-05-18)</title>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<style>
+  :root {
+    --navy: #001a70;
+    --gold: #cc9f53;
+    --ink: #1a1a1a;
+    --muted: #5a6072;
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --border: #e6e3da;
+    --code-bg: #f4f2ec;
+    --red: #d44315;
+    --green: #44756a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  header {
+    background: var(--navy);
+    color: white;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    position: sticky; top: 0; z-index: 10;
+  }
+  header h1 {
+    margin: 0; font-size: 16px; font-weight: 600; letter-spacing: 0.2px;
+  }
+  header .meta { font-size: 13px; opacity: 0.72; }
+  nav.tabs {
+    display: flex; gap: 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 48px; z-index: 9;
+  }
+  nav.tabs button {
+    appearance: none; border: 0; background: transparent;
+    padding: 14px 24px; font: inherit; font-weight: 500;
+    color: var(--muted); cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  nav.tabs button:hover { color: var(--ink); }
+  nav.tabs button.active {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+  }
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 28px 80px;
+  }
+  .doc { display: none; }
+  .doc.active { display: block; }
+  .doc h1 { font-size: 28px; font-weight: 700; color: var(--navy); margin: 0 0 8px; line-height: 1.25; }
+  .doc h2 { font-size: 22px; color: var(--navy); margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .doc h3 { font-size: 18px; color: var(--ink); margin: 28px 0 10px; }
+  .doc h4 { font-size: 15px; color: var(--ink); margin: 20px 0 8px; }
+  .doc p, .doc li { color: var(--ink); }
+  .doc blockquote {
+    border-left: 3px solid var(--gold);
+    margin: 12px 0; padding: 4px 16px;
+    color: var(--muted); background: rgba(204,159,83,0.06);
+  }
+  .doc code {
+    font: 13px/1.5 ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+    background: var(--code-bg); padding: 1px 6px; border-radius: 4px;
+  }
+  .doc pre { background: var(--code-bg); padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+  .doc pre code { background: none; padding: 0; }
+  .doc table { border-collapse: collapse; margin: 14px 0; width: 100%; font-size: 14px; }
+  .doc th, .doc td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: top; }
+  .doc th { background: var(--code-bg); font-weight: 600; }
+  .doc tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+  .doc strong { color: var(--ink); }
+  .doc a { color: var(--navy); }
+  .doc hr { border: 0; border-top: 1px solid var(--border); margin: 36px 0; }
+  .loading { color: var(--muted); font-style: italic; }
+  .err { color: var(--red); padding: 16px; background: rgba(212,67,21,0.06); border-radius: 8px; }
+  .toc {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px 20px; margin: 12px 0 24px; font-size: 14px;
+  }
+  .toc strong { display: block; margin-bottom: 6px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .toc a { display: block; color: var(--ink); text-decoration: none; padding: 2px 0; }
+  .toc a:hover { color: var(--navy); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Genco — Ad Account Audits</h1>
+  <span class="meta">2026-05-18 · Internal · Admireworks</span>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="meta">Meta · act_5658…</button>
+  <button class="tab-btn" data-tab="google">Google Ads · 903-356-9098</button>
+</nav>
+
+<main>
+  <article id="meta" class="doc active"><p class="loading">Loading Meta audit…</p></article>
+  <article id="google" class="doc"><p class="loading">Loading Google Ads audit…</p></article>
+</main>
+
+<script>
+  async function loadDoc(id, path) {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const md = await res.text();
+      document.getElementById(id).innerHTML = marked.parse(md);
+    } catch (e) {
+      document.getElementById(id).innerHTML = `<div class="err">Failed to load ${path}: ${e.message}</div>`;
+    }
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+      document.querySelectorAll('.doc').forEach(d => d.classList.toggle('active', d.id === btn.dataset.tab));
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+  });
+
+  loadDoc('meta', 'meta-ad-audit-2026-05-18.md');
+  loadDoc('google', 'google-ads-audit-2026-05-18.md');
+</script>
+
+</body>
+</html>

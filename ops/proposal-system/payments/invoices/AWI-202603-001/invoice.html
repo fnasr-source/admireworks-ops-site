@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RQM Group — Invoice AWI-202603-001 | Admireworks</title>
+    <link rel="stylesheet" href="../../payment-pages.css">
+    <style>
+        .invoice-note {
+            margin: 0 0 24px;
+            padding: 16px 18px;
+            background: #f9f8f5;
+            border: 1px solid var(--aw-border);
+            border-left: 4px solid var(--aw-gold);
+            border-radius: 12px;
+            font-size: 0.86rem;
+            color: var(--aw-muted);
+        }
+
+        .invoice-note strong {
+            color: var(--aw-text);
+        }
+
+        .supporting-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 0 28px;
+            font-size: 0.86rem;
+        }
+
+        .supporting-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0ede6;
+            color: var(--aw-muted);
+        }
+
+        .supporting-table td:last-child {
+            text-align: right;
+            color: var(--aw-navy);
+            font-weight: 600;
+        }
+
+        .terms {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--aw-border);
+            font-size: 0.78rem;
+            color: var(--aw-muted);
+            line-height: 1.6;
+        }
+
+        @media print {
+            .btn-pay {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="invoice-container">
+            <div class="invoice-header">
+                <div>
+                    <h2>Invoice</h2>
+                    <p style="font-size:0.85rem;color:var(--aw-muted);margin-top:4px;">Invoice #: AWI-202603-001</p>
+                </div>
+                <div style="text-align:right;">
+                    <p style="font-size:0.85rem;font-weight:700;color:var(--aw-navy);letter-spacing:0.06em;">ADMIREWORKS</p>
+                    <p style="font-size:0.75rem;color:var(--aw-muted);line-height:1.4;margin-top:6px;">
+                        Admirable Venture Services<br>
+                        P.O.Box/36846, DXB, UAE<br>
+                        hello@admireworks.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="invoice-details">
+                <div class="detail-block">
+                    <h4>Bill To</h4>
+                    <p><strong>RQM Group</strong></p>
+                    <p>QYD, RQM &amp; Ceyaj</p>
+                    <p>ralasigaa@rqm.sa</p>
+                </div>
+                <div class="detail-block">
+                    <h4>Invoice Details</h4>
+                    <p><strong>Invoice #:</strong> AWI-202603-001</p>
+                    <p><strong>Invoice Date:</strong> March 13, 2026</p>
+                    <p><strong>Due Date:</strong> March 31, 2026</p>
+                    <p><strong>Currency:</strong> AED</p>
+                    <p><strong>Status:</strong> <span style="color:var(--aw-gold);font-weight:600;">Pending</span></p>
+                </div>
+            </div>
+
+            <div class="invoice-note">
+                <strong>March service period only:</strong> This invoice covers the 12 active service days in March 2026 (March 1–12) prior to the agreed pause. April 2026 will not be billed as work is paused for the month. Services resume in May 2026.
+            </div>
+
+            <table class="invoice-items">
+                <thead>
+                    <tr>
+                        <th style="width:55%">Description</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Full Marketing Retainer — Prorated March 1–12, 2026</strong>
+                            <div class="item-desc">
+                                12 active service days before the agreed pause effective March 12, 2026.
+                                Calculated as 12/31 of the monthly retainer (5,500 AED).
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>2,129 AED</td>
+                        <td>2,129 AED</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="supporting-table">
+                <tbody>
+                    <tr>
+                        <td>March proration basis</td>
+                        <td>5,500 / 31 × 12 = 2,129.03 AED, rounded to 2,129 AED</td>
+                    </tr>
+                    <tr>
+                        <td>April 2026</td>
+                        <td>Not billed — work paused for the month</td>
+                    </tr>
+                    <tr>
+                        <td>Services resume</td>
+                        <td>May 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="invoice-total">
+                <div class="total-box">
+                    <div class="total-row">
+                        <span class="label">Subtotal</span>
+                        <span>2,129 AED</span>
+                    </div>
+                    <div class="total-row grand">
+                        <span class="label">Total Due</span>
+                        <span>2,129 AED</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://my.admireworks.com/invoice/AWI-202603-001" class="btn-pay" style="max-width:400px;margin:0 auto;">
+                Review / Pay Invoice
+            </a>
+
+            <div class="terms">
+                <p><strong style="color:var(--aw-text);">Terms &amp; Notes:</strong></p>
+                <p>This invoice covers the prorated March 2026 service period only (March 1–12, 2026). April 2026 is not billed in line with the agreed work pause. The engagement resumes in May 2026, at which point the standard monthly retainer of 5,500 AED will apply.</p>
+                <p style="margin-top:6px;">For any clarification, contact <a href="mailto:hello@admireworks.com" style="color:var(--aw-navy);">hello@admireworks.com</a> or (+971) 4295 8666.</p>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <p class="brand-name">ADMIREWORKS</p>
+            <p>Admirable Venture Services · Dubai, UAE</p>
+        </footer>
+    </div>
+</body>
+</html>

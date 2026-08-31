@@ -1,0 +1,298 @@
+{
+  "templates": [
+    {
+      "scope": "shared",
+      "templateKey": "funnel-engine-vs-partnership",
+      "name": "Funnel Engine vs Partnership",
+      "category": "lead_gen",
+      "description": "Lead-generation comparison template spanning lite build, standard build, managed growth, and full partnership.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "option-lite",
+          "label": "Option 0 — Lead Gen Lite Build",
+          "packageSlugs": ["lead-gen-build-lite-egp"]
+        },
+        {
+          "id": "option-1",
+          "label": "Option 1 — Funnel Engine Only",
+          "packageSlugs": ["funnel-engine-build-egp"]
+        },
+        {
+          "id": "option-2",
+          "label": "Option 2 — Managed Growth + Media Buying",
+          "packageSlugs": ["managed-growth-media-buying-egp"]
+        },
+        {
+          "id": "option-3",
+          "label": "Option 3 — Full Growth Partnership",
+          "packageSlugs": ["full-growth-partnership-start-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "monthly-support-egp",
+        "managed-acquisition-monthly-egp",
+        "reply-management-setup-egp",
+        "reply-management-monthly-egp",
+        "crm-setup-egp",
+        "crm-monthly-egp",
+        "creative-pack-quarterly-egp"
+      ]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "build-vs-managed-growth",
+      "name": "Build vs Managed Growth",
+      "category": "lead_gen",
+      "description": "Two-option commercial structure for clients choosing between build/support and managed acquisition.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "Option 1 — Fixed Build + Monthly Support",
+          "packageSlugs": ["fixed-build-support-egp"]
+        },
+        {
+          "id": "option-2",
+          "label": "Option 2 — Managed Growth + Media Buying",
+          "packageSlugs": ["managed-growth-media-buying-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "monthly-support-egp",
+        "managed-acquisition-monthly-egp",
+        "creative-pack-quarterly-egp"
+      ]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "asset-ownership-vs-subscription",
+      "name": "Asset Ownership vs Subscription",
+      "category": "performance",
+      "description": "MHK-style comparison between bulk-owned assets and the growth-system subscription model.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "Option 1 — Ad Management + Growth Assets",
+          "packageSlugs": ["ad-management-3mo-egp", "growth-assets-bulk-egp"]
+        },
+        {
+          "id": "option-2",
+          "label": "Option 2 — Ad Management + Growth System Subscription",
+          "packageSlugs": ["ad-management-3mo-egp", "growth-system-3mo-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "ad-management-monthly-egp",
+        "growth-system-monthly-egp",
+        "creative-pack-quarterly-egp"
+      ]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "ecommerce-egypt-launch",
+      "name": "E-Commerce Egypt Launch",
+      "category": "ecommerce",
+      "description": "Egypt-market launch structure covering standard build, agreed launch build, and build-plus-month-1 starts.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "Option 1 — Standard Build",
+          "packageSlugs": ["ecommerce-build-standard-egp"]
+        },
+        {
+          "id": "option-2",
+          "label": "Option 2 — Launch Build Variant",
+          "packageSlugs": ["ecommerce-build-egypt-egp"]
+        },
+        {
+          "id": "option-3",
+          "label": "Option 3 — Build + Month 1 Growth Launch",
+          "packageSlugs": ["ecommerce-growth-launch-egypt-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "ecommerce-growth-launch-monthly-egp",
+        "creative-pack-quarterly-egp",
+        "crm-setup-egp",
+        "reply-management-setup-egp"
+      ]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "ecommerce-gcc-launch",
+      "name": "E-Commerce GCC Launch",
+      "category": "ecommerce",
+      "description": "GCC-market launch template covering rebuild-only, full-value modular stacks, and the Ramadan special bundle.",
+      "defaultCurrency": "SAR",
+      "status": "active",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "Option 1 — Store Rebuild Only",
+          "packageSlugs": ["gcc-store-rebuild-sar"]
+        },
+        {
+          "id": "option-2",
+          "label": "Option 2 — Full-Value Launch Stack",
+          "packageSlugs": ["gcc-store-rebuild-sar", "gcc-roadmap-90d-sar", "gcc-ads-month1-sar", "gcc-tracking-setup-sar"]
+        },
+        {
+          "id": "option-3",
+          "label": "Option 3 — Ramadan Special Launch Bundle",
+          "packageSlugs": ["ecommerce-launch-gcc-sar"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": ["gcc-ongoing-ads-monthly-sar"]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "growth-add-ons",
+      "name": "Growth Add-Ons",
+      "category": "add_on",
+      "description": "Reusable add-on template for CRM, reply management, creative packs, and ongoing support layers.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "crm",
+          "label": "CRM System",
+          "packageSlugs": ["crm-setup-egp", "crm-monthly-egp"]
+        },
+        {
+          "id": "reply-management",
+          "label": "Reply Management",
+          "packageSlugs": ["reply-management-setup-egp", "reply-management-monthly-egp"]
+        },
+        {
+          "id": "creative-pack",
+          "label": "Creative Pack",
+          "packageSlugs": ["creative-pack-quarterly-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": ["monthly-support-egp", "managed-acquisition-monthly-egp", "gcc-ongoing-ads-monthly-sar"]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "lead-gen-system",
+      "name": "Lead Gen System Ladder",
+      "category": "lead_gen",
+      "description": "Broader lead-gen selling ladder for new proposals, from lite build to partnership.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "lite-build",
+          "label": "Lead Gen Lite Build",
+          "packageSlugs": ["lead-gen-build-lite-egp"]
+        },
+        {
+          "id": "standard-build",
+          "label": "Standard Funnel Build",
+          "packageSlugs": ["funnel-engine-build-egp"]
+        },
+        {
+          "id": "managed-growth",
+          "label": "Managed Growth Launch",
+          "packageSlugs": ["managed-growth-media-buying-egp"]
+        },
+        {
+          "id": "full-partnership",
+          "label": "Full Growth Partnership",
+          "packageSlugs": ["full-growth-partnership-start-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "monthly-support-egp",
+        "managed-acquisition-monthly-egp",
+        "creative-pack-quarterly-egp",
+        "crm-setup-egp",
+        "reply-management-setup-egp"
+      ]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "ecommerce-egypt-growth-ladder",
+      "name": "E-Commerce Egypt Growth Ladder",
+      "category": "ecommerce",
+      "description": "Progressive Egypt-market template covering build-only, launch bundle, and partnership-style starts.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "build-standard",
+          "label": "Standard Build",
+          "packageSlugs": ["ecommerce-build-standard-egp"]
+        },
+        {
+          "id": "build-launch-variant",
+          "label": "Launch Build Variant",
+          "packageSlugs": ["ecommerce-build-egypt-egp"]
+        },
+        {
+          "id": "launch-bundle",
+          "label": "Build + Month 1 Growth Launch",
+          "packageSlugs": ["ecommerce-growth-launch-egypt-egp"],
+          "isRecommended": true
+        },
+        {
+          "id": "partnership-start",
+          "label": "Build + Growth Partnership Start",
+          "packageSlugs": ["ecommerce-build-standard-egp", "ecommerce-partnership-monthly-egp"]
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "ecommerce-growth-launch-monthly-egp",
+        "creative-pack-quarterly-egp",
+        "crm-setup-egp",
+        "reply-management-setup-egp"
+      ]
+    },
+    {
+      "scope": "shared",
+      "templateKey": "performance-retainers",
+      "name": "Performance Retainers",
+      "category": "performance",
+      "description": "Performance-first offer template covering pure ad management, asset ownership, and the subscription system.",
+      "defaultCurrency": "EGP",
+      "status": "active",
+      "options": [
+        {
+          "id": "ad-management-only",
+          "label": "Ad Management Only",
+          "packageSlugs": ["ad-management-monthly-egp"]
+        },
+        {
+          "id": "ad-management-assets",
+          "label": "Ad Management + Owned Growth Assets",
+          "packageSlugs": ["ad-management-3mo-egp", "growth-assets-bulk-egp"]
+        },
+        {
+          "id": "ad-management-system",
+          "label": "Ad Management + Growth System Subscription",
+          "packageSlugs": ["ad-management-3mo-egp", "growth-system-3mo-egp"],
+          "isRecommended": true
+        }
+      ],
+      "availableAddOnPackageSlugs": [
+        "growth-system-monthly-egp",
+        "creative-pack-quarterly-egp",
+        "crm-setup-egp",
+        "reply-management-setup-egp"
+      ]
+    }
+  ]
+}

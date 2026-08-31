@@ -1,0 +1,20 @@
+{
+  "id": "blank",
+  "name": "Blank Strategy",
+  "description": "Start from scratch with a single cover slide.",
+  "framework": "blank",
+  "locale": "en",
+  "slides": [
+    {
+      "order": 0,
+      "layout": "cover",
+      "content": {
+        "title": "Strategy Title",
+        "subtitle": "Your strategy subtitle here",
+        "client": "Client Name",
+        "date": "2026"
+      },
+      "presenterNotes": ""
+    }
+  ]
+}

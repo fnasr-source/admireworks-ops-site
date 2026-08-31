@@ -1,0 +1,1705 @@
+{
+  "meta": {
+    "client_name": "ASM Minds",
+    "strategy_type": "Direct Response Marketing Strategy",
+    "quarter": "Q1",
+    "year": "2026",
+    "language": "ar",
+    "rtl_support": true,
+    "created_date": "2026-03-26",
+    "version": "2.0",
+    "versions": [
+      {
+        "version": "1.0",
+        "date": "2026-03-26",
+        "notes": "Initial strategy — Full DR Marketing Strategy for medical education ecosystem",
+        "comments": []
+      },
+      {
+        "version": "2.0",
+        "date": "2026-03-26",
+        "notes": "Research-verified version — all stats verified against DataReportal, Statista, NapoleonCat, CAPMAS, PLOS ONE, Cureus. Visual-first presentation.",
+        "comments": []
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "slide-001",
+      "section": "cover",
+      "layout": "cover",
+      "content": {
+        "title": "Direct Response Marketing Strategy",
+        "client_name": "ASM Minds",
+        "client_name_ar": "ASM Minds",
+        "period": "Q1 - 2026",
+        "subtitle": "Full Funnel Growth Strategy for Medical Education",
+        "branding": "@admireworks",
+        "tagline": "أكبر نظام تعليم طبي متكامل في إسكندرية",
+        "background_image": "./assets/generated/slide-001.png"
+      },
+      "presenter_notes": "Welcome everyone. Today we present the Direct Response Marketing Strategy for ASM Minds — the leading medical education company in Alexandria, Egypt. This strategy covers everything from digital channel setup to conversion funnels, WhatsApp automation, and a full content direction. ASM has built an incredible product ecosystem — 180+ books, Grade Gain, courses, tutoring — and now we build the marketing infrastructure to match.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate marketing presentation cover slide background, abstract geometric patterns inspired by medical education and learning, navy blue (#001a70) and gold (#cc9f53) color palette with hints of medical blue (#1a3a6b), modern professional aesthetic, clean minimal composition, 1920x1080"
+    },
+    {
+      "id": "slide-002",
+      "section": "strategy_brief",
+      "layout": "grid-6",
+      "content": {
+        "title": "Strategy Overview",
+        "boxes": [
+          {
+            "number": "01",
+            "title": "Strategy Brief",
+            "description": "Client situation, product ecosystem & digital readiness"
+          },
+          {
+            "number": "02",
+            "title": "Situation & Objectives",
+            "description": "Challenges, goals & measurable KPIs"
+          },
+          {
+            "number": "03",
+            "title": "Audience & Competitors",
+            "description": "3 personas, 5 competitors profiled, pricing analysis"
+          },
+          {
+            "number": "04",
+            "title": "Campaign Strategy",
+            "description": "Key findings, channel strategy & analysis summary"
+          },
+          {
+            "number": "05",
+            "title": "Direct Response Funnel",
+            "description": "DR funnel, HVCO, landing pages, ad creative & WhatsApp automation"
+          },
+          {
+            "number": "06",
+            "title": "Measurement & Evaluation",
+            "description": "KPIs, tracking framework & reporting cadence"
+          }
+        ]
+      },
+      "presenter_notes": "Here is our strategy structure. We start with understanding where ASM Minds stands today — market leader in Alexandria with 150,000 books sold annually, but marketing infrastructure that hasn't kept pace. We analyze the competitive landscape, define three distinct personas, then build the full conversion funnel with WhatsApp automation at its core. Every recommendation is grounded in verified research data from DataReportal, CAPMAS, and direct client intelligence from our kickoff meeting with Mahmoud.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-003",
+      "section": "client_brief",
+      "layout": "title-body",
+      "content": {
+        "title": "Client Brief",
+        "title_ar": "موجز العميل",
+        "body": "ASM Minds is the leading medical education company in Alexandria, Egypt — serving medical students from day one through graduation with an integrated ecosystem of study books, recorded courses, an interactive question bank (Grade Gain), private tutoring, and free community support via Telegram.\n\nFounded in early 2020 as a student-led initiative during COVID, ASM Minds has grown to 180+ medical references, 150,000+ books sold annually, and a team of 320+ doctors and contributors. Their content stands out because team members physically attend every university lecture and update books same-day — making ASM materials the most current and comprehensive source available.\n\nThe company is now undergoing a digital transformation: launching an e-books app, scaling Grade Gain subscriptions, and professionalizing their marketing to match the scale and quality of what they've built.",
+        "key_facts": [
+          {
+            "label": "Brand",
+            "value": "ASM Minds"
+          },
+          {
+            "label": "Products",
+            "value": "Books | Grade Gain | Courses | E-books | Tutoring"
+          },
+          {
+            "label": "Scale",
+            "value": "150,000+ books/year, 180+ titles, 320+ doctors"
+          },
+          {
+            "label": "Instagram",
+            "value": "8,505 followers, 144 posts (March 2026)"
+          }
+        ]
+      },
+      "presenter_notes": "ASM Minds is not a startup — they are the dominant player in Alexandria medical education with 6 years of operations, 150,000 books sold annually, and a team of 320 doctors and contributors. What makes them unique is the in-lecture update system: team members attend every lecture and update books the same day. No competitor does this. The challenge is that their marketing has not kept pace with product quality. Students don't know the full ecosystem — most only know about the printed books. Our job is to build the conversion infrastructure that matches their product excellence.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional photo of medical textbooks on a clean modern desk with a tablet showing a learning app, warm lighting, academic setting, 1920x1080"
+    },
+    {
+      "id": "slide-003b",
+      "section": "client_brief",
+      "layout": "stat-highlight",
+      "content": {
+        "stat": "150K+",
+        "label": "Books sold annually across 180+ medical titles",
+        "sublabel": "6 years of operations, 320+ doctor contributors, and a team that attends every lecture to update content same-day",
+        "context": "Instagram: 8,505 followers with 90% organic student UGC. Grade Gain question bank is multi-tenant — ready to scale beyond Alexandria. 40-50% of sales have already shifted to digital.",
+        "source": "Client data — verified in kickoff meeting, March 2026"
+      },
+      "presenter_notes": "These numbers tell the story. 150,000 books per year is market dominance in Alexandria. The 320 doctor contributors provide credibility that no competitor can match. And the fact that 40-50% of sales have already shifted to digital shows the market is ready — students want digital, and ASM is the only player with the ecosystem to deliver it. Grade Gain's multi-tenancy means the platform is architecturally ready to serve any Egyptian medical school, not just Alexandria.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-004",
+      "section": "current_situation",
+      "layout": "title-body",
+      "content": {
+        "title": "Current Situation",
+        "title_ar": "الوضع الحالي",
+        "strengths": [
+          "Market leader in Alexandria with 6 years of trust and deep university integration",
+          "150,000 books sold annually; 180+ titles across all medical years",
+          "Grade Gain question bank has multi-tenancy built in — ready to serve multiple universities",
+          "Instagram: 8,505 followers, 144 posts. 90% of content is organic student UGC",
+          "University professors informally validate and reference ASM content in lectures"
+        ],
+        "weaknesses": [
+          "Marketing has not kept pace with product quality — students don't know the full ecosystem",
+          "Digital products (e-books, Grade Gain, recorded courses) are under-marketed despite strong demand",
+          "No proper website, landing pages, or conversion funnel exists",
+          "WhatsApp sales process is manual (4 accounts, 3 people, no automation)",
+          "Meta Business Manager is not properly set up; ads were run from personal accounts",
+          "No presence on TikTok or Google Ads despite audience fit"
+        ]
+      },
+      "presenter_notes": "This is the classic case of a product-led company that has outgrown its marketing. ASM dominates on product quality — no one else updates books same-day from lectures, no one else has 320 doctor contributors. But the marketing infrastructure is years behind. No website, no landing pages, no funnel, no WhatsApp automation, no TikTok, no Google Ads. The opportunity is enormous because the product is already proven — we just need to build the system that brings students to it.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional photo of a student studying with tablet and medical textbooks, modern study environment, warm natural lighting, 1920x1080"
+    },
+    {
+      "id": "slide-005",
+      "section": "challenge_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "CHALLENGE",
+        "title_ar": "التحدي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-005.png"
+      },
+      "presenter_notes": "Let us now look at the four biggest challenges ASM Minds faces — and more importantly, how each challenge represents a clear opportunity for growth.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) accent lines, medical education motif at 10% opacity, modern professional aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-006a",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 1: The Ecosystem Nobody Sees",
+        "title_ar": "التحدي الأول: المنظومة المخفية",
+        "headline": "ASM Minds has 10 distinct products and services, but most students only know about the printed books",
+        "body": "The digital side — Grade Gain, e-books, recorded courses — has not received focused marketing. The result: the strongest product ecosystem in the market is perceived as \"just a book company.\"\n\nThe opportunity is clear: every student who buys a book is a warm lead for courses, Grade Gain, and private tutoring. But without a funnel, these cross-sells don't happen systematically.",
+        "opportunity": "Build product awareness through a proper conversion funnel — every book buyer should discover Grade Gain, courses, and tutoring within 7 days of purchase"
+      },
+      "presenter_notes": "This is ASM's biggest untapped opportunity. They have 9 products but most students only know about the books. Imagine an iceberg — the books are the visible tip, but below the surface is Grade Gain, e-books, recorded courses, tutoring, Telegram community, YouTube lectures. Every single book buyer is a warm lead for at least 3 other products. We need a post-purchase sequence that systematically introduces the full ecosystem.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Iceberg metaphor illustration, small visible tip above water labeled 'Books', massive structure below showing courses, digital platform, community, clean professional style with navy blue and gold accents, 1920x1080"
+    },
+    {
+      "id": "slide-006b",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 2: Credibility Under Attack",
+        "title_ar": "التحدي الثاني: حرب المصداقية",
+        "headline": "Competitors weaponize two attack vectors: AI accusations and anonymous sabotage",
+        "bullets": [
+          {
+            "text": "\"It's AI-generated\" — After early AI question-generation issues on Grade Gain, competitors spread the narrative that ASM uses AI. Reality: ASM's AI-generated visuals are now industry-leading after 6 months of R&D",
+            "source": "Kickoff meeting intel — Mahmoud, March 2026"
+          },
+          {
+            "text": "Anonymous sabotage — Competitors post timed fake negative reviews on university confession Facebook pages. Pattern: attacks only appear for products where ASM has a direct competitor",
+            "source": "Kickoff meeting intel — Mahmoud, March 2026"
+          }
+        ],
+        "key_insight": "Don't defend against AI accusations. Instead, flood the market with doctor endorsements and senior credibility signals. Shift the conversation from 'who made it' to 'who validated it.'"
+      },
+      "presenter_notes": "This is a real threat that requires a strategic response, not a defensive one. When competitors say 'ASM uses AI,' the instinct is to deny it. But that puts ASM on the back foot. The winning move is to make the conversation about credibility, not tools. When students see 'Dr. Ahmed El-Sawy, Consultant, reviewed this book,' the AI argument collapses. We need a systematic doctor endorsement content series — monthly videos of senior doctors reviewing ASM content on camera.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional image of a doctor reviewing educational content on a screen, medical office setting, trust and authority visual, warm lighting, 1920x1080"
+    },
+    {
+      "id": "slide-006c",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 3: Price Perception",
+        "title_ar": "التحدي الثالث: التسعير",
+        "headline": "Cheap photocopied alternatives are available for EGP 70 vs. ASM's EGP 150",
+        "body": "Competitors frame this as \"ASM is overpriced.\" The truth: ASM doesn't sell paper — they sell a continuously-updated, lecture-aligned, doctor-reviewed learning system. The book is just the delivery format.\n\nStudents who understand this are loyal. The challenge is reaching students who haven't experienced the product yet and only see the price tag.",
+        "opportunity": "Lead with proof of outcomes, not features. Testimonials from top-performing students. Before/after grade comparisons. Doctor endorsements per subject."
+      },
+      "presenter_notes": "The price objection is real — EGP 150 vs EGP 70 photocopies is a 2x premium. But the framing is wrong. ASM doesn't sell books. They sell a learning system: book + free YouTube lectures + daily Telegram updates + same-day lecture additions. The photocopy doesn't update when the professor adds something new. Our ad creative needs to make this tangible — show a student getting a grade boost, not a book feature list.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Clean value comparison graphic showing premium product vs basic alternative, professional infographic style, navy blue and gold colors, 1920x1080"
+    },
+    {
+      "id": "slide-006d",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 4: Print to Digital Transition",
+        "title_ar": "التحدي الرابع: التحول الرقمي",
+        "headline": "80% of students prefer digital formats — but the digital infrastructure isn't ready for full-scale launch",
+        "bullets": [
+          "80% of ASM's own students prefer digital formats (per Mahmoud, kickoff meeting)",
+          "40-50% of ASM's sales have already shifted to digital since Grade Gain launched",
+          "E-book app launched late February 2026 — still in testing phase",
+          "Grade Gain payment integration pending (contracts finalizing by ~April 7)",
+          "No website exists to showcase the full digital ecosystem"
+        ],
+        "key_insight": "Phase the digital push: immediately market Grade Gain and recorded courses. Layer in e-books once the app is stable and payment integration is live."
+      },
+      "presenter_notes": "The demand for digital is proven — 80% student preference, 40-50% sales shift already happening organically. But we can't market what isn't ready. The e-book app needs 1-2 more months. Grade Gain payment integration lands around April 7. So we phase: Month 1, push Grade Gain and courses hard. Month 2, launch website and landing pages. Month 3, layer in e-books once the app is stable. International students in the Gulf and Italy already buy ASM products digitally at 10-20x Egypt prices — that's a market we're leaving on the table.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Split screen image showing physical medical textbook on one side and tablet with same content digitally on the other, modern clean aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-007",
+      "section": "campaign_goals",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Campaign Goals",
+        "title_ar": "أهداف الحملة",
+        "goals": [
+          {
+            "number": "1",
+            "title": "Build the full conversion funnel",
+            "description": "From social media ads through landing pages to WhatsApp-assisted purchase, with automated follow-up sequences"
+          },
+          {
+            "number": "2",
+            "title": "Increase Grade Gain subscriptions by 40%",
+            "description": "Within the first 3 months of campaign launch, by creating a dedicated funnel for the question bank"
+          },
+          {
+            "number": "3",
+            "title": "Launch ASM's digital presence",
+            "description": "Website, landing pages per product, and TikTok channel — a complete self-serve discovery experience"
+          },
+          {
+            "number": "4",
+            "title": "Reduce WhatsApp sales friction",
+            "description": "Automate first-touch responses and implement sequences so the 3-person team handles 2x the volume"
+          },
+          {
+            "number": "5",
+            "title": "Establish ASM as the premium, doctor-endorsed source",
+            "description": "Through a credibility campaign featuring senior doctors, alumni success stories, and professor endorsements"
+          }
+        ]
+      },
+      "presenter_notes": "Five clear goals. The funnel is the foundation — without it, every other investment leaks. Grade Gain is the growth engine because it's a subscription product with built-in retention. The digital presence gives students a self-serve path that doesn't depend on WhatsApp. WhatsApp automation lets the existing 3-person team handle double the volume. And the credibility campaign neutralizes every competitor attack. These goals are sequenced: funnel first, then scale.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-008",
+      "section": "objectives",
+      "layout": "comparison-table",
+      "content": {
+        "title": "Measurable Objectives",
+        "title_ar": "الأهداف القابلة للقياس",
+        "columns": [
+          "#",
+          "Objective",
+          "Target",
+          "Timeline"
+        ],
+        "rows": [
+          {
+            "#": "1",
+            "objective": "Increase digital product revenue (Grade Gain + courses + e-books)",
+            "target": "+40% from current baseline",
+            "timeline": "3 months"
+          },
+          {
+            "#": "2",
+            "objective": "Reduce cost per qualified lead (WhatsApp conversation)",
+            "target": "Below EGP 15 per lead",
+            "timeline": "Month 2"
+          },
+          {
+            "#": "3",
+            "objective": "Achieve ROAS on Meta + TikTok campaigns",
+            "target": "4x minimum",
+            "timeline": "Month 3"
+          },
+          {
+            "#": "4",
+            "objective": "Launch and drive traffic to ASM website",
+            "target": "10,000 monthly visitors",
+            "timeline": "Month 2"
+          },
+          {
+            "#": "5",
+            "objective": "Grow TikTok following",
+            "target": "25,000 followers",
+            "timeline": "3 months"
+          },
+          {
+            "#": "6",
+            "objective": "Automate WhatsApp first-response",
+            "target": "Under 2 minutes 24/7",
+            "timeline": "Month 1"
+          }
+        ],
+        "insight": "All numbers will be updated after strategy approval with exact KPIs based on current baseline data from the client."
+      },
+      "presenter_notes": "These are aggressive but achievable targets. The 40% digital revenue increase is driven by Grade Gain funnel optimization — right now, students have to contact WhatsApp to upgrade. Once we add payment integration and a proper landing page, conversion should jump significantly. The EGP 15 per lead target is based on Egyptian digital advertising benchmarks for education. 4x ROAS by month 3 gives us two months to optimize creative and targeting before we expect profitability.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-009",
+      "section": "environmental_scanning_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "ENVIRONMENTAL SCANNING",
+        "title_ar": "المسح البيئي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-009.png"
+      },
+      "presenter_notes": "Now we move into the market research. Everything in this section is verified against published sources — DataReportal, CAPMAS, Statista, NapoleonCat, and peer-reviewed studies. No assumptions, only data.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) accent lines, data visualization motif at 10% opacity, 1920x1080"
+    },
+    {
+      "id": "slide-010a",
+      "section": "environmental_scanning",
+      "layout": "stat-highlight",
+      "content": {
+        "stat": "73K",
+        "label": "Medical students enrolled across 49-55 faculties of medicine in Egypt",
+        "sublabel": "Private tutoring market: EGP 47 billion (~$2.3B USD) annually — 1.6% of GDP. EdTech market: $875M growing to $2.4B by 2033.",
+        "context": "Alexandria University Faculty of Medicine has ~3,500 students per cohort. 14+ new national university medical faculties opened since 2020. University infrastructure supports ~300 students practically, creating a massive gap.",
+        "source": "CAPMAS 2022/2023, The National, ECES, OpenPR"
+      },
+      "presenter_notes": "Let's ground this in numbers. 73,000 medical students across 49-55 faculties. The private tutoring market alone is EGP 47 billion — that's 1.6% of Egypt's GDP going to supplementary education. And the EdTech market is projected to nearly triple to $2.4 billion by 2033. ASM sits at the intersection of both markets. Alexandria University alone has 3,500 students per cohort, and university infrastructure only supports 300 practically. That gap is what ASM fills.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010b",
+      "section": "environmental_scanning",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Print Attachment Studies",
+        "title_ar": "دراسات التعلق بالطباعة",
+        "note": "Peer-reviewed research — independently verified March 2026",
+        "bullets": [
+          {
+            "text": "78.44% of 10,293 students across 21 countries preferred print for academic reading. 82.02% reported better focus with print. 72.37% remember information best from printed pages.",
+            "source": "Mizrachi et al. (2018), PLOS ONE — PMC5976176"
+          },
+          {
+            "text": "62.6% of 572 medical/dental students prefer both formats together. 21% prefer physical only. 16.4% prefer digital only. 57.7% use digital for last-minute exam revision.",
+            "source": "Al Shmanee et al. (2024), Cureus — PMC11016158"
+          }
+        ],
+        "key_insight": "ASM doesn't need to choose print OR digital. The winning position: print for deep study, digital for accessibility and practice. Both formats, updated simultaneously, from one trusted source."
+      },
+      "presenter_notes": "These are not blog posts — these are peer-reviewed studies. The Mizrachi study surveyed over 10,000 students across 21 countries. Nearly 80% prefer print for deep reading. But the Sharjah study shows 62.6% want BOTH formats. And 57.7% use digital specifically for last-minute exam revision. This perfectly validates ASM's dual-format strategy: sell the printed book for deep study, and offer Grade Gain for exam practice. Both formats, updated simultaneously.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010c",
+      "section": "environmental_scanning",
+      "layout": "stat-highlight",
+      "content": {
+        "stat": "80%",
+        "label": "of ASM students prefer digital formats",
+        "sublabel": "40-50% of sales have already shifted to digital since Grade Gain launched. International students pay 10-20x Egypt prices ($20-30 vs. EGP 150).",
+        "context": "E-book app demand is so high that ASM delayed marketing to avoid overwhelming support. Grade Gain has multi-tenancy built in — ready to expand beyond Alexandria to any Egyptian medical school.",
+        "source": "Client data — Mahmoud, kickoff meeting March 2026"
+      },
+      "presenter_notes": "Here's the key insight from our kickoff meeting: 80% of ASM's own students already prefer digital. The shift isn't coming — it's here. And international students in the Gulf and Italy are paying $20-30 per book versus EGP 150 in Egypt. That's a 10-20x price multiplier we're completely ignoring. Grade Gain's multi-tenant architecture means it can serve Ain Shams, Kasr Al-Ainy, Tanta, and Zagazig with minimal additional content investment.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010d",
+      "section": "environmental_scanning",
+      "layout": "comparison-table",
+      "content": {
+        "title": "Target Universities for Expansion",
+        "title_ar": "الجامعات المستهدفة للتوسع",
+        "columns": [
+          "Priority",
+          "University",
+          "Rationale"
+        ],
+        "rows": [
+          {
+            "priority": "1 (Home)",
+            "university": "Alexandria",
+            "rationale": "Current base, defend market share"
+          },
+          {
+            "priority": "2",
+            "university": "Ain Shams (Cairo)",
+            "rationale": "Largest, similar curriculum"
+          },
+          {
+            "priority": "3",
+            "university": "Kasr Al-Ainy (Cairo)",
+            "rationale": "Prestigious, high student volume"
+          },
+          {
+            "priority": "4",
+            "university": "Tanta",
+            "rationale": "Geographic proximity to Alexandria"
+          },
+          {
+            "priority": "5",
+            "university": "Zagazig",
+            "rationale": "Large faculty, underserved"
+          },
+          {
+            "priority": "6",
+            "university": "Mansoura",
+            "rationale": "Strategic partner already on Grade Gain"
+          }
+        ],
+        "insight": "ASM's content is 90%+ aligned with the national medical curriculum. Cross-university expansion has already been proven by the Omar El-Barky campaign — students from other universities bought ASM materials when exposed to them."
+      },
+      "presenter_notes": "This is not theoretical. Omar El-Barky, a medical influencer with 3 million followers, already proved cross-university demand exists. Students from other universities purchased ASM materials when they were exposed to them. The curriculum overlap is 90%+. Mansoura is already a strategic partner with content on Grade Gain. The question isn't whether expansion will work — it's how fast we scale it.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-011",
+      "section": "digital_scanning_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "DIGITAL ANALYSIS",
+        "title_ar": "التحليل الرقمي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-011.png"
+      },
+      "presenter_notes": "Now let's look at the digital landscape — where Egyptian medical students spend their time online, and where ASM should allocate its advertising budget.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) digital data visualization motifs, 1920x1080"
+    },
+    {
+      "id": "slide-012a",
+      "section": "digital_analysis",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Ad Budget Allocation",
+        "title_ar": "توزيع ميزانية الإعلانات",
+        "bullets": [
+          {
+            "text": "Meta Ads (IG + FB) — 40% — Instagram: 20.7M users in Egypt, ~8.2M aged 18-24. Facebook: ~45M ad-reachable users, ~28% aged 18-24 (~12.6M). Split 25% IG / 15% FB.",
+            "source": "DataReportal Digital 2025, NapoleonCat, Statista"
+          },
+          {
+            "text": "Google Search Ads — 25% — ~82% search market share in Egypt. Mobile search 78%+. Captures high-intent students searching for study materials in Arabic.",
+            "source": "StatCounter 2025"
+          },
+          {
+            "text": "TikTok Ads — 15% — 41.3M users 18+ in Egypt (+25% YoY). ~32% aged 18-24 (~13.2M). Highest reach-per-pound for Gen Z. ASM has zero presence currently.",
+            "source": "DataReportal Digital 2025"
+          },
+          {
+            "text": "Retargeting + Click-to-WhatsApp — 20% — Re-engage website visitors, landing page drop-offs, video viewers. WhatsApp: ~56M users in Egypt (75%+ penetration).",
+            "source": "World Population Review, Rasayel"
+          }
+        ],
+        "key_insight": "Egypt has 96.3M internet users (81.9% penetration, Jan 2025) and 50.7M active social media users. Population: ~118M, median age 24.7 years."
+      },
+      "presenter_notes": "The allocation is weighted toward Meta because that's where ASM's audience lives — 20.7 million Instagram users in Egypt with 8.2 million in the 18-24 age bracket. Google Search gets 25% because it captures high-intent students who are actively searching for study materials — terms like 'medical books Alexandria' in Arabic. TikTok at 15% is our growth bet — 41.3 million users and growing 25% year over year. And 20% goes to retargeting plus Click-to-WhatsApp ads, which is where conversions actually happen.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-012b",
+      "section": "digital_analysis",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Platform Behavior Overview",
+        "title_ar": "سلوك المنصات",
+        "platform_data": [
+          {
+            "platform": "Instagram",
+            "key_insight": "Primary discovery. UGC vlogs and student testimonials drive awareness. Controlled moderation environment.",
+            "relevance": "HIGH — PRIMARY"
+          },
+          {
+            "platform": "TikTok",
+            "key_insight": "Fastest-growing for this demographic. Short-form study tips, book reviews. Currently untapped by ASM.",
+            "relevance": "HIGH — GROWTH"
+          },
+          {
+            "platform": "Google",
+            "key_insight": "~82% search market share, 78%+ mobile. Students search Arabic terms. No ads running currently.",
+            "relevance": "HIGH — INTENT"
+          },
+          {
+            "platform": "WhatsApp",
+            "key_insight": "Sales conversion channel. 40-50 daily conversations. Currently manual — needs automation.",
+            "relevance": "HIGH — CONVERSION"
+          },
+          {
+            "platform": "Telegram",
+            "key_insight": "Community and retention. Free daily value keeps students engaged. Not an ad channel — a loyalty engine.",
+            "relevance": "MAINTAIN"
+          },
+          {
+            "platform": "YouTube",
+            "key_insight": "Free lecture content that markets the books. Long-form SEO value. Drives organic discovery.",
+            "relevance": "MAINTAIN"
+          },
+          {
+            "platform": "Facebook",
+            "key_insight": "Large reach but toxic for ASM. Competitors organize negative campaigns. Use for retargeting only.",
+            "relevance": "LOW — RETARGET ONLY"
+          }
+        ]
+      },
+      "presenter_notes": "Each platform has a distinct role. Instagram is discovery — that's where UGC testimonials live. TikTok is the growth channel we haven't tapped. Google captures students who are actively looking. WhatsApp is where money changes hands. Telegram is the loyalty engine. YouTube provides long-form SEO value. And Facebook — we use it for retargeting only because the organic environment is toxic for ASM. Competitors organize coordinated negative comment campaigns on Facebook. We don't fight on their turf.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-013",
+      "section": "competitors_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "COMPETITORS",
+        "title_ar": "المنافسون",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-013.png"
+      },
+      "presenter_notes": "Now we look at the competitive landscape. We've profiled 5 competitors based on both our research and intelligence from the kickoff meeting with Mahmoud.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) accent lines, competitive landscape motif, 1920x1080"
+    },
+    {
+      "id": "slide-014a",
+      "section": "competitors",
+      "layout": "title-body",
+      "content": {
+        "title": "Competitor #1: MedRobot",
+        "title_ar": "المنافس الأول: MedRobot",
+        "competitor_name": "MedRobot",
+        "headline": "Recently graduated team, covers years 1-2 only",
+        "bullets": [
+          "Near-zero indexed online presence — operates through private Telegram and word-of-mouth",
+          "Books available at 'To Be Doctor' bookstore; no longer offering PDFs",
+          "Free YouTube explanations covering all course content",
+          "Uses '100% human, no AI' messaging against ASM",
+          "Their content actually prints at ASM's own print shops and sells in ASM's branches"
+        ],
+        "threat_level": "Medium",
+        "key_insight": "Strong in their niche (years 1-2) but limited scope. Main risk is the '100% human' messaging eroding ASM's trust. Counter with doctor endorsements, not defensive statements."
+      },
+      "presenter_notes": "MedRobot is interesting because they're a niche player — only years 1 and 2 — but they have good messaging. The '100% human, no AI' positioning resonates with students who are skeptical after ASM's early AI issues. But here's the revealing detail: their content actually prints at ASM's own print shops and sells in ASM's branches. They're not really an independent competitor — they're a small player within ASM's own ecosystem.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014b",
+      "section": "competitors",
+      "layout": "title-body",
+      "content": {
+        "title": "Competitor #2: Nebras",
+        "title_ar": "المنافس الثاني: نبراس",
+        "competitor_name": "Nebras (نبراس)",
+        "headline": "The gatekeeper — shapes perception before students encounter ASM",
+        "bullets": [
+          "Positions itself as a 'charitable' student initiative — ~9,000 Facebook followers",
+          "No public Alexandria-specific page found via web search — operates through private groups",
+          "Telegram channels offer daily student follow-up (more frequent than ASM's weekly updates)",
+          "Partnered with Smart Vision center — sells ad space to ASM's direct competitors",
+          "History of copyright conflict: founder previously copied ASM content",
+          "Lists ASM last in study resource recommendations while prioritizing paid advertisers"
+        ],
+        "threat_level": "High",
+        "key_insight": "Nebras shapes how incoming students perceive the market before they ever encounter ASM directly. The 'charitable' positioning is undermined by commercial partnerships, but students don't see this."
+      },
+      "presenter_notes": "Nebras is the most dangerous competitor — not because of their products, but because of their influence. They position themselves as a charitable student initiative, but they sell advertising space to ASM's competitors and list ASM last in recommendations. They are the gatekeeper. New students trust Nebras's recommendations before they know ASM exists. The counter-strategy is to build ASM's own daily Telegram engagement and increase the ambassador program so students hear about ASM from peers, not from Nebras.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014c",
+      "section": "competitors",
+      "layout": "title-body",
+      "content": {
+        "title": "Competitor #3: Alex Aid",
+        "title_ar": "المنافس الثالث: Alex Aid",
+        "competitor_name": "Alex Aid",
+        "headline": "Brand new — launched January 2026. Built a question bank copying ~80% of Grade Gain",
+        "bullets": [
+          "Currently covers 2nd year medical students only",
+          "Zero indexed online presence — no website, Instagram, Facebook, or app store listing",
+          "Positions itself as the 'underdog' vs. the 'ASM monopoly'",
+          "Aggressive marketing messaging claiming to be 'the first' to offer various features",
+          "Poor UX and frontend design; no content team to develop at scale"
+        ],
+        "threat_level": "Low",
+        "opportunity": "Do not engage directly — would give them visibility. Let product quality speak. Accelerate Grade Gain feature releases to widen the gap. Expected to fail within 6-12 months."
+      },
+      "presenter_notes": "Alex Aid is a copycat that launched in January 2026, copying about 80% of Grade Gain's features. They only cover 2nd year and have zero online presence. The 'monopoly' narrative is their only weapon. Our strategy: ignore them publicly. Any engagement gives them visibility they don't deserve. Instead, we accelerate Grade Gain releases — every new feature widens the gap. Their business model is financially unsustainable at their scale. We expect them to fail within 6-12 months.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014d",
+      "section": "competitors",
+      "layout": "title-body",
+      "content": {
+        "title": "Competitors #4-5: Teaching Centers",
+        "title_ar": "المنافسون ٤-٥: مراكز التعليم",
+        "competitor_name": "Royal Center / Smart Vision",
+        "headline": "Cairo-based teaching centers with recorded courses and question banks",
+        "bullets": [
+          "Smart Vision has a website (smartvisionedu.com), mobile app, and active Facebook page",
+          "MedMCQ question bank is a direct Grade Gain competitor",
+          "Cairo-based — curriculum differences matter for Alexandria students",
+          "Cannot match ASM's content update speed (ASM updates same-day from lectures)",
+          "Higher pricing than ASM's courses"
+        ],
+        "threat_level": "Medium",
+        "key_insight": "ASM provides the books these centers' students study from AND the question banks they practice with. Even students who take competitor courses often buy ASM materials. The relationship is symbiotic — but B2B partnerships could formalize this."
+      },
+      "presenter_notes": "Smart Vision and Royal Center are the most professional competitors — they have websites, apps, and established operations. But they're Cairo-based, which matters because Alexandria's curriculum has specific differences. Their real value to us is as potential B2B partners. ASM already supplies the books that their students use. Why not formalize this into wholesale partnerships? They get ready-made content, we get distribution reach.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014e",
+      "section": "competitors",
+      "layout": "title-body",
+      "content": {
+        "title": "Competitor #5: Emerging Doctor-Led Competitors",
+        "title_ar": "المنافس الخامس: المنافسون الناشئون",
+        "competitor_name": "Doctor-led initiatives",
+        "headline": "Growing number of doctors entering medical education content, attracted by ASM's visible success",
+        "bullets": [
+          "Doctors with clinical credibility but limited publishing/tech experience",
+          "Better student UX in some books — designed by peers who recently studied",
+          "Strong Telegram marketing — some have the most successful marketing channels in the market",
+          "Lower content quality overall compared to ASM's mature, review-validated materials",
+          "Compete product-by-product but lack ASM's ecosystem depth"
+        ],
+        "threat_level": "Medium",
+        "key_insight": "Their Telegram marketing capability is worth studying and learning from. ASM should match their daily engagement frequency while maintaining quality superiority."
+      },
+      "presenter_notes": "The 5th year competitors are interesting because they represent the future threat pattern — successful doctors who see what ASM has built and want in. They compete product-by-product in specific subjects. Their individual products can be good — designed by people who recently studied the material. But they lack the ecosystem. The takeaway: we need to study their Telegram marketing. Some of these doctor-led channels have better engagement than ASM's own Telegram. We need to match their frequency.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-015",
+      "section": "pricing_comparison",
+      "layout": "comparison-table",
+      "content": {
+        "title": "Pricing Landscape",
+        "title_ar": "المشهد السعري",
+        "columns": [
+          "Product Type",
+          "ASM Minds",
+          "Competitors",
+          "Notes"
+        ],
+        "rows": [
+          {
+            "product_type": "Printed book",
+            "asm_minds": "EGP 150",
+            "competitors": "EGP 70-100",
+            "notes": "ASM includes lecture updates; competitors don't"
+          },
+          {
+            "product_type": "Question bank",
+            "asm_minds": "Grade Gain subscription",
+            "competitors": "Alex Aid (lower), free Hamlawy",
+            "notes": "Grade Gain has exam simulation, analytics, bookmarks"
+          },
+          {
+            "product_type": "Recorded course",
+            "asm_minds": "One-time per course",
+            "competitors": "Royal Center / Smart Vision",
+            "notes": "ASM courses taught by senior doctors"
+          },
+          {
+            "product_type": "E-book",
+            "asm_minds": "New — pricing TBD",
+            "competitors": "No equivalent",
+            "notes": "First-mover advantage"
+          },
+          {
+            "product_type": "Private tutoring",
+            "asm_minds": "Student-organized groups",
+            "competitors": "Inspire Academy",
+            "notes": "ASM system = lower cost"
+          },
+          {
+            "product_type": "International",
+            "asm_minds": "$20-30 per book",
+            "competitors": "Not available",
+            "notes": "10-20x Egypt price, proven demand"
+          }
+        ],
+        "highlight_row": "asm",
+        "insight": "ASM is not the cheapest. ASM is the most comprehensive. The student who buys an ASM book gets: the book + free YouTube lectures + continuous updates + Telegram community support. No competitor bundles this."
+      },
+      "presenter_notes": "This table tells the pricing story clearly. ASM charges a premium — EGP 150 vs EGP 70 for competitors. But the value proposition is fundamentally different. An ASM book comes with free YouTube lectures, daily Telegram updates, same-day lecture additions, and access to the community. A photocopy comes with nothing. Our messaging needs to make this bundle visible. And international pricing at $20-30 shows the true market value of what ASM produces.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-016",
+      "section": "unique_advantages",
+      "layout": "grid-6",
+      "content": {
+        "title": "What Sets ASM Apart",
+        "title_ar": "ما يميز ASM",
+        "boxes": [
+          {
+            "number": "01",
+            "title": "In-Lecture Update System",
+            "description": "Team members attend every lecture in every section. Books are updated same-day. No competitor does this."
+          },
+          {
+            "number": "02",
+            "title": "Scale & Track Record",
+            "description": "150,000+ books/year, 180+ titles, 6 years. Deeply rooted in Alexandria's medical ecosystem."
+          },
+          {
+            "number": "03",
+            "title": "Doctor-Endorsed Quality",
+            "description": "320 doctors/contributors. Senior consultants review every subject. Professors reference ASM in lectures."
+          },
+          {
+            "number": "04",
+            "title": "Complete Ecosystem",
+            "description": "The only provider offering books + courses + question bank + tutoring + community — year 1 to graduation."
+          },
+          {
+            "number": "05",
+            "title": "AI-Powered Visual Quality",
+            "description": "R&D team dedicated to AI image generation for 6 months. Medical diagrams and infographics that no competitor can match."
+          },
+          {
+            "number": "06",
+            "title": "Grade Gain Platform",
+            "description": "Multi-tenancy question bank with exam simulation, analytics, and bookmarks. Ready to scale to multiple universities."
+          }
+        ]
+      },
+      "presenter_notes": "These six advantages are ASM's competitive moat. The in-lecture update system is impossible to replicate without ASM's scale — you need team members physically present at every lecture. The 320 doctor contributors provide validation that no startup can match. The complete ecosystem means students don't need to piece together resources from multiple sources. And Grade Gain's multi-tenancy architecture is the key to geographic expansion.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-017",
+      "section": "common_concerns",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Addressing Student Objections",
+        "title_ar": "الرد على اعتراضات الطلاب",
+        "concerns": [
+          {
+            "concern_ar": "ASM غالي أوي",
+            "concern_en": "ASM is too expensive",
+            "response": "You're paying for a continuously-updated, doctor-reviewed learning system — not just paper. Include the free YouTube lectures and Telegram support in value framing."
+          },
+          {
+            "concern_ar": "سمعت إنهم بيستخدموا AI",
+            "concern_en": "I heard they use AI",
+            "response": "Our content is reviewed by 320+ doctors including senior consultants. AI assists with visual design — the same way every modern publisher uses digital tools. Medical content is human-created and doctor-validated."
+          },
+          {
+            "concern_ar": "أنا بس محتاج كتب لسنتي",
+            "concern_en": "I only need books for my year",
+            "response": "ASM follows you from year 1 to graduation. Your Telegram community, Grade Gain subscription, tutoring access — it all compounds. Students who start with ASM in year 1 consistently outperform."
+          },
+          {
+            "concern_ar": "صاحبي بيقول المنافس أحسن",
+            "concern_en": "My friend says the competitor is better",
+            "response": "ASM sells 150,000 books per year. University professors themselves study from and correct our books. We compete on results, not claims."
+          },
+          {
+            "concern_ar": "ممكن أصور الكتاب",
+            "concern_en": "I can just photocopy the book",
+            "response": "Photocopies don't update. When the professor adds something next week, the photocopy stays frozen. ASM pushes updates to digital users and publishes supplements."
+          }
+        ]
+      },
+      "presenter_notes": "These are the five most common objections we need to overcome. The key principle: never be defensive. For the AI accusation, we don't say 'we don't use AI' — we say '320 doctors validate our content.' For pricing, we don't say 'we're worth it' — we show the full bundle value. For the photocopy objection, we make the update cycle tangible. Each objection has a specific response that our WhatsApp team and ad creative should use consistently.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-018",
+      "section": "market_gaps",
+      "layout": "grid-3",
+      "content": {
+        "title": "Market Gaps",
+        "title_ar": "فجوات السوق",
+        "gaps": [
+          {
+            "title": "No competitor has a proper website",
+            "description": "MedRobot, Nebras, Alex Aid have zero indexed web presence. ASM's Grade Gain is the only Alexandria player with a web app. A full website = first-mover advantage."
+          },
+          {
+            "title": "No one owns TikTok",
+            "description": "41.3M Egyptian users 18+ but no medical education brand has a consistent TikTok presence."
+          },
+          {
+            "title": "Automated sales don't exist",
+            "description": "Everyone sells manually via WhatsApp. First-mover on automation captures the most leads at lowest cost."
+          },
+          {
+            "title": "Cross-university marketing untapped",
+            "description": "Omar El-Barky proved demand exists from other universities. No one is systematically targeting them."
+          },
+          {
+            "title": "Digital payment friction",
+            "description": "Grade Gain requires WhatsApp contact to upgrade. Whoever adds payment integration first wins digital subscriptions."
+          },
+          {
+            "title": "No credibility content strategy",
+            "description": "Competitors attack with rumors; no one has built a systematic doctor-endorsement content series."
+          },
+          {
+            "title": "B2B with centers is informal",
+            "description": "ASM supplies content to teaching centers but doesn't formally market this. Structured partnerships = revenue multiplier."
+          },
+          {
+            "title": "International market ignored",
+            "description": "Gulf and international students buy at 10-20x Egypt prices. No one targets them with localized campaigns."
+          },
+          {
+            "title": "Google Search is unclaimed",
+            "description": "~82% of Egyptian search goes through Google, 78%+ on mobile. No medical education brand is running search ads."
+          }
+        ]
+      },
+      "presenter_notes": "Nine gaps, each one an opportunity. The most striking: no Alexandria competitor has a website. Zero. The first medical education brand to launch a proper website with SEO-optimized Arabic content will capture enormous organic traffic. And Google Search is completely unclaimed — nobody is bidding on terms like 'medical books Alexandria' in Arabic. These aren't small gaps; they're wide-open channels with zero competition.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-019",
+      "section": "market_opportunities",
+      "layout": "grid-3",
+      "content": {
+        "title": "Market Opportunities",
+        "title_ar": "الفرص السوقية",
+        "opportunities": [
+          {
+            "title": "Launch ASM website",
+            "description": "Services hub with product catalog, doctor endorsements, and purchase flows. SEO-optimized for Arabic medical search terms."
+          },
+          {
+            "title": "Own TikTok for med-ed",
+            "description": "Study tips, book reviews, 'study with me' content. Repurpose existing UGC vlogs. 41.3M users, zero competition."
+          },
+          {
+            "title": "WhatsApp automation",
+            "description": "API-based messaging with automated first-response, sequences, and team assignment. Handle 2x volume with same team."
+          },
+          {
+            "title": "Cross-university campaigns",
+            "description": "Target Ain Shams, Kasr Al-Ainy, Tanta, Zagazig with testimonials from students at those schools."
+          },
+          {
+            "title": "Payment integration",
+            "description": "CIB via PayMob (1.5% fee) for Grade Gain, e-books, and courses. Remove WhatsApp from the purchase path for digital products."
+          },
+          {
+            "title": "Doctor Approved content series",
+            "description": "Monthly Instagram/TikTok series: 'Dr. [Name] reviews ASM's [Subject] book.' Senior doctors on camera validating content."
+          },
+          {
+            "title": "Formal B2B program",
+            "description": "Package ASM materials for teaching centers: bulk pricing, co-branded content, shared revenue on courses."
+          },
+          {
+            "title": "International expansion test",
+            "description": "Arabic-targeted Instagram/Google ads for Gulf countries. Physical books or e-books. Test with EGP 5,000 budget."
+          },
+          {
+            "title": "Google Search domination",
+            "description": "Bid on: ASM Minds, بنك اسئلة طب, كتب طب اسكندرية, Grade Gain, competitor brand names."
+          }
+        ]
+      },
+      "presenter_notes": "Each gap maps to an opportunity. The website launch is foundational — everything else builds on it. TikTok ownership is a land grab — first mover wins. WhatsApp automation is the highest-ROI operational improvement. The Doctor Approved series is the single most important content initiative because it neutralizes every competitive attack. And the international expansion test at just EGP 5,000 could unlock a market where students pay 10-20x more per product.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-020",
+      "section": "personas_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "TARGET PERSONAS",
+        "title_ar": "الشخصيات المستهدفة",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-020.png"
+      },
+      "presenter_notes": "We've defined three distinct personas based on our research and the kickoff meeting insights. Each persona represents a different entry point into the ASM ecosystem and requires different messaging and channel strategies.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) accent lines, persona silhouettes motif at 10% opacity, 1920x1080"
+    },
+    {
+      "id": "slide-021a",
+      "section": "personas",
+      "layout": "persona",
+      "content": {
+        "name": "Ahmed",
+        "name_ar": "أحمد",
+        "role": "The Efficient Achiever",
+        "avatar_url": "./assets/generated/slide-021a.png",
+        "demographics": {
+          "age": "22",
+          "gender": "Male",
+          "location": "Alexandria, Egypt",
+          "education": "3rd year medical student, Alexandria University",
+          "income": "Family support; moderate spending power"
+        },
+        "goals": [
+          "Achieve top grades without attending every lecture",
+          "Study from home efficiently",
+          "Have all materials in one organized place",
+          "Practice with real exam questions before tests"
+        ],
+        "pain_points": [
+          "Too many scattered study sources — doesn't know what to trust",
+          "Wastes time searching for updated lecture content",
+          "Missed lectures mean missed content not in textbooks",
+          "Worried about exam questions he hasn't seen before"
+        ],
+        "channels": "Instagram (discovery), Telegram (daily engagement), WhatsApp (purchase)",
+        "language_ar": "عايز حاجة واحدة أذاكر منها وأعرف إن كل حاجة فيها — مش عايز أدور في عشر أماكن",
+        "objection_ar": "بس أنا مش بروح المحاضرات — هل الكتاب فيه كل حاجة؟"
+      },
+      "presenter_notes": "Mahmoud represents the core ASM customer — the 3rd year student who values efficiency. He doesn't want to attend every lecture; he wants one trusted source that has everything. The key message for Mahmoud: ASM follows you from the lecture hall to the exam room. Our team attends so you don't have to. His primary discovery channel is Instagram, daily engagement on Telegram, and he converts through WhatsApp.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional portrait illustration of a 22-year-old Egyptian male medical student, friendly expression, studying at a modern desk with tablet, warm natural lighting, clean professional style, circular crop, 800x800"
+    },
+    {
+      "id": "slide-021b",
+      "section": "personas",
+      "layout": "persona",
+      "content": {
+        "name": "Oday",
+        "name_ar": "عدي",
+        "role": "The Premium Experience Seeker",
+        "avatar_url": "./assets/generated/slide-021b.png",
+        "demographics": {
+          "age": "24",
+          "gender": "Male",
+          "location": "Alexandria, Egypt",
+          "education": "4th year medical student",
+          "income": "Above average; values premium products"
+        },
+        "goals": [
+          "Study only 3 hours/day instead of 6 and still get top grades",
+          "Use premium, well-designed materials that feel good to use",
+          "Access everything digitally on iPad",
+          "Get concise reviews before exams"
+        ],
+        "pain_points": [
+          "Hates wasting time on poorly organized textbooks",
+          "University materials look outdated and uninspiring",
+          "Doesn't want to carry physical books everywhere",
+          "Needs a last-minute review tool before exams"
+        ],
+        "channels": "Instagram (discovery), TikTok (short study content), WhatsApp (purchase), Grade Gain app (retention)",
+        "language_ar": "أنا عايز حاجة شكلها حلو وتخليني أخلص في نص الوقت — مش عايز كتب شكلها من التسعينات",
+        "objection_ar": "ليه أدفع أكتر لما ممكن أصور الكتاب؟"
+      },
+      "presenter_notes": "Oday is the premium customer — above-average income, values design quality, studies on iPad. He's the perfect Grade Gain and e-book customer. The key message for Oday: Gold Edition gives you 95% of the curriculum in 30% of the size. ASM's AI-generated visuals make studying engaging, not tedious. His objection about photocopying is countered by the update cycle and the complete digital workflow on iPad. He discovers on Instagram, consumes on TikTok, buys through WhatsApp, and retains through Grade Gain.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional portrait illustration of a 24-year-old Egyptian male medical student, confident expression, using iPad at a modern cafe, stylish and professional, warm lighting, clean professional style, circular crop, 800x800"
+    },
+    {
+      "id": "slide-021c",
+      "section": "personas",
+      "layout": "persona",
+      "content": {
+        "name": "Sarah",
+        "name_ar": "سارة",
+        "role": "The Out-of-Town Student",
+        "avatar_url": "./assets/generated/slide-021c.png",
+        "demographics": {
+          "age": "20",
+          "gender": "Female",
+          "location": "Cairo, Egypt (studying at Ain Shams)",
+          "education": "2nd year medical student",
+          "income": "Moderate"
+        },
+        "goals": [
+          "Find a comprehensive study source for her curriculum",
+          "See proof that others have succeeded using these materials",
+          "Study efficiently as a female student balancing social expectations"
+        ],
+        "pain_points": [
+          "Her university has no equivalent to ASM",
+          "Writes her own lecture notes — wastes half her day",
+          "Doesn't know if ASM content matches her curriculum (90%+ overlap)",
+          "Worried about buying from a source made for a different university"
+        ],
+        "channels": "Instagram (discovered through Omar El-Barky), Google Search, TikTok",
+        "language_ar": "أنا في عين شمس ومفيش حاجة زي ASM عندنا — بس خايفة المحتوى مش هيكون مناسب لمنهجنا",
+        "objection_ar": "هل الكتب دي هتنفعني وأنا مش في إسكندرية؟"
+      },
+      "presenter_notes": "Sarah represents the cross-university expansion opportunity. She's at Ain Shams in Cairo, writing her own notes because there's no ASM equivalent. Her biggest worry is curriculum compatibility — does it match? The answer is 90%+ overlap since the national medical curriculum is standardized. Omar El-Barky's campaign already proved that students like Sarah will buy when they discover ASM. Her primary discovery is through influencer content and Google Search.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional portrait illustration of a 20-year-old Egyptian female medical student wearing hijab, thoughtful expression, studying at a library desk, warm natural lighting, clean professional style, circular crop, 800x800"
+    },
+    {
+      "id": "slide-022",
+      "section": "campaign_strategy_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "CAMPAIGN STRATEGY",
+        "title_ar": "استراتيجية الحملة",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-022.png"
+      },
+      "presenter_notes": "Now we move from analysis to action. This section covers our key strategic findings, channel strategy, and the analysis summary that drives all tactical decisions.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) accent lines, strategy and planning motif, 1920x1080"
+    },
+    {
+      "id": "slide-023",
+      "section": "key_findings",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Key Strategic Findings",
+        "title_ar": "النتائج الاستراتيجية الرئيسية",
+        "findings": [
+          {
+            "number": "1",
+            "finding": "ASM's biggest competitor is obscurity, not other brands",
+            "detail": "Most students don't know the full product ecosystem. The funnel needs to educate first, then convert."
+          },
+          {
+            "number": "2",
+            "finding": "Telegram builds loyalty; WhatsApp converts",
+            "detail": "These are two distinct channels with different roles. Telegram is community; WhatsApp is sales. The funnel must use both intentionally."
+          },
+          {
+            "number": "3",
+            "finding": "UGC is ASM's unfair advantage",
+            "detail": "90% organic student content on Instagram is rare and valuable. Scale with a structured ambassador program rather than replacing with branded content."
+          },
+          {
+            "number": "4",
+            "finding": "Doctor endorsements neutralize all competitor attacks",
+            "detail": "When students see 'Dr. Ahmed El-Sawy, Consultant, reviewed this book' — arguments about AI, pricing, and legitimacy collapse. Single highest-ROI messaging investment."
+          },
+          {
+            "number": "5",
+            "finding": "Digital products are the growth engine, print is the cash cow",
+            "detail": "Print funds the business today. Digital (Grade Gain, e-books, courses) has 10x scalability. Strategy must serve both but build toward digital."
+          }
+        ]
+      },
+      "presenter_notes": "Five findings that drive every tactical decision. Number one is the most important: ASM's biggest competitor isn't MedRobot or Nebras — it's the fact that students don't know the full ecosystem exists. This means our funnel must educate before it sells. Finding number four is the highest-ROI action: doctor endorsements neutralize every attack simultaneously. And finding five sets the long-term direction: print is the cash cow that funds digital transformation.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-024",
+      "section": "channel_strategy",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Channel Strategy",
+        "title_ar": "استراتيجية القنوات",
+        "channels": [
+          {
+            "name": "Instagram",
+            "rationale": "Primary awareness + UGC amplification. 20.7M Egyptian users, 8.2M aged 18-24.",
+            "kpis": "HIGH — PRIMARY"
+          },
+          {
+            "name": "TikTok",
+            "rationale": "Reach expansion + younger cohort acquisition. 41.3M users 18+, zero ASM presence currently.",
+            "kpis": "HIGH — GROWTH"
+          },
+          {
+            "name": "Google Search",
+            "rationale": "Intent capture — students actively searching for study materials. ~82% market share, no competitors running ads.",
+            "kpis": "HIGH — INTENT"
+          },
+          {
+            "name": "WhatsApp",
+            "rationale": "Sales conversion + automated follow-up. ~56M Egyptian users. Currently manual — automation is highest-ROI improvement.",
+            "kpis": "HIGH — CONVERSION"
+          }
+        ],
+        "test_channels": [
+          {
+            "name": "YouTube",
+            "rationale": "Long-form content + SEO. Maintain current cadence, repurpose for ads."
+          },
+          {
+            "name": "Facebook",
+            "rationale": "Retargeting only. Avoid organic due to toxic competitor-driven environment."
+          }
+        ],
+        "budget_note": "Telegram is not an ad channel — it's a loyalty engine. Maintain daily engagement but don't allocate paid budget to it."
+      },
+      "presenter_notes": "Four high-priority channels, two maintenance channels. Instagram for awareness, TikTok for growth, Google for intent, WhatsApp for conversion. YouTube and Facebook are lower priority — YouTube maintains its current role driving organic discovery, and Facebook is retargeting only because of the toxic organic environment where competitors organize negative campaigns. Telegram is deliberately excluded from the ad budget because it's a loyalty engine, not an acquisition channel.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-025",
+      "section": "analysis_summary",
+      "layout": "title-body",
+      "content": {
+        "title": "Analysis Summary",
+        "title_ar": "ملخص التحليل",
+        "headline": "The strategic position is clear: ASM has the best product in the market, but the worst marketing infrastructure",
+        "body": "The solution is not to change the product — it's to build the system that brings students to it. A conversion funnel, WhatsApp automation, digital presence, and content strategy that matches the scale of what ASM has built.\n\nEvery tactical decision flows from five principles: educate before selling, use doctor endorsements as the trust anchor, leverage UGC as the content engine, automate WhatsApp for scale, and build toward digital while protecting the print cash cow.",
+        "key_insight": "The opportunity is not incremental improvement — it's a step-change in how ASM reaches students. The products are ready. The market is ready. The infrastructure is what's missing."
+      },
+      "presenter_notes": "This is the bridge between analysis and execution. The summary is simple: best product, worst marketing infrastructure. We're not proposing to change what ASM sells — we're proposing to build the system that connects it to students. Five principles guide every tactical decision going forward. The opportunity isn't small — it's transformative. And the timing is right because the digital shift is happening now.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-026",
+      "section": "funnel_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "DIRECT RESPONSE FUNNEL",
+        "title_ar": "قمع الاستجابة المباشرة",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-026.png"
+      },
+      "presenter_notes": "Now we get into the tactical execution — the conversion funnel design, high-value content offer, landing pages, ad creative, and WhatsApp automation.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) funnel diagram motif at 10% opacity, 1920x1080"
+    },
+    {
+      "id": "slide-027",
+      "section": "funnel_design",
+      "layout": "funnel",
+      "content": {
+        "title": "ASM Minds Conversion Funnel",
+        "title_ar": "قمع تحويل ASM Minds",
+        "stages_summary": [
+          {
+            "number": "1",
+            "name": "Awareness",
+            "name_ar": "الوعي",
+            "channels": "Instagram, TikTok, Google Ads, YouTube",
+            "objective": "REACH + EDUCATE"
+          },
+          {
+            "number": "2",
+            "name": "Consideration",
+            "name_ar": "الاهتمام",
+            "channels": "Landing Pages, Website, HVCO (Free Exam)",
+            "objective": "ENGAGE + QUALIFY"
+          },
+          {
+            "number": "3",
+            "name": "Conversion",
+            "name_ar": "التحويل",
+            "channels": "WhatsApp, Direct Purchase, Click-to-WA Ads",
+            "objective": "CONVERT + CLOSE"
+          },
+          {
+            "number": "4",
+            "name": "Retargeting",
+            "name_ar": "إعادة الاستهداف",
+            "channels": "Meta Retargeting, Google Remarketing",
+            "objective": "RE-ENGAGE DROP-OFFS"
+          },
+          {
+            "number": "5",
+            "name": "Post-Purchase",
+            "name_ar": "ما بعد الشراء",
+            "channels": "WhatsApp Sequence, Telegram, Grade Gain",
+            "objective": "UPSELL + RETAIN"
+          }
+        ]
+      },
+      "presenter_notes": "Five-stage funnel. Awareness through Instagram, TikTok, Google, and YouTube. Consideration through landing pages and the free Grade Gain mini-exam. Conversion through WhatsApp conversations and direct purchase. Retargeting for anyone who dropped off. And post-purchase upsell through WhatsApp sequences, Telegram community, and Grade Gain trials. The key insight: every book buyer should discover Grade Gain, courses, and tutoring within 7 days of purchase through the automated post-purchase sequence.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-028",
+      "section": "hvco",
+      "layout": "title-bullets",
+      "content": {
+        "title": "HVCO: \"اعرف مستواك\" — Know Your Level",
+        "title_ar": "العرض عالي القيمة",
+        "headline": "Free mini-exam on Grade Gain — 5-10 questions per subject",
+        "page": {
+          "headline_ar": "هل أنت جاهز للامتحان؟ جرب 10 أسئلة مجانية من بنك أسئلة Grade Gain وشوف مستواك",
+          "headline_en": "Are you ready for the exam? Try 10 free questions and see your level.",
+          "sections": [
+            {
+              "name": "Subject Selection",
+              "purpose": "Student selects their year and subject"
+            },
+            {
+              "name": "Mini-Exam (10 questions)",
+              "purpose": "Timed, exam-simulation format"
+            },
+            {
+              "name": "Score + Performance Breakdown",
+              "purpose": "Weak areas highlighted automatically"
+            },
+            {
+              "name": "Subscription CTA",
+              "purpose": "Subscribe to solve 5,000+ questions"
+            },
+            {
+              "name": "WhatsApp Follow-up",
+              "purpose": "Personalized study recommendation"
+            }
+          ],
+          "cta": "جرب دلوقتي — مجانًا"
+        }
+      },
+      "presenter_notes": "The HVCO is the linchpin of the funnel. It's a free 10-question mini-exam on Grade Gain that shows students their weak areas. The name is 'Know Your Level' in Arabic. It provides genuine value — students actually learn where they need to improve. It demonstrates Grade Gain quality firsthand. It creates a natural segue to paid subscription. And it generates lead data: year, subject, and performance level for personalized follow-up. It's also shareable — students will challenge friends to beat their score.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-029",
+      "section": "landing_pages",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Landing Pages Structure",
+        "title_ar": "هيكل صفحات الهبوط",
+        "stages": [
+          {
+            "name": "Grade Gain Landing Page",
+            "creative": "بنك أسئلة طب اسكندرية — حل وراجع زي الامتحان بالظبط",
+            "kpis": "CTA: Try 10 questions free → Subscribe"
+          },
+          {
+            "name": "Books Catalog Landing Page",
+            "creative": "كل الكتب اللي محتاجها من أول سنة لحد التخرج — محتوى متحدث من جوه المحاضرات",
+            "kpis": "CTA: Order your book → WhatsApp"
+          },
+          {
+            "name": "Recorded Courses Landing Page",
+            "creative": "كورسات مسجلة من أكبر دكاترة طب اسكندرية — اشرح لنفسك من البيت",
+            "kpis": "CTA: Watch free sample → Subscribe"
+          }
+        ]
+      },
+      "presenter_notes": "Three landing pages, each for a distinct product line. Grade Gain page leads with the exam simulation demo and the free trial. Books page has a year selector so students find their specific subjects instantly, with each book showing the reviewing doctor's name. Courses page opens with a free sample lecture. Every page is in Arabic — Egyptian dialect for conversational copy, Modern Standard Arabic for formal content. Every CTA is specific and actionable.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-030",
+      "section": "ad_copy_1",
+      "layout": "ad-copy",
+      "content": {
+        "ad_number": 1,
+        "title": "Grade Gain — Exam Fear Hook",
+        "persona_target": "All years, exam season",
+        "platform": "Meta (Instagram + Facebook)",
+        "hook_ar": "عندك امتحان قريب؟\nلو لسه مش متأكد من مستواك في [المادة]، جرب تحل 10 أسئلة من بنك أسئلة Grade Gain — ببلاش.\nهتعرف نقاط ضعفك قبل ما الامتحان يعرفها.",
+        "hook_en": "Got an exam coming up?\nIf you're still not sure where you stand in [subject], try 10 questions from the Grade Gain question bank — for free.\nFind your weak spots before the exam does.",
+        "cta": "جرب دلوقتي — مجانًا"
+      },
+      "presenter_notes": "This is our primary lead-generation ad. The exam fear hook is universal — every medical student worries about unknown weak areas before exams. The Arabic copy uses Egyptian dialect for natural tone. The CTA is simple: try it now, for free. This ad drives directly to the Grade Gain HVCO landing page. We run this during exam season timing for maximum relevance.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-031",
+      "section": "ad_copy_2",
+      "layout": "ad-copy",
+      "content": {
+        "ad_number": 2,
+        "title": "UGC Testimonial Format",
+        "persona_target": "Mahmoud (The Efficient Achiever)",
+        "platform": "Meta (Instagram + TikTok)",
+        "hook_ar": "\"ذاكرت من ASM وجبت امتياز\" — [اسم الطالب]\n[اسم] كان زيك بالظبط. مش عارف يلم المحتوى، وقته بيضيع. لحد ما جرب كتب ASM + Grade Gain.\nالنتيجة؟ امتياز.\nمش محتاج تصدقنا — اسمع منه/منها.",
+        "hook_en": "\"I studied from ASM and got top marks\" — [Student Name]\n[Name] was exactly like you. Couldn't consolidate content, time wasted. Until they tried ASM books + Grade Gain.\nThe result? Top marks.\nDon't take our word for it — hear from them.",
+        "cta": "ابدأ دلوقتي — لينك في الـ bio"
+      },
+      "presenter_notes": "This ad format leverages ASM's biggest unfair advantage: authentic student testimonials. 90% of ASM's Instagram content is organic student UGC. We pair this copy with actual student vlog or testimonial video. The format is relatable: 'they were just like you, they tried ASM, they got top marks.' We let the student tell the story, not the brand. This runs on both Instagram and TikTok.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-032",
+      "section": "ad_copy_3",
+      "layout": "ad-copy",
+      "content": {
+        "ad_number": 3,
+        "title": "Google Search Ads",
+        "persona_target": "Sarah (The Out-of-Town Student)",
+        "platform": "Google Search",
+        "hook_ar": "كتب طب اسكندرية — ASM Minds | أكتر من 180 كتاب\nبنك أسئلة طب — Grade Gain | جرب ببلاش\nمحتوى محدث من جوه المحاضرات، مراجع من دكاترة متخصصين. أكتر من 150,000 كتاب بيتباع سنويًا.",
+        "hook_en": "Alexandria Medical Books — ASM Minds | 180+ Titles\nMedical Question Bank — Grade Gain | Try Free\nContent updated from inside lectures, reviewed by specialist doctors. 150,000+ books sold annually.",
+        "cta": "اطلب كتابك أو اشترك في Grade Gain دلوقتي"
+      },
+      "presenter_notes": "Google Search captures high-intent students actively looking for study materials. We bid on Arabic keywords: medical books Alexandria, medical question bank, ASM Minds, Grade Gain, and competitor brand names. The ad copy leads with credibility signals: 180+ books, updated from inside lectures, reviewed by specialist doctors, 150,000+ students. This targets Sarah specifically — the out-of-town student searching Google to find resources for her curriculum.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-033",
+      "section": "whatsapp_sequence",
+      "layout": "title-bullets",
+      "content": {
+        "title": "WhatsApp Follow-Up Sequence",
+        "title_ar": "تسلسل متابعة واتساب",
+        "flows": [
+          {
+            "name": "1. Welcome (Immediate)",
+            "trigger": "Student initiates WhatsApp conversation",
+            "sequence": [
+              "أهلاً [الاسم]! أنا من فريق ASM Minds. ازاي أقدر أساعدك؟ قولي سنتك والمادة اللي محتاجها وهنرشحلك أحسن مصادر."
+            ]
+          },
+          {
+            "name": "2. First Follow-up (+1 day)",
+            "trigger": "No reply after 24 hours",
+            "sequence": [
+              "عارفين إنك مشغول بالمذاكرة — بس لو محتاج أي مساعدة احنا هنا. ممكن تبدأ بتجربة مجانية على Grade Gain: [link]"
+            ]
+          },
+          {
+            "name": "3. Value Message (+3 days)",
+            "trigger": "Nurture sequence",
+            "sequence": [
+              "انضم لجروب سنتك على تليجرام — فيه أخبار وتحديثات يومية: [link]"
+            ]
+          },
+          {
+            "name": "4. Flash Offer (+7 days)",
+            "trigger": "Conversion push",
+            "sequence": [
+              "عرض خاص لمدة 48 ساعة: خصم 15% على [المنتج]. الكود: ASM15. اطلب دلوقتي: [link]"
+            ]
+          },
+          {
+            "name": "5. Post-Purchase Feedback (+14 days)",
+            "trigger": "After purchase completed",
+            "sequence": [
+              "إزاي تجربتك مع [المنتج]؟ رأيك بيساعدنا نطور. قيّمنا من 1 لـ 5"
+            ]
+          }
+        ]
+      },
+      "presenter_notes": "This is the automated WhatsApp sequence. Currently ASM's 3-person team handles 40-50 conversations daily, all manually. This sequence automates the first touch and follow-ups. Step 1: immediate welcome with qualification questions. Step 2: if no reply in 24 hours, a gentle nudge with a Grade Gain free trial link. Step 3: value-add with Telegram group invite. Step 4: at day 7, a flash offer with 15% discount. Step 5: post-purchase feedback for social proof generation. All messages need to be Meta-approved templates for broadcast use.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-034",
+      "section": "social_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "SOCIAL MEDIA STRATEGY",
+        "title_ar": "استراتيجية وسائل التواصل",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-034.png"
+      },
+      "presenter_notes": "Now we define the content strategy and weekly rhythm for ASM's social media presence across all platforms.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) social media motifs, 1920x1080"
+    },
+    {
+      "id": "slide-035",
+      "section": "content_pillars",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Content Pillars & Direction",
+        "title_ar": "أعمدة المحتوى",
+        "pillars": [
+          {
+            "name": "Student Success Stories",
+            "purpose": "UGC reels, vlogs, testimonials — 'I studied from ASM and got top marks'",
+            "frequency": "40% of content"
+          },
+          {
+            "name": "Study Tips & Value",
+            "purpose": "Short-form tips, carousels, TikToks — subject-specific advice",
+            "frequency": "25% of content"
+          },
+          {
+            "name": "Doctor Endorsements",
+            "purpose": "Interview clips, review videos — senior doctors validating ASM content on camera",
+            "frequency": "15% of content"
+          },
+          {
+            "name": "Product Showcases",
+            "purpose": "Book walkthroughs, Grade Gain demos, feature updates",
+            "frequency": "10% of content"
+          },
+          {
+            "name": "Behind the Scenes",
+            "purpose": "Team content, book creation process — 'How we update the book from inside the lecture the same day'",
+            "frequency": "10% of content"
+          }
+        ],
+        "format_split": {
+          "Reels/TikTok": "60%",
+          "Carousels": "20%",
+          "Stories": "15%",
+          "Static Posts": "5%"
+        }
+      },
+      "presenter_notes": "Five content pillars weighted by impact. Student success stories at 40% because UGC is ASM's unfair advantage — 90% of existing Instagram content is already organic student content. Study tips at 25% provide genuine value and drive shares. Doctor endorsements at 15% are the credibility anchor that neutralizes competitor attacks. Product showcases at 10% for new launches. Behind-the-scenes at 10% humanizes the brand. Format split: 60% short-form video because that's what drives reach on both Instagram and TikTok. TikTok first, then adapt for Instagram Reels — not the reverse.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-036",
+      "section": "weekly_rhythm",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Weekly Content Rhythm",
+        "title_ar": "إيقاع المحتوى الأسبوعي",
+        "weekly_rhythm": [
+          {
+            "day": "Saturday",
+            "content": "IG: Student testimonial reel | TikTok: Study tip (30s) | Telegram: Week's exam schedule"
+          },
+          {
+            "day": "Sunday",
+            "content": "IG: Carousel deep-dive | TikTok: Book walkthrough | Telegram: Study resource links"
+          },
+          {
+            "day": "Monday",
+            "content": "IG: Doctor endorsement clip | TikTok: 'Study with me' duet | Telegram: Lecture updates"
+          },
+          {
+            "day": "Tuesday",
+            "content": "IG: Product showcase | TikTok: Before/after grades | Telegram: Tips & motivation"
+          },
+          {
+            "day": "Wednesday",
+            "content": "IG: UGC repost | TikTok: UGC repost | Telegram: News & announcements"
+          },
+          {
+            "day": "Thursday",
+            "content": "IG: Story polls + Q&A | TikTok: Trending sound + study hook | Telegram: Community discussion"
+          }
+        ]
+      },
+      "presenter_notes": "Six days of content, three platforms. Saturday through Thursday following the Egyptian week. Each day has a specific content type per platform. The rhythm is designed to be sustainable — most content is repurposed across platforms. UGC reposts on Wednesday require zero production. The Telegram schedule maintains daily engagement, which is critical because competitors like Nebras and the doctor-led channels are beating ASM on Telegram frequency. All content rules: Egyptian Arabic only, never mention AI publicly, always tag doctors, TikTok first then adapt for Reels, every piece must have a CTA.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-037",
+      "section": "partnerships",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Strategic Partnerships",
+        "title_ar": "الشراكات الاستراتيجية",
+        "tiers": [
+          {
+            "tier": "B2B: Medical Teaching Centers",
+            "detail": "ASM provides books + question banks at wholesale pricing. Targets: Royal Center, Smart Vision, independent centers in Cairo and Delta. Revenue share on courses taught from ASM books."
+          },
+          {
+            "tier": "Student Ambassadors",
+            "detail": "Top-performing students get free products + 10% commission on referrals. 5 ambassadors per university across 6 universities = 30 ambassadors. Cost: ~EGP 500/ambassador + commission."
+          },
+          {
+            "tier": "Medical Influencers",
+            "detail": "Model proven by Omar El-Barky (3M followers) who drove cross-university sales. Next targets: mid-tier medical student influencers (10K-100K followers). Budget: EGP 5,000-10,000 per collaboration."
+          },
+          {
+            "tier": "Mansoura University Team",
+            "detail": "Existing relationship: content hosted on Grade Gain. Expansion: joint marketing across both universities. Revenue share on Grade Gain subscriptions attributed to Mansoura content."
+          }
+        ]
+      },
+      "presenter_notes": "Four partnership tracks. B2B with teaching centers turns competitors into customers — ASM already supplies books to centers who teach from them. Formalizing this creates revenue without marketing cost. The ambassador program scales the UGC model: 30 ambassadors across 6 universities generating authentic peer-to-peer content. The influencer track is proven — Omar El-Barky showed that one collaboration can drive cross-university demand. And Mansoura is a ready-made expansion partner already on Grade Gain.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-038",
+      "section": "measurement_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "MEASUREMENT & EVALUATION",
+        "title_ar": "القياس والتقييم",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-038.png"
+      },
+      "presenter_notes": "Finally, we set the measurement framework — the KPIs we'll track, the tools we'll use, and the reporting cadence.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) data chart motifs, 1920x1080"
+    },
+    {
+      "id": "slide-039",
+      "section": "kpis",
+      "layout": "title-bullets",
+      "content": {
+        "title": "KPIs & Tracking Framework",
+        "title_ar": "مؤشرات الأداء وإطار التتبع",
+        "categories": [
+          {
+            "category": "Lead Metrics",
+            "metrics": [
+              {
+                "metric": "Landing page visitors",
+                "target": "10,000/month by Month 2",
+                "tool": "Google Analytics"
+              },
+              {
+                "metric": "Grade Gain free trial starts",
+                "target": "500/month",
+                "tool": "Grade Gain dashboard"
+              },
+              {
+                "metric": "WhatsApp conversations started",
+                "target": "200/week",
+                "tool": "WhatsApp Business API"
+              },
+              {
+                "metric": "Telegram new joins",
+                "target": "1,000/month",
+                "tool": "Telegram analytics"
+              }
+            ]
+          },
+          {
+            "category": "Conversion Metrics",
+            "metrics": [
+              {
+                "metric": "WhatsApp to purchase rate",
+                "target": "25%+",
+                "tool": "CRM tracking"
+              },
+              {
+                "metric": "Free trial to paid subscription",
+                "target": "15%+",
+                "tool": "Grade Gain dashboard"
+              },
+              {
+                "metric": "Landing page to WhatsApp click",
+                "target": "10%+",
+                "tool": "Google Analytics + UTMs"
+              },
+              {
+                "metric": "Cost per qualified lead",
+                "target": "Below EGP 15",
+                "tool": "Meta/Google Ads Manager"
+              }
+            ]
+          },
+          {
+            "category": "Revenue Metrics",
+            "metrics": [
+              {
+                "metric": "ROAS (Meta + TikTok)",
+                "target": "4x minimum",
+                "tool": "Ads Manager"
+              },
+              {
+                "metric": "ROAS (Google Search)",
+                "target": "6x minimum",
+                "tool": "Google Ads"
+              },
+              {
+                "metric": "Monthly digital revenue growth",
+                "target": "+15% MoM",
+                "tool": "Internal tracking"
+              },
+              {
+                "metric": "Average order value",
+                "target": "Track & increase 20%",
+                "tool": "CRM"
+              }
+            ]
+          }
+        ]
+      },
+      "presenter_notes": "Three categories of KPIs. Lead metrics tell us if the top of funnel is working — are we driving traffic and generating trials? Conversion metrics tell us if the middle and bottom of funnel are converting — are WhatsApp conversations turning into sales? Revenue metrics tell us if the whole system is profitable — is our ROAS sustainable? Each metric has a specific target and a specific tool for measurement. We start tracking from day one, and we adjust the strategy based on what the data tells us.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-040",
+      "section": "reporting_cadence",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Reporting Cadence",
+        "title_ar": "إيقاع التقارير",
+        "cadence": [
+          {
+            "frequency": "Weekly",
+            "scope": "Ad performance snapshot — spend, leads, ROAS per channel. Quick wins and red flags identified."
+          },
+          {
+            "frequency": "Bi-weekly",
+            "scope": "WhatsApp conversion report + content performance. Team workload assessment. Automation optimization."
+          },
+          {
+            "frequency": "Monthly",
+            "scope": "Full performance review + strategy adjustment meeting with Mahmoud. Budget reallocation decisions."
+          },
+          {
+            "frequency": "Quarterly",
+            "scope": "Strategy review + next quarter planning. University expansion assessment. Product launch coordination."
+          }
+        ]
+      },
+      "presenter_notes": "Four reporting cadences, each serving a different purpose. Weekly reports catch problems fast — if an ad is underperforming, we know within 7 days. Bi-weekly reports focus on the WhatsApp team's capacity and content performance. Monthly meetings with Mahmoud are where we make strategic adjustments — reallocate budget, adjust targeting, plan new campaigns. Quarterly reviews set the direction for expansion and major initiatives.",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-041",
+      "section": "closing",
+      "layout": "closing",
+      "content": {
+        "title": "THANK YOU",
+        "subtitle": "For Your Attention",
+        "client_name": "ASM Minds",
+        "tagline": "أكبر نظام تعليم طبي متكامل في إسكندرية",
+        "next_steps": [
+          "Approve strategy direction and budget allocation",
+          "Set up Meta Business Manager and WhatsApp Business API",
+          "Begin Grade Gain HVCO development (free trial exam)",
+          "Launch website and landing pages build",
+          "Kick off TikTok channel and content production",
+          "Schedule monthly strategy review meetings"
+        ],
+        "contact": {
+          "email": "hello@admireworks.com",
+          "phone": "(+971) 4295 8666",
+          "website": "admire8.admireworks.com"
+        },
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/slide-041.png"
+      },
+      "presenter_notes": "Thank you for your time and attention. The next steps are clear: approve the strategy direction, then we move immediately to infrastructure setup — Meta Business Manager, WhatsApp Business API, and the Grade Gain HVCO. Website and landing pages follow in parallel. TikTok channel launch and content production begin week one. We schedule monthly strategy review meetings with Mahmoud to keep everything on track. The products are ready, the market is ready — let's build the system that connects them.",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation closing slide background, abstract geometric patterns, navy blue (#001a70) and gold (#cc9f53) color palette, modern luxury aesthetic, clean minimal composition, Admireworks brand feel, 1920x1080"
+    }
+  ]
+}

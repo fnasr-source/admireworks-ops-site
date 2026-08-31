@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Edrak Space · June Creatives for Approval</title>
+<style>
+  :root{
+    --orange:#f0873b; --yellow:#f5c269; --redorange:#e3692b; --green:#6bb0a3;
+    --ground:#fefcf8; --ink:#1a1a1a; --muted:#6B7280; --line:#efe7db; --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--ground);color:var(--ink);font-family:"Avenir Next","Segoe UI",Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--redorange)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 120px}
+  header.top{background:linear-gradient(135deg,#fff5e9,#fefcf8);border-bottom:1px solid var(--line);padding:34px 18px 26px}
+  header.top .inner{max-width:1080px;margin:0 auto}
+  .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--orange);font-weight:800}
+  h1{font-size:30px;margin:6px 0 6px;font-weight:800}
+  .sub{color:var(--muted);max-width:720px}
+  .pill{display:inline-block;background:var(--yellow);color:#5a3c12;border-radius:999px;padding:3px 12px;font-size:12px;font-weight:800;margin-top:10px}
+  .how{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:22px 0}
+  .how b{color:var(--redorange)}
+  .group-title{font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--orange);margin:30px 0 8px;border-bottom:2px solid var(--yellow);padding-bottom:6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  .card-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:flex-start}
+  .persona{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#fff;background:var(--orange);border-radius:999px;padding:3px 10px;display:inline-block}
+  .persona.ph2{background:var(--green)}
+  .headline{font-size:19px;font-weight:800;margin:8px 0 4px}
+  .headline.rtl{direction:rtl;text-align:right}
+  .metaline{font-size:13px;color:var(--muted)}
+  .sizes{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:14px 0 6px}
+  figure{margin:0;text-align:center}
+  figure img{display:block;border-radius:10px;border:1px solid var(--line);background:#faf7f1}
+  figure.sq img{width:230px;height:230px;object-fit:cover}
+  figure.feed img{width:230px;height:287px;object-fit:cover}
+  figure.story img{width:172px;height:306px;object-fit:cover}
+  figcaption{font-size:11px;color:var(--muted);margin-top:5px;font-weight:700;letter-spacing:.03em}
+  .changed{font-size:13px;color:#9a4d12;background:#fff4e8;border:1px solid #f3d9b8;border-radius:9px;padding:8px 12px;margin:8px 0 2px}
+  .changed b{font-weight:800}
+  .changed .old{color:var(--muted);text-decoration:line-through}
+  .ba-block{margin:8px 0 2px}
+  .ba-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 11px;margin:8px 0 0}
+  .tag-before{background:#f1ece3;color:#8a7d68}
+  .tag-after{background:#e9f7f1;color:#1f6f5c}
+  .sizes-before figure img{opacity:.82}
+  .approval{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .ap-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .ap-radio{cursor:pointer;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;user-select:none;display:inline-flex;align-items:center;gap:6px;background:#fff;transition:.12s}
+  .ap-radio input{display:none}
+  .ap-radio:hover{border-color:#d9cdb8}
+  .ap-radio.accept-tone.selected{background:#e9f7f1;border-color:var(--green);color:#1f6f5c}
+  .ap-radio.regen-tone.selected{background:#fff1e3;border-color:var(--orange);color:#9a4d12}
+  .ap-radio.hold-tone.selected{background:#fbeede;border-color:var(--yellow);color:#7a5512}
+  .cmt-btn{margin-left:auto;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer}
+  .cmt-btn:hover{border-color:#d9cdb8}
+  .cmt-list{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+  .cmt-item{position:relative;background:#fbf7f0;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px}
+  .cmt-author{font-weight:800;margin-right:6px}
+  .cmt-time{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+  .cmt-del{position:absolute;top:6px;right:8px;border:none;background:none;font-size:16px;color:var(--muted);cursor:pointer}
+  .apply-all{background:linear-gradient(135deg,#fff3e6,#fdfbf6);border:2px solid var(--orange);border-radius:16px;padding:20px;margin:28px 0 10px;text-align:center}
+  .apply-all h3{margin:0 0 4px;font-size:20px}
+  .apply-all p{margin:0 0 14px;color:var(--muted)}
+  .apply-all .ap-row{justify-content:center}
+  .apply-all .ap-radio{font-size:15px;padding:10px 20px}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+  /* toast + fab + modal */
+  #toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%) translateY(20px);background:#222;color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:.2s;z-index:60;max-width:92vw}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .feedback-fab{position:fixed;right:18px;bottom:18px;background:var(--orange);color:#fff;border:none;border-radius:999px;padding:12px 18px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 6px 22px rgba(240,135,59,.4);display:flex;gap:8px;align-items:center;z-index:55}
+  .feedback-fab.empty{background:#caa};.fab-count{background:#fff;color:var(--redorange);border-radius:999px;padding:1px 8px;font-size:12px}
+  .cmt-modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:70;padding:18px}
+  .cmt-modal.open{display:flex}
+  .cmt-box{background:#fff;border-radius:16px;max-width:460px;width:100%;padding:22px}
+  .cmt-box h4{margin:0 0 4px}
+  .cmt-box .ctx{color:var(--muted);font-size:13px;margin-bottom:12px}
+  .cmt-box input,.cmt-box textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;margin-bottom:10px}
+  .cmt-box textarea{min-height:90px;resize:vertical}
+  .cmt-actions{display:flex;gap:10px;justify-content:flex-end}
+  .btn{border:none;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer}
+  .btn.primary{background:var(--orange);color:#fff}
+  .btn.ghost{background:#f1ece3;color:#444}
+  @media(max-width:560px){figure.sq img,figure.feed img{width:46vw;height:auto}figure.story img{width:38vw;height:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="inner">
+  <div class="eyebrow">Admireworks · for Edrak Space</div>
+  <h1>June Campaign Creatives</h1>
+  <div class="sub">You sent us notes on the wording, so we updated those ads. For every ad we changed, you will see <b>Before</b> and <b>After</b> below so you can compare side by side. The ads that did not need a change are shown as they are. Each ad runs in three sizes across Facebook and Instagram (feed, square, and story). Approve it, ask for another version, or leave a note with anything else.</div>
+  <span class="pill">6 ads · 3 sizes each · updates shown before & after</span>
+</div></header>
+
+<div class="wrap">
+  <div class="how">
+    <b>How it works:</b> under each ad, tap <b>Approve</b>, ask for <b>Another version</b>, or <b>Hold</b> if you would like to talk it through. Tap <b>Comment</b> to tell us exactly what to change. When everything looks good, use <b>Approve all</b> at the bottom. Nothing goes live until you say so.
+  </div>
+
+  <div class="apply-all" id="apply-all-top">
+    <h3>Approve the whole set</h3>
+    <p>Happy with all of them? One tap approves the full set.</p>
+    <div class="ap-row">
+      <label class="ap-radio accept-tone" data-item="apply-all" data-decision="approve"><input type="radio" name="apply-all" />✓ Approve all</label>
+      <label class="ap-radio hold-tone" data-item="apply-all" data-decision="hold"><input type="radio" name="apply-all" />⏸ Hold for discussion</label>
+    </div>
+  </div>
+
+  <div class="group-title">Business owners · Phase 1 (Egypt in English, Gulf in Arabic)</div>
+
+  <!-- owners-stays-en -->
+  <div class="card" id="card-owners-stays-en">
+    <div class="card-head"><div>
+      <span class="persona">Business owners · English · Egypt</span>
+      <div class="headline">Is your money creating wealth?</div>
+      <div class="metaline">The button opens <a href="https://edrakspace.co/scale-business-en" target="_blank" rel="noopener">your application page</a>.</div>
+    </div></div>
+    <div class="sizes">
+      <figure class="feed"><img src="assets/owners-stays-en-4x5.jpg" alt="4:5"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/owners-stays-en-1x1.jpg" alt="1:1"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/owners-stays-en-9x16.jpg" alt="9:16"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div>
+    <div class="approval">
+      <div class="ap-row">
+        <label class="ap-radio accept-tone" data-item="owners-stays-en" data-decision="approve"><input type="radio" name="owners-stays-en" />✓ Approve</label>
+        <label class="ap-radio regen-tone" data-item="owners-stays-en" data-decision="regenerate"><input type="radio" name="owners-stays-en" />↻ Another version</label>
+        <label class="ap-radio hold-tone" data-item="owners-stays-en" data-decision="hold"><input type="radio" name="owners-stays-en" />⏸ Hold</label>
+        <button class="cmt-btn" onclick="openCmtModal('owners-stays-en','Is your money creating wealth?')">💬 Comment</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="owners-stays-en"></div>
+    </div>
+  </div>
+
+  <!-- owners-stays-ar -->
+  <div class="card" id="card-owners-stays-ar">
+    <div class="card-head"><div>
+      <span class="persona">Business owners · Arabic · Gulf</span>
+      <div class="headline rtl">فلوسك بتتحوّل لثروة ولا لأ؟</div>
+      <div class="metaline">The button opens <a href="https://edrakspace.co/scale-business" target="_blank" rel="noopener">your application page (Arabic)</a>.</div>
+    </div></div>
+    <div class="sizes">
+      <figure class="feed"><img src="assets/owners-stays-ar-4x5.jpg" alt="4:5"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/owners-stays-ar-1x1.jpg" alt="1:1"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/owners-stays-ar-9x16.jpg" alt="9:16"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div>
+    <div class="approval">
+      <div class="ap-row">
+        <label class="ap-radio accept-tone" data-item="owners-stays-ar" data-decision="approve"><input type="radio" name="owners-stays-ar" />✓ Approve</label>
+        <label class="ap-radio regen-tone" data-item="owners-stays-ar" data-decision="regenerate"><input type="radio" name="owners-stays-ar" />↻ Another version</label>
+        <label class="ap-radio hold-tone" data-item="owners-stays-ar" data-decision="hold"><input type="radio" name="owners-stays-ar" />⏸ Hold</label>
+        <button class="cmt-btn" onclick="openCmtModal('owners-stays-ar','فلوسك بتتحوّل لثروة ولا لأ؟')">💬 Comment</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="owners-stays-ar"></div>
+    </div>
+  </div>
+
+  <!-- owners-scale-en -->
+  <div class="card" id="card-owners-scale-en">
+    <div class="card-head"><div>
+      <span class="persona">Business owners · English · Egypt</span>
+      <div class="headline">Grow your business to the next level</div>
+      <div class="metaline">The button opens <a href="https://edrakspace.co/scale-business-en" target="_blank" rel="noopener">your application page</a>.</div>
+      <div class="changed"><b>Updated per your note.</b> Was <span class="old">"Scale your business to the next level"</span>, now <b>"Grow your business to the next level"</b>.</div>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-before">Before</div>
+    <div class="sizes sizes-before">
+      <figure class="feed"><img src="assets/before/owners-scale-en-4x5.jpg" alt="4:5 before"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/before/owners-scale-en-1x1.jpg" alt="1:1 before"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/before/owners-scale-en-9x16.jpg" alt="9:16 before"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-after">After · revised</div>
+    <div class="sizes">
+      <figure class="feed"><img src="assets/owners-scale-en-4x5.jpg" alt="4:5"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/owners-scale-en-1x1.jpg" alt="1:1"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/owners-scale-en-9x16.jpg" alt="9:16"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="approval">
+      <div class="ap-row">
+        <label class="ap-radio accept-tone" data-item="owners-scale-en" data-decision="approve"><input type="radio" name="owners-scale-en" />✓ Approve</label>
+        <label class="ap-radio regen-tone" data-item="owners-scale-en" data-decision="regenerate"><input type="radio" name="owners-scale-en" />↻ Another version</label>
+        <label class="ap-radio hold-tone" data-item="owners-scale-en" data-decision="hold"><input type="radio" name="owners-scale-en" />⏸ Hold</label>
+        <button class="cmt-btn" onclick="openCmtModal('owners-scale-en','Grow your business to the next level')">💬 Comment</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="owners-scale-en"></div>
+    </div>
+  </div>
+
+  <!-- owners-scale-ar -->
+  <div class="card" id="card-owners-scale-ar">
+    <div class="card-head"><div>
+      <span class="persona">Business owners · Arabic · Gulf</span>
+      <div class="headline rtl">كبرى البيزنس بتاعك</div>
+      <div class="metaline">The button opens <a href="https://edrakspace.co/scale-business" target="_blank" rel="noopener">your application page (Arabic)</a>.</div>
+      <div class="changed"><b>Updated per your note.</b> The Arabic now reads <b dir="rtl">«كبرى البيزنس بتاعك»</b> (shorter, cleaner phrasing).</div>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-before">Before</div>
+    <div class="sizes sizes-before">
+      <figure class="feed"><img src="assets/before/owners-scale-ar-4x5.jpg" alt="4:5 before"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/before/owners-scale-ar-1x1.jpg" alt="1:1 before"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/before/owners-scale-ar-9x16.jpg" alt="9:16 before"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-after">After · revised</div>
+    <div class="sizes">
+      <figure class="feed"><img src="assets/owners-scale-ar-4x5.jpg" alt="4:5"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/owners-scale-ar-1x1.jpg" alt="1:1"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/owners-scale-ar-9x16.jpg" alt="9:16"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="approval">
+      <div class="ap-row">
+        <label class="ap-radio accept-tone" data-item="owners-scale-ar" data-decision="approve"><input type="radio" name="owners-scale-ar" />✓ Approve</label>
+        <label class="ap-radio regen-tone" data-item="owners-scale-ar" data-decision="regenerate"><input type="radio" name="owners-scale-ar" />↻ Another version</label>
+        <label class="ap-radio hold-tone" data-item="owners-scale-ar" data-decision="hold"><input type="radio" name="owners-scale-ar" />⏸ Hold</label>
+        <button class="cmt-btn" onclick="openCmtModal('owners-scale-ar','كبرى البيزنس بتاعك')">💬 Comment</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="owners-scale-ar"></div>
+    </div>
+  </div>
+
+  <div class="group-title">Coaches and therapists · Phase 2</div>
+
+  <!-- coaches-en -->
+  <div class="card" id="card-coaches-en">
+    <div class="card-head"><div>
+      <span class="persona ph2">Coaches · English</span>
+      <div class="headline">Grow your practice and grow your income</div>
+      <div class="metaline">The button opens <a href="https://edrakspace.co/grow-your-practice-en" target="_blank" rel="noopener">your coaches application page</a>.</div>
+      <div class="changed"><b>Updated per your note.</b> Was <span class="old">"Scale your practice past its ceiling"</span>, now <b>"Grow your practice and grow your income"</b>.</div>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-before">Before</div>
+    <div class="sizes sizes-before">
+      <figure class="feed"><img src="assets/before/coaches-en-4x5.jpg" alt="4:5 before"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/before/coaches-en-1x1.jpg" alt="1:1 before"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/before/coaches-en-9x16.jpg" alt="9:16 before"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-after">After · revised</div>
+    <div class="sizes">
+      <figure class="feed"><img src="assets/coaches-en-4x5.jpg" alt="4:5"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/coaches-en-1x1.jpg" alt="1:1"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/coaches-en-9x16.jpg" alt="9:16"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="approval">
+      <div class="ap-row">
+        <label class="ap-radio accept-tone" data-item="coaches-en" data-decision="approve"><input type="radio" name="coaches-en" />✓ Approve</label>
+        <label class="ap-radio regen-tone" data-item="coaches-en" data-decision="regenerate"><input type="radio" name="coaches-en" />↻ Another version</label>
+        <label class="ap-radio hold-tone" data-item="coaches-en" data-decision="hold"><input type="radio" name="coaches-en" />⏸ Hold</label>
+        <button class="cmt-btn" onclick="openCmtModal('coaches-en','Grow your practice and grow your income')">💬 Comment</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="coaches-en"></div>
+    </div>
+  </div>
+
+  <!-- coaches-ar -->
+  <div class="card" id="card-coaches-ar">
+    <div class="card-head"><div>
+      <span class="persona ph2">Coaches · Arabic · Gulf</span>
+      <div class="headline rtl">كبرى شغلك وفلوسك</div>
+      <div class="metaline">The button opens your coaches application page (Arabic).</div>
+      <div class="changed"><b>Refined to match.</b> Same cleaner Arabic spelling, now reads <b dir="rtl">«كبرى شغلك وفلوسك»</b>.</div>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-before">Before</div>
+    <div class="sizes sizes-before">
+      <figure class="feed"><img src="assets/before/coaches-ar-4x5.jpg" alt="4:5 before"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/before/coaches-ar-1x1.jpg" alt="1:1 before"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/before/coaches-ar-9x16.jpg" alt="9:16 before"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="ba-block"><div class="ba-tag tag-after">After · revised</div>
+    <div class="sizes">
+      <figure class="feed"><img src="assets/coaches-ar-4x5.jpg" alt="4:5"><figcaption>4:5 Feed</figcaption></figure>
+      <figure class="sq"><img src="assets/coaches-ar-1x1.jpg" alt="1:1"><figcaption>1:1 Square</figcaption></figure>
+      <figure class="story"><img src="assets/coaches-ar-9x16.jpg" alt="9:16"><figcaption>9:16 Story / Reel</figcaption></figure>
+    </div></div>
+    <div class="approval">
+      <div class="ap-row">
+        <label class="ap-radio accept-tone" data-item="coaches-ar" data-decision="approve"><input type="radio" name="coaches-ar" />✓ Approve</label>
+        <label class="ap-radio regen-tone" data-item="coaches-ar" data-decision="regenerate"><input type="radio" name="coaches-ar" />↻ Another version</label>
+        <label class="ap-radio hold-tone" data-item="coaches-ar" data-decision="hold"><input type="radio" name="coaches-ar" />⏸ Hold</label>
+        <button class="cmt-btn" onclick="openCmtModal('coaches-ar','كبرى شغلك وفلوسك')">💬 Comment</button>
+      </div>
+      <div class="cmt-list" data-cmt-list="coaches-ar"></div>
+    </div>
+  </div>
+
+  <div class="apply-all">
+    <h3>Approve the whole set</h3>
+    <p>Happy with all of them? One tap approves the full set.</p>
+    <div class="ap-row">
+      <label class="ap-radio accept-tone" data-item="apply-all" data-decision="approve"><input type="radio" name="apply-all-2" />✓ Approve all</label>
+      <label class="ap-radio hold-tone" data-item="apply-all" data-decision="hold"><input type="radio" name="apply-all-2" />⏸ Hold for discussion</label>
+    </div>
+  </div>
+
+  <footer>
+    Prepared by Admireworks for Edrak Space. Your notes and approvals come straight to us.
+  </footer>
+</div>
+
+<div id="toast"></div>
+<button type="button" class="feedback-fab empty" id="feedback-fab" onclick="jumpToFirstComment()" title="Your notes and approvals come straight to us">
+  <span>💬 Live feedback</span><span class="fab-count" id="fab-count">0</span>
+</button>
+
+<div class="cmt-modal" id="cmt-modal">
+  <div class="cmt-box">
+    <h4>Leave a note</h4>
+    <div class="ctx" id="cmt-modal-ctx"></div>
+    <div id="cmt-name-row"><input id="cmt-name-input" placeholder="Your name (saved once)" /></div>
+    <textarea id="cmt-text-input" placeholder="What should change? Be specific."></textarea>
+    <div class="cmt-actions">
+      <button class="btn ghost" onclick="closeCmtModal()">Cancel</button>
+      <button class="btn primary" onclick="submitComment()">Send note</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const DECK_SLUG = "edrak-ads-v1";
+window.AW_FB = { db, DECK_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+let fbReady=false, toastTimer=null;
+const stateDecisions={}, stateComments={};
+const NAME_KEY="edrak-ads-v1-reviewer-name";
+function getName(){ return localStorage.getItem(NAME_KEY)||""; }
+function setName(n){ localStorage.setItem(NAME_KEY,n); }
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+function showToast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove("show"),3200); }
+
+window.addEventListener("aw-fb-ready",()=>{ fbReady=true; initSync(); });
+function initSync(){
+  const fb=window.AW_FB; if(!fb) return;
+  const decRef=fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"decisions");
+  fb.onSnapshot(decRef,snap=>{
+    Object.keys(stateDecisions).forEach(k=>delete stateDecisions[k]);
+    snap.forEach(d=>{ stateDecisions[d.id]=d.data(); });
+    renderApRadioState(); updateFab();
+  },err=>console.error("decisions onSnapshot:",err));
+  const cmtRef=fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments");
+  fb.onSnapshot(fb.query(cmtRef,fb.orderBy("createdAt","asc")),snap=>{
+    Object.keys(stateComments).forEach(k=>delete stateComments[k]);
+    snap.forEach(d=>{ const data=d.data(); const sid=data.sectionId; if(!stateComments[sid]) stateComments[sid]=[]; stateComments[sid].push({id:d.id,...data}); });
+    document.querySelectorAll("[data-cmt-list]").forEach(el=>renderComments(el.dataset.cmtList));
+    updateFab();
+  },err=>console.error("comments onSnapshot:",err));
+}
+async function submitItemDecision(itemKey,decision,label){
+  if(!fbReady){ showToast("Still connecting, try again in a moment."); return; }
+  let name=getName();
+  if(!name){ name=(prompt("Your name (saved once):")||"").trim(); if(!name){ showToast("Please enter your name."); return; } setName(name); }
+  const fb=window.AW_FB;
+  try{
+    await fb.setDoc(fb.doc(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"decisions",itemKey),{ decision, name, updatedAt: fb.serverTimestamp() });
+    showToast("Saved: "+label);
+  }catch(e){ console.error("submitItemDecision",e); showToast("Save failed: "+(e.message||"unknown")); }
+}
+window.submitItemDecision=submitItemDecision;
+function attachAllRadios(){
+  document.querySelectorAll(".ap-radio").forEach(label=>{
+    label.addEventListener("click",async e=>{
+      e.preventDefault();
+      const item=label.dataset.item, decision=label.dataset.decision;
+      const c=label.cloneNode(true); c.querySelectorAll("input").forEach(n=>n.remove());
+      const labelText=c.textContent.trim();
+      document.querySelectorAll('.ap-radio[data-item="'+CSS.escape(item)+'"]').forEach(r=>r.classList.remove("selected"));
+      label.classList.add("selected");
+      await submitItemDecision(item,decision,labelText);
+    });
+  });
+}
+document.addEventListener("DOMContentLoaded",attachAllRadios);
+function renderApRadioState(){
+  document.querySelectorAll(".ap-radio").forEach(r=>r.classList.remove("selected"));
+  Object.entries(stateDecisions).forEach(([itemKey,data])=>{
+    const sel='.ap-radio[data-item="'+CSS.escape(itemKey)+'"][data-decision="'+CSS.escape(data.decision)+'"]';
+    document.querySelectorAll(sel).forEach(r=>r.classList.add("selected"));
+  });
+}
+// comments
+let activeCmtSection=null, activeCmtLabel="";
+function openCmtModal(sectionKey,label){
+  activeCmtSection=sectionKey; activeCmtLabel=label;
+  const modal=document.getElementById("cmt-modal"), nameRow=document.getElementById("cmt-name-row");
+  const nameInput=document.getElementById("cmt-name-input"), textInput=document.getElementById("cmt-text-input");
+  document.getElementById("cmt-modal-ctx").textContent="On: "+label;
+  const existing=getName();
+  if(existing){ nameRow.style.display="none"; } else { nameRow.style.display="block"; nameInput.value=""; setTimeout(()=>nameInput.focus(),50); }
+  textInput.value=""; if(existing) setTimeout(()=>textInput.focus(),50);
+  modal.classList.add("open");
+}
+function closeCmtModal(){ document.getElementById("cmt-modal").classList.remove("open"); activeCmtSection=null; }
+async function submitComment(){
+  const nameInput=document.getElementById("cmt-name-input"), textInput=document.getElementById("cmt-text-input");
+  let name=getName();
+  if(!name){ name=(nameInput.value||"").trim(); if(!name){ nameInput.focus(); showToast("Please add your name."); return; } setName(name); }
+  const text=(textInput.value||"").trim();
+  if(!text){ textInput.focus(); showToast("The note is empty."); return; }
+  if(!fbReady){ showToast("Still connecting, try again."); return; }
+  const fb=window.AW_FB;
+  try{
+    await fb.addDoc(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments"),{ sectionId:activeCmtSection, sectionLabel:activeCmtLabel, name, text, createdAt: fb.serverTimestamp() });
+    closeCmtModal(); showToast("Note sent. Thank you.");
+  }catch(e){ console.error("submitComment",e); showToast("Save failed: "+(e.message||"check connection")); }
+}
+function renderComments(sectionKey){
+  const el=document.querySelector('[data-cmt-list="'+sectionKey+'"]'); if(!el) return;
+  const comments=stateComments[sectionKey]||[];
+  if(!comments.length){ el.innerHTML=""; return; }
+  el.innerHTML=comments.map(c=>{
+    const t=c.createdAt&&c.createdAt.toDate?c.createdAt.toDate():new Date();
+    const ts=t.toLocaleString("en-GB",{hour:"2-digit",minute:"2-digit",day:"2-digit",month:"short"});
+    const isMine=c.name===getName();
+    const del=isMine?'<button class="cmt-del" onclick="deleteCommentById(\''+c.id+'\')" title="Delete">×</button>':"";
+    return '<div class="cmt-item">'+del+'<span class="cmt-author">'+escapeHtml(c.name)+'</span>'+escapeHtml(c.text)+'<span class="cmt-time">'+ts+'</span></div>';
+  }).join("");
+}
+async function deleteCommentById(id){
+  if(!confirm("Delete this note?")) return; if(!fbReady) return;
+  const fb=window.AW_FB;
+  try{ await fb.deleteDoc(fb.doc(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments",id)); showToast("Deleted."); }
+  catch(e){ showToast("Delete failed: "+(e.message||"check rules")); }
+}
+function updateFab(){
+  const fab=document.getElementById("feedback-fab"), count=document.getElementById("fab-count");
+  let total=Object.keys(stateDecisions).length; Object.values(stateComments).forEach(a=>total+=a.length);
+  count.textContent=total; if(total>0) fab.classList.remove("empty"); else fab.classList.add("empty");
+}
+function jumpToFirstComment(){
+  const lists=document.querySelectorAll("[data-cmt-list]");
+  for(const el of lists){ if(el.children.length>0){ el.scrollIntoView({behavior:"smooth",block:"center"}); return; } }
+  document.getElementById("apply-all-top")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+window.openCmtModal=openCmtModal; window.closeCmtModal=closeCmtModal; window.submitComment=submitComment; window.deleteCommentById=deleteCommentById; window.jumpToFirstComment=jumpToFirstComment;
+</script>
+</body>
+</html>

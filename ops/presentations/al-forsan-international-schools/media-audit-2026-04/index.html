@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تدقيق وسائل الإعلام — مجموعة أجيالنا | Ajialuna Media Audit 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:      #08192E;
+  --navy-mid:  #0D2847;
+  --navy-lt:   #1A3A6C;
+  --gold:      #C9A84C;
+  --gold-lt:   #E8C96C;
+  --gold-dim:  rgba(201,168,76,0.25);
+  --blue:      #1E6FB8;
+  --blue-lt:   #4A9EE0;
+  --white:     #FFFFFF;
+  --offwhite:  #F4F7FC;
+  --gray:      #8899B4;
+  --red:       #E05050;
+  --green:     #3DB87A;
+  --font-h:    'Cairo', sans-serif;
+  --font-b:    'Tajawal', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:var(--font-b);}
+
+/* ── Presentation wrapper ── */
+#pres{width:100vw;height:100vh;position:relative;}
+
+/* ── Slide base ── */
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  padding:36px 56px 60px;
+  overflow:hidden;
+}
+.slide.active{display:flex;}
+.slide.dark{background:var(--navy);color:var(--white);}
+.slide.light{background:var(--offwhite);color:var(--navy);}
+
+/* ── Subtle mesh bg on dark slides ── */
+.slide.dark::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 90% 10%, rgba(30,111,184,.18), transparent),
+    radial-gradient(ellipse 40% 45% at 5%  90%, rgba(201,168,76,.09), transparent);
+}
+
+/* ── Slide header ── */
+.sh{margin-bottom:20px;position:relative;}
+.sh-eye{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;opacity:.4;margin-bottom:4px;font-family:var(--font-b);}
+.sh-title{font-family:var(--font-h);font-size:28px;font-weight:900;line-height:1.2;}
+.dark  .sh-title{color:var(--gold);}
+.light .sh-title{color:var(--navy);}
+.sh-sub{font-size:13px;opacity:.5;margin-top:4px;}
+
+/* ── Footer ── */
+.sf{
+  position:absolute;bottom:16px;right:56px;
+  font-size:10.5px;opacity:.28;font-family:var(--font-b);
+}
+.light .sf{color:var(--navy);}
+
+/* ── Navigation ── */
+#nav{
+  position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:12px;z-index:200;
+  direction:ltr;
+}
+.nb{
+  width:36px;height:36px;border-radius:50%;border:none;
+  background:rgba(255,255,255,.15);color:#fff;font-size:17px;
+  cursor:pointer;backdrop-filter:blur(6px);transition:.2s;
+  display:flex;align-items:center;justify-content:center;
+}
+.nb:hover{background:var(--gold);}
+#dots{display:flex;gap:5px;}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:.2s;}
+.dot.on{width:20px;border-radius:3px;background:var(--gold);}
+#ctr{
+  position:fixed;top:16px;left:46px;
+  font-size:11px;color:rgba(255,255,255,.35);z-index:200;
+  font-family:var(--font-b);direction:ltr;
+}
+
+/* ══════════════════════════════
+   COMPONENTS
+══════════════════════════════ */
+
+/* KPI grid */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px;}
+.kpi{
+  background:rgba(255,255,255,.06);border:1px solid var(--gold-dim);
+  border-radius:10px;padding:16px 12px;text-align:center;
+}
+.kpi-v{font-family:var(--font-h);font-size:26px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:5px;}
+.kpi-l{font-size:12.5px;opacity:.65;}
+.kpi-s{font-size:10.5px;opacity:.4;margin-top:2px;}
+
+/* Two column */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0;}
+
+/* Bullet list */
+.bl{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.bl li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;line-height:1.55;}
+.bl li::before{content:'◆';color:var(--gold);font-size:9px;margin-top:4px;flex-shrink:0;}
+.light .bl li{color:#1a2a40;}
+
+/* Section label */
+.slbl{
+  font-family:var(--font-h);font-size:13px;font-weight:700;
+  margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.slbl::after{content:'';flex:1;height:1px;background:var(--gold-dim);}
+.dark  .slbl{color:var(--gold);}
+.light .slbl{color:var(--navy);background:none;}
+.light .slbl::after{background:rgba(10,25,41,.15);}
+
+/* Data table */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.tbl th{
+  font-family:var(--font-h);font-weight:700;padding:9px 10px;
+  text-align:center;font-size:11.5px;
+}
+.dark  .tbl th{color:var(--gold);background:rgba(201,168,76,.08);border-bottom:1.5px solid rgba(201,168,76,.4);}
+.light .tbl th{color:var(--navy);background:rgba(10,25,41,.07);border-bottom:1.5px solid rgba(10,25,41,.2);}
+.tbl td{padding:8px 10px;text-align:center;}
+.dark  .tbl td{border-bottom:1px solid rgba(255,255,255,.06);}
+.light .tbl td{border-bottom:1px solid rgba(10,25,41,.07);}
+.tbl tr:hover td{background:rgba(201,168,76,.06);}
+.tbl-wrap{overflow-x:auto;flex:1;min-height:0;}
+
+/* Stat bar */
+.sbar{display:flex;gap:12px;margin-bottom:16px;}
+.sb{flex:1;text-align:center;padding:13px 8px;border-radius:9px;}
+.dark  .sb{background:rgba(255,255,255,.05);border:1px solid var(--gold-dim);}
+.light .sb{background:#fff;box-shadow:0 2px 12px rgba(10,25,41,.1);}
+.sbv{font-family:var(--font-h);font-size:20px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:3px;}
+.sbl{font-size:11px;opacity:.55;}
+
+/* Conclusion box */
+.cbox{border-radius:9px;padding:12px 16px;margin-top:10px;}
+.dark  .cbox{background:rgba(30,111,184,.12);border-right:3px solid var(--blue-lt);}
+.light .cbox{background:rgba(10,25,41,.04);border-right:3px solid var(--navy-lt);}
+
+/* Color helpers */
+.cv-gold{color:var(--gold);font-weight:700;}
+.cv-red{color:var(--red);font-weight:700;}
+.cv-green{color:var(--green);font-weight:700;}
+.cv-blue{color:var(--blue-lt);}
+
+/* ── Slide 1: Title ── */
+#s1{justify-content:center;align-items:center;text-align:center;gap:0;}
+.t-eye{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--blue-lt);margin-bottom:14px;}
+.t-main{font-family:var(--font-h);font-size:40px;font-weight:900;line-height:1.25;margin-bottom:12px;}
+.t-en{font-family:var(--font-h);font-size:20px;font-weight:600;color:var(--gold);margin-bottom:8px;}
+.t-date{font-size:14px;opacity:.45;margin-bottom:32px;}
+.t-plats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.tpb{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:20px;padding:7px 18px;font-size:13px;color:rgba(255,255,255,.65);
+}
+.t-by{margin-top:44px;font-size:12px;opacity:.35;}
+
+/* ── Branch grid (slide 9) ── */
+.bgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;flex:1;min-height:0;}
+.bcard{
+  background:rgba(255,255,255,.05);border:1px solid var(--gold-dim);
+  border-radius:10px;padding:14px 12px;display:flex;flex-direction:column;gap:7px;
+  font-size:12px;
+}
+.bcard .bn{
+  font-family:var(--font-h);font-size:13px;font-weight:700;color:var(--gold);
+  border-bottom:1px solid var(--gold-dim);padding-bottom:7px;margin-bottom:3px;
+}
+.bcard .btype{font-size:10px;color:var(--blue-lt);margin-bottom:5px;}
+.br-row{display:flex;justify-content:space-between;}
+.br-row .p{opacity:.5;}
+.br-row .a{font-weight:700;}
+.br-res{margin-top:auto;padding-top:7px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:var(--gold-lt);font-weight:600;}
+.br-note{font-size:10.5px;opacity:.5;line-height:1.4;}
+
+/* ── Funnel (slide 12) ── */
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1;min-height:0;}
+.fc{border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;}
+.fc:nth-child(1){background:linear-gradient(140deg,#0D2847,#1A3A6C);border:1px solid #1E6FB8;}
+.fc:nth-child(2){background:linear-gradient(140deg,#0E2B1A,#1B4A2E);border:1px solid #2E7D4A;}
+.fc:nth-child(3){background:linear-gradient(140deg,#2A1A06,#4A2E0A);border:1px solid #C9A84C;}
+.fc:nth-child(4){background:linear-gradient(140deg,#1A0E2A,#2E1848);border:1px solid #7C4DB8;}
+.fc-bg{
+  position:absolute;top:4px;left:10px;
+  font-family:var(--font-h);font-size:44px;font-weight:900;opacity:.12;line-height:1;
+}
+.fc-stage{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;opacity:.55;}
+.fc-pct{font-family:var(--font-h);font-size:34px;font-weight:900;color:var(--gold);line-height:1;}
+.fc-name{font-family:var(--font-h);font-size:16px;font-weight:700;}
+.fc-sub{font-size:10.5px;opacity:.45;margin-bottom:6px;}
+.fc-list{display:flex;flex-direction:column;gap:5px;}
+.fc-list li{display:flex;gap:6px;font-size:11.5px;opacity:.75;line-height:1.5;list-style:none;}
+.fc-list li::before{content:'→';opacity:.45;flex-shrink:0;}
+
+/* ── Action cards (slide 14) ── */
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;}
+.acard{border-radius:11px;padding:18px;background:#fff;box-shadow:0 2px 14px rgba(10,25,41,.09);}
+.aplatform{
+  font-family:var(--font-h);font-size:15px;font-weight:700;
+  margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid;
+  display:flex;align-items:center;gap:8px;
+}
+.aplatform .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.alist{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.alist li{display:flex;gap:8px;font-size:12.5px;line-height:1.5;}
+.an{font-family:var(--font-h);font-weight:900;color:var(--gold);flex-shrink:0;min-width:16px;}
+
+/* ── Roadmap cards (slide 15) ── */
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1;min-height:0;}
+.rwk{
+  background:rgba(255,255,255,.05);border:1px solid var(--gold-dim);
+  border-radius:11px;padding:18px;display:flex;flex-direction:column;gap:9px;
+}
+.rwk-n{font-size:10.5px;font-weight:700;color:var(--blue-lt);letter-spacing:1px;text-transform:uppercase;}
+.rwk-t{
+  font-family:var(--font-h);font-size:15px;font-weight:700;color:var(--gold);
+  border-bottom:1px solid var(--gold-dim);padding-bottom:9px;line-height:1.3;
+}
+.rwk-list{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.rwk-list li{display:flex;gap:7px;font-size:12px;line-height:1.5;}
+.rwk-list li .n{font-family:var(--font-h);font-weight:900;color:var(--gold);flex-shrink:0;}
+
+/* ── Tracking gaps (slide 10) ── */
+.ggrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0;}
+.gc{border-radius:11px;padding:18px;background:#fff;box-shadow:0 2px 14px rgba(10,25,41,.09);}
+.gp{
+  font-family:var(--font-h);font-size:15px;font-weight:700;
+  margin-bottom:11px;padding-bottom:9px;border-bottom:2px solid;
+  display:flex;align-items:center;gap:8px;
+}
+.g-sec{margin-bottom:10px;}
+.g-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.45;margin-bottom:5px;}
+.g-items{display:flex;flex-direction:column;gap:4px;}
+.gi{display:flex;gap:7px;font-size:12.5px;line-height:1.4;}
+.gi.bad::before{content:'✗';color:var(--red);flex-shrink:0;}
+.gi.good::before{content:'✓';color:var(--green);flex-shrink:0;}
+
+/* ── Diagnosis (slide 11) ── */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0;}
+.d-col{display:flex;flex-direction:column;gap:12px;}
+.di{border-radius:8px;padding:13px 15px;}
+.di.prob{background:rgba(224,80,80,.08);border-right:3px solid var(--red);}
+.di.opp {background:rgba(61,184,122,.08);border-right:3px solid var(--green);}
+.di-t{font-family:var(--font-h);font-size:13.5px;font-weight:700;margin-bottom:5px;}
+.di.prob .di-t{color:#ff9988;}
+.di.opp  .di-t{color:#70e0a8;}
+.di-d{font-size:12px;opacity:.7;line-height:1.55;}
+
+/* ── Reporting (slide 16) ── */
+.rep-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1;min-height:0;}
+.day-list{display:flex;flex-direction:column;gap:8px;}
+.ditem{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:9px;padding:10px 14px;box-shadow:0 1px 8px rgba(10,25,41,.07);}
+.dn{font-family:var(--font-h);font-weight:700;color:var(--navy);min-width:54px;font-size:13.5px;}
+.da{font-size:12.5px;line-height:1.45;color:#334;}
+.ditem.special{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);}
+.ditem.special .dn{color:var(--gold);}
+.avoid{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:6px;}
+.avoid li{display:flex;gap:8px;font-size:12.5px;line-height:1.4;color:var(--red);}
+.avoid li::before{content:'✕';flex-shrink:0;opacity:.7;}
+
+/* ── Next steps (slide 17) ── */
+.nsteps{display:flex;flex-direction:column;gap:15px;flex:1;justify-content:center;}
+.nsi{display:flex;gap:18px;align-items:flex-start;}
+.nsi-n{
+  font-family:var(--font-h);font-size:26px;font-weight:900;
+  color:var(--gold);min-width:36px;text-align:center;line-height:1;
+}
+.nsi-t{font-family:var(--font-h);font-size:15px;font-weight:700;margin-bottom:3px;}
+.nsi-d{font-size:12.5px;opacity:.6;line-height:1.5;}
+.closing{
+  margin-top:24px;padding-top:18px;
+  border-top:1px solid rgba(201,168,76,.2);
+  display:flex;justify-content:space-between;align-items:center;
+}
+
+/* ══════════════════════════════
+   MOBILE RESPONSIVE (≤ 768px)
+   Slides scroll within themselves; grids collapse; nav shrinks.
+   Desktop layout unchanged above this breakpoint.
+══════════════════════════════ */
+@media (max-width: 768px) {
+  /* Each slide scrolls vertically inside its viewport — keeps one-slide-at-a-time UX on mobile */
+  .slide {
+    padding: 50px 14px 76px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Let grid containers grow to natural content height instead of being flex-stretched */
+  .two, .bgrid, .fgrid, .agrid, .rgrid, .ggrid, .dgrid, .rep-grid,
+  .tbl-wrap, .nsteps { flex: none; min-height: 0; }
+
+  /* Slide 1 — Title */
+  #s1 { padding: 24px 16px 76px; }
+  .t-eye { font-size: 10px; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .t-main { font-size: 24px; line-height: 1.3; margin-bottom: 10px; }
+  .t-en { font-size: 14px; margin-bottom: 6px; }
+  .t-date { font-size: 11.5px; margin-bottom: 22px; }
+  .t-plats { gap: 6px; }
+  .tpb { font-size: 11px; padding: 5px 12px; }
+  .t-by { font-size: 10px; line-height: 1.6; margin-top: 24px; padding: 0 8px; }
+
+  /* Slide header */
+  .sh { margin-bottom: 14px; }
+  .sh-title { font-size: 19px; line-height: 1.25; }
+  .sh-eye { font-size: 10px; }
+  .sh-sub { font-size: 11px; }
+  .slbl { font-size: 12px; margin-bottom: 8px; }
+
+  /* All multi-column grids → collapsed */
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px; }
+  .two { grid-template-columns: 1fr; gap: 16px; }
+  .bgrid { grid-template-columns: 1fr; gap: 10px; }
+  .fgrid { grid-template-columns: 1fr; gap: 12px; }
+  .agrid { grid-template-columns: 1fr; gap: 12px; }
+  .rgrid { grid-template-columns: 1fr; gap: 12px; }
+  .ggrid { grid-template-columns: 1fr; gap: 12px; }
+  .dgrid { grid-template-columns: 1fr; gap: 14px; }
+  .rep-grid { grid-template-columns: 1fr; gap: 18px; }
+
+  /* KPIs */
+  .kpi { padding: 12px 8px; }
+  .kpi-v { font-size: 20px; margin-bottom: 4px; }
+  .kpi-l { font-size: 11px; }
+  .kpi-s { font-size: 9.5px; }
+
+  /* Stat bar wraps to 2-up */
+  .sbar { flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .sb { flex: 1 1 calc(50% - 4px); min-width: 0; padding: 10px 6px; }
+  .sbv { font-size: 18px; }
+  .sbl { font-size: 10px; }
+
+  /* Tables — horizontal scroll on small widths */
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tbl { font-size: 11px; }
+  .tbl th { font-size: 10px; padding: 6px 6px; }
+  .tbl td { padding: 6px 6px; font-size: 10.5px; }
+
+  /* Bullet list */
+  .bl li { font-size: 12.5px; line-height: 1.55; }
+
+  /* Funnel cards (Slide 12) */
+  .fc { padding: 14px; }
+  .fc-bg { font-size: 34px; }
+  .fc-pct { font-size: 28px; }
+  .fc-name { font-size: 15px; }
+  .fc-stage { font-size: 9.5px; }
+  .fc-list li { font-size: 11px; }
+
+  /* Branch cards (Slide 9) */
+  .bcard { padding: 12px 14px; }
+  .bcard .bn { font-size: 13px; }
+  .br-row { font-size: 12px; }
+
+  /* Action cards (Slide 14) */
+  .acard { padding: 14px; }
+  .aplatform { font-size: 14px; margin-bottom: 10px; padding-bottom: 8px; }
+  .alist li { font-size: 12px; }
+
+  /* Roadmap cards (Slide 15) */
+  .rwk { padding: 14px; }
+  .rwk-t { font-size: 14px; padding-bottom: 8px; }
+  .rwk-list li { font-size: 11.5px; }
+
+  /* Tracking gaps (Slide 10) */
+  .gc { padding: 14px; }
+  .gp { font-size: 13.5px; padding-bottom: 8px; margin-bottom: 9px; }
+  .gi { font-size: 11.5px; }
+  .g-lbl { font-size: 9.5px; }
+
+  /* Diagnosis (Slide 11) */
+  .di { padding: 10px 12px; }
+  .di-t { font-size: 12.5px; }
+  .di-d { font-size: 11px; }
+
+  /* Reporting (Slide 16) */
+  .ditem { padding: 8px 10px; gap: 10px; }
+  .dn { font-size: 12px; min-width: 46px; }
+  .da { font-size: 11.5px; }
+  .avoid li { font-size: 11.5px; }
+
+  /* Next steps (Slide 17) */
+  .nsteps { gap: 12px; }
+  .nsi { gap: 12px; align-items: flex-start; }
+  .nsi-n { font-size: 22px; min-width: 28px; }
+  .nsi-t { font-size: 13.5px; }
+  .nsi-d { font-size: 11.5px; }
+  .closing { flex-direction: column; gap: 8px; align-items: flex-start; margin-top: 18px; padding-top: 14px; }
+
+  /* Conclusion box */
+  .cbox { padding: 10px 12px; }
+
+  /* Footer + slide counter */
+  .sf { right: 14px; bottom: 10px; font-size: 9px; }
+  #ctr { left: 14px; top: 12px; font-size: 10px; }
+
+  /* Navigation */
+  #nav { gap: 8px; bottom: 12px; }
+  .nb { width: 32px; height: 32px; font-size: 15px; }
+  .dot { width: 5px; height: 5px; }
+  .dot.on { width: 14px; }
+  #dots { gap: 4px; flex-wrap: wrap; max-width: 60vw; justify-content: center; }
+}
+
+/* Very narrow phones */
+@media (max-width: 420px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .sb { flex: 1 1 100%; }
+  .t-main { font-size: 21px; }
+  .sh-title { font-size: 17px; }
+  .tbl { font-size: 10.5px; }
+}
+
+</style>
+</head>
+<body>
+<div id="pres">
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 1 — TITLE
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s1">
+  <div class="t-eye">مجموعة أجيالنا التعليمية · مدارس الفرسان العالمية</div>
+  <div class="t-main">تدقيق وسائل الإعلام<br>والاستراتيجية الكاملة للقمع</div>
+  <div class="t-en">Full Funnel Media Audit &amp; Strategy</div>
+  <div class="t-date">16 أبريل – 15 مايو 2026</div>
+  <div class="t-plats">
+    <span class="tpb">Meta · Facebook &amp; Instagram</span>
+    <span class="tpb">Google Ads</span>
+    <span class="tpb">TikTok</span>
+    <span class="tpb">Snapchat</span>
+  </div>
+  <div class="t-by">إعداد: Aya — Senior Media Buyer &nbsp;|&nbsp; مُقدَّم في الاجتماع الأسبوعي للعميل</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 2 — EXECUTIVE SUMMARY
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s2">
+  <div class="sh"><div class="sh-eye">02 / 17</div><div class="sh-title">الملخص التنفيذي</div><div class="sh-sub">أبرز نتائج الفترة وأهم التوصيات</div></div>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="kpi-v">22,057</div><div class="kpi-l">إجمالي الإنفاق (ر.س)</div><div class="kpi-s">عبر 4 منصات</div></div>
+    <div class="kpi"><div class="kpi-v">~1.41م</div><div class="kpi-l">الوصول الصافي المُقدَّر</div><div class="kpi-s">بدون إزالة التكرار</div></div>
+    <div class="kpi"><div class="kpi-v">5.10م</div><div class="kpi-l">مرات الظهور</div><div class="kpi-s">مجموع المنصات</div></div>
+    <div class="kpi"><div class="kpi-v">783</div><div class="kpi-l">محادثات / تحويلات</div><div class="kpi-s">761 رسالة (ميتا) + 22 (جوجل)</div></div>
+  </div>
+  <div class="two">
+    <div>
+      <div class="slbl">أبرز الملاحظات</div>
+      <ul class="bl">
+        <li>ميتا الأفضل أداءً للرسائل: 761 محادثة — دار الرواد جدة بكلفة 6.41 ر.س/رسالة</li>
+        <li>تردد ميتا مرتفع (3.32) — مدارس عالمية تصل إلى 3.89 → مؤشر إرهاق إعلاني</li>
+        <li>سناب شات: تردد 4.09 ومجموعات حتى 14.66 — تشبّع شديد في الجمهور</li>
+        <li>تيك توك ضمن الهدف (2.77) لكن بلا تتبّع تحويلات على الإطلاق</li>
+        <li>يوتيوب بلا وصول حقيقي — Display يجلب الوصول الأرخص</li>
+        <li>بحث جوجل بهدف زيارات فقط — لا تتبّع leads أو تواصل</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slbl">التوصيات الرئيسية</div>
+      <ul class="bl">
+        <li>إعادة توزيع نفس الميزانية على هيكل قمع كامل: وعي / تفاعل / تحويل / إعادة استهداف</li>
+        <li>ميتا: زيادة حصة الرسائل (Click-to-WhatsApp) واعتماد CBO على مستوى الحملة</li>
+        <li>جوجل: تحويل Search إلى Leads + YouTube Reach + Performance Max للفروع</li>
+        <li>تيك توك: الإبقاء على الوعي + إضافة Traffic / Lead Gen لكل فرع</li>
+        <li>سناب شات: تجديد إبداعي كل أسبوعين + توسيع الجمهور للحدّ من الإرهاق</li>
+        <li>إعداد التتبّع الكامل: Meta Pixel · GA4 · CAPI · UTM موحَّد لكل فرع</li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 3 — CURRENT ACCOUNT STATUS
+════════════════════════════════════════════ -->
+<div class="slide light" id="s3">
+  <div class="sh"><div class="sh-eye" style="color:#888">03 / 17</div><div class="sh-title">الوضع الحالي للحساب</div><div class="sh-sub">المنصات، الفروع، الأهداف والميزانية</div></div>
+  <div class="two">
+    <div>
+      <div class="slbl">الفروع المُدارة</div>
+      <table class="tbl" style="margin-bottom:14px">
+        <thead><tr><th>الفرع</th><th>النوع</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>دار الرواد جدة</td><td>وطنية</td><td style="direction:ltr;font-size:10.5px">dararrowad.sch.sa</td></tr>
+          <tr><td>الفرسان الوطنية الرياض</td><td>وطنية</td><td style="direction:ltr;font-size:10.5px">alforsan.sch.sa</td></tr>
+          <tr><td>الفرسان العالمية الرياض</td><td>FIS Riyadh</td><td style="font-size:11px">موحَّد</td></tr>
+          <tr><td>الفرسان العالمية جدة</td><td>FIS Jeddah</td><td style="font-size:11px">موحَّد</td></tr>
+          <tr><td>الفرسان العالمية الخبر</td><td>FIS Khobar</td><td style="font-size:11px">موحَّد</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px;background:rgba(10,25,41,.06);border-radius:8px;padding:10px 14px;border-right:3px solid var(--navy-lt);line-height:1.7">
+        فروع FIS الثلاثة تستخدم صفحة هبوط موحَّدة<br><strong style="direction:ltr;display:inline-block">fis.sch.sa/mi1/</strong>
+      </div>
+    </div>
+    <div>
+      <div class="slbl">المنصات والميزانية</div>
+      <table class="tbl" style="margin-bottom:14px">
+        <thead><tr><th>المنصة</th><th>الإنفاق (ر.س)</th><th>الهدف الحالي</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700">Meta</td><td class="cv-gold">11,005</td><td>تفاعل / رسائل</td></tr>
+          <tr><td style="font-weight:700">Google</td><td class="cv-gold">3,852</td><td>وعي + زيارات موقع</td></tr>
+          <tr><td style="font-weight:700">TikTok</td><td class="cv-gold">5,005</td><td>وعي / مشاهدات فيديو</td></tr>
+          <tr><td style="font-weight:700">Snapchat</td><td class="cv-gold">2,195</td><td>وعي / مشاهدات فيديو</td></tr>
+          <tr style="border-top:1.5px solid rgba(10,25,41,.2)"><td style="font-weight:900">الإجمالي</td><td style="font-weight:900">22,057</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:12.5px;background:rgba(10,25,41,.06);border-radius:8px;padding:10px 14px;line-height:1.8;border-right:3px solid var(--navy-lt)">
+        <strong>السياق:</strong> ميزانية ~100 ر.س / فرع / منصة / يوم.<br>
+        المقترح: إعادة التوزيع داخل نفس الميزانية الشهرية.
+      </div>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 4 — PLATFORM OVERVIEW
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s4">
+  <div class="sh"><div class="sh-eye">04 / 17</div><div class="sh-title">نظرة عامة عبر المنصات</div><div class="sh-sub">الأداء المُجمَّع للفترة 16 أبريل – 15 مايو 2026</div></div>
+  <div class="tbl-wrap">
+    <table class="tbl" style="font-size:13.5px">
+      <thead>
+        <tr><th>المنصة</th><th>الإنفاق (ر.س)</th><th>الظهور</th><th>الوصول</th><th>التردد</th><th>النقرات</th><th>CPM</th><th>النتائج</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;color:#4a9ee0">Meta</td>
+          <td>11,005</td><td>1,569,704</td><td>473,396</td>
+          <td class="cv-red">3.32</td><td>5,638</td><td>7.01</td>
+          <td class="cv-green">761 رسالة</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;color:#EA4335">Google</td>
+          <td>3,852</td><td>375,093</td><td>—</td>
+          <td>—</td><td>18,703</td><td>10.27</td><td>22 تحويل</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;color:#69C9D0">TikTok</td>
+          <td>5,005</td><td>1,420,711</td><td>513,442</td>
+          <td class="cv-green">2.77</td><td>5,398</td>
+          <td class="cv-green">3.52</td>
+          <td style="opacity:.45">— (لا تتبّع)</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;color:#c8b900">Snapchat</td>
+          <td>2,195</td><td>1,737,487</td><td>424,484</td>
+          <td class="cv-red">4.09</td><td>3,592</td>
+          <td class="cv-green">1.26</td><td>645 زيارة</td>
+        </tr>
+        <tr style="border-top:1.5px solid rgba(201,168,76,.5)">
+          <td style="font-weight:900;color:var(--gold)">الإجمالي</td>
+          <td style="font-weight:900">22,057</td>
+          <td style="font-weight:700">5.10م</td>
+          <td style="font-weight:700">~1.41م*</td>
+          <td>—</td>
+          <td style="font-weight:700">33,331</td>
+          <td>—</td>
+          <td style="font-weight:700">783</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:11.5px;opacity:.35;margin-top:10px">* مجموع الوصول لكل منصة قبل إزالة التكرار بين المنصات</div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 5 — META AUDIT
+════════════════════════════════════════════ -->
+<div class="slide light" id="s5">
+  <div class="sh"><div class="sh-eye" style="color:#888">05 / 17</div><div class="sh-title" style="color:#1877F2">تدقيق ميتا — Facebook &amp; Instagram</div><div class="sh-sub">هدف "إرسال رسائل" الأفضل أداءً، لكن مع علامات إرهاق واضحة</div></div>
+  <div class="sbar">
+    <div class="sb"><div class="sbv">11,005</div><div class="sbl">الإنفاق (ر.س)</div></div>
+    <div class="sb"><div class="sbv">473K</div><div class="sbl">الوصول</div></div>
+    <div class="sb"><div class="sbv">1.57م</div><div class="sbl">الظهور</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--red)">3.32</div><div class="sbl">التردد ⚠</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--green)">761</div><div class="sbl">الرسائل</div></div>
+    <div class="sb"><div class="sbv">3.90</div><div class="sbl">CPC (ر.س)</div></div>
+  </div>
+  <div class="tbl-wrap" style="flex:1">
+    <table class="tbl" style="font-size:12.5px">
+      <thead><tr><th>الفرع / المجموعة</th><th>الإنفاق</th><th>الوصول</th><th>الظهور</th><th>التردد</th><th>الرسائل</th><th>كلفة / رسالة</th></tr></thead>
+      <tbody>
+        <tr><td>دار الرواد جدة</td><td>2,057</td><td>77,576</td><td>138,027</td><td class="cv-green">1.43</td><td class="cv-green">363</td><td class="cv-green">5.66</td></tr>
+        <tr><td>الفرسان الوطنية — الرياض</td><td>2,188</td><td>163,431</td><td>308,557</td><td>1.89</td><td>118</td><td>18.54</td></tr>
+        <tr><td>المدارس العالمية — الرياض</td><td>2,256</td><td>131,649</td><td>415,540</td><td class="cv-red">3.16</td><td>84</td><td class="cv-red">26.86</td></tr>
+        <tr><td>المدارس العالمية — جدة</td><td>2,189</td><td>79,064</td><td>212,934</td><td>2.69</td><td>109</td><td class="cv-red">20.08</td></tr>
+        <tr><td>المدارس العالمية — الخبر</td><td>2,302</td><td>126,897</td><td>493,931</td><td class="cv-red">3.89</td><td>85</td><td class="cv-red">27.08</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cbox" style="margin-top:10px">
+    <div class="slbl" style="color:var(--navy)">الخلاصة</div>
+    <ul class="bl" style="color:#1a2a40">
+      <li>دار الرواد والفرسان جدة الأفضل (5.66 و6.41 ر.س/رسالة) — نقطة انطلاق للتوسعة الفورية</li>
+      <li>المدارس العالمية تتجاوز تردد 3 في الرياض والخبر → تجديد إبداع + توسيع جمهور عاجل</li>
+      <li>9 حملات قديمة (MH 2024) لا تزال نشطة — يُنصح بأرشفتها لتبسيط الحساب</li>
+    </ul>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 6 — GOOGLE ADS AUDIT
+════════════════════════════════════════════ -->
+<div class="slide light" id="s6">
+  <div class="sh"><div class="sh-eye" style="color:#888">06 / 17</div><div class="sh-title" style="color:#EA4335">تدقيق إعلانات جوجل</div><div class="sh-sub">Search و Display و Video — توزيع غير متوازن للوصول والتحويلات</div></div>
+  <div class="sbar">
+    <div class="sb"><div class="sbv">3,852</div><div class="sbl">الإنفاق (ر.س)</div></div>
+    <div class="sb"><div class="sbv">375K</div><div class="sbl">الظهور</div></div>
+    <div class="sb"><div class="sbv">18,703</div><div class="sbl">النقرات</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--green)">4.99%</div><div class="sbl">CTR</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--green)">0.21</div><div class="sbl">CPC (ر.س)</div></div>
+    <div class="sb"><div class="sbv">22</div><div class="sbl">التحويلات</div></div>
+  </div>
+  <div class="two" style="flex:1">
+    <div>
+      <div class="slbl" style="color:var(--navy)">الإنفاق حسب نوع الحملة</div>
+      <table class="tbl">
+        <thead><tr><th>النوع</th><th>الإنفاق</th><th>الظهور</th><th>CTR</th></tr></thead>
+        <tbody>
+          <tr><td>بحث (Search)</td><td>1,959</td><td>90,993</td><td>7.88%</td></tr>
+          <tr><td>عرض (Display)</td><td>1,333</td><td>120,689</td><td class="cv-green">9.47%</td></tr>
+          <tr><td>فيديو (YouTube)</td><td>560</td><td>163,410</td><td class="cv-red">0.07%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="slbl" style="color:var(--navy)">أعلى الكلمات المفتاحية</div>
+      <table class="tbl">
+        <thead><tr><th>الكلمة</th><th>الظهور</th><th>النقرات</th><th>الكلفة</th></tr></thead>
+        <tbody>
+          <tr><td>مدارس</td><td>11,632</td><td class="cv-gold">1,595</td><td>571.63</td></tr>
+          <tr><td>schools</td><td>4,529</td><td>430</td><td>175.18</td></tr>
+          <tr><td>تعليم</td><td>2,653</td><td>59</td><td>30.35</td></tr>
+          <tr><td>مدرسة أهلية</td><td>933</td><td>77</td><td>14.97</td></tr>
+          <tr><td>أقرب مدرسة أهلية</td><td>763</td><td>61</td><td>16.33</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="cbox" style="margin-top:10px">
+    <div class="slbl" style="color:var(--navy)">الخلاصة</div>
+    <ul class="bl" style="color:#1a2a40">
+      <li>Display الأرخص للوصول (CTR 9.47%) — يجب توسيعه لجميع الفروع فوراً</li>
+      <li>YouTube بمعدل CTR 0.07% لا يحقق وصولاً حقيقياً → استبداله بـ Reach / Video Views</li>
+      <li>Search يعتمد Broad Match بلا تتبّع Leads — يحتاج Lead Form أو امتدادات مكالمات</li>
+    </ul>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 7 — TIKTOK AUDIT
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s7">
+  <div class="sh"><div class="sh-eye">07 / 17</div><div class="sh-title" style="color:#69C9D0">تدقيق تيك توك</div><div class="sh-sub">وصول جيّد وتردد ضمن السقف، لكن بلا قياس للتحويلات</div></div>
+  <div class="sbar">
+    <div class="sb"><div class="sbv">5,005</div><div class="sbl">الإنفاق (ر.س)</div></div>
+    <div class="sb"><div class="sbv">1.42م</div><div class="sbl">الظهور</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--green)">513K</div><div class="sbl">الوصول</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--green)">2.77</div><div class="sbl">التردد ✓</div></div>
+    <div class="sb"><div class="sbv">5,398</div><div class="sbl">النقرات</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--green)">3.52</div><div class="sbl">CPM (ر.س)</div></div>
+  </div>
+  <div class="tbl-wrap" style="flex:1">
+    <table class="tbl">
+      <thead><tr><th>الحملة</th><th>الإنفاق</th><th>الظهور</th><th>الوصول</th><th>التردد</th><th>CTR</th><th>CPM</th></tr></thead>
+      <tbody>
+        <tr><td>مدارس عالمية — 26 أبريل</td><td>3,526</td><td>1,010,907</td><td>401,095</td><td>2.52</td><td>0.33%</td><td>3.49</td></tr>
+        <tr><td>مدارس وطنية — 26 أبريل</td><td>786</td><td>203,816</td><td>131,725</td><td>1.55</td><td>0.53%</td><td>3.86</td></tr>
+        <tr><td>دار الرواد — 26 أبريل</td><td>587</td><td>188,427</td><td>71,427</td><td>2.64</td><td>0.54%</td><td>3.12</td></tr>
+        <tr><td>مدارس وطنية — 3 مايو</td><td>106</td><td>17,561</td><td>17,510</td><td>1.00</td><td class="cv-red">0.00%</td><td>6.03</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cbox">
+    <div class="slbl">الخلاصة</div>
+    <ul class="bl">
+      <li>ثلاث حملات نشطة فقط — لا حملة مستقلة لكل فرع من فروع FIS</li>
+      <li>معدلات CTR منخفضة (0.33–0.54%) — جيد للوعي لكن لا يدفع زيارات فعلية</li>
+      <li>لا TikTok Pixel ولا تتبّع نموذج → نوصي بإضافة Lead Generation لكل فرع فوراً</li>
+    </ul>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 8 — SNAPCHAT AUDIT
+════════════════════════════════════════════ -->
+<div class="slide light" id="s8">
+  <div class="sh"><div class="sh-eye" style="color:#888">08 / 17</div><div class="sh-title" style="color:#B8A000">تدقيق سناب شات</div><div class="sh-sub">تردد مرتفع وإرهاق واضح في بعض المجموعات الإعلانية</div></div>
+  <div class="sbar">
+    <div class="sb"><div class="sbv">2,195</div><div class="sbl">الإنفاق (ر.س)</div></div>
+    <div class="sb"><div class="sbv">1.74م</div><div class="sbl">الظهور</div></div>
+    <div class="sb"><div class="sbv">424K</div><div class="sbl">الوصول</div></div>
+    <div class="sb"><div class="sbv" style="color:var(--red)">4.09</div><div class="sbl">التردد ⚠</div></div>
+    <div class="sb"><div class="sbv">3,592</div><div class="sbl">النقرات</div></div>
+    <div class="sb"><div class="sbv">645</div><div class="sbl">زيارات الصفحة</div></div>
+  </div>
+  <div class="tbl-wrap" style="flex:1">
+    <table class="tbl" style="font-size:12.5px">
+      <thead><tr><th>المجموعة الإعلانية</th><th>الإنفاق</th><th>الظهور</th><th>الوصول</th><th>التردد</th><th>النقرات</th></tr></thead>
+      <tbody>
+        <tr><td>عالمية — Impression | Riyadh</td><td>200</td><td>258,585</td><td>31,475</td><td class="cv-red">8.22</td><td>226</td></tr>
+        <tr><td>عالمية — Impression | Jeddah</td><td>200</td><td>278,311</td><td>34,416</td><td class="cv-red">8.09</td><td>254</td></tr>
+        <tr><td>عالمية — Impression | Alkhober</td><td>200</td><td>269,601</td><td>36,359</td><td class="cv-red">7.42</td><td>234</td></tr>
+        <tr><td style="font-weight:700">عالمية — Video | Alkhober 🚨</td><td>300</td><td>77,439</td><td>5,284</td><td style="color:#ff3333;font-weight:900;font-size:14px">14.66</td><td>547</td></tr>
+        <tr><td>وطنية — Video | Riyadh</td><td>300</td><td>166,522</td><td>81,782</td><td class="cv-green">2.04</td><td class="cv-green">1,236</td></tr>
+        <tr><td>دار الرواد — Video | Jeddah</td><td>195</td><td>57,734</td><td>15,546</td><td>3.71</td><td>277</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cbox" style="margin-top:10px">
+    <div class="slbl" style="color:var(--navy)">الخلاصة</div>
+    <ul class="bl" style="color:#1a2a40">
+      <li>5 مجموعات تتجاوز تردد 7 — إرهاق واضح، نقرات قليلة جداً (0.09%)</li>
+      <li><strong>Video | Alkhober</strong> بتردد 14.66 — يجب إيقافها أو تجديدها فوراً هذا الأسبوع</li>
+      <li>حملات Video الوطنية ودار الرواد الأفضل توازناً (تردد 2–3.7 ونقرات أعلى)</li>
+    </ul>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 9 — BRANCH NOTES
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s9">
+  <div class="sh"><div class="sh-eye">09 / 17</div><div class="sh-title">ملاحظات الفروع والقمع</div><div class="sh-sub">كيف يتوزّع الإنفاق والنتائج حالياً لكل فرع</div></div>
+  <div class="bgrid">
+    <div class="bcard">
+      <div class="bn">دار الرواد جدة</div>
+      <div class="btype">مدارس وطنية</div>
+      <div class="br-row"><span class="p">Meta</span><span class="a">2,058 ر.س</span></div>
+      <div class="br-row"><span class="p">Google</span><span class="a">193 ر.س</span></div>
+      <div class="br-row"><span class="p">TikTok</span><span class="a">587 ر.س</span></div>
+      <div class="br-row"><span class="p">Snap</span><span class="a">195 ر.س</span></div>
+      <div class="br-res">🏆 363 رسالة</div>
+      <div class="br-note">كلفة 5.66 ر.س/رسالة — توسيع فوري مُبرَّر</div>
+    </div>
+    <div class="bcard">
+      <div class="bn">الفرسان الوطنية الرياض</div>
+      <div class="btype">مدارس وطنية</div>
+      <div class="br-row"><span class="p">Meta</span><span class="a">2,188 ر.س</span></div>
+      <div class="br-row"><span class="p">Google</span><span class="a">1,330 ر.س</span></div>
+      <div class="br-row"><span class="p">TikTok</span><span class="a">786 ر.س</span></div>
+      <div class="br-row"><span class="p">Snap</span><span class="a">300 ر.س</span></div>
+      <div class="br-res">118 رسالة + 6 تحويلات</div>
+      <div class="br-note">تردد ميتا 1.89 (مساحة للنمو)</div>
+    </div>
+    <div class="bcard">
+      <div class="bn">الفرسان العالمية الرياض</div>
+      <div class="btype">FIS Riyadh</div>
+      <div class="br-row"><span class="p">Meta</span><span class="a">2,256 ر.س</span></div>
+      <div class="br-row"><span class="p">Google</span><span class="a">95 ر.س</span></div>
+      <div class="br-row"><span class="p">TikTok</span><span class="a">ضمن العالمية</span></div>
+      <div class="br-row"><span class="p">Snap</span><span class="a">500 ر.س</span></div>
+      <div class="br-res" style="color:#ff9988">⚠ 84 رسالة</div>
+      <div class="br-note">تردد ميتا 3.16 · سناب 8.22 — إرهاق</div>
+    </div>
+    <div class="bcard">
+      <div class="bn">الفرسان العالمية جدة</div>
+      <div class="btype">FIS Jeddah</div>
+      <div class="br-row"><span class="p">Meta</span><span class="a">2,189 ر.س</span></div>
+      <div class="br-row"><span class="p">Google</span><span class="a">95 ر.س</span></div>
+      <div class="br-row"><span class="p">TikTok</span><span class="a">ضمن العالمية</span></div>
+      <div class="br-row"><span class="p">Snap</span><span class="a">378 ر.س</span></div>
+      <div class="br-res">109 رسالة</div>
+      <div class="br-note">تردد ميتا 2.69 — قريب من السقف</div>
+    </div>
+    <div class="bcard">
+      <div class="bn">الفرسان العالمية الخبر</div>
+      <div class="btype">FIS Khobar / Dammam</div>
+      <div class="br-row"><span class="p">Meta</span><span class="a">2,302 ر.س</span></div>
+      <div class="br-row"><span class="p">Google</span><span class="a">94 ر.س</span></div>
+      <div class="br-row"><span class="p">TikTok</span><span class="a">ضمن العالمية</span></div>
+      <div class="br-row"><span class="p">Snap</span><span class="a">500 ر.س</span></div>
+      <div class="br-res" style="color:#ff4444">🚨 85 رسالة</div>
+      <div class="br-note">تردد ميتا 3.89 · سناب 14.66 — تشبّع حاد</div>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 10 — TRACKING GAPS
+════════════════════════════════════════════ -->
+<div class="slide light" id="s10">
+  <div class="sh"><div class="sh-eye" style="color:#888">10 / 17</div><div class="sh-title">فجوات التتبّع والقياس</div><div class="sh-sub">ما يجب إصلاحه قبل أي توسيع للميزانية</div></div>
+  <div class="ggrid">
+    <div class="gc">
+      <div class="gp" style="color:#1877F2;border-color:#1877F2">Meta — البكسل والأحداث</div>
+      <div class="g-sec"><div class="g-lbl">الفجوات</div><div class="g-items">
+        <div class="gi bad">6 زيارات صفحة هبوط مقابل 22 ألف ر.س إنفاق</div>
+        <div class="gi bad">لا يوجد Conversion API (CAPI)</div>
+        <div class="gi bad">حدث "بدء محادثة" من المنصة فقط دون توحيد</div>
+      </div></div>
+      <div class="g-sec"><div class="g-lbl">الإجراءات</div><div class="g-items">
+        <div class="gi good">تركيب Meta Pixel + CAPI على الموقعين الرئيسيين</div>
+        <div class="gi good">تعريف أحداث Lead · Contact · ScheduleTour</div>
+      </div></div>
+    </div>
+    <div class="gc">
+      <div class="gp" style="color:#EA4335;border-color:#EA4335">Google — أهداف التحويل</div>
+      <div class="g-sec"><div class="g-lbl">الفجوات</div><div class="g-items">
+        <div class="gi bad">هدف Search هو "زيارات الموقع" فقط — 0 تحويل</div>
+        <div class="gi bad">7,168 نقرة بحث دون احتساب أي Lead</div>
+        <div class="gi bad">حملات Display بـ GA4 بدون Conversion Goals</div>
+      </div></div>
+      <div class="g-sec"><div class="g-lbl">الإجراءات</div><div class="g-items">
+        <div class="gi good">ربط GA4 + إنشاء أحداث Lead Form / Call / WhatsApp</div>
+        <div class="gi good">استيراد التحويلات إلى Google Ads</div>
+      </div></div>
+    </div>
+    <div class="gc">
+      <div class="gp" style="color:#333;border-color:#333">TikTok — البكسل</div>
+      <div class="g-sec"><div class="g-lbl">الفجوات</div><div class="g-items">
+        <div class="gi bad">0 تحويل من 5,398 نقرة</div>
+        <div class="gi bad">هدف Awareness فقط — لا يستفيد من الخوارزمية</div>
+      </div></div>
+      <div class="g-sec"><div class="g-lbl">الإجراءات</div><div class="g-items">
+        <div class="gi good">تركيب TikTok Pixel + Events API</div>
+        <div class="gi good">استخدام Lead Generation Form الأصلي للحملات</div>
+      </div></div>
+    </div>
+    <div class="gc">
+      <div class="gp" style="color:#B8A000;border-color:#B8A000">Snapchat — Pixel و UTM</div>
+      <div class="g-sec"><div class="g-lbl">الفجوات</div><div class="g-items">
+        <div class="gi bad">645 زيارة فقط من 1.7 مليون ظهور</div>
+        <div class="gi bad">لا Snap Pixel على صفحات الهبوط</div>
+      </div></div>
+      <div class="g-sec"><div class="g-lbl">الإجراءات</div><div class="g-items">
+        <div class="gi good">تركيب Snap Pixel على صفحات FIS · FS · Rowad</div>
+        <div class="gi good">توحيد روابط UTM لكل منصة وفرع</div>
+      </div></div>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 11 — STRATEGIC DIAGNOSIS
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s11">
+  <div class="sh"><div class="sh-eye">11 / 17</div><div class="sh-title">التشخيص الاستراتيجي</div><div class="sh-sub">لماذا لا يعمل التوزيع الحالي — 100 ر.س / فرع / منصة</div></div>
+  <div class="dgrid">
+    <div class="d-col">
+      <div class="slbl" style="color:#ff9988">المشكلات الجوهرية</div>
+      <div class="di prob"><div class="di-t">توزيع متساوٍ بلا قمع</div><div class="di-d">كل فرع يأخذ ميزانية متساوية بصرف النظر عن مرحلة القرار — فرع ذو طلب عالٍ يُعامَل كفرع جديد بلا بيانات</div></div>
+      <div class="di prob"><div class="di-t">أهداف وعي فقط على تيك توك وسناب</div><div class="di-d">المنصتان بهدف Impressions دون Lead Generation — لا تستفيد الخوارزمية من بيانات التحويل</div></div>
+      <div class="di prob"><div class="di-t">غياب التحويل الفعلي على جوجل</div><div class="di-d">7,168 نقرة بحث دون احتساب أي Lead — الهدف مضبوط على "زيارات الموقع" فقط</div></div>
+      <div class="di prob"><div class="di-t">إرهاق إعلاني في ميتا وسناب</div><div class="di-d">تردد 3.32–14.66 — جمهور صغير + إبداع ثابت + غياب دورة تجديد</div></div>
+    </div>
+    <div class="d-col">
+      <div class="slbl" style="color:#70e0a8">الفرص الاستراتيجية</div>
+      <div class="di opp"><div class="di-t">الانتقال إلى قمع كامل</div><div class="di-d">وعي (تيك توك/Display) → تفاعل (سناب/فيديو) → تحويل (رسائل/Search Leads) → إعادة استهداف</div></div>
+      <div class="di opp"><div class="di-t">تخصيص ميزانية حسب الأداء</div><div class="di-d">إعادة التوزيع داخل نفس الإجمالي: مكافأة دار الرواد والفرسان جدة وتخفيف الإنفاق على الفروع ذات الإرهاق</div></div>
+      <div class="di opp"><div class="di-t">استثمار جوجل في الـ Leads</div><div class="di-d">تحويل الحملة إلى Lead Generation أو Performance Max بهدف رسائل واتساب أو نموذج</div></div>
+      <div class="di opp"><div class="di-t">تنويع الإبداع بانتظام</div><div class="di-d">دورة تجديد إبداعي كل أسبوعين لكل فرع لتخفيض التردد إلى ≤ 3 عبر المنصات</div></div>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 12 — FULL FUNNEL STRUCTURE
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s12">
+  <div class="sh"><div class="sh-eye">12 / 17</div><div class="sh-title">الهيكل المقترح للقمع الكامل</div><div class="sh-sub">وعي ← تفاعل ← تحويل ← إعادة استهداف</div></div>
+  <div class="fgrid">
+    <div class="fc">
+      <div class="fc-bg">01</div>
+      <div class="fc-stage">TOFU — Reach &amp; Views</div>
+      <div class="fc-pct">30%</div>
+      <div class="fc-name">وعي</div>
+      <div class="fc-sub">من الميزانية الشهرية</div>
+      <ul class="fc-list">
+        <li>تيك توك Reach + جوجل Display</li>
+        <li>يوتيوب Video Reach + سناب Impressions</li>
+        <li>أولياء 25–55 · الرياض/جدة/الخبر</li>
+        <li>مؤشر: وصول فريد · تردد ≤ 2.5</li>
+      </ul>
+    </div>
+    <div class="fc">
+      <div class="fc-bg">02</div>
+      <div class="fc-stage">MOFU — Video &amp; Engagement</div>
+      <div class="fc-pct">20%</div>
+      <div class="fc-name">تفاعل</div>
+      <div class="fc-sub">من الميزانية الشهرية</div>
+      <ul class="fc-list">
+        <li>ميتا Video Views</li>
+        <li>تيك توك Engagement</li>
+        <li>سناب 15-Second Video</li>
+        <li>مؤشر: ThruPlay · تردد ≤ 3</li>
+      </ul>
+    </div>
+    <div class="fc">
+      <div class="fc-bg">03</div>
+      <div class="fc-stage">BOFU — Leads &amp; Messages</div>
+      <div class="fc-pct">40%</div>
+      <div class="fc-name">تحويل</div>
+      <div class="fc-sub">من الميزانية الشهرية</div>
+      <ul class="fc-list">
+        <li>ميتا Click-to-WhatsApp</li>
+        <li>جوجل Search (Leads)</li>
+        <li>تيك توك Lead Gen</li>
+        <li>مؤشر: كلفة رسالة ≤ 20 ر.س</li>
+      </ul>
+    </div>
+    <div class="fc">
+      <div class="fc-bg">04</div>
+      <div class="fc-stage">Retargeting</div>
+      <div class="fc-pct">10%</div>
+      <div class="fc-name">إعادة استهداف</div>
+      <div class="fc-sub">من الميزانية الشهرية</div>
+      <ul class="fc-list">
+        <li>ميتا + جوجل Display Remarketing</li>
+        <li>يوتيوب Remarketing</li>
+        <li>زوّار الموقع + مشاهدو الفيديو</li>
+        <li>مؤشر: معدل تحويل × 2 TOFU</li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 13 — BUDGET REDISTRIBUTION
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s13">
+  <div class="sh"><div class="sh-eye">13 / 17</div><div class="sh-title">إعادة توزيع الميزانية</div><div class="sh-sub">نفس الإجمالي الشهري — توزيع جديد حسب الأداء والقمع</div></div>
+  <div class="tbl-wrap">
+    <table class="tbl" style="font-size:12.5px">
+      <thead>
+        <tr><th>الفرع</th><th>Meta (ر.س)</th><th>Google (ر.س)</th><th>TikTok (ر.س)</th><th>Snap (ر.س)</th><th>الإجمالي</th><th>منطق التعديل</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>دار الرواد جدة</td><td class="cv-green">3,800</td><td>1,800</td><td>1,200</td><td>500</td><td class="cv-gold">7,300</td><td>مكافأة الأداء</td></tr>
+        <tr><td>الفرسان الوطنية الرياض</td><td>2,900</td><td>2,600</td><td>1,200</td><td>500</td><td class="cv-gold">7,200</td><td>توسعة Search Leads</td></tr>
+        <tr><td>الفرسان العالمية الرياض</td><td>2,300</td><td>2,000</td><td>1,100</td><td>300</td><td class="cv-gold">5,700</td><td>تخفيف تردد</td></tr>
+        <tr><td>الفرسان العالمية جدة</td><td>2,500</td><td>2,000</td><td>1,100</td><td>300</td><td class="cv-gold">5,900</td><td>حفاظ + Lead Gen</td></tr>
+        <tr><td>الفرسان العالمية الخبر</td><td>1,900</td><td>1,800</td><td>1,100</td><td>300</td><td class="cv-gold">5,100</td><td>تخفيف تردد سناب</td></tr>
+        <tr><td>إعادة استهداف (مشترك)</td><td>1,500</td><td>900</td><td>—</td><td>—</td><td class="cv-gold">2,400</td><td>بند جديد 5–7%</td></tr>
+        <tr style="border-top:1.5px solid rgba(201,168,76,.5)">
+          <td style="font-weight:900;color:var(--gold)">الإجمالي المقترح</td>
+          <td style="font-weight:700;color:var(--gold-lt)">14,900</td>
+          <td style="font-weight:700;color:var(--gold-lt)">11,100</td>
+          <td style="font-weight:700;color:var(--gold-lt)">5,700</td>
+          <td style="font-weight:700;color:var(--gold-lt)">1,900</td>
+          <td style="font-weight:900;color:var(--gold);font-size:14px">33,600</td><td>—</td>
+        </tr>
+        <tr><td style="opacity:.4">الإجمالي الحالي</td><td style="opacity:.4">11,005</td><td style="opacity:.4">3,852</td><td style="opacity:.4">5,005</td><td style="opacity:.4">2,195</td><td style="opacity:.4">22,057</td><td style="opacity:.4">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:11.5px;opacity:.35;margin-top:12px;line-height:1.8">
+    * الأرقام افتراضية لتمثيل المنطق — تُعدَّل عند تأكيد سقف الميزانية الشهري النهائي<br>
+    منطق التوزيع: زيادة ميتا للفروع ذات أفضل كلفة رسالة · تحويل جوجل إلى مزيج Search+Display+YouTube · 5% مخصصة لإعادة الاستهداف الموحّد
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 14 — ACTION PLAN
+════════════════════════════════════════════ -->
+<div class="slide light" id="s14">
+  <div class="sh"><div class="sh-eye" style="color:#888">14 / 17</div><div class="sh-title">خطة العمل لكل منصة</div><div class="sh-sub">إجراءات قابلة للتنفيذ خلال الأسبوع الأول</div></div>
+  <div class="agrid">
+    <div class="acard">
+      <div class="aplatform" style="color:#1877F2;border-color:#1877F2">
+        <span class="dot" style="background:#1877F2"></span>Meta — Facebook &amp; Instagram
+      </div>
+      <ul class="alist">
+        <li><span class="an">1.</span>إنشاء حملة CBO لكل فرع مع 3 مجموعات إعلانية</li>
+        <li><span class="an">2.</span>تشغيل Click-to-WhatsApp بإبداعين وتجديد كل 14 يوماً</li>
+        <li><span class="an">3.</span>فتح حملة Lead Generation موازية بنماذج مُسبَقة الملء</li>
+        <li><span class="an">4.</span>تركيب CAPI وأرشفة جميع حملات MH 2024</li>
+      </ul>
+    </div>
+    <div class="acard">
+      <div class="aplatform" style="color:#EA4335;border-color:#EA4335">
+        <span class="dot" style="background:#EA4335"></span>Google Ads
+      </div>
+      <ul class="alist">
+        <li><span class="an">1.</span>تحويل حملة البحث إلى هدف Leads مع امتدادات نموذج ومكالمة</li>
+        <li><span class="an">2.</span>حملة Performance Max لكل فرع بصور وفيديوهات</li>
+        <li><span class="an">3.</span>فصل YouTube إلى Reach (Bumper + In-Stream)</li>
+        <li><span class="an">4.</span>استبعاد عمليات البحث "MH" و"AKEF" القديمة</li>
+      </ul>
+    </div>
+    <div class="acard">
+      <div class="aplatform" style="color:#111;border-color:#111">
+        <span class="dot" style="background:#222"></span>TikTok
+      </div>
+      <ul class="alist">
+        <li><span class="an">1.</span>حملة Lead Generation لكل فرع باستخدام Instant Form</li>
+        <li><span class="an">2.</span>حملة Reach مستقلة موازية بـ Top View / Spark Ads</li>
+        <li><span class="an">3.</span>تركيب Pixel + Events API + UTM Tags موحَّدة</li>
+        <li><span class="an">4.</span>تجديد إبداعي كل أسبوعين (3 فيديوهات / فرع)</li>
+      </ul>
+    </div>
+    <div class="acard">
+      <div class="aplatform" style="color:#B8A000;border-color:#B8A000">
+        <span class="dot" style="background:#B8A000"></span>Snapchat
+      </div>
+      <ul class="alist">
+        <li><span class="an">1.</span>إيقاف Video | Alkhober (تردد 14.66) وإطلاق إصدار جديد</li>
+        <li><span class="an">2.</span>توسيع جمهور المدارس العالمية إلى Lookalike 1–5%</li>
+        <li><span class="an">3.</span>تحويل هدف الحملات إلى Leads أو Web Traffic</li>
+        <li><span class="an">4.</span>تركيب Snap Pixel على صفحات الهبوط الثلاث</li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 15 — 30-DAY ROADMAP
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s15">
+  <div class="sh"><div class="sh-eye">15 / 17</div><div class="sh-title">خارطة طريق التحسين — 30 يوماً</div><div class="sh-sub">الأسبوع تلو الآخر</div></div>
+  <div class="rgrid">
+    <div class="rwk">
+      <div class="rwk-n">الأسبوع الأول</div>
+      <div class="rwk-t">البنية التحتية والتتبّع</div>
+      <ul class="rwk-list">
+        <li><span class="n">1.</span>تركيب Pixel + CAPI ميتا · Pixel سناب · Pixel تيك توك</li>
+        <li><span class="n">2.</span>إنشاء أهداف تحويل GA4 وربطها بـ Google Ads</li>
+        <li><span class="n">3.</span>توحيد UTM لكل فرع ومنصة وقمع</li>
+        <li><span class="n">4.</span>أرشفة الحملات القديمة (MH 2024 / FS-2024)</li>
+      </ul>
+    </div>
+    <div class="rwk">
+      <div class="rwk-n">الأسبوع الثاني</div>
+      <div class="rwk-t">إعادة هيكلة الحملات</div>
+      <ul class="rwk-list">
+        <li><span class="n">1.</span>إطلاق هيكل القمع TOFU/MOFU/BOFU/RT لكل فرع</li>
+        <li><span class="n">2.</span>تحويل ميتا Engagement إلى Messages + Leads</li>
+        <li><span class="n">3.</span>تحويل بحث جوجل إلى Leads + إطلاق Performance Max</li>
+      </ul>
+    </div>
+    <div class="rwk">
+      <div class="rwk-n">الأسبوع الثالث</div>
+      <div class="rwk-t">تحسين الإبداع والجمهور</div>
+      <ul class="rwk-list">
+        <li><span class="n">1.</span>إدخال 3 إبداعات جديدة لكل فرع على ميتا وتيك توك</li>
+        <li><span class="n">2.</span>توسيع جمهور سناب وميتا إلى Lookalike 1–5%</li>
+        <li><span class="n">3.</span>إيقاف مجموعات الإعلانات بتردد > 5</li>
+        <li><span class="n">4.</span>إطلاق دورة إعادة استهداف لزوّار الموقع</li>
+      </ul>
+    </div>
+    <div class="rwk">
+      <div class="rwk-n">الأسبوع الرابع</div>
+      <div class="rwk-t">تقييم ومراجعة شاملة</div>
+      <ul class="rwk-list">
+        <li><span class="n">1.</span>قراءة كلفة Lead لكل فرع وإعادة توزيع داخل السقف</li>
+        <li><span class="n">2.</span>تقرير شامل + توصية للشهر التالي</li>
+        <li><span class="n">3.</span>تحديد أفضل 3 حملات للتوسعة وأضعف 3 للإيقاف</li>
+        <li><span class="n">4.</span>تحديد أولويات الشهر القادم مع العميل</li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 16 — REPORTING RHYTHM
+════════════════════════════════════════════ -->
+<div class="slide light" id="s16">
+  <div class="sh"><div class="sh-eye" style="color:#888">16 / 17</div><div class="sh-title">إيقاع التقارير الأسبوعية والمؤشرات</div><div class="sh-sub">ما يُقاس وكيف يُقرأ كل أسبوع</div></div>
+  <div class="rep-grid">
+    <div>
+      <div class="slbl" style="color:var(--navy)">إيقاع التقرير الأسبوعي</div>
+      <div class="day-list">
+        <div class="ditem"><div class="dn">الأحد</div><div class="da">مراجعة أداء الأسبوع السابق + قرارات إيقاف / توسيع</div></div>
+        <div class="ditem"><div class="dn">الإثنين</div><div class="da">تحديث الإبداعات + اختبار A/B جديد لكل فرع</div></div>
+        <div class="ditem"><div class="dn">الأربعاء</div><div class="da">منتصف الأسبوع: مراقبة التردد و CPC و CPL</div></div>
+        <div class="ditem"><div class="dn">الخميس</div><div class="da">إعداد التقرير الأسبوعي + ملاحظات الجمهور</div></div>
+        <div class="ditem special"><div class="dn">الاجتماع</div><div class="da">عرض النتائج وتوافق على إجراءات الأسبوع التالي</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="slbl" style="color:var(--navy)">المؤشرات الرئيسية الموحّدة</div>
+      <table class="tbl" style="margin-bottom:14px">
+        <thead><tr><th>المرحلة</th><th>المؤشر الأساسي</th><th>السقف المستهدف</th></tr></thead>
+        <tbody>
+          <tr><td>وعي</td><td>الوصول الفريد + CPM</td><td class="cv-green">تردد ≤ 2.5</td></tr>
+          <tr><td>تفاعل</td><td>ThruPlay / View 25%</td><td class="cv-green">تردد ≤ 3</td></tr>
+          <tr><td>تحويل</td><td>كلفة الرسالة / Lead</td><td class="cv-gold">≤ 20 ر.س</td></tr>
+          <tr><td>إعادة استهداف</td><td>معدل التحويل (دافئ)</td><td>× 2 مقارنة بـ TOFU</td></tr>
+          <tr><td>عام</td><td>حصة الإنفاق / فرع</td><td>مراجعة كل أسبوعين</td></tr>
+        </tbody>
+      </table>
+      <div class="slbl" style="color:var(--red)">ما يُتجنَّب</div>
+      <ul class="avoid">
+        <li>إيقاف الحملات بناءً على يوم واحد فقط</li>
+        <li>قياس أداء BOFU بمؤشر TOFU (CPM، Reach)</li>
+        <li>مقارنة أسبوع إجازة بأسبوع عادي دون توضيح السياق</li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 17 — NEXT STEPS
+════════════════════════════════════════════ -->
+<div class="slide dark" id="s17">
+  <div class="sh"><div class="sh-eye">17 / 17</div><div class="sh-title">الخطوات التالية</div><div class="sh-sub">إجراءات يتم البدء بها هذا الأسبوع</div></div>
+  <div class="nsteps">
+    <div class="nsi">
+      <div class="nsi-n">01</div>
+      <div><div class="nsi-t">تأكيد الميزانية الشهرية النهائية</div><div class="nsi-d">نعتمد إجمالي 33–35 ألف ر.س لإعادة التوزيع المقترحة على هيكل القمع الكامل</div></div>
+    </div>
+    <div class="nsi">
+      <div class="nsi-n">02</div>
+      <div><div class="nsi-t">صلاحيات وصول التتبّع</div><div class="nsi-d">وصول كامل إلى GTM والمواقع الثلاثة لتركيب Pixels و CAPI</div></div>
+    </div>
+    <div class="nsi">
+      <div class="nsi-n">03</div>
+      <div><div class="nsi-t">الموافقة على هيكل القمع</div><div class="nsi-d">اعتماد التقسيم: 30% وعي · 20% تفاعل · 40% تحويل · 10% إعادة استهداف</div></div>
+    </div>
+    <div class="nsi">
+      <div class="nsi-n">04</div>
+      <div><div class="nsi-t">محتوى إبداعي جديد</div><div class="nsi-d">تسليم 3 فيديوهات و6 صور لكل فرع خلال 10 أيام من الاجتماع</div></div>
+    </div>
+    <div class="nsi">
+      <div class="nsi-n">05</div>
+      <div><div class="nsi-t">أرشفة الحملات القديمة</div><div class="nsi-d">إغلاق MH 2024 · FS-Search-May-2024 · DS-test AKEF رسمياً</div></div>
+    </div>
+  </div>
+  <div class="closing">
+    <div style="font-family:var(--font-h);font-size:20px;font-weight:900;color:var(--gold)">شكراً لكم</div>
+    <div style="font-size:12px;opacity:.4">Aya — Senior Media Buyer &nbsp;|&nbsp; فريق الإعلام المدفوع · مجموعة أجيالنا</div>
+  </div>
+  <div class="sf">Ajialuna Schools · Media Audit &amp; Strategy · 16 أبريل – 15 مايو 2026</div>
+</div>
+
+</div><!-- /pres -->
+
+<!-- ── Navigation UI ── -->
+<div id="ctr">1 / 17</div>
+<div id="nav" dir="ltr">
+  <button class="nb" id="btn-prev" title="السابق">&#8249;</button>
+  <div id="dots"></div>
+  <button class="nb" id="btn-next" title="التالي">&#8250;</button>
+</div>
+
+<script>
+(function(){
+  const TOTAL = 17;
+  let cur = 0;
+
+  const dotsEl = document.getElementById('dots');
+  const ctrEl  = document.getElementById('ctr');
+
+  // Build dots
+  for(let i=0;i<TOTAL;i++){
+    const d = document.createElement('div');
+    d.className = 'dot' + (i===0?' on':'');
+    d.onclick = ()=>go(i);
+    dotsEl.appendChild(d);
+  }
+
+  function go(n){
+    document.getElementById('s'+(cur+1)).classList.remove('active');
+    dotsEl.children[cur].classList.remove('on');
+    cur = ((n % TOTAL) + TOTAL) % TOTAL;
+    document.getElementById('s'+(cur+1)).classList.add('active');
+    dotsEl.children[cur].classList.add('on');
+    ctrEl.textContent = (cur+1)+' / '+TOTAL;
+  }
+
+  document.getElementById('btn-next').onclick = ()=>go(cur+1);
+  document.getElementById('btn-prev').onclick = ()=>go(cur-1);
+
+  document.addEventListener('keydown', e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown')  go(cur+1);
+    if(e.key==='ArrowLeft' ||e.key==='ArrowUp')    go(cur-1);
+  });
+
+  // Touch/swipe
+  let tx=0;
+  document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+  document.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX - tx;
+    if(Math.abs(dx)>50) go(dx<0 ? cur+1 : cur-1);
+  },{passive:true});
+
+  // Init first slide
+  document.getElementById('s1').classList.add('active');
+})();
+</script>
+</body>
+</html>

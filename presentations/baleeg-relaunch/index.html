@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>بليغ × Admireworks: خطة الإطلاق</title>
+<meta property="og:title" content="بليغ × Admireworks: خطة إطلاق النمو صيف 2026" />
+<meta property="og:description" content="قراءة صريحة لما بنيناه معًا، وخطة عملية مدعومة بالبيانات لإطلاق حملة ناجحة تبدأ من الآن." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ops.admireworks.com/presentations/baleeg-relaunch/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#001a70; --navy2:#0a2a8f; --gold:#cc9f53; --gold-soft:#e7c98a;
+    --ink:#0e1430; --paper:#f7f8fc; --muted:#5b648a; --good:#2f9e6f; --warn:#d4731c; --line:#e6e9f5;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Tajawal',system-ui,sans-serif; color:var(--ink); background:var(--paper);}
+  .deck{scroll-snap-type:y mandatory; height:100vh; overflow-y:scroll;}
+  section{min-height:100vh; scroll-snap-align:start; padding:6vh 7vw; display:flex; flex-direction:column; justify-content:center; position:relative; border-bottom:1px solid var(--line);}
+  .kicker{color:var(--gold); font-weight:700; letter-spacing:.5px; font-size:clamp(13px,1.4vw,16px); margin-bottom:14px;}
+  h1{font-size:clamp(30px,5vw,62px); font-weight:800; line-height:1.15; color:var(--navy);}
+  h2{font-size:clamp(24px,3.4vw,42px); font-weight:800; line-height:1.2; color:var(--navy); margin-bottom:22px;}
+  p.lead{font-size:clamp(16px,1.7vw,22px); color:var(--muted); line-height:1.8; max-width:60ch;}
+  .navy-bg{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 70%,#143a9e 100%); color:#fff;}
+  .navy-bg h1,.navy-bg h2{color:#fff;} .navy-bg p.lead{color:#cfd6f5;}
+  .dot-nav{position:fixed; left:18px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:11px; z-index:50;}
+  .dot-nav a{width:10px; height:10px; border-radius:50%; background:#c7cce4; display:block; transition:.2s;}
+  .dot-nav a:hover{background:var(--gold); transform:scale(1.3);}
+  .grid{display:grid; gap:20px;} .g2{grid-template-columns:repeat(2,1fr);} .g3{grid-template-columns:repeat(3,1fr);} .g4{grid-template-columns:repeat(4,1fr);}
+  .card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 22px; box-shadow:0 6px 24px rgba(0,26,112,.05);}
+  .card .big{font-size:clamp(26px,3.2vw,40px); font-weight:800; color:var(--navy);}
+  .card .lbl{color:var(--muted); font-size:15px; margin-top:6px; line-height:1.6;}
+  .navy-bg .card{background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.14);}
+  .navy-bg .card .big{color:var(--gold-soft);} .navy-bg .card .lbl{color:#c8cff0;}
+  .pill{display:inline-block; background:rgba(204,159,83,.14); color:var(--gold); border:1px solid rgba(204,159,83,.35); padding:6px 14px; border-radius:999px; font-weight:700; font-size:14px; margin:4px 4px 4px 0;}
+  ul.clean{list-style:none; display:flex; flex-direction:column; gap:14px; margin-top:10px;}
+  ul.clean li{font-size:clamp(15px,1.5vw,19px); line-height:1.7; padding-right:30px; position:relative; color:var(--ink);}
+  ul.clean li::before{content:""; position:absolute; right:0; top:11px; width:11px; height:11px; border-radius:3px; background:var(--gold);}
+  .navy-bg ul.clean li{color:#eef1ff;}
+  .step{display:flex; gap:16px; align-items:flex-start; padding:14px 0; border-bottom:1px dashed var(--line);}
+  .step .n{flex:0 0 40px; height:40px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800;}
+  .step .t{font-size:clamp(15px,1.5vw,18px); line-height:1.6;}
+  table{width:100%; border-collapse:collapse; margin-top:10px; font-size:clamp(14px,1.5vw,18px);}
+  th,td{padding:14px 12px; text-align:right; border-bottom:1px solid var(--line);}
+  th{color:var(--gold); font-weight:700;} td .s{color:var(--muted); font-size:14px;}
+  .navy-bg th,.navy-bg td{border-color:rgba(255,255,255,.14);} .navy-bg td{color:#eef1ff;}
+  .tag-good{color:var(--good); font-weight:700;} .tag-warn{color:var(--warn); font-weight:700;}
+  .foot{position:absolute; bottom:22px; left:7vw; color:var(--muted); font-size:13px;}
+  .navy-bg .foot{color:#9aa6e0;}
+  .logo{font-weight:800; color:var(--navy); letter-spacing:1px;}
+  .navy-bg .logo{color:#fff;}
+  .src{font-size:12.5px; color:var(--muted); margin-top:18px; line-height:1.6;}
+  .navy-bg .src{color:#8e9bd8;}
+  @media(max-width:820px){ .g2,.g3,.g4{grid-template-columns:1fr;} section{padding:7vh 7vw;} .dot-nav{display:none;} }
+  @media print{ .deck{height:auto; overflow:visible;} section{min-height:auto; page-break-after:always; border:none;} .dot-nav{display:none;} }
+</style>
+</head>
+<body>
+<nav class="dot-nav" aria-label="التنقل">
+  <a href="#s1"></a><a href="#s2"></a><a href="#s3"></a><a href="#s4"></a><a href="#s5"></a><a href="#s6"></a><a href="#s7"></a><a href="#s8"></a><a href="#s9"></a><a href="#s10"></a><a href="#s11"></a><a href="#s12"></a>
+</nav>
+<div class="deck">
+
+  <!-- 1. Cover -->
+  <section id="s1" class="navy-bg">
+    <div class="kicker">أكاديمية بليغ التعليمية × Admireworks</div>
+    <h1>خطة إطلاق النمو<br/>صيف 2026</h1>
+    <p class="lead">قراءة صريحة لما بنيناه معًا خلال الأشهر الماضية، وخطة عملية مدعومة بالبيانات لإطلاق حملة ناجحة تبدأ من الآن.</p>
+    <div style="margin-top:30px;">
+      <span class="pill">معسكر فرسان بليغ الصيفي</span>
+      <span class="pill">محرّك تسجيل دائم</span>
+      <span class="pill">٦ يونيو ٢٠٢٦</span>
+    </div>
+    <div class="foot logo">ADMIRE8 BY ADMIREWORKS</div>
+  </section>
+
+  <!-- 2. Why now -->
+  <section id="s2">
+    <div class="kicker">لماذا الآن</div>
+    <h2>الفرصة الحقيقية ليست تعليمية فقط، بل مرتبطة بالهوية</h2>
+    <div class="grid g3">
+      <div class="card"><div class="big">٦٨٪</div><div class="lbl">من شباب الخليج باتوا يستخدمون الإنجليزية يوميًا أكثر من العربية.</div></div>
+      <div class="card"><div class="big">١١٪ فقط</div><div class="lbl">يرون العربية محورية في هويتهم (استطلاع الشباب العربي ٢٠٢٣).</div></div>
+      <div class="card"><div class="big">القلق الأكبر</div><div class="lbl">أم تخاف أن ينفصل طفلها عن جدّه، عن القرآن، وعن جذوره.</div></div>
+    </div>
+    <p class="lead" style="margin-top:26px;">رسالة بليغ تلامس هذا القلق مباشرة. مهمتنا أن نوصلها للأم المناسبة، في اللحظة المناسبة، بطريقة تجعل القرار سهلًا.</p>
+    <div class="src">المصدر: The National 2025، استطلاع الشباب العربي 2023، دراسات منشورة عن أثر المدارس الدولية على العربية في الإمارات.</div>
+  </section>
+
+  <!-- 3. Where we are -->
+  <section id="s3" class="navy-bg">
+    <div class="kicker">أين نحن اليوم</div>
+    <h2>أساس قوي لم يُستثمر بعد بشكل كامل</h2>
+    <div class="grid g4">
+      <div class="card"><div class="big">٢٩٩</div><div class="lbl">محادثة واتساب من الإعلانات خلال ٩٠ يومًا.</div></div>
+      <div class="card"><div class="big">~١٠ درهم</div><div class="lbl">متوسط تكلفة المحادثة الواحدة. رقم ممتاز.</div></div>
+      <div class="card"><div class="big">٢.٥٪</div><div class="lbl">نسبة النقر على الإعلان. أعلى من المعدل المعتاد للتعليم.</div></div>
+      <div class="card"><div class="big">~١٠٠٠ درهم</div><div class="lbl">الإنفاق الشهري الفعلي مقابل هدف ١٨ ألف. مساحة نمو كبيرة.</div></div>
+    </div>
+    <p class="lead" style="margin-top:26px;">الإعلانات تجلب اهتمامًا حقيقيًا وبتكلفة منخفضة. التحدّي ليس في جذب الأهالي، بل في تحويل اهتمامهم إلى تسجيل.</p>
+    <div class="foot">البيانات من حساب الإعلانات المباشر، الفترة من ٦ مارس إلى ٢١ مايو ٢٠٢٦.</div>
+  </section>
+
+  <!-- 4. What works -->
+  <section id="s4">
+    <div class="kicker">ما الذي يعمل بالفعل</div>
+    <h2>أصول جاهزة وزاوية مثبتة النجاح</h2>
+    <div class="grid g2">
+      <ul class="clean">
+        <li><b>معسكر رمضان نجح فعلًا</b> وأثبت نموذج البيع المباشر عبر واتساب.</li>
+        <li><b>لدينا لقطات حقيقية من المعسكر وشهادات أمهات</b> (فيديوهات جاهزة) لم تُستخدم في الإعلانات بعد.</li>
+        <li><b>الزاوية تلامس القلب:</b> الفرسان، الهوية، واللغة بعيدًا عن الشاشات.</li>
+      </ul>
+      <ul class="clean">
+        <li><b>منهج المعسكر مبني ومرتّب</b> في أربع مراحل (يقظة الضاد، مجلس بليغ، إرث الفرسان، صناعة الفارس).</li>
+        <li><b>نصوص إعلانية قوية وجاهزة</b> بعدة زوايا، إضافة إلى سكربتات فيديو.</li>
+        <li><b>سعر المعسكر محسوم:</b> ٥٥٠ درهمًا لشهرين، وهو سعر ممتاز مقارنة بمعسكرات حضورية تبدأ من ١٥٠ درهمًا لليوم.</li>
+      </ul>
+    </div>
+    <p class="lead" style="margin-top:24px;">الخلاصة: نحن لا نبدأ من الصفر. نحن نعيد تجميع أصول موجودة في حملة واحدة محكمة.</p>
+  </section>
+
+  <!-- 5. The gaps -->
+  <section id="s5">
+    <div class="kicker">أين الفرصة الضائعة</div>
+    <h2>ثلاثة عوائق بسيطة تقف بيننا وبين النتائج</h2>
+    <div class="grid g3">
+      <div class="card">
+        <div class="pill">١</div>
+        <h3 style="color:var(--navy); margin:10px 0;">العرض غير واضح</h3>
+        <div class="lbl">الأهالي يسمعون أكثر من سبعة أسعار مختلفة لبرامج متشابهة (تأسيس، تقوية، قصص، خصوصي، معسكرات). الكثرة تربك وتؤجّل القرار.</div>
+      </div>
+      <div class="card">
+        <div class="pill">٢</div>
+        <h3 style="color:var(--navy); margin:10px 0;">الإغلاق بلا نظام</h3>
+        <div class="lbl">بعد سؤال السعر، المحادثة كثيرًا ما تتوقف بلا متابعة منظّمة. الاهتمام موجود، لكن لا توجد رحلة واضحة تقود الأم إلى الحجز.</div>
+      </div>
+      <div class="card">
+        <div class="pill">٣</div>
+        <h3 style="color:var(--navy); margin:10px 0;">أصول وثقة غير مُفعّلة</h3>
+        <div class="lbl">لا صفحة هبوط ولا إعادة استهداف، واللقطات والشهادات لا تظهر في الإعلانات، وقائمة المهتمّين السابقين لم تُتابَع.</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:26px;">الخبر الجيد: الثلاثة قابلة للحل سريعًا، وكلها في أيدينا.</p>
+  </section>
+
+  <!-- 6. Voice of customer -->
+  <section id="s6" class="navy-bg">
+    <div class="kicker">ما يقوله الأهالي فعلًا</div>
+    <h2>قرأنا كل رسالة وكل تعليق على صفحتكم</h2>
+    <div class="grid g2">
+      <ul class="clean">
+        <li>يسألون عن السعر مباشرة، ويطلبون <b>الحصة التجريبية</b>.</li>
+        <li>قلق متكرر حول <b>عمر ٤ إلى ٦ سنوات</b> (طلب قائم لا نخدمه جيدًا حتى الآن).</li>
+        <li>كثيرون يطلبون نقل الحديث إلى <b>واتساب</b> لإتمام التسجيل.</li>
+      </ul>
+      <div class="card">
+        <div class="big">~٣٠ أمًّا</div>
+        <div class="lbl">تركوا الاسم والهاتف والبريد وعمر الطفل في حملة سابقة، ولم تتم متابعتهم. قائمة جاهزة لإعادة التنشيط.</div>
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,.14);">
+          <div class="lbl" style="font-style:italic;">«حابة نحدد حصة تجريبية» . «بنتي أصغر من كده» . «سعر الاشتراك؟»</div>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:24px;">الطلب حقيقي والرسالة تصل. كل ما نحتاجه هو طريق واضح يحوّل هذا الاهتمام إلى تسجيل.</p>
+  </section>
+
+  <!-- 7. The offer -->
+  <section id="s7">
+    <div class="kicker">الحل الأول: عرض واحد واضح</div>
+    <h2>سلّم عروض بسيط بدل قائمة مربكة</h2>
+    <div class="grid g4">
+      <div class="card"><div class="pill">مجانًا</div><div class="lbl" style="margin-top:8px;"><b>تقييم لغوي + حصة تجريبية</b><br/>نقطة الدخول، بلا مخاطرة على الأم.</div></div>
+      <div class="card"><div class="pill">الموسمي</div><div class="lbl" style="margin-top:8px;"><b>معسكر فرسان بليغ</b><br/>٥٥٠ درهمًا لشهرين، مع منحة للمتفوقين.</div></div>
+      <div class="card"><div class="pill">الأساسي</div><div class="lbl" style="margin-top:8px;"><b>التأسيس والتقوية</b><br/>سعر واحد واضح لكل مسار، وخصم واحد ثابت.</div></div>
+      <div class="card"><div class="pill">الجديد</div><div class="lbl" style="margin-top:8px;"><b>مسار ٤ إلى ٦ سنوات</b><br/>قصص ولعب، يلتقط طلبًا قائمًا نفقده اليوم.</div></div>
+    </div>
+    <p class="lead" style="margin-top:24px;"><b>الضمان:</b> تقييم وحصة تجريبية مجانًا، وضمان رضا في الشهر الأول. نزيل الخوف عن الأم، فيصبح القرار أسهل.</p>
+    <div class="src">سعر التأسيس والتقوية الحالي (٤٠٠ إلى ٤٣٠ درهمًا شهريًا) في صميم السوق للدروس المباشرة (~٣٧٠ إلى ٤٤٠ درهمًا). المشكلة في تعدد الأسعار لا في مستواها.</div>
+  </section>
+
+  <!-- 8. The funnel -->
+  <section id="s8" class="navy-bg">
+    <div class="kicker">الحل الثاني: قمع واضح من الإعلان إلى التسجيل</div>
+    <h2>رحلة واحدة لا تتسرّب منها أم</h2>
+    <div class="grid g3">
+      <div class="card"><div class="lbl"><b>١. إعلان إلى واتساب</b><br/>بزاوية الفرسان واللقطات الحقيقية والشهادات.</div></div>
+      <div class="card"><div class="lbl"><b>٢. محادثة بسيناريو</b><br/>ترحيب فوري، سؤالان، ترشيح مسار واحد، ثم حجز الحصة التجريبية.</div></div>
+      <div class="card"><div class="lbl"><b>٣. تسجيل ومتابعة</b><br/>تأكيد، ثم متابعة منظّمة لمن لم يردّ.</div></div>
+    </div>
+    <div class="grid g2" style="margin-top:18px;">
+      <ul class="clean">
+        <li><b>صفحة هبوط مع بيكسل</b> لقياس النتائج وبناء جمهور لإعادة الاستهداف.</li>
+        <li><b>إعادة استهداف</b> من شاهدوا الفيديو أو تفاعلوا مع الصفحة.</li>
+      </ul>
+      <ul class="clean">
+        <li><b>تنشيط القائمة الباردة</b> (الـ ٣٠ أمًّا) بعرض جديد عبر البريد ثم واتساب.</li>
+        <li><b>محتوى يبني الثقة:</b> ننشر اللقطات والشهادات، لا النصائح فقط.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9. The script -->
+  <section id="s9">
+    <div class="kicker">قلب التحويل: سيناريو واتساب</div>
+    <h2>نفس الطريق الواضح لكل أم</h2>
+    <div class="step"><div class="n">١</div><div class="t"><b>ترحيب فوري (خلال ثوانٍ):</b> يذكر العرض من الإعلان، ويطرح سؤالًا واحدًا: كم عمر طفلك؟</div></div>
+    <div class="step"><div class="n">٢</div><div class="t"><b>سؤالان للتأهيل:</b> العمر، ثم الهدف (نطق، قراءة، قرآن). سؤال واحد في كل مرة، لا استجواب.</div></div>
+    <div class="step"><div class="n">٣</div><div class="t"><b>إثبات قبل السعر:</b> مقطع قصير أو شهادة أم، ثم ترشيح مسار واحد وسعر واحد.</div></div>
+    <div class="step"><div class="n">٤</div><div class="t"><b>معالجة الاعتراض:</b> السعر بالقيمة لا بالساعة، والعمر الصغير له مساره، و«بفكّر» تُقابل بحجز الحصة التجريبية المجانية الآن.</div></div>
+    <div class="step"><div class="n">٥</div><div class="t"><b>الإغلاق:</b> حجز الحصة التجريبية هو هدف المحادثة، مع تأكيد الموعد.</div></div>
+    <div class="step" style="border:none;"><div class="n">٦</div><div class="t"><b>متابعة منظّمة:</b> بعد ساعة، ثم يوم، ثم ٣ أيام، ثم ٧ أيام لمن لم يردّ.</div></div>
+    <p class="lead" style="margin-top:18px;"><b>القاعدة الأهم:</b> السرعة. الردّ خلال أقل من ٣ دقائق، لأن فرصة الردّ تنخفض بمقدار النصف بعد نصف ساعة من الصمت.</p>
+  </section>
+
+  <!-- 10. Camp sprint -->
+  <section id="s10" class="navy-bg">
+    <div class="kicker">أولوية الآن: معسكر الصيف</div>
+    <h2>فرسان بليغ، دفعة يوليو</h2>
+    <p class="lead">قرارات حجز المعسكرات الصيفية في الإمارات تحدث في مايو ويونيو، ومواعيد الحجز المبكر تقترب. النافذة ضيّقة لكنها مفتوحة، والأصول جاهزة.</p>
+    <div class="grid g4" style="margin-top:22px;">
+      <div class="card"><div class="big">هذا الأسبوع</div><div class="lbl">تجهيز العرض الواحد، سيناريو واتساب، صفحة الهبوط، والإبداع من الأصول الموجودة.</div></div>
+      <div class="card"><div class="big">~١٤ يونيو</div><div class="lbl">إطلاق حملة واتساب للمعسكر لاستهداف دفعة يوليو.</div></div>
+      <div class="card"><div class="big">حتى ٣٠ يونيو</div><div class="lbl">تحسين، إعادة استهداف، تنشيط القائمة، وملء الدفعات.</div></div>
+      <div class="card"><div class="big">بالتوازي</div><div class="lbl">بناء محرّك التسجيل الدائم للتأسيس على مدار العام.</div></div>
+    </div>
+  </section>
+
+  <!-- 11. Numbers -->
+  <section id="s11">
+    <div class="kicker">الأرقام: ثلاثة سيناريوهات</div>
+    <h2>ماذا يعني الاستثمار في الإعلان</h2>
+    <table>
+      <thead><tr><th>السيناريو</th><th>الإنفاق الشهري</th><th>محادثات متوقعة</th><th>تسجيلات متوقعة</th><th>إيراد المعسكر التقديري</th></tr></thead>
+      <tbody>
+        <tr><td>المُوفّر</td><td>٥٬٠٠٠ درهم</td><td>~٧٠٠</td><td>٣٥ إلى ٧٠</td><td>~٢٠ إلى ٤٠ ألف درهم</td></tr>
+        <tr><td>الأساس</td><td>١٢٬٠٠٠ درهم</td><td>~١٧٠٠</td><td>٨٥ إلى ١٧٠</td><td>~٤٧ إلى ٩٤ ألف درهم</td></tr>
+        <tr><td>التوسّع</td><td>٢٥٬٠٠٠ درهم</td><td>~٣٥٠٠</td><td>١٨٠ إلى ٣٥٠</td><td>محدود بالطاقة الاستيعابية</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:20px;">العامل الأهم ليس حجم الإنفاق وحده، بل جودة الإغلاق وطاقة الدفعات. نوصي بالبدء من سيناريو الأساس، وضبط الإنفاق على قدر ما تستوعبه الدفعات.</p>
+    <div class="src">تقديرات إرشادية: تكلفة المحادثة ~٧ دراهم، ونسبة التحويل من محادثة إلى تسجيل ٥٪ إلى ١٠٪ (معايير مستقلة لقطاع التعليم)، وسعر المعسكر ٥٥٠ درهمًا. الأرقام للتوجيه لا للتعهّد.</div>
+  </section>
+
+  <!-- 12. Timeline + ask -->
+  <section id="s12" class="navy-bg">
+    <div class="kicker">لننطلق</div>
+    <h2>ما نحتاجه منكِ لنبدأ فورًا</h2>
+    <div class="grid g3">
+      <div class="card"><div class="big">١</div><div class="lbl">تسوية رصيد حساب الإعلانات على Meta حتى تعود الحملات للعمل.</div></div>
+      <div class="card"><div class="big">٢</div><div class="lbl">تأكيد الاتفاق المحدّث حتى نبدأ بثقة.</div></div>
+      <div class="card"><div class="big">٣</div><div class="lbl">تأكيد تفاصيل المعسكر (عدد المقاعد، المواعيد، طاقة المعلمين) لنضبط الإنفاق على قدرها.</div></div>
+    </div>
+    <p class="lead" style="margin-top:28px;">لدينا الأصول، والزاوية المثبتة، والجمهور المهتم. ما تبقّى هو خطة واضحة وتنفيذ سريع. نحن جاهزون.</p>
+    <div class="foot logo">ADMIRE8 BY ADMIREWORKS . hello@admireworks.com</div>
+  </section>
+
+</div>
+</body>
+</html>

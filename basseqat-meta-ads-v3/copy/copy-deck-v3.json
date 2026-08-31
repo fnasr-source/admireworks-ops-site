@@ -1,0 +1,273 @@
+{
+  "wave": "basseqat-statics-2026-08",
+  "market": "EG",
+  "dialect": "egyptian-colloquial",
+  "authored": "2026-08-05",
+  "notes": "Machine-readable copy deck. build_v3.py reads onImageLine + every `elements` string from HERE and nowhere else, so linting this file transitively lints the pixels that ship. build_v2.py hardcoded Arabic inline (lines 198/209/234/331/499), which is why nothing ever linted the burned text.",
+  "compliance": {
+    "bannedSubstrings": [
+      "عائد مضمون",
+      "العائد مضمون",
+      "ربح ثابت",
+      "ارباح مضمونة",
+      "أرباح مضمونة",
+      "بلا خسارة",
+      "استثمر الآن قبل فوات الأوان",
+      "استثمار آمن",
+      "استثمار بدون مخاطر",
+      "فرصة العمر",
+      "حقق أحلامك",
+      "ثروة حقيقية",
+      "صور حقيقية",
+      "حزمة الإثبات",
+      "ملف التحقق",
+      "ملف التحقيق",
+      "دليل الإثبات",
+      "مؤسس باسقات",
+      "عائد سنوي مجزي",
+      "عائد مجزي",
+      "عائد سنوي ومتزايد",
+      "سنوي ومتزايد",
+      "عائد متزايد"
+    ],
+    "farmAgeRegex": [
+      "(٤|٥|4|5)\\s*سن(ين|وات)",
+      "أربع\\s*سن(ين|وات)",
+      "خمس\\s*سن(ين|وات)",
+      "(النخل|النخيل|نخيل|نخلة)\\s*(مجدول\\s*)?(في الأرض\\s*)?(من|عمره|عمرها|بقاله|بقالها)\\s*٦\\s*سن",
+      "قايمة من ٦ سنين"
+    ],
+    "farmAgeRule": "The 6 years is agricultural OPERATING EXPERIENCE (Siwi palms plus medicinal and aromatic plants), not the age of the Medjool palms. Client correction by Eman Fathy on the v6 portal deliverable, 2026-08-13, thread 0KbEElRtZ1L5OGypc1oV. «شغالة من ٦ سنين» and «خبرة ٦ سنين» are fine; «نخيل عمره ٦ سنين» and «قايمة من ٦ سنين» are not. Separately, «٤ سنين» stays banned (client correction, June 2026). Returns from year 4 and peak years 7-8 are a DIFFERENT axis and are not referenced in this wave.",
+    "mustAppear": [
+      "دليل باسقات"
+    ],
+    "noPriceOnImage": true,
+    "photoLabel": "من أرض الواقع"
+  },
+  "concepts": [
+    {
+      "id": "concept19-six-questions",
+      "adName": "EG | R1 six-questions",
+      "seq": 1,
+      "type": "card",
+      "provenance": "design",
+      "answers": "The whole objection stack. A hub: each question maps to a top VOC topic and to one of the other seven concepts.",
+      "evidence": "Rebuild of EG | C2 due-diligence: CPL 40 and CTR 13.32%, the highest CTR ever recorded in the account, on 597 EGP of lifetime spend. The most under-funded winner on the board.",
+      "predecessor": "EG | C2 due-diligence",
+      "audience": "all warm, EG + GCC",
+      "stage": "bounced-early (sequence opener for every stage except LP-no-reg)",
+      "persona": "cross",
+      "cta": "LEARN_MORE",
+      "landing": "https://start.basseqat.com/start?v=investor",
+      "onImageLine": "قبل ما تحط فلوسك في مشروع",
+      "elements": {
+        "kicker": "٦ أسئلة اسألنا فيها.. واسأل غيرنا",
+        "rows": [
+          "بكام؟ وفيه مصاريف سنوية بعد كده؟",
+          "البنية التحتية موجودة ولا بفلوسي؟",
+          "أقدر أقرا العقد قبل ما أدفع؟",
+          "الدخل بيتحسب إزاي؟ وبيتغير ليه؟",
+          "الأرض فين؟ وأقدر أنزل أشوفها؟",
+          "جاهزين تزرعوا في أي وقت؟"
+        ],
+        "footer": "٥ إجابات في دليل باسقات، والتمن بنقوله لك."
+      },
+      "headline": "٦ أسئلة اسألنا فيها قبل ما تدفع",
+      "linkDescription": "٥ إجابات في دليل باسقات، والتمن بنقوله لك مباشرة.",
+      "primaryText": "إحنا مزرعة نخيل مجدول في الفرافرة. ومش هنقولك «اطمن»، دي كلمة أي حد يقدر يقولها.\n\nهنقولك حاجة تانية: خد الستة أسئلة دول معاك. لو أي مشروع زراعي ما قدرش يجاوبك عليهم بالورق، سيبه. اسألنا إحنا فيهم، واسأل غيرنا:\n\n١. بكام؟ وفيه مصاريف سنوية بعد كده؟\n٢. البنية التحتية موجودة ولا بفلوسي؟\n٣. أقدر أقرا العقد قبل ما أدفع؟\n٤. الدخل بيتحسب إزاي؟ وبيتغير ليه؟\n٥. الأرض فين؟ وأقدر أنزل أشوفها؟\n٦. جاهزين تزرعوا في أي وقت؟\n\nخمسة من الستة دول إجابتهم مكتوبة في دليل باسقات، من غير لف ودوران. والسؤال الأول، وهو التمن، مش مكتوب في الدليل. بنقوله لك مباشرة على الواتساب أو في مكالمة، ومعاه المصاريف اللي بعده.\n\nوباختصار كده: باسقات مشاركة في الشركة اللي بتملك الأرض وبتشغّل المزرعة، مش إنك تشتري فدان مفرز باسمك. والفرق ده مكتوب في العقد اللي بتقراه قبل ما تدفع جنيه.\n\nوالأرض في الفرافرة، متخصصة للشركة بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي. وتقدر تنزل تشوفها بنفسك، إحنا بنرتب الزيارة ونقولك تكلفتها قبلها.\n\nوالزراعة والإدارة كلها علينا، بفريق موجود على الأرض ووراه خبرة زراعية ٦ سنين. ونتيجة كل موسم بتختلف حسب الإنتاج والسوق، ودي طبيعة الزراعة وبنقولها من أول يوم.\n\nحمّل دليل باسقات، اقراه بنفسك، وبعدين قرر.",
+      "designNote": "NO structural change. `elements` keeps the exact same contract: `kicker` (string), `rows` (array of EXACTLY 6 strings), `footer` (string). Drop-in for build_v3.py. Five render notes:\n\n1. TYPE RAMP GOT EASIER. The six rows are now 28–32 chars (was 30–34, spread 4). Size the ramp for 32 and render all six at ONE identical font size — the previous render had them on different optical sizes, which is why the list read loose instead of as a checklist. The tighter spread makes a single size easier to hit than before.\n\n2. FOOTER GREW, 33 → 42 chars. «٥ إجابات في دليل باسقات، والتمن بنقوله لك.» must set on ONE line; step the footer size down rather than wrapping, and re-check the gap to the last row. This is the only element whose measured width changed materially.\n\n3. QUESTION MARK. All six rows still end in «؟». It must stay bound to the end of the RTL run, i.e. at the visual LEFT edge of each row, hard against the last word with no orphan gap. Verify in the exported PNG, not in the source string.\n\n4. FONT BUG — THIS CONCEPT IS NOW CLEAN AND SO IS THE REST OF THE DECK. Every burned string in this concept is free of Arabic combining marks, and in this revision the three other burned strings that carried one have also been rewritten to drop it: concept15's «المشغّلة» (shadda) is gone with the new leftHeader, concept18's subLine no longer carries «الميّة», and concept22's «متابَع» (fatha) is now «نخيل في الأرض من ٦ سنين». The deck no longer contains a single combining mark on any burned pixel. Ship the font fix anyway, but nothing in this wave is waiting on it.\n\n5. PRICE LINT. rows[0] opens with the bare interrogative «بكام؟» and contains no digit or currency token. It is a question, not a price, and does not violate compliance.noPriceOnImage. Do not let a reviewer strip row 1 on a false positive.\n\nonImageLine is 6 words / 25 chars, inside the 6-word ceiling.",
+      "changeSummary": "Fixed the «اسألها لينا» calque everywhere, removed «الست إجابات» (which scans as السِت) and the MSA «عجز»، rewrote the six rows into plain Egyptian and made the image rows and body list byte-identical, replaced «تدفع في مشروع» with «تحط فلوسك»، and resolved the honesty contradiction the reviewers caught by saying outright that five answers are in دليل باسقات and the price comes from us directly — plus the price question now asks how income is calculated and why it changes instead of «مين بيحدده»، the land wording is now the locked «بالأمر المباشر»، and the visit is stated as arranged with its cost told up front rather than an open free door.",
+      "clientSubtitle": "الأسئلة اللي المفروض أي حد يسألها قبل ما يشارك في أي مشروع زراعي"
+    },
+    {
+      "id": "concept20-open-gate-pension",
+      "adName": "Pension | R2 open-gate-pension",
+      "seq": 2,
+      "type": "photo",
+      "provenance": "real",
+      "photoNeed": "Ground level, chest height, standing on the sand track looking straight down the gap between two palm rows, rows receding. Empty frame: no people, no vehicles, no panels, no buildings.",
+      "answers": "The pension stake. «لما هيبقى عندي ٦٠ سنة، هعمل ايه؟»",
+      "evidence": "Pension | C4 open-gate pension is the account's best CPL at 50 on CTR 9.74%. Google corroborates independently: PMax EG - Pension carries 893 of 1,055 conversions. 45-54 male is the best CPL band (96), 55-64 next (102).",
+      "predecessor": "Pension | C4 open-gate pension",
+      "audience": "Vid-75pct - EG, LP-All - EG, facebook page follower filtered 45+, EG only",
+      "stage": "watched-75pct (entry point for that cohort), step 2 for everyone else",
+      "persona": "pension",
+      "cta": "LEARN_MORE",
+      "landing": "https://start.basseqat.com/start?v=pension",
+      "onImageLine": "فاضل كام سنة على المعاش؟",
+      "elements": {
+        "bottomBar": "الزيارة بترتيب مع الفريق. تعالى شوف بنفسك.",
+        "photoLabel": "من أرض الواقع: مزرعة باسقات، الفرافرة"
+      },
+      "headline": "مزرعة نخيل مجدول، وخبرة ٦ سنين وراها",
+      "linkDescription": "مزرعة نخيل مجدول في الفرافرة، ووراها خبرة زراعية ٦ سنين. تعالى شوفها بنفسك، أو حمّل دليل باسقات.",
+      "primaryText": "فيه سؤال بيقعد في دماغ الواحد قبل المعاش بسنين: المرتب هييجي عليه يوم ويقلّ، والمصاريف مش هتقلّ.\n\nواللي بيطمّن مش الكلام. اللي بيطمّن إنك تشوف بعينك.\n\nباسقات مزرعة نخيل مجدول في الفرافرة، مبنية على خبرة زراعية موجودة على أرض الواقع عمرها ٦ سنين في زراعة النخيل السيوي والنباتات الطبية والعطرية. الأرض مخصصة للشركة الأم بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي. و٣ آبار محفورة على عمق من ٧٥٠ لـ ٨٠٠ متر، وري بالتنقيط واصل لكل نخلة، ونخل مزروع بنتابعه موسم ورا موسم.\n\nالزراعة والإدارة كلها علينا. وإنت معاك حصة مكتوبة باسمك في عقد المشاركة، وبيوصلك تقرير كل فترة تتابع بيه اللي بيحصل على الأرض.\n\nودي مش مرتب شهري بديل. ده أصل زراعي طويل الأجل بيطرح كل موسم، ونتيجة كل موسم بتختلف حسب الإنتاج والسوق.\n\nوإحنا بنرتب زيارات للمزرعة. تيجي معانا، تمشي وسط النخل، وتقعد مع المهندسين اللي شغالين فيها وتسأل أي حاجة في دماغك. وبنقولك تكلفة الزيارة قبلها.\n\nولو مش قادر تيجي دلوقتي، حمّل دليل باسقات واقراه بالراحة، أو كلّمنا على الواتساب واسأل في أي حاجة.\n\nمحدش هيستعجلك.",
+      "designNote": "Same element KEYS (`bottomBar`, `photoLabel`) and the same composition. `onImageLine` and `photoLabel` are byte-for-byte unchanged. The photo brief is unchanged: ground level, chest height, standing on the sand track looking straight down the gap between two palm rows, rows receding, empty frame (no people, no vehicles, no panels, no buildings).\n\nONE burned string changed, so a re-render of all three ratios IS required this round. bottomBar goes from «الباب مفتوح. تعالى شوف الأرض بنفسك.» (35 chars) to «الزيارة بترتيب مع الفريق. تعالى شوف بنفسك.» (41 chars). bar_top() will resolve slightly higher; confirm the photo label still clears it and step the bar text down one size rather than wrapping to two lines. The bar is also deliberately free of combining marks — «بننظّم» and «بنرتّب» both carry a shadda and were rejected for the burned string for exactly that reason; «بترتيب» carries the same meaning with clean glyphs. The shadda forms survive in primaryText, which Meta renders with a real text engine.\n\nDIGITS: Arabic-Indic («٦», «٣», «٧٥٠») retained deliberately. Two reviewers raised Western digits as the DR default; switching this one card would leave it as the only Western-digit asset in a seven-card wave, and the wave's own no-Latin-on-canvas rule points the other way. Consistency is the fix that was actually being asked for — the whole deck stays Arabic-Indic.\n\nHeadline and bottom bar now carry different jobs (headline = proof, bar = invitation), so the card no longer spends three slots on one idea.",
+      "changeSummary": "Swapped the Gulf/MSA «الراتب» for «المرتب» and the un-Egyptian «يتقّل على الواحد» for «بيقعد في دماغ الواحد»، cut the abstract «مش كل حاجة لازم تتحل بوعود» that reviewers said broke the ad on one pass, replaced the vague «آبار محفورة» with the real numbers, killed the bare imperative «زور» and the headline/bottom-bar duplication, and closed the compliance gap by naming what the participant actually holds (a share written in the contract, not «شريك»), stating plainly that this is not a replacement salary and that each season's result varies, and saying the visit is arranged with its cost told beforehand.",
+      "clientSubtitle": "للناس اللي بتفكر في مصدر دخل قبل المعاش وبعده"
+    },
+    {
+      "id": "concept21-built-what-expat",
+      "adName": "GCC | R2 built-what-expat",
+      "seq": 2,
+      "type": "card",
+      "provenance": "design",
+      "answers": "The expat return-home reckoning, and the public accusation that expats are easy prey.",
+      "evidence": "GCC | C8 departure is 295 leads at CPL 63, the largest single lead producer in the account. Its AI departure-lounge scene is dead under the no-AI rule and no real airport photo exists, so the angle survives as a card. 153 leads (6.7%) ask expat questions.",
+      "predecessor": "GCC | C8 departure",
+      "audience": "Vid-75pct - GCC and LP-NoReg - GCC (NEITHER EXISTS YET). Interim: facebook page follower narrowed to GCC + 45+ male.",
+      "stage": "watched-75pct (GCC entry point), step 2",
+      "persona": "expat",
+      "cta": "LEARN_MORE",
+      "landing": "https://start.basseqat.com/start?v=expat",
+      "onImageLine": "تعب سنين الغربة تحطه في إيه؟",
+      "elements": {
+        "kicker": "كل واحد فيهم نتيجته غير التاني",
+        "rightHeader": "الاختيار",
+        "leftHeader": "النتيجة",
+        "rows": [
+          [
+            "فلوس في البنك",
+            "الغلا بياكل من قيمتها"
+          ],
+          [
+            "دهب",
+            "بيتخزن، بس مش بيجيب دخل"
+          ],
+          [
+            "عقار",
+            "غالي وبيجيب دخل قليل"
+          ],
+          [
+            "مشاركة في نخيل مجدول",
+            "بيثمر، والدخل يعلى وينزل حسب الموسم"
+          ]
+        ],
+        "bottomBar": "فريق باسقات بيدير كل حاجة، والتقرير بيوصلك في مكانك"
+      },
+      "headline": "البنك، الدهب، العقار، ولا النخيل؟",
+      "linkDescription": "مشاركة بعقد مكتوب في مزرعة نخيل مجدول في الفرافرة، ووراها خبرة زراعية ٦ سنين.",
+      "primaryText": "شغّال برّه بقالك سنين، وبتحوّش. والسؤال اللي بيتعب: التحويشة دي تروح فين؟\n\nأكيد شفت إعلانات كتير بتكلّمك إنت بالذات، وفيها كلام كتير مش مطمّن.\n\nتعالى نحسبها بالورقة والقلم. تعب سنين الغربة تحطه في إيه؟ البنك، الدهب، العقار، ولا النخيل؟\n\nباسقات مزرعة نخيل مجدول في الفرافرة، ووراها خبرة زراعية ٦ سنين. والأرض اتخصصت للشركة بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي.\n\nوإنت مش بتشتري فدان مفرز باسمك. إنت بتاخد حصة في الشركة نفسها، الشركة اللي بتملك الأرض وبتشغّل المزرعة. وحصتك مكتوبة باسمك في العقد.\n\nوفريق باسقات هو اللي شايل كل حاجة على الأرض: الزراعة والري والصيانة والحصاد وتسويق المحصول. وكل فترة بيوصلك تقرير بصور من الأرض، وإنت في مكانك.\n\nوالدخل؟ النخل بيثمر، والدخل بيتحسب بعد ما المحصول يتباع، وبيعلى وبينزل حسب الموسم والسوق. يعني مش هنقولك رقم قبل ما الموسم يخلص. ولو حابب تشوف الأرقام والتفاصيل، اطلب مننا دراسة الجدوى.\n\nوإحنا مش عايزينك تصدقنا، عايزينك تتأكد: اقرا دليل باسقات، واسألنا على الواتساب في أي حاجة، ولما تحب تيجي تشوف بنفسك أو ابعت حد من عندك يشوف بدالك.\n\nمحدش هيستعجلك.",
+      "clientCopyNote": "The three pairs are drawn verbatim from Khaled's own client-final C8 text: «العقار غالي ومحتاج متابعة، والدهب صحيح بيحافظ على قيمته لكن مش بيجيب دخل، والفلوس في البنك التضخم بياكلها». No new claim territory. The hero line «بنيت هنا إيه؟» is also his, from «وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟».",
+      "designNote": "KEY SHAPE UNCHANGED from the rebuilt version: `kicker`, `rightHeader`, `leftHeader`, `rows` (4 × [label, consequence]), `bottomBar`. build_c21_built_what() still renders the FOUR-ROW TWO-COLUMN COMPARISON TABLE. Changes are all measurement-level:\n\n(1) HERO GREW 23 → 28 chars («تعب سنين الغربة تحطه في إيه؟»). Let fit_font take its 4px step down; it still sets on ONE line at all three ratios. Do NOT hand-break it — the line is the argument.\n\n(2) KICKER NO LONGER CARRIES A NUMERAL. «٤» was removed on purpose: two reviewers flagged that a large bare ٤ sitting on the same canvas as a body claiming «٦ سنين» invites a glance-level misread of the farm's age, which is the one number this brand cannot get wrong. The reader can count four rows. The kicker now earns its line by saying the results DIFFER, which is the actual argument.\n\n(3) HEADER STRIP unchanged and still not optional: rightHeader right-aligned at cv.right, leftHeader right-aligned at the consequence column's RTL anchor, both FNT.SEMI(26) in MUTED, 2px HAIRLINE across the full safe width, 14px padding above and below.\n\n(4) COLUMN GEOMETRY unchanged: choice_w = int(cv.safe_w * 0.36) anchored at cv.right, gap = 30, consequence column takes the remainder RTL-anchored at (cv.right - choice_w - gap) and must never fall below 58% of cv.safe_w. Do not call C.split_axis().\n\n(5) CONSEQUENCE COLUMN GOT WIDER TEXT. Longest consequence is now rows[3] at 35 chars (was 33). Re-fit with C.fit_rows(ink, 4, y, bar_top(...) - 24, FNT.BOLD, start=40, min_size=26, lead=2.6) and let it settle lower rather than clipping; all four must still hold ONE line each.\n\n(6) Rows 0-2: band fill (243,237,227), choice FOREST, consequence INK. Row 3 is ALWAYS the Basseqat pole and stays visually inverted: band fill FOREST, choice CREAM, consequence (214,232,220), 8px TERRA edge bar on the RIGHT (RTL leading) edge, palm-only cream icon ~34px inside the band's left end. Never reorder `rows`; index 3 is the Basseqat row by definition.\n\n(7) The per-pair TERRA hairline separator stays DELETED; bands plus the 22px gutter do the separating.\n\n(8) bottom_bar() unchanged (FOREST bg / CREAM fg). It now reads differently from linkDescription — the two were verbatim identical before, which made the ad repeat itself inside one unit.\n\n(9) Nothing numeric is burned: no price, no percentage, no return figure, no farm-age string.",
+      "changeSummary": "Anchored the hero in the Egyptian phrase «تعب سنين الغربة» and made the body use the exact same active wording instead of the flat passive «بيتحط»، replaced the calque «تستاهل الشك» and the ad-about-ads opener with the reader's own worry, unstacked the MSA participles «مالكة ومشغّلة»، fixed «توثيق منتظم» to «تقرير»، «بالنيابة عنك» to «يشوف بدالك» and «تسويق محصول» to «تسويق المحصول»، and on compliance replaced the flat «بيجيب دخل» with income that is calculated after the sale and stated as going up AND down, softened the overstated «التضخم بياكلها» to «الغلا بياكل من قيمتها»، and dropped the unverifiable «موثقة» for «مكتوبة باسمك في العقد».",
+      "clientSubtitle": "للمصريين في الخليج: مقارنة بين البنك والدهب والعقار والمشاركة الزراعية"
+    },
+    {
+      "id": "concept22-order-of-operations",
+      "adName": "EG | R4 order-of-operations",
+      "seq": 5,
+      "type": "photo",
+      "provenance": "designReal",
+      "photoNeed": "A wellhead or pump station standing alone in sand, or a lined canal running to the horizon. Machinery in frame is fine. NO people. NO solar panels anywhere in the crop.",
+      "answers": "«Is this real or is it a plan?» Project-information (1,567 mentions) plus the readiness half of contracts and guarantees (632).",
+      "evidence": "EG | C5-v2 infra-checklist runs CPL 62 on CTR 4.27%: it loses the scroll and wins the decision, which is exactly the right profile for a warm audience at sequence position 5 where frequency has already bought attention. It also carries the account's single most differentiating operational claim, one no competitor raising money to start can make.",
+      "predecessor": "EG | C5-v2 infra-checklist",
+      "audience": "Vid-75pct - EG, LP-All, ProofPack-Downloaded-NoReply",
+      "stage": "proof-pack-downloaded / reached-LP-no-reg, late sequence",
+      "persona": "investor",
+      "cta": "LEARN_MORE",
+      "landing": "https://start.basseqat.com/start?v=investor",
+      "onImageLine": "الأرض اتجهزت قبل ما نطلب منك حاجة",
+      "elements": {
+        "kicker": "الترتيب ده هو الفرق كله",
+        "timeline": [
+          "أرض متخصصة بالأمر المباشر",
+          "٣ آبار وشبكة ري شغالة",
+          "خبرة زراعية في النخيل ٦ سنين",
+          "وبعد كل ده.. جه دور المشاركة"
+        ],
+        "photoLabel": "من أرض الواقع: مزرعة باسقات، الفرافرة"
+      },
+      "headline": "جهّزنا كل حاجة قبل ما نفتح المشاركة",
+      "linkDescription": "٣ آبار وشبكة ري وأرض متخصصة بالأمر المباشر، وكل خطوة ليها ورقها.",
+      "primaryText": "فيه مشاريع بتجمع الفلوس الأول وبعدين تبدأ تجهّز. إحنا عملنا العكس.\n\nوالفرق ده مش على الورق. المشروع اللي لسه هيجهّز، إنت بتشارك في وعد. هنا إنت بتشارك في أرض قايمة وبنية تحتية موجودة دلوقتي.\n\nفي باسقات الترتيب كان كده:\n\nالأرض اتخصصت لنا بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي.\n\nحفرنا ٣ آبار عميقة.\n\nركّبنا شبكة الري.\n\nوبعد كل ده جه دور المشاركة في الشركة اللي بتملك الأرض وبتشغّل المزرعة، بحصة مكتوبة باسمك في العقد.\n\nوكل خطوة من دول معاها ورقها، وتقدر تراجعه معانا. مش كلام.\n\nونتيجة كل موسم بتختلف حسب الإنتاج والسوق. اللي بنقوله إن الأرض والآبار والري كانوا موجودين قبل ما نطلب من حد يشارك، ووراهم خبرة زراعية في النخيل ٦ سنين.\n\nحمّل دليل باسقات وشوف الأرض والآبار والري بالتفصيل. ولو عندك أي سؤال، ابعتلنا على الواتساب.",
+      "buildGuard": "NO solar node in the timeline, and no solar in the body. Standing rejection, Khaled 2026-03-30: 'Solar system does not exist inside palm areas.' The solar bullet was already deleted from C5 on 2026-07-03.",
+      "designNote": "No change to the `elements` key shape (kicker / timeline / photoLabel; timeline is still exactly 4 steps, still no solar node, terminal node still renders TERRA + FNT.BOLD). All four burned strings changed, so re-render all three ratios. Four render facts:\n\n1. HERO IS NOW 35 CHARS (was 32) and must still hold ONE line. build_c22_order calls hero(..., start=74), so let fit_font take one or two more 4px steps before wrap_rtl; it lands well above min_size 52 on every ratio. Do NOT hand-break the string — the «..» pause IS the order of operations, and breaking it splits the argument. The change is not cosmetic: all three reviewers read the old «والمشاركة بعدين» as \"participation is POSTPONED\", i.e. a delay imposed on the reader, which is the exact opposite of the reassurance intended. Naming the actor and supplying a verb («زرعنا... وبعدين فتحنا») removes the ambiguity, and «زرعنا» was chosen over «جهّزنا» because the latter carries a shadda and this is a burned string.\n\n2. KICKER SHRANK 23 → 23 chars, no reflow. It now asserts that the order IS the difference, instead of the calque «مش تفصيلة صغيرة».\n\n3. TIMELINE NODES. Widest is now the terminal «وبعد كل ده.. فتحنا المشاركة» at 27 chars (~400px at FNT.BOLD(33)) against a band inner width of ~886px, so band_h stays 52*4+40 = 248px and band_y0 plus the photo_label anchor at band_y0-44 are unchanged. Node 2 gains the well count («٣ آبار») because all three reviewers said the card was throwing away its most concrete proof, and node 3 drops «متابَع» entirely — that fatha was the last combining mark on any burned string in this deck.\n\n4. STILL OUTSTANDING, SEPARATE FROM COPY — the compliance photoLabel is illegible on 1:1 and 4:5. In both rendered finals «من أرض الواقع: مزرعة باسقات، الفرافرة» lands on the palm treeline in fill (232,224,212) and reads as noise. «من أرض الواقع» is a mandated client label, so an unreadable one is a real defect even though the layout is approved. Cheapest fix that does not touch the composition: give photo_label the same translucent rounded plate the timeline band uses (radius 20, CREAM at ~150 alpha, ~10px padding), or move the anchor up into the scrim where the sky is still clean. 9:16 is already fine.",
+      "changeSummary": "Rewrote the hero because every reviewer read «والمشاركة بعدين» as \"participation is postponed\" — it now names who acted and supplies the verb — and replaced the bureaucratic «أرض تخصيص مباشر» with the locked «متخصصة بالأمر المباشر»، added the well count, dropped the MSA «متابَع»، gave the terminal node its missing verb, and broke the forty-word chained sentence into short first-person steps; on compliance, the \"other projects can be delayed or can stop\" contrast that promised by implication that Basseqat cannot was replaced with promise-versus-standing-asset, the absolute «كل بند ليه توثيق تقدر تطلبه» was qualified to paperwork you can review with us, «اشتغلت» was removed everywhere because in Egyptian business speech it means already earning, and a line was added saying farming runs in seasons.",
+      "clientSubtitle": "بيرد على: المشروع ده قايم فعلاً ولا لسه فكرة؟"
+    },
+    {
+      "id": "concept16-annual-fees",
+      "adName": "EG | R7 annual-fees",
+      "seq": 7,
+      "type": "card",
+      "provenance": "design",
+      "answers": "«هل في أي مصاريف سنوية للفدان عليا بعد الشراء ؟» / «نسبة إدارة الشركة كام في الميه ؟»",
+      "evidence": "Zero creative coverage, and the exact point competitors win («فى شركات أخرى نظامها اسهل ومصاريفها اقل»). Absorbs objection #4 (السعر مرتفع, 46) and the loudest public comment in the whole corpus: «حلو اوى مقلتش بكام السعر. تبقى دى اسمها نصبايه. بشياكه». Objection #3 is «يفضل الواتساب ويرفض المكالمة» (51), and GCC | C9 whatsapp-card already proved a WhatsApp-framed static converts at CPL 56. Google independently records 81 WhatsApp Click conversions.",
+      "predecessor": "GCC | C9 whatsapp-card (CTA and format lineage only)",
+      "audience": "WhatsApp-Quiet-30d, Form-Opened-NoSubmit, ProofPack-Downloaded-NoReply",
+      "stage": "terminal. Only ever reaches people who have already cleared trust.",
+      "persona": "investor, secondary pension",
+      "cta": "WHATSAPP_MESSAGE",
+      "landing": "https://wa.me/201208777738",
+      "onImageLine": "مش هتحط إيدك في جيبك بعد النهاردة",
+      "elements": {
+        "kicker": "آخر سؤال قبل ما تقرر",
+        "rows": [
+          [
+            "الزراعة والري والصيانة",
+            "شغل الشركة، مش شغلك"
+          ],
+          [
+            "الحصاد وتسويق المحصول",
+            "شغل الشركة برضه"
+          ],
+          [
+            "نسبة الإدارة وأي بند مالي",
+            "مكتوبين في العقد بالرقم"
+          ]
+        ],
+        "bottomBar": "كل البنود قدامك قبل ما تمضي، مش بعدها."
+      },
+      "headline": "مصاريف الرعاية السنوية داخلة في المبلغ",
+      "linkDescription": "مصاريف الرعاية داخلة في المبلغ. اطلب دراسة الجدوى أو كلّمنا على الواتساب.",
+      "primaryText": "لو إنت قريت عن باسقات وأخدت وقتك، يبقى فاضل سؤال واحد. وده اللي الناس بتأجله لآخر لحظة:\n\n«طيب وبعد ما أشارك، فيه مصاريف سنوية عليا؟»\n\nوسؤال منطقي، لأن دي بالظبط النقطة اللي بتيجي على الناس من ورا: تدفع مرة، وبعدين تلاقي بنود مكنتش تعرفها.\n\nنجاوبك من غير لف ودوران: المبلغ اللي هتشارك بيه مع باسقات في المساحة المخصصة ليك هو كل المطلوب منك، ومش هتحط إيدك في جيبك تاني.\n\nومصاريف الرعاية السنوية لحد الحصاد داخلة في المبلغ ده أصلاً.\n\nوبعد الحصاد، بنخصم مصاريف الرعاية وبنوزع العائد بينا، بالطريقة المكتوبة في العقد بالرقم.\n\nوالزراعة والري والصيانة والحصاد وتسويق المحصول: ده كله شغل الشركة، مش شغلك.\n\nوناتج الموسم نفسه مش رقم بنقوله من دلوقتي، لأنه بيتغير حسب الإنتاج والسوق، ودي طبيعة الزراعة.\n\nوعشان تعرف التفاصيل بالأرقام، اطلب مننا دراسة الجدوى. ولو عندك سؤال على أي بند، كلّمنا على الواتساب.",
+      "ownerGate": "UNRESOLVED, do not let this drift back. Are cultivation/irrigation/maintenance/harvest costs borne by the company out of its own account, or deducted from the season's yield before the participant's share is calculated? The rows deliberately state only who does the WORK. The 2026-08-05 revision pass wrote «على الشركة حسب العقد، مش عليك», which asserts the first answer; it was reverted because it would be misleading under the second, on the one card whose job is answering a hidden-fees fear. Restore the stronger wording ONLY once the owner confirms.",
+      "designNote": "No structural change. Same three element keys and the same build_c16_annual_fees layout: logo chip top-left, terracotta kicker chip, forest hero, three label-to-value rows separated by hairlines, forest bottom bar. `kicker` and `onImageLine` are byte-for-byte unchanged. Re-render all three ratios — rows and bottomBar are burned pixels.\n\n1. THE ROW VALUES CHANGED AXIS, AND THAT IS THE HEADLINE FIX. Two reviewers independently found the same defect: the hero asks about MONEY («وفيه مصاريف تانية؟») and all three rows answered about LABOUR («شغل الشركة»), so the reader's actual question was never answered anywhere on the image. That is almost certainly why the card failed one-pass clarity no matter how the words were polished. rows[0] and rows[1] now answer on the money axis, tied to the contract rather than asserting a bare zero-cost promise.\n\n2. ROW WIDTH BUDGET. rows[0] is the new longest at 22 + 29 = 51 chars across the label-to-value pair (previous longest pair was 46). Let fit_rows step the shared row size down one notch; do not let rows[0] wrap while rows[1] and rows[2] sit larger — all three rows must render at ONE identical size. rows[1] is deliberately the short echo «على الشركة برضه» so the pair reads as one answer given twice, not as two separate claims, and so the long value only has to fit once.\n\n3. rows[2] value fixes a grammar error visible in type: the subject is compound and mixed-gender (نسبة feminine + مصاريف), so the predicate is «مكتوبين», not the feminine singular «مكتوبة» that agreed only with the first noun. On a static card whose whole job is to look precise, that mismatch read as carelessness.\n\n4. bottomBar goes 28 → 38 chars and INVERTS from a negative existential to a positive. The old «مفيش بند هتعرفه بعد ما تمضي» required the reader to mentally invert a negative plus a future relative clause — affordable in a paragraph, impossible on an image scanned in two seconds — and it was an unqualified absolute about the future contents of a contract. bar_top() will resolve higher; re-fit the rows against the new band top and step the bar text down rather than wrapping.\n\n5. The headline no longer repeats a row verbatim, so that slot now buys new information.\n\nNo new element, no price, no number, no photo, no icon added. No combining marks on any burned string.",
+      "changeSummary": "Turned the three rows from labour answers into money answers, because the hero asks about costs and every row was replying about who does the work — the reader's actual question was never answered on the card — and flipped the bottom bar from a negative you have to mentally invert into a positive; fixed the «مكتوبة» agreement error, the «من الناس اللي قرأت» calque and person-shift, «في محله»، «المكان اللي الناس بتتفاجئ فيه»، «بالترتيب»، «في كلام مباشر»، «يتشرح» and the dead-end «دليل باسقات قدامك»؛ and on compliance the row values are now tied to the contract instead of implying zero cost forever, «طريقة حساب نصيبك... بالرقم» no longer reads as a pre-fixed return, and a line was added saying the result itself changes with production and the market.",
+      "clientSubtitle": "بيرد على: فيه مصاريف سنوية بعد المشاركة؟"
+    }
+  ],
+  "sequence": {
+    "logic": "The gate does NOT go first. The StoryOS brief bans repeating cold creative verbatim to a warm viewer, and warm viewers have already seen gate-type creative in the EG and GCC prospecting campaigns. Lead instead with the account's highest-CTR mechanic (due diligence), which reframes the reader from 'am I being sold?' to 'let me evaluate', then answer the evaluation questions in the order a buyer actually asks them.",
+    "order": [
+      "concept19-six-questions",
+      "concept20-open-gate-pension|concept21-built-what-expat",
+      "concept22-order-of-operations",
+      "concept16-annual-fees"
+    ],
+    "holdDays": [
+      4,
+      4,
+      5,
+      null
+    ],
+    "entryPoints": {
+      "bounced-early": 1,
+      "watched-75pct": 2,
+      "reached-LP-no-reg": 3,
+      "proofpack-downloaded": 3,
+      "whatsapp-quiet": 4
+    },
+    "placements": "Facebook Feed + Instagram Feed ONLY. Exclude Stories (CPL 642) and Reels (CPL 182) explicitly; do not leave placements on automatic.",
+    "targeting": "45+ male, six cities, per Khaled's standing instruction on AWD-XD6R. This rules out Advantage+ Audience, whose hard minimum age is 25.",
+    "budget": "Drop the RMK daily from 400 EGP to 150-200. Vid-75pct - EG is only ~3,000 people; 400/day burns it to fatigue inside a week and there is no third video audience to rotate into."
+  },
+  "revision": {
+    "round": 3,
+    "date": "2026-08-13",
+    "trigger": "Client review by Eman Fathy on the v6 portal deliverable, 10 threads between 2026-08-12 16:33 and 2026-08-13 13:12 UTC.",
+    "rootCauseFixed": "The wave asserted the Medjool palms had been in the ground 6 years. The 6 years is agricultural operating experience in Siwi palms and medicinal/aromatic plants; the StoryOS brief only ever claimed «6+ years operational». Corrected across every concept, headlines and link descriptions included, and pinned by a lint regex.",
+    "deleted": {
+      "concept15-ownership-split": "client: حذف هذا الاعلان بالكامل (thread seESQqQbEhQGN26DCdVu)",
+      "concept18-water-213ppm": "client: حذف هذا الاعلان بالكامل (thread tOzOrkWcJju8jHHJT7qD)",
+      "concept17-sharia-participation": "client: حذف هذا الاعلان بالكامل (thread jg7fNQ2uslfVWWyKwkbH)"
+    },
+    "notApplied": {
+      "return promises": "DECLINED. «عائد سنوي مجزي» (thread AGSb20ydIFcswv9EqjEl) and «العائد سنوي ومتزايد» (thread rRQvfNZzhvmUF6jBiojD) assert a rewarding, growing annual return. Now on the wave banned list.",
+      "ownership rewording": "HELD. «بتشارك في عدد محدد ومعروف من الفدادين» (thread rRQvfNZzhvmUF6jBiojD) and «نغير فكرة التملك» (thread ghQOqVkg9FbAh0MXGLVS) reverse the answer to the account's top question and match no contract on file. Escalated.",
+      "parent-company propagation": "PARTIAL. «الشركة الأم» applied only in c20 where the client wrote it verbatim. Not propagated to concepts she did not comment on, because doing so while the ownership model is unresolved would put two conflicting claims in one ad."
+    }
+  }
+}

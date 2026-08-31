@@ -1,0 +1,9 @@
+proposal_number,country_code,send_date,daily_sequence,token,nonce,client_name,client_email,client_phone,source_folder,outgoing_folder,status,owner,recommended_option
+AWP-EG-0MKC-SLK,EG,2026-02-16,1,0MKC,SLK,Lighting Business - Mahmoud Selim,Mahmoudmselim95@gmail.com,+201022267297,Proposals/Lighting-Business-Mahmoud,Proposals/_Outgoing/AWP-EG-0MKC-SLK,READY_TO_SEND,Fouad Nasseredin,Option 2
+AWP-EG-0MD8-JFM,EG,2026-02-22,1,0MD8,JFM,MHK Architects - Omar Kamal,ohkamal@mhkecc.com,+201550556808,Proposals/MHK-Architects,Proposals/_Outgoing/AWP-EG-0MD8-JFM,READY_TO_SEND,Fouad Nasseredin,Option 2
+AWP-EG-0MGS-T8J,EG,2026-02-23,1,0MGS,T8J,ASM Minds,asm.minds@gmail.com,+201222367123,Proposals/ASM-Minds,Proposals/_Outgoing/AWP-EG-0MGS-T8J,READY_TO_SEND,Fouad Nasseredin,Option 3
+AWP-EG-0LVG-5SS,EG,2026-03-09,1,0LVG,5SS,Meguiar's Egypt - El-Adwar Group,info@meguiarsegypt.com,+201279999210,Proposals/Meguiars-Egypt,Proposals/_Outgoing/AWP-EG-0LVG-5SS,READY_TO_SEND,Fouad Nasseredin,Agreed launch structure
+AWP-EG-02WS-Y82,EG,2026-05-09,1,02WS,Y82,Artwave Engineering - Ahmed Samir,,+201000206660,clients/Artwave-Engineering,ops/proposal-system/_Outgoing/AWP-EG-02WS-Y82,READY_TO_SEND,Fouad Nasseredin,Meta + Google Launch (Option 2)
+AWP-EG-BMD-001,EG,2026-06-10,1,BMD,001,Black Modesty - Roba Abu Samra,roba.abusamra@gmail.com,+201092292449,clients/Black-Modesty,presentations/black-modesty,SENT,Fouad Nasseredin,Growth Partnership 12000 EGP/mo x 4 prepaid
+AWP-EG-MEG-002,EG,2026-08-05,1,MEG,002,Meguiar's Egypt - El-Adwar Group,adwargroup@hotmail.com,+201222173498,clients/Meguiars-Egypt,ops/proposal-system/_Outgoing/AWP-EG-MEG-002,READY_TO_SEND,Fouad Nasseredin,Option A social add-on 20000 EGP/mo on top of 15000 retainer
+AWP-EG-TLN-001,EG,2026-08-30,1,TLN,001,Promolinks (for Tuleen Kuwait),amahalawy@promolinks.com,+201005700725,clients/Tuleen,presentations/tuleen-media-buying,READY_TO_SEND,Fouad Nasseredin,Google + Instagram 1000 KWD/mo net x 6 months

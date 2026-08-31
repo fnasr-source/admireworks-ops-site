@@ -1,0 +1,136 @@
+{
+  "id": "pitch-deck",
+  "name": "Pitch Deck",
+  "description": "Investor or client sales pitch with problem, solution, and offer.",
+  "framework": "pitch",
+  "locale": "en",
+  "slides": [
+    {
+      "order": 0,
+      "layout": "cover",
+      "content": {
+        "title": "Company Name",
+        "subtitle": "One-line pitch",
+        "client": "Presented by Admireworks",
+        "date": "2026"
+      },
+      "presenterNotes": "Open with energy. This is the first impression."
+    },
+    {
+      "order": 1000,
+      "layout": "stat-highlight",
+      "content": {
+        "stat": "[Big Number]",
+        "label": "The Problem Size",
+        "sublabel": "Total addressable market / pain indicator",
+        "context": "Source: [Research]"
+      },
+      "presenterNotes": "Lead with the scale of the problem."
+    },
+    {
+      "order": 2000,
+      "layout": "title-body",
+      "content": {
+        "title": "The Problem",
+        "body": "Describe the core pain point your target market faces. Make it visceral and relatable. Use the customer's own language."
+      },
+      "presenterNotes": "The audience should nod along and think 'yes, that's me.'"
+    },
+    {
+      "order": 3000,
+      "layout": "title-body",
+      "content": {
+        "title": "Our Solution",
+        "body": "Describe your product/service in plain terms. What does it do? How does it fix the problem? What makes it different?"
+      },
+      "presenterNotes": "Keep it simple — avoid jargon."
+    },
+    {
+      "order": 4000,
+      "layout": "grid-3",
+      "content": {
+        "title": "Why Us",
+        "items": [
+          {
+            "label": "Differentiator 1",
+            "value": "Description"
+          },
+          {
+            "label": "Differentiator 2",
+            "value": "Description"
+          },
+          {
+            "label": "Differentiator 3",
+            "value": "Description"
+          }
+        ]
+      },
+      "presenterNotes": ""
+    },
+    {
+      "order": 5000,
+      "layout": "comparison-table",
+      "content": {
+        "title": "Competitive Landscape",
+        "headers": [
+          "Feature",
+          "Us",
+          "Competitor A",
+          "Competitor B"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Feature 1",
+              "✓",
+              "✓",
+              "✗"
+            ]
+          },
+          {
+            "cells": [
+              "Feature 2",
+              "✓",
+              "✗",
+              "✗"
+            ]
+          },
+          {
+            "cells": [
+              "Price",
+              "Competitive",
+              "High",
+              "Medium"
+            ]
+          }
+        ]
+      },
+      "presenterNotes": "Show the white space we own."
+    },
+    {
+      "order": 6000,
+      "layout": "title-bullets",
+      "content": {
+        "title": "Traction",
+        "bullets": [
+          "[Number] clients served",
+          "[Revenue/ARR] generated",
+          "[Key partnership or win]",
+          "[Media mention or award]"
+        ]
+      },
+      "presenterNotes": "Social proof is critical here."
+    },
+    {
+      "order": 7000,
+      "layout": "closing",
+      "content": {
+        "title": "The Ask",
+        "subtitle": "What we're looking for",
+        "cta": "Let's talk",
+        "contact": "hello@admireworks.com"
+      },
+      "presenterNotes": "Be specific about what you're asking for and what it unlocks."
+    }
+  ]
+}

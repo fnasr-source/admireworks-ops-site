@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ein Abayaa : Growth Review & Plan</title>
+<style>
+  :root{
+    --navy:#001a70; --gold:#cc9f53; --olive:#2f3a2f; --sand:#e9e2da; --cream:#f7f3ee;
+    --ink:#1d1d1b; --muted:#6b6760; --line:#e2dad0; --white:#fff;
+    --good:#3f7d5a; --warn:#c8881f; --bad:#c0451c; --bad-bg:#fbeae2;
+    --meta:#0866ff; --snap:#f1c40f; --ggl:#34a853; --tt:#111; --ig:#c13584;
+    --shadow:0 1px 2px rgba(31,29,27,.05),0 16px 40px rgba(31,29,27,.07);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.01em;line-height:1.12}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  section{padding:54px 0;border-top:1px solid var(--line)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:700;color:var(--gold);font-family:-apple-system,system-ui,sans-serif}
+  .lead{font-size:20px;color:#3a3833;max-width:820px}
+  .muted{color:var(--muted)} .sm{font-size:13px} .xs{font-size:11.5px}
+  h2{font-size:31px;margin:10px 0 6px} h3{font-size:18px;margin:0 0 4px}
+  .grid{display:grid;gap:15px}
+  .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:880px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  .kpi .n{font-family:Georgia,serif;font-size:28px;line-height:1} .kpi .l{font-size:12px;color:var(--muted);margin-top:7px}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+  .tag.bad{background:var(--bad-bg);color:var(--bad)} .tag.good{background:#e6f0ea;color:var(--good)}
+  .tag.warn{background:#faf0db;color:var(--warn)} .tag.navy{background:#e7e9f5;color:var(--navy)}
+  .hero{background:linear-gradient(160deg,#10183f,var(--navy) 60%,#0b1024);color:#fff;padding:66px 0 56px;border:0}
+  .hero h1{color:#fff;font-size:42px;margin:14px 0 14px;max-width:900px}
+  .hero .sub{color:#c7cbe6;font-size:18px;max-width:680px}
+  .hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 24px;color:#aab0d8;font-size:13px}
+  .hero .meta b{color:#fff}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff;font-weight:700;letter-spacing:.04em}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--gold)}
+  .callout{border-left:4px solid var(--bad);background:var(--bad-bg);border-radius:0 12px 12px 0;padding:15px 18px}
+  .callout.good{border-color:var(--good);background:#e9f1ec}.callout.navy{border-color:var(--navy);background:#eef0f8}
+  .bar{display:flex;align-items:center;gap:12px;margin:7px 0}
+  .bar .bl{width:128px;font-size:12.5px;text-align:right;color:#3a3833;flex:none}
+  .bar .bt{flex:1;background:#efe9e1;border-radius:6px;height:24px;position:relative;overflow:hidden}
+  .bar .bf{height:100%;border-radius:6px}
+  .bar .bv{position:absolute;right:9px;top:50%;transform:translateY(-50%);font-size:11.5px;font-weight:700}
+  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} @media(max-width:560px){.gal{grid-template-columns:1fr}}
+  .cre{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .cre img{width:100%;height:auto;display:block;background:#eee}
+  .cre .meta{padding:13px 15px}
+  .cre .stat{display:flex;gap:13px;margin-top:7px;flex-wrap:wrap} .cre .stat div{font-size:11.5px;color:var(--muted)} .cre .stat b{display:block;font-family:Georgia,serif;font-size:17px;color:var(--ink)}
+  .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:16px}@media(max-width:560px){.mini{grid-template-columns:1fr}}
+  .roas{font-family:Georgia,serif;font-size:24px;color:var(--good)}
+  .ar{direction:rtl;text-align:right;font-size:13.5px;color:#46443f;line-height:1.7;background:#faf7f2;border-radius:8px;padding:9px 12px;margin-top:8px}
+  .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}@media(max-width:860px){.tl{grid-template-columns:1fr}}
+  .ph{background:var(--white);border:1px solid var(--line);border-radius:13px;padding:16px;box-shadow:var(--shadow)}
+  .ph .w{font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .ph h4{margin:5px 0 8px;font-size:16px} .ph ul{margin:0;padding-left:16px;font-size:12.5px;color:#46443f} .ph li{margin:5px 0}
+  .legend{display:flex;gap:15px;flex-wrap:wrap;font-size:12px;margin-top:10px}
+  .legend span{display:inline-flex;align-items:center;gap:6px} .sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .ptag{display:inline-block;font-size:10.5px;font-weight:700;color:#fff;border-radius:5px;padding:2px 8px}
+  .chk{list-style:none;padding:0;margin:0;counter-reset:c} .chk li{position:relative;padding:11px 0 11px 40px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .chk li:last-child{border-bottom:0} .chk li:before{counter-increment:c;content:counter(c);position:absolute;left:0;top:9px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;font-family:system-ui} .chk li b{color:var(--ink)}
+  .ring{--p:94;width:104px;height:104px;border-radius:50%;background:conic-gradient(var(--good) calc(var(--p)*1%),#eee 0);display:flex;align-items:center;justify-content:center}
+  .ring .inner{width:78px;height:78px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ring .v{font-family:Georgia,serif;font-size:24px;line-height:1} .ring .s{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .footer{background:var(--olive);color:#e9e2da;border:0;text-align:center;padding:36px 0}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="brand"><span class="dot"></span> ADMIREWORKS &nbsp;<span style="opacity:.5">x</span>&nbsp; EIN ABAYAA</div>
+  <div class="eyebrow" style="margin-top:22px">Growth Review &amp; Plan for the Coming Period</div>
+  <h1>Your real engine is Instagram and one hero abaya. Fix the broken tracking, re-fund the winners you switched off, and the plan pays for itself.</h1>
+  <p class="sub">A walk-through of every paid channel, the store analytics, the winning ads and their copy, the tracking problem we found, and the budget plan ahead.</p>
+  <div class="meta"><span><b>Ein Abayaa</b> (عين عباية), Riyadh KSA</span><span><b>Store</b> einabayaa.com (Zid)</span><span><b>Channels</b> Meta, Snapchat, Google, TikTok</span><span><b>Date</b> June 2026</span></div>
+</div></header>
+
+<!-- THREE SUBPOINTS -->
+<section><div class="wrap">
+  <div class="grid g3">
+    <div class="card"><span class="tag good">Healthy</span><p class="sm" style="margin-top:8px">The store is genuinely healthy: <b>274 real orders, SAR 195,684 in 90 days</b>, almost all on mobile. Google Analytics reads ~4x too high, so we have been flying half-blind.</p></div>
+    <div class="card"><span class="tag warn">Fixable</span><p class="sm" style="margin-top:8px">Your <b>best ads are sitting paused.</b> The Summer 2025 winners earned 8 to 9x while running, then were switched off. We re-fund them first, no new creative needed to start.</p></div>
+    <div class="card"><span class="tag navy">Upside</span><p class="sm" style="margin-top:8px"><b>Saudi loves Snapchat, and TikTok already sells on its own.</b> Room to grow, but only after tracking is fixed, because today those channels record zero sales even when sales happen.</p></div>
+  </div>
+</div></section>
+
+<!-- KEY NUMBERS -->
+<section><div class="wrap">
+  <div class="eyebrow">The real numbers (from Zid, your source of truth)</div>
+  <h2>What the store actually did, last 90 days</h2>
+  <div class="grid g4" style="margin-top:22px">
+    <div class="card kpi"><div class="n">274</div><div class="l">Real orders (Zid)</div></div>
+    <div class="card kpi"><div class="n">SAR 195,684</div><div class="l">Real revenue (Zid)</div></div>
+    <div class="card kpi"><div class="n">~SAR 714</div><div class="l">Average order value (premium)</div></div>
+    <div class="card kpi"><div class="n">2.10%</div><div class="l">Store conversion rate</div></div>
+    <div class="card kpi"><div class="n">13,230</div><div class="l">Visits</div></div>
+    <div class="card kpi"><div class="n">224</div><div class="l">Units of A87 Black alone (~SAR 101k)</div></div>
+    <div class="card kpi"><div class="n">99%</div><div class="l">Orders on mobile</div></div>
+    <div class="card kpi" style="border-color:#eccfc2"><div class="n" style="color:var(--bad)">~4x</div><div class="l">How much Google Analytics over-counts orders</div></div>
+  </div>
+</div></section>
+
+<!-- TRACKING -->
+<section style="background:var(--sand)"><div class="wrap">
+  <span class="tag bad">Priority 1 : Fix this first</span>
+  <h2 style="margin-top:12px">The tracking is broken, two ways at once</h2>
+  <p class="lead">We dug in live. Two separate problems stack on top of each other and make every number unreliable. Both are fixable, and we have store access to lead it.</p>
+  <div class="grid g2" style="margin-top:22px;align-items:start">
+    <div class="card">
+      <h3>Problem 1: the store sends no shopping signals</h3>
+      <p class="sm muted" style="margin-top:4px">Your store is on a custom theme. We added a product to cart live and it fired <b>nothing</b>: no Google, Meta, Snapchat or TikTok event, and the product page had no tracking data at all. Every app shows "active" but is starved of input.</p>
+      <h3 style="margin-top:16px">Problem 2: purchases get counted twice</h3>
+      <p class="sm muted" style="margin-top:4px">The same Google Analytics account is fired by both Zid's built-in app and your Tag Manager on the same page. That double-fire is the main reason orders read ~4x too high.</p>
+      <div class="callout" style="margin-top:14px"><span class="sm">Honest caveat: the over-count is not a clean double (orders read ~4.3x high, revenue ~3.5x), so there are likely some duplicate plus low-value or cross-domain phantom orders too. We confirm exactly which during the fix.</span></div>
+    </div>
+    <div class="card">
+      <h3>The funnel reads as impossible</h3>
+      <p class="sm muted" style="margin-top:2px">Add-to-cart shows BELOW checkout and payment, because add-to-cart is dead while purchase is doubled. (GA4 events, 28 days.)</p>
+      <div style="margin-top:14px">
+        <div class="bar"><div class="bl">View product</div><div class="bt"><div class="bf" style="width:100%;background:linear-gradient(90deg,#3a4a6b,var(--navy))"></div><span class="bv" style="color:#fff">4,361</span></div></div>
+        <div class="bar"><div class="bl" style="color:var(--bad);font-weight:700">Add to cart</div><div class="bt"><div class="bf" style="width:11%;background:linear-gradient(90deg,#e0683f,var(--bad))"></div><span class="bv">485 &nbsp;dead</span></div></div>
+        <div class="bar"><div class="bl">View cart</div><div class="bt"><div class="bf" style="width:16%;background:#7b8190"></div><span class="bv">707</span></div></div>
+        <div class="bar"><div class="bl">Begin checkout</div><div class="bt"><div class="bf" style="width:21%;background:#7b8190"></div><span class="bv">896</span></div></div>
+        <div class="bar"><div class="bl">Add payment</div><div class="bt"><div class="bf" style="width:16%;background:#7b8190"></div><span class="bv">712</span></div></div>
+        <div class="bar"><div class="bl">Purchase</div><div class="bt"><div class="bf" style="width:6%;background:linear-gradient(90deg,#e0a020,var(--warn))"></div><span class="bv">255 &nbsp;doubled</span></div></div>
+      </div>
+      <p class="xs muted" style="margin-top:8px">Add-to-cart should be the tallest step before purchase. Here it is below all of them. That inversion is the signature of the break. It also collapsed Meta add-to-cart from 1,389 in April to 29 in June.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>The fix (we have store access and will lead it)</h3>
+    <ol class="chk" style="margin-top:8px">
+      <li><b>Make Tag Manager the single owner.</b> Remove Zid's built-in Google Analytics so only one purchase tag fires per order. Kills most of the over-count.</li>
+      <li><b>Stamp every purchase with the Zid order ID</b> so Google and Meta automatically drop any duplicate. The safety net.</li>
+      <li><b>Get the custom theme to send shopping events</b> (view, add-to-cart, checkout, purchase) so the pixels finally have something to listen to. Revives the dead add-to-cart.</li>
+      <li><b>Route every pixel through Tag Manager</b> off those events, and turn off each platform's built-in auto-event so nothing double-fires again.</li>
+      <li><b>Switch on Google Ads conversions and re-point Snapchat</b> to the real purchase event. Both show zero today only because of this gap.</li>
+      <li><b>Treat Zid as truth until a clean week passes.</b> After the fix, Google Analytics should land within ~5 to 10% of Zid, and we also check for Tabby / cross-domain phantom orders.</li>
+    </ol>
+  </div>
+  <div class="callout good" style="margin-top:14px"><span class="sm"><b>Independently confirmed.</b> A Google Ads audit by your own team found the same break from the Google side: the new Performance Max campaign (live since 18 June, scaling fast on Maximize Conversions) has recorded <b>0 purchase conversions ever</b>, so it is optimizing toward a sale signal that never arrives. The same fix resolves it and unlocks Shopping/PMax. (Our own pull matches the audit: 202 clicks, SAR 419, 0 conversions.)</span></div>
+</div></section>
+
+<!-- WHERE REVENUE COMES FROM -->
+<section><div class="wrap">
+  <div class="eyebrow">Where the money comes from</div>
+  <h2>Organic Instagram is the engine. Paid amplifies it.</h2>
+  <p class="lead">Organic social drives more revenue than every paid channel combined. The brand has real pull. Paid should pour fuel on that fire, not replace it.</p>
+  <div class="card" style="margin-top:20px">
+    <div class="bar"><div class="bl">Organic IG</div><div class="bt"><div class="bf" style="width:100%;background:linear-gradient(90deg,#d36fa3,var(--ig))"></div><span class="bv" style="color:#fff">SAR 310k &nbsp; 561 orders</span></div></div>
+    <div class="bar"><div class="bl">Direct</div><div class="bt"><div class="bf" style="width:55%;background:#7b8190"></div><span class="bv">SAR 172k</span></div></div>
+    <div class="bar"><div class="bl">Paid Meta</div><div class="bt"><div class="bf" style="width:43%;background:var(--meta)"></div><span class="bv" style="color:#fff">SAR 132k</span></div></div>
+    <div class="bar"><div class="bl">Organic Search</div><div class="bt"><div class="bf" style="width:19%;background:var(--ggl)"></div><span class="bv" style="color:#fff">SAR 58k</span></div></div>
+    <div class="bar"><div class="bl">Paid TikTok</div><div class="bt"><div class="bf" style="width:18%;background:var(--tt)"></div><span class="bv" style="color:#fff">SAR 56k</span></div></div>
+    <p class="xs muted" style="margin-top:8px">Directional only (these are GA4 figures, still inflated). The ranking is what's reliable: organic IG is clearly #1. Exact riyals firm up after the tracking fix.</p>
+  </div>
+</div></section>
+
+<!-- WINNING ADS -->
+<section style="background:var(--sand)"><div class="wrap">
+  <span class="tag good">What worked : the real ads</span>
+  <h2 style="margin-top:12px">The winning creatives</h2>
+  <p class="lead">One campaign, "Summer collection 2025," carries the account. The formula is clear: one hero abaya (A87), one beautiful color, one clean shot, ideally as video, led by sensory Arabic copy.</p>
+  <div class="gal" style="margin-top:22px">
+    <div class="cre"><img src="assets/win1-sage-green.jpg" alt="Sage Green ad">
+      <div class="meta"><span class="tag good">Top earner</span> <span class="tag navy">Photo</span><h3 style="margin-top:7px">Sage Green</h3>
+        <div class="stat"><div><b>8.1x</b>return</div><div><b>94</b>orders</div><div><b>SAR 54k</b>rev</div><div><b>4.2%</b>CTR</div></div></div></div>
+    <div class="cre"><img src="assets/win4-dark-green.jpg" alt="Dark Green ad">
+      <div class="meta"><span class="tag good">Top earner</span> <span class="tag navy">Photo</span><h3 style="margin-top:7px">Dark Green</h3>
+        <div class="stat"><div><b>8.2x</b>return</div><div><b>64</b>orders</div><div><b>SAR 35k</b>rev</div></div></div></div>
+  </div>
+  <h3 style="margin:22px 0 8px">Every winner at a glance (creative scorecard)</h3>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <tr><th>Creative</th><th>Format</th><th class="n">Return</th><th class="n">Orders</th><th class="n">CTR</th><th>Copy approach</th></tr>
+      <tr class="win"><td>Sage Green</td><td>Photo</td><td class="n">8.1x</td><td class="n">94</td><td class="n">4.2%</td><td>Minimal (color name)</td></tr>
+      <tr><td>Dark Green</td><td>Photo</td><td class="n">8.2x</td><td class="n">64</td><td class="n">3.9%</td><td>Minimal (color name)</td></tr>
+      <tr class="win"><td>Video Pink &amp; Blue</td><td><b>Video</b></td><td class="n">9.4x</td><td class="n">64</td><td class="n">4.2%</td><td>Minimal + motion (best return)</td></tr>
+      <tr><td>A87 Sage</td><td>Photo</td><td class="n">6.7x</td><td class="n">66</td><td class="n">7.0%</td><td>Rich Arabic fabric story (top CTR)</td></tr>
+      <tr><td>Mix Color</td><td>Photo</td><td class="n">8.3x</td><td class="n">63</td><td class="n">4.5%</td><td>Rich Arabic collection story</td></tr>
+    </table>
+    <p class="xs muted" style="margin-top:8px">The two hero shots above are the model look; this is the full winning set. Full-resolution files for every ad live in the portal's Creative engine (with hook type + fatigue).</p>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><span class="tag navy">Copy that won: the fabric story</span><p class="ar">صُممت هذه القطعة بعناية من كريب ياباني فاخر يمنحكِ خفة وأناقة في كل حركة. تطريز ناعم.</p><p class="xs muted" style="margin-top:6px">A87 Sage. Highest click rate of all, 7.0%.</p></div>
+    <div class="card"><span class="tag navy">Copy that won: the collection mood</span><p class="ar">استلهمنا ألوان الصيف من لحظاته الهادئة والمشرقة. كل لون يروي قصة ناعمة النسيم وضوء الغروب وظلال الحدائق وهدوء الصباح.</p><p class="xs muted" style="margin-top:6px">Mix Color. 8.3x return.</p></div>
+  </div>
+  <div class="callout" style="margin-top:16px"><span class="sm">Note: these returns were measured on the broken/doubled pixel, so the true numbers are likely lower. We re-validate the winners on clean tracking before scaling them. The ranking and the formula still hold.</span></div>
+</div></section>
+
+<!-- WHAT NOT TO REPEAT + COPY LESSONS -->
+<section><div class="wrap">
+  <div class="grid g2" style="align-items:start">
+    <div>
+      <span class="tag bad">What not to repeat</span>
+      <h2 style="margin:10px 0 14px;font-size:26px">The losers</h2>
+      <div class="card" style="margin-bottom:12px"><div class="tag bad">0 orders</div><h3 style="margin-top:7px">Catalogue carousel, no copy</h3><p class="sm muted">A dynamic catalog ad with {{product.name}} placeholders and no human line: spent money, returned zero. The clearest loser.</p></div>
+      <div class="card" style="margin-bottom:12px"><div class="tag warn">Wasted cold</div><h3 style="margin-top:7px">Maison Ein to cold traffic</h3><p class="sm muted">The premium line does not convert to strangers. Save it for warm buyers and WhatsApp.</p></div>
+      <div class="card"><div class="tag warn">Self-inflicted</div><h3 style="margin-top:7px">Winners left paused</h3><p class="sm muted">The best ads were switched off while spend drifted down month over month.</p></div>
+    </div>
+    <div>
+      <span class="tag navy">The copy lesson</span>
+      <h2 style="margin:10px 0 14px;font-size:26px">Words that sell here</h2>
+      <div class="card"><ul style="margin:0;padding-left:18px;font-size:14px;color:#46443f;line-height:1.7">
+        <li><b>Sensory Arabic story copy is a click magnet.</b> The fabric-and-mood ads had the highest click rate. Use it on every new color drop.</li>
+        <li><b>Sell the feeling, not the specs.</b> Tie each color to a moment: sunset, morning calm, garden shade. That is your organic-IG voice.</li>
+        <li><b>Minimal copy still sells</b> when the photo carries it, but it caps clicks.</li>
+        <li><b>Never run template / placeholder copy.</b> The {{product.name}} catalog ad is the proof: zero orders.</li>
+        <li><b>Match depth to audience:</b> rich story to cold, tight color-led to warm retargeting.</li>
+      </ul></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SNAPCHAT -->
+<section style="background:var(--navy);color:#fff;border:0"><div class="wrap">
+  <div class="eyebrow" style="color:var(--gold)">The biggest untested opportunity</div>
+  <h2 style="color:#fff;margin:8px 0 6px">Snapchat may have been judged on a number it could not measure</h2>
+  <p class="lead" style="color:#c7cbe6">Saudi is one of the highest-Snapchat markets on earth. The brand tested it once in 2024 then stopped. What that tiny test actually did:</p>
+  <div class="grid g4" style="margin-top:22px">
+    <div class="card" style="background:#11205c;border-color:#243168"><div class="kpi"><div class="n" style="color:#fff">~120k</div><div class="l" style="color:#aab0d8">impressions for ~SAR 1,300 total</div></div></div>
+    <div class="card" style="background:#11205c;border-color:#243168"><div class="kpi"><div class="n" style="color:#fff">950+</div><div class="l" style="color:#aab0d8">swipes to the store</div></div></div>
+    <div class="card" style="background:#11205c;border-color:#243168"><div class="kpi"><div class="n" style="color:#fff">25</div><div class="l" style="color:#aab0d8">add-to-carts</div></div></div>
+    <div class="card" style="background:#3a1f1f;border-color:#5a2a2a"><div class="kpi"><div class="n" style="color:#e98c6a">0</div><div class="l" style="color:#d8a99a">purchases tracked</div></div></div>
+  </div>
+  <div class="callout" style="margin-top:18px;background:#11205c;border-color:var(--gold)"><span class="sm" style="color:#e9ecfa">Real swipe interest on a trivial one-off budget, but the pixel recorded no sale. We treat this as a <b>hypothesis</b>, not a verdict (the 2024 setup is ~18 months old and unverifiable). The plan: fix tracking, then run a <b>small, properly-funded, properly-tracked test</b> before deciding. It is the highest-upside reallocation in this plan if it proves out.</span></div>
+</div></section>
+
+<!-- CHANNEL PLAN -->
+<section><div class="wrap">
+  <span class="tag navy">The plan</span>
+  <h2 style="margin-top:12px">Each channel's job, and its share</h2>
+  <div class="grid g4" style="margin-top:20px">
+    <div class="card"><span class="ptag" style="background:var(--meta)">META / IG</span><h3 style="margin-top:9px">The core</h3><p class="sm muted">Re-fund the paused winners. Instagram only. Scale the A87 color formula and video.</p><p class="sm" style="margin-top:6px"><b>50 to 55%</b></p></div>
+    <div class="card"><span class="ptag" style="background:var(--snap);color:#111">SNAPCHAT</span><h3 style="margin-top:9px">The growth bet</h3><p class="sm muted">Small funded test once its pixel is verified. KSA's natural home for this audience.</p><p class="sm" style="margin-top:6px"><b>15 to 20%</b> (test)</p></div>
+    <div class="card"><span class="ptag" style="background:var(--ggl)">GOOGLE</span><h3 style="margin-top:9px">Live, but blind</h3><p class="sm muted">A Performance Max campaign is already running and scaling, but with 0 tracked sales. Fix its conversion tracking + pause the dead Shopping campaign, then it catches the demand social creates.</p><p class="sm" style="margin-top:6px"><b>10 to 15%</b></p></div>
+    <div class="card"><span class="ptag" style="background:var(--tt)">TIKTOK</span><h3 style="margin-top:9px">Already selling</h3><p class="sm muted">Earning ~SAR 56k unmanaged. Bring under management once access is granted.</p><p class="sm" style="margin-top:6px"><b>10 to 15%</b> (gated)</p></div>
+  </div>
+</div></section>
+
+<!-- BUDGET RAMP -->
+<section style="background:var(--sand)"><div class="wrap">
+  <div class="eyebrow">The forecast (mirrors the portal's pacing engine)</div>
+  <h2>Budget ramp: fix, prove, then scale</h2>
+  <p class="lead">Today's real Meta run-rate is only ~SAR 8 to 12k/month. We do not pour money in while tracking is broken. We re-fund the proven winners, verify the numbers, then scale only what proves out. Figures are targets, gated on a real cost-per-sale, not fixed commitments.</p>
+  <div class="card" style="margin-top:22px">
+    <svg viewBox="0 0 780 320" width="100%" style="max-width:780px" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,system-ui,sans-serif">
+      <line x1="64" y1="276" x2="760" y2="276" stroke="#d8cfc2"/>
+      <text x="56" y="280" text-anchor="end" font-size="11" fill="#6b6760">0</text>
+      <text x="56" y="220" text-anchor="end" font-size="11" fill="#6b6760">20k</text>
+      <text x="56" y="164" text-anchor="end" font-size="11" fill="#6b6760">40k</text>
+      <text x="56" y="108" text-anchor="end" font-size="11" fill="#6b6760">60k</text>
+      <text x="56" y="52" text-anchor="end" font-size="11" fill="#6b6760">80k</text>
+      <!-- Now ~10k -->
+      <rect x="120" y="248" width="72" height="28" fill="#0866ff"/>
+      <text x="156" y="294" text-anchor="middle" font-size="12" font-weight="700">Now</text>
+      <text x="156" y="240" text-anchor="middle" font-size="11" fill="#6b6760">~SAR 10k</text>
+      <!-- M1 30k Meta -->
+      <rect x="296" y="192" width="72" height="84" fill="#0866ff"/>
+      <text x="332" y="294" text-anchor="middle" font-size="12" font-weight="700">Month 1</text>
+      <text x="332" y="184" text-anchor="middle" font-size="11" fill="#6b6760">SAR 30k</text>
+      <!-- M2 55k: Meta35 Snap12 Google8 -->
+      <rect x="472" y="178" width="72" height="98" fill="#0866ff"/>
+      <rect x="472" y="144" width="72" height="34" fill="#f1c40f"/>
+      <rect x="472" y="122" width="72" height="22" fill="#34a853"/>
+      <text x="508" y="294" text-anchor="middle" font-size="12" font-weight="700">Month 2</text>
+      <text x="508" y="114" text-anchor="middle" font-size="11" fill="#6b6760">SAR 55k</text>
+      <!-- M3 85k: Meta45 Snap20 Google12 TT8 -->
+      <rect x="648" y="150" width="72" height="126" fill="#0866ff"/>
+      <rect x="648" y="94" width="72" height="56" fill="#f1c40f"/>
+      <rect x="648" y="60" width="72" height="34" fill="#34a853"/>
+      <rect x="648" y="38" width="72" height="22" fill="#111"/>
+      <text x="684" y="294" text-anchor="middle" font-size="12" font-weight="700">Month 3</text>
+      <text x="684" y="30" text-anchor="middle" font-size="11" fill="#6b6760">SAR 85k</text>
+    </svg>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--meta)"></i> Meta / Instagram</span>
+      <span><i class="sw" style="background:var(--snap)"></i> Snapchat</span>
+      <span><i class="sw" style="background:var(--ggl)"></i> Google</span>
+      <span><i class="sw" style="background:var(--tt)"></i> TikTok</span>
+    </div>
+    <p class="xs muted" style="margin-top:10px">Expected blended trackable return settles around <b>2.3 to 2.7x</b> once double-counting is removed (healthy for premium fashion, not a drop). Kill-trigger: if it lands near 2x, pull spend back. Decisions are made on true Zid-validated cost-per-sale, never on platform-reported numbers.</p>
+  </div>
+</div></section>
+
+<!-- ROADMAP -->
+<section><div class="wrap">
+  <div class="eyebrow">How it rolls out</div>
+  <h2 style="margin:8px 0 18px">The first 90 days</h2>
+  <div class="tl">
+    <div class="ph"><div class="w">Weeks 1-4</div><h4>Fix &amp; re-baseline</h4><ul>
+      <li>Fix store events + stop the double-count; confirm one clean test purchase on every pixel</li>
+      <li>Fix Google Ads conversion tracking (0 sales recorded today) + pause the dead Shopping campaign; do not scale Google until it registers conversions</li>
+      <li>Re-activate the paused winners (IG only) and re-validate their true ROAS before scaling</li>
+      <li>Pause Maison Ein cold ads; keep Facebook off</li>
+      <li>Get TikTok access + WhatsApp account shared</li>
+      <li>Exit gate: Analytics within ~10% of Zid, funnel no longer inverted</li></ul></div>
+    <div class="ph"><div class="w">Weeks 5-8</div><h4>Diversify &amp; verify</h4><ul>
+      <li>Scale validated Meta winners modestly</li>
+      <li>Small funded Snapchat test (~SAR 6-8k), gated on a verified purchase</li>
+      <li>Stand up Google brand + a small Shopping/PMax test</li>
+      <li>Hold TikTok at zero until access + pixel verified</li>
+      <li>Size next month off the real cost-per-sale each channel prints</li></ul></div>
+    <div class="ph"><div class="w">Weeks 9-12</div><h4>Scale what proved out</h4><ul>
+      <li>More 9:16 video of the hero colors (your best format)</li>
+      <li>Grow Snapchat only if it hit target cost-per-sale</li>
+      <li>Expand Google PMax to full catalog + brand defense</li>
+      <li>Bring TikTok in at a measured level</li>
+      <li>Turn on WhatsApp click-to-message; close Maison Ein there</li></ul></div>
+  </div>
+</div></section>
+
+<!-- HEALTH + OPEN ITEMS -->
+<section style="background:var(--sand)"><div class="wrap">
+  <div class="grid g2" style="align-items:center">
+    <div class="card" style="display:flex;align-items:center;gap:18px">
+      <div class="ring"><div class="inner"><div class="v">94</div><div class="s">/ 100</div></div></div>
+      <div><h3>Account health is strong</h3><p class="sm muted">Once the measurement is trustworthy, this is the moment to scale spend on the winning channel. The fundamentals are there; we just need to see them clearly.</p></div>
+    </div>
+    <div>
+      <div class="eyebrow">To move fast, we need</div>
+      <h3 style="margin:8px 0 10px">Two things from your side</h3>
+      <div class="card" style="margin-bottom:10px"><span class="tag warn">Access</span> &nbsp;<b class="sm">TikTok ad account</b><p class="sm muted" style="margin-top:4px">Grant our management email so we can wire and test TikTok (it is already earning unmanaged).</p></div>
+      <div class="card"><span class="tag warn">Access</span> &nbsp;<b class="sm">WhatsApp Business</b><p class="sm muted" style="margin-top:4px">Share the account so we can attribute and automate the orders that already close in chat.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="wrap">
+  <div class="brand" style="justify-content:center"><span class="dot"></span> ADMIREWORKS</div>
+  <p class="sm" style="margin-top:12px;color:#cdc6ba">Admirable Venture Services, every time.</p>
+  <p class="xs" style="color:#9fb09f">Prepared for Ein Abayaa, June 2026. Numbers from Zid (source of truth), Meta Ads, Google Ads, Snapchat and GA4. Platform-reported returns are directional until store tracking is repaired. Budget figures are targets gated on verified cost-per-sale.</p>
+</div></footer>
+
+</body>
+</html>

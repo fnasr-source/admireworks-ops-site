@@ -1,0 +1,37 @@
+{
+  "_README": "Apollo campaign IDs for the MOND outreach segments. All email sequences send through Apollo from Fouad's PERSONAL mailbox (fn@fnasr.com, Apollo account 68ee3f9308f17b000da5b865) with his personal signature auto-appended (authorized by Fouad 2026-06-10). Sequences are created PAUSED from the approved /dashboard/email-sequences copy; enrolling into a paused sequence does NOT send. `enroll-apollo-sequences.mjs --segment=<key> --run` reads this file. Diamond has no entry (manual WhatsApp). schools-ar/schools-en (added 2026-08-10, firebase/mond/build-schools-list.mjs + create-apollo-schools-sequences.mjs) are the K-12 schools carve-out: 11-step MULTICHANNEL sequences (LinkedIn view/connect/message, 5 emails, a Loom SLA action_item, a score-gated call, a post-reply-only WhatsApp handoff), not email-only like gold/raw. List size is small and hand-curated (33 ar / 47 en verified contacts), so the warmup cap below is generous relative to list size, not a real throttle yet. IDS BELOW WERE REGENERATED 2026-08-10 (rev 2, --force recreate) when the copy and step plan changed; the previous pair (6a79bfaf99f62100207468c5 / 6a79bfbbb835cd00106ba24c) is archived in Apollo. Whenever these ids change, MOND_SEQUENCES in apps/client-portal/src/app/api/cron/mond-apollo-monitor/route.ts MUST be updated to match; scripts/check-mond-sequence-ids.mjs fails the deploy typecheck otherwise, because a drifted id silently kills both reply detection and the earned-Loom promise the schools copy makes.",
+  "fromEmailAccountIdDefault": "68ee3f9308f17b000da5b865",
+  "segments": {
+    "gold-warm": {
+      "apolloCampaignId": "6a43fb7be9680e00107344e3",
+      "fromEmailAccountId": ""
+    },
+    "gold-cold": {
+      "apolloCampaignId": "6a43fb83d548c60010b96368",
+      "fromEmailAccountId": ""
+    },
+    "raw": {
+      "apolloCampaignId": "6a43fb8c49b9df00188859b2",
+      "fromEmailAccountId": ""
+    },
+    "schools-ar": {
+      "apolloCampaignId": "6a7c68940e59730014fde601",
+      "fromEmailAccountId": ""
+    },
+    "schools-en": {
+      "apolloCampaignId": "6a7c68a0bf0f7400184f767b",
+      "fromEmailAccountId": ""
+    }
+  },
+  "warmup": {
+    "_README": "Conservative per-day NEW-enrollment cap during fnasr.com mailbox warm-up. The bulk route /api/mond/enroll-apollo-bulk clamps maxPerDay to the segment warmupMaxPerDay while warmup.active is true. Each new enrollment sends step 1 that day, so new-enrollments per day approximates daily send volume during warm-up. Owner: also confirm the Apollo mailbox fn@fnasr.com daily send limit matches (Apollo Settings Mailboxes). Ramp guidance: keep these caps until roughly 200 verified prospects have moved through without deliverability issues, then set warmup.active to false to release the clamp.",
+    "active": true,
+    "warmupMaxPerDay": {
+      "gold-warm": 30,
+      "gold-cold": 25,
+      "raw": 40,
+      "schools-ar": 15,
+      "schools-en": 15
+    }
+  }
+}

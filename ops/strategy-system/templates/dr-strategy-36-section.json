@@ -1,0 +1,1177 @@
+{
+  "id": "dr-strategy-36-section",
+  "name": "DR Strategy (36-Section Full)",
+  "description": "Full Direct Response Marketing Strategy — 77-slide deck covering market analysis, personas, positioning, funnel, ad copy, measurement, and closing. Based on the Admireworks DR Strategy System.",
+  "framework": "direct_response",
+  "locale": "ar",
+  "slides": [
+    {
+      "layout": "cover",
+      "content": {
+        "title": "[Section Title]",
+        "client_name": "[Client Name]",
+        "client_name_ar": "[نص هنا]",
+        "period": "Q1 2026",
+        "subtitle": "[Section Title]",
+        "subtitle_ar": "[نص هنا]",
+        "branding": "[Content]",
+        "tagline": "[نص هنا]",
+        "background_image": ""
+      },
+      "presenterNotes": "Welcome everyone. Today we present the Direct Response Marketing Strategy for Ein Abayaa — a 90-day growth plan anchored to the Summer Shade 2026 collection launch around April 10. This strategy covers everything from Zid store optimization to paid media, retention marketing, and content direction. The scope is 16,000 SAR covering website rebuild and marketing strategy, and we are entering the market at a moment of exceptional opportunity."
+    },
+    {
+      "layout": "grid-6",
+      "content": {
+        "title": "[Section Title]",
+        "boxes": [
+          {
+            "number": "01",
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "Here is our strategy structure. We start with understanding where Ein Abayaa stands today and where we need to go. Then we look at the market environment and competitive landscape — we have done deep research into 7 competitors and 590+ active Meta ads. We define three distinct personas, then build out the campaign funnel, ad creative, and automation systems. Finally, we set the content direction and measurement framework. Every recommendation is grounded in real market data."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "body": "[Body text goes here]",
+        "key_facts": [
+          {
+            "label": "[Label]",
+            "value": "[نص هنا]"
+          }
+        ],
+        "image_grid": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "Ein Abayaa is not a startup — they have 151 products, nearly 2,000 variants, 31.8K Instagram followers, and a brand identity that resonates. What they lack is the direct response infrastructure to convert that attention into revenue. The dual-tier architecture — AZAL for everyday and Maison Ein for premium — is a competitive advantage no other Saudi abaya brand has. The Zid migration is the catalyst that unlocks everything else. Collections include Summer Shade, Season of Blossoms, AZAL, and Maison Ein.\n\n[Full detail]: plus under-abaya dresses (SAR 350-450). Platform: Salla → Zid (migration in progress)."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "context": "[نص هنا]"
+      },
+      "presenterNotes": "These are not vanity metrics. 31.8K Instagram followers represent a warm audience we can deploy lookalike targeting against. The 1.1 million view TikTok video proves the content format — customer try-on — is the winning creative angle. And 151 products with 2,000 variants means the catalog is deep enough to support dynamic product ads and personalized recommendations. The brand has the raw ingredients; the strategy provides the conversion infrastructure."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "strengths": [
+          "[Item]"
+        ],
+        "split_image": ""
+      },
+      "presenterNotes": "The brand has strong visual identity, proven viral capability on TikTok (1.1M views), and already-sophisticated ad creative running for 5+ months. The unique dual-tier architecture bridges accessible premium and aspirational luxury — AZAL for everyday elegance at SAR 300-515, and Maison Ein for elevated occasions at SAR 514-795. Summer Shade 2026 collection has premium shell-inspired design language, 10-color palette, and rich storytelling material ready for marketing. BNPL via Tabby and Tamara is already active. Additional points: Two distinct visual aesthetics (red theatrical Maison Ein + white studio editorial) — recognizable brand world."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "weaknesses": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "The current Salla store lacks video hero, collection stories, rich product descriptions, and variant options. The Zid migration addresses this but critical CRO gaps remain. No stock-level urgency indicators, no social proof widgets, no size quiz for guided selling. TikTok following at 6.5K significantly lags Instagram at 31.8K — representing an untapped growth channel. Our 90-day strategy bridges these infrastructure gaps. The Zid migration is the foundation, and everything else builds on top of it. Additional points: All 14 active ads still link to old Salla store — must switch to Zid at launch."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Let us now look at the biggest challenges Ein Abayaa faces — and more importantly, how each challenge represents a clear opportunity."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "headline": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ],
+        "split_image": ""
+      },
+      "presenterNotes": "This is the most critical challenge. When a Saudi woman is considering spending 450 riyals on an abaya online, she needs confidence. Sizing uncertainty is the number one barrier — every brand's sizing is different. Fabric feel is second — the fabric looks nice in photos but what about reality? And then color accuracy — will the color match what she sees on screen? Sadal has solved this with 82+ reviews per product. We need to build a comparable trust system, but at the premium level — not through discounting, but through content and social proof. A customer comparing a SAR 450 Ein Abayaa piece against a SAR 219 Sadal abaya with 82 five-star reviews will choose Sadal unless Ein Abayaa can match or exceed that social proof infrastructure. No competitor in the mid-premium tier (SAR 400-800) has invested in reviews — building the category's best trust system would be a decisive competitive advantage. Opportunity: Build the mid-premium tier's best trust infrastructure — reviews, UGC, size guides, fabric education."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "context": "[Body text goes here]"
+      },
+      "presenterNotes": "Here is the math that matters most. If we drive 10,000 visitors to the Zid store and convert 2.5%, that is 250 purchases. But 9,750 visitors leave without buying. Right now, zero of those 9,750 people hear from Ein Abayaa again. With abandoned cart recovery via WhatsApp — which has 98% open rates in Saudi Arabia — a Saudi women's wear label recovered 25% of abandoned carts. Email flows generate 30 times higher revenue per recipient than campaigns. Building this infrastructure before scaling paid spend is non-negotiable. Fashion e-commerce cart abandonment rates run at 70-80% globally, meaning Ein Abayaa is losing 97-98% of its traffic with no mechanism to bring them back."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "headline": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "Across the entire Saudi abaya market, no competitor shows evidence of sophisticated retention marketing — no welcome flows, no abandoned cart sequences, no post-purchase nurture. This is a category-wide gap. For Ein Abayaa, this means every website visitor who does not purchase on their first visit is effectively lost. With fashion e-commerce cart abandonment rates at 70-80% globally, and an estimated 2-3% conversion rate, Ein Abayaa is losing 97-98% of its traffic with no mechanism to bring them back. The data is clear on the impact. These channels represent the highest-leverage investment in the entire strategy. Opportunity: WhatsApp (98% open rate) + email automation (30x flow RPR) = highest-leverage investment."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "context": "[Body text goes here]"
+      },
+      "presenterNotes": "This was the most surprising finding in our research. We scanned 590+ active abaya ads on Meta in Saudi Arabia. Every single one looks the same: product photo or video, fabric type, cut description, order now. That is it. No one tells a brand story. No one uses customer try-on content. No one runs retargeting ads with social proof or urgency. Ein Abayaa is already ahead — their ads use bilingual storytelling. But we can push much further with UGC, collection narratives, and retargeting creative. In a homogeneous landscape, differentiation wins."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "headline": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ],
+        "opportunity": "[Content]"
+      },
+      "presenterNotes": "Our Meta Ad Library scan revealed a remarkable finding: across 590+ active abaya ads in Saudi Arabia, every single ad uses the same format — product number, fabric type, cut description, and 'Order Now' CTA. No brand runs story-driven creative. No brand uses UGC customer try-on content in paid ads. No brand deploys retargeting-specific creative addressing objections. Ein Abayaa already runs 14 active Meta ads that are more sophisticated than any competitor — using bilingual storytelling copy and brand narrative. But they still have not deployed UGC, retargeting creative, or BNPL-focused ad copy. The opportunity is wide open."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "goals": [
+          {
+            "number": "01",
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "Five strategic goals, each directly addressing a gap we identified in research. Goal one is foundational — the Zid store must be conversion-ready before we scale paid spend. Goal two is the anchor — Summer Shade 2026 launches around April 10, aligned with Eid al-Fitr, the biggest fashion shopping moment of the year. Goal three builds the retention engine that no competitor has."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "goals": [
+          {
+            "number": "04",
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "Goal four is the long-term brand positioning play. The SAR 300-795 range sits between value players like Sadal at SAR 149-329 and luxury brands like Daphne HC at SAR 950+. No dominant brand combines premium positioning with digital-first infrastructure in this gap. Goal five is a time-limited acquisition opportunity — Sofarah's store is offline and their customers are actively seeking alternatives. The cost of acquiring these customers is significantly lower than cold prospecting because they already have the buying habit."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "note": "[Notes]",
+        "objectives": [
+          {
+            "number": "01",
+            "title": "[Section Title]",
+            "metric": "[Metric]",
+            "target": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Four measurable objectives, each tied to a specific metric and data source. Objective one: 2.5% conversion rate, which is the industry benchmark for fashion e-commerce. We are starting from unknown baseline since the Zid store is new. Measured via Zid analytics dashboard. Objective two: build the email and WhatsApp list from zero to 3,000 subscribers — this is the foundation of the retention engine. Measured via email platform and WhatsApp Business API. These are aggressive but achievable targets given the quiz funnel and popup strategy."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "objectives": [
+          {
+            "number": "03",
+            "title": "[Section Title]",
+            "metric": "[Metric]",
+            "target": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Objective three: 4x ROAS on paid campaigns, which puts us in the top quartile for fashion e-commerce. The clothing category average is actually 5.63x, so 4x is a conservative starting target. Current ROAS on Ein Abayaa's 14 active ads has not been disclosed — we will benchmark once we have access. Measured via Meta Ads Manager and Zid analytics. Objective four: recover 15% of abandoned carts, which is conservative — a Saudi women's wear label achieved 25% recovery via WhatsApp alone. Measured via automation platform analytics. All these numbers will be refined once we have baseline data from the Zid store."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Now we move into the environmental scanning section. We have conducted extensive research into the Saudi e-commerce market, fashion industry, payment landscape, and digital behavior. Every number you see here is sourced from verified research — not estimates."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "source": "[Content]",
+        "context": "[Body text goes here]",
+        "background_image": ""
+      },
+      "presenterNotes": "The Saudi e-commerce market is massive and accelerating. 31.29 billion US dollars in 2026, growing at nearly 12% per year. Fashion is one of the primary growth drivers. Online sales will exceed 100 billion riyals this year. This is not a market where you need to convince people to shop online — 99% internet penetration, 78% 5G coverage, 98% mobile penetration. The infrastructure is built. The question is which brands capture the demand. B2C commerce accounts for 73.54% of total e-commerce revenue."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "bullets": [
+          {
+            "text": "[Body text goes here]",
+            "source": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Zooming into the modest fashion segment specifically. Saudi Arabia is the third largest modest fashion market globally at 18 billion US dollars. Women's apparel alone is 13.5 billion and growing to 20 billion by 2034 at 4.43% CAGR. E-commerce apparel market is valued at USD 8.59B in 2025, expected to reach USD 16.74B by 2034 at 7.6% CAGR. Online retail is the fastest-growing distribution channel in Saudi fashion. And here is the critical data point for Ein Abayaa: 74.6% of e-commerce buyers are female. The market is enormous, it is growing, and the primary buyer is exactly Ein Abayaa's target customer. Additional points: KSA drives 41% of GCC's USD 80B fashion spend (Fortune)."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "source": "[Content]"
+      },
+      "presenterNotes": "This is perhaps the single most actionable data point in the entire strategy. 77% of Saudi consumers have used BNPL. It increases average order value by 35% and conversion rates by 20 to 30 percent. 80% of BNPL transactions originate on mobile devices. Apple Pay leads digital wallets at 36% market share, Mada at 22%. Cash on delivery has declined 64% — non-cash payments exceed 75-80% of retail e-commerce. 62% of consumers want BNPL as a standard merchant feature."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "headline": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ],
+        "split_image": ""
+      },
+      "presenterNotes": "Ein Abayaa has Tabby and Tamara active, but does NOT display per-installment amounts on product pages. Insight: Showing per-installment amounts is a proven conversion driver — implement before driving paid traffic. For a Maison Ein piece at 600 riyals, showing 'four payments of 150 riyals' is a completely different psychological proposition than showing 600 riyals. Sadal does this best-in-class — Tabby 6 installments plus Tamara 4 installments prominently displayed with exact amounts. This is a quick win that should be implemented before the Zid store launch."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "bullets": [
+          {
+            "text": "[Body text goes here]",
+            "source": "[Content]"
+          }
+        ],
+        "timeline": [
+          {
+            "period": "Q1 2026",
+            "action": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "The timing could not be better. We are entering the 90-day window that captures Eid al-Fitr — the single biggest fashion shopping moment of the year — plus the summer wedding season. Google searches for abaya surge 45% during Ramadan and Eid. Saudi Arabia launched a 54-day nationwide Ramadan Sales Season. Summer Shade 2026 launches around April 10. Ramadan merchandise preparation begins 4 months in advance for luxury retailers. The strategy phases perfectly: weeks one and two we complete the Zid store and set up automation. Weeks three and four we launch Summer Shade into the Eid peak. Weeks five through eight we scale and retarget. Weeks nine through twelve we push Maison Ein for the summer occasion season and Eid al-Adha prep."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Now let us look at the digital landscape — how Saudi women discover, research, and buy fashion online."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "source": "[Content]"
+      },
+      "presenterNotes": "Saudi Arabia has 34 million social media users — that is 92% of the population — spending over 3 hours per day, well above the global average of 2 hours 24 minutes. More than 60% use social media to research brands before purchasing. Mobile commerce dominates — over 75% of total online sales happen on mobile. Everything we build must be mobile-first."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "platform_data": [
+          {
+            "platform": "[Content]",
+            "key_insight": "[Content]",
+            "relevance": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "For Ein Abayaa, Instagram is the primary channel — 16.3 million users, 43% female, and the number one fashion discovery platform. Ad reach grew by 3.9M in 2023-2024. WhatsApp is the secret weapon — 40 million active users, 98% open rates, and a proven 25% cart recovery rate for Saudi fashion brands. TikTok is the growth play with 49% engagement surge year over year and significantly lower CPMs than Meta. Facebook at 34.5M users (81.39% of social media traffic) is strong for retargeting via the Meta ecosystem. Snapchat at 22-25M users with 90%+ penetration ages 13-34 is a test channel for AR try-on and Gen Z awareness. This is the channel mix we will build the strategy around."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "We conducted a comprehensive competitive analysis of 7 brands plus a scan of 590+ active Meta ads. Let me walk you through the key competitors and what they tell us about Ein Abayaa's opportunity."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "competitor_name": "[Name]",
+        "competitor_url": "",
+        "price_range": "[Content]",
+        "screenshot": "[Content]",
+        "bullets": [
+          "[Item]"
+        ],
+        "threat_level": "[Content]",
+        "ad_status": "0%"
+      },
+      "presenterNotes": "Sadal is the most dangerous competitor, not because of their brand — they have none — but because of their social proof infrastructure. 82+ reviews per product. Exact BNPL installment amounts on every product page — Tabby 6 installments plus Tamara 4 installments. Long-running Meta ads that have been optimizing since August 2024. Dominant by impressions in 'abaya' search. Arabic-only, functional/descriptive language. WhatsApp support active. They compete on price and trust. Ein Abayaa competes on brand and design. But we need to match their trust infrastructure — reviews, BNPL display, WhatsApp support — to close the conversion gap. Basic photography compared to premium competitors."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "competitor_name": "[Name]",
+        "competitor_url": "",
+        "price_range": "[Content]",
+        "screenshot": "[Content]",
+        "bullets": [
+          "[Item]"
+        ],
+        "threat_level": "[Content]",
+        "ad_status": "0%"
+      },
+      "presenterNotes": "Laftah is interesting not because they directly compete with Ein Abayaa — they are a mass-market player with 13 stores across Makkah, Riyadh, Madinah, Jeddah, Abha, Taif, Tabuk, and Jazan — but because they have breakout Google search volume. They are becoming the name people search when they think abaya. Their 13 physical stores give them a trust advantage Ein Abayaa cannot replicate: customers can touch fabric and try before buying. COD plus BNPL plus free shipping over 299 SAR. Customer testimonials with real names. Our response is digital excellence — video fabric close-ups, detailed size guides, and a return policy that removes risk. Heavy reliance on physical retail means their digital feels secondary. Arabic-only with no English language option."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "competitor_name": "[Name]",
+        "competitor_url": "",
+        "price_range": "[Content]",
+        "screenshot": "[Content]",
+        "bullets": [
+          "[Item]"
+        ],
+        "threat_level": "[Content]",
+        "ad_status": "0%"
+      },
+      "presenterNotes": "OYA is the closest direct competitor — they are on Zid, in the same price range, and targeting a similar customer. They have some smart features like a loyalty program and before/after slider. Bilingual approach with Arabic primary and English category names. 5-star review display and countdown timer promotions. But their brand identity is weak — they sell shoes, watches, and bags alongside abayas, which dilutes positioning. Ein Abayaa's focused brand architecture — AZAL for everyday, Maison Ein for premium — is a clear strategic advantage over OYA's scattered approach. Product prices were not rendering properly on their site."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "competitor_name": "[Name]",
+        "competitor_url": "",
+        "price_range": "[Content]",
+        "screenshot": "[Content]",
+        "bullets": [
+          "[Item]"
+        ],
+        "threat_level": "[Content]",
+        "ad_status": "0%"
+      },
+      "presenterNotes": "Lagate is the brand most similar to Ein Abayaa in spirit — designer-led, story-driven, premium positioning, bilingual. They do storytelling well, tying their collections to Saudi geography — Red Sea and heritage embroidery narratives. Collection categories include Occasion Abayas, Formal Abayas, Everyday Abayas, and Winter Abayas. Free shipping threshold at 500 SAR versus Laftah's 299. Maison Ein competes directly with their price range. Our advantage is the dual-tier architecture — we serve both the 300-riyal buyer and the 795-riyal buyer. Lagate only serves the premium end. And critically, they have no reviews — same trust gap as everyone except Sadal."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0%",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "context": "[Body text goes here]"
+      },
+      "presenterNotes": "This stat deserves its own moment. 590+ active abaya ads and every single one is a product-catalog ad. No brand storytelling. No customer try-on content in paid ads. No retargeting-specific creative addressing objections. Meanwhile, Ein Abayaa runs 14 ads with bilingual storytelling copy. The opportunity to dominate attention is wide open."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "competitor_name": "[Name]",
+        "headline": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ],
+        "opportunity": "[Content]",
+        "threat_level": "[Content]",
+        "ad_status": "0%",
+        "competitor_url": ""
+      },
+      "presenterNotes": "Sofarah is not a competitor — they are an opportunity. Their Shopify store is completely offline. Domain redirects to Shopify expired-store page. Their customer base — people who were loyal to a mid-range Saudi abaya brand — is now looking for a new home. This is a time-limited window. We recommend running Google search campaigns on Sofarah brand terms (سفره, sofarah, بديل سفره, عبايات زي سفره) and deploying social retargeting to their former followers. The cost of acquiring these customers is significantly lower than cold prospecting because they already have the buying habit."
+    },
+    {
+      "layout": "stat-highlight",
+      "content": {
+        "title": "[Section Title]",
+        "stat": "0",
+        "label": "[Label]",
+        "sublabel": "[Label]",
+        "context": "[Body text goes here]"
+      },
+      "presenterNotes": "This is a remarkable gap. Despite the 45% search surge during Ramadan and Eid, no Saudi abaya competitor in our analysis runs Google Ads consistently. Laftah has breakout organic search volume but does not invest in paid search. This means Ein Abayaa can capture high-intent buyers — people actively searching for abayas — at low CPCs with virtually no competition. Combined with Sofarah brand term capture, Google becomes a high-efficiency acquisition channel."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "body": "[Body text goes here]",
+        "brands": [
+          {
+            "name": "[Name]",
+            "detail": "[Content]",
+            "competitor_url": "",
+            "ad_status": "0%"
+          }
+        ],
+        "key_insight": "[Content]",
+        "screenshot": "[Content]",
+        "split_image": ""
+      },
+      "presenterNotes": "The luxury tier is important as a reference, not a direct competitor. Daphne Haute Couture starts at 950 riyals with 42 products with feminine Arabic names like Salma, Mira, and Layla. Wide size range XS-2XL with WhatsApp chat integrated. Harlienz starts at about 1,900 riyals equivalent and has been featured in Harper's Bazaar and Vogue Arabia. Poetic product names like Euphoria, Body Language, and Soul Motion. Real scarcity with items marked Sold Out. English-only. Neither offers BNPL. Neither has reviews. This is significant because Maison Ein at 514 to 795 riyals with BNPL available can capture the aspirational buyer — the woman who admires Harlienz's editorial aesthetic but cannot justify 2,800 riyals. Show her four payments of 150 riyals for a Maison Ein piece, and the decision becomes much easier."
+    },
+    {
+      "layout": "comparison-table",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "columns": [
+          "[Item]"
+        ],
+        "rows": [
+          {
+            "brand": "[Content]",
+            "entry": "[Content]",
+            "mid": "[Content]",
+            "premium": "[Content]",
+            "bnpl": "[Content]",
+            "reviews": "[Content]"
+          }
+        ],
+        "highlight_row": "[Content]",
+        "insight": "[Content]"
+      },
+      "presenterNotes": "This table tells the competitive story clearly. Ein Abayaa is the only brand that spans from 300 to 795 riyals with a dual-tier architecture. Sadal wins on price and reviews. The luxury brands win on prestige. Ein Abayaa wins on the combination of premium positioning, BNPL availability, and collection-based brand storytelling. But look at the reviews column — Sadal has 82+ reviews per product, and Ein Abayaa has zero. This is the single most urgent gap to close."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "advantages": [
+          {
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "Six unique advantages that no single competitor can match. The dual-tier architecture is the strategic moat — it allows Ein Abayaa to serve the 300-riyal buyer and the 795-riyal buyer under one brand umbrella. Each line has its own visual identity, pricing, and occasion purpose. The under-abaya dress category has literally zero competition — most competitors completely lack this product type. The collection storytelling depth — Summer Shade has a 17-page design brief with shell-inspired design language, 10-color palette, and 3 design families (Periwinkle, Auger, Cowrie) — gives us marketing material no competitor has. Season of Blossoms has its own narrative as well."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "advantages": [
+          {
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "The proven viral moment on TikTok tells us exactly which content format to scale. 1.1 million views on a customer try-on video. 34.5K views on Instagram product showcase Reels. The raw content engine exists — it needs systematic deployment into paid creative. Ein Abayaa's 14 active Meta ads already feature bilingual storytelling copy more sophisticated than any competitor in the 590+ ad landscape. Long-running campaigns of 5+ months suggest optimized creative performance. And the two distinct visual aesthetics — red theatrical for Maison Ein and white studio editorial for the core line — create a recognizable brand world. 31.8K Instagram followers with the tagline خيوط تُنسج بالأصالة validate this positioning."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "concerns": [
+          {
+            "concern_ar": "[نص هنا]",
+            "concern_en": "[Content]",
+            "response": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "These concerns come directly from our customer language research. The sizing concern is addressed by size guide videos, body-shape recommendations via style quiz, free returns/exchange policy, and customer try-on UGC showing real body types. The fabric concern is addressed by fabric close-up Reels with natural lighting, care instruction cards, multiple product images per variant, and customer unboxing video content. The price concern is addressed by BNPL per-installment messaging on every product page, quality justification content through fabric education, and comparison to luxury tier pricing — Daphne starts at SAR 950."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "concerns": [
+          {
+            "concern_ar": "[نص هنا]",
+            "concern_en": "[Content]",
+            "response": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "The brand trust concern is addressed by reviews and social proof — customer review system, UGC social proof, 31.8K follower count badge, pop-up event documentation, and collection story content that builds brand depth. The refund concern needs a prominent return/exchange policy on product pages and in ad copy, plus free return shipping and trust badge at checkout. And the Sadal comparison — which we know customers make — is addressed by quality education content that positions Ein Abayaa as 'the abaya that makes you feel different, not just look different.' Named collection stories versus numbered products, design heritage narrative, exclusive cuts and color palettes."
+    },
+    {
+      "layout": "grid-3",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "gaps": [
+          {
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "Nine market gaps identified through our research. Each one represents a clear opportunity for Ein Abayaa. The brand storytelling gap is the widest — 590+ ads and not a single brand tells a story. The review deficit is the most impactful — social proof is the currency of conversion, and only Sadal invests at scale with 82+ reviews per product while the mid-premium and luxury tiers are review-free. The retention marketing gap is the highest leverage — WhatsApp and email automation literally do not exist in this category. No welcome flows, abandoned cart sequences, or post-purchase nurture. The bilingual content gap is underserved since most brands are Arabic-only or English-only. No competitor educates buyers about fabric quality, care, or design story. These gaps are not small incremental advantages. They are structural openings that define the strategy.\n\n[4 additional items in research report]"
+    },
+    {
+      "layout": "grid-3",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "opportunities": [
+          {
+            "title": "[Section Title]",
+            "description": "[Body text goes here]"
+          }
+        ]
+      },
+      "presenterNotes": "Nine opportunities directly addressing the nine gaps. Notice the pattern: every opportunity is both a gap-filler and a competitive moat. First-mover on story-driven paid creative — the Maison Ein theatrical aesthetic is wholly unique. Systematic UGC ad program could deliver ROAS above the 5.63x clothing benchmark. Own the mid-premium tier by combining premium positioning with DR infrastructure (BNPL, reviews, retargeting, automation) in SAR 300-795. Capture Sofarah's orphaned audience while their customers are still actively seeking alternatives. Build the category's best retention system with WhatsApp (98% open) plus email (30x RPR) automation. Launch bilingual content for English-speaking Saudi professionals and expats while maintaining Gulf Arabic dialect authenticity. Position dresses as cross-sell driving AOV. Pre-produced Summer Shade 2026 creative deployed across all channels captures disproportionate seasonal demand. Each opportunity compounds the others.\n\n[4 additional items in research report]"
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Let us now meet the three women who represent Ein Abayaa's core customer segments. Each persona is built from our customer research, language analysis, and competitive intelligence."
+    },
+    {
+      "layout": "persona",
+      "content": {
+        "name": "[Name]",
+        "name_ar": "[نص هنا]",
+        "role": "[Content]",
+        "avatar_description": "[Body text goes here]",
+        "avatar_url": "",
+        "demographics": {
+          "age": "[Content]",
+          "location": "[Content]",
+          "income": "[Content]",
+          "occupation": "[Content]"
+        },
+        "goals": [
+          "[Item]"
+        ],
+        "pain_points": [
+          "[Item]"
+        ],
+        "budget": "[Content]",
+        "channels": "[Content]",
+        "language_ar": "[نص هنا]",
+        "objection_ar": "[نص هنا]",
+        "journey_stages": [
+          "[Item]"
+        ],
+        "key_insight": "[Content]"
+      },
+      "presenterNotes": "Noura is the core customer — the Saudi professional woman earning 12 to 20 thousand riyals a month. University degree holder. She browses Instagram during her commute, discovers Ein Abayaa through a Reel, visits the website, and her first question is 'ليش أغلى من سدل' — why is this more expensive than Sadal? Her full language: 'أبي عباية تناسب الدوام والمناسبات — وين ألاقي عباية راقية بسعر معقول' — I want an abaya for work and occasions, where do I find an elegant one at a reasonable price? Her purchase triggers: new collection launch, Instagram Reel showing the piece styled for her context, friend recommendation, BNPL availability at checkout. BNPL makes SAR 400-500 abayas accessible as 4 monthly payments. Collection stories and design narratives resonate with her design sensibility. Email/WhatsApp VIP access makes her feel like an insider. Our job is to make the answer obvious before she even asks: collection storytelling, fabric education, and a shopping experience that makes Sadal feel like a warehouse and Ein Abayaa feel like a brand she is proud to wear. Her challenges: finding the sweet spot between Sadal's prices and Daphne's aspirational appeal, and trusting a relatively newer brand for a SAR 400+ purchase."
+    },
+    {
+      "layout": "persona",
+      "content": {
+        "name": "[Name]",
+        "name_ar": "[نص هنا]",
+        "role": "[Content]",
+        "avatar_description": "[Body text goes here]",
+        "avatar_url": "",
+        "demographics": {
+          "age": "[Content]",
+          "location": "[Content]",
+          "income": "[Content]",
+          "occupation": "[Content]"
+        },
+        "goals": [
+          "[Item]"
+        ],
+        "pain_points": [
+          "[Item]"
+        ],
+        "budget": "[Content]",
+        "channels": "[Content]",
+        "language_ar": "[نص هنا]",
+        "objection_ar": "[نص هنا]",
+        "journey_stages": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "Lama is the Maison Ein customer. She earns 25 thousand riyals or more. She lives in Al Nakheel or Hittin in Riyadh, or Al Rawdah in Jeddah. Advanced degree or established business. She attended the Ramadan Nights pop-up at Solitaire Mall. Her full language: 'أبي قطعة مميزة ما تتكرر — وش الفرق بينها وبين دافني؟' — I want a unique piece that doesn't repeat, what is the difference from Daphne? Her objection is not price — it is positioning. Her purchase triggers: limited-edition drops, event invitations, Ramadan/Eid occasion need, seeing the piece styled in a cinematic Reel. Our answer: Maison Ein offers designer-level aesthetics with a Saudi brand story, at a third of Daphne's price, with BNPL available. The red curtain theatrical aesthetic, the limited drops, the VIP early access — these are all designed for Lama. Justifying SAR 600+ on a Saudi brand versus established international labels is her challenge. Assessing exclusivity — will she see five others wearing the same piece — is her second concern. Maison Ein's theatrical brand identity matches her aspirational self-image. Limited collection drops and VIP early access create the exclusivity she craves. [Removed from slide] Journey stage: Buys same day — does not comparison shop."
+    },
+    {
+      "layout": "persona",
+      "content": {
+        "name": "[Name]",
+        "name_ar": "[نص هنا]",
+        "role": "[Content]",
+        "avatar_description": "[Body text goes here]",
+        "avatar_url": "",
+        "demographics": {
+          "age": "[Content]",
+          "location": "[Content]",
+          "income": "[Content]",
+          "occupation": "[Content]"
+        },
+        "goals": [
+          "[Item]"
+        ],
+        "pain_points": [
+          "[Item]"
+        ],
+        "budget": "[Content]",
+        "channels": "[Content]",
+        "language_ar": "[نص هنا]",
+        "objection_ar": "[نص هنا]",
+        "journey_stages": [
+          "[Item]"
+        ],
+        "key_insight": "[Content]"
+      },
+      "presenterNotes": "Danah is the Gen Z customer. She found Ein Abayaa on TikTok — maybe she saw that 1.1 million view try-on video. Entry-level or student with family support. Her first question is 'فيه كود خصم' — is there a discount code. Her full language: 'شفتها على تيك توك وأبيها — فيه كود خصم؟' — I saw it on TikTok and I want it, is there a discount code? She will compare with Sadal and OYA before buying. She needs BNPL to justify the purchase — Tabby checkout splits SAR 300-450 into manageable monthly payments. Her purchase triggers: viral TikTok featuring the product, discount code from influencer, new collection drop with social buzz, Eid or graduation event. But here is why she matters strategically: she is the future Noura, the future Lama. Acquire her at 20 with a SAR 300 AZAL abaya via Tabby, and she becomes a Maison Ein buyer at 30. The lifetime value calculation starts with Danah. TikTok UGC and influencer content is her primary discovery channel."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Now we move into the heart of the strategy — the campaign architecture. Everything we have analyzed so far converges here into a concrete plan."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "findings": [
+          {
+            "number": "01",
+            "finding": "[Content]",
+            "detail": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Five findings that shape the entire strategy. First, the paid landscape is wide open for differentiation — 590+ active Meta abaya ads and every single one is product-catalog style. Zero use brand storytelling, UGC, or retargeting creative. Ein Abayaa's existing bilingual story ads already outperform this standard — systematic UGC and retargeting deployment would create category leadership. Second, retention marketing is the highest-leverage investment because the infrastructure simply does not exist in this category. WhatsApp delivers 98% open rates with 25% abandoned cart recovery in Saudi fashion. Email flows generate 30x higher RPR than campaigns. The first brand to deploy comprehensive automation wins a structural advantage. Third, BNPL prominence is a proven, data-backed conversion multiplier. 77% of Saudi consumers use BNPL. It lifts AOV by 35%+ and conversion by 20-30%. Displaying per-installment amounts on product pages — Sadal's approach — is a quick win that should be live before the Zid store launch."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "findings": [
+          {
+            "number": "04",
+            "finding": "[Content]",
+            "detail": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Fourth, reviews are the trust currency we lack. Sadal's 82+ reviews per product versus Ein Abayaa's zero is the most visible gap in the competitive landscape. Building a review collection engine — post-purchase WhatsApp and email with incentives — is the most critical trust-building investment. Most competitors in the mid-premium and luxury tiers have zero reviews, so building the category's best trust system would be a decisive competitive advantage. Fifth, the timing of Summer Shade 2026 could not be better. April 10 launch aligns with Eid al-Fitr — the biggest fashion shopping moment — the 45% search surge, and the seasonal ramp into summer wedding season. Pre-produced creative deployed across all channels captures disproportionate seasonal demand. These five findings drive every tactical recommendation that follows."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "channels": [
+          {
+            "name": "[Name]",
+            "rationale": "[Content]",
+            "kpis": "[Content]"
+          }
+        ],
+        "budget_note": "[Notes]"
+      },
+      "presenterNotes": "Here is the channel architecture. Instagram, WhatsApp, and email are the primary channels — they cover the full funnel from discovery to retention. Instagram covers the full funnel from discovery to conversion with 31.8K followers providing a warm base for lookalike expansion. WhatsApp is mid-to-bottom funnel plus retention, essential for pre-order notifications, VIP management, and styling consultations. Email automation via Klaviyo or equivalent covers mid-to-bottom funnel plus retention, with priority on welcome series, abandoned cart, and post-purchase flows."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "channels": [
+          {
+            "name": "[Name]",
+            "rationale": "[Content]",
+            "kpis": "[Content]"
+          }
+        ],
+        "test_channels": [
+          {
+            "name": "[Name]",
+            "rationale": "[Content]"
+          }
+        ],
+        "budget_note": "[Notes]"
+      },
+      "presenterNotes": "TikTok is the growth play — lower CPMs with 49% engagement surge year over year, and Ein Abayaa's 1.1M view proof point validates the format. Best for UGC-style content. Google Search and Shopping captures high-intent buyers during the 45% Eid search surge, plus Sofarah brand term capture and brand defense against Laftah's rising search volume. Micro and nano influencers deliver the best ROI — 73% of brands prefer them, and a Jeddah-based brand achieved 35% sales spike via influencer collaboration. Target 5-10 per quarter. Snapchat is a test channel for AR try-on with 22-25M users and 90%+ penetration ages 13-34. SMS complements WhatsApp for time-sensitive flash sale alerts. Important note: the 16,000 SAR scope covers our strategy and store build. Paid media budget is a separate investment. We recommend starting at 5,000 to 8,000 riyals per month and scaling based on ROAS. At 4x ROAS, every 5,000 riyals in ad spend generates 20,000 in revenue."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "The funnel is the engine of the entire strategy. Every element we have discussed converges into this five-stage system."
+    },
+    {
+      "layout": "funnel",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "stages_summary": [
+          {
+            "number": 0,
+            "name": "[Name]",
+            "name_ar": "[نص هنا]",
+            "channels": "[Content]",
+            "objective": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Five stages with four retargeting loops — this is a closed-loop system where no visitor is permanently lost. Stage one discovers new audiences through Instagram Reels, TikTok, and influencer content — targeting Saudi women 18-45 with fashion interests and lookalikes of 31.8K Instagram followers. Creative includes brand-story video, collection reveal, customer try-on UGC, lifestyle styling. KPI targets: CPM under SAR 15, CTR above 2.5%, video view rate above 25%."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "stages": [
+          {
+            "name": "[Name]",
+            "creative": "[Content]",
+            "kpis": "[Content]",
+            "kpi": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Stage two warms them with product education — fabric close-ups, size guides, collection stories, quiz results, and lookbook. Audience is video viewers at 50%+, Instagram engagers, and website visitors with no purchase. KPIs include CPC under SAR 3, landing page view rate above 60%, and email opt-in above 12%. Stage three converts with retargeting ads via Meta Advantage+ Shopping, Google Shopping, WhatsApp abandoned cart, and email abandoned cart flow. Creative includes dynamic product ads with BNPL messaging, urgency through limited stock and Eid countdown, social proof via review quotes, and free shipping. Audience targets add-to-cart abandoners, checkout abandoners, and product page viewers with 3+ pages."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "stages": [
+          {
+            "name": "[Name]",
+            "creative": "[Content]",
+            "kpi": "[Content]"
+          }
+        ],
+        "retargeting_loops": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "Stage four turns buyers into reviewers and cross-sells from AZAL to Maison Ein. Creative includes order confirmation with brand story, care instructions, styling suggestions, review request at 7 days with incentive, and cross-sell — AZAL buyer gets a Maison Ein teaser. Stage five creates VIP advocates who get early access 24-48 hours before public to new collections, pop-up event invitations, birthday and anniversary offers, and referral incentives. The retargeting loops are critical — especially the cart abandonment sequence using WhatsApp at 1 hour, email at 12 hours, and WhatsApp again at 24 hours. Stage 1 non-engagers get different creative with new hooks. Stage 2 non-converters who visited but did not purchase get Stage 3 retargeting with BNPL plus urgency. One-time buyers with no repeat at 60 days get a win-back email plus WhatsApp with exclusive offer."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "hook_ar": "[نص هنا]",
+        "hook_en": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ],
+        "implementation": "[Content]",
+        "split_image": ""
+      },
+      "presenterNotes": "The HVCO — High Value Content Offer — is the bridge between awareness and conversion. Our primary HVCO is an interactive style quiz: 'Find Your Abaya Style in 60 Seconds.' Five to seven questions about occasion (daily/work, special occasions, both), color palette (classic black, warm tones, cool tones, bold colors), style (minimal and clean, detailed and embroidered, modern and structured), budget (under SAR 400, SAR 400-600, SAR 600+), and fabric feel (light and flowing, structured and tailored, luxurious and textured). The results page recommends specific products from AZAL, Core, or Maison Ein with direct add-to-cart buttons. The key: you must enter your email or WhatsApp to see results. This captures the lead AND provides zero-party preference data we use for segmentation. Fashion quiz funnels convert 2 to 3 times higher than standard popups. Arabic primary with Gulf dialect, English secondary. We also have two secondary HVCOs: the VIP early access list for Summer Shade 2026 at 8-12% opt-in rate, and a downloadable PDF lookbook with styling suggestions, fabric details, and occasion pairings at 10-15% opt-in rate. Additional points: Expected 15-25% opt-in rate (2-3x higher than standard popups)."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "page": {
+          "headline_ar": "[نص هنا]",
+          "headline_en": "[Headline]",
+          "hook": "[نص هنا]",
+          "cta_ar": "[نص هنا]",
+          "elements": [
+            "[Item]"
+          ]
+        }
+      },
+      "presenterNotes": "The style quiz landing page captures leads with the HVCO. 60-second quiz that recommends AZAL, Core, or Maison Ein products based on your occasion, style, and budget preferences. The hook is 'مصممة خصيصاً لك — ٥ أسئلة فقط' — designed just for you, only 5 questions. CTA in English: Start the Quiz Now. Key elements include a progress bar showing step progress, visual answer options with images to make it engaging, the email/WhatsApp gate before results to capture the lead, and the personalized product recommendations on the results page with direct add-to-cart functionality."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "page": {
+          "headline_ar": "[نص هنا]",
+          "headline_en": "[Headline]",
+          "cta_ar": "[نص هنا]",
+          "elements": [
+            "[Item]"
+          ]
+        }
+      },
+      "presenterNotes": "The Summer Shade 2026 collection page is the main commerce destination — it tells the collection story with the shell-inspired design language from the design brief, then presents products with BNPL messaging. The hook is 'Shell textures. Layered tonal shifts. Felt rather than seen.' CTA in English: Discover the Collection. Key elements include the video hero with collection concept, Shell Tones palette visual, design family sections with product grids for the three families (Periwinkle, Auger, Cowrie), BNPL per-installment messaging on every product, and VIP early access signup for the next drop. Also includes a thank you / post-purchase page with order summary, brand story recap, care instructions preview, VIP early access signup, referral program invitation, and social sharing prompts (@einabayaa). Every page is Arabic-first with Gulf dialect, mobile-optimized, and designed for conversion."
+    },
+    {
+      "layout": "ad-copy",
+      "content": {
+        "title": "[Section Title]",
+        "ad_number": 0,
+        "persona_target": "[Content]",
+        "platform": "[Content]",
+        "hook_ar": "[نص هنا]",
+        "hook_en": "[Headline]",
+        "cta": "[نص هنا]"
+      },
+      "presenterNotes": "Ad copy one is the collection launch ad for Summer Shade 2026. Notice the structure: it opens with an emotional hook ('not every abaya tells a story'), then delivers the collection narrative using the actual design brief language — shell textures, quiet tones, fabrics that breathe with light. The full Arabic copy reads: 'مو كل عباية تحكي قصة. ظل الصيف ٢٠٢٦ — مستوحاة من ملمس الأصداف وهدوء الظل. ألوان هادئة. أقمشة تتنفس مع الضوء. تصاميم تحسسك بالثقة. ١٠ ألوان جديدة. ٣ عائلات تصميم. الحين متوفرة حصرياً على المتجر. اكتشفي المجموعة — الرابط في البايو. تقسيط تابي وتمارا متاح.' It includes specific details — 10 colors, 3 design families — to signal depth. And it closes with BNPL messaging. This is the type of story-driven ad that zero competitors run."
+    },
+    {
+      "layout": "ad-copy",
+      "content": {
+        "title": "[Section Title]",
+        "ad_number": 0,
+        "persona_target": "[Content]",
+        "platform": "[Content]",
+        "hook_ar": "[نص هنا]",
+        "hook_en": "[Headline]",
+        "cta": "[نص هنا]"
+      },
+      "presenterNotes": "Ad two is the UGC-style ad. This mimics the format that went viral — customer try-on content with a [customer try-on video] placeholder. The copy uses Gulf dialect authentically: 'مرة ناعم' instead of 'أوي ناعم,' 'أبي' not 'عايز.' Full Arabic: 'أول مرة ألبسها... والله ما توقعت الفرق! [فيديو عميلة تجرب العباية] القماش مرة ناعم. القصة مختلفة عن أي شي جربته. أبي شي مميز مو زي الكل؟ عين عباية. ابتداءً من ٧٥ ريال/شهر مع تابي. تسوقي الحين — الرابط في البايو.' It addresses the desire language directly: 'أبي شي مميز مو زي الكل' — I want something special, not like everyone else. And it includes BNPL messaging. This is the ad format no competitor deploys in paid media, despite UGC going viral organically."
+    },
+    {
+      "layout": "ad-copy",
+      "content": {
+        "title": "[Section Title]",
+        "ad_number": 0,
+        "persona_target": "[Content]",
+        "platform": "[Content]",
+        "hook_ar": "[نص هنا]",
+        "hook_en": "[Headline]",
+        "cta": "[نص هنا]"
+      },
+      "presenterNotes": "Ad three is retargeting creative for cart abandoners. Full Arabic copy: 'العباية اللي اخترتيها لسا بانتظارك. قبل ما تخلص — خذيها الحين. شحن مجاني. إرجاع سهل. ٤ أقساط بدون فوائد مع تمارا. أكثر من ٣١ ألف متابعة يثقون بعين عباية. خيوط تُنسج بالأصالة. أكملي طلبك الحين.' Notice it addresses every objection in a single ad: free shipping (delivery concern), easy returns (refund fear), 4 installments with Tamara (price barrier), and 31K followers (trust signal). It uses the brand tagline as a closer. This type of retargeting-specific creative does not exist in the Saudi abaya ad landscape. Dedicated retargeting creative with objection-handling is a significant competitive advantage."
+    },
+    {
+      "layout": "ad-copy",
+      "content": {
+        "title": "[Section Title]",
+        "ad_number": 0,
+        "persona_target": "[Content]",
+        "platform": "[Content]",
+        "hook_ar": "[نص هنا]",
+        "hook_en": "[Headline]",
+        "cta": "[نص هنا]"
+      },
+      "presenterNotes": "Ad four targets Lama — the elevated buyer. Full Arabic: 'مو كل عباية تليق بكل مناسبة. دار عين — مجموعة حصرية لمن تبحث عن التفرد. تصميم ينساب مع الضوء. حرير ناعم. جرأة صامتة. ابتداءً من ٥١٤ ريال — أو ٤ أقساط من ١٢٨ ريال مع تمارا. الكمية محدودة. اكتشفي دار عين — الرابط في البايو.' The language shifts for the premium audience. It uses the actual copy from Ein Abayaa's existing Maison Ein ads which we know has been running for 5+ months. The BNPL framing is critical: '514 riyals, or 4 installments of 128 riyals with Tamara.' At this price point, breaking the number into installments is the difference between consideration and purchase."
+    },
+    {
+      "layout": "ad-copy",
+      "content": {
+        "title": "[Section Title]",
+        "ad_number": 0,
+        "persona_target": "[Content]",
+        "platform": "[Content]",
+        "hook_ar": "[نص هنا]",
+        "hook_en": "[Headline]",
+        "cta": "[نص هنا]",
+        "google_keywords": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "Ad five targets Sofarah's orphaned customer base. On Google, we bid on their brand terms. On Instagram, we target their former followers. The copy positions Ein Abayaa as the natural alternative: Saudi brand, starting from 300 riyals, installments available, 151 designs including abayas and dresses. We emphasize the dual-tier architecture because Sofarah was a mid-range brand — their customers map directly to the AZAL line. This is a time-limited acquisition opportunity that will diminish as these customers settle on new brands."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "flows": [
+          {
+            "name": "[Name]",
+            "trigger": "[Content]",
+            "sequence": [
+              "[Item]"
+            ],
+            "timing": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Six automated flows covering the entire customer lifecycle. The welcome series builds brand affinity before asking for the sale: immediate email with brand story, quiz results/recommendations, and 10% welcome code. Then WhatsApp at 2 hours with personal welcome and curated product picks based on quiz answers plus direct reply for styling questions. Email at 2 days with collection story (Summer Shade 2026 narrative) and fabric education plus bestsellers. Email at 5 days with customer UGC showcase, social proof, and reminder of welcome code expiry at 48 hours. The abandoned cart sequence is the highest-revenue flow. WhatsApp at 1 hour with product image, direct link to cart, and BNPL reminder. Email at 12 hours with cart contents with images, free shipping reminder, customer review quote, and BNPL breakdown. WhatsApp at 24 hours with final reminder, low stock urgency, and easy returns reassurance. Email at 48 hours with alternative product suggestions if original items sell out plus collection story. Benchmark: 25% recovery via WhatsApp for Saudi women's wear."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "flows": [
+          {
+            "name": "[Name]",
+            "trigger": "[Content]",
+            "sequence": [
+              "[Item]"
+            ],
+            "timing": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "The post-purchase flow is where reviews get collected — 7 days after delivery, with an incentive of 10% off next purchase for a review plus UGC photo request. At 14 days we cross-sell: AZAL buyer gets a Maison Ein teaser, core buyer gets the dress category. At 30 days via WhatsApp we extend a VIP early access invitation for the next collection drop. Browse abandonment flow triggers when a visitor views 3+ product pages without adding to cart: email at 4 hours with personalized recommendations, and email at 2 days with new arrivals in viewed categories plus quiz CTA. The VIP flow creates the exclusivity that Lama craves — 24-48 hours before public launch gets WhatsApp exclusive first look and pre-order link. Summer Shade 2026 is the inaugural drop. Each flow runs on autopilot once set up. [Removed from slide] Win-Back flow: Trigger — no purchase in 60+ days. Day 60 — Email: new arrivals + 15% win-back offer. Day 67 — WhatsApp: bestsellers + 48hr offer expiry. Timing: +30 days nudge → +45 days offer → +60 days final."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "headline": "[Headline]",
+        "tiers": [
+          {
+            "tier": "[Content]",
+            "detail": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Our influencer strategy is micro and nano-first. The data is clear: micro-influencers deliver the best ROI at 5.78 dollars per dollar spent. A Jeddah-based brand achieved 35% sales spike via influencer collaboration. 10.3% engagement for nano-tier. We structure it in three tiers. Tier one is 2-3 brand ambassadors per quarter — Saudi micro-influencers with 10K-100K followers, premium modest fashion focus, authentic Gulf aesthetic, high engagement above 5%. Tier two is 5-8 UGC creators per quarter — nano-influencers under 10K followers producing try-on content with full rights for paid repurposing. Tier three is event collaborators — brand partnerships similar to Ein x Base & Boon with premium Saudi lifestyle brands in beauty, wellness, home, and food."
+    },
+    {
+      "layout": "title-body",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "headline": "[Headline]",
+        "bullets": [
+          "[Item]"
+        ],
+        "key_insight": "[Content]",
+        "split_image": ""
+      },
+      "presenterNotes": "The UGC collection program — Ein Community — turns every customer into a potential content creator. Post-purchase email and WhatsApp asks customers to share try-on videos. The incentive is strong: 15% off next purchase plus a feature on @einabayaa. Best content gets licensed for paid ads. Target: 10+ new UGC pieces per month within 90 days. The rationale is clear: Ein Abayaa's 1.1M TikTok view proves the try-on format works. No competitor repurposes UGC into paid creative. Systematic collection and deployment could deliver ROAS above the 5.63x clothing benchmark. Additional points: Target 10+ new UGC pieces per month within 90 days."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Now let us define the content direction — what Ein Abayaa posts, how often, and on which platforms."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "content_image": "",
+        "pillars": [
+          {
+            "name": "[نص هنا]",
+            "purpose": "[Content]",
+            "frequency": "[Content]",
+            "example": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "Six content pillars covering trust-building, discovery, social proof, education, emotional connection, and conversion. Pillar 1: The Craft — behind-the-scenes videos, fabric sourcing stories, design process Reels, artisan spotlights. Example: 60-second Reel showing close-up of Summer Shade fabric being cut, shell-inspired texture visible, voiceover explaining the design philosophy. Pillar 2: Style With Ein — GRWM styling videos, occasion lookbooks (Eid, wedding, work), color pairing guides, influencer collaborations. Example: GRWM Reel styling an AZAL abaya for office to evening transition, showing 3 accessory combinations. Pillar 3: Ein Community — customer features, unboxing reactions, review spotlights, real-customer try-on reposts. Example: TikTok customer try-on reaction video in the format that got 1.1M views, reposted with permission."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "pillars": [
+          {
+            "name": "[نص هنا]",
+            "purpose": "[Content]",
+            "frequency": "[Content]",
+            "example": "[Content]"
+          }
+        ],
+        "format_split": {
+          "reels": "[Content]",
+          "stories": "[Content]",
+          "carousels": "[Content]"
+        }
+      },
+      "presenterNotes": "Pillar 4: Behind the Abaya — fabric comparison videos, care guides, sizing tutorials, 'how it is made' series. Example: Carousel 'Crepe vs Silk vs Linen — which fabric is right for you?' with swipe-through comparison. Pillar 5: Ein Moments — lifestyle photography, Saudi culture celebrations, seasonal campaigns, customer milestone features. Example: Eid morning photo series with Ein Abayaa pieces styled for Eid prayer, family visits, and evening celebrations. Pillar 6: Ein Exclusive — new collection launches, flash sales via Stories/WhatsApp, VIP previews, countdown to drops. Example: Story countdown: '48 hours to Summer Shade 2026 launch — VIP list gets early access tonight.' Total output: 10-12 pieces of content per week across platforms."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "weekly_rhythm": [
+          {
+            "day": "[Content]",
+            "content": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "The weekly rhythm is designed for consistency. Saturday opens with UGC from TikTok and lifestyle content on Instagram. Sunday is a styling tutorial Reel. Monday combines behind-the-scenes content with a Style With Ein carousel. Tuesday is the influencer collaboration Reel. Wednesday is educational content day. Thursday builds anticipation with aspirational content plus drop teases. Friday is the peak engagement day and gets the strongest conversion content — customer features plus launch or flash sale content. Each pillar maps directly to a business objective and a stage in the customer journey."
+    },
+    {
+      "layout": "section-divider",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "badge": "[Badge]",
+        "background_image": ""
+      },
+      "presenterNotes": "Finally, we define how we measure success. Every strategy needs clear KPIs and a reporting cadence to ensure accountability."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "categories": [
+          {
+            "category": "[Content]",
+            "metrics": [
+              {
+                "name": "[Name]",
+                "target": "[Content]"
+              }
+            ]
+          }
+        ]
+      },
+      "presenterNotes": "Four categories of KPIs with specific targets, benchmarks, and measurement tools. Website metrics: conversion rate at 2.5%+ (fashion e-commerce benchmark 2-3%), average order value at SAR 450+ (BNPL lifts AOV by 35%+), cart abandonment rate below 70% (global fashion is 70-80%), bounce rate below 45%, and pages per session at 3+. Paid media metrics: ROAS at 4x+ (fashion top quartile 4.4x, clothing avg 5.63x), CPM below SAR 15 (KSA estimated SAR 7.5-18.75), CTR above 2.5% (clothing avg 2.67%), CPC below SAR 3 (fashion global avg approximately SAR 2.40), and TikTok engagement above 3.5% (KSA avg 3.70%)."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "categories": [
+          {
+            "category": "[Content]",
+            "metrics": [
+              {
+                "name": "[Name]",
+                "target": "[Content]"
+              }
+            ]
+          }
+        ]
+      },
+      "presenterNotes": "Retention metrics: email list size to 3,000+ in 90 days from zero, WhatsApp list to 1,000+ in 90 days, email open rate on flows above 50% (fashion avg 52.75%), cart recovery rate above 15% (Saudi benchmark 25% via WhatsApp), and email revenue attribution above 20% of store revenue (top fashion brands achieve 33.7%). Social and content metrics: Instagram follower growth of +3,000 in 90 days to approximately 35K, TikTok follower growth of +5,000 in 90 days to approximately 11.5K, Reels average reach rate above 20% (global avg 30.81%), UGC pieces collected at 10+ per month, and reviews collected at 50+ in 90 days benchmarked against Sadal's 82+ per product."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "cadence": [
+          {
+            "frequency": "[Content]",
+            "scope": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "The reporting cadence is weekly for paid media — because budgets need constant optimization. We review ROAS, CPM, CTR, and spend pacing, then adjust budgets and creative rotation accordingly. Biweekly for content — reviewing top and bottom performing posts, UGC pipeline status, and influencer deliverables. Monthly for the full dashboard — store metrics, list growth, revenue attribution, review count, and a competitor ad library check. Quarterly for strategy review — measuring 90-day performance against objectives and refining the strategy for the next quarter. Every target is benchmarked against industry data or direct competitor performance. Additional points: Biweekly — Content performance: top/bottom posts, UGC pipeline, influencer deliverables."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "timeline": [
+          {
+            "period": "Q1 2026",
+            "action": "[Content]"
+          }
+        ],
+        "insight": "[Content]"
+      },
+      "presenterNotes": "This roadmap ensures we don't waste ad spend by driving traffic to an unprepared store. Phase 1 is about infrastructure, Phase 2 is controlled launch, Phase 3 is optimization with data, Phase 4 is scaling what works. The Summer Shade collection launch around April 10 anchors Phase 4."
+    },
+    {
+      "layout": "title-bullets",
+      "content": {
+        "title": "[Section Title]",
+        "title_ar": "[نص هنا]",
+        "findings": [
+          {
+            "title": "[Section Title]",
+            "detail": "[Content]"
+          }
+        ]
+      },
+      "presenterNotes": "These are all implementable in Week 1 with no additional budget or creative production. They use existing assets and proven formats. Additional quick win: Publish the Style Quiz as lead magnet — Ein Abayaa's varied collections (AZAL, Maison Ein, Summer Shade) create natural quiz branches, targeting 15-25% opt-in rate."
+    },
+    {
+      "layout": "closing",
+      "content": {
+        "title": "[Section Title]",
+        "subtitle": "[Section Title]",
+        "client_name": "[نص هنا]",
+        "tagline": "[نص هنا]",
+        "branding": "[Content]",
+        "background_image": "",
+        "contact": {
+          "phone": "[Content]",
+          "email": "[Content]",
+          "address": "[Content]",
+          "website": "[Content]"
+        },
+        "badge": "[Badge]",
+        "next_steps": [
+          "[Item]"
+        ]
+      },
+      "presenterNotes": "Thank you for your time and attention. To recap the next steps: first, we need strategy approval and baseline KPI confirmation. Second, the Zid store CRO gaps must be closed before we drive traffic — BNPL display, review system, email capture popup, and WhatsApp button. Third, we set up the email and WhatsApp automation flows. Fourth, we produce the Summer Shade 2026 launch creative. And fifth, we configure the ad accounts with proper retargeting pixels. The 90-day clock starts ticking once the Zid store launches. Let us build something remarkable together. Additional next steps: Set up tracking stack (GTM, CAPI, GA4) — Admireworks handles. Schedule photography direction session for Summer Shade 2026 collection."
+    }
+  ]
+}

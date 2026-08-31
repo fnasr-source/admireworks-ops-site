@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meguiar's Egypt - Social Media Management Add-On</title>
+    <style>
+        :root {
+            --aw-navy: #001a70;
+            --aw-gold: #cc9f53;
+            --aw-bg: #f6f4ef;
+            --aw-white: #ffffff;
+            --aw-text: #1d2436;
+            --aw-muted: #5d6475;
+            --aw-border: #e3e0d8;
+            --aw-green: #0f766e;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: var(--aw-bg);
+            color: var(--aw-text);
+            padding: 24px;
+        }
+
+        .container {
+            width: min(1080px, 100%);
+            margin: 0 auto;
+            background: var(--aw-white);
+            border: 1px solid var(--aw-border);
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        h1, h2, h3 { margin: 0 0 10px; color: var(--aw-navy); }
+        h1 { font-size: 2rem; }
+
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--aw-gold);
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-top: 28px;
+        }
+
+        p, li, td, th { color: var(--aw-muted); line-height: 1.55; }
+        ul { margin: 8px 0 0; padding-left: 18px; }
+        li { margin-bottom: 5px; }
+
+        .meta, .grid-2 { display: grid; gap: 16px; }
+
+        .meta {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border: 1px solid var(--aw-border);
+            border-radius: 10px;
+            padding: 14px;
+            margin: 18px 0 24px;
+            background: #fcfcfb;
+            font-size: 0.92rem;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; }
+
+        .card {
+            border: 1px solid var(--aw-border);
+            border-radius: 12px;
+            padding: 18px;
+            background: #fff;
+        }
+
+        .card.featured {
+            border-color: var(--aw-gold);
+            background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--aw-gold);
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 8px;
+        }
+
+        .pill.plain { background: var(--aw-navy); }
+
+        .price-big {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--aw-navy);
+            margin: 4px 0 2px;
+        }
+
+        .price-sub { font-size: 0.9rem; color: #7a7f8b; margin: 0 0 10px; }
+        .subtle { font-size: 0.9rem; color: #7a7f8b; }
+
+        .pricing-table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+
+        .pricing-table th, .pricing-table td {
+            text-align: left;
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--aw-border);
+            vertical-align: top;
+        }
+
+        .pricing-table th { color: var(--aw-navy); font-size: 0.9rem; }
+        .pricing-table td.num { text-align: right; white-space: nowrap; }
+        .total-row td { border-top: 2px solid var(--aw-navy); border-bottom: none; font-weight: 800; color: var(--aw-navy); }
+        .existing td { background: #fcfcfb; }
+
+        .note {
+            margin-top: 16px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #dbe5ef;
+            font-size: 0.9rem;
+        }
+
+        .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--aw-border);
+        }
+
+        .cta.primary { background: var(--aw-navy); color: #fff; border-color: var(--aw-navy); }
+        .cta.secondary { background: #fff; color: var(--aw-navy); }
+
+        @media (max-width: 800px) {
+            body { padding: 10px; }
+            .container { padding: 18px; border-radius: 10px; }
+            .meta, .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Social Media Management</h1>
+        <p>An add-on to the monthly growth management Meguiar's Egypt already runs with Admireworks. This page is the full commercial summary. There is nothing else to read.</p>
+
+        <div class="meta">
+            <div>Proposal No: <strong>AWP-EG-MEG-002</strong></div>
+            <div>Date: <strong>5 August 2026</strong></div>
+            <div>Prepared For: <strong>Dr. Hussam El-Adwar</strong></div>
+            <div>Business: <strong>Meguiar's Egypt - El-Adwar Group</strong></div>
+            <div>Prepared By: <strong>Admireworks</strong></div>
+            <div>Valid Until: <strong>5 September 2026</strong></div>
+        </div>
+
+        <h2>What it costs</h2>
+        <p>This is added to your current monthly retainer. It is not a new contract and it does not replace anything.</p>
+
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Monthly</th>
+                    <th class="num">Today</th>
+                    <th class="num">Option A</th>
+                    <th class="num">Option B</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="existing">
+                    <td>Growth management and ads oversight <span class="subtle">(current, unchanged)</span></td>
+                    <td class="num">15,000</td>
+                    <td class="num">15,000</td>
+                    <td class="num">15,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Social media management + influencer programme</strong></td>
+                    <td class="num">&mdash;</td>
+                    <td class="num">20,000</td>
+                    <td class="num">20,000</td>
+                </tr>
+                <tr>
+                    <td>One mobile shooting day <span class="subtle">(only in a month you ask for it)</span></td>
+                    <td class="num">&mdash;</td>
+                    <td class="num">&mdash;</td>
+                    <td class="num">10,000</td>
+                </tr>
+                <tr class="total-row">
+                    <td>Total per month, all in</td>
+                    <td class="num">15,000 EGP</td>
+                    <td class="num">35,000 EGP</td>
+                    <td class="num">45,000 EGP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>Three things worth being explicit about.</strong>
+            The figures above are the figures paid, with no tax added on top.
+            Billing is month to month with no commitment, on your existing cycle.
+            And Option B is not a different package: it is Option A plus a shooting day, added only in the months you want one. Every other month you are back to 35,000.
+        </div>
+
+        <h2>What you get every month</h2>
+
+        <div class="grid-2">
+            <div class="card featured">
+                <div class="pill">Included in Option A</div>
+                <h3>1. Social media management</h3>
+                <ul>
+                    <li>Strategy and research direction, refreshed monthly</li>
+                    <li>Monthly content plan and calendar</li>
+                    <li><strong>2 static posts and 2 carousels</strong></li>
+                    <li><strong>4 video scripts</strong>, written shot by shot so they can be filmed on a phone</li>
+                    <li><strong>Editing and Arabic captioning of the footage you film</strong>, delivered finished and ready to post</li>
+                    <li>Publishing, scheduling and community management on Facebook, Instagram and TikTok</li>
+                    <li>Page presentation: templates, Arabic and English tone of voice, highlight covers, consistent calls to action</li>
+                    <li>Monthly report, tied to the same numbers your ads are managed on</li>
+                </ul>
+            </div>
+
+            <div class="card featured">
+                <div class="pill">Included in Option A</div>
+                <h3>2. Influencer programme</h3>
+                <p class="subtle">Included in the same fee, not an extra.</p>
+                <ul>
+                    <li>Build a shortlist of Egyptian car and automotive creators, focused on the follower range where gifting actually converts rather than on big names</li>
+                    <li>Approach them directly, roughly 40 to 50 creators to land about 20 published pieces</li>
+                    <li>Negotiate product-for-content: they receive product, they publish agreed content. No cash fees</li>
+                    <li>Write a brief and a script for each creator, so what they post is accurate about the products</li>
+                    <li>Track what actually ran, and report it monthly</li>
+                </ul>
+                <p class="subtle">You supply the product from your own stock, so your cost is wholesale rather than retail.</p>
+            </div>
+        </div>
+
+        <h2>Option B: the shooting day</h2>
+        <div class="grid-2">
+            <div class="card">
+                <div class="pill plain">What it is</div>
+                <p>One full production day, shot on mobile, covering several videos in a single session so you are not filming every week. Added to any month you ask for it, at 10,000 EGP for that month only.</p>
+            </div>
+            <div class="card">
+                <div class="pill plain">When you need it</div>
+                <p>You do not need it every month. Most months the four scripts are filmed by your own team. Book a shooting day when there is a new product line, a seasonal push, or a batch you want produced in one go.</p>
+            </div>
+        </div>
+
+        <h2>What is not included</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Costs you pay directly</h3>
+                <ul>
+                    <li>Advertising spend</li>
+                    <li>Product and courier cost for influencer gifting</li>
+                    <li>Any paid influencer fee, if you ever choose to pay one</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Outside this scope</h3>
+                <ul>
+                    <li>Location rental, models or professional talent</li>
+                    <li>Production beyond the one mobile shooting day in Option B</li>
+                    <li>Anything not listed above, which we would quote separately before starting</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>To start</h2>
+        <p>Confirm Option A or Option B and we begin the same week. The first month covers strategy, the content calendar, the first four scripts, and building the influencer shortlist.</p>
+        <p class="subtle">Payment via InstaPay. Account name: Fouad Nasseredin. InstaPay account: admireworks@instapay.</p>
+
+        <div class="cta-row">
+            <a class="cta primary" href="https://ipn.eg/S/admireworks/instapay/5A1jri" target="_blank" rel="noopener noreferrer">Pay via InstaPay</a>
+            <a class="cta secondary" href="https://my.admireworks.com/proposal/AWP-EG-MEG-002" target="_blank" rel="noopener noreferrer">Review and confirm online</a>
+        </div>
+
+        <div class="note">
+            <strong>Note on your current agreement:</strong> the 15,000 EGP monthly growth management and ads oversight continues exactly as it is. This add-on is a separate line on the same monthly invoice and can be stopped at any time without affecting it.
+        </div>
+    </div>
+</body>
+
+</html>
