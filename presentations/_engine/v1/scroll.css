@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Admireworks Proposal OS, ARCHETYPE B: the long-scroll proposal page.
+
+   Shares tokens.css with the deck engine, so palette, type scale and spacing
+   are the same system. What differs is the reading mode: a deck is presented
+   in a room at a fixed 16:9, a scroll page is read alone on a phone or a
+   laptop, at whatever width the reader has, and printed to PDF as often as it
+   is read on screen.
+
+   That single difference drives every choice here:
+     · a measure, not a viewport. Body text sits on a ch-based max-width, so it
+       stays readable at 1600px instead of running the full width.
+     · rem, not cqw. The deck's type scale is container-query based because a
+       slide is a fixed-aspect box being scaled; a scroll page has no such box,
+       and cqw units inside one would resolve against the page and grow without
+       limit. The scale below is derived from the same ratios.
+     · print is a first-class target, not an afterthought.
+   ========================================================================== */
+
+:root {
+  /* The same ratios as the deck scale, expressed against a 17px reading base
+     rather than a container width. */
+  --doc-base: 17px;
+  --doc-micro:   0.72rem;
+  --doc-caption: 0.84rem;
+  --doc-body:    1rem;
+  --doc-lede:    1.2rem;
+  --doc-subhead: 1.45rem;
+  --doc-title:   2.1rem;
+  --doc-display: 3.1rem;
+
+  --measure: 68ch;
+  --page-max: 1080px;
+}
+
+html { font-size: var(--doc-base); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--cream, #faf9f7);
+  color: var(--charcoal, #2b2b2b);
+  font-family: var(--font-body, 'Akkurat Pro', 'Helvetica Neue', 'Noor', sans-serif);
+  font-size: var(--doc-body);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* RTL is a document-direction switch, and the grids below are logical, so they
+   mirror on their own. Only the type stack has to change. */
+html[dir="rtl"] body { font-family: var(--font-body-ar, 'Noor', sans-serif); line-height: 1.85; }
+html[dir="rtl"] .doc-eyebrow { letter-spacing: 0; text-transform: none; }
+
+.doc { max-width: var(--page-max); margin: 0 auto; padding: 0 24px 96px; }
+
+/* ---------- HERO ---------- */
+.doc-hero { padding: 72px 0 44px; border-bottom: 1px solid var(--cream-dark, #e6e2da); }
+.doc-hero-title {
+  font-family: var(--font-headline, 'Jaymont', Georgia, serif);
+  font-size: var(--doc-display);
+  line-height: 1.08;
+  color: var(--aw-navy, #001a70);
+  margin: 0 0 18px;
+  letter-spacing: -0.015em;
+}
+html[dir="rtl"] .doc-hero-title { font-family: var(--font-headline-ar, 'Noor', serif); letter-spacing: 0; line-height: 1.35; }
+.doc-hero-lead { font-size: var(--doc-lede); line-height: 1.5; max-width: var(--measure); margin: 0 0 22px; color: var(--charcoal, #2b2b2b); }
+.doc-eyebrow {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--doc-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--aw-gold, #cc9f53);
+  margin: 0 0 14px;
+}
+.doc-hero-meta {
+  display: flex; flex-wrap: wrap; gap: 6px 22px;
+  font-size: var(--doc-caption); color: var(--charcoal-light, #6b6b6b);
+  padding-top: 6px;
+}
+.doc-hero-meta span { white-space: nowrap; }
+
+/* ---------- SECTIONS ---------- */
+.doc-section { padding: 40px 0 4px; }
+.doc-section > h2 {
+  font-family: var(--font-headline, 'Jaymont', Georgia, serif);
+  font-size: var(--doc-title);
+  line-height: 1.18;
+  color: var(--aw-navy, #001a70);
+  margin: 0 0 16px;
+}
+html[dir="rtl"] .doc-section > h2 { font-family: var(--font-headline-ar, 'Noor', serif); line-height: 1.45; }
+.doc-section p, .doc-section li { max-width: var(--measure); }
+.doc-section p { margin: 0 0 14px; }
+.doc-lead { font-size: var(--doc-lede); line-height: 1.5; }
+.doc-section ul { margin: 0 0 16px; padding-inline-start: 1.15em; }
+.doc-section li { margin-bottom: 10px; }
+.doc-section li strong { color: var(--aw-navy, #001a70); }
+
+/* ---------- CALLOUT ---------- */
+.doc-callout {
+  border-inline-start: 3px solid var(--aw-gold, #cc9f53);
+  background: var(--white, #fff);
+  padding: 18px 22px;
+  margin: 8px 0 20px;
+  border-radius: 0 10px 10px 0;
+}
+html[dir="rtl"] .doc-callout { border-radius: 10px 0 0 10px; }
+.doc-callout p:last-child { margin-bottom: 0; }
+
+/* ---------- TABLE ---------- */
+/* Wide content scrolls inside its own box. The page body must never scroll
+   sideways, which on a phone is the difference between readable and broken. */
+.doc-table-wrap { overflow-x: auto; margin: 0 0 20px; -webkit-overflow-scrolling: touch; }
+.doc-table { width: 100%; border-collapse: collapse; font-size: var(--doc-caption); min-width: 520px; }
+.doc-table th {
+  text-align: start; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--doc-micro); letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--charcoal-light, #6b6b6b); font-weight: 600;
+  padding: 10px 12px; border-bottom: 1px solid var(--cream-dark, #e6e2da);
+}
+html[dir="rtl"] .doc-table th { letter-spacing: 0; text-transform: none; }
+.doc-table td { padding: 11px 12px; border-bottom: 1px solid #f0ede8; vertical-align: top; }
+.doc-table td:first-child { color: var(--aw-navy, #001a70); font-weight: 600; }
+
+/* ---------- STEPS ---------- */
+.doc-steps { display: grid; gap: 14px; margin: 0 0 20px; counter-reset: step; }
+.doc-step { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+.doc-step-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--doc-caption); color: var(--aw-gold, #cc9f53);
+  padding-top: 2px; font-variant-numeric: tabular-nums;
+}
+.doc-step-body { max-width: var(--measure); }
+.doc-step-body strong { color: var(--aw-navy, #001a70); }
+
+/* ---------- CARDS ---------- */
+.doc-cards { display: grid; gap: 16px; grid-template-columns: 1fr; margin: 0 0 20px; }
+@media (min-width: 720px) { .doc-cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+.doc-card { background: var(--white, #fff); border: 1px solid var(--cream-dark, #e6e2da); border-radius: 12px; padding: 20px; }
+.doc-card-title { font-weight: 700; color: var(--aw-navy, #001a70); margin: 0 0 8px; font-size: var(--doc-body); }
+.doc-card p { margin: 0; font-size: var(--doc-caption); }
+
+/* ---------- PRICE ---------- */
+.doc-price { background: var(--aw-navy, #001a70); color: var(--off-white, #faf9f7); border-radius: 14px; padding: 30px 28px; margin: 8px 0 22px; }
+.doc-price-amount { font-family: var(--font-headline, 'Jaymont', Georgia, serif); font-size: var(--doc-display); line-height: 1; margin: 0 0 8px; }
+html[dir="rtl"] .doc-price-amount { font-family: var(--font-headline-ar, 'Noor', serif); }
+.doc-price-terms { font-size: var(--doc-caption); opacity: 0.86; margin: 0; max-width: var(--measure); }
+.doc-price .doc-eyebrow { color: var(--aw-gold-light, #e8c97d); }
+
+/* ---------- SIGNATURE ---------- */
+.doc-sign { border-top: 1px solid var(--cream-dark, #e6e2da); margin-top: 34px; padding-top: 30px; }
+.doc-sig-grid { display: grid; gap: 30px; grid-template-columns: 1fr; margin-top: 26px; }
+@media (min-width: 620px) { .doc-sig-grid { grid-template-columns: 1fr 1fr; } }
+.doc-sig-line { border-bottom: 1px solid var(--charcoal, #2b2b2b); height: 40px; }
+.doc-sig-label { font-size: var(--doc-caption); color: var(--charcoal-light, #6b6b6b); padding-top: 8px; line-height: 1.45; }
+
+/* ---------- FOOTER ---------- */
+.doc-footer {
+  display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between;
+  border-top: 1px solid var(--cream-dark, #e6e2da); margin-top: 44px; padding-top: 18px;
+  font-size: var(--doc-micro); color: var(--charcoal-light, #6b6b6b);
+}
+
+/* ---------- STATE ---------- */
+.doc-error { max-width: 640px; margin: 80px auto; padding: 22px 24px; border: 1px solid #f0c9c0; background: #fdf4f2; border-radius: 12px; color: #a33b1c; font-size: var(--doc-caption); line-height: 1.6; }
+
+/* ---------- PRINT ---------- */
+/* These pages are sent as links and printed as PDFs in roughly equal measure,
+   so print is a target, not a courtesy. */
+@media print {
+  :root { --doc-base: 11pt; }
+  body { background: #fff; }
+  .doc { max-width: none; padding: 0; }
+  .doc-section { padding-top: 18px; break-inside: avoid; }
+  .doc-section > h2 { break-after: avoid; }
+  .doc-price { background: #fff; color: var(--aw-navy, #001a70); border: 1.5pt solid var(--aw-navy, #001a70); }
+  .doc-price-terms { opacity: 1; }
+  .doc-sign, .doc-card, .doc-callout, .doc-step { break-inside: avoid; }
+  .doc-table { min-width: 0; font-size: 9.5pt; }
+  .doc-table-wrap { overflow: visible; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #666; }
+}

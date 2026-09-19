@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>باسقات: مراجعة تصاميم إعلانات ميتا</title>
+<meta name="description" content="Basseqat Meta static-creative sample round: 8 concepts, copy + image, approval + comments.">
+<style>
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-SemiBold.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-Bold.woff2") format("woff2");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+:root{
+  --forest:#175734;
+  --terracotta:#BF7955;
+  --cream:#FFF8EF;
+  --ink:#22301f;
+  --muted:#6b6255;
+  --line:#e7ddcc;
+  --card:#ffffff;
+  --good:#175734;
+  --warn:#BF7955;
+  --hold:#8a8375;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Madani Arabic","Segoe UI",Tahoma,sans-serif;
+  line-height:1.7;
+}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px 110px}
+header.top{padding:36px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+header.top img{height:52px;display:block;margin-bottom:22px}
+header.top h1{font-size:25px;font-weight:700;color:var(--forest);margin:0 0 10px}
+header.top p{font-size:15px;color:var(--muted);margin:0 0 8px;max-width:700px}
+.howto{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:34px;font-size:14px;color:var(--ink)}
+.howto strong{color:var(--forest)}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  margin-bottom:26px;
+  box-shadow:0 2px 10px rgba(23,87,52,.05);
+}
+.card .eyebrow{font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--terracotta);text-transform:uppercase;margin-bottom:6px}
+.card h2{font-size:19px;font-weight:700;color:var(--forest);margin:0 0 14px}
+
+.img-single{width:100%;border-radius:10px;display:block;margin-bottom:16px}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:8px}
+.ab-cell{text-align:center}
+.ab-cell img{width:100%;border-radius:10px;display:block}
+.ab-tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--forest);border-radius:999px;padding:4px 12px;margin:10px 0 0}
+.ab-tag.synthetic{background:var(--terracotta)}
+.ab-pick{display:flex;gap:10px;justify-content:center;margin:14px 0 6px;flex-wrap:wrap}
+.ab-pick .ap-radio{font-size:13px}
+
+.copy-block{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0 18px;font-size:14.5px}
+.copy-block .cf-label{font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--terracotta);margin:0 0 4px}
+.copy-block .cf-value{margin:0 0 12px;color:var(--ink)}
+.copy-block .cf-value:last-child{margin-bottom:0}
+.copy-block .cta-badge{display:inline-block;background:var(--forest);color:#fff;font-size:12.5px;font-weight:700;border-radius:8px;padding:6px 12px}
+
+.approval-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding-top:14px;border-top:1px dashed var(--line);margin-top:4px}
+.ap-label{font-size:13px;color:var(--muted);font-weight:600;margin-left:6px}
+.ap-radio{
+  display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;
+  border:1.5px solid var(--line);font-size:13.5px;cursor:pointer;background:#fff;transition:.15s;
+}
+.ap-radio input{display:none}
+.ap-radio:hover{border-color:var(--forest)}
+.ap-radio.selected.accept-tone{background:var(--good);color:#fff;border-color:var(--good)}
+.ap-radio.selected.regen-tone{background:var(--warn);color:#fff;border-color:var(--warn)}
+.ap-radio.selected.hold-tone{background:var(--hold);color:#fff;border-color:var(--hold)}
+
+.section-discuss{margin-top:14px}
+.discuss-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.discuss-header h4{margin:0;font-size:13.5px;color:var(--muted);font-weight:600}
+.discuss-btn{background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;color:var(--ink);cursor:pointer;font-family:inherit}
+.discuss-btn:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.cmt-list{margin-top:10px}
+.cmt-item{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:10px 40px 10px 14px;margin-bottom:8px;font-size:13.5px}
+.cmt-author{display:block;font-weight:700;color:var(--forest);font-size:12.5px;margin-bottom:2px}
+.cmt-time{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.cmt-del{position:absolute;left:8px;top:8px;background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer;line-height:1}
+
+footer.bottom{text-align:center;padding-top:20px;color:var(--muted);font-size:13px}
+
+.cmt-modal{position:fixed;inset:0;background:rgba(23,20,10,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:16px}
+.cmt-modal.open{display:flex}
+.cmt-modal-body{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;max-width:440px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.cmt-modal-body h3{margin:0 0 6px;font-size:17px;color:var(--forest)}
+.cmt-modal-body .ctx{font-size:12px;color:var(--muted);margin-bottom:14px;padding:8px 10px;background:var(--cream);border-radius:6px;border-right:3px solid var(--terracotta)}
+.cmt-modal-body label{display:block;font-size:12px;color:var(--ink);margin-bottom:6px;font-weight:600}
+.cmt-modal-body input[type=text],.cmt-modal-body textarea{
+  width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+  color:var(--ink);font-size:14px;font-family:inherit;margin-bottom:14px;box-sizing:border-box;background:var(--cream);
+}
+.cmt-modal-body textarea{min-height:90px;resize:vertical}
+.cmt-modal-body input[type=text]:focus,.cmt-modal-body textarea:focus{outline:none;border-color:var(--forest)}
+.cmt-modal-actions{display:flex;gap:10px;justify-content:flex-start}
+.cmt-modal-actions button{padding:10px 18px;border-radius:8px;border:none;font-weight:600;cursor:pointer;font-size:13px;font-family:inherit}
+.cmt-modal-actions .save{background:var(--forest);color:#fff}
+.cmt-modal-actions .cancel{background:transparent;color:var(--muted);border:1px solid var(--line)}
+
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--forest);color:#fff;padding:10px 18px;border-radius:999px;
+  font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:3000;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:640px){
+  header.top h1{font-size:20px}
+  .card{padding:16px}
+  .ab-grid{grid-template-columns:1fr}
+  .approval-row{flex-direction:column;align-items:stretch}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div style="background:#175734;color:#FFF8EF;border-radius:14px;padding:16px 20px;margin-top:20px;font-size:14.5px;line-height:1.8">
+  ✨ في نسخة أحدث من المراجعة دي: <strong>الجولة التانية</strong> فيها 14 تصميم جديد مبني على نتايج الحملات + التصاميم دي نفسها, كلها في صفحة واحدة.
+  <a href="../basseqat-meta-ads-v2/" style="color:#F3C9A8;font-weight:700;text-decoration:underline">افتح صفحة الجولة التانية من هنا ←</a>
+</div>
+
+<header class="top">
+  <img src="assets/logo-primary.png" alt="باسقات">
+  <h1>مراجعة تصاميم إعلانات ميتا (باتش عينات)</h1>
+  <p>جهزنالكم 8 تصاميم عينة لإعلانات فيسبوك وإنستجرام، كل تصميم فيه الصورة والكوبي (العنوان والنص الأساسي والزرار). التصاميم دي عينات للمراجعة، مش نسخة نهائية، وبعد موافقتكم هنعرضها على خالد للاعتماد النهائي.</p>
+</header>
+
+<div class="howto">
+  <strong>إزاي تراجعوا:</strong> شوفوا كل تصميم (الصورة + الكوبي)، واختاروا "موافق" أو "اعمل نسخة تانية" أو "توقف وعلّق" تحت كل تصميم.
+  في التصاميم اللي فيها صورتين لخالد (A و B)، اختاروا كمان أنهي نسخة تفضلوها. لو حابين توضحوا حاجة، دوسوا "أضف تعليق".
+</div>
+
+<!-- CONCEPT 1 -->
+<article class="card" id="concept1">
+  <div class="eyebrow">تصميم 1 · سلطة المؤسس · للمستثمر الجاد</div>
+  <h2>خالد ناصر الدين: تعالى تشوف مش تسمع</h2>
+  <div class="ab-grid">
+    <div class="ab-cell">
+      <img src="assets/after/concept1-founder-golden-hour-A.png" alt="نسخة A: خالد في المزرعة">
+      <span class="ab-tag">A</span>
+    </div>
+    <div class="ab-cell">
+      <img src="assets/after/concept1-founder-golden-hour-B.png" alt="نسخة B: خالد في المزرعة، مشهد تاني">
+      <span class="ab-tag">B · مشهد تاني</span>
+    </div>
+  </div>
+  <div class="ab-pick">
+    <span class="ap-label">تفضلوا:</span>
+    <label class="ap-radio accept-tone" data-item="concept1-pick" data-decision="A"><input type="radio" name="concept1-pick">نسخة A</label>
+    <label class="ap-radio accept-tone" data-item="concept1-pick" data-decision="B"><input type="radio" name="concept1-pick">نسخة B</label>
+  </div>
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">أنا خالد ناصر الدين, رئيس مجلس إدارة باسقات. تمن سنين وأنا شغال في الاستثمار الزراعي, ورفضت مشاريع كتير قبل ما أختار الأرض دي بنفسي. فحصت التربة, المياه, الآبار, البنية التحتية, والمستندات بإيدي. مش هقعدلك أقول أرقام وأوعدك بيها, ده مش أسلوبنا في باسقات. اللي هعمله إني أوريك الأرض. أوريك النخيل اللي اتزرع من ست سنين. أوريك العمليات يوم بيوم. وبعد كده, القرار يبقى قرارك. عايز تبدأ؟ حمّل دليل باسقات, أو ابدأنا نتكلم على الواتساب.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">رئيس مجلس إدارة باسقات بيوريك الأرض بنفسه</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept1" data-decision="approve"><input type="radio" name="concept1">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept1" data-decision="regenerate"><input type="radio" name="concept1">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept1" data-decision="hold"><input type="radio" name="concept1">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept1','تصميم 1: خالد بين النخيل')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept1"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 2 -->
+<article class="card" id="concept2">
+  <div class="eyebrow">تصميم 2 · إثبات العملية · للمتردد الحذر</div>
+  <h2>مش كل مشروع تقدر تشوفه بعينك.. ده تقدر</h2>
+  <div class="ab-grid">
+    <div class="ab-cell">
+      <img src="assets/after/concept2-founder-medjool-cluster-A.png" alt="نسخة A: خالد وسط المشروع">
+      <span class="ab-tag">A</span>
+    </div>
+    <div class="ab-cell">
+      <img src="assets/after/concept2-founder-medjool-cluster-B.png" alt="نسخة B: خالد وسط النخيل">
+      <span class="ab-tag">B · مشهد تاني</span>
+    </div>
+  </div>
+  <div class="ab-pick">
+    <span class="ap-label">تفضلوا:</span>
+    <label class="ap-radio accept-tone" data-item="concept2-pick" data-decision="A"><input type="radio" name="concept2-pick">نسخة A</label>
+    <label class="ap-radio accept-tone" data-item="concept2-pick" data-decision="B"><input type="radio" name="concept2-pick">نسخة B</label>
+  </div>
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">كل اللي شفتهم بيوعدوا بأرقام, وبعدين بيختفوا. باسقات مش هتوعدك بحاجة. اللي هتعمله إنها توريك المشروع, وتسيبك تقرر. النخيل اللي في الصورة دي مش رسمة ولا رندر, ده نخيل مجدول حقيقي, مزروع من ست سنين, وشايفينه بأعيننا كل موسم. لو عندك سؤال زي: شفنا كتير ناس اتنصبوا, أو عايز أشوف بعينيا الأول, إحنا فاهمينك. مفيش حاجة هتاخد كلامنا فيها, كل حاجة تقدر تتأكد منها بنفسك. حمّل دليل باسقات, أو ابدأ محادثة واسأل أي سؤال بيريحك.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">مفيش وعود فاضية, في نخيل تقدر تلمسه</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept2" data-decision="approve"><input type="radio" name="concept2">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept2" data-decision="regenerate"><input type="radio" name="concept2">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept2" data-decision="hold"><input type="radio" name="concept2">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept2','تصميم 2: خالد وسط المشروع')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept2"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 3 -->
+<article class="card" id="concept3">
+  <div class="eyebrow">تصميم 3 · أصل في بلدك · لباني الإرث</div>
+  <h2>أصل في مصر يفضل لعيالك من بعدك</h2>
+  <div class="ab-grid">
+    <div class="ab-cell">
+      <img src="assets/after/concept3-founder-owner-land-A.png" alt="نسخة A: خالد واقف وسط الأرض">
+      <span class="ab-tag">A</span>
+    </div>
+    <div class="ab-cell">
+      <img src="assets/after/concept3-founder-owner-land-B.png" alt="نسخة B: خالد واقف وسط الأرض">
+      <span class="ab-tag">B · مشهد تاني</span>
+    </div>
+  </div>
+  <div class="ab-pick">
+    <span class="ap-label">تفضلوا:</span>
+    <label class="ap-radio accept-tone" data-item="concept3-pick" data-decision="A"><input type="radio" name="concept3-pick">نسخة A</label>
+    <label class="ap-radio accept-tone" data-item="concept3-pick" data-decision="B"><input type="radio" name="concept3-pick">نسخة B</label>
+  </div>
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">وانت شغال بره من سنين طويلة, في سؤال بيرجعلك كل شوية: لو حصل حاجة, هعرف أتابع الأرض وأنا مش في مصر؟ في باسقات, إحنا مانديرش عليك المشروع, إحنا نديره بالكامل. وانت بس بتتابع بالتقارير, وتزور لما تحب. اللي بتبنيه هنا مش استثمار وخلاص, ده أصل بيفضل باسمك في بلدك, وممكن يفضل لعيالك من بعدك. باسقات مشروع نخيل حقيقي في الفرافرة, بإدارة كاملة من غير ما تحتاج تكون موجود يوميا. حمّل دليل باسقات واعرف تفاصيل الإدارة والمتابعة, أو ابدأ محادثة على الواتساب.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">مش عايز تديره وانت مسافر؟ إحنا بندير كل حاجة</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept3" data-decision="approve"><input type="radio" name="concept3">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept3" data-decision="regenerate"><input type="radio" name="concept3">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept3" data-decision="hold"><input type="radio" name="concept3">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept3','تصميم 3: خالد وسط أرضه')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept3"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 4 -->
+<article class="card" id="concept4">
+  <div class="eyebrow">تصميم 4 · عملية حقيقية · للمستثمر الجاد</div>
+  <h2>مش أرض فاضية.. أرض بتشتغل من سنين</h2>
+  <img class="img-single" src="assets/after/concept4-aerial-farm.png" alt="صورة جوية لمزرعة النخيل والري">
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">لما تشوف الأرض من فوق كده, بتعرف حاجة صعب تعرفها من الكلام: فيه شغل حقيقي, ولا لسه كل حاجة على الورق؟ باسقات أرض شغالة بقالها سنين, مش مشروع لسه هيتزرع. شبكة ري كاملة, محطة طاقة شمسية, وآلاف من نخيل المجدول مزروعة ومتابعة موسم ورا موسم. مفيش وعود عن مستقبل بعيد, في بنية تحتية موجودة دلوقتي, تقدر تشوفها وتتأكد منها. عايز تعرف تفاصيل الأرض والري والطاقة؟ حمّل دليل باسقات, أو ابدأ محادثة واسأل.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">ري, طاقة شمسية, ونخيل مزروع, شوف بعينك من فوق</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept4" data-decision="approve"><input type="radio" name="concept4">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept4" data-decision="regenerate"><input type="radio" name="concept4">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept4" data-decision="hold"><input type="radio" name="concept4">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept4','تصميم 4: صورة جوية للمزرعة')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept4"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 5 -->
+<article class="card" id="concept5">
+  <div class="eyebrow">تصميم 5 · المنتج نفسه · للمتردد الحذر</div>
+  <h2>التمرة دي طلعت من أرض اسمها معروف</h2>
+  <img class="img-single" src="assets/after/concept5-medjool-product.png" alt="نخيل مجدول في المزرعة">
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">مجدول من أرقى أنواع التمور في العالم, ودلوقتي بيتزرع على أرض مصرية في الفرافرة. مش بنسألك تصدق كلام, بنقولك تعالى شوف النخلة اللي طالعة منها التمرة دي, من يوم ما اتزرعت لحد دلوقتي. كل خطوة موثقة: الزراعة, الري, المتابعة الموسمية, لحد الحصاد. عايز تفهم إزاي مشروع زي ده بيتحول لأصل تقدر تملك فيه نصيب؟ حمّل دليل باسقات, أو ابدأ محادثة على الواتساب.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">مجدول مصري, من مزرعة تقدر تزورها</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept5" data-decision="approve"><input type="radio" name="concept5">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept5" data-decision="regenerate"><input type="radio" name="concept5">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept5" data-decision="hold"><input type="radio" name="concept5">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept5','تصميم 5: نخيل مجدول')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept5"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 6 -->
+<article class="card" id="concept6">
+  <div class="eyebrow">تصميم 6 · بنية تحتية · للمستثمر الجاد</div>
+  <h2>ري وطاقة شمسية شغالين دلوقتي, مش لسه هيتجهزوا</h2>
+  <img class="img-single" src="assets/after/concept6-irrigation-solar.png" alt="طاقة شمسية وشبكة ري في المزرعة">
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">استثمار زراعي كلمة سهلة يقولها أي حد. اللي مش سهل إنه يكون عنده بنية تحتية شغالة تقدر تشوفها. في باسقات فيه شبكة ري كاملة, ومحطة طاقة شمسية بتشغل جزء من عمليات المزرعة, ومفيش حاجة من ده لسه على الورق. كل حاجة شغالة دلوقتي, وبتتابع وبتتصلح وبتتطور كل موسم. ده الفرق بين مشروع بيقولك هنجهز, ومشروع بيقولك اتجهزنا وشغالين. عايز تشوف تفاصيل البنية التحتية؟ حمّل دليل باسقات, أو ابدأ محادثة واسأل أي سؤال.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">البنية التحتية اللي بتفرق بين مشروع حقيقي وكلام</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept6" data-decision="approve"><input type="radio" name="concept6">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept6" data-decision="regenerate"><input type="radio" name="concept6">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept6" data-decision="hold"><input type="radio" name="concept6">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept6','تصميم 6: البنية التحتية والري')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept6"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 7 -->
+<article class="card" id="concept7">
+  <div class="eyebrow">تصميم 7 · كسر الشك · لكل الشرائح</div>
+  <h2>اللي يقولك مضمون, اسأل نفسك ليه</h2>
+  <img class="img-single" src="assets/after/concept7-trust-card.png" alt="كارت نصي: الكلام سهل, الأرض بتتشاف">
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">كل اللي سمعناهم بيقولوا «عائد كبير» و«فرصة ماتفوتش», بيختفوا بعد فترة, وبيسيبوا وراهم ناس مصدقة كلام مبني على مفيش. باسقات عملت حاجة مختلفة من الأول: من غير وعود, بس بتوري المشروع زي ما هو. الأرض, النخيل, الري, الطاقة, والتوثيق, كله قدامك تشوفه قبل ما تقرر أي حاجة. القرار مش لازم يتبني على الانبهار بكلام حلو, لازم يتبني على إنك شايف اللي بتشتري فيه فعلا. حمّل دليل باسقات وشوف بنفسك, أو ابدأ محادثة على الواتساب واسأل أي سؤال.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">باسقات مش بتوعدك بأرقام, بتوريك المشروع</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept7" data-decision="approve"><input type="radio" name="concept7">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept7" data-decision="regenerate"><input type="radio" name="concept7">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept7" data-decision="hold"><input type="radio" name="concept7">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept7','تصميم 7: كارت كسر الشك')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept7"></div>
+  </div>
+</article>
+
+<!-- CONCEPT 8 -->
+<article class="card" id="concept8">
+  <div class="eyebrow">تصميم 8 · قلق على الفلوس · للمغترب</div>
+  <h2>بتشتغل بره من سنين, وفلوسك واقفة مكانها؟</h2>
+  <img class="img-single" src="assets/after/concept8-anxiety-card.png" alt="كارت نصي: فلوسك بتاكل نفسها؟">
+  <div class="copy-block">
+    <p class="cf-label">النص الأساسي</p>
+    <p class="cf-value">كل يوم بيعدي وانت شغال في الغربة, وفلوسك اللي حوشتها بتقف مكانها. التضخم بياخد منها شوية شوية, والبنك مش بيحميها من ده. فيه طريقة تانية: مشروع نخيل مجدول حقيقي في مصر, بعمليات موثقة تقدر تتابعها, مش مجرد أرقام على شاشة. مش بنقولك استثمر دلوقتي, بنقولك افهم الأول, وبعدين قرر. حمّل دليل باسقات تعرف التفاصيل, أو ابدأ محادثة على الواتساب وإحنا نجاوبك على أي سؤال.</p>
+    <p class="cf-label">وصف الرابط</p>
+    <p class="cf-value">فيه طريقة تانية غير إنك تسيبها في البنك</p>
+    <span class="cta-badge">تعرف أكتر</span>
+  </div>
+  <div class="approval-row">
+    <span class="ap-label">قرارك:</span>
+    <label class="ap-radio accept-tone" data-item="concept8" data-decision="approve"><input type="radio" name="concept8">✓ موافق</label>
+    <label class="ap-radio regen-tone" data-item="concept8" data-decision="regenerate"><input type="radio" name="concept8">↻ اعمل نسخة تانية</label>
+    <label class="ap-radio hold-tone" data-item="concept8" data-decision="hold"><input type="radio" name="concept8">⏸ توقف وعلّق</label>
+  </div>
+  <div class="section-discuss">
+    <div class="discuss-header"><h4>تعليق على التصميم ده</h4>
+      <button class="discuss-btn" onclick="openCmtModal('concept8','تصميم 8: كارت قلق الفلوس')">💬 أضف تعليق</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="concept8"></div>
+  </div>
+</article>
+
+<footer class="bottom">
+  بمجرد ما توافقوا على العينات، هنعرضها على خالد للاعتماد النهائي قبل أي إطلاق فعلي.
+</footer>
+
+</div>
+
+<!-- COMMENT MODAL -->
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true">
+  <div class="cmt-modal-body">
+    <h3 id="cmt-modal-title">أضف تعليقك</h3>
+    <div class="ctx" id="cmt-modal-ctx">على: </div>
+    <div id="cmt-name-row" style="display:none">
+      <label for="cmt-name-input">اسمك</label>
+      <input type="text" id="cmt-name-input" placeholder="مثال: خالد ناصر الدين">
+    </div>
+    <label for="cmt-text-input">التعليق</label>
+    <textarea id="cmt-text-input" maxlength="4900" placeholder="رأيك في التصميم ده..."></textarea>
+    <div class="cmt-modal-actions">
+      <button class="save" onclick="submitComment()">حفظ التعليق</button>
+      <button class="cancel" onclick="closeCmtModal()">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const DECK_SLUG = "basseqat-meta-ads-v1";
+window.AW_FB = { db, DECK_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+let fbReady = false;
+let toastTimer = null;
+const stateDecisions = {};
+const stateComments = {};
+const NAME_KEY = "basseqat-meta-ads-v1-reviewer-name";
+
+function getName(){ return localStorage.getItem(NAME_KEY) || ""; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initSync(); });
+
+function initSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    Object.keys(stateDecisions).forEach(k => delete stateDecisions[k]);
+    snap.forEach(d => { stateDecisions[d.id] = d.data(); });
+    renderApRadioState();
+  }, err => console.error("decisions onSnapshot:", err));
+
+  const cmtRef = fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll("[data-cmt-list]").forEach(el => renderComments(el.dataset.cmtList));
+  }, err => console.error("comments onSnapshot:", err));
+}
+
+async function submitItemDecision(itemKey, decision, label){
+  if (!fbReady) { showToast("لسه بنتصل، جرب تاني بعد لحظة."); return; }
+  let name = getName();
+  if (!name) {
+    name = (prompt("اسمك (هيتسجّل مرة واحدة):") || "").trim();
+    if (!name) { showToast("من فضلك اكتب اسمك."); return; }
+    setName(name);
+  }
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "decisions", itemKey),
+      { decision, name, updatedAt: fb.serverTimestamp() }
+    );
+    showToast("اتسجل قرارك: " + label);
+  } catch (e) {
+    console.error("submitItemDecision", e);
+    showToast("حصل خطأ في الحفظ: " + (e.message || "غير معروف"));
+  }
+}
+window.submitItemDecision = submitItemDecision;
+
+function attachAllRadios(){
+  document.querySelectorAll(".ap-radio").forEach(label => {
+    label.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const item = label.dataset.item;
+      const decision = label.dataset.decision;
+      const labelTextEl = label.cloneNode(true);
+      labelTextEl.querySelectorAll("input").forEach(n => n.remove());
+      const labelText = labelTextEl.textContent.trim();
+      document.querySelectorAll('.ap-radio[data-item="' + CSS.escape(item) + '"]').forEach(r => r.classList.remove("selected"));
+      label.classList.add("selected");
+      await submitItemDecision(item, decision, labelText);
+    });
+  });
+}
+document.addEventListener("DOMContentLoaded", attachAllRadios);
+
+function renderApRadioState(){
+  document.querySelectorAll(".ap-radio").forEach(r => r.classList.remove("selected"));
+  Object.entries(stateDecisions).forEach(([itemKey, data]) => {
+    const sel = '.ap-radio[data-item="' + CSS.escape(itemKey) + '"][data-decision="' + CSS.escape(data.decision) + '"]';
+    document.querySelectorAll(sel).forEach(r => r.classList.add("selected"));
+  });
+}
+
+let activeCmtSection = null;
+let activeCmtLabel = "";
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById("cmt-modal");
+  const nameRow = document.getElementById("cmt-name-row");
+  const nameInput = document.getElementById("cmt-name-input");
+  const textInput = document.getElementById("cmt-text-input");
+  const ctx = document.getElementById("cmt-modal-ctx");
+  ctx.textContent = "على: " + label;
+  const existing = getName();
+  if (existing) { nameRow.style.display = "none"; }
+  else { nameRow.style.display = "block"; nameInput.value = ""; setTimeout(() => nameInput.focus(), 50); }
+  textInput.value = "";
+  if (existing) setTimeout(() => textInput.focus(), 50);
+  modal.classList.add("open");
+}
+function closeCmtModal(){
+  document.getElementById("cmt-modal").classList.remove("open");
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById("cmt-name-input");
+  const textInput = document.getElementById("cmt-text-input");
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || "").trim();
+    if (!name) { nameInput.focus(); showToast("اكتب اسمك من فضلك."); return; }
+    setName(name);
+  }
+  const text = (textInput.value || "").trim();
+  if (!text) { textInput.focus(); showToast("التعليق فاضي."); return; }
+  if (!fbReady) { showToast("لسه بنتصل، جرب تاني."); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast("اتسجل التعليق.");
+  } catch (e) {
+    console.error("submitComment", e);
+    showToast("حصل خطأ في الحفظ: " + (e.message || "تأكد من الاتصال"));
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="' + sectionKey + '"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ""; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString("ar-EG", { hour:"2-digit", minute:"2-digit", day:"2-digit", month:"short" });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById(\'' + c.id + '\')" title="حذف">×</button>' : '';
+    return '<div class="cmt-item">' + delBtn + '<span class="cmt-author">' + escapeHtml(c.name) + '</span>' + escapeHtml(c.text) + '<span class="cmt-time">' + ts + '</span></div>';
+  }).join("");
+}
+async function deleteCommentById(commentId){
+  if (!confirm("تحذف التعليق ده؟")) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "adApprovalFeedback", fb.DECK_SLUG, "comments", commentId));
+    showToast("اتحذف.");
+  } catch(e){ showToast("الحذف فشل."); }
+}
+window.openCmtModal = openCmtModal;
+window.closeCmtModal = closeCmtModal;
+window.submitComment = submitComment;
+window.deleteCommentById = deleteCommentById;
+
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
+}
+
+document.getElementById("cmt-modal").addEventListener("click", e => { if (e.target.id === "cmt-modal") closeCmtModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeCmtModal(); });
+</script>
+
+</body>
+</html>

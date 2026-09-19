@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTN Textiles: Catalog DPA Health — Action Sheet</title>
+<meta property="og:title" content="OTN Textiles: Catalog DPA Health Action Sheet">
+<meta property="og:description" content="What the broken-product issue is, what it is not, and the exact steps for the media-buying team to fix it.">
+<style>
+:root{
+  --navy:#001a70; --gold:#cc9f53; --ink:#1a1d2b; --muted:#6b7280;
+  --bg:#f7f8fb; --card:#ffffff; --border:#e6e8f0;
+  --good:#2c9d5f; --warn:#cc9f53; --bad:#c0392b;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.top{background:linear-gradient(135deg,var(--navy),#0a2a8f);color:#fff;padding:46px 0 36px}
+header.top .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+header.top h1{font-size:32px;margin:10px 0 8px;max-width:760px}
+header.top p{color:#c9d2f0;font-size:16px;max-width:740px;margin:0}
+.status-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:24px}
+.status-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 16px}
+.status-chip .n{font-size:18px;font-weight:800}
+.status-chip .l{font-size:12px;color:#c9d2f0;margin-top:2px}
+nav.side{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:10px 0;z-index:10;overflow-x:auto;white-space:nowrap}
+nav.side a{display:inline-block;padding:8px 14px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}
+section.section{padding:38px 0;border-bottom:1px solid var(--border)}
+h2{font-size:22px;margin:0 0 6px;color:var(--navy)}
+h2 .num{color:var(--gold);margin-right:8px}
+.sub{color:var(--muted);font-size:15px;margin-bottom:20px;max-width:760px}
+.callout{background:#fff;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 18px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.callout.bad{border-left-color:var(--bad);background:#fff8f7}
+.callout.good{border-left-color:var(--good);background:#f6fcf8}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.02em}
+td{font-family:"SF Mono",Monaco,monospace;font-size:13px}
+td.plain{font-family:inherit}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.badge.good{background:#e6f6ec;color:var(--good)}
+.badge.warn{background:#fdf2df;color:#8a6414}
+.badge.bad{background:#fbe9e7;color:var(--bad)}
+.badge.locked{background:#e8ecfb;color:var(--navy)}
+.code-pill{display:inline-block;background:#f2f4fa;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-family:"SF Mono",Monaco,monospace;font-size:12px;color:var(--ink)}
+ol.steps{padding-left:22px}
+ol.steps li{margin-bottom:12px;line-height:1.55}
+ol.steps li b{color:var(--navy)}
+.action-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.pill-btn{background:var(--gold);color:#1a1d2b;border:none;border-radius:999px;padding:10px 20px;font-weight:700;cursor:pointer;font-size:14px;text-decoration:none;display:inline-block}
+.pill-btn.ghost{background:transparent;border:1.5px solid var(--border);color:var(--ink)}
+.pill-btn.navy{background:var(--navy);color:#fff}
+footer{padding:32px 0;text-align:center;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Admireworks x OTN Textiles</div>
+    <h1>Catalog DPA Health — Action Sheet for Media Buying</h1>
+    <p>Why the OTN group keeps seeing <code>{{product.name}}</code>, what is a real bug and what is not, and the exact IDs to fix it. Last updated 2026-09-10.</p>
+    <div class="status-strip">
+      <div class="status-chip"><div class="n">2 distinct issues</div><div class="l">One expected, one real</div></div>
+      <div class="status-chip"><div class="n">4 broken variants</div><div class="l">Live in the catalog right now</div></div>
+      <div class="status-chip"><div class="n">1 active DPA</div><div class="l">Spending ~25K EGP/30d</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="side">
+  <div class="wrap">
+    <a href="#what">What is happening</a>
+    <a href="#real">The real bug</a>
+    <a href="#actions">Actions to take</a>
+    <a href="#verify">Verify</a>
+    <a href="#prevent">Prevent</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section class="section" id="what">
+  <h2><span class="num">01</span>What is happening</h2>
+  <p class="sub">The OTN team keeps sending screenshots of ads that look broken. There are actually two different things in those screenshots, and only one of them is a defect.</p>
+
+  <div class="grid2">
+    <div class="callout good">
+      <p><b>Expected: raw <code>{{product.name}}</code> in the post story</b></p>
+      <p style="font-size:14px;color:var(--muted);margin:8px 0 0 0">When a page <b>admin</b> taps into a catalog DPA to view comments, Meta has no product context, so it renders the Liquid template literally. Every catalog DPA in the world looks like this when viewed that way. It does <b>not</b> mean users are seeing it.</p>
+    </div>
+    <div class="callout bad">
+      <p><b>Real bug: broken product cards in the feed</b></p>
+      <p style="font-size:14px;color:var(--muted);margin:8px 0 0 0">The Sep 6 screenshots show a product card with no image and placeholders like <code>{{product.name}}</code> / <code>{{product.current_price}}</code>. This is users actually seeing a broken product from the catalog. It is caused by stale/deleted Shopify variants still present in the Meta catalog.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="real">
+  <h2><span class="num">02</span>The real bug, found today</h2>
+  <p class="sub">The active DPA uses product set <span class="code-pill">354253286898964</span> (“All Products”, 186 products). Four variants in that set are broken:</p>
+
+  <div class="card">
+    <table>
+      <tr><th>Meta product ID</th><th>Retailer ID</th><th>Product URL</th><th>What is wrong</th></tr>
+      <tr><td>8893318930788185</td><td>42917325504718</td><td class="plain">white-set-of-6-wavy-towels</td><td><span class="badge bad">No name, $0.00, 404 image</span></td></tr>
+      <tr><td>8968126349950971</td><td>42917325406414</td><td class="plain">white-set-of-6-wavy-towels</td><td><span class="badge bad">No name, $0.00, 404 image</span></td></tr>
+      <tr><td>9065445410235961</td><td>42917325439182</td><td class="plain">white-set-of-6-wavy-towels</td><td><span class="badge bad">No name, $0.00, 404 image</span></td></tr>
+      <tr><td>9253107568081890</td><td>42917325373646</td><td class="plain">white-set-of-6-wavy-towels</td><td><span class="badge bad">No name, $0.00, 404 image</span></td></tr>
+    </table>
+  </div>
+
+  <div class="callout">
+    <b>Why this matters:</b> the active catalog DPA <span class="code-pill">120245911762830770</span> (“C1 · Catalog Cold Prospecting”) is using this product set. It spent <b>EGP 24,994 in the last 30 days</b> and served ~94K impressions. Any of those impressions could hit one of the four broken cards.
+  </div>
+</section>
+
+<section class="section" id="actions">
+  <h2><span class="num">03</span>Actions to take</h2>
+  <p class="sub">Do these in order. The first one stops the bleeding today. The second one fixes the root cause.</p>
+
+  <div class="card">
+    <p><b>1. Create a clean “All Products” product set and repoint the DPAs</b></p>
+    <ol class="steps">
+      <li>In Meta Commerce Manager, open catalog <span class="code-pill">1231856704041943</span> → Product sets.</li>
+      <li>Create a new product set named <b>“All Products — Clean”</b> based on <span class="code-pill">354253286898964</span>.</li>
+      <li>Exclude the four retailer IDs:
+        <div style="margin:8px 0">
+          <span class="code-pill">42917325504718</span>
+          <span class="code-pill">42917325406414</span>
+          <span class="code-pill">42917325439182</span>
+          <span class="code-pill">42917325373646</span>
+        </div>
+      </li>
+      <li>Update these three ads to use the new product set:
+        <ul style="margin-top:6px">
+          <li><span class="code-pill">120245911762830770</span> — C1 · Catalog Cold Prospecting <span class="badge bad">ACTIVE</span></li>
+          <li><span class="code-pill">120245911764750770</span> — C2 · Catalog Retargeting <span class="badge warn">ADSET_PAUSED</span></li>
+          <li><span class="code-pill">120245796582860770</span> — Carousel <span class="badge warn">ADSET_PAUSED</span></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <p><b>2. Fix or remove the four broken Shopify variants</b></p>
+    <ol class="steps">
+      <li>Open OTN Shopify admin → Products → <b>“White Set of 6 Wavy Towels”</b>.</li>
+      <li>For each of the four variants above, either:
+        <ul>
+          <li>Set a real name, price in EGP, availability, and upload a working 1080×1080 image, OR</li>
+          <li>Delete / set the variant to draft if it is no longer sold.</li>
+        </ul>
+      </li>
+      <li>Force a Meta catalog sync (Shopify channel → Facebook & Instagram → Sync products), or wait for the next automatic sync and re-check the four product IDs.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <p><b>3. Optional cleanup</b></p>
+    <ol class="steps">
+      <li>The paused carousel creative <span class="code-pill">4501277783527248</span> uses <code>{{product.name}}</code> instead of <code>{{product.name | titleize}}</code>. When it is re-enabled, rebuild it to match the main DPA template standard.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="verify">
+  <h2><span class="num">04</span>How to verify</h2>
+  <p class="sub">After the fix, confirm both the catalog and the live ads are clean.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <p><b>Catalog check</b></p>
+      <p style="font-size:14px;color:var(--muted)">Query the product set and confirm every product has:</p>
+      <ul style="font-size:14px;color:var(--muted)">
+        <li>a non-empty <code>name</code></li>
+        <li>a price starting with <code>EGP</code>, not <code>$0.00</code></li>
+        <li><code>availability</code> = <code>in stock</code> or <code>out of stock</code></li>
+        <li>an <code>image_url</code> that returns HTTP 200</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p><b>Ad check</b></p>
+      <p style="font-size:14px;color:var(--muted)">For the active DPA, confirm:</p>
+      <ul style="font-size:14px;color:var(--muted)">
+        <li>Creative still points to a product set</li>
+        <li>Effective status is <code>ACTIVE</code></li>
+        <li>Preview a few cards from the clean set on mobile and desktop</li>
+        <li>Spend continues and CTR does not drop</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="prevent">
+  <h2><span class="num">05</span>Prevent it from recurring</h2>
+  <p class="sub">The current weekly DOF watch checks Advantage+ Creative toggles, not catalog health. Add a parallel catalog-health check.</p>
+
+  <div class="card">
+    <p><b>Weekly catalog-health sweep</b></p>
+    <ol class="steps">
+      <li>Pull every product in each DPA product set.</li>
+      <li>Flag any product missing <code>name</code>, with <code>$0.00</code> price, empty <code>availability</code>, or a non-200 <code>image_url</code>.</li>
+      <li>Report the count + retailer IDs to the team Slack/WhatsApp thread.</li>
+      <li>If count &gt; 0, create a clean set immediately while Shopify is being fixed.</li>
+    </ol>
+  </div>
+
+  <div class="callout good">
+    <b>What to tell OTN:</b> “The <code>{{product.name}}</code> you see when opening the post story is normal Meta behavior for catalog ads — every DPA looks like that to admins. The broken product-card issue is real and is caused by four stale towel variants in the catalog. We are excluding them from the live DPA and fixing them in Shopify.”
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Admireworks Internal OS · ops.admireworks.com · Updated 2026-09-10
+  </div>
+</footer>
+
+</main>
+</body>
+</html>

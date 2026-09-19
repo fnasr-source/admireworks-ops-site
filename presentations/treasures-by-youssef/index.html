@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATHAR by Youssef . The Founding Brand Offer . Admireworks</title>
+<style>
+  :root{
+    --navy:#001a70; --gold:#cc9f53; --brass:#b8860b; --parchment:#f6efe1;
+    --lapis:#1c3a6e; --terra:#c4582e; --ink:#23211c; --muted:#6b6557; --line:#e4dcc9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:#fbf8f1;line-height:1.55;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 40px;width:100%;}
+  h1,h2,h3,.kicker,.num,.lab,.tag,.fstep b,table,.btn,.steps b{font-family:'Helvetica Neue',Arial,sans-serif;}
+  .kicker{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+
+  /* full-page bands */
+  .slide{min-height:100vh;display:flex;align-items:center;padding:80px 0;border-bottom:1px solid var(--line);page-break-after:always;}
+  .dark{background:linear-gradient(135deg,var(--navy),var(--lapis));color:#fff;border:none;}
+  .dark .kicker{color:var(--gold);}
+  .dark h1,.dark h2,.dark h3{color:#fff;}
+  .light{background:#fbf8f1;}
+  .parch{background:var(--parchment);}
+
+  .ar{direction:rtl;font-family:Arial,sans-serif;}
+
+  /* cover */
+  .cover h1{font-size:84px;line-height:.98;letter-spacing:-1.5px;margin:18px 0 10px;font-weight:800;}
+  .cover .arbig{font-size:40px;color:var(--gold);margin-bottom:30px;}
+  .cover .lead{font-size:24px;color:#d9e0f3;max-width:720px;line-height:1.4;}
+  .cover .meta{margin-top:48px;font-family:Arial,sans-serif;font-size:13px;color:#aab6e0;letter-spacing:.12em;}
+  .mark{width:88px;height:88px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;margin-bottom:6px;display:block;}
+
+  /* big provocative question */
+  .ask h2{font-size:64px;line-height:1.08;letter-spacing:-1px;font-weight:800;max-width:900px;}
+  .ask .arq{font-size:30px;color:var(--gold);margin-top:26px;max-width:760px;line-height:1.5;}
+  .ask .small{font-size:18px;color:#d9e0f3;margin-top:34px;max-width:620px;}
+
+  h2.big{font-size:48px;line-height:1.06;letter-spacing:-.6px;color:var(--navy);font-weight:800;margin:14px 0 6px;}
+  .dark h2.big{color:#fff;}
+  .arsub{font-size:22px;color:var(--gold);direction:rtl;font-family:Arial,sans-serif;margin:6px 0 24px;}
+  .sub{color:var(--muted);font-size:20px;margin-bottom:30px;max-width:760px;line-height:1.45;}
+  .dark .sub{color:#c9d2ee;}
+
+  .grid{display:grid;gap:22px;}
+  .g3{grid-template-columns:repeat(3,1fr);} .g2{grid-template-columns:repeat(2,1fr);} .g4{grid-template-columns:repeat(4,1fr);}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;}
+  .dark .stat{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);}
+  .stat .num{font-size:44px;font-weight:800;color:var(--navy);line-height:1;}
+  .dark .stat .num{color:#fff;}
+  .stat .num span{color:var(--gold);}
+  .stat .lab{font-size:13.5px;color:var(--muted);margin-top:12px;text-transform:uppercase;letter-spacing:.07em;line-height:1.4;}
+  .dark .stat .lab{color:#aab6e0;}
+
+  /* price ladder */
+  .ladder{display:flex;align-items:flex-end;gap:16px;margin-top:30px;}
+  .rung{flex:1;border-radius:12px 12px 0 0;padding:22px 18px;color:#fff;font-family:Arial,sans-serif;}
+  .rung b{display:block;font-size:18px;margin-bottom:4px;} .rung small{opacity:.9;font-size:13px;line-height:1.4;}
+  .r1{background:#9a948a;height:150px;} .r2{background:var(--terra);height:260px;border:3px solid var(--gold);} .r3{background:var(--navy);height:360px;}
+  .empty{margin-top:24px;font-size:24px;color:var(--terra);font-weight:800;font-family:Georgia,serif;font-style:italic;}
+
+  /* moat / advantages list */
+  .moat{counter-reset:m;margin-top:10px;}
+  .moat .item{display:flex;gap:22px;padding:22px 0;border-bottom:1px dashed rgba(255,255,255,.22);}
+  .light .moat .item,.parch .moat .item{border-bottom:1px dashed var(--line);}
+  .moat .item:before{counter-increment:m;content:counter(m);font-family:Arial,sans-serif;font-weight:800;font-size:22px;color:#fff;background:var(--gold);min-width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .moat h3{font-size:23px;margin:4px 0 6px;}
+  .moat p{font-size:16px;line-height:1.5;}
+  .dark .moat p{color:#c9d2ee;}
+
+  /* product placeholder slot */
+  .slot{background:var(--parchment);border:2px dashed var(--gold);border-radius:14px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;}
+  .slot .cap{font-family:Arial,sans-serif;color:var(--muted);font-size:14px;letter-spacing:.04em;}
+  .slot .capar{font-family:Arial,sans-serif;color:var(--brass);font-size:14px;direction:rtl;margin-top:6px;}
+
+  /* funnel */
+  .funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px;}
+  .fstep{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:12px;padding:22px;}
+  .dark .fstep{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);border-top:5px solid var(--gold);}
+  .fstep b{color:var(--navy);display:block;margin-bottom:8px;font-size:16px;}
+  .dark .fstep b{color:#fff;}
+  .fstep small{color:var(--muted);font-size:13.5px;line-height:1.45;}
+  .dark .fstep small{color:#aab6e0;}
+  .arrow{text-align:center;font-size:22px;color:var(--gold);margin-top:18px;font-weight:800;}
+
+  /* pyrrha proof */
+  .proof{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;}
+  .proof img{width:100%;border-radius:14px;border:1px solid var(--line);object-fit:cover;max-height:420px;}
+  .proof .quote{font-size:20px;line-height:1.5;}
+
+  /* value stack table */
+  .stack{width:100%;border-collapse:collapse;margin-top:22px;font-family:Arial,sans-serif;font-size:16px;}
+  .stack td{padding:15px 16px;border-bottom:1px solid var(--line);}
+  .stack td.amt{text-align:right;font-weight:700;color:var(--navy);white-space:nowrap;}
+  .stack tr:last-child td{border-bottom:none;}
+  .stack .tot td{background:var(--navy);color:#fff;font-size:19px;font-weight:800;border-radius:0;}
+  .stack .tot td.amt{color:var(--gold);}
+  .anchor{margin-top:26px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .strike{font-family:Arial,sans-serif;font-size:30px;color:var(--muted);text-decoration:line-through;}
+  .price{font-family:Arial,sans-serif;font-size:64px;font-weight:800;color:var(--navy);line-height:1;}
+  .price span{font-size:24px;color:var(--gold);}
+
+  /* roadmap */
+  .road{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
+  .phase{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;border-top:5px solid var(--gold);}
+  .phase .ph-k{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+  .phase h3{font-size:21px;color:var(--navy);margin:8px 0 10px;}
+  .phase p{font-size:15px;color:var(--ink);line-height:1.5;}
+  .phase .pr{font-family:Arial,sans-serif;font-weight:800;color:var(--navy);margin-top:14px;font-size:17px;}
+
+  /* investment cards */
+  .invest{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;margin-top:24px;}
+  .ibox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:32px;}
+  .ibox .big-num{font-family:Arial,sans-serif;font-size:60px;font-weight:800;color:#fff;line-height:1;}
+  .ibox .big-num span{font-size:24px;color:var(--gold);}
+  .ibox .note{color:#c9d2ee;font-size:16px;margin-top:14px;line-height:1.5;}
+  .split{display:flex;gap:14px;margin-top:20px;}
+  .split div{flex:1;background:rgba(255,255,255,.08);border-radius:10px;padding:16px;text-align:center;font-family:Arial,sans-serif;}
+  .split b{display:block;color:var(--gold);font-size:22px;}
+  .split small{color:#c9d2ee;font-size:12.5px;}
+  .tier{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+  .tier b{font-family:Arial,sans-serif;color:#fff;font-size:17px;}
+  .tier .t-pr{font-family:Arial,sans-serif;color:var(--gold);font-weight:800;float:right;}
+  .tier small{display:block;color:#aab6e0;font-size:13px;margin-top:6px;clear:both;}
+
+  /* safe / reasons */
+  .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;}
+  .reason{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;border-left:5px solid var(--gold);}
+  .reason h3{font-size:19px;color:var(--navy);margin-bottom:8px;}
+  .reason p{font-size:15px;color:var(--ink);line-height:1.5;}
+  .launch{background:var(--gold);color:#fff;border-radius:14px;padding:24px 28px;margin-top:26px;display:flex;align-items:center;gap:18px;}
+  .launch .gift{font-size:34px;}
+  .launch b{font-family:Arial,sans-serif;font-size:20px;}
+  .launch p{font-size:15px;margin-top:4px;opacity:.95;}
+
+  /* steps */
+  .steps{counter-reset:s;margin-top:24px;}
+  .steps .st{display:flex;gap:22px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed rgba(255,255,255,.22);}
+  .steps .st:before{counter-increment:s;content:counter(s);font-family:Arial,sans-serif;font-weight:800;font-size:22px;color:var(--navy);background:var(--gold);min-width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .steps h3{font-size:22px;margin-bottom:4px;}
+  .steps p{font-size:16px;color:#c9d2ee;}
+
+  /* closing */
+  .pos{background:linear-gradient(135deg,var(--brass),var(--gold));color:#fff;border-radius:18px;padding:56px 48px;text-align:center;}
+  .pos .q{font-size:38px;font-weight:800;font-family:Georgia,serif;line-height:1.25;}
+  .pos .qar{font-size:24px;direction:rtl;font-family:Arial,sans-serif;margin-top:20px;opacity:.95;}
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:800;font-size:18px;letter-spacing:.04em;padding:16px 34px;border-radius:40px;margin-top:30px;}
+  .contact{margin-top:34px;color:#c9d2ee;font-family:Arial,sans-serif;font-size:15px;text-align:center;letter-spacing:.04em;}
+  .src{font-family:Arial,sans-serif;font-size:12px;color:#9a9482;margin-top:24px;}
+  .dark .src{color:#8893bf;}
+
+  @media(max-width:760px){
+    .g3,.g4,.funnel,.reasons,.road{grid-template-columns:1fr 1fr;}
+    .proof,.invest{grid-template-columns:1fr;}
+    .cover h1{font-size:52px;} .ask h2{font-size:40px;} h2.big{font-size:34px;}
+    .imgrow,.land{grid-template-columns:1fr 1fr;}
+  }
+  /* ---- enrichment: figures, cover background, competitor landscape ---- */
+  .fig{width:100%;border-radius:14px;border:1px solid var(--line);object-fit:cover;display:block;}
+  .dark .fig{border-color:rgba(255,255,255,.16);}
+  .figcap{font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted);margin-top:8px;letter-spacing:.03em;}
+  .dark .figcap{color:#8893bf;}
+  .imgrow{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px;}
+  .coverbg{background:linear-gradient(135deg,rgba(0,26,112,.86),rgba(20,40,90,.80)),url('assets/generated/cover-rooftop.png');background-size:cover;background-position:center;}
+  .land{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;}
+  .lcard{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .lcard .im{height:190px;background:#efe8d6 center/cover no-repeat;border-bottom:1px solid var(--line);}
+  .lcard .bd{padding:14px 16px;}
+  .lcard .lt{display:inline-block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:20px;margin-bottom:7px;}
+  .lt-ceil{background:#e7ecfb;color:var(--navy);} .lt-floor{background:#f3e3da;color:var(--terra);} .lt-ref{background:#eef3ec;color:#3f6b4f;}
+  .lcard h3{font-size:15px;color:var(--navy);margin-bottom:4px;} .lcard p{font-size:12.5px;color:var(--muted);line-height:1.4;}
+  /* trio image rows, palette, funnel viz, clean pricing */
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
+  .trio figure{margin:0;} .trio img{width:100%;height:340px;object-fit:cover;border-radius:14px;border:1px solid var(--line);} .dark .trio img{border-color:rgba(255,255,255,.16);}
+  .trio figcaption{font-family:Arial,sans-serif;font-size:13px;color:var(--muted);margin-top:10px;text-align:center;} .dark .trio figcaption{color:#aab6e0;}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;align-items:center;}
+  .sample-tag{display:inline-block;font-family:Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--navy);background:var(--gold);padding:4px 12px;border-radius:20px;}
+  .palette{display:flex;gap:0;border-radius:12px;overflow:hidden;margin-top:18px;border:1px solid var(--line);}
+  .palette span{flex:1;height:64px;}
+  .funnelviz{margin-top:26px;display:flex;flex-direction:column;gap:10px;align-items:center;}
+  .frow{font-family:Arial,sans-serif;color:#fff;text-align:center;border-radius:10px;padding:16px 12px;font-weight:700;letter-spacing:.02em;}
+  .frow small{display:block;font-weight:400;opacity:.9;font-size:12.5px;margin-top:3px;}
+  .f1{width:100%;background:var(--lapis);} .f2{width:80%;background:#2a4f86;} .f3{width:60%;background:var(--brass);} .f4{width:42%;background:var(--gold);color:var(--navy);}
+  .pricewrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;align-items:stretch;}
+  .pcard{background:#fff;border-radius:16px;padding:30px;color:var(--ink);}
+  .pcard.gold{background:linear-gradient(135deg,var(--brass),var(--gold));color:#fff;}
+  .pcard .lbl{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--brass);}
+  .pcard.gold .lbl{color:#fff;opacity:.92;}
+  .pcard .amt{font-family:Arial,sans-serif;font-size:52px;font-weight:800;line-height:1;margin:10px 0;color:var(--navy);}
+  .pcard.gold .amt{color:#fff;} .pcard .amt small{font-size:17px;color:var(--muted);font-weight:700;} .pcard.gold .amt small{color:#fff;opacity:.92;}
+  .pcard .was{font-family:Arial,sans-serif;text-decoration:line-through;color:rgba(255,255,255,.8);font-size:17px;}
+  .prow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-family:Arial,sans-serif;font-size:15px;}
+  .prow:last-of-type{border-bottom:none;} .prow b{color:var(--ink);font-weight:600;} .prow .v{font-weight:800;color:var(--navy);white-space:nowrap;} .prow .v small{color:var(--muted);font-weight:600;font-size:12.5px;}
+  .foundingbar{background:var(--navy);color:#fff;border-radius:12px;padding:18px 24px;margin-top:20px;font-family:Arial,sans-serif;display:flex;gap:16px;align-items:center;font-size:16px;}
+  .foundingbar .st{font-size:26px;color:var(--gold);} .foundingbar b{color:var(--gold);}
+  @media(max-width:760px){.trio,.duo,.pricewrap{grid-template-columns:1fr;}.trio img{height:260px;}}
+  /* ---- phone hardening ---- */
+  html,body{max-width:100%;overflow-x:hidden;}
+  *{overflow-wrap:break-word;}
+  @media(max-width:600px){
+    .wrap{padding:0 20px;}
+    .slide{min-height:auto;padding:52px 0;}
+    .g2,.g3,.g4,.funnel,.reasons,.road,.imgrow,.land,.trio,.duo,.pricewrap,.proof,.invest{grid-template-columns:1fr !important;}
+    .ladder{flex-direction:column;align-items:stretch;gap:12px;}
+    .r1,.r2,.r3{height:auto;border-radius:12px;}
+    .f1,.f2,.f3,.f4{width:100% !important;}
+    .cover h1{font-size:40px;} .cover .arbig{font-size:25px;} .cover .lead{font-size:16px;}
+    .ask h2{font-size:30px;} .ask .arq{font-size:20px;} .ask .small{font-size:15px;}
+    h2.big{font-size:26px;line-height:1.15;} .arsub{font-size:17px;} .sub{font-size:16px;}
+    .stat{padding:22px;} .stat .num{font-size:32px;}
+    .pcard{padding:24px;} .pcard .amt{font-size:40px;}
+    .pos{padding:32px 20px;} .pos .q{font-size:23px;} .pos .qar{font-size:18px;}
+    .moat h3,.steps h3{font-size:18px;} .moat .item,.steps .st{gap:14px;padding:16px 0;}
+    .moat .item:before,.steps .st:before{min-width:40px;height:40px;font-size:18px;}
+    .moat p,.steps p{font-size:15px;}
+    .trio img{height:300px;} .proof img{max-height:340px;} .empty{font-size:18px;}
+    .stack td{padding:11px 10px;font-size:14px;} .prow{font-size:14px;}
+    .mark{width:72px;height:72px;} .foundingbar{font-size:15px;padding:16px 18px;}
+    .land .lcard .im{height:200px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ ACT 1: ATTENTION ============ -->
+
+<!-- 1. COVER -->
+<section class="slide dark cover coverbg">
+  <div class="wrap">
+    <img class="mark" src="assets/poa-mark.png" alt="Peace of Art brand mark">
+    <div class="kicker">A founding-brand offer . Prepared by Admireworks</div>
+    <h1>ATHAR<br>by Youssef</h1>
+    <div class="arbig ar">أثر . قطعٌ من حضارة مصر تُلبَس</div>
+    <p class="lead">Egypt's first accessible-premium heritage jewelry brand. One artist. One craft. Every piece carries its meaning.</p>
+    <div class="meta">EGYPT . HANDMADE BRASS HERITAGE EARRINGS . JUNE 2026 . FOR YOUSSEF (PEACE OF ART STUDIO)</div>
+  </div>
+</section>
+
+<!-- 2. PROVOCATIVE QUESTION -->
+<section class="slide dark ask">
+  <div class="wrap">
+    <div class="kicker">Start here</div>
+    <h2>What if the most meaningful Egyptian jewelry brand does not exist yet?</h2>
+    <div class="arq ar">ماذا لو أن أكثر علامة مجوهرات مصرية معنىً لم تُولد بعد؟</div>
+    <p class="small">It does not. The space is open. The artist is real. The moment is now.</p>
+  </div>
+</section>
+
+<!-- 3. THE GAP -->
+<section class="slide parch">
+  <div class="wrap">
+    <div class="kicker">The gap</div>
+    <h2 class="big">There is a hole in the market the size of a brand.</h2>
+    <div class="arsub ar">فجوة في السوق بحجم علامة كاملة</div>
+    <p class="sub">At the floor: cheap souvenirs with no story and no artist. At the ceiling: luxury priced out of everyday life. Between them, nothing. That empty middle is the opportunity.</p>
+    <div class="ladder">
+      <div class="rung r1"><b>Souvenirs</b><small>Khan el-Khalili. $20 to $60. No story. No artist.</small></div>
+      <div class="rung r2"><b>ATHAR by Youssef</b><small>EGP 1,500 to 6,000 ($30 to $120) core. Hero pieces above. The story card is the value, not the gold weight.</small></div>
+      <div class="rung r3"><b>Luxury</b><small>Azza Fahmy. $585 to $14,630. Out of reach for everyday and for gifting.</small></div>
+    </div>
+    <div class="empty">No one owns the middle. We take it.</div>
+  </div>
+</section>
+
+<!-- 3b. THE LANDSCAPE (visual) -->
+<section class="slide light">
+  <div class="wrap">
+    <div class="kicker">The landscape</div>
+    <h2 class="big">The same symbols. The same brass. Everything else is missing.</h2>
+    <div class="arsub ar">نفس الرموز . نفس النحاس . وكل ما عداه غائب</div>
+    <p class="sub">The ceiling brands are beautiful but priced for the few. The floor sells the exact ankh, scarab, and lotus in the exact metal, stripped of artist, meaning, and experience. ATHAR takes the empty middle.</p>
+    <div class="land">
+      <div class="lcard"><div class="im" style="background-image:url('assets/competitors/azzafahmy-1.jpg')"></div><div class="bd"><span class="lt lt-ceil">Ceiling</span><h3>Azza Fahmy</h3><p>Museum-grade heritage in gold. Stunning, and priced out of everyday and gifting.</p></div></div>
+      <div class="lcard"><div class="im" style="background-image:url('assets/competitors/okhtein-1.jpg')"></div><div class="bd"><span class="lt lt-ceil">Ceiling</span><h3>Okhtein</h3><p>Fashion-house polish and celebrity reach, but the symbolism is decorative, not narrated.</p></div></div>
+      <div class="lcard"><div class="im" style="background-image:url('assets/competitors/egyptianimports-1.jpg')"></div><div class="bd"><span class="lt lt-floor">Floor</span><h3>Souvenir trade</h3><p>The same brass symbols shipped worldwide. No artist, no story, no experience.</p></div></div>
+      <div class="lcard"><div class="im" style="background-image:url('assets/competitors/pyrrha-2.jpg')"></div><div class="bd"><span class="lt lt-ref">Reference</span><h3>Pyrrha</h3><p>Proof the meaning-card model works globally. But it is not Egyptian.</p></div></div>
+    </div>
+    <div class="empty" style="font-size:21px;">Artist plus meaning plus accessible-premium. No one holds all three. ATHAR does.</div>
+  </div>
+</section>
+
+<!-- ============ ACT 2: INTEREST ============ -->
+
+<!-- 3c. THE IDEA / VARIETY -->
+<section class="slide light">
+  <div class="wrap">
+    <div class="kicker">The idea</div>
+    <h2 class="big">Egypt you can wear. Its history, and the Egypt you love today.</h2>
+    <div class="arsub ar">مصر تُلبَس . تاريخها . ومصر التي نحبها اليوم</div>
+    <p class="sub">Not only pharaohs and ankhs. A scarab for meaning, a Cairo skyline for pride, a symbol from a street you know. The variety is what turns a souvenir into a brand people collect and feel linked to.</p>
+    <div class="trio">
+      <figure><img src="assets/generated/contemporary-piece.png" alt="A brass earring shaped like the Cairo skyline"><figcaption>Today: a Cairo landmark, worn with pride.</figcaption></figure>
+      <figure><img src="assets/generated/model-cafe.png" alt="A young Egyptian woman wearing the earrings in a Cairo cafe"><figcaption>For her, every day. Not only for tourists.</figcaption></figure>
+      <figure><img src="assets/generated/model-gift.png" alt="A woman holding a heritage gift box"><figcaption>And the most meaningful gift of home.</figcaption></figure>
+    </div>
+    <div class="figcap" style="text-align:center;">Concept renders (Nano Banana 2). Final imagery will feature Youssef's actual pieces.</div>
+  </div>
+</section>
+
+<!-- 4. THE SHIFT + TOURISM MOMENT -->
+<section class="slide dark">
+  <div class="wrap">
+    <div class="kicker">The moment</div>
+    <h2 class="big">The world wants meaning. Egypt is having its moment.</h2>
+    <div class="arsub ar">العالم يريد المعنى . ومصر تعيش لحظتها</div>
+    <p class="sub">Buyers are turning away from mass-produced metal toward story-driven, heritage pieces. At the same time, Egypt just set a tourism record. Two curves, one brand sitting where they cross.</p>
+    <div class="grid g3">
+      <div class="stat"><div class="num">19<span>M</span></div><div class="lab">Tourists to Egypt in 2025, up 21%, with 18.6M heritage-site visits, up 33.5%</div></div>
+      <div class="stat"><div class="num">$330<span>B</span></div><div class="lab">Global handmade jewelry market by 2030, growing 10%+ a year, favoring story-driven pieces</div></div>
+      <div class="stat"><div class="num">~40<span>%</span></div><div class="lab">Of Egyptian online sales now happen through social commerce</div></div>
+    </div>
+    <p class="src">Sources: Egypt Ministry of Tourism 2025, Research and Markets, ResearchAndMarkets Egypt Social Commerce 2025.</p>
+  </div>
+</section>
+
+<!-- 5. DIASPORA ENGINE -->
+<section class="slide light">
+  <div class="wrap">
+    <div class="kicker">The engine</div>
+    <h2 class="big">14 million Egyptians abroad, holding hard currency, missing home.</h2>
+    <div class="arsub ar">14 مليون مصري في الخارج . عملة صعبة . وحنين للوطن</div>
+    <p class="sub">The same price that is a stretch for a local buyer is an easy, meaningful gift for a buyer abroad. And here is the unfair part: we test winning creative in Egypt for almost nothing, then scale it to high-value diaspora audiences.</p>
+    <div class="grid g4">
+      <div class="stat"><div class="num">14<span>M+</span></div><div class="lab">Egyptians in the diaspora: 2.9M in Saudi, 765K in UAE, plus the US, Italy, France</div></div>
+      <div class="stat"><div class="num">$1.4<span>B</span></div><div class="lab">Egypt jewelry market, a deep and growing base to build on</div></div>
+      <div class="stat"><div class="num">~$1.9<span>0</span></div><div class="lab">Egypt Meta CPM, the cheap-to-test side of the arbitrage</div></div>
+      <div class="stat"><div class="num">$7<span>+</span></div><div class="lab">CPM in Gulf and Western markets, up to $23, the high-value side to scale into</div></div>
+    </div>
+    <div class="empty" style="font-size:21px;">Test cheap in Egypt. Sell premium in hard currency. That is the arbitrage.</div>
+  </div>
+</section>
+
+<!-- 6. YOUSSEF'S UNFAIR ADVANTAGES -->
+<section class="slide dark">
+  <div class="wrap">
+    <div class="kicker">Why Youssef wins</div>
+    <h2 class="big">Three advantages no competitor holds at once.</h2>
+    <div class="arsub ar">ثلاث مزايا لا يجمعها أي منافس معاً</div>
+    <div class="grid g2" style="align-items:center;margin-top:8px;">
+      <div class="moat">
+        <div class="item"><div><h3>A named, living, verified artist</h3><p>Youssef. A verified studio with an established following, a proprietary craft technique, and a real body of work. A face and a name the category's middle entirely lacks.</p></div></div>
+        <div class="item"><div><h3>The bilingual symbol story card</h3><p>Every piece ships with a designed, takeaway card explaining its Egyptian symbol, like the pomegranate for blessing and life. The metal becomes a story the wearer carries and gifts.</p></div></div>
+        <div class="item"><div><h3>The brand-home content moat</h3><p>A Cairo-palace-adjacent rooftop as the signature studio and intimate events venue. Premium content and real experiences competitors cannot cheaply copy.</p></div></div>
+      </div>
+      <div>
+        <img class="fig" style="max-height:540px;" src="assets/generated/earrings-model.png" alt="An elegant Egyptian woman wearing a brass winged-scarab heritage earring">
+        <div class="figcap">Brand concept render (Nano Banana 2). Final campaign imagery will feature Youssef's actual pieces.</div>
+        <div style="text-align:center;margin-top:16px;">
+          <img class="mark" style="margin:0 auto;" src="assets/poa-mark.png" alt="Peace of Art mark">
+          <div class="src" style="margin-top:8px;">Peace of Art Studio . ~3,463 verified followers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACT 3: DESIRE ============ -->
+
+<!-- 7. GROWTH ENGINE: BRAND > STORE > FUNNEL > CONTENT -->
+<section class="slide parch">
+  <div class="wrap">
+    <div class="kicker">The growth engine</div>
+    <h2 class="big">Not four projects. One system that compounds.</h2>
+    <div class="arsub ar">ليست أربعة مشاريع . بل نظام واحد يتراكم</div>
+    <p class="sub">Brand feeds the Store. Store powers the Funnel. Funnel demands Content. Content shot at the rooftop feeds the Brand again. Each piece makes the next one stronger.</p>
+    <div class="funnel">
+      <div class="fstep"><b>1. Brand</b><small>Name, logo, palette, type, art direction, guidelines, and the signature symbol-story-card system, built from scratch.</small></div>
+      <div class="fstep"><b>2. Store</b><small>A bilingual, multi-currency Shopify store where the story card is sold as a certificate of meaning.</small></div>
+      <div class="fstep"><b>3. Funnel</b><small>Launch landing page, Arabic and English ad copy, plus email and WhatsApp flows that turn attention into orders.</small></div>
+      <div class="fstep"><b>4. Content</b><small>A first batch shot at the rooftop studio: symbol-story Reels, craft-process video, and shareable cards.</small></div>
+    </div>
+    <div class="funnelviz">
+      <div class="frow f1">Awareness<small>Symbol-story Reels, craft video, creator and UGC ads</small></div>
+      <div class="frow f2">Consideration<small>Carousels, retargeting, email and WhatsApp opt-in</small></div>
+      <div class="frow f3">Purchase<small>Bilingual store, the story card as the reason to buy</small></div>
+      <div class="frow f4">Retention<small>Collect the symbols, VIP drops, rooftop events</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7b. THE STORE, VISUALIZED -->
+<section class="slide parch">
+  <div class="wrap">
+    <div class="kicker">The store</div>
+    <h2 class="big">How we see it.</h2>
+    <div class="arsub ar">هكذا نتخيله</div>
+    <div class="trio">
+      <figure><img src="assets/generated/store-product.png" alt="A single earring on a marble pedestal"><figcaption>Each piece, given room to breathe.</figcaption></figure>
+      <figure><img src="assets/generated/store-collection.png" alt="A flat lay of the collection with story cards"><figcaption>Shop by meaning, not by grid.</figcaption></figure>
+      <figure><img src="assets/generated/packaging.png" alt="Premium packaging with a story card"><figcaption>The unboxing is part of the gift.</figcaption></figure>
+    </div>
+    <div class="duo" style="margin-top:22px;">
+      <div><img class="fig" src="assets/generated/store-mockup.png" alt="Bilingual Shopify store on a laptop and phone"></div>
+      <div><p class="sub" style="margin:0;">Bilingual and multi-currency on Shopify. The same store sells to a woman in Cairo and a buyer in Dubai or London, each in her own language and currency.</p></div>
+    </div>
+    <div class="figcap" style="text-align:center;">Concept renders (Nano Banana 2).</div>
+  </div>
+</section>
+
+<!-- 8a. THE SIGNATURE: STORY CARD -->
+<section class="slide dark">
+  <div class="wrap">
+    <div class="kicker">The signature</div>
+    <h2 class="big">Every piece carries its meaning.</h2>
+    <div class="arsub ar">كل قطعة تحمل معناها</div>
+    <div class="proof">
+      <img src="assets/generated/story-card.png" alt="An ATHAR symbol story card beside a brass earring on parchment">
+      <div class="quote">
+        <p style="color:#c9d2ee;">A designed, bilingual card ships with every piece. It gives the symbol its story: the pomegranate for blessing and life, the scarab for protection. The metal becomes something you read, gift, and retell.</p>
+        <p style="color:#fff;font-weight:700;font-size:23px;line-height:1.35;margin-top:18px;">This card is the brand. It is what no souvenir and no gold house gives you.</p>
+      </div>
+    </div>
+    <div class="figcap" style="text-align:center;">ATHAR story-card concept render (Nano Banana 2).</div>
+  </div>
+</section>
+
+<!-- 8b. PROOF: PYRRHA -->
+<section class="slide light">
+  <div class="wrap">
+    <div class="kicker">Proof it works</div>
+    <h2 class="big">A whole brand, built on the card.</h2>
+    <div class="arsub ar">علامة كاملة بُنيت على البطاقة</div>
+    <div class="duo">
+      <div class="trio" style="grid-template-columns:1fr 1fr;gap:14px;margin:0;">
+        <figure style="margin:0;"><img src="assets/competitors/pyrrha-1.jpg" alt="Pyrrha talisman" style="height:215px;"></figure>
+        <figure style="margin:0;"><img src="assets/competitors/pyrrha-2.jpg" alt="Pyrrha talisman" style="height:215px;"></figure>
+        <figure style="margin:0;grid-column:1 / -1;"><img src="assets/pyrrha-card.png" alt="Pyrrha meaning card" style="height:190px;object-fit:cover;"></figure>
+      </div>
+      <div>
+        <p class="sub">Pyrrha, in Canada, casts talismans from antique wax seals and ships each one with a printed card explaining its meaning. That single device turned jewelry into gifting, and lets a silver piece sell for $275 to $350, far above its metal value.</p>
+        <p style="font-family:'Helvetica Neue',Arial,sans-serif;color:var(--navy);font-weight:800;font-size:21px;line-height:1.3;">The model is proven. It is simply not Egyptian yet. That space is ours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8c. THE BRAND, SAMPLED -->
+<section class="slide parch">
+  <div class="wrap">
+    <div class="kicker">The brand</div>
+    <h2 class="big">How it could look.</h2>
+    <div class="arsub ar">كيف يمكن أن تبدو</div>
+    <div class="duo">
+      <div>
+        <img class="fig" src="assets/generated/logo-sample.png" alt="ATHAR by Youssef logo sample on parchment">
+        <div style="margin-top:14px;"><span class="sample-tag">Sample direction</span></div>
+      </div>
+      <div>
+        <p class="sub">A name with weight: ATHAR, a trace, an antiquity. A serif wordmark, a small Arabic lockup, a brass emblem, pressed into warm parchment. This is one sample direction. The full identity is built in Phase 1.</p>
+        <div class="palette">
+          <span style="background:#001a70;"></span><span style="background:#1c3a6e;"></span><span style="background:#b8860b;"></span><span style="background:#cc9f53;"></span><span style="background:#f6efe1;"></span><span style="background:#c4582e;"></span>
+        </div>
+        <div class="figcap">Navy . Lapis . Brass . Gold . Parchment . Nile terracotta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VALUE STACK -->
+<section class="slide light">
+  <div class="wrap">
+    <div class="kicker">What you get</div>
+    <h2 class="big">A full brand launch, built once, end to end.</h2>
+    <div class="arsub ar">إطلاق علامة كامل . يُبنى مرة واحدة</div>
+    <table class="stack">
+      <tr><td>Full brand identity from scratch: name lockup, logo, palette, typography, art direction</td><td class="amt">EGP 30,000</td></tr>
+      <tr><td>Minimum brand guidelines document</td><td class="amt">EGP 8,000</td></tr>
+      <tr><td>Signature bilingual symbol-story-card system: template plus first set</td><td class="amt">EGP 9,000</td></tr>
+      <tr><td>Bilingual, multi-currency Shopify store: build and launch</td><td class="amt">EGP 45,000</td></tr>
+      <tr><td>Launch funnel landing page</td><td class="amt">EGP 12,000</td></tr>
+      <tr><td>Ad copy set, Arabic and English</td><td class="amt">EGP 8,000</td></tr>
+      <tr><td>Email and WhatsApp launch flows</td><td class="amt">EGP 10,000</td></tr>
+      <tr><td>First content batch, shot at the rooftop studio</td><td class="amt">EGP 15,000</td></tr>
+      <tr class="tot"><td>Total value of the build</td><td class="amt">~EGP 137,000</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 10. ROADMAP -->
+<section class="slide parch">
+  <div class="wrap">
+    <div class="kicker">The roadmap</div>
+    <h2 class="big">Phased on purpose. Nothing wasted.</h2>
+    <div class="arsub ar">على مراحل بشكل مدروس . لا شيء يُهدر</div>
+    <p class="sub">Build the brand once. Grow it with a light retainer. Add tourist retail and brand-home events only after hard-currency revenue funds them.</p>
+    <div class="road">
+      <div class="phase">
+        <div class="ph-k">Phase 1 . Now</div>
+        <h3>Build the brand</h3>
+        <p>The full one-time build: identity, guidelines, story-card system, Shopify store, landing page, ad copy, flows, and the first content batch.</p>
+        <div class="pr">75,000 EGP, one time</div>
+      </div>
+      <div class="phase">
+        <div class="ph-k">Phase 2 . Optional</div>
+        <h3>Grow when ready</h3>
+        <p>Ad management per platform, plus optional monthly content. Start, pause, or scale anytime. Ad spend separate.</p>
+        <div class="pr">From 12,500 EGP / platform</div>
+      </div>
+      <div class="phase">
+        <div class="ph-k">Phase 3 . Later</div>
+        <h3>Retail and events</h3>
+        <p>Tourist retail through hotel and concierge partnerships, plus brand-home events on the rooftop. Quoted separately when ready.</p>
+        <div class="pr">Quoted separately</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACT 4: ACTION ============ -->
+
+<!-- 11. THE INVESTMENT -->
+<section class="slide dark">
+  <div class="wrap">
+    <div class="kicker">The investment</div>
+    <h2 class="big">One build. Then grow only when you want to.</h2>
+    <div class="arsub ar">بناء واحد . ثم تنمو وقتما تشاء</div>
+    <div class="pricewrap">
+      <div class="pcard gold">
+        <div class="lbl">The build . one time</div>
+        <div class="amt">75,000 <small>EGP</small></div>
+        <div class="was">EGP 137,000 value</div>
+        <p style="margin-top:14px;font-size:15px;line-height:1.5;">The full brand, store, funnel, and first content batch. Built once. Yours to keep.</p>
+      </div>
+      <div class="pcard">
+        <div class="lbl">Ongoing . optional . monthly</div>
+        <div class="prow"><b>Ad management, serving Egypt</b><span class="v">12,500 EGP <small>~$260</small></span></div>
+        <div class="prow"><b>Ad management, outside Egypt</b><span class="v">$330 <small>~16,000 EGP</small></span></div>
+        <div class="prow"><b>Social media content</b><span class="v">18,000 EGP</span></div>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.5;">Ad management is per advertising platform, per month. Ad spend is separate.</p>
+      </div>
+    </div>
+    <div class="foundingbar">
+      <span class="st">&#9733;</span>
+      <div><b>Founding Artist offer:</b> for the first 4 months, ad management covers up to 3 platforms for the price of one. And the first month is free.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. WHY IT IS SAFE -->
+<section class="slide light">
+  <div class="wrap">
+    <div class="kicker">Why it is safe</div>
+    <h2 class="big">Built to be fair for where you are right now.</h2>
+    <div class="arsub ar">مصمَّم ليكون عادلاً لمكانك الآن</div>
+    <div class="reasons">
+      <div class="reason"><h3>Phased, not all at once</h3><p>You pay for the build, prove the model, then choose the retainer. Tourist retail and events come only after revenue funds them.</p></div>
+      <div class="reason"><h3>No lock-in on growth</h3><p>The build is a one-time fee, and the optional monthly services carry no long contract. Start, pause, or stop the ads and content whenever you want.</p></div>
+      <div class="reason"><h3>Priced for an early-stage artist</h3><p>The founding-artist rate is well below the 137,000 EGP value, an honest entry price for the first brand we build together.</p></div>
+    </div>
+    <div class="launch">
+      <div class="gift">&#9733;</div>
+      <div>
+        <b>Founding Artist Launch: your first retainer month is free.</b>
+        <p>Commit to the 3-month minimum on Phase 2 and month one is on us. <span class="ar">الشهر الأول مجاناً</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. GETTING STARTED -->
+<section class="slide dark">
+  <div class="wrap">
+    <div class="kicker">Getting started</div>
+    <h2 class="big">Four steps to your founding brand.</h2>
+    <div class="arsub ar">أربع خطوات نحو علامتك المؤسِّسة</div>
+    <div class="steps">
+      <div class="st"><div><h3>Choose the name direction</h3><p>Our lead recommendation is ATHAR (a trace, an antiquity). HEKAYA (a story) is the alternative.</p></div></div>
+      <div class="st"><div><h3>Approve the offer</h3><p>Confirm the 75,000 EGP founding-brand build and the optional Phase 2 retainer.</p></div></div>
+      <div class="st"><div><h3>Sign the agreement</h3><p>A short, clear scope so we both know exactly what is being built and when.</p></div></div>
+      <div class="st"><div><h3>Confirm and begin</h3><p>The one-time build fee starts the work immediately.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. CLOSING -->
+<section class="slide dark" style="page-break-after:auto;">
+  <div class="wrap">
+    <div class="kicker">The position</div>
+    <img class="fig" src="assets/generated/rooftop-event.png" alt="An intimate rooftop brand-launch event concept" style="max-height:300px;margin-bottom:30px;">
+    <div class="pos">
+      <div class="q">"Wearable pieces of Egyptian civilization, handmade by one artist, each carrying its meaning."</div>
+      <div class="qar ar">قطعٌ من حضارة مصر تُلبَس</div>
+    </div>
+    <div style="text-align:center;">
+      <a class="btn" href="mailto:hello@admireworks.com">Let us build ATHAR by Youssef</a>
+    </div>
+    <div class="contact">
+      Admireworks . Admirable Venture Services every time<br>
+      hello@admireworks.com<br>
+      Prepared for Youssef, Peace of Art Studio . June 2026
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTN Textiles: Creative Wave + Launch Plan, 2026-07-03</title>
+<meta property="og:title" content="OTN Textiles: Creative Wave + Launch Plan">
+<meta property="og:description" content="No-text real-photo creative wave, true-color GIFs, campaign structure and budget, all in one review.">
+<style>
+:root{
+  --navy:#001a70; --gold:#cc9f53; --ink:#1a1d2b; --muted:#6b7280;
+  --bg:#f7f8fb; --card:#ffffff; --border:#e6e8f0;
+  --good:#2c9d5f; --warn:#cc9f53; --bad:#c0392b;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{background:linear-gradient(135deg,var(--navy),#0a2a8f);color:#fff;padding:56px 0 40px}
+header.top .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+header.top h1{font-size:34px;margin:10px 0 8px}
+header.top p{color:#c9d2f0;font-size:16px;max-width:700px}
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:28px}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 16px}
+.kpi .n{font-size:22px;font-weight:800}
+.kpi .l{font-size:12px;color:#c9d2f0;margin-top:2px}
+nav.side{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:10px 0;z-index:10;overflow-x:auto;white-space:nowrap}
+nav.side a{display:inline-block;padding:8px 14px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}
+section.section{padding:44px 0;border-bottom:1px solid var(--border)}
+h2{font-size:24px;margin:0 0 6px;color:var(--navy)}
+h2 .num{color:var(--gold);margin-right:8px}
+.sub{color:var(--muted);font-size:15px;margin-bottom:22px;max-width:760px}
+.callout{background:#fff8ec;border:1px solid #f0dcb0;border-radius:12px;padding:18px 20px;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media(max-width:900px){.grid5{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr}.grid5{grid-template-columns:repeat(2,1fr)}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:700;font-size:12px;text-transform:uppercase}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.badge.good{background:#e6f6ec;color:var(--good)}
+.badge.warn{background:#fdf2df;color:#8a6414}
+.badge.bad{background:#fbe9e7;color:var(--bad)}
+.badge.locked{background:#e8ecfb;color:var(--navy)}
+.approval{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border);display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.approval label{display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer}
+.mockup{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#fff}
+.mockup .chrome{display:flex;align-items:center;gap:8px;padding:10px 12px;font-size:13px}
+.mockup .chrome .avatar{width:28px;height:28px;border-radius:50%;background:var(--navy)}
+.mockup .chrome .name{font-weight:700}
+.mockup .chrome .spon{color:var(--muted);font-size:11px}
+.mockup img,.mockup video{width:100%;display:block;cursor:zoom-in}
+.mockup .caption{padding:12px;font-size:13px;color:var(--ink)}
+.mockup .caption b{display:block;margin-bottom:4px;text-align:right;direction:rtl}
+.mockup .caption span{text-align:right;direction:rtl;display:block}
+.notext-tag{position:absolute;top:8px;right:8px;background:rgba(44,157,95,.9);color:#fff;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:700}
+.thumb-wrap{position:relative}
+.line-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.line-tab{padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:#fff;font-size:13px;font-weight:700;cursor:pointer;color:var(--muted)}
+.line-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.line-panel{display:none}
+.line-panel.active{display:block}
+.pill-btn{background:var(--gold);color:#1a1d2b;border:none;border-radius:999px;padding:10px 20px;font-weight:700;cursor:pointer;font-size:14px}
+.pill-btn.ghost{background:transparent;border:1.5px solid var(--border);color:var(--ink)}
+.final-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;background:#fff;border:2px solid var(--navy);border-radius:16px;padding:22px}
+.final-row .fr-choice{flex:1;min-width:220px;border:2px solid var(--border);border-radius:12px;padding:14px 16px}
+.final-row .fr-choice.approve{border-color:var(--good)}
+.final-row .fr-choice.hold{border-color:var(--warn)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:10px;font-size:14px;opacity:0;transition:.25s;z-index:100}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.feedback-fab{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;border:none;border-radius:999px;padding:14px 20px;display:flex;gap:8px;align-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,26,112,.3);z-index:50;font-size:14px}
+.feedback-fab.empty .fab-count{display:none}
+.fab-count{background:var(--gold);color:#1a1d2b;border-radius:999px;padding:1px 8px;font-size:12px;font-weight:800}
+.cmt-btn{font-size:12px;color:var(--navy);background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;cursor:pointer}
+.cmt-list{margin-top:10px}
+.cmt-item{background:#f2f4fa;border-radius:8px;padding:8px 10px;margin-top:6px;font-size:13px;position:relative}
+.cmt-author{font-weight:700;margin-right:6px}
+.cmt-time{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.cmt-del{position:absolute;top:4px;right:6px;border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px}
+#cmt-modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;z-index:200}
+#cmt-modal.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:22px;width:90%;max-width:420px}
+.modal-box input,.modal-box textarea{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px;font-size:14px;margin-top:6px;font-family:inherit}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:300;padding:30px}
+#lightbox.open{display:flex}
+#lightbox img,#lightbox video{max-width:100%;max-height:100%;border-radius:10px}
+#lightbox .lb-close{position:absolute;top:20px;right:24px;color:#fff;font-size:28px;background:none;border:none;cursor:pointer}
+.reel-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;text-align:center}
+.reel-card img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+.reel-card .rc-body{padding:10px}
+.reel-card .rc-name{font-weight:700;font-size:13px}
+.reel-card .rc-meta{color:var(--muted);font-size:11px;margin-top:2px}
+.reel-card .rc-status{margin-top:6px}
+footer{padding:32px 0;text-align:center;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Admireworks x OTN Textiles</div>
+    <h1>The new creative wave, plus the launch plan</h1>
+    <p>This round takes a cleaner creative approach: every static and every GIF below is a real, untouched photo or clip from your own product library, color-managed for accuracy. Copy lives in Meta's ad text fields, never on the pixels. This page also carries forward the bathmat and governance decisions from the last review and adds the recommended campaign structure and budget for your final go-ahead, all in one place, one decision at the bottom.</p>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="n">989</div><div class="l">Real assets catalogued</div></div>
+      <div class="kpi"><div class="n">19</div><div class="l">No-text statics, 3 sizes each</div></div>
+      <div class="kpi"><div class="n">5</div><div class="l">True-color GIFs</div></div>
+      <div class="kpi"><div class="n">10</div><div class="l">Creator reels ready to rotate</div></div>
+      <div class="kpi"><div class="n">4.81x</div><div class="l">30-day blended ROAS</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="side">
+  <div class="wrap">
+    <a href="#carried">Already confirmed</a>
+    <a href="#statics">No-text statics</a>
+    <a href="#gifs">True-color GIFs</a>
+    <a href="#reels">Reel rotation</a>
+    <a href="#campaigns">Structure + budget</a>
+    <a href="#final">Decide</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section class="section" id="carried">
+  <h2><span class="num">01</span>Carried forward from the last review</h2>
+  <p class="sub">These two were already approved in our last review round. Shown here so the whole package is in one place, nothing goes live from either page until the final decision below.</p>
+  <div class="card">
+    <p><b>Activate the fixed bathmat ads</b> <span class="badge locked">Confirmed: approve</span></p>
+    <p style="font-size:14px;color:var(--muted)">The two rebuilt, color-safe bathmat ads (carousel + video), currently PAUSED, move into the new Summer Heroes lane on launch.</p>
+  </div>
+  <div class="card">
+    <p><b>DOF governance: fix all 27 flagged creatives</b> <span class="badge locked">Confirmed: approve</span></p>
+    <p style="font-size:14px;color:var(--muted)">Full Advantage+ enhancement lockdown (the same class of setting that broke the bathmat colors), applied across every flagged creative, rebuilding fresh where an in-place fix fails, verified via Graph read-back after.</p>
+  </div>
+</section>
+
+<section class="section" id="statics">
+  <h2><span class="num">02</span>No-text creative wave: statics</h2>
+  <p class="sub">Every image below is a real, unedited product or lifestyle photo from your library, sRGB color-managed. Zero overlay text. The suggested headline and body ship as Meta ad text fields, shown here for review, not baked onto the image. Click any image to see it full-size.</p>
+
+  <div class="line-tabs">
+    <button class="line-tab active" data-line="bathmat" onclick="showLine('bathmat')">Bath mats (4)</button>
+    <button class="line-tab" data-line="towels" onclick="showLine('towels')">Towels (3)</button>
+    <button class="line-tab" data-line="coverlets" onclick="showLine('coverlets')">Coverlets (4)</button>
+    <button class="line-tab" data-line="beach" onclick="showLine('beach')">Beach (4)</button>
+    <button class="line-tab" data-line="ponchos" onclick="showLine('ponchos')">Ponchos (4)</button>
+  </div>
+
+  <div class="line-panel active" data-panel="bathmat"><div class="grid3" id="wave-bathmat"></div></div>
+  <div class="line-panel" data-panel="towels"><div class="grid3" id="wave-towels"></div></div>
+  <div class="line-panel" data-panel="coverlets"><div class="grid3" id="wave-coverlets"></div></div>
+  <div class="line-panel" data-panel="beach"><div class="grid3" id="wave-beach"></div></div>
+  <div class="line-panel" data-panel="ponchos"><div class="grid3" id="wave-ponchos"></div></div>
+</section>
+
+<section class="section" id="gifs">
+  <h2><span class="num">03</span>True-color GIFs</h2>
+  <p class="sub">Silent, real footage from your library, trimmed and looped, never color-corrected or filtered. The bathmat ones show the true colorway on camera, exactly as it looks in person.</p>
+  <div class="grid3" id="wave-gifs"></div>
+</section>
+
+<section class="section" id="reels">
+  <h2><span class="num">04</span>Creator / UGC reel rotation</h2>
+  <p class="sub">Your creator content library is deeper than what's currently live. One reel that carried the majority of towels purchases in May has since dropped to 0x ROAS as it fatigued. These 10 are largely unused real customer/creator footage, ready to rotate in every 3-4 days during peak season so performance doesn't rely on a single creative again.</p>
+  <div class="grid5" id="reel-grid"></div>
+  <div class="approval">
+    <label><input type="radio" name="reel-rotation" value="approve"> Approve the rotation plan</label>
+    <label><input type="radio" name="reel-rotation" value="modify"> Approve concept, let us pick order</label>
+    <label><input type="radio" name="reel-rotation" value="hold"> Hold</label>
+    <button class="cmt-btn" onclick="openCmtModal('reel-rotation','Reel rotation')">Comment</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="reel-rotation"></div>
+</section>
+
+<section class="section" id="campaigns">
+  <h2><span class="num">05</span>Recommended structure + budget</h2>
+  <p class="sub">Additions and tuning to the running account, not a rebuild. One new campaign (Summer Heroes) for the lines that have never had their own lane; everything else is a budget or creative adjustment to what's already live.</p>
+  <table>
+    <tr><th>Campaign</th><th>Now (EGP/day)</th><th>30d ROAS</th><th>Recommend</th><th>Why</th></tr>
+    <tr><td>Prospecting Towels</td><td>1,200</td><td>5.43x</td><td><b>1,800</b></td><td>Best CTR (4.94%) in the account, under-funded vs performance</td></tr>
+    <tr><td>Catalog DPA</td><td>1,800</td><td>5.48x</td><td><b>2,200</b></td><td>Scale + true-color the 140-SKU feed</td></tr>
+    <tr><td>Prospecting Coverlets</td><td>1,800</td><td>5.45x</td><td><b>1,800</b></td><td>Hold budget, feed the 4 new creatives (lane exists, was under-served with only 2 active ads)</td></tr>
+    <tr><td>Prospecting (general)</td><td>2,700</td><td>4.55x</td><td><b>2,200</b></td><td>Trim, its summer items move to the new lane</td></tr>
+    <tr><td>Retargeting</td><td>500</td><td>2.90x</td><td><b>700</b></td><td>Frequency is 6.37, refresh creative + cap it</td></tr>
+    <tr><td><b>[NEW] Summer Heroes</b></td><td>&mdash;</td><td>&mdash;</td><td><b>1,500 &rarr; 2,800</b></td><td>Ponchos + beach + bath mats + bundles, the one lane that's never existed</td></tr>
+  </table>
+  <div class="callout" style="margin-top:20px">
+    <b>Staged ramp:</b> today ~8,000 EGP/day &rarr; <b>Week 1 ~9,500-10,000/day</b> (scale the 3 proven winners, open Summer Heroes small, activate bathmats) &rarr; <b>Week 2 ~11,500/day</b> only if blended ROAS holds &ge;4.0x. Any ad set under 2.5x after 50+ conversions gets paused for review. Creative refreshes every 3-4 days through peak.
+  </div>
+  <div class="approval">
+    <label><input type="radio" name="campaign-structure" value="approve"> Approve the structure and staged budget</label>
+    <label><input type="radio" name="campaign-structure" value="modify"> Approve structure, adjust budget numbers</label>
+    <label><input type="radio" name="campaign-structure" value="hold"> Hold</label>
+    <button class="cmt-btn" onclick="openCmtModal('campaign-structure','Structure + budget')">Comment</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="campaign-structure"></div>
+</section>
+
+<section class="section" id="final">
+  <h2><span class="num">06</span>Overall</h2>
+  <p class="sub">This is the final decision. Nothing above goes live on your account until this is set to approve.</p>
+  <div class="final-row">
+    <div class="fr-choice approve">
+      <label><input type="radio" name="ADJ-FULL-V3" value="approve"> <b>Approve everything above</b>, launch it</label>
+    </div>
+    <div class="fr-choice hold">
+      <label><input type="radio" name="ADJ-FULL-V3" value="hold"> <b>Hold</b>, I'll decide per-item above</label>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="toast" id="toast"></div>
+<button class="feedback-fab empty" id="feedback-fab" onclick="jumpToFirstComment()">
+  <span>Live feedback</span>
+  <span class="fab-count" id="fab-count"></span>
+</button>
+
+<div id="cmt-modal">
+  <div class="modal-box">
+    <div id="cmt-modal-ctx" style="font-weight:700;margin-bottom:10px"></div>
+    <div id="cmt-name-row"><input id="cmt-name-input" placeholder="Your name"></div>
+    <textarea id="cmt-text-input" rows="3" placeholder="Your comment"></textarea>
+    <div style="display:flex;gap:10px;margin-top:14px;justify-content:flex-end">
+      <button class="pill-btn ghost" onclick="closeCmtModal()">Cancel</button>
+      <button class="pill-btn" onclick="submitComment()">Post</button>
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" onclick="closeLightbox(event)">
+  <button class="lb-close" onclick="closeLightbox(event)">&times;</button>
+  <img id="lb-img" style="display:none">
+  <video id="lb-vid" style="display:none" controls autoplay loop muted playsinline></video>
+</div>
+
+<footer>Admireworks x OTN Textiles, prepared 2026-07-03. Comments save live on this page, or reach us at hello@admireworks.com</footer>
+
+<script>
+const WAVE = {
+  bathmat: [
+    {name:"bathmat-cement", headline:"لمسة داكنة تكمل شكل حمامك", body:"سجادة حمام OTN بلون Cement الغامق، قطن 100%، مصنوع في مصر، ناعمة وتمتص المية بسرعة."},
+    {name:"bathmat-cafe", headline:"دفء طبيعي لأرضية حمامك", body:"سجادة حمام OTN بلون Cafe، قطن 100%، مصنوع في مصر، تفضل ناعمة وممتصة لفترة طويلة."},
+    {name:"bathmat-gold", headline:"لون يضيف رقي لحمامك", body:"سجادة حمام OTN بلون Gold، قطن 100%، مصنوع في مصر، نسيج مضلع فاخر يمتص المية بسرعة."},
+    {name:"bathmat-white", headline:"الأبيض الكلاسيكي اللي يناسب أي حمام", body:"سجادة حمام OTN باللون الأبيض، قطن 100%، مصنوع في مصر، ناعمة وسهلة التنظيف."}
+  ],
+  towels: [
+    {name:"towel-sage", headline:"نفس الجودة، في كل لون تختاره", body:"فوط OTN قطن 100%، مصنوعة في مصر، وبتفضل ناعمة وممتصة لسنين. مجموعة Sage كاملة الأحجام."},
+    {name:"towel-lavender", headline:"ست قطع، لون واحد، جودة واحدة", body:"مجموعة فوط OTN الكاملة بلون Lavender، قطن 100% مصنوع في مصر."},
+    {name:"towel-cafe-studio", headline:"نفس الفوطة اللي بتحبها، بتفاصيلها", body:"قماش الفوطة من قرب، قطن 100% مصنوع في مصر، مجموعة Cafe الكاملة."}
+  ],
+  coverlets: [
+    {name:"coverlet-sage", headline:"غرفة نوم مرتبة من غير مجهود", body:"Coverlet من OTN خفيف وسهل الفرد، قطن 100% مصنوع في مصر. لون Sage."},
+    {name:"coverlet-navy", headline:"الـ Coverlet اللي بتفرديه في 30 ثانية", body:"مفارش السرير التقيلة بتاخد وقت. Coverlet من OTN خفيف، بتفرديه بسرعة. لون Navy، قطن 100% مصنوع في مصر."},
+    {name:"coverlet-cafe", headline:"شكل شيك يوميا من غير مجهود", body:"Coverlet من OTN بلون Cafe، خفيف وسهل الترتيب. قطن 100% مصنوع في مصر."},
+    {name:"coverlet-colorrange", headline:"اختاري لونك من مجموعة كاملة", body:"Coverlet من OTN متاح في مجموعة ألوان واسعة، قطن 100% مصنوع في مصر."}
+  ],
+  beach: [
+    {name:"beach-blue", headline:"الفوطة اللي بتاخدها معاك كل صيف", body:"فوطة بحر OTN قطن 100%، خفيفة وبتجف بسرعة. مصنوعة في مصر. شحن مجاني فوق 4000 جنيه."},
+    {name:"beach-lime", headline:"يوم على الشاطئ، مكانك جاهز", body:"فوطة بحر OTN بلون Lime، قطن 100% مصنوع في مصر."},
+    {name:"beach-purple", headline:"لون واحد بيميزك على الشاطئ", body:"فوطة بحر OTN بلون Purple، قطن 100% مصنوع في مصر. شحن مجاني فوق 4000 جنيه."},
+    {name:"beach-pink", headline:"شنطة الساحل جاهزة في طلب واحد", body:"فوطة بحر، سجادة بحر، وبونشو، كلهم قطن 100% مصنوع في مصر."}
+  ],
+  ponchos: [
+    {name:"poncho-family", headline:"بونشو ولا فوطة؟ ليه مش الاتنين؟", body:"بونشو OTN بييجي مع فوطة وسجادة بحر متناسقين، عشان دقيقة الخروج من المية تبقى مريحة. قطن 100%، مصنوع في مصر."},
+    {name:"poncho-navy", headline:"بونشو واحد، راحة يوم كامل", body:"بونشو OTN بيلفك من كتفك لركبتك في ثانية. قطن 100% مصنوع في مصر، يمتص المية بسرعة."},
+    {name:"poncho-pink", headline:"دفء فوري بعد كل خروجة من المية", body:"بونشو OTN بيغطيكي من الراس للركبة، بيلفك بسرعة وبيدفيكي فورا. قطن 100% مصنوع في مصر."},
+    {name:"poncho-lime", headline:"لون يفرق، راحة ما بتتفرقش", body:"بونشو OTN بلون Lime، نفس الراحة ونفس الجودة. قطن 100% مصنوع في مصر."}
+  ]
+};
+
+const GIFS = [
+  {name:"bathmat-colorway-pan", title:"سجادة الحمام: بانوراما الألوان", headline:"تناسق الألوان بين الفوطة والسجادة", body:"فوطة وسجادة حمام من OTN بألوان متناسقة، قطن 100%، مصنوع في مصر."},
+  {name:"bathmat-flatlay", title:"سجادة الحمام: أبيض وبني", headline:"تفاصيل بسيطة، حمام مرتب", body:"سجادة حمام OTN، قطن 100%، مصنوع في مصر، تكمل شكل حمامك في ثواني."},
+  {name:"coverlet-colorswap", title:"Coverlet: مجموعة الألوان كاملة", headline:"اختاري لونك من مجموعة واسعة", body:"Coverlet من OTN متاح في مجموعة ألوان متنوعة، قطن 100%، مصنوع في مصر."},
+  {name:"towel-texture", title:"الفوط: الملمس والنعومة", headline:"الملمس اللي هتحسي بيه", body:"فوط OTN قطن 100%، مصنوع في مصر، ناعمة وممتصة، تعلقها في حمامك بسهولة."},
+  {name:"beach-mood", title:"فوطة البحر: لون الصيف", headline:"لحظة الصيف اللي بتستناها", body:"فوطة بحر OTN، قطن 100%، خفيفة وبتجف بسرعة. مصنوعة في مصر."}
+];
+
+const REELS = [
+  {key:"ayman", name:"Ayman Mostafa", dur:"54s", note:"Unboxing, towels"},
+  {key:"injy", name:"Injy ElMokkaddem", dur:"27s", note:"Story testimonial, towels + blanket"},
+  {key:"mariam", name:"Mariam Khalil", dur:"65s", note:"Bathroom styling, towels + bath mat"},
+  {key:"yasmine", name:"Yasmine Farahat", dur:"9s", note:"Ribbed towel close-up"},
+  {key:"jorybakr", name:"Jory Bakr", dur:"49s", note:"Coverlets"},
+  {key:"noha", name:"Noha Badawi", dur:"38s", note:"Bathroom, feeds Coverlets line too"},
+  {key:"nehal", name:"Nehal Life Style", dur:"73s", note:"Lifestyle, towels"},
+  {key:"engy", name:"Engy ElGayar", dur:"56s", note:"Styling, towels"},
+  {key:"maha", name:"Maha Abdelfattah", dur:"63s", note:"Towels"},
+  {key:"mayareel8", name:"Maya Haddad (Reel 8)", dur:"16s", note:"Beach towels close-up"}
+];
+
+function lineName(l){ return l; }
+
+function cardHtml(line, c, i){
+  const img = `assets/statics/${lineName(line)}/${c.name}.jpg`;
+  const sectionId = `wave-${line}-${c.name}`;
+  return `<div class="card">
+    <div class="mockup">
+      <div class="chrome"><div class="avatar"></div><div><div class="name">OTN Textiles</div><div class="spon">Sponsored</div></div></div>
+      <div class="thumb-wrap"><img src="${img}" loading="lazy" onclick="openLightboxImg('${img}')"><span class="notext-tag">no text</span></div>
+      <div class="caption"><b>${c.headline}</b><span>${c.body}</span></div>
+    </div>
+    <div class="approval">
+      <label><input type="radio" name="${sectionId}" value="approve"> Approve</label>
+      <label><input type="radio" name="${sectionId}" value="modify"> Needs changes</label>
+      <label><input type="radio" name="${sectionId}" value="reject"> Reject</label>
+      <button class="cmt-btn" onclick="openCmtModal('${sectionId}','${c.headline.replace(/'/g,"\\'")}')">Comment</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="${sectionId}"></div>
+  </div>`;
+}
+Object.keys(WAVE).forEach(line => {
+  document.getElementById('wave-' + line).innerHTML = WAVE[line].map((c,i) => cardHtml(line, c, i)).join('');
+});
+
+function gifCardHtml(g){
+  const src = `assets/gifs/${g.name}.gif`;
+  const sectionId = `gif-${g.name}`;
+  return `<div class="card">
+    <div class="mockup">
+      <div class="chrome"><div class="avatar"></div><div><div class="name">OTN Textiles</div><div class="spon">Sponsored</div></div></div>
+      <div class="thumb-wrap"><img src="${src}" loading="lazy" onclick="openLightboxImg('${src}')"><span class="notext-tag">no text, real footage</span></div>
+      <div class="caption"><b>${g.headline}</b><span>${g.body}</span></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin:8px 0 0">${g.title}. Final delivery to Meta ships as an equivalent silent MP4 loop, this GIF is for review.</p>
+    <div class="approval">
+      <label><input type="radio" name="${sectionId}" value="approve"> Approve</label>
+      <label><input type="radio" name="${sectionId}" value="modify"> Needs changes</label>
+      <label><input type="radio" name="${sectionId}" value="reject"> Reject</label>
+      <button class="cmt-btn" onclick="openCmtModal('${sectionId}','${g.headline.replace(/'/g,"\\'")}')">Comment</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="${sectionId}"></div>
+  </div>`;
+}
+document.getElementById('wave-gifs').innerHTML = GIFS.map(gifCardHtml).join('');
+
+function reelCardHtml(r){
+  return `<div class="reel-card">
+    <img src="assets/reels/${r.key}.jpg" loading="lazy" onclick="openLightboxImg('assets/reels/${r.key}.jpg')">
+    <div class="rc-body">
+      <div class="rc-name">${r.name}</div>
+      <div class="rc-meta">${r.dur} &middot; ${r.note}</div>
+    </div>
+  </div>`;
+}
+document.getElementById('reel-grid').innerHTML = REELS.map(reelCardHtml).join('');
+
+function showLine(line){
+  document.querySelectorAll('.line-tab').forEach(t => t.classList.toggle('active', t.dataset.line === line));
+  document.querySelectorAll('.line-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === line));
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function openLightboxImg(src){
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lb-img');
+  const vid = document.getElementById('lb-vid');
+  vid.pause(); vid.style.display = 'none';
+  img.style.display = 'block';
+  img.src = src;
+  lb.classList.add('open');
+}
+function closeLightbox(e){
+  if (e && e.target && (e.target.id === 'lb-img' || e.target.id === 'lb-vid')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lb-vid').pause();
+}
+</script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const REPORT_SLUG = "otn-textiles-v3-2026-07-03";
+window.AW_FB = { db, REPORT_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+var fbReady = false;
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initFirestoreSync(); });
+
+const NAME_KEY = 'otn-v3-reviewer-name';
+function getName(){ return localStorage.getItem(NAME_KEY) || ''; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+
+const stateDecisions = {};
+const stateComments = {};
+
+function initFirestoreSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    snap.forEach(d => {
+      const data = d.data();
+      stateDecisions[d.id] = data;
+      const radio = document.querySelector('input[name="' + CSS.escape(d.id) + '"][value="' + CSS.escape(data.decision) + '"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        const card = radio.closest('.card, .final-row');
+        if (card) {
+          card.style.outline = data.decision === 'reject' ? '2px solid var(--bad)' :
+                               data.decision === 'modify' ? '2px solid var(--warn)' :
+                               '2px solid var(--good)';
+          card.style.outlineOffset = '-2px';
+        }
+      }
+    });
+    updateFab();
+  });
+  const cmtRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll('[data-cmt-list]').forEach(el => renderComments(el.dataset.cmtList));
+    updateFab();
+  });
+}
+
+async function persistDecision(sectionId, value){
+  if (!fbReady) return;
+  const name = getName() || 'anonymous';
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions", sectionId),
+      { decision: value, name, updatedAt: fb.serverTimestamp() }
+    );
+  } catch(e){ console.error('persistDecision', e); showToast('Could not save, check your connection'); }
+}
+
+document.addEventListener('change', e => {
+  if (e.target.matches('input[type="radio"]')) {
+    const card = e.target.closest('.card, .final-row');
+    if (card) {
+      card.style.outline = e.target.value === 'reject' ? '2px solid var(--bad)' :
+                           e.target.value === 'modify' ? '2px solid var(--warn)' :
+                           '2px solid var(--good)';
+      card.style.outlineOffset = '-2px';
+    }
+    persistDecision(e.target.name, e.target.value);
+    showToast('Saved: ' + e.target.value);
+  }
+});
+
+let activeCmtSection = null;
+let activeCmtLabel = '';
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById('cmt-modal');
+  const nameRow = document.getElementById('cmt-name-row');
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  const ctx = document.getElementById('cmt-modal-ctx');
+  ctx.textContent = 'On: ' + label;
+  const existingName = getName();
+  if (existingName) { nameRow.style.display = 'none'; }
+  else { nameRow.style.display = 'block'; nameInput.value = ''; setTimeout(()=>nameInput.focus(), 50); }
+  textInput.value = '';
+  if (existingName) setTimeout(()=>textInput.focus(), 50);
+  modal.classList.add('open');
+}
+function closeCmtModal(){
+  document.getElementById('cmt-modal').classList.remove('open');
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || '').trim();
+    if (!name) { nameInput.focus(); showToast('Please enter your name.'); return; }
+    setName(name);
+  }
+  const text = (textInput.value || '').trim();
+  if (!text) { textInput.focus(); showToast('Comment cannot be empty.'); return; }
+  if (!fbReady) { showToast('Still connecting, try again in a moment.'); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast('Comment saved.');
+  } catch(e){
+    console.error('submitComment', e);
+    showToast('Save failed: ' + (e.message || 'unknown'));
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="' + sectionKey + '"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString('en-GB', { hour:'2-digit', minute:'2-digit', day:'2-digit', month:'short' });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById(\'' + c.id + '\')" title="Delete">x</button>' : '';
+    return '<div class="cmt-item">' + delBtn + '<span class="cmt-author">' + escapeHtml(c.name) + '</span>' + escapeHtml(c.text) + '<span class="cmt-time">' + ts + '</span></div>';
+  }).join('');
+}
+async function deleteCommentById(commentId){
+  if (!confirm('Delete this comment?')) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments", commentId));
+    showToast('Comment deleted.');
+  } catch(e){ showToast('Delete failed: ' + (e.message || 'check rules')); }
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function updateFab(){
+  const fab = document.getElementById('feedback-fab');
+  const count = document.getElementById('fab-count');
+  let total = Object.keys(stateDecisions).length;
+  Object.values(stateComments).forEach(arr => total += arr.length);
+  count.textContent = total;
+  if (total > 0) fab.classList.remove('empty'); else fab.classList.add('empty');
+}
+updateFab();
+function jumpToFirstComment(){
+  const lists = document.querySelectorAll('[data-cmt-list]');
+  for (const el of lists) { if (el.children.length > 0) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; } }
+  if (lists[0]) lists[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Working folders, not deployed
+source-creatives/
+proposed/
+logo-uploads/*-src.png
+
+# Preview server config (not needed in deploy)
+.claude/

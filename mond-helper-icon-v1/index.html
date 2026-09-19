@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOND Character Help Launcher - Direction Review v1</title>
+  <meta name="description" content="MOND character launcher direction review v1. Pick the direction for replacing the help widget question-mark with the MOND character across all platforms." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #001a70; --navy-dark: #001055; --red: #C41E2A; --gold: #cc9f53;
+      --paper: #FAF8F3; --paper-tint: #F3EEE6; --ink: #0F1B2D;
+      --ink-soft: #4a5568; --ink-faint: #8a95a8; --line: #dde3ec;
+      --success: #16a34a; --amber: #d49831; --bg: #f0f4fa;
+      --font-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+      --font-display: "Fraunces", Georgia, serif;
+      --radius: 14px; --radius-sm: 8px;
+      --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,26,112,0.07);
+      --maxw: 920px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: var(--font-body); color: var(--ink); background: var(--bg); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    .aw-header { background: var(--navy); color: #fff; padding: 18px 24px; }
+    .aw-header-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .aw-header img { height: 44px; width: auto; display: block; }
+    .header-meta { display: flex; gap: 14px; align-items: center; font-size: 13px; letter-spacing: 0.02em; color: rgba(255,255,255,0.8); }
+    .header-meta .prepared { color: #fff; font-weight: 600; }
+    .header-meta .sep { color: rgba(255,255,255,0.4); }
+    .title-strip { max-width: var(--maxw); margin: 0 auto; padding: 44px 24px 24px; }
+    .deck-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+    .deck-title { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--navy); margin: 0 0 8px; line-height: 1.2; }
+    .deck-lede { font-size: 17px; color: var(--ink-soft); margin: 0 0 6px; max-width: 680px; }
+    .deck-sub { font-size: 14px; color: var(--ink-faint); margin: 0; max-width: 680px; }
+    .snapshot { max-width: var(--maxw); margin: 24px auto 0; padding: 0 24px; }
+    .snapshot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 18px; box-shadow: var(--shadow-card); }
+    .snap-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+    .snap-stat strong { font-size: 26px; color: var(--navy); font-weight: 700; line-height: 1; }
+    .snap-stat .label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+    .section-heading { max-width: var(--maxw); margin: 48px auto 18px; padding: 0 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .section-heading h2 { font-family: var(--font-display); font-size: 22px; color: var(--navy); margin: 0; font-weight: 700; }
+    .section-heading .sub { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+    .dir-card { max-width: var(--maxw); margin: 20px auto 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-card); overflow: hidden; }
+    .dir-card-head { padding: 22px 24px 16px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, var(--paper-tint) 0%, #fff 100%); display: flex; gap: 16px; align-items: flex-start; }
+    .dir-num { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); background: rgba(0,26,112,0.08); border: 1px solid rgba(0,26,112,0.15); padding: 4px 10px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; margin-top: 3px; }
+    .dir-head-text { flex: 1; }
+    .dir-name { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--ink); margin: 0 0 4px; }
+    .dir-rationale { font-size: 15px; color: var(--ink-soft); margin: 0; line-height: 1.5; }
+    .dir-card-body { padding: 24px; }
+    .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .preview-grid.single { grid-template-columns: 1fr; }
+    @media (max-width: 600px) { .preview-grid { grid-template-columns: 1fr; } }
+    .preview-cell { background: var(--paper-tint); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .preview-cell img { max-width: 100%; max-height: 260px; width: auto; height: auto; object-fit: contain; display: block; }
+    .preview-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+    .size-sim-row { margin-bottom: 24px; }
+    .size-sim-label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+    .size-sim-cells { display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap; }
+    .sim-cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .sim-circle { border-radius: 50%; overflow: hidden; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,26,112,0.25); }
+    .sim-circle img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sim-px { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+    .brand-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 6px 12px; border-radius: var(--radius-sm); margin-bottom: 20px; }
+    .brand-badge.pass { background: rgba(22,163,74,0.08); border: 1px solid rgba(22,163,74,0.25); color: #166534; }
+    .brand-badge.warn { background: rgba(212,152,49,0.1); border: 1px solid rgba(212,152,49,0.3); color: #92400e; }
+    .brand-badge .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .brand-badge.pass .dot { background: #16a34a; }
+    .brand-badge.warn .dot { background: var(--amber); }
+    .ap-section { border-top: 1px solid var(--line); padding-top: 20px; }
+    .ap-label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+    .ap-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ap-radio { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1.5px solid var(--line); border-radius: 100px; cursor: pointer; font-size: 14px; font-weight: 500; color: var(--ink-soft); background: #fff; user-select: none; transition: border-color 0.15s, background 0.15s, color 0.15s; }
+    .ap-radio:hover { border-color: var(--navy); color: var(--navy); }
+    .ap-radio input[type="radio"] { display: none; }
+    .ap-radio.selected[data-decision="approve"] { background: rgba(22,163,74,0.08); border-color: #16a34a; color: #166534; font-weight: 600; }
+    .ap-radio.selected[data-decision="regen"] { background: rgba(212,152,49,0.1); border-color: var(--amber); color: #92400e; font-weight: 600; }
+    .ap-radio.selected[data-decision="hold"] { background: rgba(0,26,112,0.07); border-color: var(--navy); color: var(--navy); font-weight: 600; }
+    .cmt-section { margin-top: 16px; }
+    .cmt-open-btn { display: inline-flex; align-items: center; gap: 8px; background: none; border: 1.5px solid var(--line); border-radius: 100px; padding: 7px 14px; font-size: 13px; font-family: var(--font-body); color: var(--ink-soft); cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+    .cmt-open-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .cmt-list { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+    .cmt-item { background: var(--paper-tint); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 14px; line-height: 1.5; position: relative; }
+    .cmt-author { font-weight: 600; color: var(--navy); margin-right: 8px; font-size: 13px; }
+    .cmt-time { font-size: 11px; color: var(--ink-faint); margin-left: 8px; }
+    .cmt-del { position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 16px; color: var(--ink-faint); cursor: pointer; line-height: 1; padding: 0 2px; }
+    .cmt-del:hover { color: var(--red); }
+    #cmt-modal { display: none; position: fixed; inset: 0; background: rgba(15,27,45,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
+    #cmt-modal.open { display: flex; }
+    .cmt-modal-box { background: #fff; border-radius: var(--radius); box-shadow: 0 8px 40px rgba(0,0,0,0.18); padding: 28px; width: 100%; max-width: 480px; }
+    .cmt-modal-box h3 { font-size: 18px; margin: 0 0 4px; font-family: var(--font-display); color: var(--navy); }
+    #cmt-modal-ctx { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; }
+    .cmt-modal-box label { display: block; font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-bottom: 6px; }
+    .cmt-modal-box input, .cmt-modal-box textarea { width: 100%; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: var(--radius-sm); font-size: 14px; font-family: var(--font-body); color: var(--ink); outline: none; margin-bottom: 16px; }
+    .cmt-modal-box input:focus, .cmt-modal-box textarea:focus { border-color: var(--navy); }
+    .cmt-modal-box textarea { height: 100px; resize: vertical; }
+    .cmt-modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+    .btn { padding: 9px 20px; border-radius: 100px; font-size: 14px; font-weight: 600; font-family: var(--font-body); cursor: pointer; border: none; }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dark); }
+    .btn-ghost { background: none; border: 1.5px solid var(--line); color: var(--ink-soft); }
+    .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
+    #feedback-fab { position: fixed; bottom: 28px; right: 28px; z-index: 500; display: flex; align-items: center; gap: 8px; background: var(--navy); color: #fff; border: none; border-radius: 100px; padding: 12px 20px; font-size: 14px; font-weight: 600; font-family: var(--font-body); cursor: pointer; box-shadow: 0 4px 16px rgba(0,26,112,0.35); transition: background 0.15s, transform 0.15s; }
+    #feedback-fab:hover { background: var(--navy-dark); transform: translateY(-1px); }
+    #feedback-fab.empty { background: var(--ink-soft); }
+    #fab-count { background: var(--gold); color: #fff; font-size: 12px; font-weight: 700; min-width: 20px; height: 20px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
+    #toast { position: fixed; bottom: 88px; right: 28px; z-index: 600; background: var(--ink); color: #fff; padding: 10px 18px; border-radius: var(--radius-sm); font-size: 14px; opacity: 0; transform: translateY(8px); transition: opacity 0.2s, transform 0.2s; pointer-events: none; max-width: 320px; }
+    #toast.show { opacity: 1; transform: translateY(0); }
+    .footer { max-width: var(--maxw); margin: 60px auto 0; padding: 32px 24px 48px; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer img { height: 32px; width: auto; opacity: 0.5; }
+    .footer p { font-size: 13px; color: var(--ink-faint); margin: 0; }
+    @media (max-width: 600px) { .snapshot-grid { grid-template-columns: repeat(2, 1fr); } .dir-card-head { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<header class="aw-header" role="banner">
+  <div class="aw-header-inner">
+    <img src="admireworks-white.png" alt="Admireworks" />
+    <div class="header-meta">
+      <span class="prepared">Prepared for Fouad</span>
+      <span class="sep">|</span>
+      <span>MOND Character Launcher</span>
+      <span class="sep">|</span>
+      <span>v1</span>
+      <span class="sep">|</span>
+      <span>June 2026</span>
+    </div>
+  </div>
+</header>
+
+<section class="title-strip" aria-label="Deck overview">
+  <p class="deck-label">Internal Direction Review</p>
+  <h1 class="deck-title">MOND Character Help Launcher</h1>
+  <p class="deck-lede">5 directions for replacing the plain question-mark launcher with the MOND character across every platform. Review each, pick your favorite, mark any for regeneration.</p>
+  <p class="deck-sub">Platforms: Mond, FIS Schools, Basseqat, ASM Minds, AW Client Portal. One change in aw-support ships to all.</p>
+</section>
+
+<section class="snapshot">
+  <div class="snapshot-grid">
+    <div class="snap-stat"><strong>5</strong><span class="label">Directions</span></div>
+    <div class="snap-stat"><strong>7</strong><span class="label">Renders</span></div>
+    <div class="snap-stat"><strong>2</strong><span class="label">State Previews</span></div>
+    <div class="snap-stat"><strong>5</strong><span class="label">Platforms</span></div>
+  </div>
+</section>
+
+<div class="section-heading">
+  <h2>The 5 Directions</h2>
+  <span class="sub">Mark approve / regen / hold per direction</span>
+</div>
+
+<article class="dir-card" id="dir-1">
+  <div class="dir-card-head">
+    <span class="dir-num">Dir 1</span>
+    <div class="dir-head-text">
+      <h2 class="dir-name">Bust in Circle</h2>
+      <p class="dir-rationale">Character head + chest inside the existing colored circle, replacing the question mark. Keeps per-tenant accent color, clearest button affordance, maps directly onto the current 52px launcher shape.</p>
+    </div>
+  </div>
+  <div class="dir-card-body">
+    <div class="preview-grid">
+      <div class="preview-cell">
+        <img src="images/dir1-bust-idle.png" alt="Direction 1: idle state" />
+        <span class="preview-label">Idle</span>
+      </div>
+      <div class="preview-cell">
+        <img src="images/dir1-bust-hover.png" alt="Direction 1: hover wave state" />
+        <span class="preview-label">Hover (wave)</span>
+      </div>
+    </div>
+    <div class="size-sim-row">
+      <p class="size-sim-label">At launcher sizes</p>
+      <div class="size-sim-cells">
+        <div class="sim-cell"><div class="sim-circle" style="width:44px;height:44px;"><img src="images/dir1-bust-idle.png" alt="" /></div><span class="sim-px">44px</span></div>
+        <div class="sim-cell"><div class="sim-circle" style="width:52px;height:52px;"><img src="images/dir1-bust-idle.png" alt="" /></div><span class="sim-px">52px default</span></div>
+        <div class="sim-cell"><div class="sim-circle" style="width:64px;height:64px;"><img src="images/dir1-bust-idle.png" alt="" /></div><span class="sim-px">64px</span></div>
+      </div>
+    </div>
+    <div class="brand-badge pass"><span class="dot"></span>Brand integrity: MOND wordmark with italic red O visible on chest. Pass.</div>
+    <div class="ap-section">
+      <p class="ap-label">Your decision</p>
+      <div class="ap-group">
+        <label class="ap-radio" data-item="dir1" data-decision="approve"><input type="radio" name="ap-dir1" value="approve" /><span>+</span> Approve this direction</label>
+        <label class="ap-radio" data-item="dir1" data-decision="regen"><input type="radio" name="ap-dir1" value="regen" /><span>~</span> Regenerate</label>
+        <label class="ap-radio" data-item="dir1" data-decision="hold"><input type="radio" name="ap-dir1" value="hold" /><span>-</span> Hold</label>
+      </div>
+    </div>
+    <div class="cmt-section">
+      <button class="cmt-open-btn" onclick="openCmtModal('dir1','Dir 1: Bust in Circle')">+ Comment on Direction 1</button>
+      <div class="cmt-list" data-cmt-list="dir1"></div>
+    </div>
+  </div>
+</article>
+
+<article class="dir-card" id="dir-2">
+  <div class="dir-card-head">
+    <span class="dir-num">Dir 2</span>
+    <div class="dir-head-text">
+      <h2 class="dir-name">Free-Standing Character</h2>
+      <p class="dir-rationale">Full body with soft contact shadow, no bounding circle. Most "mascot peeking at you" feel. Affordance via shadow and hover-lift. Tenant color expressed via a subtle ring or halo instead of a solid circle.</p>
+    </div>
+  </div>
+  <div class="dir-card-body">
+    <div class="preview-grid">
+      <div class="preview-cell">
+        <img src="images/dir2-freestand-idle.png" alt="Direction 2: idle state" />
+        <span class="preview-label">Idle</span>
+      </div>
+      <div class="preview-cell">
+        <img src="images/dir2-freestand-hover.png" alt="Direction 2: hover wave state" />
+        <span class="preview-label">Hover (wave)</span>
+      </div>
+    </div>
+    <div class="size-sim-row">
+      <p class="size-sim-label">At launcher sizes (free-floating, no circle)</p>
+      <div class="size-sim-cells">
+        <div class="sim-cell"><div style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;"><img src="images/dir2-freestand-idle.png" alt="" style="height:44px;width:auto;object-fit:contain;" /></div><span class="sim-px">44px</span></div>
+        <div class="sim-cell"><div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center;"><img src="images/dir2-freestand-idle.png" alt="" style="height:52px;width:auto;object-fit:contain;" /></div><span class="sim-px">52px</span></div>
+        <div class="sim-cell"><div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;"><img src="images/dir2-freestand-idle.png" alt="" style="height:64px;width:auto;object-fit:contain;" /></div><span class="sim-px">64px</span></div>
+      </div>
+    </div>
+    <div class="brand-badge pass"><span class="dot"></span>Brand integrity: MOND wordmark with italic red O visible on chest. Pass.</div>
+    <div class="ap-section">
+      <p class="ap-label">Your decision</p>
+      <div class="ap-group">
+        <label class="ap-radio" data-item="dir2" data-decision="approve"><input type="radio" name="ap-dir2" value="approve" /><span>+</span> Approve this direction</label>
+        <label class="ap-radio" data-item="dir2" data-decision="regen"><input type="radio" name="ap-dir2" value="regen" /><span>~</span> Regenerate</label>
+        <label class="ap-radio" data-item="dir2" data-decision="hold"><input type="radio" name="ap-dir2" value="hold" /><span>-</span> Hold</label>
+      </div>
+    </div>
+    <div class="cmt-section">
+      <button class="cmt-open-btn" onclick="openCmtModal('dir2','Dir 2: Free-Standing Character')">+ Comment on Direction 2</button>
+      <div class="cmt-list" data-cmt-list="dir2"></div>
+    </div>
+  </div>
+</article>
+
+<article class="dir-card" id="dir-3">
+  <div class="dir-card-head">
+    <span class="dir-num">Dir 3</span>
+    <div class="dir-head-text">
+      <h2 class="dir-name">Peeking (Lean-In)</h2>
+      <p class="dir-rationale">Attentive forward lean from the corner, looking toward the user. Conveys "calm, present, attentive." Strong engagement feel. The hover state motion would be a gentle lean further in.</p>
+    </div>
+  </div>
+  <div class="dir-card-body">
+    <div class="preview-grid single">
+      <div class="preview-cell">
+        <img src="images/dir3-peeking-idle.png" alt="Direction 3: lean-in pose" />
+        <span class="preview-label">Idle / Lean-In</span>
+      </div>
+    </div>
+    <div class="size-sim-row">
+      <p class="size-sim-label">At launcher sizes (in circle)</p>
+      <div class="size-sim-cells">
+        <div class="sim-cell"><div class="sim-circle" style="width:44px;height:44px;"><img src="images/dir3-peeking-idle.png" alt="" /></div><span class="sim-px">44px</span></div>
+        <div class="sim-cell"><div class="sim-circle" style="width:52px;height:52px;"><img src="images/dir3-peeking-idle.png" alt="" /></div><span class="sim-px">52px</span></div>
+        <div class="sim-cell"><div class="sim-circle" style="width:64px;height:64px;"><img src="images/dir3-peeking-idle.png" alt="" /></div><span class="sim-px">64px</span></div>
+      </div>
+    </div>
+    <div class="brand-badge pass"><span class="dot"></span>Brand integrity: MOND wordmark with italic red O visible on chest. Pass.</div>
+    <div class="ap-section">
+      <p class="ap-label">Your decision</p>
+      <div class="ap-group">
+        <label class="ap-radio" data-item="dir3" data-decision="approve"><input type="radio" name="ap-dir3" value="approve" /><span>+</span> Approve this direction</label>
+        <label class="ap-radio" data-item="dir3" data-decision="regen"><input type="radio" name="ap-dir3" value="regen" /><span>~</span> Regenerate</label>
+        <label class="ap-radio" data-item="dir3" data-decision="hold"><input type="radio" name="ap-dir3" value="hold" /><span>-</span> Hold</label>
+      </div>
+    </div>
+    <div class="cmt-section">
+      <button class="cmt-open-btn" onclick="openCmtModal('dir3','Dir 3: Peeking (Lean-In)')">+ Comment on Direction 3</button>
+      <div class="cmt-list" data-cmt-list="dir3"></div>
+    </div>
+  </div>
+</article>
+
+<article class="dir-card" id="dir-4">
+  <div class="dir-card-head">
+    <span class="dir-num">Dir 4</span>
+    <div class="dir-head-text">
+      <h2 class="dir-name">Flat / Vector Portrait</h2>
+      <p class="dir-rationale">Simplified flat illustration in 2-3 brand colors. Cleanest at tiny sizes, easiest to animate via CSS, and bundleable as a lightweight inline SVG in a future iteration. More "app icon" feel vs. photorealistic render.</p>
+    </div>
+  </div>
+  <div class="dir-card-body">
+    <div class="preview-grid single">
+      <div class="preview-cell">
+        <img src="images/dir4-flat-idle.png" alt="Direction 4: flat vector portrait" />
+        <span class="preview-label">Flat Illustration</span>
+      </div>
+    </div>
+    <div class="size-sim-row">
+      <p class="size-sim-label">At launcher sizes (in circle)</p>
+      <div class="size-sim-cells">
+        <div class="sim-cell"><div class="sim-circle" style="width:44px;height:44px;"><img src="images/dir4-flat-idle.png" alt="" /></div><span class="sim-px">44px</span></div>
+        <div class="sim-cell"><div class="sim-circle" style="width:52px;height:52px;"><img src="images/dir4-flat-idle.png" alt="" /></div><span class="sim-px">52px</span></div>
+        <div class="sim-cell"><div class="sim-circle" style="width:64px;height:64px;"><img src="images/dir4-flat-idle.png" alt="" /></div><span class="sim-px">64px</span></div>
+      </div>
+    </div>
+    <div class="brand-badge pass"><span class="dot"></span>Brand integrity: MOND wordmark with italic red O visible. Pass.</div>
+    <div class="ap-section">
+      <p class="ap-label">Your decision</p>
+      <div class="ap-group">
+        <label class="ap-radio" data-item="dir4" data-decision="approve"><input type="radio" name="ap-dir4" value="approve" /><span>+</span> Approve this direction</label>
+        <label class="ap-radio" data-item="dir4" data-decision="regen"><input type="radio" name="ap-dir4" value="regen" /><span>~</span> Regenerate</label>
+        <label class="ap-radio" data-item="dir4" data-decision="hold"><input type="radio" name="ap-dir4" value="hold" /><span>-</span> Hold</label>
+      </div>
+    </div>
+    <div class="cmt-section">
+      <button class="cmt-open-btn" onclick="openCmtModal('dir4','Dir 4: Flat/Vector Portrait')">+ Comment on Direction 4</button>
+      <div class="cmt-list" data-cmt-list="dir4"></div>
+    </div>
+  </div>
+</article>
+
+<article class="dir-card" id="dir-5">
+  <div class="dir-card-head">
+    <span class="dir-num">Dir 5</span>
+    <div class="dir-head-text">
+      <h2 class="dir-name">Monoline Mark</h2>
+      <p class="dir-rationale">Single-color white line-art head on the primary circle. Most conservative, closest to the current icon. Consistent with MOND hairline iconography aesthetic. Cleanest at 24px.</p>
+    </div>
+  </div>
+  <div class="dir-card-body">
+    <div class="preview-grid single">
+      <div class="preview-cell">
+        <img src="images/dir5-monoline-idle.png" alt="Direction 5: monoline mark" />
+        <span class="preview-label">Monoline Icon (circle background is part of the design)</span>
+      </div>
+    </div>
+    <div class="size-sim-row">
+      <p class="size-sim-label">At launcher sizes</p>
+      <div class="size-sim-cells">
+        <div class="sim-cell"><img src="images/dir5-monoline-idle.png" alt="" style="width:44px;height:44px;border-radius:50%;object-fit:cover;display:block;" /><span class="sim-px">44px</span></div>
+        <div class="sim-cell"><img src="images/dir5-monoline-idle.png" alt="" style="width:52px;height:52px;border-radius:50%;object-fit:cover;display:block;" /><span class="sim-px">52px</span></div>
+        <div class="sim-cell"><img src="images/dir5-monoline-idle.png" alt="" style="width:64px;height:64px;border-radius:50%;object-fit:cover;display:block;" /><span class="sim-px">64px</span></div>
+      </div>
+    </div>
+    <div class="brand-badge warn"><span class="dot"></span>Trade-off: MOND wordmark not visible at this abstraction level. Locked decision says wordmark visible everywhere. Your call on whether to approve anyway.</div>
+    <div class="ap-section">
+      <p class="ap-label">Your decision</p>
+      <div class="ap-group">
+        <label class="ap-radio" data-item="dir5" data-decision="approve"><input type="radio" name="ap-dir5" value="approve" /><span>+</span> Approve this direction</label>
+        <label class="ap-radio" data-item="dir5" data-decision="regen"><input type="radio" name="ap-dir5" value="regen" /><span>~</span> Regenerate</label>
+        <label class="ap-radio" data-item="dir5" data-decision="hold"><input type="radio" name="ap-dir5" value="hold" /><span>-</span> Hold</label>
+      </div>
+    </div>
+    <div class="cmt-section">
+      <button class="cmt-open-btn" onclick="openCmtModal('dir5','Dir 5: Monoline Mark')">+ Comment on Direction 5</button>
+      <div class="cmt-list" data-cmt-list="dir5"></div>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <img src="admireworks-white.png" alt="Admireworks" style="opacity:0.3;filter:invert(1) sepia(1) saturate(0);" />
+  <p>mond-helper-icon-v1 | Internal review deck | Admireworks 2026</p>
+</footer>
+
+<div id="cmt-modal" role="dialog" aria-modal="true" aria-labelledby="cmt-modal-title">
+  <div class="cmt-modal-box">
+    <h3 id="cmt-modal-title">Add Comment</h3>
+    <p id="cmt-modal-ctx"></p>
+    <div id="cmt-name-row">
+      <label for="cmt-name-input">Your name</label>
+      <input type="text" id="cmt-name-input" placeholder="Fouad..." autocomplete="name" />
+    </div>
+    <label for="cmt-text-input">Comment</label>
+    <textarea id="cmt-text-input" placeholder="Your feedback on this direction..."></textarea>
+    <div class="cmt-modal-actions">
+      <button class="btn btn-ghost" onclick="closeCmtModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="submitComment()">Save Comment</button>
+    </div>
+  </div>
+</div>
+
+<button id="feedback-fab" class="empty" onclick="jumpToFirstComment()" aria-label="View all feedback">
+  Feedback saved <span id="fab-count">0</span>
+</button>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const DECK_SLUG = "mond-helper-icon-v1";
+window.AW_FB = { db, DECK_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+let fbReady = false, toastTimer = null;
+const stateDecisions = {}, stateComments = {};
+const NAME_KEY = "mond-helper-icon-v1-reviewer-name";
+function getName(){ return localStorage.getItem(NAME_KEY) || ""; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initSync(); });
+function initSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  fb.onSnapshot(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"decisions"), snap => {
+    Object.keys(stateDecisions).forEach(k => delete stateDecisions[k]);
+    snap.forEach(d => { stateDecisions[d.id] = d.data(); });
+    renderApRadioState(); updateFab();
+  }, err => console.error("decisions:", err));
+  fb.onSnapshot(fb.query(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments"),fb.orderBy("createdAt","asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data(), sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll("[data-cmt-list]").forEach(el => renderComments(el.dataset.cmtList));
+    updateFab();
+  }, err => console.error("comments:", err));
+}
+async function submitItemDecision(itemKey, decision, labelText){
+  if (!fbReady){ showToast("Still connecting, try again in a moment."); return; }
+  let name = getName();
+  if (!name){
+    name = (prompt("Your name (saved once):") || "").trim();
+    if (!name){ showToast("Please enter your name."); return; }
+    setName(name);
+  }
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(fb.doc(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"decisions",itemKey),
+      { decision, name, updatedAt: fb.serverTimestamp() });
+    showToast("Saved: " + labelText);
+  } catch(e){ console.error("submitItemDecision",e); showToast("Save failed: " + (e.message||"unknown")); }
+}
+window.submitItemDecision = submitItemDecision;
+function attachAllRadios(){
+  document.querySelectorAll(".ap-radio").forEach(label => {
+    label.addEventListener("click", async e => {
+      e.preventDefault();
+      const item = label.dataset.item, decision = label.dataset.decision;
+      const clone = label.cloneNode(true); clone.querySelectorAll("input").forEach(n => n.remove());
+      document.querySelectorAll('.ap-radio[data-item="'+CSS.escape(item)+'"]').forEach(r => r.classList.remove("selected"));
+      label.classList.add("selected");
+      await submitItemDecision(item, decision, clone.textContent.trim());
+    });
+  });
+}
+document.addEventListener("DOMContentLoaded", attachAllRadios);
+function renderApRadioState(){
+  document.querySelectorAll(".ap-radio").forEach(r => r.classList.remove("selected"));
+  Object.entries(stateDecisions).forEach(([itemKey, data]) => {
+    document.querySelectorAll('.ap-radio[data-item="'+CSS.escape(itemKey)+'"][data-decision="'+CSS.escape(data.decision)+'"]').forEach(r => r.classList.add("selected"));
+  });
+}
+let activeCmtSection = null, activeCmtLabel = "";
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey; activeCmtLabel = label;
+  const modal = document.getElementById("cmt-modal");
+  const nameRow = document.getElementById("cmt-name-row");
+  document.getElementById("cmt-modal-ctx").textContent = "On: " + label;
+  if (getName()){ nameRow.style.display = "none"; }
+  else { nameRow.style.display = "block"; document.getElementById("cmt-name-input").value = ""; setTimeout(() => document.getElementById("cmt-name-input").focus(), 50); }
+  document.getElementById("cmt-text-input").value = "";
+  if (getName()) setTimeout(() => document.getElementById("cmt-text-input").focus(), 50);
+  modal.classList.add("open");
+}
+function closeCmtModal(){ document.getElementById("cmt-modal").classList.remove("open"); activeCmtSection = null; }
+async function submitComment(){
+  let name = getName();
+  if (!name){
+    name = (document.getElementById("cmt-name-input").value||"").trim();
+    if (!name){ document.getElementById("cmt-name-input").focus(); showToast("Please enter your name."); return; }
+    setName(name);
+  }
+  const text = (document.getElementById("cmt-text-input").value||"").trim();
+  if (!text){ document.getElementById("cmt-text-input").focus(); showToast("Comment is empty."); return; }
+  if (!fbReady){ showToast("Still connecting, try again."); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() });
+    closeCmtModal(); showToast("Comment saved.");
+  } catch(e){ console.error("submitComment",e); showToast("Save failed: "+(e.message||"check connection")); }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="'+sectionKey+'"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey]||[];
+  if (!comments.length){ el.innerHTML = ""; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt&&c.createdAt.toDate ? c.createdAt.toDate() : new Date();
+    const ts = t.toLocaleString("en-GB",{hour:"2-digit",minute:"2-digit",day:"2-digit",month:"short"});
+    const isMine = c.name===getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById('+JSON.stringify(c.id)+')" title="Delete">x</button>' : "";
+    return '<div class="cmt-item">'+delBtn+'<span class="cmt-author">'+escapeHtml(c.name)+'</span>'+escapeHtml(c.text)+'<span class="cmt-time">'+ts+'</span></div>';
+  }).join("");
+}
+async function deleteCommentById(commentId){
+  if (!confirm("Delete this comment?")) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try { await fb.deleteDoc(fb.doc(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments",commentId)); showToast("Deleted."); }
+  catch(e){ showToast("Delete failed: "+(e.message||"check rules")); }
+}
+window.openCmtModal=openCmtModal; window.closeCmtModal=closeCmtModal;
+window.submitComment=submitComment; window.deleteCommentById=deleteCommentById;
+function updateFab(){
+  const fab=document.getElementById("feedback-fab"), count=document.getElementById("fab-count");
+  let total=Object.keys(stateDecisions).length;
+  Object.values(stateComments).forEach(arr => total+=arr.length);
+  count.textContent=total;
+  if (total>0) fab.classList.remove("empty"); else fab.classList.add("empty");
+}
+function showToast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove("show"),2800);
+}
+function jumpToFirstComment(){
+  for (const el of document.querySelectorAll("[data-cmt-list]")){
+    if (el.children.length>0){ el.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+  }
+  document.querySelector(".dir-card")?.scrollIntoView({behavior:"smooth",block:"start"});
+}
+window.jumpToFirstComment=jumpToFirstComment;
+document.getElementById("cmt-modal").addEventListener("click",e=>{ if(e.target.id==="cmt-modal") closeCmtModal(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeCmtModal(); });
+</script>
+</body>
+</html>

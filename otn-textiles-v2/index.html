@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTN Textiles: Full Review, 2026-07-03</title>
+<meta property="og:title" content="OTN Textiles: Full Review">
+<meta property="og:description" content="Bathmat fix, account audit, and the new ponchos/beach/coverlets creative wave, in one place.">
+<style>
+:root{
+  --navy:#001a70; --gold:#cc9f53; --ink:#1a1d2b; --muted:#6b7280;
+  --bg:#f7f8fb; --card:#ffffff; --border:#e6e8f0;
+  --good:#2c9d5f; --warn:#cc9f53; --bad:#c0392b;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.top{background:linear-gradient(135deg,var(--navy),#0a2a8f);color:#fff;padding:56px 0 40px}
+header.top .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+header.top h1{font-size:34px;margin:10px 0 8px}
+header.top p{color:#c9d2f0;font-size:16px;max-width:640px}
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:28px}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 16px}
+.kpi .n{font-size:22px;font-weight:800}
+.kpi .l{font-size:12px;color:#c9d2f0;margin-top:2px}
+nav.side{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:10px 0;z-index:10;overflow-x:auto;white-space:nowrap}
+nav.side a{display:inline-block;padding:8px 14px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}
+section.section{padding:44px 0;border-bottom:1px solid var(--border)}
+h2{font-size:24px;margin:0 0 6px;color:var(--navy)}
+h2 .num{color:var(--gold);margin-right:8px}
+.sub{color:var(--muted);font-size:15px;margin-bottom:22px;max-width:720px}
+.callout{background:#fff8ec;border:1px solid #f0dcb0;border-radius:12px;padding:18px 20px;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr}}
+.swatch{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:middle;margin-right:6px;border:1px solid rgba(0,0,0,.15)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:700;font-size:12px;text-transform:uppercase}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.badge.good{background:#e6f6ec;color:var(--good)}
+.badge.warn{background:#fdf2df;color:#8a6414}
+.badge.bad{background:#fbe9e7;color:var(--bad)}
+.approval{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border);display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.approval label{display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer}
+.mockup{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#fff}
+.mockup .chrome{display:flex;align-items:center;gap:8px;padding:10px 12px;font-size:13px}
+.mockup .chrome .avatar{width:28px;height:28px;border-radius:50%;background:var(--navy)}
+.mockup .chrome .name{font-weight:700}
+.mockup .chrome .spon{color:var(--muted);font-size:11px}
+.mockup img{width:100%;display:block}
+.mockup .caption{padding:12px;font-size:13px;color:var(--ink)}
+.mockup .caption b{display:block;margin-bottom:4px}
+.size-tag{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;padding:2px 8px;border-radius:6px}
+.thumb-wrap{position:relative}
+.line-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.line-tab{padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:#fff;font-size:13px;font-weight:700;cursor:pointer;color:var(--muted)}
+.line-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.line-panel{display:none}
+.line-panel.active{display:block}
+.pill-btn{background:var(--gold);color:#1a1d2b;border:none;border-radius:999px;padding:10px 20px;font-weight:700;cursor:pointer;font-size:14px}
+.pill-btn.ghost{background:transparent;border:1.5px solid var(--border);color:var(--ink)}
+.final-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;background:#fff;border:2px solid var(--navy);border-radius:16px;padding:22px}
+.final-row .fr-choice{flex:1;min-width:220px;border:2px solid var(--border);border-radius:12px;padding:14px 16px}
+.final-row .fr-choice.approve{border-color:var(--good)}
+.final-row .fr-choice.hold{border-color:var(--warn)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:10px;font-size:14px;opacity:0;transition:.25s;z-index:100}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.feedback-fab{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;border:none;border-radius:999px;padding:14px 20px;display:flex;gap:8px;align-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,26,112,.3);z-index:50;font-size:14px}
+.feedback-fab.empty .fab-count{display:none}
+.fab-count{background:var(--gold);color:#1a1d2b;border-radius:999px;padding:1px 8px;font-size:12px;font-weight:800}
+.cmt-btn{font-size:12px;color:var(--navy);background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;cursor:pointer}
+.cmt-list{margin-top:10px}
+.cmt-item{background:#f2f4fa;border-radius:8px;padding:8px 10px;margin-top:6px;font-size:13px;position:relative}
+.cmt-author{font-weight:700;margin-right:6px}
+.cmt-time{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.cmt-del{position:absolute;top:4px;right:6px;border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px}
+#cmt-modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;z-index:200}
+#cmt-modal.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:22px;width:90%;max-width:420px}
+.modal-box input,.modal-box textarea{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px;font-size:14px;margin-top:6px;font-family:inherit}
+footer{padding:32px 0;text-align:center;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Admireworks x OTN Textiles</div>
+    <h1>Everything from today, in one place</h1>
+    <p>The bathmat fix, the full account audit, the ponchos/beach/coverlets creative-depth gap, the new creative wave, and a proposed campaign structure. Nothing here has touched your live account except the two bathmat ads (staged, paused). Review and use the controls on each card, your decisions save live.</p>
+    <div class="kpi-strip">
+      <div class="kpi"><div class="n">989</div><div class="l">Real photos catalogued</div></div>
+      <div class="kpi"><div class="n">2</div><div class="l">Bathmat ads fixed (paused)</div></div>
+      <div class="kpi"><div class="n">27</div><div class="l">Creatives flagged (untouched)</div></div>
+      <div class="kpi"><div class="n">8</div><div class="l">New concepts, 3 sizes each</div></div>
+      <div class="kpi"><div class="n">4.56x</div><div class="l">7-day blended ROAS</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="side">
+  <div class="wrap">
+    <a href="#bathmat">Bathmat fix</a>
+    <a href="#gap">Creative gap</a>
+    <a href="#dof">Governance finding</a>
+    <a href="#wave">New creatives</a>
+    <a href="#campaigns">Proposed campaigns</a>
+    <a href="#final">Decide</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section class="section" id="bathmat">
+  <h2><span class="num">01</span>Bathmat color fix</h2>
+  <p class="sub">Root cause was not the photography, it was a Meta setting. Fixed, staged, ready for your go-ahead.</p>
+  <div class="card">
+    <p><b>What was wrong:</b> the bathmat carousel ad had Meta's automatic image enhancement switched ON instead of off (the same setting class as the May towel-pattern incident), plus 4 of 5 images were WhatsApp-compressed copies instead of your real product photos.</p>
+    <p><b>What we did:</b> rebuilt both the carousel and the video ad using your actual product photography and with every Meta auto-enhancement explicitly switched off, matching the setup your working Catalog ads already use correctly.</p>
+    <p style="color:var(--muted);font-size:13px">New carousel ad 120249511812140770, new video ad 120249511856480770, both currently PAUSED, old versions kept, not deleted.</p>
+    <div class="approval">
+      <label><input type="radio" name="bathmat-activate" value="approve"> Activate the fixed bathmat ads</label>
+      <label><input type="radio" name="bathmat-activate" value="hold"> Hold, keep paused for now</label>
+      <button class="cmt-btn" onclick="openCmtModal('bathmat-activate','Bathmat fix')">Comment</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="bathmat-activate"></div>
+  </div>
+</section>
+
+<section class="section" id="gap">
+  <h2><span class="num">02</span>The creative-depth gap</h2>
+  <p class="sub">From the full account audit, 36 active ads classified by what they actually show.</p>
+  <div class="callout"><b>Ponchos + beach/summer bundle = 12 of 36 active ads (33%)</b>, a bigger share of the account than Towels (28%), yet they have <b>zero dedicated campaign</b>. They compete for budget signal inside general Prospecting and Retargeting alongside everything else. Coverlets are worse off: only 2 ads, no lane at all, despite being your <b>second-highest-ROAS line at 5.72x</b>.</div>
+  <table>
+    <tr><th>Product line</th><th>Active ads</th><th>Dedicated campaign</th><th>Last-30d ROAS</th></tr>
+    <tr><td>Towels</td><td>10</td><td><span class="badge good">Yes</span></td><td>5.76x</td></tr>
+    <tr><td>Ponchos (kids + adult)</td><td>8</td><td><span class="badge bad">No</span></td><td>blended in general campaigns</td></tr>
+    <tr><td>Summer/beach bundle</td><td>4</td><td><span class="badge bad">No</span></td><td>blended in general campaigns</td></tr>
+    <tr><td>Coverlets</td><td>2</td><td><span class="badge bad">No</span></td><td>5.72x</td></tr>
+  </table>
+</section>
+
+<section class="section" id="dof">
+  <h2><span class="num">03</span>Account-wide governance finding</h2>
+  <p class="sub">Found while auditing the account. Not yet acted on, this section is for your decision.</p>
+  <div class="callout">
+    <b>27 of 31 active creatives (87%) carry the same class of gap as the bathmat issue, just not yet visibly triggered.</b> Two risk types found: <b>image brightness/contrast auto-enhancement</b> left on for every static image (same risk class as the bathmat bug), and <b>automatic voiceover translation</b> left on for the reel family, meaning Meta could dub AI-generated voice over your real customers' voices in testimonial videos.
+  </div>
+  <p style="color:var(--muted);font-size:14px">This is informational. Nothing has been changed. Full ad-by-ad detail is in <code>clients/OTN-Textiles/reports/meta-ad-audit-2026-07-02.md</code>, Section 8.</p>
+  <div class="approval">
+    <label><input type="radio" name="dof-remediation" value="approve"> Fix all 27 now</label>
+    <label><input type="radio" name="dof-remediation" value="modify"> Phased: fix top performers first, one at a time</label>
+    <label><input type="radio" name="dof-remediation" value="hold"> Hold, flag only for now</label>
+    <button class="cmt-btn" onclick="openCmtModal('dof-remediation','Governance finding')">Comment</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="dof-remediation"></div>
+</section>
+
+<section class="section" id="wave">
+  <h2><span class="num">04</span>New creative wave</h2>
+  <p class="sub">8 concepts across the three underserved lines, real photos only from your own product library (no AI-generated products), 3 Meta sizes each. Arabic copy reviewed for Egyptian dialect before use.</p>
+
+  <div class="line-tabs">
+    <button class="line-tab active" data-line="ponchos" onclick="showLine('ponchos')">Ponchos (3)</button>
+    <button class="line-tab" data-line="beach" onclick="showLine('beach')">Beach / Summer (3)</button>
+    <button class="line-tab" data-line="coverlets" onclick="showLine('coverlets')">Coverlets (2)</button>
+  </div>
+
+  <div class="line-panel active" data-panel="ponchos">
+    <div class="grid3" id="wave-ponchos"></div>
+  </div>
+  <div class="line-panel" data-panel="beach">
+    <div class="grid3" id="wave-beach"></div>
+  </div>
+  <div class="line-panel" data-panel="coverlets">
+    <div class="grid3" id="wave-coverlets"></div>
+  </div>
+</section>
+
+<section class="section" id="campaigns">
+  <h2><span class="num">05</span>Proposed campaign structure</h2>
+  <p class="sub">Description only, nothing has been created in Meta. This is what we'd build if approved.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3 style="margin-top:0;color:var(--navy)">Ponchos + Beach/Summer campaign</h3>
+      <p style="font-size:14px">One dedicated campaign covering both lines (they share the same summer-moment audience). Prospecting + retargeting ad sets, seeded with the 3 poncho + 3 beach concepts above. Mirrors exactly how the Towels campaign was structured when it became your highest-ROAS line.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;color:var(--navy)">Coverlets campaign</h3>
+      <p style="font-size:14px">A dedicated lane for a line that's already proving itself at 5.72x ROAS with almost no creative support. Seeded with the 2 coverlet concepts above, room to grow.</p>
+    </div>
+  </div>
+  <div class="approval">
+    <label><input type="radio" name="campaign-structure" value="approve"> Build these campaigns</label>
+    <label><input type="radio" name="campaign-structure" value="modify"> Approve concept, discuss budget first</label>
+    <label><input type="radio" name="campaign-structure" value="hold"> Hold</label>
+    <button class="cmt-btn" onclick="openCmtModal('campaign-structure','Proposed campaigns')">Comment</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="campaign-structure"></div>
+</section>
+
+<section class="section" id="final">
+  <h2><span class="num">06</span>Overall</h2>
+  <div class="final-row">
+    <div class="fr-choice approve">
+      <label><input type="radio" name="ADJ-FULL" value="approve"> <b>Approve everything above</b> as proposed</label>
+    </div>
+    <div class="fr-choice hold">
+      <label><input type="radio" name="ADJ-FULL" value="hold"> <b>Hold</b>, I'll decide per-item above</label>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="toast" id="toast"></div>
+<button class="feedback-fab empty" id="feedback-fab" onclick="jumpToFirstComment()">
+  <span>Live feedback</span>
+  <span class="fab-count" id="fab-count"></span>
+</button>
+
+<div id="cmt-modal">
+  <div class="modal-box">
+    <div id="cmt-modal-ctx" style="font-weight:700;margin-bottom:10px"></div>
+    <div id="cmt-name-row"><input id="cmt-name-input" placeholder="Your name"></div>
+    <textarea id="cmt-text-input" rows="3" placeholder="Your comment"></textarea>
+    <div style="display:flex;gap:10px;margin-top:14px;justify-content:flex-end">
+      <button class="pill-btn ghost" onclick="closeCmtModal()">Cancel</button>
+      <button class="pill-btn" onclick="submitComment()">Post</button>
+    </div>
+  </div>
+</div>
+
+<footer>Admireworks x OTN Textiles, generated 2026-07-03. Questions land live and email hello@admireworks.com</footer>
+
+<script>
+const WAVE = {
+  ponchos: [
+    {name:"poncho-bundle", headline:"بونشو ولا فوطة؟ ليه مش الاتنين؟", body:"بونشو OTN بييجي مع فوطة وسجادة بحر متناسقين، عشان دقيقة الخروج من المية تبقى مريحة مش مزعجة. قطن 100%، يمتص بسرعة ويدفي فورا."},
+    {name:"poncho-adult", headline:"بونشو واحد، راحة يوم كامل", body:"بونشو OTN بيلفك من كتفك لركبتك في ثانية. قطن 100% مصنوع في مصر، يمتص المية بسرعة."},
+    {name:"poncho-kids", headline:"ولادك ما يرجفوش تاني وهما خارجين من البحر", body:"بونشو الأطفال من OTN بيغطي من الراس للركبة، بيلفهم بسرعة وبيدفيهم فورا. قطن 100% مصنوع في مصر."}
+  ],
+  beach: [
+    {name:"beach-bundle", headline:"شنطة الساحل جاهزة في طلب واحد", body:"فوطة بحر، سجادة بحر، وبونشو، كلهم من قطن 100% مصنوع في مصر. شحن مجاني فوق 4000 جنيه."},
+    {name:"beach-towel", headline:"الفوطة اللي بتاخدها معاك كل صيف", body:"فوط OTN الصيفية قطن 100%، خفيفة وبتجف بسرعة. مصنوعة في مصر. تقييم 4.9 نجمة من عميلاتنا."},
+    {name:"beach-mat-solo", headline:"سجادة بحر واحدة، ركنك الخاص", body:"سجادة بحر OTN قطن 100% مصنوع في مصر. سهلة تتلف وتاخدها معاك في أي مشوار."}
+  ],
+  coverlets: [
+    {name:"coverlet-speed", headline:"الـ Coverlet اللي بتفرديه في 30 ثانية", body:"مفارش السرير التقيلة بتاخد وقت ومجهود كل صبح. Coverlet من OTN خفيف، بتفرديه وترتبيه بسرعة. قطن 100% مصنوع في مصر."},
+    {name:"coverlet-styling", headline:"غرفة نوم مرتبة من غير مجهود", body:"Coverlet من OTN خفيف وسهل الفرد، قطن 100% مصنوع في مصر. تقييم 4.9 نجمة من عميلاتنا."}
+  ]
+};
+
+function cardHtml(line, c){
+  const img = `assets/wave2/feed/${line}/${c.name}.png`;
+  const sectionId = `wave-${line}-${c.name}`;
+  return `<div class="card">
+    <div class="mockup">
+      <div class="chrome"><div class="avatar"></div><div><div class="name">OTN Textiles</div><div class="spon">Sponsored</div></div></div>
+      <div class="thumb-wrap"><img src="${img}" loading="lazy"><span class="size-tag">4:5</span></div>
+      <div class="caption"><b>${c.headline}</b>${c.body}</div>
+    </div>
+    <div class="approval">
+      <label><input type="radio" name="${sectionId}" value="approve"> Approve</label>
+      <label><input type="radio" name="${sectionId}" value="modify"> Needs changes</label>
+      <label><input type="radio" name="${sectionId}" value="reject"> Reject</label>
+      <button class="cmt-btn" onclick="openCmtModal('${sectionId}','${c.headline.replace(/'/g,"\\'")}')">Comment</button>
+    </div>
+    <div class="cmt-list" data-cmt-list="${sectionId}"></div>
+  </div>`;
+}
+Object.keys(WAVE).forEach(line => {
+  document.getElementById('wave-' + line).innerHTML = WAVE[line].map(c => cardHtml(line, c)).join('');
+});
+
+function showLine(line){
+  document.querySelectorAll('.line-tab').forEach(t => t.classList.toggle('active', t.dataset.line === line));
+  document.querySelectorAll('.line-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === line));
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+</script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const REPORT_SLUG = "otn-textiles-v2-2026-07-03";
+window.AW_FB = { db, REPORT_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+var fbReady = false;
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initFirestoreSync(); });
+
+const NAME_KEY = 'otn-v2-reviewer-name';
+function getName(){ return localStorage.getItem(NAME_KEY) || ''; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+
+const stateDecisions = {};
+const stateComments = {};
+
+function initFirestoreSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    snap.forEach(d => {
+      const data = d.data();
+      stateDecisions[d.id] = data;
+      const radio = document.querySelector('input[name="' + CSS.escape(d.id) + '"][value="' + CSS.escape(data.decision) + '"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        const card = radio.closest('.card, .final-row');
+        if (card) {
+          card.style.outline = data.decision === 'reject' ? '2px solid var(--bad)' :
+                               data.decision === 'modify' ? '2px solid var(--warn)' :
+                               '2px solid var(--good)';
+          card.style.outlineOffset = '-2px';
+        }
+      }
+    });
+    updateFab();
+  });
+  const cmtRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll('[data-cmt-list]').forEach(el => renderComments(el.dataset.cmtList));
+    updateFab();
+  });
+}
+
+async function persistDecision(sectionId, value){
+  if (!fbReady) return;
+  const name = getName() || 'anonymous';
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions", sectionId),
+      { decision: value, name, updatedAt: fb.serverTimestamp() }
+    );
+  } catch(e){ console.error('persistDecision', e); showToast('Could not save, check your connection'); }
+}
+
+document.addEventListener('change', e => {
+  if (e.target.matches('input[type="radio"]')) {
+    const card = e.target.closest('.card, .final-row');
+    if (card) {
+      card.style.outline = e.target.value === 'reject' ? '2px solid var(--bad)' :
+                           e.target.value === 'modify' ? '2px solid var(--warn)' :
+                           '2px solid var(--good)';
+      card.style.outlineOffset = '-2px';
+    }
+    persistDecision(e.target.name, e.target.value);
+    showToast('Saved: ' + e.target.value);
+  }
+});
+
+let activeCmtSection = null;
+let activeCmtLabel = '';
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById('cmt-modal');
+  const nameRow = document.getElementById('cmt-name-row');
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  const ctx = document.getElementById('cmt-modal-ctx');
+  ctx.textContent = 'On: ' + label;
+  const existingName = getName();
+  if (existingName) { nameRow.style.display = 'none'; }
+  else { nameRow.style.display = 'block'; nameInput.value = ''; setTimeout(()=>nameInput.focus(), 50); }
+  textInput.value = '';
+  if (existingName) setTimeout(()=>textInput.focus(), 50);
+  modal.classList.add('open');
+}
+function closeCmtModal(){
+  document.getElementById('cmt-modal').classList.remove('open');
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || '').trim();
+    if (!name) { nameInput.focus(); showToast('Please enter your name.'); return; }
+    setName(name);
+  }
+  const text = (textInput.value || '').trim();
+  if (!text) { textInput.focus(); showToast('Comment cannot be empty.'); return; }
+  if (!fbReady) { showToast('Still connecting, try again in a moment.'); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast('Comment saved.');
+  } catch(e){
+    console.error('submitComment', e);
+    showToast('Save failed: ' + (e.message || 'unknown'));
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="' + sectionKey + '"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString('en-GB', { hour:'2-digit', minute:'2-digit', day:'2-digit', month:'short' });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById(\'' + c.id + '\')" title="Delete">x</button>' : '';
+    return '<div class="cmt-item">' + delBtn + '<span class="cmt-author">' + escapeHtml(c.name) + '</span>' + escapeHtml(c.text) + '<span class="cmt-time">' + ts + '</span></div>';
+  }).join('');
+}
+async function deleteCommentById(commentId){
+  if (!confirm('Delete this comment?')) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments", commentId));
+    showToast('Comment deleted.');
+  } catch(e){ showToast('Delete failed: ' + (e.message || 'check rules')); }
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function updateFab(){
+  const fab = document.getElementById('feedback-fab');
+  const count = document.getElementById('fab-count');
+  let total = Object.keys(stateDecisions).length;
+  Object.values(stateComments).forEach(arr => total += arr.length);
+  count.textContent = total;
+  if (total > 0) fab.classList.remove('empty'); else fab.classList.add('empty');
+}
+updateFab();
+function jumpToFirstComment(){
+  const lists = document.querySelectorAll('[data-cmt-list]');
+  for (const el of lists) { if (el.children.length > 0) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; } }
+  if (lists[0]) lists[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+
+</body>
+</html>

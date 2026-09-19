@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>باسقات: مراجعة صوت الفويس أوفر</title>
+<style>
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-SemiBold.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Madani Arabic";
+  src:url("assets/fonts/MadaniArabic-Bold.woff2") format("woff2");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+:root{
+  --forest:#175734;
+  --terracotta:#BF7955;
+  --cream:#FFF8EF;
+  --ink:#22301f;
+  --muted:#6b6255;
+  --line:#e7ddcc;
+  --card:#ffffff;
+  --good:#175734;
+  --warn:#BF7955;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Madani Arabic","Segoe UI",Tahoma,sans-serif;
+  line-height:1.7;
+}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px 90px}
+header.top{
+  padding:36px 0 26px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:30px;
+}
+header.top img{height:52px;display:block;margin-bottom:22px}
+header.top h1{
+  font-size:26px;
+  font-weight:700;
+  color:var(--forest);
+  margin:0 0 10px;
+}
+header.top p{
+  font-size:15px;
+  color:var(--muted);
+  margin:0;
+  max-width:640px;
+}
+.howto{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px 20px;
+  margin-bottom:34px;
+  font-size:14px;
+  color:var(--ink);
+}
+.howto strong{color:var(--forest)}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  margin-bottom:26px;
+  box-shadow:0 2px 10px rgba(23,87,52,.05);
+}
+.card .eyebrow{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--terracotta);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.card h2{
+  font-size:19px;
+  font-weight:700;
+  color:var(--forest);
+  margin:0 0 8px;
+}
+.card p.desc{font-size:14px;color:var(--muted);margin:0 0 16px}
+video{
+  width:100%;
+  border-radius:10px;
+  display:block;
+  background:#000;
+  margin-bottom:18px;
+}
+.approval{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  padding-top:14px;
+  border-top:1px dashed var(--line);
+}
+.approval .label{font-size:13px;color:var(--muted);font-weight:600;margin-left:6px}
+.approval label.opt{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:9px 16px;
+  border-radius:999px;
+  border:1.5px solid var(--line);
+  font-size:13.5px;
+  cursor:pointer;
+  background:#fff;
+  transition:.15s;
+}
+.approval label.opt:hover{border-color:var(--forest)}
+.approval input[type=radio]{accent-color:var(--forest)}
+.voice-card audio{width:100%;height:40px;margin-top:6px}
+.section-title{color:var(--forest);font-size:20px;margin:34px 0 6px}
+.section-sub{color:#5a6a5f;font-size:14px;line-height:1.9;margin:0 0 18px}
+.approval .cmt-btn{
+  margin-right:auto;
+  background:transparent;
+  border:1.5px solid var(--line);
+  border-radius:999px;
+  padding:9px 16px;
+  font-size:13.5px;
+  color:var(--ink);
+  cursor:pointer;
+  font-family:inherit;
+}
+.approval .cmt-btn:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.cmt-list{margin-top:14px}
+.cmt-item{
+  position:relative;
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px 40px 10px 14px;
+  margin-bottom:8px;
+  font-size:13.5px;
+}
+.cmt-author{display:block;font-weight:700;color:var(--forest);font-size:12.5px;margin-bottom:2px}
+.cmt-time{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.cmt-del{
+  position:absolute;left:8px;top:8px;background:none;border:none;
+  color:var(--muted);font-size:16px;cursor:pointer;line-height:1;
+}
+footer.bottom{
+  text-align:center;
+  padding-top:20px;
+  color:var(--muted);
+  font-size:13px;
+}
+.cmt-modal{position:fixed;inset:0;background:rgba(23,20,10,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:16px}
+.cmt-modal.open{display:flex}
+.cmt-modal-body{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;max-width:440px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.cmt-modal-body h3{margin:0 0 6px;font-size:17px;color:var(--forest)}
+.cmt-modal-body .ctx{font-size:12px;color:var(--muted);margin-bottom:14px;padding:8px 10px;background:var(--cream);border-radius:6px;border-right:3px solid var(--terracotta)}
+.cmt-modal-body label{display:block;font-size:12px;color:var(--ink);margin-bottom:6px;font-weight:600}
+.cmt-modal-body input[type=text],.cmt-modal-body textarea{
+  width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+  color:var(--ink);font-size:14px;font-family:inherit;margin-bottom:14px;box-sizing:border-box;background:var(--cream);
+}
+.cmt-modal-body textarea{min-height:90px;resize:vertical}
+.cmt-modal-body input[type=text]:focus,.cmt-modal-body textarea:focus{outline:none;border-color:var(--forest)}
+.cmt-modal-actions{display:flex;gap:10px;justify-content:flex-start}
+.cmt-modal-actions button{padding:10px 18px;border-radius:8px;border:none;font-weight:600;cursor:pointer;font-size:13px;font-family:inherit}
+.cmt-modal-actions .save{background:var(--forest);color:#fff}
+.cmt-modal-actions .cancel{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--forest);color:#fff;padding:10px 18px;border-radius:999px;
+  font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:3000;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:600px){
+  header.top h1{font-size:21px}
+  .card{padding:16px}
+  .approval{flex-direction:column;align-items:stretch}
+  .approval .cmt-btn{margin-right:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img src="assets/logo-primary.png" alt="باسقات">
+  <h1>مراجعة صوت الفويس أوفر لصفحات الهبوط</h1>
+  <p>جهزنالكم صوت الراوي (الفويس أوفر) لصفحتين من صفحات الهبوط، فوق فيديو حقيقي من أرض باسقات. محتاجين رأيكم قبل ما نرفعهم على الموقع.</p>
+</header>
+
+<div class="howto">
+  <strong>تحديث جديد:</strong> زي ما وعدناكم، دلوقتي جبنالكم الفيديوهات كاملة مش مقطع بس. تحت هتلاقوا 4 فيديوهات بصوتكم انتوا (اتسجلوا وبعتوهولنا) بس محولين لصوت الراوي، وفيديوهين تانيين بصوت هيثم الحكّاء بالكامل من غير تسجيلكم، عشان تقارنوا. النسخة القديمة لسه موجودة تحت للمرجعية بس، مش محتاجة رأي تاني.<br><br>
+  <strong>إزاي تراجعوا:</strong> اسمعوا كل فيديو وشوفوا لو الصوت والكلام مناسبين، وبعدين اختاروا "يعتمد" أو "محتاج تعديل" تحت كل فيديو. لو حابين توضحوا حاجة معينة، دوسوا "أضف تعليق".
+</div>
+
+<div class="card">
+  <div class="eyebrow">قديم (سبق رفضها)</div>
+  <h2>فويس أوفر: قرب المعاش</h2>
+  <p class="desc">النسخة دي هتظهر لزوار صفحة الهبوط الخاصة بالي قربوا على سن المعاش، وبقت كاملة لحد آخر جملة. دي النسخة القديمة اللي لهجتها طلعت خليجي؛ باقية هنا للمرجعية بس، مش محتاجة رأي تاني.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fpension-v4.mp4?alt=media&token=108fab79-1705-463b-995b-53703669e011"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-pension" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-pension" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-pension','فويس أوفر - صفحة المعاش')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-pension"></div>
+</div>
+
+<div class="card">
+  <div class="eyebrow">قديم (سبق رفضها)</div>
+  <h2>فويس أوفر: المصريين في الخارج</h2>
+  <p class="desc">النسخة دي هتظهر لزوار صفحة الهبوط بتاعة المصريين اللي عايشين برا مصر. دي النسخة القديمة اللي لهجتها طلعت خليجي؛ باقية هنا للمرجعية بس، مش محتاجة رأي تاني.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fexpat-v4.mp4?alt=media&token=dd4ffcdf-17ca-4f0e-b391-4bbbd560219a"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-expat" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-expat" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-expat','فويس أوفر - صفحة المغتربين')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-expat"></div>
+</div>
+
+<h2 class="section-title">الفيديوهات بالتسجيل اللي بعتوهولنا، بصوت الراوي</h2>
+<p class="section-sub">استخدمنا نفس التسجيل اللي بعتوهولنا للفيديوهين (المعاش والمغتربين)، من غير ما نغير كلمة ولا وقفة، وبس حولنا نبرة الصوت لصوت الراوي (هيثم أو هيثم الحكاء) عشان يبقى صوت باسقات الرسمي. يعني اللهجة والإيقاع زي ما هو، بس الصوت نفسه بقى صوت تاني. اسمعوا الأربع نسخ وقولولنا مين يعجبكم أكتر.</p>
+
+<div class="card voice-card">
+  <div class="eyebrow">المعاش، بصوت هيثم</div>
+  <h2>فويس أوفر: قرب المعاش (تسجيلكم + صوت هيثم)</h2>
+  <p class="desc">تسجيلكم الأصلي، محول لصوت هيثم.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fpension-sts-haytham.mp4?alt=media&token=a24f7f87-df1e-4a92-baeb-ada43b19580a"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-pension-sts-haytham" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-pension-sts-haytham" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-pension-sts-haytham','المعاش، تسجيلكم بصوت هيثم')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-pension-sts-haytham"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">المعاش، بصوت هيثم الحكّاء</div>
+  <h2>فويس أوفر: قرب المعاش (تسجيلكم + صوت هيثم الحكّاء)</h2>
+  <p class="desc">تسجيلكم الأصلي، محول لصوت هيثم الحكّاء.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fpension-sts-storyteller.mp4?alt=media&token=24fc3920-c8b3-48b3-a5af-cfff70ccf413"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-pension-sts-storyteller" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-pension-sts-storyteller" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-pension-sts-storyteller','المعاش، تسجيلكم بصوت هيثم الحكاء')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-pension-sts-storyteller"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">المغتربين، بصوت هيثم</div>
+  <h2>فويس أوفر: المصريين في الخارج (تسجيلكم + صوت هيثم)</h2>
+  <p class="desc">تسجيلكم الأصلي، محول لصوت هيثم.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fexpat-sts-haytham.mp4?alt=media&token=b239d1b0-51f1-44b8-8408-40c67ec00a4c"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-expat-sts-haytham" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-expat-sts-haytham" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-expat-sts-haytham','المغتربين، تسجيلكم بصوت هيثم')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-expat-sts-haytham"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">المغتربين، بصوت هيثم الحكّاء</div>
+  <h2>فويس أوفر: المصريين في الخارج (تسجيلكم + صوت هيثم الحكّاء)</h2>
+  <p class="desc">تسجيلكم الأصلي، محول لصوت هيثم الحكّاء.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fexpat-sts-storyteller.mp4?alt=media&token=57ac2204-eb95-46a7-841b-3a460ad4303f"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-expat-sts-storyteller" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-expat-sts-storyteller" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-expat-sts-storyteller','المغتربين، تسجيلكم بصوت هيثم الحكاء')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-expat-sts-storyteller"></div>
+</div>
+
+<h2 class="section-title">خيار تاني: صوت هيثم الحكّاء بيقرأ السكربت كامل</h2>
+<p class="section-sub">دي نسخة تانية، الصوت فيها بالكامل مصنوع بالذكاء الاصطناعي مش تسجيلكم، لكن بنفس صوت هيثم الحكّاء اللي شفتوه فوق، وبيقرأ السكربت كامل من الأول للآخر. لو حابين تقارنوا بين النسخة دي والنسخة اللي بصوتكم، اسمعوا الاتنين وقولولنا رأيكم.</p>
+
+<div class="card voice-card">
+  <div class="eyebrow">المعاش، هيثم الحكّاء (AI كامل)</div>
+  <h2>فويس أوفر: قرب المعاش (صوت مصنوع بالكامل)</h2>
+  <p class="desc">السكربت كامل، بصوت هيثم الحكّاء، مصنوع بالكامل بالذكاء الاصطناعي.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fpension-v3egy-storyteller.mp4?alt=media&token=09953452-494f-4413-9aa4-1f992a685175"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-pension-v3egy" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-pension-v3egy" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-pension-v3egy','المعاش، هيثم الحكاء AI كامل')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-pension-v3egy"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">المغتربين، هيثم الحكّاء (AI كامل)</div>
+  <h2>فويس أوفر: المصريين في الخارج (صوت مصنوع بالكامل)</h2>
+  <p class="desc">السكربت كامل، بصوت هيثم الحكّاء، مصنوع بالكامل بالذكاء الاصطناعي.</p>
+  <video controls preload="metadata" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fexpat-v3egy-storyteller.mp4?alt=media&token=576f4299-0fd9-40fb-84ec-39fffb5aac27"></video>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="vo-expat-v3egy" value="approve"> يعتمد</label>
+    <label class="opt"><input type="radio" name="vo-expat-v3egy" value="modify"> محتاج تعديل</label>
+    <button class="cmt-btn" onclick="openCmtModal('vo-expat-v3egy','المغتربين، هيثم الحكاء AI كامل')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="vo-expat-v3egy"></div>
+</div>
+
+<h2 class="section-title">صوتين مصريين حقيقيين، عشان يبقى فعلاً مصري</h2>
+<p class="section-sub">دول صوتين لناس مصريين حقيقيين، مش صوت مصنوع بالذكاء الاصطناعي زي الأول. بيقرأوا نفس المقطع من نص صفحة المغتربين، اسمعوهم وقولولنا مين يعجبكم أكتر، وبعدها هنسجل بيه الفيديوهين بالكامل.</p>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت مصري ١</div>
+  <h2>هيثم</h2>
+  <p class="desc">صوت راوي مصري احترافي، هادي وواثق.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-egypt-haytham.mp3?alt=media&token=4ade93bd-6dc4-4a20-bb91-df129d20a46b"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-egypt-haytham" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-egypt-haytham" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-egypt-haytham','عينة صوت مصري - هيثم')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-egypt-haytham"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت مصري ٢</div>
+  <h2>هيثم الحكّاء</h2>
+  <p class="desc">نفس الصوت بس بإيقاع الحكي، دافي وقريب.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-egypt-storyteller.mp3?alt=media&token=9548e4be-8f8b-4e55-84da-c7592350d857"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-egypt-storyteller" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-egypt-storyteller" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-egypt-storyteller','عينة صوت مصري - هيثم الحكّاء')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-egypt-storyteller"></div>
+</div>
+
+<h2 class="section-title">عيّنات أصوات إضافية</h2>
+<p class="section-sub">دي عيّنات لأصوات تانية جهزناها، كلها بتقرأ نفس المقطع من نص صفحة المغتربين علشان تقدروا تقارنوا بسهولة. لو حابين نجرب صوت منهم في الفيديوهات، اختاروا "يعجبنا" تحت الصوت أو سيبولنا تعليق.</p>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت ١</div>
+  <h2>صوت عميق دافي</h2>
+  <p class="desc">بيتكلم عن الأرض بثقة هادية.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-sample-1-v2.mp3?alt=media&token=110bbbc1-2408-4715-a5d2-1467e3ab3a19"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-sample-1" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-sample-1" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-sample-1','عينة صوت ١ - العميق الدافي')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-sample-1"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت ٢</div>
+  <h2>الحكّاء</h2>
+  <p class="desc">صوت عميق غني، بيحكي بدفء وثقة.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-sample-2-v2.mp3?alt=media&token=f25c68c9-ab3b-492b-97b8-3ffa7d1d8d48"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-sample-2" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-sample-2" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-sample-2','عينة صوت ٢ - الحكّاء')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-sample-2"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت ٣</div>
+  <h2>صوت جهوري</h2>
+  <p class="desc">صوت قوي غني، مقتنع باللي بيقوله من غير مبالغة.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-sample-3-v2.mp3?alt=media&token=b71d61aa-958a-4f57-bea2-39efec4bc3c4"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-sample-3" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-sample-3" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-sample-3','عينة صوت ٣ - الجهوري')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-sample-3"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت ٤</div>
+  <h2>صوت قيادي</h2>
+  <p class="desc">عميق ورزين وواثق.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-sample-4-v2.mp3?alt=media&token=931dfda2-f873-4f17-92bd-0055563d0a8f"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-sample-4" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-sample-4" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-sample-4','عينة صوت ٤ - القيادي')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-sample-4"></div>
+</div>
+
+<div class="card voice-card">
+  <div class="eyebrow">صوت ٥</div>
+  <h2>القريب من الناس</h2>
+  <p class="desc">صوت عميق ودود بإيقاع مصري طبيعي، مش راوي رسمي.</p>
+  <audio controls preload="none" src="https://firebasestorage.googleapis.com/v0/b/basseqat-e8e95.firebasestorage.app/o/media%2Fvo-review%2Fbasseqat-vo-v1%2Fvoice-sample-5-v2.mp3?alt=media&token=094a5612-b427-487e-8bfa-09f2f3d4cebb"></audio>
+  <div class="approval">
+    <span class="label">رأيكم:</span>
+    <label class="opt"><input type="radio" name="voice-sample-5" value="approve"> يعجبنا</label>
+    <label class="opt"><input type="radio" name="voice-sample-5" value="modify"> مش مناسب</label>
+    <button class="cmt-btn" onclick="openCmtModal('voice-sample-5','عينة صوت ٥ - القريب من الناس')">💬 أضف تعليق</button>
+  </div>
+  <div class="cmt-list" data-cmt-list="voice-sample-5"></div>
+</div>
+
+<footer class="bottom">
+  بمجرد ما توافقوا، هنربط الفيديوهات بصفحات الهبوط الحية. لو محتاجين أي حاجة تانية قولولنا.
+</footer>
+
+</div>
+
+<!-- COMMENT MODAL -->
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true">
+  <div class="cmt-modal-body">
+    <h3 id="cmt-modal-title">أضف تعليقك</h3>
+    <div class="ctx" id="cmt-modal-ctx">على: </div>
+    <div id="cmt-name-row" style="display:none">
+      <label for="cmt-name-input">اسمك</label>
+      <input type="text" id="cmt-name-input" placeholder="مثال: خالد ناصر الدين">
+    </div>
+    <label for="cmt-text-input">التعليق</label>
+    <textarea id="cmt-text-input" placeholder="رأيك في الفيديو ده..."></textarea>
+    <div class="cmt-modal-actions">
+      <button class="save" onclick="submitComment()">حفظ التعليق</button>
+      <button class="cancel" onclick="closeCmtModal()">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+const REPORT_SLUG = "basseqat-vo-v1";
+window.AW_FB = { db, REPORT_SLUG, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, deleteDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+
+<script>
+var toastTimer = null;
+var fbReady = false;
+window.addEventListener("aw-fb-ready", () => { fbReady = true; initFirestoreSync(); });
+
+const NAME_KEY = 'basseqat-vo-reviewer-name';
+function getName(){ return localStorage.getItem(NAME_KEY) || ''; }
+function setName(n){ localStorage.setItem(NAME_KEY, n); }
+
+const stateDecisions = {};
+const stateComments = {};
+
+function initFirestoreSync(){
+  const fb = window.AW_FB;
+  if (!fb) return;
+  const decRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions");
+  fb.onSnapshot(decRef, snap => {
+    snap.forEach(d => {
+      const data = d.data();
+      stateDecisions[d.id] = data;
+      const radio = document.querySelector('input[name="' + CSS.escape(d.id) + '"][value="' + CSS.escape(data.decision) + '"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        const card = radio.closest('.card');
+        if (card) {
+          card.style.outline = data.decision === 'modify' ? '2px solid var(--warn)' : '2px solid var(--good)';
+          card.style.outlineOffset = '-2px';
+        }
+      }
+    });
+  });
+  const cmtRef = fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments");
+  fb.onSnapshot(fb.query(cmtRef, fb.orderBy("createdAt", "asc")), snap => {
+    Object.keys(stateComments).forEach(k => delete stateComments[k]);
+    snap.forEach(d => {
+      const data = d.data();
+      const sid = data.sectionId;
+      if (!stateComments[sid]) stateComments[sid] = [];
+      stateComments[sid].push({ id: d.id, ...data });
+    });
+    document.querySelectorAll('[data-cmt-list]').forEach(el => renderComments(el.dataset.cmtList));
+  });
+}
+
+async function persistDecision(sectionId, value){
+  if (!fbReady) return;
+  const name = getName() || 'زائر';
+  const fb = window.AW_FB;
+  try {
+    await fb.setDoc(
+      fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "decisions", sectionId),
+      { decision: value, name, updatedAt: fb.serverTimestamp() }
+    );
+  } catch(e){ console.error('persistDecision', e); showToast('حصل خطأ، تأكد من الاتصال بالإنترنت'); }
+}
+
+document.querySelectorAll('input[type="radio"]').forEach(r => {
+  r.addEventListener('change', e => {
+    const card = e.target.closest('.card');
+    if (card) {
+      card.style.outline = e.target.value === 'modify' ? '2px solid var(--warn)' : '2px solid var(--good)';
+      card.style.outlineOffset = '-2px';
+    }
+    persistDecision(e.target.name, e.target.value);
+    showToast('تم الحفظ');
+  });
+});
+
+let activeCmtSection = null;
+let activeCmtLabel = '';
+function openCmtModal(sectionKey, label){
+  activeCmtSection = sectionKey;
+  activeCmtLabel = label;
+  const modal = document.getElementById('cmt-modal');
+  const nameRow = document.getElementById('cmt-name-row');
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  const ctx = document.getElementById('cmt-modal-ctx');
+  ctx.textContent = 'على: ' + label;
+  const existingName = getName();
+  if (existingName) { nameRow.style.display = 'none'; }
+  else { nameRow.style.display = 'block'; nameInput.value = ''; setTimeout(()=>nameInput.focus(), 50); }
+  textInput.value = '';
+  if (existingName) setTimeout(()=>textInput.focus(), 50);
+  modal.classList.add('open');
+}
+function closeCmtModal(){
+  document.getElementById('cmt-modal').classList.remove('open');
+  activeCmtSection = null;
+}
+async function submitComment(){
+  const nameInput = document.getElementById('cmt-name-input');
+  const textInput = document.getElementById('cmt-text-input');
+  let name = getName();
+  if (!name) {
+    name = (nameInput.value || '').trim();
+    if (!name) { nameInput.focus(); showToast('من فضلك اكتب اسمك'); return; }
+    setName(name);
+  }
+  const text = (textInput.value || '').trim();
+  if (!text) { textInput.focus(); showToast('التعليق فاضي'); return; }
+  if (!fbReady) { showToast('لسه بنتصل، جرب تاني بعد لحظة'); return; }
+  const fb = window.AW_FB;
+  try {
+    await fb.addDoc(
+      fb.collection(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments"),
+      { sectionId: activeCmtSection, sectionLabel: activeCmtLabel, name, text, createdAt: fb.serverTimestamp() }
+    );
+    closeCmtModal();
+    showToast('تم حفظ التعليق');
+  } catch(e){
+    console.error('submitComment', e);
+    showToast('حصل خطأ في الحفظ');
+  }
+}
+function renderComments(sectionKey){
+  const el = document.querySelector('[data-cmt-list="' + sectionKey + '"]');
+  if (!el) return;
+  const comments = stateComments[sectionKey] || [];
+  if (comments.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = comments.map(c => {
+    const t = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate() : (c.createdAt instanceof Date ? c.createdAt : new Date());
+    const ts = t.toLocaleString('ar-EG', { hour:'2-digit', minute:'2-digit', day:'2-digit', month:'short' });
+    const isMine = c.name === getName();
+    const delBtn = isMine ? '<button class="cmt-del" onclick="deleteCommentById(\'' + c.id + '\')" title="حذف">×</button>' : '';
+    return '<div class="cmt-item">' + delBtn + '<span class="cmt-author">' + escapeHtml(c.name) + '</span>' + escapeHtml(c.text) + '<span class="cmt-time">' + ts + '</span></div>';
+  }).join('');
+}
+async function deleteCommentById(commentId){
+  if (!confirm('تحذف التعليق ده؟')) return;
+  if (!fbReady) return;
+  const fb = window.AW_FB;
+  try {
+    await fb.deleteDoc(fb.doc(fb.db, "publicReportFeedback", fb.REPORT_SLUG, "comments", commentId));
+    showToast('اتحذف');
+  } catch(e){ showToast('الحذف فشل'); }
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+document.getElementById('cmt-modal').addEventListener('click', e => { if (e.target.id === 'cmt-modal') closeCmtModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCmtModal(); });
+
+window.openCmtModal = openCmtModal;
+window.closeCmtModal = closeCmtModal;
+window.submitComment = submitComment;
+window.deleteCommentById = deleteCommentById;
+</script>
+
+</body>
+</html>

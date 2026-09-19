@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعداد منصة مدارس أجيالنا — قائمة المراجعة | Admireworks</title>
+    <meta name="description" content="قائمة مراجعة شاملة لإعداد منصة مدارس أجيالنا — سجلات DNS، تحقق Resend، تفعيل WhatsApp + AI، والمحتوى المتبقّي.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --aw-navy: #001a70;
+            --aw-navy-deep: #000d3a;
+            --aw-gold: #cc9f53;
+            --aw-gold-soft: #e8c987;
+            --aw-bg: #f6f4ef;
+            --aw-white: #ffffff;
+            --aw-text: #1d2436;
+            --aw-muted: #5d6475;
+            --aw-muted-light: #8a91a3;
+            --aw-border: #e3e0d8;
+            --aw-border-strong: #c9c5b8;
+            --aw-success: #0f766e;
+            --aw-success-bg: #d1fae5;
+            --aw-warn: #b45309;
+            --aw-warn-bg: #fef3c7;
+            --aw-error: #b91c1c;
+            --aw-error-bg: #fee2e2;
+            --aw-pending: #6b7280;
+            --aw-pending-bg: #f3f4f6;
+            --aw-mono: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', 'Courier New', monospace;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--aw-bg);
+            color: var(--aw-text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        /* ==== HERO ==== */
+        .hero {
+            background: linear-gradient(135deg, var(--aw-navy) 0%, var(--aw-navy-deep) 100%);
+            color: var(--aw-white);
+            border-radius: 18px;
+            padding: 40px 36px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset-inline-start: -120px;
+            top: -120px;
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, var(--aw-gold) 0%, transparent 70%);
+            opacity: 0.18;
+            border-radius: 50%;
+        }
+        .hero-eyebrow {
+            font-size: 13px;
+            color: var(--aw-gold-soft);
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--aw-white);
+        }
+        .hero .lead {
+            margin: 0 0 24px;
+            font-size: 17px;
+            color: rgba(255,255,255,0.85);
+            max-width: 720px;
+        }
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.75);
+        }
+        .hero-meta strong { color: var(--aw-white); font-weight: 700; }
+
+        .status-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--aw-white);
+        }
+        .status-pill .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--aw-warn);
+            box-shadow: 0 0 0 3px rgba(180,83,9,0.25);
+        }
+        .status-pill.done .dot { background: var(--aw-success); box-shadow: 0 0 0 3px rgba(15,118,110,0.25); }
+        .status-pill.pending .dot { background: var(--aw-gold); box-shadow: 0 0 0 3px rgba(204,159,83,0.25); }
+
+        /* ==== QUICK NAV ==== */
+        .quick-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--aw-white);
+            border: 1px solid var(--aw-border);
+            border-radius: 14px;
+            padding: 14px 18px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            box-shadow: 0 4px 16px rgba(0,26,112,0.06);
+        }
+        .quick-nav a {
+            color: var(--aw-navy);
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background 0.15s;
+        }
+        .quick-nav a:hover { background: var(--aw-bg); }
+
+        /* ==== SECTIONS ==== */
+        section {
+            background: var(--aw-white);
+            border: 1px solid var(--aw-border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(0,26,112,0.04);
+        }
+        section h2 {
+            color: var(--aw-navy);
+            margin: 0 0 6px;
+            font-size: 24px;
+            font-weight: 800;
+            border-bottom: 3px solid var(--aw-gold);
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        section .section-sub {
+            color: var(--aw-muted);
+            font-size: 15px;
+            margin: 0 0 24px;
+            max-width: 880px;
+        }
+        section h3 {
+            color: var(--aw-navy);
+            margin: 28px 0 14px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        section h3:first-of-type { margin-top: 8px; }
+
+        .owner-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-inline-start: 10px;
+            vertical-align: middle;
+        }
+        .owner-tag.akef { background: #dbeafe; color: #1e40af; }
+        .owner-tag.wafa { background: #fce7f3; color: #9f1239; }
+        .owner-tag.aw { background: var(--aw-bg); color: var(--aw-navy); }
+
+        /* ==== DNS TABLES ==== */
+        .dns-zone {
+            margin-bottom: 24px;
+            border: 1px solid var(--aw-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .dns-zone-header {
+            background: var(--aw-bg);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--aw-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .dns-zone-header strong { color: var(--aw-navy); font-size: 15px; }
+        .dns-zone-header .zone-meta { color: var(--aw-muted); font-size: 13px; }
+
+        table.dns-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        table.dns-table th {
+            background: #fafaf7;
+            text-align: start;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--aw-border);
+            font-weight: 700;
+            color: var(--aw-navy);
+            font-size: 12px;
+        }
+        table.dns-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--aw-border);
+            vertical-align: top;
+        }
+        table.dns-table tr:last-child td { border-bottom: none; }
+        table.dns-table tr:hover td { background: #fafaf7; }
+        .type-badge {
+            display: inline-block;
+            padding: 3px 9px;
+            border-radius: 5px;
+            font-family: var(--aw-mono);
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .type-badge.t-A { background: #dbeafe; color: #1e40af; }
+        .type-badge.t-TXT { background: #fef3c7; color: #92400e; }
+        .type-badge.t-CNAME { background: #d1fae5; color: #065f46; }
+        .type-badge.t-MX { background: #fce7f3; color: #831843; }
+
+        .copy-cell {
+            font-family: var(--aw-mono);
+            font-size: 12px;
+            color: var(--aw-text);
+            background: #fafaf7;
+            border: 1px solid var(--aw-border);
+            border-radius: 6px;
+            padding: 7px 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: space-between;
+            word-break: break-all;
+            min-width: 0;
+        }
+        .copy-cell .copy-text {
+            flex: 1;
+            min-width: 0;
+            user-select: all;
+        }
+        .copy-btn {
+            background: var(--aw-navy);
+            color: var(--aw-white);
+            border: none;
+            border-radius: 5px;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            transition: background 0.15s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .copy-btn:hover { background: var(--aw-navy-deep); }
+        .copy-btn.copied { background: var(--aw-success); }
+
+        .dkim-mono {
+            font-family: var(--aw-mono);
+            font-size: 11px;
+            line-height: 1.5;
+            word-break: break-all;
+            background: #fafaf7;
+            border: 1px solid var(--aw-border);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            user-select: all;
+        }
+
+        /* ==== CHECKLISTS ==== */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .checklist > li {
+            padding: 14px 16px;
+            border: 1px solid var(--aw-border);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background: var(--aw-white);
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+        .checklist .check {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: var(--aw-pending-bg);
+            border: 2px solid var(--aw-border-strong);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--aw-pending);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .checklist .check.done { background: var(--aw-success-bg); border-color: var(--aw-success); color: var(--aw-success); }
+        .checklist .check.pending { background: var(--aw-warn-bg); border-color: var(--aw-warn); color: var(--aw-warn); }
+        .checklist .item-title {
+            font-weight: 700;
+            color: var(--aw-text);
+            margin: 0 0 4px;
+            font-size: 15px;
+        }
+        .checklist .item-desc {
+            color: var(--aw-muted);
+            font-size: 14px;
+            margin: 0;
+        }
+        .checklist .item-meta {
+            font-size: 12px;
+            color: var(--aw-muted-light);
+            margin-top: 6px;
+        }
+
+        /* ==== INFO CARDS ==== */
+        .info-card {
+            background: linear-gradient(135deg, #f8f6ef, #fdfcf7);
+            border: 1px solid var(--aw-gold-soft);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+        }
+        .info-card strong { color: var(--aw-navy); }
+        .info-card p { margin: 0; color: var(--aw-text); font-size: 14px; }
+        .info-card.warning { background: var(--aw-warn-bg); border-color: var(--aw-warn); }
+        .info-card.success { background: var(--aw-success-bg); border-color: var(--aw-success); }
+
+        /* ==== TIMELINE ==== */
+        .timeline {
+            position: relative;
+            padding-inline-start: 24px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            inset-inline-start: 8px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--aw-border);
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            inset-inline-start: -20px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--aw-pending);
+            border: 2px solid var(--aw-white);
+            box-shadow: 0 0 0 2px var(--aw-border);
+        }
+        .timeline-item.done::before { background: var(--aw-success); box-shadow: 0 0 0 2px var(--aw-success); }
+        .timeline-item.in-flight::before { background: var(--aw-gold); box-shadow: 0 0 0 2px var(--aw-gold); animation: pulse 1.6s infinite; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .timeline-item-title { font-weight: 700; color: var(--aw-navy); font-size: 15px; }
+        .timeline-item-meta { color: var(--aw-muted); font-size: 13px; }
+
+        /* ==== FOOTER ==== */
+        footer {
+            margin-top: 40px;
+            padding: 32px;
+            background: var(--aw-navy);
+            color: rgba(255,255,255,0.85);
+            border-radius: 16px;
+            text-align: center;
+        }
+        footer h3 { color: var(--aw-white); margin: 0 0 10px; font-size: 20px; }
+        footer p { margin: 6px 0; color: rgba(255,255,255,0.85); }
+        footer .signature { color: var(--aw-gold-soft); font-size: 13px; margin-top: 18px; letter-spacing: 1px; }
+        footer a { color: var(--aw-gold-soft); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* ==== SUMMARY GRID ==== */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .summary-card {
+            background: var(--aw-bg);
+            border: 1px solid var(--aw-border);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .summary-card .label { font-size: 12px; color: var(--aw-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+        .summary-card .value { font-size: 24px; color: var(--aw-navy); font-weight: 800; margin-top: 4px; }
+        .summary-card .sublabel { font-size: 12px; color: var(--aw-muted); margin-top: 2px; }
+
+        @media (max-width: 720px) {
+            section { padding: 22px 18px; }
+            .hero { padding: 28px 22px; }
+            .quick-nav { padding: 10px; }
+            .quick-nav a { padding: 6px 10px; font-size: 12px; }
+            table.dns-table { font-size: 12px; }
+            table.dns-table td, table.dns-table th { padding: 8px 6px; }
+            .copy-cell { padding: 6px 8px; font-size: 11px; }
+            .copy-btn { font-size: 10px; padding: 3px 7px; }
+        }
+
+        @media print {
+            body { background: white; }
+            .quick-nav, .copy-btn { display: none !important; }
+            section, .hero, footer { box-shadow: none; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="hero">
+            <p class="hero-eyebrow">Admireworks · Mond System</p>
+            <h1>إعداد منصة مدارس أجيالنا — قائمة المراجعة الشاملة</h1>
+            <p class="lead">صفحة واحدة تحتوي كل ما هو متبقّي من جانب الفريق لإطلاق المنصة: سجلات الـ DNS الـ ٣٦، تحقق نطاقات بريد Resend، تفعيل واتساب وذكاء اصطناعي عبر صفحة التكاملات، والمحتوى الذي ننتظره منكم.</p>
+            <div class="hero-meta">
+                <span><strong>العميل:</strong> مدارس أجيالنا · الفرسان العالمية · الفرسان الأهلية · دار الرواد</span>
+                <span><strong>المسؤول الفني:</strong> الأستاذ محمد عاكف</span>
+                <span><strong>المسؤول التحريري:</strong> الأستاذة وفاء الجاربا</span>
+                <span><strong>آخر تحديث:</strong> 2026-04-29</span>
+            </div>
+            <div class="status-pills">
+                <span class="status-pill"><span class="dot"></span> ٣٦ سجل DNS بانتظار الإضافة</span>
+                <span class="status-pill"><span class="dot"></span> ٦ نطاقات بريد بانتظار التحقق</span>
+                <span class="status-pill"><span class="dot"></span> واتساب: بانتظار رقم الإنتاج</span>
+                <span class="status-pill"><span class="dot"></span> ذكاء اصطناعي: بانتظار مفتاح Vertex</span>
+                <span class="status-pill pending"><span class="dot"></span> محتوى: شهادات أولياء أمور + شارات اعتماد</span>
+                <span class="status-pill done"><span class="dot"></span> منصة الإدارة: جاهزة + منشورة</span>
+            </div>
+        </div>
+
+        <!-- QUICK NAV -->
+        <nav class="quick-nav" aria-label="quick navigation">
+            <a href="#summary">الملخّص</a>
+            <a href="#dns-firebase">سجلات DNS — صفحات الهبوط</a>
+            <a href="#dns-resend">سجلات DNS — البريد</a>
+            <a href="#resend-best-practices">معايير البريد</a>
+            <a href="#whatsapp">إعداد WhatsApp</a>
+            <a href="#content-pending">المحتوى المتبقّي</a>
+            <a href="#timeline">الجدول الزمني</a>
+            <a href="#contact">التواصل</a>
+        </nav>
+
+        <!-- SUMMARY -->
+        <section id="summary">
+            <h2>ملخّص الإعداد</h2>
+            <p class="section-sub">منصة Mond الشاملة لمدارس أجيالنا تربط ٣ علامات تجارية (الفرسان العالمية + الفرسان الأهلية + دار الرواد) و٧ فروع في أربع مدن. تعمل المنصة بالكامل في Firebase project مستقلّ بمنطقة <code>europe-west4</code> — أقرب نقطة لحركة المرور السعودية. ما تبقّى هو إضافة الـ DNS وبيانات الاعتماد فقط.</p>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="label">عدد السجلات الإجمالي</div>
+                    <div class="value">٣٦</div>
+                    <div class="sublabel">عبر ٤ نطاقات</div>
+                </div>
+                <div class="summary-card">
+                    <div class="label">صفحات الهبوط الجديدة</div>
+                    <div class="value">٣</div>
+                    <div class="sublabel">+ لوحة إدارة موحّدة</div>
+                </div>
+                <div class="summary-card">
+                    <div class="label">نطاقات بريد Resend</div>
+                    <div class="value">٦</div>
+                    <div class="sublabel">٣ معاملات + ٣ تسويق</div>
+                </div>
+                <div class="summary-card">
+                    <div class="label">زمن الانتشار</div>
+                    <div class="value">≤24س</div>
+                    <div class="sublabel">١٥ دقيقة في الغالب</div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <p><strong>توزيع الأدوار:</strong> الأستاذ Akef يُضيف سجلات الـ DNS الـ ٣٦ على نطاقاتكم الأربعة. الأستاذة وفاء تُتيح لنا صلاحية WhatsApp عبر Business Manager (شرحناه أدناه — مجرّد إضافة بريدَين). كل ما عدا ذلك — شهادات HTTPS، التحقق من Resend، إعداد الذكاء الاصطناعي، التنبيهات — يتولّاه فريق Admireworks مباشرة.</p>
+            </div>
+        </section>
+
+        <!-- DNS — FIREBASE APP HOSTING -->
+        <section id="dns-firebase">
+            <h2>القسم أ — سجلات Firebase App Hosting <span class="owner-tag akef">Akef</span></h2>
+            <p class="section-sub">١٢ سجلًا عبر ٤ نطاقات. كل نطاق فرعي يحتاج ٣ سجلات: <code>A</code> للتوجيه، <code>TXT</code> لإثبات الملكية، و<code>CNAME</code> طويل لإصدار شهادة HTTPS تلقائيًا. الأسماء الطويلة بعد <code>_acme-challenge_*</code> أنشأها Google تلقائيًا — انسخوها كما هي.</p>
+
+            <!-- A.1 fis.sch.sa -->
+            <div class="dns-zone">
+                <div class="dns-zone-header">
+                    <strong>أ.١ — نطاق <code>fis.sch.sa</code></strong>
+                    <span class="zone-meta">صفحة هبوط الفرسان العالمية → <code>start.fis.sch.sa</code></span>
+                </div>
+                <table class="dns-table">
+                    <thead>
+                        <tr><th style="width:8%">النوع</th><th style="width:32%">الاسم / Host</th><th>القيمة</th><th style="width:8%">TTL</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-A">A</span></td><td><code>start</code></td><td><div class="copy-cell"><span class="copy-text">35.219.200.99</span><button class="copy-btn" data-copy="35.219.200.99">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>start</code></td><td><div class="copy-cell"><span class="copy-text">fah-claim=016-02-d6d82f1f-1d47-4e8f-a9af-5e5b30cbd85f</span><button class="copy-btn" data-copy="fah-claim=016-02-d6d82f1f-1d47-4e8f-a9af-5e5b30cbd85f">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-CNAME">CNAME</span></td><td><code>_acme-challenge_zfutpzzkhcal5ei5.start</code></td><td><div class="copy-cell"><span class="copy-text">0311181c-cea1-414a-bf6f-6f161a6e12a6.16.authorize.certificatemanager.goog.</span><button class="copy-btn" data-copy="0311181c-cea1-414a-bf6f-6f161a6e12a6.16.authorize.certificatemanager.goog.">نسخ</button></div></td><td>3600</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- A.2 alforsan.sch.sa -->
+            <div class="dns-zone">
+                <div class="dns-zone-header">
+                    <strong>أ.٢ — نطاق <code>alforsan.sch.sa</code></strong>
+                    <span class="zone-meta">صفحة هبوط الفرسان الأهلية → <code>start.alforsan.sch.sa</code></span>
+                </div>
+                <table class="dns-table">
+                    <thead>
+                        <tr><th style="width:8%">النوع</th><th style="width:32%">الاسم / Host</th><th>القيمة</th><th style="width:8%">TTL</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-A">A</span></td><td><code>start</code></td><td><div class="copy-cell"><span class="copy-text">35.219.200.97</span><button class="copy-btn" data-copy="35.219.200.97">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>start</code></td><td><div class="copy-cell"><span class="copy-text">fah-claim=016-02-bd0db4be-eac3-4314-ba99-90bc99ad670d</span><button class="copy-btn" data-copy="fah-claim=016-02-bd0db4be-eac3-4314-ba99-90bc99ad670d">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-CNAME">CNAME</span></td><td><code>_acme-challenge_rroktdqdj64fohvh.start</code></td><td><div class="copy-cell"><span class="copy-text">a8d721c8-7019-4cc5-b4f3-eb1f1d8988a1.4.authorize.certificatemanager.goog.</span><button class="copy-btn" data-copy="a8d721c8-7019-4cc5-b4f3-eb1f1d8988a1.4.authorize.certificatemanager.goog.">نسخ</button></div></td><td>3600</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- A.3 dararrowad.sch.sa -->
+            <div class="dns-zone">
+                <div class="dns-zone-header">
+                    <strong>أ.٣ — نطاق <code>dararrowad.sch.sa</code></strong>
+                    <span class="zone-meta">صفحة هبوط دار الرواد → <code>start.dararrowad.sch.sa</code></span>
+                </div>
+                <table class="dns-table">
+                    <thead>
+                        <tr><th style="width:8%">النوع</th><th style="width:32%">الاسم / Host</th><th>القيمة</th><th style="width:8%">TTL</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-A">A</span></td><td><code>start</code></td><td><div class="copy-cell"><span class="copy-text">35.219.200.101</span><button class="copy-btn" data-copy="35.219.200.101">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>start</code></td><td><div class="copy-cell"><span class="copy-text">fah-claim=016-02-4b9aa839-bd28-4817-88c6-bc0f946f8d47</span><button class="copy-btn" data-copy="fah-claim=016-02-4b9aa839-bd28-4817-88c6-bc0f946f8d47">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-CNAME">CNAME</span></td><td><code>_acme-challenge_erioj72wnibfp25w.start</code></td><td><div class="copy-cell"><span class="copy-text">5e33baa7-418d-4436-9df0-f53f942a0503.6.authorize.certificatemanager.goog.</span><button class="copy-btn" data-copy="5e33baa7-418d-4436-9df0-f53f942a0503.6.authorize.certificatemanager.goog.">نسخ</button></div></td><td>3600</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- A.4 ajialuna.edu.sa -->
+            <div class="dns-zone">
+                <div class="dns-zone-header">
+                    <strong>أ.٤ — نطاق <code>ajialuna.edu.sa</code></strong>
+                    <span class="zone-meta">لوحة الإدارة الموحّدة → <code>admin.ajialuna.edu.sa</code></span>
+                </div>
+                <table class="dns-table">
+                    <thead>
+                        <tr><th style="width:8%">النوع</th><th style="width:32%">الاسم / Host</th><th>القيمة</th><th style="width:8%">TTL</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-A">A</span></td><td><code>admin</code></td><td><div class="copy-cell"><span class="copy-text">35.219.200.105</span><button class="copy-btn" data-copy="35.219.200.105">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>admin</code></td><td><div class="copy-cell"><span class="copy-text">fah-claim=016-02-7ba00b75-1f8f-4b30-921b-b73af0c5beab</span><button class="copy-btn" data-copy="fah-claim=016-02-7ba00b75-1f8f-4b30-921b-b73af0c5beab">نسخ</button></div></td><td>3600</td></tr>
+                        <tr><td><span class="type-badge t-CNAME">CNAME</span></td><td><code>_acme-challenge_vc4bd2kih6s4vxyx.admin</code></td><td><div class="copy-cell"><span class="copy-text">07e526bc-4363-483f-95bb-90cc46b822c5.6.authorize.certificatemanager.goog.</span><button class="copy-btn" data-copy="07e526bc-4363-483f-95bb-90cc46b822c5.6.authorize.certificatemanager.goog.">نسخ</button></div></td><td>3600</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-card">
+                <p><strong>كيف تعمل هذه السجلات معًا:</strong> <code>A</code> يوجّه الزائر للـ load balancer، <code>TXT</code> يثبت الملكية لـ Firebase، <code>CNAME</code> الطويل يطلب شهادة HTTPS من Google تلقائيًا. لا تغيّروا الأسماء الطويلة للـ <code>_acme-challenge</code> — أنشأها Google عشوائيًا وهي صحيحة.</p>
+            </div>
+        </section>
+
+        <!-- DNS — RESEND -->
+        <section id="dns-resend">
+            <h2>القسم ب — سجلات Resend للبريد <span class="owner-tag akef">Akef</span></h2>
+            <p class="section-sub">٢٤ سجلًا (٤ سجلات لكل نطاق فرعي × ٦ نطاقات). كل مدرسة لها نطاقان: <code>notify.*</code> للمعاملات (تأكيدات الحجز، إيصالات الدفع، تنبيهات أمنية) و<code>mail.*</code> للتسويق (تسلسل النشر، البث، حملات Open House). الفصل بينهما هو ممارسة قياسية في Mailchimp و SendGrid و Resend — يحمي سمعة بريد المعاملات من تأثيرات حملات التسويق.</p>
+
+            <h3>ب.١ — <code>notify.fis.sch.sa</code> · معاملات الفرسان العالمية</h3>
+            <div class="dns-zone">
+                <div class="dns-zone-header"><strong>على نطاق <code>fis.sch.sa</code></strong><span class="zone-meta">٤ سجلات</span></div>
+                <table class="dns-table">
+                    <thead><tr><th style="width:8%">النوع</th><th style="width:30%">الاسم</th><th>القيمة</th><th style="width:8%">Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>resend._domainkey.notify</code></td><td><div class="copy-cell"><span class="copy-text" style="font-size:10px">p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChRWZTUeXkI9rwwNg8UGsccwLDH3F26iphr8jfx33MBI5QqyqnhuBPXq2LVi4rgwE4WPiM43RgxNpjSO2oHkc9nvE8YRGQGQVkmwBvTT/0v3VH29qoXZmVicgU4XmacJ6rOP2pFf4p6z1i9LfeSeBNgfOV0wKrsNZPQScPsPmowwIDAQAB</span><button class="copy-btn" data-copy="p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChRWZTUeXkI9rwwNg8UGsccwLDH3F26iphr8jfx33MBI5QqyqnhuBPXq2LVi4rgwE4WPiM43RgxNpjSO2oHkc9nvE8YRGQGQVkmwBvTT/0v3VH29qoXZmVicgU4XmacJ6rOP2pFf4p6z1i9LfeSeBNgfOV0wKrsNZPQScPsPmowwIDAQAB">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-MX">MX</span></td><td><code>send.notify</code></td><td><div class="copy-cell"><span class="copy-text">feedback-smtp.eu-west-1.amazonses.com</span><button class="copy-btn" data-copy="feedback-smtp.eu-west-1.amazonses.com">نسخ</button></div></td><td>10</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>send.notify</code></td><td><div class="copy-cell"><span class="copy-text">v=spf1 include:amazonses.com ~all</span><button class="copy-btn" data-copy="v=spf1 include:amazonses.com ~all">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>_dmarc.notify</code></td><td><div class="copy-cell"><span class="copy-text">v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com</span><button class="copy-btn" data-copy="v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com">نسخ</button></div></td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>ب.٢ — <code>mail.fis.sch.sa</code> · تسويق الفرسان العالمية</h3>
+            <div class="dns-zone">
+                <div class="dns-zone-header"><strong>على نطاق <code>fis.sch.sa</code></strong><span class="zone-meta">٤ سجلات</span></div>
+                <table class="dns-table">
+                    <thead><tr><th style="width:8%">النوع</th><th style="width:30%">الاسم</th><th>القيمة</th><th style="width:8%">Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>resend._domainkey.mail</code></td><td><div class="copy-cell"><span class="copy-text" style="font-size:10px">p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBpQp0hg+b7Wii2mUN4KflIacA59UhcUH3t/TlUP0/AC1++jnGE+Wz328EcH8OsXqV3LtcNQBnJk/92EX5lWYTIiAhec7zDZrVs+wn7ZDObHEHkZstF7HmE0ly70pMRu5TxNOCA6npQa+PnIoRYWrvui/d/Yal+O3dSR7UrN4jGQIDAQAB</span><button class="copy-btn" data-copy="p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBpQp0hg+b7Wii2mUN4KflIacA59UhcUH3t/TlUP0/AC1++jnGE+Wz328EcH8OsXqV3LtcNQBnJk/92EX5lWYTIiAhec7zDZrVs+wn7ZDObHEHkZstF7HmE0ly70pMRu5TxNOCA6npQa+PnIoRYWrvui/d/Yal+O3dSR7UrN4jGQIDAQAB">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-MX">MX</span></td><td><code>send.mail</code></td><td><div class="copy-cell"><span class="copy-text">feedback-smtp.eu-west-1.amazonses.com</span><button class="copy-btn" data-copy="feedback-smtp.eu-west-1.amazonses.com">نسخ</button></div></td><td>10</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>send.mail</code></td><td><div class="copy-cell"><span class="copy-text">v=spf1 include:amazonses.com ~all</span><button class="copy-btn" data-copy="v=spf1 include:amazonses.com ~all">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>_dmarc.mail</code></td><td><div class="copy-cell"><span class="copy-text">v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com</span><button class="copy-btn" data-copy="v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com">نسخ</button></div></td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>ب.٣ — <code>notify.alforsan.sch.sa</code> · معاملات الفرسان الأهلية</h3>
+            <div class="dns-zone">
+                <div class="dns-zone-header"><strong>على نطاق <code>alforsan.sch.sa</code></strong><span class="zone-meta">٤ سجلات</span></div>
+                <table class="dns-table">
+                    <thead><tr><th style="width:8%">النوع</th><th style="width:30%">الاسم</th><th>القيمة</th><th style="width:8%">Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>resend._domainkey.notify</code></td><td><div class="copy-cell"><span class="copy-text" style="font-size:10px">p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDewJEIDXy9BWkVbvG+CHERwNDMlPRDT+wU7+XY38ex+kzpjTozl5A4HPq/sfh1+YXCfUW2o+wQIn82eC+U64r+ZiMRCiaBcPOVqM8CX63RDklIMOpdqQjmZaIDjXjhHuKAkLAqcd4TN96oXJZp3kl6QgET4+PhP0LznJ0n3QPGQwIDAQAB</span><button class="copy-btn" data-copy="p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDewJEIDXy9BWkVbvG+CHERwNDMlPRDT+wU7+XY38ex+kzpjTozl5A4HPq/sfh1+YXCfUW2o+wQIn82eC+U64r+ZiMRCiaBcPOVqM8CX63RDklIMOpdqQjmZaIDjXjhHuKAkLAqcd4TN96oXJZp3kl6QgET4+PhP0LznJ0n3QPGQwIDAQAB">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-MX">MX</span></td><td><code>send.notify</code></td><td><div class="copy-cell"><span class="copy-text">feedback-smtp.eu-west-1.amazonses.com</span><button class="copy-btn" data-copy="feedback-smtp.eu-west-1.amazonses.com">نسخ</button></div></td><td>10</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>send.notify</code></td><td><div class="copy-cell"><span class="copy-text">v=spf1 include:amazonses.com ~all</span><button class="copy-btn" data-copy="v=spf1 include:amazonses.com ~all">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>_dmarc.notify</code></td><td><div class="copy-cell"><span class="copy-text">v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com</span><button class="copy-btn" data-copy="v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com">نسخ</button></div></td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>ب.٤ — <code>mail.alforsan.sch.sa</code> · تسويق الفرسان الأهلية</h3>
+            <div class="dns-zone">
+                <div class="dns-zone-header"><strong>على نطاق <code>alforsan.sch.sa</code></strong><span class="zone-meta">٤ سجلات</span></div>
+                <table class="dns-table">
+                    <thead><tr><th style="width:8%">النوع</th><th style="width:30%">الاسم</th><th>القيمة</th><th style="width:8%">Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>resend._domainkey.mail</code></td><td><div class="copy-cell"><span class="copy-text" style="font-size:10px">p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyfiMmKzEaxU4zx+Vvhnxl9tx6hj/P/RF9EuHnyCRu4U0KD4Ez4s90C2FouEahFBc9cLqJDD8diteY7rNYZJ34PbFiRZf2AKXiieT6aKObv3/gYZhv3dKAbIWr8KydfAfOHKYVxnxX7/w3VbcR+UdRKtFSXHpmv0GZCnlpjQe3bQIDAQAB</span><button class="copy-btn" data-copy="p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyfiMmKzEaxU4zx+Vvhnxl9tx6hj/P/RF9EuHnyCRu4U0KD4Ez4s90C2FouEahFBc9cLqJDD8diteY7rNYZJ34PbFiRZf2AKXiieT6aKObv3/gYZhv3dKAbIWr8KydfAfOHKYVxnxX7/w3VbcR+UdRKtFSXHpmv0GZCnlpjQe3bQIDAQAB">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-MX">MX</span></td><td><code>send.mail</code></td><td><div class="copy-cell"><span class="copy-text">feedback-smtp.eu-west-1.amazonses.com</span><button class="copy-btn" data-copy="feedback-smtp.eu-west-1.amazonses.com">نسخ</button></div></td><td>10</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>send.mail</code></td><td><div class="copy-cell"><span class="copy-text">v=spf1 include:amazonses.com ~all</span><button class="copy-btn" data-copy="v=spf1 include:amazonses.com ~all">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>_dmarc.mail</code></td><td><div class="copy-cell"><span class="copy-text">v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com</span><button class="copy-btn" data-copy="v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com">نسخ</button></div></td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>ب.٥ — <code>notify.dararrowad.sch.sa</code> · معاملات دار الرواد</h3>
+            <div class="dns-zone">
+                <div class="dns-zone-header"><strong>على نطاق <code>dararrowad.sch.sa</code></strong><span class="zone-meta">٤ سجلات</span></div>
+                <table class="dns-table">
+                    <thead><tr><th style="width:8%">النوع</th><th style="width:30%">الاسم</th><th>القيمة</th><th style="width:8%">Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>resend._domainkey.notify</code></td><td><div class="copy-cell"><span class="copy-text" style="font-size:10px">p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjzAZ6NDm365IJQkO+xPRzo1I2WjGfMk4iQg+x43WYFEE4Wq2eT1pMNJ/saQm9zpEuo6CPX1v6Px4gsvnO4KBL5/2hGxGM/dNNSUUt//nkDKlB5UwTK0hIiQJCJB+Oxr11/nabTkSqWigTVE1QstKNsGic5bG8fHwRanRaOUMW0QIDAQAB</span><button class="copy-btn" data-copy="p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjzAZ6NDm365IJQkO+xPRzo1I2WjGfMk4iQg+x43WYFEE4Wq2eT1pMNJ/saQm9zpEuo6CPX1v6Px4gsvnO4KBL5/2hGxGM/dNNSUUt//nkDKlB5UwTK0hIiQJCJB+Oxr11/nabTkSqWigTVE1QstKNsGic5bG8fHwRanRaOUMW0QIDAQAB">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-MX">MX</span></td><td><code>send.notify</code></td><td><div class="copy-cell"><span class="copy-text">feedback-smtp.eu-west-1.amazonses.com</span><button class="copy-btn" data-copy="feedback-smtp.eu-west-1.amazonses.com">نسخ</button></div></td><td>10</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>send.notify</code></td><td><div class="copy-cell"><span class="copy-text">v=spf1 include:amazonses.com ~all</span><button class="copy-btn" data-copy="v=spf1 include:amazonses.com ~all">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>_dmarc.notify</code></td><td><div class="copy-cell"><span class="copy-text">v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com</span><button class="copy-btn" data-copy="v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com">نسخ</button></div></td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>ب.٦ — <code>mail.dararrowad.sch.sa</code> · تسويق دار الرواد</h3>
+            <div class="dns-zone">
+                <div class="dns-zone-header"><strong>على نطاق <code>dararrowad.sch.sa</code></strong><span class="zone-meta">٤ سجلات</span></div>
+                <table class="dns-table">
+                    <thead><tr><th style="width:8%">النوع</th><th style="width:30%">الاسم</th><th>القيمة</th><th style="width:8%">Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>resend._domainkey.mail</code></td><td><div class="copy-cell"><span class="copy-text" style="font-size:10px">p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDRo4/nu6E7Rb18XKE1lw0OFZVQU/4WdqgfUhJlg4/adsmIwgQX06Xl4S9eA86qd7i445u4IykxQhvgIINXRbSoglKTnJzD7TG9i84cakcf42SrNaea/kQ7zi82p7CAJ3YLiym8OL3VTBkEXRSCdT6k6DuCVaaXB6WDyDF1kyEY5QIDAQAB</span><button class="copy-btn" data-copy="p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDRo4/nu6E7Rb18XKE1lw0OFZVQU/4WdqgfUhJlg4/adsmIwgQX06Xl4S9eA86qd7i445u4IykxQhvgIINXRbSoglKTnJzD7TG9i84cakcf42SrNaea/kQ7zi82p7CAJ3YLiym8OL3VTBkEXRSCdT6k6DuCVaaXB6WDyDF1kyEY5QIDAQAB">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-MX">MX</span></td><td><code>send.mail</code></td><td><div class="copy-cell"><span class="copy-text">feedback-smtp.eu-west-1.amazonses.com</span><button class="copy-btn" data-copy="feedback-smtp.eu-west-1.amazonses.com">نسخ</button></div></td><td>10</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>send.mail</code></td><td><div class="copy-cell"><span class="copy-text">v=spf1 include:amazonses.com ~all</span><button class="copy-btn" data-copy="v=spf1 include:amazonses.com ~all">نسخ</button></div></td><td>—</td></tr>
+                        <tr><td><span class="type-badge t-TXT">TXT</span></td><td><code>_dmarc.mail</code></td><td><div class="copy-cell"><span class="copy-text">v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com</span><button class="copy-btn" data-copy="v=DMARC1; p=none; rua=mailto:fnasr@admireworks.com">نسخ</button></div></td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- RESEND BEST PRACTICES -->
+        <section id="resend-best-practices">
+            <h2>معايير البريد — الفصل بين المعاملات والتسويق <span class="owner-tag aw">AW</span></h2>
+            <p class="section-sub">لماذا نطاقان فرعيان لكل مدرسة بدلًا من نطاق واحد؟ لأن سمعة بريد المعاملات (تأكيدات، إيصالات) أعلى من سمعة بريد التسويق — والفصل يحميها. هذه ممارسة قياسية معتمدة في Mailchimp و SendGrid و Postmark و Resend.</p>
+
+            <h3>كيف نستخدم كل نطاق</h3>
+            <ul class="checklist">
+                <li>
+                    <span class="check">📧</span>
+                    <div>
+                        <p class="item-title"><code>notify.{school}</code> — بريد المعاملات</p>
+                        <p class="item-desc">تأكيد حجز Open House (D0) · إيصال دفع · تنبيهات أمنية · إعادة تعيين كلمة المرور · إشعار "lead جديد" للموظفين. هذه رسائل عالية الأولوية ومتوقّعة من المستلم.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">📨</span>
+                    <div>
+                        <p class="item-title"><code>mail.{school}</code> — بريد التسويق</p>
+                        <p class="item-desc">سلسلة الترحيب (D1, D3, D7…) · تذكيرات Open House · تحديثات الفعاليات · حملات إعادة التواصل · بثّ Newsletter. كل رسالة تحتوي رابط <strong>إلغاء الاشتراك</strong> إجباري.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">↩️</span>
+                    <div>
+                        <p class="item-title"><strong>Reply-To</strong> ثابت = <code>salsharif@&lt;school&gt;.edu.sa</code></p>
+                        <p class="item-desc">عندما يردّ ولي الأمر على أي رسالة، يصل الردّ مباشرة إلى الأستاذة سال الشريف — لا يرد على عنوان <code>noreply@</code>. هذا يضمن استمرارية المحادثة على عنوان حقيقي.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>تطوّر سياسة DMARC</h3>
+            <ul class="checklist">
+                <li>
+                    <span class="check pending">١</span>
+                    <div>
+                        <p class="item-title">الشهر ١-١ → ٣٠: <code>p=none</code> (مراقبة فقط)</p>
+                        <p class="item-desc">نتلقّى تقارير الفشل (rua) دون رفض أي بريد. هذا يكشف لنا أيّ خدمات شرعية ترسل من نطاقاتنا تحتاج لإضافتها إلى SPF.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٢</span>
+                    <div>
+                        <p class="item-title">الشهر ٢-١ → ٣: <code>p=quarantine</code> (حجر)</p>
+                        <p class="item-desc">البريد الفاشل في DMARC يذهب إلى Spam. نظلّ نراقب التقارير لأسبوع كامل دون شكاوى.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٣</span>
+                    <div>
+                        <p class="item-title">الشهر ٤+: <code>p=reject</code> (رفض)</p>
+                        <p class="item-desc">أعلى مستوى حماية. أيّ محاولة انتحال نطاق المدرسة تُرفض فورًا. لا يصل أيّ بريد بدون توقيع DKIM صحيح.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="info-card success">
+                <p>💡 <strong>متى نتحقق من Resend؟</strong> فور إضافة الـ DNS وانتشاره (≤١٥ دقيقة عادةً). نضغط "Verify Domain" داخل Resend dashboard، ويتمّ التحقق تلقائيًا من DKIM + SPF + DMARC. يمكنكم متابعة حالة كل نطاق على هذه الصفحة بمجرّد تحديثها بعد تأكيد Akef للسجلات.</p>
+            </div>
+        </section>
+
+        <!-- WHATSAPP -->
+        <section id="whatsapp">
+            <h2>إعداد WhatsApp <span class="owner-tag wafa">Wafa</span></h2>
+            <p class="section-sub">حتى نُعِدّ رقم WhatsApp Business الخاص بالمدارس وكلّ ما يَتعلّق به (الردود التلقائية، القوالب، ربطه بلوحة الإدارة)، أضيفوا البريدَين التاليين بشكل مؤقّت في Meta Business Manager وامنحوهما صلاحية كاملة. سنتولّى الإعداد بالكامل من جانبنا، ويمكنكم سحب الصلاحية في أيّ وقت بمجرّد انتهاء الإعداد.</p>
+
+            <div style="background:var(--aw-bg); border:1px solid var(--aw-border); border-radius:10px; padding:16px 18px; margin:14px 0;">
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                    <code style="font-size:14px; flex:1; direction:ltr; text-align:left; font-weight:600;">egamal@admire8.com</code>
+                    <button class="copy-btn" data-copy="egamal@admire8.com">نسخ</button>
+                </div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <code style="font-size:14px; flex:1; direction:ltr; text-align:left; font-weight:600;">fnasr@admireworks.com</code>
+                    <button class="copy-btn" data-copy="fnasr@admireworks.com">نسخ</button>
+                </div>
+            </div>
+
+            <p class="section-sub">بعد إتمام الإضافة، اكتفوا بالردّ على بريد التأكيد لدينا — ونبدأ الإعداد فورًا.</p>
+        </section>
+
+        <!-- CONTENT PENDING -->
+        <section id="content-pending">
+            <h2>المحتوى المتبقّي <span class="owner-tag wafa">Wafa</span></h2>
+            <p class="section-sub">الصفحات منشورة بمحتوى مؤقّت يحمل علامة <code>[PENDING_REAL]</code>. ما إن يصل المحتوى الحقيقي تستبدلونه من <code>/admin/landing-content/{brand}</code> دون إعادة نشر.</p>
+
+            <ul class="checklist">
+                <li>
+                    <span class="check pending">١</span>
+                    <div>
+                        <p class="item-title">شهادات أولياء الأمور — لكل مدرسة (×٣)</p>
+                        <p class="item-desc">٣ شهادات لكل علامة تجارية (الفرسان العالمية + الفرسان الأهلية + دار الرواد). ٣-٤ جمل بصوت أمّ تذكر اسمها وصفّ ابنها/ابنتها وما الذي تغيّر منذ الانضمام للمدرسة. اختياريًا: صورة + توقيع/إذن لاستخدامها.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٢</span>
+                    <div>
+                        <p class="item-title">شارات الاعتماد الرسمية — صور</p>
+                        <p class="item-desc">شعار "التميز" من هيئة تقويم التعليم + Cambridge + IELTS center + American Diploma + 19-years-experience badge. صور PNG/SVG شفافة الخلفية، حدّ أقصى ٢٠٠×٢٠٠px لكل واحدة.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٣</span>
+                    <div>
+                        <p class="item-title">روابط Google Maps — لكل فرع</p>
+                        <p class="item-desc">٧ روابط: الازدهار + القيروان + الراكة + جدة (FIS) + النفل + النزهة (FNS) + جدة (دار الرواد). تأكدوا من أنّ كل رابط يفتح موقع الفرع الصحيح وليس فرعًا آخر.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٤</span>
+                    <div>
+                        <p class="item-title">صلاحية خصم الصف الأول — دار الرواد</p>
+                        <p class="item-desc">"خصم ١٠٪ للصف الأول الابتدائي · المقاعد محدودة" — هل العرض ساري للعام الدراسي ٢٠٢٦/٢٠٢٧؟ تاريخ بدء/نهاية الترويج؟ شرط أنّ يكون التسجيل قبل تاريخ معيّن؟</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٥</span>
+                    <div>
+                        <p class="item-title">توجيه أرقام النفل/النزهة — الفرسان الأهلية</p>
+                        <p class="item-desc">٣ أرقام: <code>920013281</code> (بنين) · <code>920013282</code> (بنات-أهلي) · <code>920013283</code> (بنات-ثنائي اللغة). نريد تأكيد: أيّ رقم لأيّ فرع تحديدًا، أم أنّ كلّ منها يخدم كلا الفرعين بناءً على القسم؟</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٦</span>
+                    <div>
+                        <p class="item-title">جدول Open House الفعلي</p>
+                        <p class="item-desc">تواريخ زيارات Open House المتاحة لكل فرع — يومًا في الأسبوع؟ تاريخًا محدّدًا شهريًا؟ نضع هذا في النموذج وفي قاعدة معرفة AI لتوجيه أولياء الأمور بدقّة.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check pending">٧</span>
+                    <div>
+                        <p class="item-title">قائمة موظفي القبول — لكل فرع</p>
+                        <p class="item-desc">اسم + بريد + رقم واتساب + الصفوف المسؤول عنها لكل موظف قبول. هذا يربط الـ leads الواردة بالشخص المناسب تلقائيًا (السقف الافتراضي: ٢٠ lead نشط لكل موظف).</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- TIMELINE -->
+        <section id="timeline">
+            <h2>الجدول الزمني للإطلاق</h2>
+            <p class="section-sub">ما الذي يحدث ومتى — منذ تأكيد الـ DNS حتى أوّل lead حقيقي.</p>
+
+            <div class="timeline">
+                <div class="timeline-item done">
+                    <div class="timeline-item-title">✓ منصة الإدارة منشورة</div>
+                    <div class="timeline-item-meta">2026-04-29 · جاهزة على <code>https://fis-schools--fis-schools.europe-west4.hosted.app/admin</code> حتى تكتمل DNS</div>
+                </div>
+                <div class="timeline-item in-flight">
+                    <div class="timeline-item-title">⟳ بانتظار: إضافة سجلات DNS من Akef</div>
+                    <div class="timeline-item-meta">٣٦ سجلًا عبر ٤ نطاقات · زمن متوقّع: ١٥-٦٠ دقيقة عمل + ١٥-١٤٤٠ دقيقة انتشار</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-title">انتشار DNS + إصدار شهادات HTTPS</div>
+                    <div class="timeline-item-meta">يحدث تلقائيًا فور التحقق من سجلات <code>_acme-challenge</code> · ≤٢٤ ساعة</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-title">تحقّق Resend من نطاقات البريد ×٦</div>
+                    <div class="timeline-item-meta">ضغطة زر واحدة على جانبنا · فوري بعد انتشار DNS</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-title">Wafa تَمنح صلاحية WhatsApp عبر Business Manager (إضافة بريدَين)</div>
+                    <div class="timeline-item-meta">٣ دقائق فقط · بعدها يَتولّى فريق Admireworks ربط الرقم بلوحة الإدارة</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-title">Smoke test شامل من جانبنا</div>
+                    <div class="timeline-item-meta">إرسال lead تجريبي + رسالة واتساب تجريبية + تأكيد بريد تجريبي · ≤١٥ دقيقة</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-title">🚀 إطلاق حملات Google Ads (الأولوية القصوى)</div>
+                    <div class="timeline-item-meta">حسب توجيه الأستاذة وفاء — قبل دخول المنافسين القويين في يونيو</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / FOOTER -->
+        <footer id="contact">
+            <h3>للمتابعة أو الاستفسار</h3>
+            <p>أيّ تعارض في سجل قائم، أو تساؤل حول الخطوات، أنا متاح مباشرة:</p>
+            <p><strong>فؤاد ناصر الدين</strong></p>
+            <p>📧 <a href="mailto:fnasr@admireworks.com">fnasr@admireworks.com</a> · 📱 +971 4295 8666</p>
+            <p>منصة الإدارة (للاستخدام التقني الآن قبل DNS): <a href="https://fis-schools--fis-schools.europe-west4.hosted.app/admin">fis-schools--fis-schools.europe-west4.hosted.app/admin</a></p>
+            <p class="signature">ADMIRE8 BY ADMIREWORKS · POWERED BY MOND</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Copy-on-click behavior
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const text = btn.getAttribute('data-copy');
+                try {
+                    await navigator.clipboard.writeText(text);
+                    const originalText = btn.textContent;
+                    btn.textContent = 'تم النسخ ✓';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove('copied');
+                    }, 1800);
+                } catch (e) {
+                    // fallback for older browsers
+                    const ta = document.createElement('textarea');
+                    ta.value = text;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    btn.textContent = 'تم النسخ ✓';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.textContent = 'نسخ';
+                        btn.classList.remove('copied');
+                    }, 1800);
+                }
+            });
+        });
+
+        // Smooth-scroll offset for sticky nav
+        document.querySelectorAll('.quick-nav a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

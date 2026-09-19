@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iVein Clinic - Ad Management, Meta + Google</title>
+    <style>
+        :root {
+            --aw-navy: #001a70;
+            --aw-gold: #cc9f53;
+            --aw-bg: #f6f4ef;
+            --aw-white: #ffffff;
+            --aw-text: #1d2436;
+            --aw-muted: #5d6475;
+            --aw-border: #e3e0d8;
+            --aw-green: #0f766e;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: var(--aw-bg);
+            color: var(--aw-text);
+            padding: 24px;
+        }
+
+        .container {
+            width: min(1080px, 100%);
+            margin: 0 auto;
+            background: var(--aw-white);
+            border: 1px solid var(--aw-border);
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        h1, h2, h3 { margin: 0 0 10px; color: var(--aw-navy); }
+        h1 { font-size: 2rem; }
+
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--aw-gold);
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-top: 28px;
+        }
+
+        p, li, td, th { color: var(--aw-muted); line-height: 1.55; }
+        ul { margin: 8px 0 0; padding-left: 18px; }
+        li { margin-bottom: 5px; }
+
+        .meta, .grid-2 { display: grid; gap: 16px; }
+
+        .meta {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border: 1px solid var(--aw-border);
+            border-radius: 10px;
+            padding: 14px;
+            margin: 18px 0 24px;
+            background: #fcfcfb;
+            font-size: 0.92rem;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; }
+
+        .card {
+            border: 1px solid var(--aw-border);
+            border-radius: 12px;
+            padding: 18px;
+            background: #fff;
+        }
+
+        .card.featured {
+            border-color: var(--aw-gold);
+            background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--aw-gold);
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 8px;
+        }
+
+        .pill.plain { background: var(--aw-navy); }
+
+        .price-big {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--aw-navy);
+            margin: 4px 0 2px;
+        }
+
+        .price-sub { font-size: 0.9rem; color: #7a7f8b; margin: 0 0 10px; }
+        .subtle { font-size: 0.9rem; color: #7a7f8b; }
+
+        .pricing-table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+
+        .pricing-table th, .pricing-table td {
+            text-align: left;
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--aw-border);
+            vertical-align: top;
+        }
+
+        .pricing-table th { color: var(--aw-navy); font-size: 0.9rem; }
+        .pricing-table td.num { text-align: right; white-space: nowrap; }
+        .total-row td { border-top: 2px solid var(--aw-navy); border-bottom: none; font-weight: 800; color: var(--aw-navy); }
+        .existing td { background: #fcfcfb; }
+
+        .note {
+            margin-top: 16px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #dbe5ef;
+            font-size: 0.9rem;
+        }
+
+        .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--aw-border);
+        }
+
+        .cta.primary { background: var(--aw-navy); color: #fff; border-color: var(--aw-navy); }
+        .cta.secondary { background: #fff; color: var(--aw-navy); }
+
+        @media (max-width: 800px) {
+            body { padding: 10px; }
+            .container { padding: 18px; border-radius: 10px; }
+            .meta, .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ad Management: Meta + Google, with the strategy and the head-of-marketing seat</h1>
+        <p>Instead of hiring a head of marketing and a media buyer, Admireworks runs both: the strategy is written first, a vetted media buyer runs both platforms under our management, the measurement is fixed before a pound is spent, and you get a written report every week. This page is the full commercial summary. There is nothing else to read.</p>
+        <div class="meta"><div>Proposal No: <strong>AWP-EG-IVN-004</strong></div><div>Date: <strong>8 September 2026</strong></div><div>Prepared For: <strong>Dr. Mahmoud Farag, Chief Operating Officer</strong></div><div>Business: <strong>iVein Clinic</strong></div><div>Prepared By: <strong>Admireworks (Admire8)</strong></div><div>Valid Until: <strong>22 September 2026</strong></div></div>
+        <h2>What it costs</h2>
+        <p>Two platforms, one team, one price per platform. Option B is the same engagement with a six-month commitment.</p>
+        <table class="pricing-table">
+            <thead><tr><th>Per month</th><th class="num">Option A</th><th class="num">Option B</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Meta ads management</strong> (Facebook + Instagram)</td><td class="num">$260</td><td class="num">$260</td></tr>
+                <tr><td><strong>Google ads management</strong> (Search + Display + YouTube)</td><td class="num">$260</td><td class="num">$260</td></tr>
+                <tr><td>Strategy, measurement setup, weekly reporting, head-of-marketing seat</td><td class="num">Included</td><td class="num">Included</td></tr>
+                <tr><td>Commitment</td><td class="num">3 months, then quarterly</td><td class="num">6 months</td></tr>
+                <tr><td>Commitment discount</td><td class="num">&mdash;</td><td class="num">10%</td></tr>
+                <tr class="total-row"><td>Total per month</td><td class="num">$520</td><td class="num">$468</td></tr>
+                <tr class="total-row"><td>Billed</td><td class="num">$1,560 per quarter, two deposits of $780</td><td class="num">$2,808 for six months, two deposits of $1,404</td></tr>
+            </tbody>
+        </table>
+        <div class="note"><strong>Three things worth being explicit about.</strong>
+            The figures above are net, with no tax added on top, and they are the same per-platform rate every Admireworks client in Egypt pays.
+            Invoices are payable in Egyptian pounds at the market rate on the invoice date (realegp.com/usd, rounded to the nearest 50 EGP): at today's 51.10, a $780 deposit is 39,850 EGP and a $1,404 deposit is 71,750 EGP.
+            Advertising spend is separate and paid by iVein directly to Meta and Google; it never passes through Admireworks.</div>
+        <h2>What you get every month</h2>
+        <div class="grid-2"><div class="card featured"><div class="pill">Included in both options</div><h3>1. The head-of-marketing seat</h3><ul><li><strong>The strategy, in writing, within two weeks:</strong> what counts as a conversion (booking, consultation attended, procedure), audiences and messages per segment, the budget split between Meta and Google, and the KPIs the engagement is measured on</li><li>A written report every week, sent, not waited for: spend, leads, bookings and cost per booking per platform</li><li>A call every two weeks with you or the incoming Head of Marketing, and a strategy and budget review every month</li><li>A handover session with the new Head of Marketing on their first week, so the account never lives in one person's head</li></ul></div><div class="card featured"><div class="pill">Included in both options</div><h3>2. The media buying</h3><ul><li><strong>A vetted media buyer from the Admire8 team</strong>, chosen for clinic and appointment funnels in Egypt, working on your accounts under our management and review</li><li>Meta and Google run daily: campaign structure, audiences, budgets, bidding, creative testing and optimisation, on the accounts you already have</li><li><strong>Measurement fixed before we spend</strong> (weeks one and two): the site tags woken up, the Pabau booking webhook received, Google conversion actions re-ordered so the booking is primary, the Meta messaging signal prepared, and the three chatbot changes requested from Dovera in writing</li><li>Optimisation on bookings, not on messages, from week three</li></ul></div></div>
+        <h2>What is not included</h2>
+        <div class="grid-2"><div class="card"><h3>Costs you pay directly</h3><ul><li>Advertising spend, paid to Meta and Google from your own ad accounts</li><li>WhatsApp, Dovera and other third-party fees</li><li>Creative production: your team films, we brief the angles. A produced video is available as an add-on at 5,500 EGP each</li></ul></div><div class="card"><h3>Outside this scope</h3><ul><li>The MOND system: a separate proposal (AWP-EG-IVN-003), which can be taken with this one or on its own</li><li>Organic social management and community management</li><li>Anything not listed above, which we would quote separately before starting</li></ul></div></div>
+        <h2>To start</h2>
+        <p>Confirm Option A or Option B and we begin the same week. Week one is access and measurement: read access to both Google Ads accounts, the Meta ad account, GA4, the site and Pabau, plus a sample of Dovera conversations. Week two is the written strategy. Week three, the campaigns run on the booking signal.</p>
+        <p class="subtle">Payment via InstaPay. Account name: Fouad Nasseredin. InstaPay account: admireworks@instapay.</p>
+        <div class="cta-row">
+            <a class="cta primary" href="https://ipn.eg/S/admireworks/instapay/5A1jri" target="_blank" rel="noopener noreferrer">Pay via InstaPay</a>
+            <a class="cta secondary" href="https://my.admireworks.com/proposal/AWP-EG-IVN-004" target="_blank" rel="noopener noreferrer">Review and confirm online</a>
+        </div>
+        <div class="note"><strong>On confirmation:</strong> the standard Admireworks retainer agreement is generated with this page as its scope, the first deposit invoice arrives by email and WhatsApp, and work starts the next business day. One party manages the ad accounts during a live test; the accounts, the data and the written strategy stay yours.</div>
+    </div>
+</body>
+
+</html>

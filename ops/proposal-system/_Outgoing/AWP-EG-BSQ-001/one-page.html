@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Basseqat - Majlis Basseqat (MOND)</title>
+    <style>
+        :root {
+            --aw-navy: #001a70;
+            --aw-gold: #cc9f53;
+            --aw-bg: #f6f4ef;
+            --aw-white: #ffffff;
+            --aw-text: #1d2436;
+            --aw-muted: #5d6475;
+            --aw-border: #e3e0d8;
+            --aw-green: #0f766e;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: var(--aw-bg);
+            color: var(--aw-text);
+            padding: 24px;
+        }
+
+        .container {
+            width: min(1080px, 100%);
+            margin: 0 auto;
+            background: var(--aw-white);
+            border: 1px solid var(--aw-border);
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        h1, h2, h3 { margin: 0 0 10px; color: var(--aw-navy); }
+        h1 { font-size: 2rem; }
+
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--aw-gold);
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-top: 28px;
+        }
+
+        p, li, td, th { color: var(--aw-muted); line-height: 1.55; }
+        ul { margin: 8px 0 0; padding-left: 18px; }
+        li { margin-bottom: 5px; }
+
+        .meta, .grid-2 { display: grid; gap: 16px; }
+
+        .meta {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border: 1px solid var(--aw-border);
+            border-radius: 10px;
+            padding: 14px;
+            margin: 18px 0 24px;
+            background: #fcfcfb;
+            font-size: 0.92rem;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; }
+
+        .card {
+            border: 1px solid var(--aw-border);
+            border-radius: 12px;
+            padding: 18px;
+            background: #fff;
+        }
+
+        .card.featured {
+            border-color: var(--aw-gold);
+            background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--aw-gold);
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 8px;
+        }
+
+        .pill.plain { background: var(--aw-navy); }
+
+        .subtle { font-size: 0.9rem; color: #7a7f8b; }
+
+        .pricing-table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+
+        .pricing-table th, .pricing-table td {
+            text-align: left;
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--aw-border);
+            vertical-align: top;
+        }
+
+        .pricing-table th { color: var(--aw-navy); font-size: 0.9rem; }
+        .pricing-table td.num { text-align: right; white-space: nowrap; }
+        .total-row td { border-top: 2px solid var(--aw-navy); border-bottom: none; font-weight: 800; color: var(--aw-navy); }
+        .rec td { background: #fffdf8; }
+
+        .note {
+            margin-top: 16px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #dbe5ef;
+            font-size: 0.9rem;
+        }
+
+        .echo {
+            direction: rtl;
+            text-align: right;
+            font-family: Tahoma, "Geeza Pro", Arial, sans-serif;
+            color: var(--aw-navy);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            margin: 6px 0 0;
+            padding: 8px 12px;
+            border-right: 3px solid var(--aw-gold);
+            background: #fffdf8;
+        }
+
+        .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--aw-border);
+        }
+
+        .cta.primary { background: var(--aw-navy); color: #fff; border-color: var(--aw-navy); }
+        .cta.secondary { background: #fff; color: var(--aw-navy); }
+
+        @media (max-width: 800px) {
+            body { padding: 10px; }
+            .container { padding: 18px; border-radius: 10px; }
+            .meta, .grid-2 { grid-template-columns: 1fr; }
+            .pricing-table td.num { white-space: normal; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Majlis Basseqat: the offline layer of your MOND system</h1>
+        <p>A recurring, in-person gathering that introduces Basseqat's team to serious prospects and lets each of them decide for themselves: nothing is sold in the room, every question gets an answer with the papers on the table, and nobody from sales calls afterwards unless the guest asks. It runs on the MOND system Basseqat already uses, so invitations, check-in, the battery badge every guest wears and every follow-up live in your CRM. The first Majlis is on Saturday 10 October 2026 in Cairo. This page is the full commercial summary.</p>
+        <p class="echo">مجلس باسقات: قعدة مفتوحة بتقدّم الفريق للناس، وبتخلّي المهتم يقتنع بنفسه، من غير بيع ولا متابعة. أولها السبت 10 أكتوبر في القاهرة.</p>
+        <p class="subtle">In Arabic: <a href="https://my.admireworks.com/decks/basseqat-2026-09-ar/index.html" target="_blank" rel="noopener noreferrer">the concept deck</a> and <a href="https://my.admireworks.com/decks/basseqat-2026-09-ar/scope.html" target="_blank" rel="noopener noreferrer">the scope and price</a>, with the same numbers as this page.</p>
+        <div class="meta"><div>Proposal No: <strong>AWP-EG-BSQ-001</strong></div><div>Date: <strong>19 September 2026</strong></div><div>Prepared For: <strong>Eng. Khaled Nasseredin, Chairman</strong></div><div>Business: <strong>Basseqat</strong></div><div>Prepared By: <strong>Admireworks (MOND)</strong></div><div>Valid Until: <strong>24 September 2026</strong></div></div>
+
+        <h2>What it costs</h2>
+        <p>Two ways to run it. Both are one-off project fees in EGP, separate from your monthly retainer, with no tax added on top.</p>
+        <table class="pricing-table">
+            <thead><tr><th>Majlis Basseqat</th><th class="num">Fee</th><th class="num">When</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Option A, the first Majlis</strong>: Saturday 10 October 2026, about 120 guests (80 households with a family member each)</td><td class="num">150,000 EGP</td><td class="num">Once</td></tr>
+                <tr class="rec"><td><strong>Option B, the series (recommended)</strong>: the first Majlis, then three smaller monthly Majlis (November, December, January; 30 to 40 guests each) and one online Majlis for Egyptians in the Gulf, all on the same system</td><td class="num">210,000 EGP</td><td class="num">Once</td></tr>
+                <tr><td>Deposit to start, for either option</td><td class="num">75,000 EGP</td><td class="num">On confirmation</td></tr>
+                <tr class="total-row"><td>Balance (Option A 75,000; Option B 135,000)</td><td class="num">75,000 or 135,000 EGP</td><td class="num">By Saturday 3 October</td></tr>
+            </tbody>
+        </table>
+        <p class="echo">التكلفة: رسوم مرة واحدة بالجنيه. 75,000 مقدم، والباقي قبل المجلس بأسبوع.</p>
+        <div class="note"><strong>Three things worth being explicit about.</strong>
+            The event's own costs (venue, food, sound, printing, gifts, the moderator) are paid by Basseqat directly to suppliers; our estimate for about 120 guests is 450,000 to 950,000 EGP plus a 10% contingency, and venue quotes firm it up in the first week.
+            We measure the Majlis by contracts, not applause: feddans signed by guests within 90 days, compared with a matched group of similar prospects who were not invited.
+            The 10 October date holds only if the four decisions under "To start" are made by Thursday 24 September.</div>
+
+        <h2>What you get</h2>
+        <div class="grid-2"><div class="card featured"><div class="pill">Both options</div><h3>1. The first Majlis, end to end</h3><ul><li><strong>The day, designed:</strong> run of show, the battery badge (five palm stages at 20% each, set by the guest), fact cards, the "prove it to me" exchange, the risk hour, the "now I understand" wall, and the question bank for the moderator</li><li><strong>The Truth Pack:</strong> one page of approved facts, each with its source document, signed by Basseqat and your counsel; it also updates the AI assistant and the call script</li><li><strong>The Majlis system in your CRM:</strong> registration page, invitations with a 20% holdout, QR check-in, the battery on every guest's phone, the host screen, choose-your-door follow-up, and a no-chase flag that stops automatic calls to attendees</li><li><strong>Creative:</strong> invitations, the event page, print (battery badges, fact cards, question wall, signage), two short "meet the faces" films, and the recap film</li><li><strong>Production:</strong> venue shortlist and quotes, suppliers, rehearsal with your team and the moderator, and running the day</li><li><strong>Report</strong> at 30, 60 and 90 days</li></ul></div><div class="card featured"><div class="pill">Option B adds</div><h3>2. The Majlis becomes a habit</h3><ul><li><strong>Three smaller monthly Majlis</strong> (30 to 40 guests), at your Maadi office or a small venue, on the same system</li><li><strong>An online Majlis</strong> for Egyptians in the Gulf, with the same battery and the same doors</li><li>A report after each edition, and the Truth Pack kept current as answers change</li><li>New prospects join the next Majlis instead of waiting for a single event</li></ul></div></div>
+        <p class="echo">هتاخدوا إيه: المجلس الأول من الألف للياء، ونظامه جوه الـ CRM بتاعكم. والسلسلة بتخلّي المجلس عادة كل شهر.</p>
+
+        <h2>What is not included</h2>
+        <div class="grid-2"><div class="card"><h3>Costs you pay directly</h3><ul><li>Venue, lunch and coffee breaks</li><li>Sound, screens and recording</li><li>Photo and video crew</li><li>Printing and fabrication</li><li>Gifts and family packs for guests</li><li>The independent moderator's fee</li><li>Optional live link from the farm in Farafra</li><li>Invitation ads, from your current media budget</li></ul></div><div class="card"><h3>Outside this scope</h3><ul><li>Legal review of the Truth Pack and the invitation wording, by your counsel</li><li>Farm trips for guests, which can be quoted separately</li><li>Anything not listed above, quoted separately before starting</li></ul></div></div>
+        <p class="echo">مش داخل في العرض: تكاليف القاعة والأكل والصوت والطباعة والمحاور، وبتتدفع مباشرة.</p>
+
+        <h2>To start</h2>
+        <p>Four decisions by Thursday 24 September: (1) the people who will stand in front of guests, and their consent to be filmed; (2) official answers on exit, the Medjool planting date and the allocation holder; (3) one agreed line on the chairman's role; (4) confirming this proposal with the deposit. Then: venue booked by 25 September, invitations from 26 September, rehearsal 5 to 7 October, and the first Majlis on Saturday 10 October.</p>
+        <p class="echo">عشان نبدأ: 4 قرارات قبل الخميس 24 سبتمبر، وبعدها نحجز القاعة ونبدأ الدعوات.</p>
+        <p class="subtle">Payment via InstaPay. Account name: Fouad Nasseredin. InstaPay account: admireworks@instapay.</p>
+        <div class="cta-row">
+            <a class="cta primary" href="https://ipn.eg/S/admireworks/instapay/5A1jri" target="_blank" rel="noopener noreferrer">Pay via InstaPay</a>
+            <a class="cta secondary" href="https://my.admireworks.com/proposal/AWP-EG-BSQ-001" target="_blank" rel="noopener noreferrer">Review and confirm online</a>
+        </div>
+        <div class="note"><strong>On confirmation:</strong> a one-off project agreement (no auto-renewal) is issued with this page as its scope, and the deposit invoice (75,000 EGP) arrives by email and WhatsApp. Guest data, answers and all event content belong to Basseqat; the MOND system itself stays Admireworks'. Everything guests see carries Basseqat's name, with one line naming MOND as organiser.</div>
+    </div>
+</body>
+
+</html>

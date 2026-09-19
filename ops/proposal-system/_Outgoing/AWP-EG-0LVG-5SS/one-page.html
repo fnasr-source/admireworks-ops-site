@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meguiar's Egypt - Paid Scope & Commercial Summary</title>
+    <style>
+        :root {
+            --aw-navy: #001a70;
+            --aw-gold: #cc9f53;
+            --aw-bg: #f6f4ef;
+            --aw-white: #ffffff;
+            --aw-text: #1d2436;
+            --aw-muted: #5d6475;
+            --aw-border: #e3e0d8;
+            --aw-green: #0f766e;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: var(--aw-bg);
+            color: var(--aw-text);
+            padding: 24px;
+        }
+
+        .container {
+            width: min(1080px, 100%);
+            margin: 0 auto;
+            background: var(--aw-white);
+            border: 1px solid var(--aw-border);
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 10px;
+            color: var(--aw-navy);
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--aw-gold);
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-top: 28px;
+        }
+
+        p,
+        li,
+        td,
+        th {
+            color: var(--aw-muted);
+            line-height: 1.55;
+        }
+
+        ul {
+            margin: 8px 0 0;
+            padding-left: 18px;
+        }
+
+        .meta,
+        .grid-2,
+        .hero {
+            display: grid;
+            gap: 16px;
+        }
+
+        .meta {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border: 1px solid var(--aw-border);
+            border-radius: 10px;
+            padding: 14px;
+            margin: 18px 0 24px;
+            background: #fcfcfb;
+            font-size: 0.92rem;
+        }
+
+        .hero {
+            grid-template-columns: 1.15fr 0.85fr;
+            margin-top: 20px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-top: 14px;
+        }
+
+        .card {
+            border: 1px solid var(--aw-border);
+            border-radius: 12px;
+            padding: 18px;
+            background: #fff;
+        }
+
+        .card.featured {
+            border-color: var(--aw-gold);
+            background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--aw-gold);
+            border-radius: 999px;
+            padding: 4px 10px;
+            margin-bottom: 8px;
+        }
+
+        .price-big {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--aw-navy);
+            margin: 4px 0 8px;
+        }
+
+        .subtle {
+            font-size: 0.9rem;
+            color: #7a7f8b;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            text-align: left;
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--aw-border);
+            vertical-align: top;
+        }
+
+        .paid {
+            color: var(--aw-green);
+            font-weight: 800;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--aw-border);
+        }
+
+        .cta.primary {
+            background: var(--aw-navy);
+            color: #fff;
+            border-color: var(--aw-navy);
+        }
+
+        .cta.secondary {
+            background: #fff;
+            color: var(--aw-navy);
+        }
+
+        .note {
+            margin-top: 16px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #dbe5ef;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 18px;
+                border-radius: 10px;
+            }
+
+            .meta,
+            .hero,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Meguiar's Egypt - Paid Scope & Commercial Summary</h1>
+        <p>This one-page summary is the current commercial source of truth for the paid Meguiar's Egypt launch scope.</p>
+
+        <div class="meta">
+            <div>Proposal No: <strong>AWP-EG-0LVG-5SS</strong></div>
+            <div>Invoice No: <strong>AWI-202603-004</strong></div>
+            <div>Prepared For: <strong>Dr. Hussam El-Adwar</strong></div>
+            <div>Business: <strong>Meguiar's Egypt - El-Adwar Group</strong></div>
+            <div>Prepared By: <strong>Admireworks</strong></div>
+            <div>Status: <strong class="paid">Paid</strong></div>
+            <div>Paid Date: <strong>April 19, 2026</strong></div>
+            <div>Payment Method: <strong>InstaPay</strong></div>
+        </div>
+
+        <div class="hero">
+            <div class="card featured">
+                <div class="pill">Paid Launch Scope</div>
+                <h3>Payment Received</h3>
+                <div class="price-big">60,000 EGP</div>
+                <p class="subtle">This starts the e-commerce build and covers Month 1 growth-management and ads-oversight launch work.</p>
+
+                <div class="cta-row">
+                    <a class="cta primary" href="https://my.admireworks.com/invoice/aAaVAfw-009i54FQB4nXXjTiPUDRJhoW" target="_blank" rel="noopener noreferrer">Open Invoice</a>
+                    <a class="cta secondary" href="https://my.admireworks.com/proposal/AWP-EG-0LVG-5SS" target="_blank" rel="noopener noreferrer">Open Portal Proposal</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pill">What This Covers</div>
+                <ul>
+                    <li>E-commerce store build and launch setup</li>
+                    <li>Month 1 growth management and ads oversight</li>
+                    <li>Tracking, reporting, and performance visibility</li>
+                    <li>Coordination with Promolinks / content side on performance requirements</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Commercial Record</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>E-Commerce Store Build & Launch</strong><br><span class="subtle">One-time launch asset</span></td>
+                    <td>Included in paid launch scope</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td><strong>Growth Management & Ads Oversight - Month 1</strong><br><span class="subtle">Monthly launch work</span></td>
+                    <td>Included in paid launch scope</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Paid</strong></td>
+                    <td><span class="paid">Paid via InstaPay</span></td>
+                    <td><strong>60,000 EGP</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>What Happens Next</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Kickoff</h3>
+                <p>Confirm access, platform decisions, shipping/payment handling, product catalog import requirements, tracking setup, and launch content responsibilities.</p>
+            </div>
+            <div class="card">
+                <h3>Month 2 Onward</h3>
+                <p>Ongoing management after Month 1 is reviewed and invoiced separately. Future uplift is tied to initial e-commerce growth and KPI review.</p>
+            </div>
+        </div>
+
+        <h2>Scope Boundaries</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Included In Current Scope</h3>
+                <ul>
+                    <li>E-commerce build and launch setup</li>
+                    <li>Growth management and paid media oversight for Month 1</li>
+                    <li>Tracking and reporting setup</li>
+                    <li>Performance-driven coordination with the content side</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Not Included In This Amount</h3>
+                <ul>
+                    <li>Paid ad spend</li>
+                    <li>Content production and filming execution</li>
+                    <li>Future phase systems unless separately approved</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Operating note:</strong> Earlier 55,000 EGP and USD/RealEGP settlement versions were draft commercial states. The current active record is the paid 60,000 EGP invoice.
+        </div>
+    </div>
+</body>
+
+</html>
