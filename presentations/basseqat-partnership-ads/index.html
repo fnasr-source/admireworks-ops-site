@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boosting the Post · Basseqat × Nasseredin Business · Admireworks</title>
+<meta name="description" content="How Meta's partnership ad code sets the lead identity, why this post can only run with Nasseredin Business as the primary page, and the way forward for Basseqat. Prepared by Admireworks.">
+<meta name="robots" content="noindex">
+
+<!-- Open Graph (WhatsApp / iMessage / social link preview) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Admireworks">
+<meta property="og:url" content="https://ops.admireworks.com/presentations/basseqat-partnership-ads/">
+<meta property="og:title" content="Boosting the Post: how Meta's partnership identity works">
+<meta property="og:description" content="ليه البوست مايقدرش يطلع والصفحة الأساسية باسقات, وإيه الحل. شرح مدعوم بمصادر ميتا الرسمية. Prepared by Admireworks.">
+<meta property="og:image" content="https://ops.admireworks.com/presentations/basseqat-partnership-ads/assets/cover.png">
+<meta property="og:image:secure_url" content="https://ops.admireworks.com/presentations/basseqat-partnership-ads/assets/cover.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Admireworks client note on Meta partnership ad identity for Basseqat">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boosting the Post: how Meta's partnership identity works">
+<meta name="twitter:description" content="Why this post can only run with Nasseredin Business as the lead identity, and the way forward for Basseqat.">
+<meta name="twitter:image" content="https://ops.admireworks.com/presentations/basseqat-partnership-ads/assets/cover.png">
+<meta name="theme-color" content="#001a70">
+<link rel="icon" type="image/png" href="assets/admireworks-white.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #001a70;
+    --navy-deep: #00134f;
+    --navy-soft: #11286b;
+    --gold: #cc9f53;
+    --gold-soft: #e7cd9b;
+    --ink: #1a1f36;
+    --ink-soft: #4a5170;
+    --ink-faint: #8189a8;
+    --paper: #ffffff;
+    --paper-tint: #f6f7fb;
+    --line: #e5e8f2;
+    --line-strong: #cfd5e8;
+    --green: #1f7a4d;
+    --green-bg: #eaf6ef;
+    --red: #b23b2e;
+    --red-bg: #fbecea;
+    --amber: #9a6a12;
+    --amber-bg: #fbf2dd;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --maxw: 860px;
+    --font-en: "Manrope", "Helvetica Neue", Arial, sans-serif;
+    --font-ar: "IBM Plex Sans Arabic", "Segoe UI", system-ui, sans-serif;
+    --shadow: 0 1px 2px rgba(0,20,80,0.04), 0 12px 32px rgba(0,20,80,0.07);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-en);
+    color: var(--ink);
+    background: var(--paper-tint);
+    line-height: 1.62;
+    font-size: 16.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .ar { font-family: var(--font-ar); direction: rtl; text-align: right; }
+  .en { font-family: var(--font-en); direction: ltr; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+  /* Header */
+  .topbar { background: var(--navy); color: #fff; }
+  .topbar-inner {
+    max-width: var(--maxw); margin: 0 auto; padding: 16px 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  }
+  .brand { display: flex; align-items: center; gap: 11px; }
+  .brand img { width: 30px; height: 30px; border-radius: 6px; }
+  .brand b { font-weight: 800; letter-spacing: .04em; font-size: 14.5px; }
+  .brand span { color: var(--gold-soft); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; }
+  .tag { font-size: 11.5px; color: #c3cbe8; letter-spacing: .14em; text-transform: uppercase; }
+
+  /* Hero */
+  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; padding: 46px 0 40px; }
+  .hero .eyebrow { color: var(--gold); font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+  .hero h1 { margin: 0 0 10px; font-size: 31px; line-height: 1.2; font-weight: 800; letter-spacing: -.01em; }
+  .hero h1 .gold { color: var(--gold-soft); }
+  .hero .sub { color: #d4daf0; font-size: 16px; max-width: 640px; }
+
+  /* Section scaffolding */
+  section { padding: 30px 0; }
+  .card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 26px 26px;
+  }
+  .card + .card { margin-top: 18px; }
+  h2 { font-size: 13px; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; font-weight: 800; }
+  h3 { font-size: 21px; margin: 2px 0 12px; font-weight: 800; color: var(--navy); letter-spacing: -.01em; }
+  p { margin: 0 0 13px; }
+  p:last-child { margin-bottom: 0; }
+  .lead { font-size: 17.5px; }
+  strong { color: var(--ink); font-weight: 700; }
+
+  /* Arabic summary card */
+  .ar-card { border-top: 4px solid var(--gold); }
+  .ar-card h3 { text-align: right; }
+  .ar-card .num { font-family: var(--font-en); direction: ltr; unicode-bidi: isolate; }
+  .ar-list { margin: 0; padding: 0; list-style: none; }
+  .ar-list li { position: relative; padding: 12px 0 12px 0; border-bottom: 1px dashed var(--line); }
+  .ar-list li:last-child { border-bottom: none; }
+
+  /* Identity diagram */
+  .idgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 6px 0 4px; }
+  .idbox { border-radius: var(--radius-sm); padding: 18px 16px; border: 1.5px solid var(--line-strong); }
+  .idbox .label { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; margin-bottom: 7px; }
+  .idbox .who { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+  .idbox .note { font-size: 13.5px; color: var(--ink-soft); }
+  .idbox.locked { background: var(--red-bg); border-color: #e7b9b2; }
+  .idbox.locked .label { color: var(--red); }
+  .idbox.open { background: var(--green-bg); border-color: #b6ddc6; }
+  .idbox.open .label { color: var(--green); }
+  .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; margin-top: 9px; }
+  .pill.lock { background: #f4d6d1; color: var(--red); }
+  .pill.sel { background: #cdead9; color: var(--green); }
+
+  /* Quote */
+  .quote { border-left: 4px solid var(--gold); background: var(--paper-tint); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 18px 20px; margin: 4px 0 14px; }
+  .quote .q { font-size: 18px; font-weight: 700; color: var(--navy); font-style: italic; line-height: 1.5; }
+  .quote .src { font-size: 12.5px; color: var(--ink-faint); margin-top: 8px; letter-spacing: .02em; }
+
+  /* Steps / verify */
+  .verify { background: var(--navy); color: #fff; border: none; }
+  .verify h2 { color: var(--gold-soft); }
+  .verify h3 { color: #fff; }
+  .verify p { color: #d7ddf2; }
+  .vsteps { counter-reset: v; margin: 14px 0 0; padding: 0; list-style: none; }
+  .vsteps li { position: relative; padding: 8px 0 8px 42px; border-top: 1px solid rgba(255,255,255,.12); color: #e7ebfa; }
+  .vsteps li:first-child { border-top: none; }
+  .vsteps li::before { counter-increment: v; content: counter(v); position: absolute; left: 0; top: 9px; width: 26px; height: 26px; border-radius: 999px; background: var(--gold); color: var(--navy-deep); font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+
+  /* Links */
+  .links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .linkrow { display: flex; align-items: center; gap: 10px; padding: 11px 13px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper); text-decoration: none; color: var(--navy); font-weight: 600; font-size: 14px; transition: border-color .15s, transform .15s; }
+  .linkrow:hover { border-color: var(--gold); transform: translateY(-1px); }
+  .linkrow .arrow { margin-left: auto; color: var(--gold); font-weight: 800; }
+
+  /* Way forward options */
+  .opt { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 20px; background: var(--paper); }
+  .opt + .opt { margin-top: 14px; }
+  .opt.rec { border: 1.5px solid var(--gold); box-shadow: 0 8px 26px rgba(204,159,83,.13); }
+  .opt-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+  .opt-head .name { font-size: 17.5px; font-weight: 800; color: var(--navy); }
+  .badge { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; }
+  .badge.rec { background: var(--gold); color: var(--navy-deep); }
+  .badge.alt { background: var(--paper-tint); color: var(--ink-soft); border: 1px solid var(--line); }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 14.5px; margin-top: 8px; }
+  .kv .k { color: var(--ink-faint); font-weight: 700; }
+  .chk { color: var(--green); font-weight: 800; }
+  .x { color: var(--red); font-weight: 800; }
+
+  /* Footer */
+  footer { background: var(--navy-deep); color: #c3cbe8; padding: 26px 0 30px; margin-top: 24px; }
+  footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  footer b { color: #fff; }
+  footer a { color: var(--gold-soft); text-decoration: none; }
+  footer .small { font-size: 12.5px; color: #8f99c4; }
+
+  @media (max-width: 620px) {
+    .hero h1 { font-size: 25px; }
+    .idgrid, .links { grid-template-columns: 1fr; }
+    .card { padding: 20px 18px; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <img src="assets/admireworks-white.png" alt="Admireworks">
+      <div>
+        <b>ADMIREWORKS</b><br>
+        <span>Client Note</span>
+      </div>
+    </div>
+    <div class="tag">Basseqat &times; Nasseredin Business</div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Meta Partnership Ads &middot; Identity Explained</div>
+    <h1>Boosting this post: <span class="gold">why the original page stays the lead</span></h1>
+    <p class="sub">A short, sourced explanation of why this post can only run with Nasseredin Business as the primary identity, what Meta locks and why, and the two clean ways to move forward for Basseqat.</p>
+  </div>
+</div>
+
+<!-- Arabic executive summary -->
+<section>
+  <div class="wrap">
+    <div class="card ar-card ar">
+      <h2 style="text-align:right">الخلاصة في سطور</h2>
+      <h3>ليه البوست ده مايقدرش يطلع كإعلان والصفحة الأساسية باسقات؟</h3>
+      <ul class="ar-list">
+        <li>البوست منشور على صفحة <span class="num">Nasseredin Business</span>، وكود الشراكة (<span class="num">Partnership Ad Code</span>) اللي اتعمل منه بيخلّي ميتا تثبّت صاحب البوست الأصلي (<span class="num">Nasseredin Business</span>) كـ"الهوية الأولى" في الإعلان، وده إعداد مقفول مايتغيّرش.</li>
+        <li>باسقات ممكن تظهر كـ"هوية تانية" جنب الاسم بس، مش كصفحة رئيسية. ده مش إعداد من عندنا، ده قانون من ميتا نفسها.</li>
+        <li>تقدر تتأكد بنفسك في أقل من دقيقة: أول ما تبدأ الإعلان بالكود في <span class="num">Ads Manager</span>، هتلاقي خانة "الهوية الأولى" متعبّية بـ <span class="num">Nasseredin Business</span> ومقفولة، و"الهوية التانية" هي بس المتاحة للاختيار.</li>
+        <li>الصورة الكاملة، وعشان نكون دقيقين: البراند يقدر يكون الهوية الرئيسية في إعلان شراكة، بس بشرط واحد: إنه هو اللي ينشر البوست من صفحته ويضيف الشريك. ده مش متاح مع بوست متنشر أصلاً على صفحة تانية وبيتعمله <span class="num">Boost</span> بالكود بتاعه.</li>
+        <li>توصيتنا: نشغّل نفس البوست بزخمه الحالي كإعلان شراكة (<span class="num">Nasseredin Business</span> يقود، وباسقات شريك <span class="num">Paid partnership</span>)، ونحافظ على التفاعل اللي البوست وصله. أو ننشر نفس الكرياتيف من صفحة باسقات كبوست جديد عشان باسقات تبقى الرئيسية، مع إن التفاعل الحالي مش هينتقل معاه.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- The rule + diagram -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h2>The rule</h2>
+      <h3>A partnership ad code locks the creator as the First Identity</h3>
+      <p class="lead">When a creator generates a <strong>partnership ad code</strong> for their own post, Meta permanently sets that creator as the ad's <strong>First Identity</strong>. The advertiser you select can only ever be the <strong>Second Identity</strong>. This is by design and cannot be reversed while you use that code or that post.</p>
+      <div class="idgrid">
+        <div class="idbox locked">
+          <div class="label">First identity</div>
+          <div class="who">Nasseredin Business</div>
+          <div class="note">The page that authored the post and generated the code.</div>
+          <span class="pill lock">&#128274; Locked &middot; not editable</span>
+        </div>
+        <div class="idbox open">
+          <div class="label">Second identity</div>
+          <div class="who">نخيل باسقات (Basseqat)</div>
+          <div class="note">Appears as the second account in the ad header. Co-brand only.</div>
+          <span class="pill sel">&#9662; Selectable</span>
+        </div>
+      </div>
+      <p style="margin-top:14px; font-size:14.5px; color:var(--ink-soft)">Display choices Meta offers are only "show both identities" or "show the first identity alone." There is <strong>no option to show the brand alone.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Verify yourself -->
+<section>
+  <div class="wrap">
+    <div class="card verify">
+      <h2>Verify it yourself</h2>
+      <h3>30 seconds, live in your own Ads Manager</h3>
+      <p>Nothing here is on the Admireworks or Basseqat side. You can confirm Meta's behaviour directly:</p>
+      <ol class="vsteps">
+        <li>In Ads Manager, create an ad and turn on <strong>Partnership ad</strong>.</li>
+        <li>Paste the partnership ad code for this post.</li>
+        <li>Look at the <strong>First Identity</strong> field: it is pre-filled with Nasseredin Business and is greyed out / not editable.</li>
+        <li>Only the <strong>Second Identity</strong> dropdown is selectable. That is the brand slot.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Meta's own words -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h2>Meta's own words</h2>
+      <h3>Quoted from Meta, and four official sources</h3>
+      <div class="quote">
+        <div class="q">"The First Identity is set based on the partnership ad code of the post and cannot be changed."</div>
+        <div class="src">Meta Partnership Ads Hub setup guidance (the page you select "will appear to the users as the second account in the ad's header").</div>
+      </div>
+      <p style="font-size:14.5px;color:var(--ink-soft);margin-bottom:14px">The "reorder identities" option Meta documents exists <strong>only</strong> for partnership ads created <strong>without</strong> an ad code, i.e. when the brand owns the post. With a code, the creator is fixed first.</p>
+      <div class="links">
+        <a class="linkrow" href="https://www.facebook.com/business/help/759293997849980" target="_blank" rel="noopener">About partnership ads <span class="arrow">&rarr;</span></a>
+        <a class="linkrow" href="https://www.facebook.com/business/help/442108830566254" target="_blank" rel="noopener">About partnership ad permissions <span class="arrow">&rarr;</span></a>
+        <a class="linkrow" href="https://www.facebook.com/business/help/546615926108316" target="_blank" rel="noopener">Partnership ad: Error #2446986 <span class="arrow">&rarr;</span></a>
+        <a class="linkrow" href="https://developers.facebook.com/documentation/ads-commerce/marketing-api/ad-creative/partnership-ads/ad-codes" target="_blank" rel="noopener">Marketing API: ad codes <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The complete truth -->
+<section>
+  <div class="wrap">
+    <div class="card" style="border-top:4px solid var(--amber)">
+      <h2 style="color:var(--amber)">The complete picture</h2>
+      <h3>Yes, a brand can lead a partnership ad, but only one way</h3>
+      <p>To be precise and fair: a brand <strong>can</strong> be the primary identity in a partnership ad. That happens <strong>only when the brand owns and publishes the post itself</strong> and then adds the creator as the partner (no ad code involved, identities are then re-orderable).</p>
+      <p>It <strong>cannot</strong> be done by boosting a creator's <em>existing</em> post through that creator's ad code, which is this exact situation. So with this post and this code, Nasseredin Business is the lead. For Basseqat to lead, Basseqat publishes the creative as its own post.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Way forward -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h2>The way forward</h2>
+      <h3>Two clean options, both ready to run</h3>
+
+      <div class="opt rec">
+        <div class="opt-head">
+          <span class="name">Option A &middot; Boost this post as a partnership ad</span>
+          <span class="badge rec">Recommended</span>
+        </div>
+        <p style="margin:0">Run this exact post via the code. Nasseredin Business leads, Basseqat is co-branded as the paid partner.</p>
+        <div class="kv">
+          <span class="k">Momentum</span><span><span class="chk">&#10003;</span> Keeps every like, comment and share the post already earned</span>
+          <span class="k">Identity</span><span>Nasseredin Business primary, Basseqat second</span>
+          <span class="k">Spend</span><span>Paid from Basseqat's ad account</span>
+          <span class="k">Bonus</span><span>The founder leading the ad reads as authority, and builds more trust</span>
+        </div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <span class="name">Option B &middot; Republish natively under Basseqat</span>
+          <span class="badge alt">Alternative</span>
+        </div>
+        <p style="margin:0">Publish the same creative as a fresh post on Basseqat's own page, so Basseqat is the lead, native identity.</p>
+        <div class="kv">
+          <span class="k">Identity</span><span><span class="chk">&#10003;</span> Basseqat is the primary, native page exactly as asked</span>
+          <span class="k">Momentum</span><span><span class="x">&times;</span> New post, the existing engagement does not carry over</span>
+          <span class="k">Option</span><span>Nasseredin can still be co-branded as the partner</span>
+        </div>
+      </div>
+
+      <p class="ar" style="margin-top:16px;font-size:15px;color:var(--ink-soft)">جاهزين ننفّذ أي اتجاه فيهم بمجرد ما تختار. لو محتاجين نمشي بـ <span class="num">Option A</span> ده الأسرع وبيحافظ على زخم البوست.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Admireworks</b> &middot; Admirable Venture Services every time.<br>
+      <span class="small">Prepared for Basseqat. Sources are Meta's own help center and Marketing API documentation.</span>
+    </div>
+    <div class="small">
+      <a href="mailto:hello@admireworks.com">hello@admireworks.com</a><br>
+      Dubai, UAE
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>عاين × Admireworks: مقترح النمو</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="عاين × Admireworks: مقترح النمو" />
+<meta property="og:description" content="تشخيص، نطاق عمل مقترح، وخطة تنفيذ على ثلاث مراحل." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ar_SA" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aubergine: #23003D;
+    --aubergine-deep: #160028;
+    --amber: #FFBE0B;
+    --green: #00CC92;
+    --bg: #F7F4FA;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #FDFCFE;
+    --ink: #1A1024;
+    --ink-soft: #574A63;
+    --ink-faint: #8B7F96;
+    --line: #E2DAEA;
+    --line-strong: #CFC2DB;
+    --amber-soft: #FFF6DC;
+    --green-soft: #E2F8F1;
+    --shadow: 0 1px 2px rgba(35,0,61,.05), 0 10px 30px rgba(35,0,61,.06);
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #120720;
+      --bg-card: #1C0F2C;
+      --bg-elevated: #241435;
+      --ink: #F0EAF6;
+      --ink-soft: #B9AAC7;
+      --ink-faint: #8A7B99;
+      --line: #33224A;
+      --line-strong: #493461;
+      --amber-soft: #3A2E08;
+      --green-soft: #0B3329;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #120720;
+    --bg-card: #1C0F2C;
+    --bg-elevated: #241435;
+    --ink: #F0EAF6;
+    --ink-soft: #B9AAC7;
+    --ink-faint: #8A7B99;
+    --line: #33224A;
+    --line-strong: #493461;
+    --amber-soft: #3A2E08;
+    --green-soft: #0B3329;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.3);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 22px 96px; }
+
+  /* Hero */
+  header.hero {
+    background: linear-gradient(155deg, var(--aubergine) 0%, var(--aubergine-deep) 100%);
+    color: #fff;
+    padding: 66px 22px 58px;
+    margin-bottom: 44px;
+  }
+  .hero-in { max-width: 900px; margin: 0 auto; }
+  .lockup {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--amber); font-weight: 700; margin-bottom: 20px;
+  }
+  .lockup .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--amber); }
+  h1 { font-size: clamp(30px, 5.5vw, 46px); line-height: 1.3; margin: 0 0 16px; font-weight: 800; }
+  .hero p { font-size: clamp(17px, 2.4vw, 20px); color: rgba(255,255,255,.82); margin: 0; max-width: 62ch; }
+  .hero-meta {
+    margin-top: 30px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16);
+    display: flex; flex-wrap: wrap; gap: 26px; font-size: 14px; color: rgba(255,255,255,.68);
+  }
+  .hero-meta b { color: #fff; font-weight: 700; display: block; font-size: 15px; }
+
+  /* Sections */
+  section { margin: 0 0 52px; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 700; margin-bottom: 10px;
+  }
+  h2 { font-size: clamp(23px, 3.6vw, 31px); line-height: 1.35; margin: 0 0 14px; font-weight: 800; }
+  h3 { font-size: 19px; margin: 0 0 8px; font-weight: 700; }
+  p { margin: 0 0 16px; color: var(--ink-soft); }
+  p.lead { color: var(--ink); font-size: 18.5px; }
+  strong { color: var(--ink); font-weight: 700; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 24px 26px; box-shadow: var(--shadow);
+  }
+  .card + .card { margin-top: 14px; }
+
+  /* Findings list */
+  ol.findings { list-style: none; counter-reset: f; padding: 0; margin: 0; }
+  ol.findings li {
+    counter-increment: f; position: relative;
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 20px 68px 20px 24px;
+    margin-bottom: 12px; box-shadow: var(--shadow);
+  }
+  ol.findings li::before {
+    content: counter(f, decimal-leading-zero);
+    position: absolute; top: 20px; inset-inline-end: 24px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px;
+    color: var(--amber); font-weight: 500;
+    background: var(--amber-soft); border-radius: 6px; padding: 2px 8px;
+  }
+  ol.findings .what { font-weight: 700; color: var(--ink); display: block; margin-bottom: 4px; }
+  ol.findings .why { font-size: 15.5px; color: var(--ink-soft); }
+  .verify {
+    display: inline-block; margin-top: 10px; font-size: 13px;
+    font-family: 'IBM Plex Mono', monospace; color: var(--ink-faint);
+    background: var(--bg-elevated); border: 1px solid var(--line);
+    border-radius: 6px; padding: 3px 9px; direction: ltr; word-break: break-all;
+  }
+
+  /* Pools table */
+  .scroller { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; background: var(--bg-card); min-width: 560px; }
+  th, td { padding: 14px 18px; text-align: right; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+  th { background: var(--bg-elevated); font-weight: 700; color: var(--ink); font-size: 14px; }
+  tr:last-child td { border-bottom: none; }
+  td.num { font-family: 'IBM Plex Mono', monospace; font-size: 14px; white-space: nowrap; }
+  .pill { display: inline-block; font-size: 12.5px; font-weight: 700; border-radius: 20px; padding: 3px 11px; }
+  .pill.now { background: var(--amber-soft); color: #8A6200; }
+  .pill.free { background: var(--green-soft); color: #006B4F; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .pill.now { color: var(--amber); }
+    :root:not([data-theme="light"]) .pill.free { color: var(--green); }
+  }
+
+  /* Phases */
+  .phase { border-inline-start: 3px solid var(--amber); padding-inline-start: 22px; margin-bottom: 30px; }
+  .phase.two { border-color: var(--aubergine); }
+  .phase.three { border-color: var(--line-strong); }
+  .phase-tag {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-faint);
+    letter-spacing: .08em; text-transform: uppercase; font-weight: 500;
+  }
+  ul.clean { padding-inline-start: 20px; margin: 10px 0 0; }
+  ul.clean li { margin-bottom: 7px; color: var(--ink-soft); font-size: 16px; }
+
+  /* Callout */
+  .callout {
+    background: var(--aubergine); color: #fff; border-radius: var(--radius);
+    padding: 28px 30px; margin: 26px 0;
+  }
+  .callout h3 { color: var(--amber); margin-bottom: 10px; }
+  .callout p { color: rgba(255,255,255,.86); margin: 0; }
+  .callout p + p { margin-top: 12px; }
+
+  .note {
+    background: var(--bg-elevated); border: 1px dashed var(--line-strong);
+    border-radius: var(--radius); padding: 18px 22px; font-size: 15.5px; color: var(--ink-soft);
+  }
+  .note b { color: var(--ink); }
+
+  hr.rule { border: 0; border-top: 1px solid var(--line); margin: 46px 0; }
+
+  footer.end { text-align: center; color: var(--ink-faint); font-size: 14px; padding-top: 20px; }
+  footer.end .brand { color: var(--ink); font-weight: 700; }
+  a { color: var(--aubergine); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) a { color: var(--amber); } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="lockup">عاين <span class="dot"></span> Admireworks</div>
+    <h1>ما الذي يمنع الأرقام من التحرك، وما الذي نقترح فعله</h1>
+    <p>ملخص ما فحصناه بأنفسنا على منصاتكم العامة، الملاحظة الأساسية التي خرجنا بها، ونطاق عمل مقترح على ثلاث مراحل.</p>
+    <div class="hero-meta">
+      <div><b>محمد أيمن ثابت</b>نائب الرئيس للنمو، عاين</div>
+      <div><b>٢٤ أغسطس ٢٠٢٦</b>اجتماع المتابعة</div>
+      <div><b>مسودة للنقاش</b>ليست عرضاً نهائياً</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="eyebrow">نقطة البداية</div>
+  <h2>ما سمعناه منكم</h2>
+  <p class="lead">في مكالمة التاسع عشر من أغسطس، حدّدتم أربع نقاط: ضعف الوعي بالسوق، وصعوبة إيصال قيمة منظومة متعددة المنتجات، وتشتت العمليات التسويقية عبر أدوات غير مترابطة، وحاجة الفريق الداخلي للمحتوى إلى توجيه استراتيجي.</p>
+  <p>وقلتم جملة نعتبرها الأهم في المكالمة كلها: <strong>«ما ضبطنا الميزانية، إحنا نرفعها وحدة وحدة عشان نشوف العائد»</strong>، ثم <strong>«الأرقام ثابتة وما تتحرك»</strong>. هاتان الجملتان مرتبطتان ارتباطاً مباشراً، وهذا الترابط هو محور هذا المستند.</p>
+  <div class="note">
+    <b>ملاحظة على المنهجية.</b> كل ما في القسم التالي فحصناه بأنفسنا على منصاتكم العامة يوم ٢٣ أغسطس ٢٠٢٦، ويمكنكم التحقق من كل بند خلال أقل من دقيقة. لم نطّلع على أي من أنظمتكم الداخلية: لا حساباتكم الإعلانية، ولا نظام إدارة العملاء، ولا توزيع الإيرادات. أي استنتاج يعتمد على تلك البيانات مذكور هنا كسؤال مفتوح، لا كحقيقة.
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section>
+  <div class="eyebrow">القسم الأول</div>
+  <h2>ما وجدناه على منصاتكم، ويمكنكم التحقق منه الآن</h2>
+  <p>هذه ليست قائمة انتقادات. هي أسرع مكان يوجد فيه عائد، لأن كل بند منها قابل للإصلاح خلال أسابيع ولا يحتاج ميزانية إعلانية إضافية.</p>
+
+  <ol class="findings">
+    <li>
+      <span class="what">المدونة توقفت في مايو ٢٠٢٦</span>
+      <span class="why">آخر شهر فيه تدوينات هو مايو. صفحات يونيو ويوليو وأغسطس ترجع «غير موجود». المدونة هي الأصل الوحيد لديكم الذي يظهر في نتائج البحث على عبارات ذات نية شرائية، وهي مجانية بالكامل. توقفها ثلاثة أشهر هو أغلى قرار غير مقصود في المنظومة.</span>
+      <span class="verify">blogs.ayen.com.sa/2026/06/ → 404</span>
+    </li>
+    <li>
+      <span class="what">المنظومة متعددة المنتجات غير موجودة على الموقع</span>
+      <span class="why">تذييل الموقع يحمل أربعة روابط: الرئيسية، الخدمات، المدونة، تواصل معنا. صفحة «قرارات» موجودة فعلاً وتفتح، لكن لا يوجد رابط لها في التنقّل. ولا يوجد أي مسار إلى حكوم أو بيّن أو زوبر. المطوّر العقاري والجهة الحكومية، وهما أعلى مشترييْن قيمة لديكم، ليس لهما سطح تسويقي على موقعكم.</span>
+      <span class="verify">ayen.com.sa/qrarat يفتح، لكنه غير مرتبط من أي صفحة</span>
+    </li>
+    <li>
+      <span class="what">صفحة انضمام الخبراء ترجع «الصفحة غير موجودة»</span>
+      <span class="why">في الوقت الذي أعلنتم فيه مبادرة ١٠٢٠٣٠ لتوفير عشرة آلاف وظيفة في الفحص العقاري بحلول ٢٠٣٠. جانب العرض في المنصة يحتاج تسويقاً بنفس جدية جانب الطلب.</span>
+      <span class="verify">ayen.com.sa/inspectors → الصفحة غير موجودة</span>
+    </li>
+    <li>
+      <span class="what">صفحة الهبوط القديمة معطّلة، والجديدة على نظام منفصل تماماً</span>
+      <span class="why">النطاق landing.ayen.com.sa يحوّل إلى الصفحة الرئيسية، أي أن أي زائر قادم من رابط قديم يسقط على صفحة عامة بلا عرض محدد. أما صفحة الهبوط العاملة فهي على منصة مستقلة عن موقع المنتج، ونموذجها يلتقط حقلين ظاهرين فقط: الاسم الأول ورقم الجوال. لا بريد، ولا مدينة، ولا تاريخ استلام، ولا نوع الوحدة. هذا سجل رقيق جداً لخدمة تبدأ من ١٣٩٠ ريالاً، ويجعل أي تقسيم أو متابعة لاحقة شبه مستحيلة.</span>
+      <span class="verify">landing.ayen.com.sa → 301 → الصفحة الرئيسية</span>
+    </li>
+    <li>
+      <span class="what">الموقع محجوب عن محركات الإجابة بالذكاء الاصطناعي</span>
+      <span class="why">الموقع يرجع 403 لأي عميل غير متصفح، بما في ذلك أدوات الزحف التابعة لجهات خارجية ومحركات الإجابة. في فئة يسأل فيها المشتري أسئلة كثيرة قبل الشراء، ويتحول فيها هذا السؤال تدريجياً إلى المساعدات الذكية، فإن هذا يعني أنكم غير مرئيين في المكان الذي تُصاغ فيه الإجابة. الإصلاح سطر واحد في الإعدادات.</span>
+      <span class="verify">curl https://www.ayen.com.sa/ → 403</span>
+    </li>
+    <li>
+      <span class="what">رقما واتساب مختلفان في السوق</span>
+      <span class="why">رقم على الموقع ورقم آخر في رابط حساب إنستقرام. أي قياس للمحادثات، وأي ربط بين الإعلان والمحادثة والطلب، ينكسر عند هذه النقطة.</span>
+    </li>
+    <li>
+      <span class="what">التقرير التفاعلي، وهو أكثر ما يميّزكم، شبه مخفي</span>
+      <span class="why">«تحدّث مع التقرير باستخدام الذكاء الاصطناعي» هو الشيء الوحيد في عرضكم الذي لا يستطيع مهندس مستقل تقليده. مكانه اليوم قرب أسفل الصفحة الرئيسية، بلا صفحة خاصة به، وبلا ذكر في صفحة الهبوط الإعلانية. هذه أقوى ورقة تفاضل لديكم في سوق يقارنكم فيه العميل بمهندس أرخص.</span>
+    </li>
+    <li>
+      <span class="what">سعر يظهر غير مقرَّب في شبكة الخدمات</span>
+      <span class="why">«فحص تربة، باقات تبدأ من ٢٤٣٤٫٧٨». تفصيل صغير، لكنه على صفحة تبيع الدقة والاحترافية.</span>
+    </li>
+  </ol>
+</section>
+
+<hr class="rule" />
+
+<section>
+  <div class="eyebrow">القسم الثاني</div>
+  <h2>الملاحظة الأساسية</h2>
+  <p class="lead">قلتم إن المشكلة هي الوعي. نعتقد أن الوعي عَرَض، وأن السبب أعمق: <strong>الإنفاق الإعلاني موجّه بالكامل إلى أصغر الأسواق الثلاثة المتاحة لكم، وهو السوق الوحيد الذي يتطلب خلق سلوك جديد من الصفر.</strong></p>
+
+  <p>في السعودية توجد ثلاثة مسارات مختلفة تماماً للفحص العقاري، وهي تختلف في الحجم وفي مقدار الوعي المطلوب لبيعها:</p>
+
+  <div class="scroller">
+    <table>
+      <thead>
+        <tr><th>المسار</th><th>ما الذي يحرّكه</th><th>هل يحتاج خلق وعي؟</th><th>أين إنفاقكم اليوم</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>الفحص الفني الإلزامي</strong><br><span style="font-size:14px;color:var(--ink-faint)">مرتبط بتأمين العيوب الخفية</span></td>
+          <td>تأمين العيوب الخفية أصبح شرطاً لإصدار رخصة البناء منذ ٦ أكتوبر ٢٠٢٤، وشركات التأمين لا تصدر الوثيقة دون تقرير فحص فني من طرف ثالث مستقل.</td>
+          <td><span class="pill free">لا</span><br><span style="font-size:14px;color:var(--ink-faint)">النظام يفرض الشراء</span></td>
+          <td>لا شيء ظاهر</td>
+        </tr>
+        <tr>
+          <td><strong>التسليم والمطوّرون</strong></td>
+          <td>عقود التسليم ومسؤولية العشر سنوات. أكثر من ١٠٥٬٠٠٠ وحدة مجدولة للتسليم في الرياض وجدة والدمام خلال ٢٠٢٦ و٢٠٢٧.</td>
+          <td><span class="pill free">لا</span><br><span style="font-size:14px;color:var(--ink-faint)">العقد يفرض الشراء</span></td>
+          <td>لا شيء ظاهر</td>
+        </tr>
+        <tr>
+          <td><strong>الأفراد قبل الشراء</strong></td>
+          <td>قرار فردي اختياري بالكامل.</td>
+          <td><span class="pill now">نعم، بالكامل</span></td>
+          <td><span class="pill now">١٠٠٪ من الإعلانات</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <h3>وهذه ليست ملاحظتنا، بل ملاحظتكم أنتم</h3>
+    <p>في أكتوبر ٢٠٢٤، وصف الرئيس التنفيذي الجولة الاستثمارية الجديدة بأنها موجّهة إلى «تمويل المشاريع والتأمين العقاري».</p>
+    <p><strong>الاتجاه المؤسسي المعلن يشير إلى المسار الإلزامي. محرّك الطلب كله ما زال في مسار الأفراد.</strong> المسافة بين هذين الأمرين هي، في تقديرنا، أغلى فجوة في الشركة اليوم، وهي تفسّر لماذا تبدو الأرقام ثابتة رغم أن العمل الفعلي كثير.</p>
+  </div>
+
+  <div class="note">
+    <b>السؤال الذي يغيّر هذا التشخيص بالكامل.</b> ما هو توزيع الإيرادات الحالي بين الأفراد والمطوّرين والجهات الحكومية؟ إن كان الأفراد أقل من ثلث الإيراد، فالتشخيص يتحول من «السوق الخطأ» إلى «التسويق متأخر عن دفتر الحسابات»، وهي مشكلة أسهل. لا نستطيع الإجابة من الخارج، ونفضّل أن نسألها بدل أن نفترضها.
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section>
+  <div class="eyebrow">القسم الثالث</div>
+  <h2>الشيء الوحيد الذي يربط المنتجات الخمسة</h2>
+  <p class="lead">المشكلة ليست أن لديكم خمسة منتجات يصعب شرحها. المشكلة أنه لا يوجد عمود فقري واحد يجعلها شركة واحدة. <strong>والعمود الفقري متوفر لديكم بالفعل: بياناتكم.</strong></p>
+
+  <p>حسب أرقامكم المنشورة على موقعكم، لديكم أكثر من ١٬٣٠٠٬٠٠٠ ملاحظة موثّقة وأكثر من ٥٠ ألف تقرير فني في أكثر من ١٠٠ مدينة. لا يملك أحد في المملكة سجلاً تشغيلياً بهذا الشكل، ولا يستطيع مهندس مستقل أن يملكه مهما انخفض سعره.</p>
+
+  <p>نقترح تحويل هذا السجل إلى <strong>مؤشر دوري منشور لحالة العقار في السعودية</strong>: أكثر العيوب تكراراً حسب المدينة، وحسب عمر المبنى، وحسب نوع الوحدة، ومتوسط ما يكتشفه الفحص من تكلفة مؤجلة. مؤشر له منهجية معلنة، وموعد إصدار ثابت، وبيانات مفتوحة للاقتباس.</p>
+
+  <p>هذا المؤشر يعالج أربع مشكلات دفعة واحدة:</p>
+  <ul class="clean">
+    <li><strong>الوعي:</strong> يحوّل الفحص من خدمة اختيارية إلى معيار، لأن من يملك رقم السوق المرجعي يملك تعريف الفئة.</li>
+    <li><strong>التمايز:</strong> يجيب على «هو فحص وأنت فحص» بشيء لا يستطيع المنافس الأصغر ادعاءه.</li>
+    <li><strong>المطوّرون:</strong> المؤشر العام هو أعلى القمع لمنتج «قرارات»، الذي قيمته كلها أنه يرى ما لا يراه المطوّر.</li>
+    <li><strong>الفريق الداخلي:</strong> يعطي فريق المحتوى تقويم إنتاج متكرر وهدفاً واضحاً، بدل أن يبحث عن موضوع كل أسبوع.</li>
+  </ul>
+
+  <div class="note">
+    <b>شرط مسبق، ونذكره قبل أن تذكروه.</b> قيمة المؤشر كلها في قابليته للاقتباس، وهذه تنهار في اللحظة التي يجد فيها صحفي أو محلل رقمين مختلفين لنفس المعلومة على منصاتكم. توحيد الأرقام المنشورة وتثبيت مجموعة واحدة معتمدة هو عمل تحضيري ضروري، وليس ترتيباً شكلياً. وهو سريع ورخيص.
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section>
+  <div class="eyebrow">القسم الرابع</div>
+  <h2>النطاق المقترح</h2>
+  <p class="lead">قلتم: «أنا عارف إن عندي فجوات. تعال بحل يطلّعني منها ولو بشكل متدرّج، وبعدين نفتح على أوسع.» النطاق أدناه مبني على هذه الجملة حرفياً.</p>
+
+  <div class="phase">
+    <div class="phase-tag">المرحلة صفر  ·  من ٢ إلى ٣ أسابيع</div>
+    <h3>أساس القياس</h3>
+    <p>هذا ما طلبتموه بالاسم في المكالمة. وهو أيضاً الشرط المسبق لكل ما بعده، وأسرع طريق لفك الاشتباك حول الميزانية.</p>
+    <ul class="clean">
+      <li>بناء معمارية القياس على الموقع الجديد قيد التطوير، قبل إطلاقه لا بعده.</li>
+      <li>تتبّع من جانب الخادم عبر جوجل وسناب شات وتيك توك وميتا، بتعريفات تحويل منفصلة لكل خط منتج.</li>
+      <li>الربط المفقود: المسجَّل في الندوة، ومستخدم التطبيق، وطلب الفحص، والإنفاق الإعلاني، في سجل واحد.</li>
+      <li>توحيد رقمي الواتساب في مسار قياس واحد.</li>
+      <li>لوحة واحدة تجيب على سؤال واحد: <strong>ماذا فعل هذا الريال؟</strong></li>
+    </ul>
+  </div>
+
+  <div class="phase two">
+    <div class="phase-tag">المرحلة الأولى  ·  بالتوازي، ثم استمرار</div>
+    <h3>إصلاح ما هو مكسور، ثم فتح مسار واحد جديد</h3>
+    <ul class="clean">
+      <li>معالجة بنود القسم الأول، بدءاً بإعادة تشغيل المدونة وفتح المسارات المفقودة في الموقع.</li>
+      <li>بناء سطح تسويقي فعلي لمسار واحد من المسارين غير المخدومين، ونرشّح مسار التسليم والمطوّرين لأنه لا يحتاج خلق وعي.</li>
+      <li>تفعيل قاعدة العملاء السابقين، وهي أصل قائم لا يكلّف ريالاً إعلانياً واحداً.</li>
+      <li>إطلاق النسخة الأولى من مؤشر حالة العقار.</li>
+      <li>توجيه فريق المحتوى الداخلي: تقويم، وزوايا، ومقاييس نجاح. الفريق يبقى، والتوجيه هو ما يُضاف.</li>
+    </ul>
+  </div>
+
+  <div class="phase three">
+    <div class="phase-tag">المرحلة الثانية  ·  بعد إغلاق الجولة</div>
+    <h3>التوسع الكامل</h3>
+    <ul class="clean">
+      <li>تشغيل المنظومة على المسارات الثلاثة بفرق ومقاييس منفصلة لكل مسار.</li>
+      <li>إدارة الإعلانات بالكامل عبر Admire8.</li>
+      <li>أصول إثبات لمسار الجهات الحكومية. نبيع أصول إثبات لهذا المسار، لا أهدافاً رقمية للعملاء المحتملين، لأن دورة الشراء الحكومية تُدار بميزانيات سنوية لا بحملات.</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <b>عن التوقيت.</b> ذكرتم أن الجولة قد تُغلق خلال شهر إلى ثلاثة، وأن «الجاهزية مهمة جداً، ومن يقدر يكون جاهز في ذلك الوقت يكون جاهز». المرحلة صفر مصمّمة تحديداً لذلك: تكلفتها محدودة، ولا تحتاج قرار ميزانية كبيراً، وتضعنا داخل أرقامكم قبل أن يحين وقت التوسع.
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section>
+  <div class="eyebrow">القسم الخامس</div>
+  <h2>الاستثمار</h2>
+  <p>منظومة موند تُسعّر بالدرهم الإماراتي حسب قائمة الأسعار المعتمدة. الأرقام أدناه هي القائمة الرسمية، وهي أقل مما ذُكر شفهياً في المكالمة.</p>
+
+  <div class="scroller">
+    <table>
+      <thead>
+        <tr><th>الباقة</th><th>التأسيس</th><th>الاشتراك الشهري</th><th>جهات الاتصال النشطة المشمولة</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Standard</strong></td><td class="num">‏٥٬٨٠٠ درهم</td><td class="num">‏٢٬٥٠٠ درهم</td><td class="num">‏١٬٥٠٠</td></tr>
+        <tr><td><strong>Pro</strong><br><span style="font-size:14px;color:var(--ink-faint)">حتى ثلاثة مسارات منفصلة</span></td><td class="num">‏١٥٬٠٠٠ درهم</td><td class="num">‏٤٬٥٠٠ درهم</td><td class="num">‏٢٬٠٠٠</td></tr>
+        <tr><td>سعة إضافية</td><td class="num">،</td><td class="num">‏٤٠٠ درهم</td><td class="num">لكل ١٬٠٠٠ إضافية</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:18px"><strong>ترشيحنا: Pro.</strong> ليس لأنها أعلى، بل لأن الفرق الفعلي بينها وبين Standard هو دعم ثلاثة مسارات منفصلة، وهذا بالضبط ما يحتاجه وضعكم. باقة بمسار واحد ستعيد إنتاج المشكلة نفسها التي تحاولون الخروج منها.</p>
+
+  <p><strong>جهة الاتصال النشطة</strong> هي شخص جرى معه تواصل فعلي خلال الدورة، لا كل سجل مخزّن. ثمانية آلاف سجل في النظام قد يكون منها ألفان نشطون فقط في شهر معيّن.</p>
+
+  <p>ما هو خارج الاشتراك: الإنفاق الإعلاني، ورسوم قنوات الواتساب والرسائل، وإنتاج المحتوى، وإدارة الإعلانات. تُسعَّر إدارة الإعلانات منفصلة حسب عدد المنصات.</p>
+
+  <div class="note">
+    <b>اقتراحكم بشأن التجربة.</b> اقترحتم في المكالمة تجربة شهر مع تأجيل رسوم التأسيس إلى ما بعدها. نحن منفتحون على هذا الشكل، ونفضّل تثبيت تفاصيله في الاجتماع بدل تقديره هنا.
+  </div>
+</section>
+
+<hr class="rule" />
+
+<section>
+  <div class="eyebrow">القسم السادس</div>
+  <h2>ما نحتاجه منكم</h2>
+  <p>كل بند هنا سؤال لا نستطيع الإجابة عليه من خارج الشركة، وكل إجابة تغيّر التوصية:</p>
+  <ul class="clean">
+    <li>توزيع الإيرادات الحالي بين الأفراد والمطوّرين والجهات الحكومية.</li>
+    <li>الإنفاق الإعلاني الشهري الحالي وتوزيعه على المنصات.</li>
+    <li>من يملك الموقع الجديد قيد التطوير، ومتى موعد إطلاقه. القياس يُحدَّد قبل الإطلاق.</li>
+    <li>هل توجد اليوم علاقة أو اعتماد ضمن منظومة تأمين العيوب الخفية.</li>
+    <li>ما الذي أنتج ملايين المشاهدات على قناة يوتيوب مقابل عدد محدود من المشتركين. إن كان هناك برنامج فيديو مدفوع سابق، فهو معلومة مهمة قبل أي توصية.</li>
+    <li>سبب توقف المدونة في مايو.</li>
+    <li>أين تصل العملاء المحتملون اليوم، ومن يتابعهم، وكم تستغرق الاستجابة.</li>
+  </ul>
+</section>
+
+<div class="callout">
+  <h3>الخطوة التالية</h3>
+  <p>الاجتماع يوم الاثنين ٢٤ أغسطس. نقترح أن نبدأ بالأسئلة أعلاه، لا بالعرض، لأن إجاباتها قد تعيد ترتيب الأولويات بالكامل.</p>
+  <p>وسنعرض عليكم نسخة حيّة من المنظومة، مهيّأة باسم عاين وبمساراتكم الأربعة، تستطيعون الدخول إليها وتجربتها بأنفسكم بعد الاجتماع.</p>
+</div>
+
+<footer class="end">
+  <p><span class="brand">Admireworks</span><br>دبي، الإمارات العربية المتحدة<br>hello@admireworks.com</p>
+  <p style="font-size:13px">مستند داخلي للنقاش، أُعدّ لـ عاين. غير منشور للعامة.</p>
+</footer>
+
+</div>
+</body>
+</html>

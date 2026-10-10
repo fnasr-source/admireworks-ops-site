@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "locale": "en",
+    "eyebrow": "Media buying proposal",
+    "title": "Google and Instagram for Tuleen",
+    "lead": "We run Google and Instagram for Tuleen, we build the measurement before we spend anything, and you get a written report every week. One party on the account, six month minimum, 1,000 KWD per month net.",
+    "client_name": "Promolinks, for Tuleen",
+    "reference": "AWP-EG-TLN-001",
+    "issued": "30 August 2026",
+    "valid_until": "13 September 2026",
+    "agency_line": "Admireworks · hello@admireworks.com · +971 4295 8666"
+  },
+  "sections": [
+    {
+      "type": "list",
+      "id": "today",
+      "title": "Where Tuleen stands today",
+      "body": [
+        "Read from the live store on 30 August 2026. We have not been given access to the ad accounts, Merchant Center, or analytics, so nothing below is a performance statement. It is what a buyer can see from the outside."
+      ],
+      "items": [
+        {
+          "title": "53 products live, and the bundle work is already done.",
+          "body": "Chalet Weekend Pack, Diwaniya Snack Pack, Family Freezer Pack, Healthy Box, and the Omypop all-flavours bundle. Basket-building is usually the hard part and it is already there."
+        },
+        {
+          "title": "The product photography is strong.",
+          "body": "This matters more for Shopping than most people expect. It is the one asset that is already at the standard."
+        },
+        {
+          "title": "There are no reviews or ratings anywhere on the store.",
+          "body": "That closes off product rating and seller rating extensions, which are among the few things on Google Shopping that lift click-through without lifting the bid."
+        },
+        {
+          "title": "Product descriptions are thin or missing.",
+          "body": "Most items carry a bilingual name and little else. Google Shopping matches searches against the feed, so a feed with no descriptive text competes on price and image alone."
+        },
+        {
+          "title": "Sold-out items sit in the main collection.",
+          "body": "In a Shopping feed those become disapprovals and wasted impressions."
+        },
+        {
+          "title": "There is no WhatsApp entry point.",
+          "body": "On a Kuwaiti store that is a missing capture route, not a missing feature."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "body": [
+        "The catalogue is ready to advertise. The feed and the measurement around it are not yet. That ordering is what the first weeks are for."
+      ]
+    },
+    {
+      "type": "list",
+      "id": "what-we-run",
+      "title": "What we run",
+      "items": [
+        {
+          "title": "Google Shopping.",
+          "body": "The primary channel for this catalogue. Feed built and maintained, Merchant Center configured, availability and pricing kept accurate so the feed stops fighting itself."
+        },
+        {
+          "title": "Google Search.",
+          "body": "Brand defence first, then category terms that match what is actually in stock."
+        },
+        {
+          "title": "Instagram.",
+          "body": "Named deliberately. In Kuwait this is where the audience is, and the creative and placement decisions are made for Instagram rather than for a generic Meta buy."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "body": [
+        "Campaign structure, audiences, budgets, bidding, creative testing rotation, and daily optimisation sit inside the retainer. Creative production does not, see the exclusions below."
+      ]
+    },
+    {
+      "type": "list",
+      "id": "measurement",
+      "title": "What we set up before we spend",
+      "body": [
+        "Measurement comes first, and it is not optional. The most common thing we find on a handed-over account is a conversion counter that fires on page views, which produces a return figure that was never real."
+      ],
+      "items": [
+        "Server side tracking, with the Meta Conversions API for Instagram and enhanced conversions for Google.",
+        "GA4 and Google Tag Manager configured and verified against real orders.",
+        "Consent handling and first party cookies.",
+        "Merchant Center account, feed, and product data specification.",
+        "Shopify purchase and checkout events wired and tested end to end."
+      ]
+    },
+    {
+      "type": "callout",
+      "body": [
+        "This package is quoted separately at **USD 5,000 to 10,000** in this market, depending on complexity. It is **included at no additional cost** with the six month term. On a shorter term it is billed separately, see the price list."
+      ]
+    },
+    {
+      "type": "list",
+      "id": "cadence",
+      "title": "What changes every month",
+      "items": [
+        {
+          "title": "Daily work on the account.",
+          "body": "Not a monthly check-in."
+        },
+        {
+          "title": "A written report every week.",
+          "body": "Sent, not waited for."
+        },
+        {
+          "title": "A call every week or every two weeks,",
+          "body": "whichever suits Tuleen. Your team is welcome on it or we can report to you and you carry it."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "id": "no-promises",
+      "title": "What we do not promise",
+      "body": [
+        "This section is here on purpose. We will not put a target number in a document we cannot control the second half of."
+      ],
+      "items": [
+        "No promised cost per acquisition.",
+        "No promised return on ad spend.",
+        "No promised conversion rate or order volume."
+      ]
+    },
+    {
+      "type": "prose",
+      "body": [
+        "Any agency that guarantees those numbers is either guessing or selling. What we commit to is the process: the platforms are fed correct data, the account is worked on every day, optimisation happens against real orders rather than against a broken counter, and the reporting arrives whether the week was good or bad.",
+        "If Tuleen asks for a forecast, the honest answer is that we will give them one after the first weeks of clean measurement, based on their own data rather than on someone else's benchmark. We are happy to say that on a call."
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "account-control",
+      "title": "How the account is run",
+      "body": [
+        "One party manages the ad account. If Admireworks is running it, we run it fully, and nobody else edits campaigns, budgets, or audiences while a test is live. This is not a control preference. Two hands on one account destroys the learning phase and makes every result unreadable, which then makes the reporting worthless to all three of us.",
+        "Everything else stays where it is. This is a media buying engagement, not a takeover. Tuleen keeps ownership of the accounts, the data, and the final say on anything a customer sees."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "price",
+      "title": "Price",
+      "body": [
+        "Flat. No tiers, no anchoring, no introductory rate that moves later."
+      ],
+      "columns": [
+        "Item",
+        "What it covers",
+        "Net rate"
+      ],
+      "rows": [
+        {
+          "Item": "**Google and Instagram management**",
+          "What it covers": "Google Shopping, Google Search, and Instagram. Structure, bidding, audiences, daily optimisation, weekly written reporting, and the call.",
+          "Net rate": "1,000 KWD / month"
+        },
+        {
+          "Item": "Setup and measurement",
+          "What it covers": "Server side tracking, Meta CAPI, GA4, Tag Manager, consent, Merchant Center, Shopify events.",
+          "Net rate": "Included"
+        },
+        {
+          "Item": "Minimum term",
+          "What it covers": "Six months. The measurement package is included on this basis.",
+          "Net rate": "6,000 KWD"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "body": [
+        "Approximately USD 3,240 per month at 30 August 2026 rates. Quote to Tuleen in KWD."
+      ]
+    },
+    {
+      "type": "table",
+      "id": "options",
+      "title": "Everything else, each with its price",
+      "body": [
+        "None of this is required to start. It is listed now so that nothing appears as a surprise in month three."
+      ],
+      "columns": [
+        "Item",
+        "What it covers",
+        "Net rate"
+      ],
+      "rows": [
+        {
+          "Item": "Store rebuild, built from your designs",
+          "What it covers": "Promolinks supplies the design, we build and ship it on Shopify. Product data structured for the Shopping feed, reviews, and a WhatsApp entry point built in.",
+          "Net rate": "700 KWD · one time"
+        },
+        {
+          "Item": "Store rebuild, design and build",
+          "What it covers": "The same, with the design layer from us instead. Listed for completeness. The line above is the one that fits how you and we already split work.",
+          "Net rate": "1,300 KWD · one time"
+        },
+        {
+          "Item": "Landing page, each",
+          "What it covers": "A page that matches the search or the ad that sent the visitor, built to convert rather than to browse.",
+          "Net rate": "85 KWD · each"
+        },
+        {
+          "Item": "Email marketing, including customer reactivation",
+          "What it covers": "Flows plus campaigns, and the reactivation of buyers Tuleen already paid to acquire and has not contacted since. One line, not two, because it is one job.",
+          "Net rate": "165 KWD / month"
+        },
+        {
+          "Item": "WhatsApp capture and automation",
+          "What it covers": "Anyone who taps the chat button is captured, whether or not they send a message.",
+          "Net rate": "125 KWD / month"
+        },
+        {
+          "Item": "Reporting dashboard",
+          "What it covers": "Live view of spend, orders, and channel performance, so the monthly conversation is about facts.",
+          "Net rate": "40 KWD / month"
+        },
+        {
+          "Item": "Setup and measurement, on a shorter term",
+          "What it covers": "Only applies if Tuleen declines the six month minimum. Otherwise included above.",
+          "Net rate": "420 KWD · one time"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "body": [
+        "Email and WhatsApp are monthly, not one time. Both need hands on them and neither is set and forget.",
+        "On the store itself. Our honest read, and Ahmad Alshareefi's independently, is that the store is the constraint on everything above it. We are not pushing it today. Advertising into the current store will still work, and it will work better once the feed and the product data are fixed. Take it in that order if budget is the question."
+      ]
+    },
+    {
+      "type": "list",
+      "id": "excluded",
+      "title": "What is not included",
+      "items": [
+        {
+          "title": "Advertising spend.",
+          "body": "Paid by Tuleen directly to Google and Meta through their own accounts. It never passes through Admireworks and we never mark it up."
+        },
+        {
+          "title": "Creative production.",
+          "body": "Product photography, video, and content shoots stay with Promolinks. We brief the angles and the formats, you produce."
+        },
+        {
+          "title": "Organic social management.",
+          "body": "Community management and organic posting are yours."
+        },
+        {
+          "title": "Platform subscriptions.",
+          "body": "Shopify, apps, and any third party tooling stay billed to Tuleen."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "to-proceed",
+      "title": "To proceed",
+      "items": [
+        {
+          "title": "Review only access",
+          "body": "to the Google Ads and Meta accounts, Merchant Center, Shopify, and analytics. Review only, so nothing changes while we look."
+        },
+        {
+          "title": "A mutual NDA",
+          "body": "if Tuleen wants one before granting that access. We have a read only audit template ready to send."
+        },
+        {
+          "title": "Tuleen's current monthly ad budget.",
+          "body": "We need this before the first call. It changes the campaign structure, and on a materially larger budget it changes the rate, upward, which we would raise with you before it reaches them."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "body": [
+        "Week one is measurement, not spend. Campaigns start once the tracking reports a real order correctly."
+      ]
+    },
+    {
+      "type": "list",
+      "id": "terms",
+      "title": "Terms",
+      "items": [
+        {
+          "title": "Parties.",
+          "body": "This scope and rate is between Admireworks and Promolinks. Promolinks is the contracting party and holds the relationship with Tuleen. Admireworks does not approach Tuleen independently of Promolinks on this engagement."
+        },
+        {
+          "title": "Scope.",
+          "body": "Management of Google Shopping, Google Search, and Instagram advertising for Tuleen, plus the measurement setup described above. Creative production and organic social are outside scope."
+        },
+        {
+          "title": "Fees.",
+          "body": "1,000 KWD per month, net to Admireworks, invoiced monthly in advance. Minimum term of six months. Any margin Promolinks adds is set by Promolinks and is not our concern or our liability."
+        },
+        {
+          "title": "Term and renewal.",
+          "body": "Six month minimum, then month to month. Either party may end it after the minimum term with 30 days written notice."
+        },
+        {
+          "title": "Account control.",
+          "body": "Admireworks manages the ad account exclusively for the duration. If another party edits campaigns while the engagement is live, the performance commitments in the process section no longer stand."
+        },
+        {
+          "title": "No performance guarantee.",
+          "body": "No cost per acquisition, return on ad spend, conversion rate, or order volume is promised, implied, or contractual. What is contractual is the process and the reporting cadence."
+        },
+        {
+          "title": "Pass through costs.",
+          "body": "Ad spend, platform subscriptions, and third party tooling are paid directly by Tuleen and are never marked up by Admireworks."
+        },
+        {
+          "title": "Ownership.",
+          "body": "Tuleen owns its ad accounts, its data, its product feed, and any creative produced for it. Admireworks retains its own methods, templates, and internal tooling."
+        },
+        {
+          "title": "Confidentiality.",
+          "body": "Mutual, covering all non public business information of all three parties, surviving three years."
+        },
+        {
+          "title": "Liability.",
+          "body": "Each party's total liability is capped at the fees paid in the three months before a claim. Neither party is liable for indirect or consequential loss. The cap does not apply to a confidentiality breach."
+        },
+        {
+          "title": "Good faith and governing law.",
+          "body": "Anything that needs working out, we work out first through good faith discussion. Formally, this is governed by the laws of the Dubai International Financial Centre, UAE."
+        }
+      ]
+    },
+    {
+      "type": "signature",
+      "id": "acceptance",
+      "title": "Acceptance",
+      "body": [
+        "Countersign and return this page, or confirm in writing by email. On acceptance the invoice arrives by email with everything needed to proceed, and access requests go out the same day.",
+        "Work begins the business day following acceptance. Week one is measurement."
+      ],
+      "parties": [
+        {
+          "org": "For Promolinks",
+          "person": "Amany El Mahalawy, Chief Executive Officer"
+        },
+        {
+          "org": "For Admireworks",
+          "person": "Authorised Signatory"
+        }
+      ]
+    }
+  ]
+}
