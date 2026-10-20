@@ -1,0 +1,154 @@
+{
+  "wave": "basseqat-statics-2026-08",
+  "deckHash": "0f5ecfdeb3ea7aebee38a99ec277c2b45aeed86c3c19ba6f9fa450d231d562a2",
+  "shaping": "raqm",
+  "renders": [
+    {
+      "concept": "concept16-annual-fees",
+      "size": "1x1",
+      "path": "assets/out/concept16-annual-fees/1x1.png",
+      "w": 1080,
+      "h": 1080,
+      "sha256": "c958582a82235f354e1f654263156b1a16b6c0ca45eac1cca85316233d00ff05"
+    },
+    {
+      "concept": "concept16-annual-fees",
+      "size": "4x5",
+      "path": "assets/out/concept16-annual-fees/4x5.png",
+      "w": 1080,
+      "h": 1350,
+      "sha256": "65f32d25ef0180576fc0cb50bc86c975fdfd700ba91962a232d62837578cee05"
+    },
+    {
+      "concept": "concept16-annual-fees",
+      "size": "9x16",
+      "path": "assets/out/concept16-annual-fees/9x16.png",
+      "w": 1080,
+      "h": 1920,
+      "sha256": "7e4d855abbdae99452945ef4f3ce10ddcb32f2c87bd67cd92290daed50ba780b"
+    },
+    {
+      "concept": "concept19-six-questions",
+      "size": "1x1",
+      "path": "assets/out/concept19-six-questions/1x1.png",
+      "w": 1080,
+      "h": 1080,
+      "sha256": "802b984476da0c3459c576a26cff81617c71e6085f8a5df47932434c16f5f079"
+    },
+    {
+      "concept": "concept19-six-questions",
+      "size": "4x5",
+      "path": "assets/out/concept19-six-questions/4x5.png",
+      "w": 1080,
+      "h": 1350,
+      "sha256": "96da51a6d3a08354f610e064f74a57e53e8e4b70a10f253cdc9d691fcccfd093"
+    },
+    {
+      "concept": "concept19-six-questions",
+      "size": "9x16",
+      "path": "assets/out/concept19-six-questions/9x16.png",
+      "w": 1080,
+      "h": 1920,
+      "sha256": "888c15002de53d20c09b87be9b8f95217737d3ba2dbd0eebad4898e8b755bd4d"
+    },
+    {
+      "concept": "concept20-open-gate-pension",
+      "size": "1x1",
+      "path": "assets/out/concept20-open-gate-pension/1x1.png",
+      "w": 1080,
+      "h": 1080,
+      "sha256": "7e85cf3f7fbbfb79dd79c0bfe8fc477d94528cce1f691270325464c1704ecc2d"
+    },
+    {
+      "concept": "concept20-open-gate-pension",
+      "size": "4x5",
+      "path": "assets/out/concept20-open-gate-pension/4x5.png",
+      "w": 1080,
+      "h": 1350,
+      "sha256": "e80b2f1c681bc703a0e81fcccc4dd7890d9b4dbb89ab464d2debc391e3c6b5ff"
+    },
+    {
+      "concept": "concept20-open-gate-pension",
+      "size": "9x16",
+      "path": "assets/out/concept20-open-gate-pension/9x16.png",
+      "w": 1080,
+      "h": 1920,
+      "sha256": "146770060ecd3b8a103c20292bffa79e2cec92aa3db66e3c00f260a91bad615c"
+    },
+    {
+      "concept": "concept21-built-what-expat",
+      "size": "1x1",
+      "path": "assets/out/concept21-built-what-expat/1x1.png",
+      "w": 1080,
+      "h": 1080,
+      "sha256": "7565ee5fc085a963b7f8d343a08365a2e064f8f62c8c51ef4a4d242de467f3cd"
+    },
+    {
+      "concept": "concept21-built-what-expat",
+      "size": "4x5",
+      "path": "assets/out/concept21-built-what-expat/4x5.png",
+      "w": 1080,
+      "h": 1350,
+      "sha256": "61cb819ce06ccc8600d8adc93528fa2c7ef4e21307040e826a2c7176347aac8f"
+    },
+    {
+      "concept": "concept21-built-what-expat",
+      "size": "9x16",
+      "path": "assets/out/concept21-built-what-expat/9x16.png",
+      "w": 1080,
+      "h": 1920,
+      "sha256": "96878704415ee000a0399d2eb635e647f51d90e8ec802da7b789fcc45c732584"
+    },
+    {
+      "concept": "concept22-order-of-operations",
+      "size": "1x1",
+      "path": "assets/out/concept22-order-of-operations/1x1.png",
+      "w": 1080,
+      "h": 1080,
+      "sha256": "b2058870a2deadde2994097bde02fe801fe280b251d9a9b631ef93cd06c7f541"
+    },
+    {
+      "concept": "concept22-order-of-operations",
+      "size": "4x5",
+      "path": "assets/out/concept22-order-of-operations/4x5.png",
+      "w": 1080,
+      "h": 1350,
+      "sha256": "1984e26768405dd6aec005dc515650c090dc80fbaa131eee11e47c85f6f8f4e4"
+    },
+    {
+      "concept": "concept22-order-of-operations",
+      "size": "9x16",
+      "path": "assets/out/concept22-order-of-operations/9x16.png",
+      "w": 1080,
+      "h": 1920,
+      "sha256": "170d893673bc4cf96639d75d39e6569cc5eb42aee5ca5de7940248746b6ebfb7"
+    }
+  ],
+  "gcs": {
+    "bucket": "admireworks-internal-os-brochures-2026",
+    "prefix": "deliverables/basseqat/statics-2026-08",
+    "base": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08",
+    "urls": {
+      "concept16-annual-fees/1x1": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept16-annual-fees/1x1.c958582a.png",
+      "concept16-annual-fees/4x5": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept16-annual-fees/4x5.65f32d25.png",
+      "concept16-annual-fees/9x16": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept16-annual-fees/9x16.7e4d855a.png",
+      "concept19-six-questions/1x1": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept19-six-questions/1x1.802b9844.png",
+      "concept19-six-questions/4x5": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept19-six-questions/4x5.96da51a6.png",
+      "concept19-six-questions/9x16": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept19-six-questions/9x16.888c1500.png",
+      "concept20-open-gate-pension/1x1": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept20-open-gate-pension/1x1.7e85cf3f.png",
+      "concept20-open-gate-pension/4x5": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept20-open-gate-pension/4x5.e80b2f1c.png",
+      "concept20-open-gate-pension/9x16": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept20-open-gate-pension/9x16.14677006.png",
+      "concept21-built-what-expat/1x1": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept21-built-what-expat/1x1.7565ee5f.png",
+      "concept21-built-what-expat/4x5": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept21-built-what-expat/4x5.61cb819c.png",
+      "concept21-built-what-expat/9x16": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept21-built-what-expat/9x16.96878704.png",
+      "concept22-order-of-operations/1x1": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept22-order-of-operations/1x1.b2058870.png",
+      "concept22-order-of-operations/4x5": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept22-order-of-operations/4x5.1984e267.png",
+      "concept22-order-of-operations/9x16": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept22-order-of-operations/9x16.170d8936.png",
+      "concept16-annual-fees/4x5-as-square": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept16-annual-fees/4x5-as-square.1548dcf4.png",
+      "concept19-six-questions/4x5-as-square": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept19-six-questions/4x5-as-square.40755931.png",
+      "concept20-open-gate-pension/4x5-as-square": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept20-open-gate-pension/4x5-as-square.36901861.png",
+      "concept21-built-what-expat/4x5-as-square": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept21-built-what-expat/4x5-as-square.7f6a3838.png",
+      "concept22-order-of-operations/4x5-as-square": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/statics-2026-08/concept22-order-of-operations/4x5-as-square.69a4341d.png"
+    }
+  }
+}
