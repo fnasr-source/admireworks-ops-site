@@ -1,0 +1,2068 @@
+{
+  "meta": {
+    "client_name": "Ein Abayaa",
+    "strategy_type": "Direct Response Marketing Strategy",
+    "quarter": "Q2",
+    "year": "2026",
+    "language": "ar",
+    "rtl_support": true,
+    "created_date": "2026-03-25",
+    "version": "2.0",
+    "versions": [
+      {
+        "version": "1.0",
+        "date": "2026-03-25",
+        "notes": "Initial strategy — 90-Day DR Marketing Strategy + Zid Website Rebuild, anchored to Summer Shade 2026 launch",
+        "comments": []
+      },
+      {
+        "version": "2.0",
+        "date": "2026-03-25",
+        "notes": "Visual-first redesign — split dense slides, added stat highlights, image references, and visual rhythm. Target ~65-70 slides.",
+        "comments": []
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "slide-001",
+      "section": "cover",
+      "layout": "cover",
+      "content": {
+        "title": "Direct Response Marketing Strategy",
+        "client_name": "Ein Abayaa",
+        "client_name_ar": "عين عباية",
+        "period": "Q2 - 2026",
+        "subtitle": "90-Day Growth Strategy + Zid Store Launch",
+        "subtitle_ar": "استراتيجية نمو 90 يوم + إطلاق متجر زد",
+        "branding": "@admireworks",
+        "tagline": "خيوطٌ تُنسج بالأصالة — Threads, Woven with Authenticity",
+        "background_image": "./assets/generated/cover-bg.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate marketing presentation cover slide background, abstract geometric patterns inspired by shell textures and soft shadows, navy blue (#001a70) and gold (#cc9f53) color palette with hints of dusty rose (#C18E84) and warm beige (#DCC0AE), modern luxury fashion aesthetic, clean minimal composition, 1920x1080"
+    },
+    {
+      "id": "slide-002",
+      "section": "strategy_brief",
+      "layout": "grid-6",
+      "content": {
+        "title": "Strategy Overview",
+        "boxes": [
+          {
+            "number": "01",
+            "title": "Situation & Objectives",
+            "description": "SWOT analysis & measurable 90-day targets"
+          },
+          {
+            "number": "02",
+            "title": "Market & Environment",
+            "description": "Saudi e-commerce, digital behavior & timing"
+          },
+          {
+            "number": "03",
+            "title": "Competitors & Positioning",
+            "description": "7 competitors: pricing, ads & gaps"
+          },
+          {
+            "number": "04",
+            "title": "Audience & Personas",
+            "description": "3 personas with psychographics & drivers"
+          },
+          {
+            "number": "05",
+            "title": "Campaign & Funnel Strategy",
+            "description": "DR funnel, ads, automation & channels"
+          },
+          {
+            "number": "06",
+            "title": "Content, Measurement & Roadmap",
+            "description": "Content, KPIs & 90-day timeline"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-003",
+      "section": "client_brief",
+      "layout": "title-body",
+      "content": {
+        "title": "Client Brief",
+        "title_ar": "موجز العميل",
+        "body": "Ein Abayaa is a Saudi premium modest fashion brand with a dual-tier architecture serving the modern Saudi woman — from daily wear to Eid celebrations.\n\nThree distinct lines: AZAL (everyday, SAR 300-515), Core Ein Abayaa (accessible premium, SAR 300-500), and Maison Ein (elevated luxury, SAR 514-795),...",
+        "key_facts": [
+          {
+            "label": "Brand",
+            "value": "Ein Abayaa (عين عباية)"
+          },
+          {
+            "label": "Sub-brands",
+            "value": "AZAL | Maison Ein (دار عين)"
+          },
+          {
+            "label": "Price Range",
+            "value": "SAR 300 – 795"
+          }
+        ],
+        "image_grid": [
+          "product-01.webp",
+          "product-03.webp"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-003b",
+      "section": "client_brief",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "Social Proof That Scales",
+        "stat": "31.8K",
+        "label": "Instagram followers on @einabayaa",
+        "sublabel": "Plus a 1.1M-view TikTok viral moment on a customer try-on video",
+        "context": "151 unique products across ~2,000 variants. Heritage brand identity: خيوط تُنسج بالأصالة (Threads, W..."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-004a",
+      "section": "current_situation",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Strengths",
+        "title_ar": "نقاط القوة",
+        "strengths": [
+          "Dual-tier brand architecture (AZAL + Maison Ein) that no competitor replicates",
+          "Under-abaya dress category (SAR 350-450) with zero competitive pressure",
+          "14 active Meta ads with bilingual storytelling — more sophisticated than any competitor"
+        ],
+        "split_image": "zid-store-homepage.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-004b",
+      "section": "current_situation",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Weaknesses",
+        "title_ar": "نقاط الضعف",
+        "weaknesses": [
+          "Zero customer reviews on store — Sadal has 82+ per product, creating a massive trust gap",
+          "No email capture, no WhatsApp button, no abandoned cart recovery — zero retention infrastructure",
+          "BNPL per-installment amounts not displayed on product pages"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-005",
+      "section": "challenge_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "CHALLENGE",
+        "title_ar": "التحدي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-challenge.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract geometric pattern with navy blue (#001a70) background, subtle gold (#cc9f53) accent lines, shell-inspired texture overlay at 10% opacity, modern luxury aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-006a",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 1: The Trust Gap",
+        "title_ar": "التحدي الأول: فجوة الثقة",
+        "headline": "Customers cannot feel fabric, verify sizing, or read reviews before committing SAR 300-795 online",
+        "bullets": [
+          "Top 3 purchase barriers: sizing uncertainty, fabric-feel anxiety, color accuracy concerns",
+          "Zero visible customer reviews vs Sadal's 82+ per product",
+          "At mid-premium pricing, trust is the conversion bottleneck"
+        ],
+        "split_image": "salla-store-homepage.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-006b",
+      "section": "biggest_challenges",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "The Retention Opportunity",
+        "stat": "98%",
+        "label": "WhatsApp open rate in Saudi Arabia",
+        "sublabel": "25% abandoned cart recovery documented for a Saudi women's wear label",
+        "context": "Yet Ein Abayaa has zero retention marketing infrastructure — every lost visitor is permanently lost."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-006c",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 2: Zero Retention Infrastructure",
+        "title_ar": "التحدي الثاني: غياب بنية الاحتفاظ بالعملاء",
+        "headline": "No email capture, no WhatsApp automation, no abandoned cart recovery",
+        "bullets": [
+          "No competitor shows evidence of retention marketing in the entire Saudi abaya category",
+          "Email automated flows generate 30x higher revenue per recipient than campaigns",
+          "First-mover advantage: build the category's first comprehensive retention system"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-006d",
+      "section": "biggest_challenges",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "A Homogeneous Ad Landscape",
+        "stat": "590+",
+        "label": "Active Meta abaya ads in KSA",
+        "sublabel": "Every single one uses product-catalog format. Zero brand storytelling.",
+        "context": "Ein Abayaa already runs 14 ads more sophisticated than any competitor — but UGC, retargeting, and BNP..."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-006e",
+      "section": "biggest_challenges",
+      "layout": "title-body",
+      "content": {
+        "title": "Challenge 3: Homogeneous Paid Media Landscape",
+        "title_ar": "التحدي الثالث: تماثل الإعلانات المدفوعة",
+        "headline": "A sea of identical product-catalog ads — and a wide-open opportunity",
+        "bullets": [
+          "No brand uses story-driven creative, UGC try-on content, or retargeting-specific ads",
+          "Ein Abayaa's existing bilingual story ads are already the most sophisticated in the category",
+          "Opportunity: dominate attention with collection stories, UGC, and emotional hooks"
+        ],
+        "opportunity": "Differentiate through story-driven paid creative and retargeting messaging — formats zero competitors use"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-007",
+      "section": "campaign_goals",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Campaign Goals",
+        "title_ar": "أهداف الحملة",
+        "goals": [
+          {
+            "number": "01",
+            "title": "Launch Zid store as a conversion-optimized experience",
+            "description": "Close all CRO gaps — BNPL display, reviews, email capture, WhatsApp — before driving paid traffic"
+          },
+          {
+            "number": "02",
+            "title": "Make Summer Shade 2026 the biggest collection launch",
+            "description": "Multi-channel campaign timed to Eid al-Fitr, capturing the 45% seasonal search surge"
+          },
+          {
+            "number": "03",
+            "title": "Build a retention engine that generates revenue on autopilot",
+            "description": "WhatsApp + email flows: welcome series, abandoned cart recovery, VIP early access"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-007b",
+      "section": "campaign_goals",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Campaign Goals (continued)",
+        "title_ar": "أهداف الحملة (تابع)",
+        "goals": [
+          {
+            "number": "04",
+            "title": "Establish Ein Abayaa as the defining mid-premium Saudi abaya brand",
+            "description": "Own the SAR 300-795 gap between value players and luxury through storytelling and social proof"
+          },
+          {
+            "number": "05",
+            "title": "Capture Sofarah's orphaned customer base",
+            "description": "Branded search + social retargeting — their Shopify store is offline, customers need a new home"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-008a",
+      "section": "objectives",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Measurable Objectives",
+        "title_ar": "الأهداف القابلة للقياس",
+        "note": "Numbers will be updated after strategy approval with exact KPIs from Zid store baseline data.",
+        "objectives": [
+          {
+            "number": "01",
+            "title": "Achieve 2.5% store conversion rate within 60 days of Zid launch (baseline: ~1% industry average)",
+            "metric": "Conversion Rate",
+            "target": "2.5% within 60 days (baseline: ~1%)"
+          },
+          {
+            "number": "02",
+            "title": "Build email + WhatsApp list to 3,000 subscribers by Day 90 via style quiz HVCO",
+            "metric": "List Size",
+            "target": "3,000 combined by Day 90 (from zero)"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-008b",
+      "section": "objectives",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Measurable Objectives (continued)",
+        "title_ar": "الأهداف القابلة للقياس (تابع)",
+        "objectives": [
+          {
+            "number": "03",
+            "title": "Reach 4x blended ROAS on paid media by Month 3 (Meta + Google combined)",
+            "metric": "Return on Ad Spend",
+            "target": "4x blended ROAS by Month 3 (Meta + Google)"
+          },
+          {
+            "number": "04",
+            "title": "Recover 15% of abandoned carts via WhatsApp automation within 30 days of flow launch",
+            "metric": "Cart Recovery Rate",
+            "target": "15% recovery within 30 days of flow launch"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-009",
+      "section": "environmental_scanning_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "ENVIRONMENTAL SCANNING",
+        "title_ar": "المسح البيئي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-environment.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract data visualization patterns, navy blue (#001a70) background with gold (#cc9f53) geometric lines suggesting market charts and growth trends, modern minimal design, 1920x1080"
+    },
+    {
+      "id": "slide-010a",
+      "section": "environmental_scanning",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "A Massive Market, Accelerating",
+        "stat": "USD 31.29B",
+        "label": "Saudi e-commerce market size in 2026",
+        "sublabel": "Growing at 11.92% CAGR through 2031",
+        "source": "GlobeNewsWire / Research & Markets, January 2026",
+        "context": "Fashion is a primary B2C growth driver. Online sales expected to exceed SAR 100 billion in 2026.",
+        "background_image": "./assets/generated/market-data-ksa.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010b",
+      "section": "environmental_scanning",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Saudi Modest Fashion Market",
+        "title_ar": "سوق الأزياء المحتشمة في السعودية",
+        "bullets": [
+          {
+            "text": "3rd globally in modest fashion consumption at USD 18B",
+            "source": "Rawshot.ai"
+          },
+          {
+            "text": "Women's apparel: USD 13.5B, projected USD 20B by 2034",
+            "source": "IMARC Group"
+          },
+          {
+            "text": "74.6% of e-commerce buyers are female",
+            "source": "TechSci Research"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010c",
+      "section": "environmental_scanning",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "BNPL Is Standard, Not Optional",
+        "stat": "77%",
+        "label": "of Saudi consumers have used Buy Now Pay Later",
+        "sublabel": "BNPL increases AOV by 35%+ and conversion rates by 20-30%",
+        "source": "Tabby/RVC Report 2024 / Mordor Intelligence"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010d",
+      "section": "environmental_scanning",
+      "layout": "title-body",
+      "content": {
+        "title": "BNPL: Ein Abayaa's Quick Win",
+        "title_ar": "التقسيط: فرصة سريعة لعين عباية",
+        "headline": "Tabby + Tamara are active — but per-installment amounts are NOT shown on product pages",
+        "bullets": [
+          "At Maison Ein prices (SAR 514-795), showing '4 payments of SAR 128.50' converts impulse to purchase",
+          "Sadal does this best-in-class — prominently displayed on every product page",
+          "Must be implemented before Zid store launch"
+        ],
+        "split_image": "zid-product-01.webp"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-010e",
+      "section": "environmental_scanning",
+      "layout": "title-bullets",
+      "content": {
+        "title": "The 90-Day Window",
+        "title_ar": "نافذة الـ 90 يوم",
+        "bullets": [
+          {
+            "text": "Google search for 'abaya' surges 45% during Ramadan/Eid",
+            "source": "Google/Visa Research"
+          },
+          {
+            "text": "Summer Shade 2026 launches ~April 10, aligned with Eid al-Fitr",
+            "source": "Saudi State of Fashion Report"
+          },
+          {
+            "text": "Mobile commerce accounts for 75%+ of sales during peak periods",
+            "source": "LinkedIn Industry Analysis"
+          }
+        ],
+        "timeline": [
+          {
+            "period": "Weeks 1-2 (Late March)",
+            "action": "Zid store CRO + automation setup"
+          },
+          {
+            "period": "Weeks 3-4 (Early April)",
+            "action": "Summer Shade launch + Eid peak"
+          },
+          {
+            "period": "Weeks 5-8 (May)",
+            "action": "Post-Eid retargeting + reviews + list growth"
+          },
+          {
+            "period": "Weeks 9-12 (June)",
+            "action": "Summer wedding push + Maison Ein focus"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-011",
+      "section": "digital_scanning_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "DIGITAL SCANNING",
+        "title_ar": "المسح الرقمي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-environment.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract digital network patterns and social media iconography, navy blue (#001a70) background with gold (#cc9f53) connected nodes and data flow lines, modern tech aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-012a",
+      "section": "digital_analysis",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "Mobile-First Is Non-Negotiable",
+        "stat": "75%+",
+        "label": "of online sales happen on mobile in Saudi Arabia",
+        "sublabel": "34.17M social media users (91.74% of population) spending 3h 6m daily",
+        "source": "Statista / Sprinklr / LinkedIn Industry Analysis"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-012b",
+      "section": "digital_analysis",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Platform Priority",
+        "title_ar": "أولوية المنصات",
+        "platform_data": [
+          {
+            "platform": "Instagram",
+            "key_insight": "16.3M users, 43% female, primary fashion discovery",
+            "relevance": "PRIMARY — full funnel"
+          },
+          {
+            "platform": "WhatsApp",
+            "key_insight": "40M+ users, 98% open rate, 25% cart recovery",
+            "relevance": "CRITICAL — retention"
+          },
+          {
+            "platform": "TikTok",
+            "key_insight": "49% YoY engagement surge, lower CPM ($4.80-9.16)",
+            "relevance": "SECONDARY — UGC, viral reach"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-013",
+      "section": "competitors_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "COMPETITORS ANALYSIS",
+        "title_ar": "تحليل المنافسين",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-competitors.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract competitive landscape visualization with navy blue (#001a70) background, gold (#cc9f53) chess piece silhouettes or strategic positioning grid, modern business aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-014a",
+      "section": "competitor_profiles",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Sadal — The Value Leader",
+        "competitor_name": "Sadal (sadal-ksa.com)",
+        "competitor_url": "sadal-ksa.com",
+        "price_range": "SAR 149 – 329",
+        "screenshot": "sadal-homepage.jpg",
+        "bullets": [
+          "Positioning: Volume Saudi abaya retailer on Salla with aggressive discount pricing",
+          "Key strength: 82+ reviews per product + BNPL prominently displayed with exact installment amounts",
+          "Key weakness: Perpetual discounting, no brand identity — products are numbered (Abaya-16)"
+        ],
+        "threat_level": "MEDIUM-HIGH — wins on reviews and price",
+        "ad_status": "Multiple active Meta ads since Aug 2024"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014b",
+      "section": "competitor_profiles",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Laftah — The Retail Giant",
+        "competitor_name": "Laftah (laftah.com)",
+        "competitor_url": "laftah.com",
+        "price_range": "SAR ~150 – 400",
+        "screenshot": "laftah-homepage.jpg",
+        "bullets": [
+          "Positioning: Mass-market brand with 13+ physical stores across 8 cities",
+          "Key strength: Physical stores give touch-and-try trust advantage + breakout Google search volume",
+          "Key weakness: Poor digital experience — image-only catalog, bad SEO, no brand story"
+        ],
+        "threat_level": "LOW — different tier, but Google search growth is notable",
+        "ad_status": "2 seasonal Ramadan ads (inactive)"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014c",
+      "section": "competitor_profiles",
+      "layout": "title-bullets",
+      "content": {
+        "title": "OYA Abaya — The Platform Peer",
+        "competitor_name": "OYA Abaya (oyaabaya.com)",
+        "competitor_url": "oyaabaya.com",
+        "price_range": "SAR ~150 – 500",
+        "screenshot": "oyaabaya-homepage.jpg",
+        "bullets": [
+          "Positioning: Mid-range Saudi brand on Zid (same platform as Ein Abayaa's target)",
+          "Key strength: Loyalty program + before/after interactive slider + claims 10K+ customers",
+          "Key weakness: Generic Zid template, cluttered homepage, scattered into accessories"
+        ],
+        "threat_level": "MEDIUM — similar price range, weaker brand identity",
+        "ad_status": "No ads detected"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014d",
+      "section": "competitor_profiles",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Lagate — The Designer Competitor",
+        "competitor_name": "Lagate (lagatesa.com)",
+        "competitor_url": "lagatesa.com",
+        "price_range": "SAR ~350 – 800+",
+        "screenshot": "lagate-homepage.jpg",
+        "bullets": [
+          "Positioning: Premium/luxury Saudi abaya house with designer Maryam Alsaqqaf",
+          "Key strength: Strong storytelling tied to Saudi geography + bilingual execution + BNPL prominent",
+          "Key weakness: No visible reviews, limited product count, outdated collection naming"
+        ],
+        "threat_level": "MEDIUM — Maison Ein competes directly with this price range",
+        "ad_status": "No ads detected"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014e",
+      "section": "competitor_profiles",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "Zero Storytelling in 590+ Ads",
+        "stat": "590+",
+        "label": "active Meta abaya ads scanned in KSA",
+        "sublabel": "Zero use brand storytelling. Zero use UGC. Zero run retargeting creative.",
+        "context": "Yet Ein Abayaa already runs 14 bilingual story-driven ads — more sophisticated than any competitor."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014f",
+      "section": "competitor_profiles",
+      "layout": "title-body",
+      "content": {
+        "title": "Sofarah — The Acquisition Opportunity",
+        "competitor_name": "Sofarah (sofarah.com)",
+        "headline": "Store completely offline — customer base actively seeking alternatives",
+        "bullets": [
+          "Shopify store deactivated as of March 2026",
+          "Former social media following is orphaned",
+          "Time-limited window to capture before customers settle on a new brand"
+        ],
+        "opportunity": "Run Google Ads on 'sofarah' brand terms + social retargeting to former followers",
+        "threat_level": "NONE — pure acquisition opportunity",
+        "ad_status": "Store offline — no ads",
+        "competitor_url": "sofarah.com"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014g",
+      "section": "competitor_profiles",
+      "layout": "stat-highlight",
+      "content": {
+        "title": "An Uncontested Search Channel",
+        "stat": "0",
+        "label": "Google Ads running among Saudi abaya competitors",
+        "sublabel": "No competitor runs Google Search or Shopping Ads — yet search for 'abaya' surges 45% during Eid",
+        "context": "A wide-open channel. Ein Abayaa can capture high-intent buyers with zero competition on search."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-014h",
+      "section": "competitor_profiles",
+      "layout": "title-body",
+      "content": {
+        "title": "Luxury Tier Reference",
+        "body": "Two luxury brands provide positioning reference points for Maison Ein:",
+        "brands": [
+          {
+            "name": "Daphne Haute Couture",
+            "detail": "SAR 950-3,500 — 42 products, feminine Arabic names, no BNPL, no reviews",
+            "competitor_url": "daphnehautecouture.com",
+            "ad_status": "No ads detected"
+          },
+          {
+            "name": "Harlienz (Qatar)",
+            "detail": "QAR 1,900-3,500 — Harper's Bazaar featured, real scarcity, no BNPL, no reviews",
+            "competitor_url": "harlienz.com",
+            "ad_status": "No ads in KSA (Qatar-focused)"
+          }
+        ],
+        "key_insight": "Neither luxury brand offers BNPL. Maison Ein at SAR 514-795 with BNPL captures the aspirational buyer who wants luxury aesthetics with payment flexibility.",
+        "screenshot": "daphne-homepage.jpg",
+        "split_image": "harlienz-homepage.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-015",
+      "section": "pricing_comparison",
+      "layout": "comparison-table",
+      "content": {
+        "title": "Pricing Comparison",
+        "title_ar": "مقارنة الأسعار",
+        "columns": [
+          "Brand",
+          "Entry-Level",
+          "Mid-Range",
+          "Premium",
+          "BNPL",
+          "Reviews"
+        ],
+        "rows": [
+          {
+            "brand": "Sadal",
+            "entry": "149 SAR",
+            "mid": "213 SAR",
+            "premium": "329 SAR",
+            "bnpl": "YES (prominent)",
+            "reviews": "82+ per product"
+          },
+          {
+            "brand": "Laftah",
+            "entry": "~150 SAR",
+            "mid": "~250 SAR",
+            "premium": "~400 SAR",
+            "bnpl": "YES",
+            "reviews": "Testimonials"
+          },
+          {
+            "brand": "OYA Abaya",
+            "entry": "~150 SAR",
+            "mid": "~300 SAR",
+            "premium": "~500 SAR",
+            "bnpl": "Unknown",
+            "reviews": "5-star display"
+          },
+          {
+            "brand": "Ein Abayaa (Core/AZAL)",
+            "entry": "300 SAR",
+            "mid": "400 SAR",
+            "premium": "515 SAR",
+            "bnpl": "YES (active)",
+            "reviews": "NONE"
+          },
+          {
+            "brand": "Ein Abayaa (Maison Ein)",
+            "entry": "514 SAR",
+            "mid": "650 SAR",
+            "premium": "795 SAR",
+            "bnpl": "YES (active)",
+            "reviews": "NONE"
+          },
+          {
+            "brand": "Lagate",
+            "entry": "~350 SAR",
+            "mid": "~500 SAR",
+            "premium": "~800+ SAR",
+            "bnpl": "YES (prominent)",
+            "reviews": "NONE"
+          }
+        ],
+        "highlight_row": "Ein Abayaa",
+        "insight": "The ONLY competitor with 300-795 SAR range, dual-tier architecture, AND BNPL."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-016a",
+      "section": "unique_advantages",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Ein Abayaa's Unique Advantages",
+        "title_ar": "المميزات الفريدة لعين عباية",
+        "advantages": [
+          {
+            "title": "Dual-Tier Brand Architecture",
+            "description": "AZAL for everyday (SAR 300-515), Maison Ein for occasions (SAR 514-795) — no competitor offers this"
+          },
+          {
+            "title": "Under-Abaya Dress Category",
+            "description": "SAR 350-450 dresses with zero competitive pressure — a natural cross-sell and AOV driver"
+          },
+          {
+            "title": "Collection Storytelling DNA",
+            "description": "Summer Shade 2026: 17-page design brief, shell-inspired language, 10 colors, 3 design families"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-016b",
+      "section": "unique_advantages",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Ein Abayaa's Unique Advantages (continued)",
+        "title_ar": "المميزات الفريدة (تابع)",
+        "advantages": [
+          {
+            "title": "Proven Viral Capability",
+            "description": "1.1M TikTok views on customer try-on + 34.5K views on Instagram Reels — content format validated"
+          },
+          {
+            "title": "Already-Sophisticated Ad Creative",
+            "description": "14 active Meta ads with bilingual storytelling — more advanced than any of 590+ competitor ads"
+          },
+          {
+            "title": "Premium Brand Identity",
+            "description": "Two distinct aesthetics (red theatrical + white editorial) + 31.8K followers validate positioning"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-017a",
+      "section": "common_concerns",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Customer Concerns & Solutions",
+        "title_ar": "المخاوف الشائعة وحلولها",
+        "concerns": [
+          {
+            "concern_ar": "ما أدري إذا المقاس بيناسبني",
+            "concern_en": "I don't know if the size will fit",
+            "response": "Size guide videos, body-shape quiz, free returns, customer try-on UGC"
+          },
+          {
+            "concern_ar": "القماش يبان حلو بالصورة بس واقعياً؟",
+            "concern_en": "Fabric looks nice in photos but in reality?",
+            "response": "Fabric close-up Reels, care instruction cards, customer unboxing content"
+          },
+          {
+            "concern_ar": "غالية شوي",
+            "concern_en": "A bit expensive",
+            "response": "BNPL per-installment display ('4 payments of SAR 128.50'), quality education content"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-017b",
+      "section": "common_concerns",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Customer Concerns & Solutions (continued)",
+        "title_ar": "المخاوف الشائعة وحلولها (تابع)",
+        "concerns": [
+          {
+            "concern_ar": "ما أعرف هالماركة",
+            "concern_en": "I don't know this brand",
+            "response": "Customer reviews, UGC social proof, 31.8K follower badge, collection story content"
+          },
+          {
+            "concern_ar": "وش إذا ما ناسبني وما يرجعون فلوسي",
+            "concern_en": "What if they won't refund me?",
+            "response": "Prominent return policy on product pages and ad copy, trust badge at checkout"
+          },
+          {
+            "concern_ar": "ليش أغلى من سدل؟",
+            "concern_en": "Why more expensive than Sadal?",
+            "response": "Premium fabric education, named collections vs numbered products, design heritage narrative"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-018",
+      "section": "market_gaps",
+      "layout": "grid-3",
+      "content": {
+        "title": "Market Gaps",
+        "title_ar": "الفجوات في السوق",
+        "gaps": [
+          {
+            "title": "Story-Driven Paid Media",
+            "description": "Zero of 590+ ads use brand narrative"
+          },
+          {
+            "title": "UGC-to-Paid Pipeline",
+            "description": "No competitor uses UGC in paid ads"
+          },
+          {
+            "title": "Mid-Premium Brand Void",
+            "description": "No dominant brand in SAR 300-795"
+          },
+          {
+            "title": "Review & Proof Deficit",
+            "description": "Only Sadal invests in reviews"
+          },
+          {
+            "title": "WhatsApp/Email Automation",
+            "description": "Zero retention marketing exists"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-019",
+      "section": "market_opportunities",
+      "layout": "grid-3",
+      "content": {
+        "title": "Market Opportunities",
+        "title_ar": "الفرص في السوق",
+        "opportunities": [
+          {
+            "title": "Story-Driven Paid Creative",
+            "description": "Dominate with brand-story ads no competitor runs"
+          },
+          {
+            "title": "Systematic UGC Program",
+            "description": "Deploy customer try-on as paid creative"
+          },
+          {
+            "title": "Own the Mid-Premium Tier",
+            "description": "Premium positioning + DR infrastructure"
+          },
+          {
+            "title": "Capture Sofarah Audience",
+            "description": "Branded search + social retargeting"
+          },
+          {
+            "title": "Category-Best Retention",
+            "description": "WhatsApp 98% + email 30x RPR automation"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-020",
+      "section": "persona_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "PERSONA BASED ON NEEDS",
+        "title_ar": "الشخصيات بناءً على الاحتياجات",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-persona.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, three elegant feminine silhouettes suggesting different personalities and styles, navy blue (#001a70) background with gold (#cc9f53) accent elements, modern illustration style, Arabic calligraphy texture overlay at 10% opacity, 1920x1080"
+    },
+    {
+      "id": "slide-021a",
+      "section": "persona_profiles",
+      "layout": "persona",
+      "content": {
+        "name": "Noura — The Professional",
+        "name_ar": "نورة — المهنية",
+        "role": "Core Customer (AZAL / Ein Abayaa Core buyer)",
+        "avatar_description": "Saudi professional woman, 28-35, confident, modern office attire",
+        "avatar_url": "./assets/generated/persona-noura.jpg",
+        "demographics": {
+          "age": "28-35",
+          "location": "Riyadh or Jeddah",
+          "income": "SAR 12,000-20,000/month",
+          "occupation": "Corporate professional or entrepreneur"
+        },
+        "goals": [
+          "Abaya that transitions from office to evening",
+          "Premium quality without luxury pricing",
+          "A Saudi brand matching her taste"
+        ],
+        "pain_points": [
+          "All abayas look the same — wants to feel distinctive",
+          "Sizing uncertainty buying online",
+          "Refuses to compromise on quality"
+        ],
+        "budget": "SAR 300-500 per abaya",
+        "channels": "Instagram for discovery, website for purchase, WhatsApp for questions",
+        "language_ar": "أبي عباية تناسب الدوام والمناسبات",
+        "objection_ar": "ليش أغلى من سدل؟",
+        "journey_stages": [
+          "Discovers via Instagram Reel during commute",
+          "Saves post, visits store 2-3 times over a week",
+          "Converts when she sees BNPL installment amount",
+          "Shares purchase on Stories, becomes organic advocate"
+        ],
+        "key_insight": "She needs 3 touchpoints before buying. Retargeting is essential — don't expect first-visit conversion."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional portrait illustration of a Saudi professional woman, 28-35 years old, confident and modern, wearing a stylish contemporary abaya in muted tones, office/corporate setting background, warm lighting, professional corporate presentation style, navy blue (#001a70) and warm beige (#DCC0AE) color palette, 800x600"
+    },
+    {
+      "id": "slide-021b",
+      "section": "persona_profiles",
+      "layout": "persona",
+      "content": {
+        "name": "Lama — The Elevated Buyer",
+        "name_ar": "لمى — المشترية المميزة",
+        "role": "Maison Ein Customer (premium buyer)",
+        "avatar_description": "Saudi business owner or senior executive, 32-45, elegant, luxury lifestyle",
+        "avatar_url": "./assets/generated/persona-lama.jpg",
+        "demographics": {
+          "age": "32-45",
+          "location": "Riyadh (Al Nakheel, Hittin) or Jeddah (Al Rawdah)",
+          "income": "SAR 25,000+/month",
+          "occupation": "Business owner or senior executive"
+        },
+        "goals": [
+          "Exclusive, limited pieces she will not see on others",
+          "Premium experience from discovery to unboxing",
+          "A brand with heritage and design credibility"
+        ],
+        "pain_points": [
+          "No Saudi brand between mass-market and international couture",
+          "Wants prestige without Daphne/Harlienz prices",
+          "Needs confidence in online fabric accuracy"
+        ],
+        "budget": "SAR 500-800+ per abaya/dress",
+        "channels": "Instagram Stories, WhatsApp for direct inquiries, pop-up events",
+        "language_ar": "أبي قطعة مميزة ما تتكرر",
+        "objection_ar": "وش الفرق بينها وبين دافني؟",
+        "journey_stages": [
+          "Receives WhatsApp VIP early access alert",
+          "Direct messages to ask about fabric and sizing"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional portrait illustration of an elegant Saudi woman, 32-45 years old, sophisticated luxury lifestyle, wearing a premium occasion abaya in deep plum or burgundy tones, upscale interior setting with warm lighting, professional corporate presentation style, navy blue (#001a70) and gold (#cc9f53) color palette, 800x600"
+    },
+    {
+      "id": "slide-021c",
+      "section": "persona_profiles",
+      "layout": "persona",
+      "content": {
+        "name": "Danah — The Gen Z Trend Seeker",
+        "name_ar": "دانة — الباحثة عن الترند",
+        "role": "Emerging Customer (BNPL-dependent, TikTok-discovered)",
+        "avatar_description": "Saudi university student or early-career professional, 19-26, trend-aware, social-media-native",
+        "avatar_url": "./assets/generated/persona-danah.jpg",
+        "demographics": {
+          "age": "19-26",
+          "location": "Any major Saudi city",
+          "income": "SAR 5,000-10,000/month",
+          "occupation": "University student or early-career"
+        },
+        "goals": [
+          "Trending, social-media-worthy abayas for TikTok",
+          "A brand she is proud to tag and share",
+          "Staying current with collection drops"
+        ],
+        "pain_points": [
+          "Price-conscious but does not want budget brands",
+          "Overwhelmed by TikTok choices",
+          "Needs social proof to feel confident"
+        ],
+        "budget": "SAR 300-450 per abaya (with BNPL)",
+        "channels": "TikTok for discovery, Instagram for browsing, Tabby for payment",
+        "language_ar": "شفتها على تيك توك وأبيها",
+        "objection_ar": "فيه كود خصم؟",
+        "journey_stages": [
+          "Sees TikTok try-on video, screenshots to friends group chat",
+          "Visits store via link in bio, checks if discount code exists",
+          "Returns with BNPL option after friends validate the brand",
+          "Posts her own try-on video, seeking social validation"
+        ],
+        "key_insight": "Social validation drives her purchase. UGC + discount code + BNPL is her formula."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional portrait illustration of a young Saudi woman, 19-26 years old, trendy and social-media-savvy, wearing a modern casual abaya in soft pink or sage tones, university or lifestyle setting, bright natural lighting, professional corporate presentation style, navy blue (#001a70) and teal (#0B9891) color palette, 800x600"
+    },
+    {
+      "id": "slide-022",
+      "section": "campaign_strategy_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "CAMPAIGN STRATEGY",
+        "title_ar": "استراتيجية الحملة",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-campaign.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract funnel and campaign flow visualization, navy blue (#001a70) background with gold (#cc9f53) flowing lines suggesting customer journey paths, modern marketing aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-023a",
+      "section": "analysis_findings",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Key Strategic Findings",
+        "title_ar": "النتائج الاستراتيجية الرئيسية",
+        "findings": [
+          {
+            "number": "01",
+            "finding": "The paid landscape is a blue ocean for differentiation",
+            "detail": "590+ identical product-catalog ads — systematic UGC and retargeting would create category leadership"
+          },
+          {
+            "number": "02",
+            "finding": "Retention marketing is the highest-leverage investment",
+            "detail": "WhatsApp 98% open rate + 25% cart recovery. Email 30x flow RPR. No competitor has built this."
+          },
+          {
+            "number": "03",
+            "finding": "BNPL prominence is a proven conversion multiplier",
+            "detail": "77% adoption. AOV +35%. Conversion +20-30%. Display installment amounts on every page."
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-023b",
+      "section": "analysis_findings",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Key Strategic Findings (continued)",
+        "title_ar": "النتائج الاستراتيجية (تابع)",
+        "findings": [
+          {
+            "number": "04",
+            "finding": "Customer reviews are the conversion currency Ein Abayaa lacks",
+            "detail": "Sadal's 82+ reviews vs Ein Abayaa's zero — post-purchase review engine is the most critical trust inv..."
+          },
+          {
+            "number": "05",
+            "finding": "Summer Shade 2026 launch timing is optimal",
+            "detail": "April 10 aligns with Eid al-Fitr + 45% search surge + summer wedding season ramp"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-024a",
+      "section": "channels",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Primary Channels (60-70% of effort)",
+        "title_ar": "القنوات الأساسية",
+        "channels": [
+          {
+            "name": "Instagram (Reels + Stories + Feed)",
+            "rationale": "50-60% of Saudi women use IG for fashion. Reels deliver 2.25x reach.",
+            "kpis": "CTR >2.5%, CPM <SAR 15, Engagement >3%"
+          },
+          {
+            "name": "WhatsApp Business",
+            "rationale": "98% open rate. 25% cart recovery. Essential for premium fashion.",
+            "kpis": "Cart recovery >15%, Open rate >90%"
+          },
+          {
+            "name": "Email Automation",
+            "rationale": "Flows generate 30x higher RPR. Email drives 33.7% of store revenue for top brands.",
+            "kpis": "Open rate >40%, Revenue attribution >20%"
+          }
+        ],
+        "budget_note": "Recommended: 60% of budget (~SAR 4,800/mo at SAR 8K total). Instagram/Meta 35% (SAR 2,800), Email/Klaviyo 15% (SAR 1,200), WhatsApp 10% (SAR 800)."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-024b",
+      "section": "channels",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Secondary & Test Channels (30-40%)",
+        "title_ar": "القنوات الثانوية والتجريبية",
+        "channels": [
+          {
+            "name": "TikTok",
+            "rationale": "Lower CPM ($4.80-9.16 vs Meta $14.20). 1.1M-view proof point.",
+            "kpis": "CPM <SAR 20, Engagement >3.5%"
+          },
+          {
+            "name": "Google Search/Shopping",
+            "rationale": "45% search surge during Eid. Sofarah brand term capture.",
+            "kpis": "CPC <SAR 3, ROAS >5x"
+          },
+          {
+            "name": "Micro/Nano Influencers",
+            "rationale": "10.3% nano-tier engagement. $5.78 ROI per $1 spent.",
+            "kpis": "Engagement >5%, 10+ UGC pieces/quarter"
+          }
+        ],
+        "test_channels": [
+          {
+            "name": "Snapchat",
+            "rationale": "22-25M users in KSA — test AR abaya try-on for Summer Shade"
+          },
+          {
+            "name": "SMS",
+            "rationale": "Complement WhatsApp for flash sales and transactional messages"
+          }
+        ],
+        "budget_note": "Secondary 30% (~SAR 2,400): TikTok 15% (SAR 1,200), Google Shopping 10% (SAR 800), Influencers 5% (SAR 400). Test 10% (~SAR 800): Snapchat AR + SMS."
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-025",
+      "section": "dr_funnel_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "DIRECT RESPONSE FUNNEL",
+        "title_ar": "قمع الاستجابة المباشرة",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-funnel.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract funnel visualization flowing from wide to narrow, navy blue (#001a70) background with gold (#cc9f53) funnel stages and retargeting loop arrows, modern marketing diagram aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-026a",
+      "section": "funnel_design",
+      "layout": "funnel",
+      "content": {
+        "title": "5-Stage Fashion E-Commerce Funnel",
+        "title_ar": "قمع التجارة الإلكترونية ذو الخمس مراحل",
+        "stages_summary": [
+          {
+            "number": 1,
+            "name": "Discovery",
+            "name_ar": "الاكتشاف",
+            "channels": "IG Reels · TikTok · Influencers",
+            "objective": "Reach & awareness"
+          },
+          {
+            "number": 2,
+            "name": "Consideration",
+            "name_ar": "الاهتمام",
+            "channels": "Retargeting · Google · Email",
+            "objective": "Website visits & opt-ins"
+          },
+          {
+            "number": 3,
+            "name": "Conversion",
+            "name_ar": "التحويل",
+            "channels": "Meta Advantage+ · WhatsApp",
+            "objective": "Purchase"
+          },
+          {
+            "number": 4,
+            "name": "Post-Purchase",
+            "name_ar": "ما بعد الشراء",
+            "channels": "Email · WhatsApp nurture",
+            "objective": "Reviews & repeat"
+          },
+          {
+            "number": 5,
+            "name": "Retention",
+            "name_ar": "الاحتفاظ",
+            "channels": "VIP flow · Early access · Referral",
+            "objective": "LTV & advocacy"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-026b",
+      "section": "funnel_design",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Funnel Stage Details",
+        "title_ar": "تفاصيل مراحل القمع",
+        "stages": [
+          {
+            "name": "Stage 1 — Discovery (Cold)",
+            "creative": "Brand-story video, collection reveal, UGC try-on",
+            "kpis": "CPM <SAR 15, CTR >2.5%, Video views >25%",
+            "kpi": "CPM < SAR 15 · CTR > 2.5% · Video views > 25%"
+          },
+          {
+            "name": "Stage 2 — Consideration (Warm)",
+            "creative": "Fabric close-ups, size guides, quiz, testimonials",
+            "kpis": "CPC <SAR 3, Email opt-in >12%",
+            "kpi": "CPC < SAR 3 · Landing CVR > 5% · Email opt-in > 12%"
+          },
+          {
+            "name": "Stage 3 — Conversion (Hot)",
+            "creative": "Dynamic ads with BNPL, urgency, social proof",
+            "kpis": "ROAS >4x, CVR >2.5%, Cart recovery >15%"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-026c",
+      "section": "funnel_design",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Post-Purchase & Retention Stages",
+        "title_ar": "مراحل ما بعد الشراء والاحتفاظ",
+        "stages": [
+          {
+            "name": "Stage 4 — Post-Purchase",
+            "creative": "Brand story, care tips, review request (day 7), cross-sell",
+            "kpi": "Review rate > 10% · Repeat in 90 days > 15%"
+          },
+          {
+            "name": "Stage 5 — Retention & Advocacy",
+            "creative": "Early access, pop-up invites, birthday & referral",
+            "kpi": "VIP repeat > 30% · Referral > 5% · LTV growth > 20%"
+          }
+        ],
+        "retargeting_loops": [
+          "Stage 1 non-engagers → new creative hooks",
+          "Stage 2 visitors → BNPL + urgency retargeting",
+          "Stage 3 cart abandoners → WhatsApp 1hr → Email 12hr → WhatsApp 24hr",
+          "Stage 4 one-time buyers (60+ days) → win-back offer"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-027",
+      "section": "hvco",
+      "layout": "title-body",
+      "content": {
+        "title": "HVCO: 'Find Your Abaya Style' Quiz",
+        "title_ar": "كويز اكتشفي ستايلك",
+        "hook_ar": "اكتشفي ستايل العباية المثالي لك في 60 ثانية",
+        "hook_en": "Find your perfect abaya style in 60 seconds",
+        "bullets": [
+          "5-7 questions: occasion, color palette, style, budget, fabric preference",
+          "Results segment into AZAL, Core, or Maison Ein recommendations with direct add-to-cart",
+          "Email/WhatsApp opt-in required to see results — captures lead + preference data"
+        ],
+        "implementation": "Octane AI, Typeform, or custom Zid integration",
+        "split_image": "zid-product-03.webp"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-028a",
+      "section": "landing_pages",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Landing Page: Style Quiz",
+        "title_ar": "صفحة الكويز",
+        "page": {
+          "headline_ar": "اكتشفي ستايل العباية المثالي لك",
+          "headline_en": "Find Your Perfect Abaya Style",
+          "hook": "مصممة خصيصاً لك — ٥ أسئلة فقط",
+          "cta_ar": "ابدئي الكويز الحين",
+          "elements": [
+            "Progress bar (step 1 of 5)",
+            "Visual answer options with images",
+            "Email/WhatsApp gate before results",
+            "Personalized product recommendations with add-to-cart"
+          ]
+        }
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-028b",
+      "section": "landing_pages",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Landing Page: Summer Shade 2026",
+        "title_ar": "صفحة مجموعة ظل الصيف",
+        "page": {
+          "headline_ar": "ظل الصيف ٢٠٢٦ — مستوحاة من هدوء الصيف حين يلين الضوء",
+          "headline_en": "Summer Shade 2026 — When light softens",
+          "cta_ar": "اكتشفي المجموعة",
+          "elements": [
+            "Video hero with collection concept",
+            "Shell Tones palette visual",
+            "3 design family sections (Periwinkle, Auger, Cowrie)",
+            "BNPL per-installment messaging"
+          ]
+        }
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-029a",
+      "section": "ad_copy",
+      "layout": "ad-copy",
+      "content": {
+        "title": "Ad 1 — Collection Story (Prospecting)",
+        "ad_number": 1,
+        "persona_target": "All personas — brand awareness",
+        "platform": "Instagram Reels / TikTok",
+        "hook_ar": "خيوط تُنسج بالأصالة... مجموعة صيف الظل ٢٠٢٦\nألوان مستوحاة من الأصداف البحرية\n١٠ درجات لونية، ٣ تصاميم فريدة",
+        "hook_en": "Threads woven with authenticity... Summer Shade 2026\nShell-inspired palette, 10 tones, 3 unique silhouettes",
+        "cta": "تسوقي المجموعة الآن"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-029b",
+      "section": "ad_copy",
+      "layout": "ad-copy",
+      "content": {
+        "title": "Ad 2 — UGC Style (Prospecting)",
+        "ad_number": 2,
+        "persona_target": "Danah + Noura",
+        "platform": "TikTok / Instagram Reels",
+        "hook_ar": "شفتيها على تيك توك؟\nأكثر من مليون مشاهدة لفيديو تجربة العباية\nالحين دورك تجربينها",
+        "hook_en": "Saw it on TikTok? 1.1M views on a customer try-on video.\nNow it's your turn to try it.",
+        "cta": "جربيها بنفسك — توصيل مجاني"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-029c",
+      "section": "ad_copy",
+      "layout": "ad-copy",
+      "content": {
+        "title": "Ad 3 — Cart Abandonment (Retargeting)",
+        "ad_number": 3,
+        "persona_target": "All personas — warm audience",
+        "platform": "Instagram Stories / Facebook",
+        "hook_ar": "لسا تفكرين؟\nاللي حطيتيها بالسلة تنتظرك\n٤ دفعات بدون فوائد مع تابي — يعني بس ١٢٨ ريال",
+        "hook_en": "Still thinking? Your cart is waiting.\n4 payments with Tabby — just SAR 128 each.\nFree returns if it's not perfect.",
+        "cta": "أكملي طلبك الحين"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-029d",
+      "section": "ad_copy",
+      "layout": "ad-copy",
+      "content": {
+        "title": "Ad 4 — Maison Ein (Premium)",
+        "ad_number": 4,
+        "persona_target": "Lama (Elevated Buyer)",
+        "platform": "Instagram Feed / Stories",
+        "hook_ar": "دار عين... حيث الأناقة تلتقي التراث\nقطع محدودة، تصاميم لا تتكرر\nمن ٥١٤ ريال",
+        "hook_en": "Maison Ein — Where elegance meets heritage.\nLimited pieces. Designs that don't repeat.\nFrom SAR 514.",
+        "cta": "اكتشفي دار عين"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-029e",
+      "section": "ad_copy",
+      "layout": "ad-copy",
+      "content": {
+        "title": "Ad 5 — Sofarah Capture (Conquest)",
+        "ad_number": 5,
+        "persona_target": "Sofarah's former customers",
+        "platform": "Google Search / Instagram",
+        "hook_ar": "كنتي تتسوقين من سفرة؟\nعندنا بديل أفضل — نفس الأناقة، جودة أعلى\nمجموعة صيف الظل متوفرة الحين",
+        "hook_en": "Used to shop at Sofarah?\nWe have a better alternative — same elegance, higher quality.\nSummer Shade 2026 collection is live.",
+        "cta": "تسوقي الحين",
+        "google_keywords": [
+          "سفره",
+          "sofarah",
+          "بديل سفره",
+          "عبايات زي سفره"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-030a",
+      "section": "email_whatsapp_sequence",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Automation: Welcome + Cart Recovery",
+        "title_ar": "الأتمتة: الترحيب واسترجاع السلة",
+        "flows": [
+          {
+            "name": "Welcome Series",
+            "trigger": "New subscriber (quiz, VIP signup, first visit)",
+            "sequence": [
+              "Immediate — Email: brand story + quiz results + 10% welcome code",
+              "+2 hours — WhatsApp: personal welcome + curated picks",
+              "+2 days — Email: collection story + fabric education"
+            ],
+            "timing": "Immediate → +24hr → +72hr"
+          },
+          {
+            "name": "Abandoned Cart Recovery",
+            "trigger": "Add to cart, no purchase",
+            "sequence": [
+              "+1hr — WhatsApp: product image + cart link + BNPL reminder",
+              "+12hr — Email: cart contents + reviews + BNPL breakdown",
+              "+24hr — WhatsApp: low stock urgency + easy returns"
+            ],
+            "expected_recovery": "15-25%",
+            "timing": "+1hr WhatsApp → +12hr Email → +24hr SMS"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-030b",
+      "section": "email_whatsapp_sequence",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Automation: Post-Purchase + Retention",
+        "title_ar": "الأتمتة: ما بعد الشراء والاحتفاظ",
+        "flows": [
+          {
+            "name": "Post-Purchase Nurture",
+            "trigger": "Order confirmed",
+            "sequence": [
+              "Immediate — Email: order confirmation + brand story + care preview",
+              "+3 days — WhatsApp: shipping update + styling suggestions",
+              "+7 days — Email: review request with incentive (10% off)"
+            ],
+            "timing": "+3 days shipping → +7 days review → +14 days cross-sell"
+          },
+          {
+            "name": "VIP Early Access",
+            "trigger": "2+ purchases or VIP signup",
+            "sequence": [
+              "-24-48hrs — WhatsApp: exclusive first look + pre-order link",
+              "Launch day — Email: full collection reveal + VIP content"
+            ],
+            "timing": "-48hr WhatsApp → Launch day email → +24hr reminder"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-031a",
+      "section": "partnerships",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Influencer Strategy: Micro/Nano-First",
+        "title_ar": "استراتيجية المؤثرين",
+        "headline": "$5.78 ROI per $1 spent — 73% of brands prefer micro/nano influencers",
+        "tiers": [
+          {
+            "tier": "Tier 1: Brand Ambassadors (2-3/quarter)",
+            "detail": "10K-100K followers, SAR 2K-10K/month, monthly Reels + Story takeovers + UGC ad rights"
+          },
+          {
+            "tier": "Tier 2: UGC Creators (5-8/quarter)",
+            "detail": "<10K followers, SAR 500-2K/piece, try-on videos with full paid repurposing rights"
+          },
+          {
+            "tier": "Tier 3: Event Collaborators",
+            "detail": "Premium Saudi lifestyle brands (beauty, wellness) — co-branded pop-ups like Ein x Base & Boon"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-031b",
+      "section": "partnerships",
+      "layout": "title-body",
+      "content": {
+        "title": "UGC Collection Engine",
+        "title_ar": "محرك جمع المحتوى",
+        "headline": "Ein Community — turn every customer into a content creator",
+        "bullets": [
+          "Post-purchase email/WhatsApp asks for try-on videos",
+          "Incentive: 15% off next purchase + feature on @einabayaa",
+          "Best content gets licensed for paid ads"
+        ],
+        "key_insight": "1.1M TikTok views prove the format. No competitor uses UGC in paid creative. Systematic deployment could deliver ROAS above the 5.63x clothing benchmark.",
+        "split_image": "product-06.webp"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-032",
+      "section": "social_media_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "SOCIAL MEDIA STRATEGY",
+        "title_ar": "استراتيجية وسائل التواصل الاجتماعي",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-social.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract social media content grid visualization, navy blue (#001a70) background with gold (#cc9f53) content card layouts and engagement icons, modern digital marketing aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-033a",
+      "section": "content_direction",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Content Pillars",
+        "title_ar": "أعمدة المحتوى",
+        "content_image": "./assets/generated/content-pillars.jpg",
+        "pillars": [
+          {
+            "name": "The Craft (الحِرفة)",
+            "purpose": "Build trust, justify premium pricing",
+            "frequency": "2x/week — IG Feed + Reels, TikTok",
+            "example": "30-sec Reel showing fabric close-up, Arabic voiceover on crepe quality"
+          },
+          {
+            "name": "Style With Ein (ستايلك مع عين)",
+            "purpose": "Drive discovery and engagement",
+            "frequency": "3x/week — IG Reels 50%, TikTok 30%, Stories 20%",
+            "example": "GRWM carousel: office abaya → evening event transition"
+          },
+          {
+            "name": "Ein Community (مجتمع عين)",
+            "purpose": "Build social proof, overcome skepticism",
+            "frequency": "2x/week — TikTok primary, IG Stories + Reels",
+            "example": "Customer try-on repost with 'شكراً حبيبتي' caption"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-033b",
+      "section": "content_direction",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Content Pillars (continued)",
+        "title_ar": "أعمدة المحتوى (تابع)",
+        "pillars": [
+          {
+            "name": "Behind the Abaya (خلف العباية)",
+            "purpose": "Reduce purchase barriers, position as authority",
+            "frequency": "1x/week — IG Reels + Feed Carousels",
+            "example": "TikTok: Why our crepe costs more — side-by-side comparison"
+          },
+          {
+            "name": "Ein Moments (لحظات عين)",
+            "purpose": "Emotional connection, brand positioning",
+            "frequency": "2x/week — IG Feed + Stories",
+            "example": "Lifestyle photo: abaya + coffee + Riyadh skyline"
+          },
+          {
+            "name": "Ein Exclusive (حصرياً من عين)",
+            "purpose": "Drive sales and list growth",
+            "frequency": "1-2x/week — IG Stories + WhatsApp",
+            "example": "Story countdown: Summer Shade drops in 48hrs — VIP early access"
+          }
+        ],
+        "format_split": {
+          "reels": "50% — discovery and reach",
+          "stories": "30% — urgency, direct CTA",
+          "carousels": "20% — education, depth"
+        }
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-033c",
+      "section": "content_direction",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Weekly Content Rhythm",
+        "title_ar": "إيقاع المحتوى الأسبوعي",
+        "weekly_rhythm": [
+          {
+            "day": "Saturday",
+            "content": "The Craft — Behind-the-scenes Reel"
+          },
+          {
+            "day": "Sunday",
+            "content": "Style With Ein — GRWM Reel + Product Story"
+          },
+          {
+            "day": "Monday",
+            "content": "Ein Community — Customer feature repost"
+          },
+          {
+            "day": "Tuesday",
+            "content": "Style With Ein — Outfit carousel + Story poll"
+          },
+          {
+            "day": "Wednesday",
+            "content": "Behind the Abaya — Educational TikTok"
+          },
+          {
+            "day": "Thursday",
+            "content": "Ein Moments — Lifestyle photo + Arabic quote"
+          },
+          {
+            "day": "Friday",
+            "content": "Ein Exclusive — New drop teaser or flash sale Story"
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-034",
+      "section": "measurement_divider",
+      "layout": "section-divider",
+      "content": {
+        "title": "MEASUREMENT & EVALUATION",
+        "title_ar": "القياس والتقييم",
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "background_image": "./assets/generated/section-divider-measurement.jpg"
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate presentation section divider, abstract measurement and analytics visualization with charts and dashboards, navy blue (#001a70) background with gold (#cc9f53) data lines and metric indicators, modern analytics aesthetic, 1920x1080"
+    },
+    {
+      "id": "slide-035a",
+      "section": "campaign_tracking",
+      "layout": "title-bullets",
+      "content": {
+        "title": "KPIs: Website & Paid Media",
+        "title_ar": "مؤشرات الأداء: الموقع والإعلانات",
+        "categories": [
+          {
+            "category": "Website / Store Metrics",
+            "metrics": [
+              {
+                "name": "Sessions & Page Views",
+                "target": "Track weekly growth"
+              },
+              {
+                "name": "Bounce Rate",
+                "target": "< 40%"
+              },
+              {
+                "name": "Pages per Session",
+                "target": "> 2.5"
+              },
+              {
+                "name": "Product Page View Rate",
+                "target": "> 60% of sessions"
+              },
+              {
+                "name": "Cart Abandonment Rate",
+                "target": "Track for recovery"
+              }
+            ]
+          },
+          {
+            "category": "Paid Media Metrics",
+            "metrics": [
+              {
+                "name": "Blended ROAS",
+                "target": "> 4x"
+              },
+              {
+                "name": "CPA",
+                "target": "< SAR 50"
+              },
+              {
+                "name": "CPM by Channel",
+                "target": "Meta < SAR 15, TikTok < SAR 10"
+              },
+              {
+                "name": "CTR by Format",
+                "target": "Reels > 2.5%, Stories > 1.5%"
+              },
+              {
+                "name": "Frequency Cap",
+                "target": "< 3x per week per user"
+              }
+            ]
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-035b",
+      "section": "campaign_tracking",
+      "layout": "title-bullets",
+      "content": {
+        "title": "KPIs: Retention & Social",
+        "title_ar": "مؤشرات الأداء: الاحتفاظ والتواصل",
+        "categories": [
+          {
+            "category": "Retention & Automation",
+            "metrics": [
+              {
+                "name": "Email Open Rate",
+                "target": "> 40%"
+              },
+              {
+                "name": "WhatsApp Open Rate",
+                "target": "> 90%"
+              },
+              {
+                "name": "Cart Recovery Rate",
+                "target": "> 15%"
+              },
+              {
+                "name": "Repeat Purchase Rate",
+                "target": "> 15% within 90 days"
+              },
+              {
+                "name": "Flow Revenue Share",
+                "target": "> 30% of total"
+              }
+            ]
+          },
+          {
+            "category": "Social & Content",
+            "metrics": [
+              {
+                "name": "Follower Growth Rate",
+                "target": "> 5% monthly"
+              },
+              {
+                "name": "Engagement Rate",
+                "target": "> 3%"
+              },
+              {
+                "name": "Reel Reach Rate",
+                "target": "> 25% of followers"
+              },
+              {
+                "name": "UGC Submissions",
+                "target": "> 5 per month"
+              },
+              {
+                "name": "Story Completion Rate",
+                "target": "> 50%"
+              }
+            ]
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-035c",
+      "section": "campaign_tracking",
+      "layout": "title-bullets",
+      "content": {
+        "title": "Reporting Cadence",
+        "title_ar": "جدول التقارير",
+        "cadence": [
+          {
+            "frequency": "Weekly",
+            "scope": "Paid media: ROAS, CPM, CTR, spend pacing. Adjust budgets and creative rotation."
+          },
+          {
+            "frequency": "Monthly",
+            "scope": "Full dashboard: store metrics, list growth, revenue attribution, competitor check."
+          },
+          {
+            "frequency": "Quarterly",
+            "scope": "Strategy review: 90-day performance vs objectives, next-quarter refinement."
+          }
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": false
+    },
+    {
+      "id": "slide-roadmap",
+      "layout": "title-bullets",
+      "section": "S35",
+      "content": {
+        "title": "90-Day Implementation Roadmap",
+        "title_ar": "خارطة الطريق للتنفيذ — 90 يوم",
+        "timeline": [
+          {
+            "period": "Weeks 1-2",
+            "action": "Foundation — Zid store launch, tracking setup (GTM + CAPI), email/WhatsApp welcome flow live, style quiz HVCO published"
+          },
+          {
+            "period": "Weeks 3-4",
+            "action": "Paid Launch — Meta campaign launch (3 ad sets: storytelling, UGC, retargeting), Google Shopping setup, first influencer outreach"
+          },
+          {
+            "period": "Weeks 5-8",
+            "action": "Optimize — A/B test ad creative, activate abandoned cart WhatsApp flow, launch post-purchase nurture sequence, second influencer wave"
+          },
+          {
+            "period": "Weeks 9-12",
+            "action": "Scale — Increase ad budget on winning creatives, TikTok paid launch, loyalty program soft launch, Summer Shade seasonal push"
+          }
+        ],
+        "insight": "Each phase builds on the previous — no paid traffic until the store, tracking, and retention flows are ready to capture it."
+      },
+      "presenter_notes": ""
+    },
+    {
+      "id": "slide-quick-wins",
+      "layout": "title-bullets",
+      "section": "S35",
+      "content": {
+        "title": "Week 1 Quick Wins",
+        "title_ar": "مكاسب سريعة — الأسبوع الأول",
+        "findings": [
+          {
+            "title": "Display BNPL installment amounts on every product page",
+            "detail": "Tabby + Tamara are active but amounts aren't shown. Sadal does this — proven +20-30% conversion lift."
+          },
+          {
+            "title": "Activate WhatsApp abandoned cart recovery",
+            "detail": "98% open rate in KSA. No competitor has this."
+          },
+          {
+            "title": "Run Google Search ads on 'سفره' (Sofarah)",
+            "detail": "Sofarah is offline. Their orphaned customers are searching. Capture them at SAR 1-2 CPC."
+          },
+          {
+            "title": "Post the 1.1M-view TikTok format as a paid ad",
+            "detail": "Customer try-on content already proven viral. Turn it into a paid UGC ad — no competitor does this."
+          }
+        ]
+      },
+      "presenter_notes": ""
+    },
+    {
+      "id": "slide-036",
+      "section": "closing",
+      "layout": "closing",
+      "content": {
+        "title": "THANK YOU...",
+        "subtitle": "For Your Attention",
+        "client_name": "Ein Abayaa — عين عباية",
+        "tagline": "خيوطٌ تُنسج بالأصالة — Threads, Woven with Authenticity",
+        "branding": "@admireworks",
+        "background_image": "./assets/generated/closing-bg.jpg",
+        "contact": {
+          "phone": "(+971) 4295 8666",
+          "email": "hello@admireworks.com",
+          "address": "P.O.Box/36846, DXB, UAE",
+          "website": "admire8.admireworks.com"
+        },
+        "badge": "ADMIRE8 BY ADMIREWORKS",
+        "next_steps": [
+          "Approve strategy and sign off on 90-day roadmap",
+          "Complete Zid store launch with BNPL installment display",
+          "Provide Meta and TikTok Ads Manager access to Admireworks"
+        ]
+      },
+      "presenter_notes": "",
+      "comments": [],
+      "image_needed": true,
+      "image_prompt": "Professional corporate marketing presentation closing slide background, elegant abstract pattern with navy blue (#001a70) and gold (#cc9f53) accents, subtle shell texture overlay, warm and professional atmosphere, clean composition with space for text overlay, 1920x1080"
+    }
+  ]
+}

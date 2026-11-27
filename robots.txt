@@ -1,0 +1,5 @@
+# Crawling is allowed on purpose so search engines can fetch each page and see
+# its noindex tag (meta robots in the page). Blocking crawling here would stop
+# them seeing the noindex and could leave the URLs listed.
+User-agent: *
+Allow: /

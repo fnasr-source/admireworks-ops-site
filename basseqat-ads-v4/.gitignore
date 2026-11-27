@@ -1,0 +1,4 @@
+# Source photos stay out of git (client-owned, heavy); PROVENANCE.jsonl pins them by sha256.
+assets/source/*.jpg
+assets/source/*.webp
+assets/_contact-*.jpg

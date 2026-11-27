@@ -1,0 +1,134 @@
+{
+  "wave": "basseqat-ads-v5",
+  "written": "2026-11-15",
+  "read": "Live text read 15 Nov 2026 (read-only): Meta act_1703447730646133 adcreatives object_story_spec.link_data.message, the headline as Meta renders it (ad preview linkTitle), image from the creative image_url; Google Ads 3469606388 asset_group_asset GAQL on campaign 24003636613. Nothing was changed on either account.",
+  "rules": "File name «بروشور باسقات»; experience «من 2021»; the product is participation in NEW Medjool planting, the Siwi palms are only proof of experience; no AI images; no Dr. Ayman El-Nems or Khaled Nasseredin in any media; no guaranteed-return wording; Egyptian Arabic; no em dash. Section (b) makes only the minimum edits.",
+  "metaFixes": [
+    {
+      "key": "fix-c5",
+      "adName": "EG | C5-v2 infra-checklist",
+      "adId": "52553090806072",
+      "creativeId": "1397353479152161",
+      "adset": "6996599284268",
+      "image": "assets/live/c5-infra-checklist.jpg",
+      "destination": "https://start.basseqat.com/start?v=investor",
+      "before": {
+        "primaryText": "فيه مشاريع بتجمع فلوس علشان تبدأ تجهز. مشكلتها انها ممكن تتأخر بسبب تأخر التمويل، وللأسف ممكن تفشل في بعض الأحيان. باسقات جهزت الأول، وبعدين فتحت باب المشاركة. قبل ما نسأل حد يشارك: الأرض اتخصصت بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي، و٣ آبار عميقة اتحفرت، وشبكة الري اتركبت. وكل ده وراه خبرة زراعية على الأرض عمرها ٦ سنين في زراعة النخيل السيوي والنباتات الطبية والعطرية. الترتيب ده مش تفصيلة صغيرة. ده الفرق بين إنك تستنى وعود، وبين إنك تشوف حاجة موجودة قدامك. كل بند من دول ليه توثيق تقدر تطلبه وتراجعه. حمّل دليل باسقات من هنا وشوف البنية التحتية بالتفصيل، أو ابدأ محادثة واسألنا",
+        "headline": "باسقات {EMDASH} أصلها ثابت.. ويزيد"
+      },
+      "edits": [
+        ["عمرها ٦ سنين في زراعة النخيل السيوي والنباتات الطبية والعطرية.", "من 2021 في زراعة النخيل السيوي والنباتات الطبية والعطرية، والخبرة دي هي اللي بنزرع بيها النخيل المجدول الجديد اللي بتشارك فيه."],
+        ["حمّل دليل باسقات", "حمّل بروشور باسقات"]
+      ],
+      "headlineEdit": ["باسقات {EMDASH} أصلها ثابت.. ويزيد", "باسقات: أصلها ثابت.. ويزيد"],
+      "why": [
+        "«دليل باسقات» بقى «بروشور باسقات».",
+        "«٦ سنين» بقت «من 2021».",
+        "سطر السيوي بقى يقول إن السيوي هو خبرتنا، وإن اللي بتشارك فيه هو زراعة المجدول الجديدة.",
+        "الشَرطة الطويلة في العنوان بقت نقطتين (:)، زي باقي الإعلانات."
+      ]
+    },
+    {
+      "key": "fix-c7",
+      "adName": "EG | C7 editorial-farafra",
+      "adId": "52553090851872",
+      "creativeId": "1593231779170163",
+      "adset": "6996599284268",
+      "image": "assets/live/c7-editorial-farafra.jpg",
+      "destination": "https://start.basseqat.com/start?v=investor",
+      "before": {
+        "primaryText": "اللقطة دي من فوق أرض باسقات في الفرافرة. اللي بتشوفه مش تصميم ولا رسمة للمستقبل: أرض متخصصة بالأمر المباشر من محافظة الوادي الجديد، وشبكة ري شغالة، وبنية تحتية موجودة فعلا، ووراها خبرة زراعية على الأرض عمرها ٦ سنين. إحنا بننشر لقطات زي دي باستمرار، علشان ده أسهل رد على أي سؤال: المشروع موجود فعلا ولا لأ؟ ولو اللقطات مش كفاية بالنسبالك، تعالى عاين بنفسك أو حمّل دليل باسقات، وتواصل معانا",
+        "headline": "باسقات {EMDASH} أصلها ثابت.. ويزيد"
+      },
+      "edits": [
+        ["عمرها ٦ سنين.", "من 2021."],
+        ["حمّل دليل باسقات", "حمّل بروشور باسقات"]
+      ],
+      "headlineEdit": ["باسقات {EMDASH} أصلها ثابت.. ويزيد", "باسقات: أصلها ثابت.. ويزيد"],
+      "why": [
+        "«دليل باسقات» بقى «بروشور باسقات».",
+        "«عمرها ٦ سنين» بقت «من 2021».",
+        "الشَرطة الطويلة في العنوان بقت نقطتين (:)."
+      ]
+    },
+    {
+      "key": "fix-c8",
+      "adName": "GCC | C8 departure",
+      "adId": "52553091092472",
+      "creativeId": "1770621757626420",
+      "adset": "52540611423072",
+      "image": "assets/live/c8-departure.jpg",
+      "imageIsAi": true,
+      "destination": "https://start.basseqat.com/start?v=expat",
+      "before": {
+        "primaryText": "سنين بتعدي في الشغل والسفر، وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟ العقار غالي ومحتاج متابعة، والدهب صحيح بيحافظ على قيمته لكن مش بيجيب دخل، والفلوس في البنك التضخم بياكلها. فيه اختيار تاني ناس كتير اختارته قبلك: مشاركة في مشروع نخيل مجدول بإدارة احترافية كاملة وتقارير بتوصلك وانت في مكانك. من غير ما تحتاج تيجي، ومن غير ما حد يستعجلك. افهم الأول وبعدين قرر: حمّل دليل باسقات، أو ابدأ محادثة على الواتساب",
+        "headline": "باسقات {EMDASH} أصلها ثابت.. ويزيد"
+      },
+      "edits": [
+        ["حمّل دليل باسقات", "حمّل بروشور باسقات"]
+      ],
+      "headlineEdit": ["باسقات {EMDASH} أصلها ثابت.. ويزيد", "باسقات: أصلها ثابت.. ويزيد"],
+      "why": [
+        "«دليل باسقات» بقى «بروشور باسقات».",
+        "الشَرطة الطويلة في العنوان بقت نقطتين (:).",
+        "الصورة دي معمولة بالذكاء الاصطناعي، فهتتغير بالبديل اللي هتختاريه في الجزء الأول."
+      ]
+    }
+  ],
+  "linkDescriptionNote": "السطر الصغير تحت العنوان («استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة») مش مكتوب في الإعلانات نفسها، فيسبوك بياخده أوتوماتيك من وصف صفحة الموقع، فمش هنلمسه هنا.",
+  "pmax": {
+    "campaign": "PMax | Basseqat | Leads | EG",
+    "campaignId": "24003636613",
+    "customerId": "3469606388",
+    "text": [
+      {
+        "key": "pmax-h-brochure",
+        "field": "عنوان قصير",
+        "groups": "المجموعتين (Investor و Pension)",
+        "assetId": "382847178691",
+        "before": "دليل باسقات كامل ومجاني",
+        "after": "بروشور باسقات كامل ومجاني",
+        "limit": 30
+      },
+      {
+        "key": "pmax-d-brochure",
+        "field": "وصف",
+        "groups": "المجموعتين (Investor و Pension)",
+        "assetId": "382847178700",
+        "before": "أصل زراعي طويل الأجل بإدارة محترفة وأوراق واضحة. اطلب دليل باسقات دلوقتي",
+        "after": "أصل زراعي طويل الأجل بإدارة محترفة وأوراق واضحة. اطلب بروشور باسقات دلوقتي",
+        "limit": 90
+      },
+      {
+        "key": "pmax-h-2021",
+        "field": "عنوان قصير",
+        "groups": "المجموعتين (Investor و Pension)",
+        "assetId": "417318883129",
+        "before": "مزرعة نخيل شغالة من 2020",
+        "after": "بنزرع في الفرافرة من 2021",
+        "limit": 30
+      }
+    ],
+    "images": [
+      {"id": "427397014595", "name": "Generated image - 2026-10-04 15:42:24_0.8.606 (1)", "field": "صورة طولية", "group": "Investor", "kind": "generated", "note": "معمولة بالذكاء الاصطناعي من جوجل: صفوف نخيل وبيت صغير عليه ألواح شمسية."},
+      {"id": "427397375465", "name": "Generated image - 2026-10-04 15:42:24.604", "field": "صورة طولية", "group": "Investor", "kind": "generated", "note": "معمولة بالذكاء الاصطناعي من جوجل: يافطة خشب مكتوب عليها «أصلها ثابت... ويزيد... نمو مستدام»."},
+      {"id": "427494749845", "name": "Generated image - 2026-10-04 15:42:24.605", "field": "صورة طولية", "group": "Investor", "kind": "generated", "note": "معمولة بالذكاء الاصطناعي من جوجل: نخيل كبير، واللوجو اللي عليها مش لوجو باسقات الحقيقي."},
+      {"id": "427583536827", "name": "Generated image - 2026-10-04 15:42:24.606 (1)", "field": "صورة مربعة", "group": "Investor", "kind": "generated", "note": "معمولة بالذكاء الاصطناعي من جوجل: نفس مشهد الصفوف والبيت الصغير."},
+      {"id": "401995154912", "name": "Enhanced image - 2026-08-02 11:49:28.079", "field": "صورة طولية", "group": "Pension", "kind": "auto", "note": "نسخة جوجل عدّلتها أوتوماتيك من تصميم «أرض شغالة / كلام على ورق»، والتصميم اتقص من الناحيتين."},
+      {"id": "401995163447", "name": "AssetPickerSuggestionCategory.unknown - 2026-08-02 11:49:28.081 (1)", "field": "صورة طولية", "group": "Pension", "kind": "auto", "note": "نسخة جوجل عملتها أوتوماتيك من تصميم «من قلب الفرافرة» ومدّت الخلفية حواليه."},
+      {"id": "402096203719", "name": "AssetPickerSuggestionCategory.unknown - 2026-08-02 11:49:28.081", "field": "صورة طولية", "group": "Pension", "kind": "auto", "note": "نسخة جوجل عملتها أوتوماتيك من تصميم «مشروعنا جاهز منتظر مشاركتك» ومدّت الخلفية حواليه."}
+    ]
+  },
+  "posts": {
+    "deliverable": "campaignReviewDeliverables/basseqat-phase1-2026-10-client v8",
+    "storage": "https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/",
+    "question": "ينفع نستخدمها في الإعلانات؟",
+    "items": [
+      {"key": "post-phase1", "file": "phase1", "folder": "phase1-onrecord", "title": "بوست 1: المرحلة الأولى 100 فدان", "full": {"1x1": "meta-1x1.9eeb03ec.png", "4x5": "meta-4x5.26886913.png", "9x16": "meta-9x16.2cff512f.png"}, "onImage": "100 فدان / المرحلة الأولى بدأت في الفرافرة / احجز فدانك معانا / من أرض الواقع: نخيلنا السيوي على نفس الأرض"},
+      {"key": "post-downpayment", "file": "downpayment", "folder": "downpayment-onrecord", "title": "بوست 2: مقدم 247 ألف جنيه", "full": {"1x1": "meta-1x1.2965e43e.png", "4x5": "meta-4x5.33d0ee0c.png", "9x16": "meta-9x16.31c185a7.png"}, "onImage": "247 ألف جنيه مقدم بس / تقدر تحجز فدان نخيل باسمك، والباقي على سنة / احجز فدانك معانا / من أرض الواقع: نخيلنا السيوي على نفس الأرض"},
+      {"key": "post-apartment", "file": "apartment", "folder": "apartment-onrecord", "title": "بوست 3: بتمن شقة خد 10 فدان", "full": {"1x1": "meta-1x1.5a14dcc2.png", "4x5": "meta-4x5.af3e2d19.png", "9x16": "meta-9x16.a91d2846.png"}, "onImage": "بتقارن بين شقة صغيرة واستثمار زراعي؟ / اعرف تفاصيل المشاركة في نخيل باسقات / اطلب تفاصيل الاستثمار / من أرض الواقع: نخيلنا السيوي على نفس الأرض"}
+    ],
+    "excluded": [],
+    "checked": "All 9 files (3 posts x 1:1, 4:5, 9:16) opened and looked at on 15 Nov 2026: no person or face in any of them, and every palm photo is labelled «نخيلنا السيوي على نفس الأرض», never «مجدول». None excluded. Hourglass templates left out by brief."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "locale": "en",
+    "eyebrow": "Proposal",
+    "title": "The offer in one line, not the company history",
+    "lead": "One paragraph a reader can act on. What we do, what it costs, what the commitment is.",
+    "client_name": "Client Name",
+    "reference": "AWP-XX-XXX-000",
+    "issued": "1 January 2026",
+    "valid_until": "15 January 2026"
+  },
+  "sections": [
+    { "type": "prose", "title": "Where you stand today",
+      "lead": "State only what is verifiable, and say where it came from.",
+      "body": ["A paragraph.", "Another paragraph."] },
+    { "type": "list", "title": "What we run",
+      "items": [{ "title": "The claim.", "body": "The detail behind it." }] },
+    { "type": "steps", "title": "What we set up before we spend",
+      "items": [{ "title": "Measurement.", "body": "What happens in week one." }] },
+    { "type": "table", "title": "What changes every month",
+      "columns": ["Month", "Focus", "Deliverable"],
+      "rows": [{ "Month": "1", "Focus": "Measurement", "Deliverable": "Tracking plan" }] },
+    { "type": "callout", "title": "What we do not promise",
+      "body": ["The honest limits. This section earns the rest of the page."] },
+    { "type": "price", "title": "Price", "label": "Retainer",
+      "amount": "0,000 XXX", "terms": "Per month, net. Minimum term. What is and is not included." },
+    { "type": "signature", "title": "Acceptance",
+      "body": ["Countersign and return this page, or confirm in writing by email."],
+      "parties": [
+        { "org": "For Client", "person": "Name, Title" },
+        { "org": "For Admireworks", "person": "Authorised Signatory" }
+      ] }
+  ]
+}

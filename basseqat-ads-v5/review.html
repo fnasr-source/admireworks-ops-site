@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<title>باسقات · مراجعة الإعلانات · v5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--forest:#175734;--forest-d:#0f3f25;--terra:#BF7955;--cream:#FFF8EF;--tint:#FBF3E5;--ink:#222C26;--soft:#5b5b5b;--faint:#8a8a8a;--line:#E2D6C7;--ok:#2f7a4e;--amber:#b7791f;--red:#a8402c;--bg:#ffffff;
+--font:"IBM Plex Sans Arabic","Segoe UI",system-ui,sans-serif;--r:14px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--tint);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.75}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.top{background:var(--cream);border-bottom:1px solid var(--line);padding:28px 0 24px}
+.logo{height:46px;width:auto;margin-bottom:14px}
+.eyebrow{color:var(--terra);font-weight:600;margin:0 0 4px;font-size:14px}
+h1{color:var(--forest);font-size:clamp(24px,5vw,34px);line-height:1.35;margin:0 0 12px}
+.lede{margin:0 0 10px;max-width:760px}
+.deadline{display:inline-block;background:var(--forest);color:var(--cream);padding:6px 14px;border-radius:999px;font-weight:600;font-size:14px;margin:8px 0 0}
+.sec{color:var(--forest);font-size:22px;margin:36px 0 12px}
+.intro{margin:0 0 14px;color:var(--soft)}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin:18px 0;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(23,87,52,.06)}
+.card-h{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+.card-h h3{margin:0;font-size:20px;color:var(--forest);line-height:1.4}
+.pill{background:var(--terra);color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:600}
+.pill.grey{background:#7a7068}
+.why{margin:4px 0 16px;color:var(--soft)}
+.two{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:860px){.two{grid-template-columns:minmax(0,420px) minmax(0,1fr)}}
+.fb{margin:0;background:#fff;border:1px solid #dddfe2;border-radius:10px;overflow:hidden;max-width:420px}
+.fb-head{display:flex;gap:10px;align-items:center;padding:10px 12px}
+.fb-av{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);object-fit:cover;background:var(--cream)}
+.fb-head b{display:block;font-size:14px;line-height:1.3}.fb-head span{font-size:12px;color:var(--faint)}
+.fb-text{padding:0 12px 8px;font-size:14px;line-height:1.7}.fb-text p{margin:0 0 8px}
+.fb-img{width:100%;height:auto}
+.fb-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#f0f2f5;padding:10px 12px}
+.fb-foot div{min-width:0}.fb-url{display:block;font-size:11px;color:var(--faint);direction:ltr;text-align:right}
+.fb-foot b{display:block;font-size:14px;line-height:1.4}.fb-desc{display:block;font-size:12px;color:var(--soft);line-height:1.5}
+.fb-cta{flex:none;background:#e4e6eb;border-radius:6px;padding:7px 12px;font-size:13px;font-weight:600}
+.sizes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:end}
+.sz{display:block;text-decoration:none;color:var(--soft);font-size:12px;text-align:center}
+.sz img{border:1px solid var(--line);border-radius:8px;margin:0 auto 4px;width:100%;height:auto}
+.hint{font-size:13px;color:var(--faint);margin:6px 0 12px}
+.src{font-size:14px;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+.fields{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;font-size:14px;margin:0 0 12px}
+.fields dt{color:var(--faint)}.fields dd{margin:0;overflow-wrap:anywhere}
+h4{color:var(--forest);font-size:16px;margin:14px 0 6px}
+.ticks{margin:0;padding:0 18px 0 0}.ticks li{margin:0 0 6px}
+.ticks.warn li::marker{color:var(--red)}
+.before{margin:0}.before img{border-radius:10px;border:1px solid var(--line)}.before figcaption{font-size:13px;color:var(--red);margin-top:6px;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kpis div{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpis b{display:block;font-size:22px;color:var(--forest);direction:ltr;text-align:right}.kpis span{font-size:13px;color:var(--soft)}
+.decide{border-top:1px solid var(--line);margin-top:18px;padding-top:12px}
+.ap-row{display:flex;flex-wrap:wrap;gap:8px}
+.ap-radio{cursor:pointer;border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px;background:#fff;user-select:none}
+.ap-radio input{display:none}
+.ap-radio.accept-tone.selected{background:var(--ok);border-color:var(--ok);color:#fff}
+.ap-radio.hold-tone.selected{background:var(--amber);border-color:var(--amber);color:#fff}
+.ap-radio.reject-tone.selected{background:var(--red);border-color:var(--red);color:#fff}
+.section-discuss{margin-top:12px}
+.cmt-btn{background:none;border:1px dashed var(--terra);color:var(--terra);border-radius:999px;padding:6px 14px;font-family:inherit;font-size:14px;cursor:pointer}
+.cmt-list{margin-top:8px}
+.cmt-item{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:6px 0;font-size:14px;white-space:pre-wrap}
+.cmt-author{font-weight:700;color:var(--forest);margin-left:8px}.cmt-time{display:block;font-size:12px;color:var(--faint)}
+.note{background:var(--cream);border-right:4px solid var(--terra);border-radius:10px;padding:12px 14px;margin:6px 0 10px}
+.apply{background:var(--forest);color:var(--cream);border-radius:var(--r);padding:22px;margin:30px 0}
+.apply h3{margin:0 0 10px;font-size:20px}.apply .ticks li::marker{color:var(--terra)}
+.apply-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.apply-cta{font-family:inherit;font-size:16px;font-weight:700;border-radius:10px;padding:12px 18px;border:2px solid var(--cream);cursor:pointer}
+.apply-cta.approve{background:var(--cream);color:var(--forest)}.apply-cta.hold{background:transparent;color:var(--cream)}
+.apply-cta.is-active{outline:3px solid var(--terra);outline-offset:2px}
+.you-decided{min-height:1em;margin:10px 0 0;font-size:14px}
+.apply .cmt-btn{border-color:var(--cream);color:var(--cream)}.apply .cmt-item{color:var(--ink)}
+.foot{color:var(--faint);font-size:13px;padding:18px 0 40px}
+.cmt-modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.cmt-modal.open{display:flex}
+.cmt-modal-card{background:#fff;border-radius:var(--r);padding:18px;width:100%;max-width:480px}
+.cmt-modal-card h3{margin:0 0 4px;color:var(--forest)}.ctx{font-size:13px;color:var(--faint);margin:0 0 10px}
+.cmt-row{margin-bottom:10px}.cmt-row label{display:block;font-size:13px;color:var(--soft);margin-bottom:4px}
+.cmt-row input,.cmt-row textarea{width:100%;font-family:inherit;font-size:16px;border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.cmt-row textarea{min-height:110px}
+.cmt-actions{display:flex;gap:8px}.cmt-submit{background:var(--forest);color:#fff;border:0;border-radius:8px;padding:9px 18px;font-family:inherit;font-weight:700;cursor:pointer}
+.cmt-cancel{background:none;border:1px solid var(--line);border-radius:8px;padding:9px 18px;font-family:inherit;cursor:pointer}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:60;max-width:calc(100% - 32px)}
+.toast.show{opacity:1}
+@media print{.section-discuss,.cmt-modal,.toast,.apply-row{display:none!important}.card{break-inside:avoid}}
+
+.headline-promise{display:inline-block;background:var(--forest);color:var(--cream);padding:8px 16px;border-radius:12px;font-weight:700;margin:4px 0 12px}
+.toc{display:flex;flex-wrap:wrap;gap:8px}.toc a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--forest);text-decoration:none;font-size:14px;font-weight:600}
+.secno{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--terra);color:#fff;font-size:16px;margin-left:8px;vertical-align:middle}
+.ba{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:860px){.ba{grid-template-columns:1fr 1fr}}
+.lbl{margin:0 0 6px}.before-l{color:var(--red)}.after-l{color:var(--ok)}
+del{background:#fbe3dd;color:var(--red);text-decoration:line-through}
+ins{background:#ddf0e3;color:#1d5c37;text-decoration:none;font-weight:600}
+.fb figcaption.ai{font-size:13px;color:var(--red);font-weight:600;padding:6px 12px}
+.card.slim{padding:16px}
+.txtba{display:grid;grid-template-columns:1fr;gap:10px}@media(min-width:700px){.txtba{grid-template-columns:1fr 1fr}}
+.txtba div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--cream)}
+.txtba span{display:block;font-size:12px;color:var(--faint);margin-bottom:4px}
+.ggrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media(min-width:860px){.ggrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.gimg{margin:0}.gimg img{border:1px solid var(--line);border-radius:8px;width:100%;height:auto}
+.gimg figcaption{font-size:12px;color:var(--soft);line-height:1.6;margin-top:4px}.gimg figcaption b{display:block;color:var(--red)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <img src="assets/logo-landscape.png" alt="باسقات" class="logo" />
+    <p class="eyebrow">مراجعة إعلانات فيسبوك وإنستجرام وجوجل · 15 نوفمبر 2026</p>
+    <h1>مراجعة الإعلانات: 4 حاجات محتاجين رأيك فيها</h1>
+    <p class="headline-promise">مفيش أي حاجة هتتغير في الإعلانات غير بعد موافقتك.</p>
+    <nav class="toc"><a href="#sec-a">1. بديل إعلان الغربة</a><a href="#sec-b">2. تعديل كلام 3 إعلانات فيسبوك</a><a href="#sec-c">3. إعلانات جوجل</a><a href="#sec-d">4. بوستات المرحلة الأولى</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  
+<section id="sec-a">
+  <h2 class="sec"><span class="secno">1</span> بديل إعلان الغربة</h2>
+  <p class="intro">دي نفس التلات أفكار اللي بعتناهالكم يوم 8 نوفمبر، من غير أي تغيير. محتاجين منك تختاري واحدة (أو أكتر) علشان تحل محل إعلان «الغربة ليها آخر.. حضّرله»، لأن صورته معمولة بالذكاء الاصطناعي.</p>
+  
+<article class="card" id="concept-a">
+  <header class="card-h"><span class="pill">البديل الأول</span><h3>الغربة ليها آخر.. حضّرله</h3></header>
+  <p class="why">نفس الجملة اللي شغالة كويس مع المصريين في الخليج، والصورة لراجل واقف فعلاً في المطار وضهره لينا، بيبص على الطيارات. اللي شايف الإعلان يحط نفسه مكانه.</p>
+  <div class="two">
+    <div>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>سنين بتعدّي في الشغل والسفر، وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟</p><p>العقار غالي ومحتاج متابعة. والدهب بيحافظ على قيمته بس مش بيجيب دخل. والفلوس في البنك التضخم بياكلها.</p><p>فيه اختيار تاني: مشاركة في مشروع نخيل مجدول في واحة الفرافرة، بإدارة احترافية كاملة، وتقارير بتوصلك وإنت في مكانك.</p><p>الأرض مخصصة بأمر تخصيص رسمي من محافظة الوادي الجديد، والآبار محفورة، وشبكة الري موجودة.</p><p>والنخل أصل بياخد وقته: الإنتاج بيبدأ من السنة الرابعة تقريباً، وبنوضّحلك الأرقام كلها في المحادثة.</p><p>افهم الأول وبعدين قرر، ومن غير ما حد يستعجلك. اطلب بروشور باسقات، أو ابدأ محادثة على الواتساب.</p></div>
+  <img class="fb-img" src="../basseqat-ads-v4/assets/preview/a-4x5.jpg" alt="الغربة ليها آخر.. حضّرله" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b>باسقات: أصلها ثابت.. ويزيد</b><span class="fb-desc">سيب رقمك ونبعتلك بروشور باسقات على الواتساب</span></div><span class="fb-cta">معرفة المزيد</span></div>
+</figure></div>
+    <div>
+      <div class="sizes"><a class="sz" href="../basseqat-ads-v4/assets/creatives/a-1x1.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/a-1x1.jpg" alt="مربع 1:1" loading="lazy" /><span>مربع 1:1</span></a><a class="sz" href="../basseqat-ads-v4/assets/creatives/a-4x5.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/a-4x5.jpg" alt="طولي 4:5" loading="lazy" /><span>طولي 4:5</span></a><a class="sz" href="../basseqat-ads-v4/assets/creatives/a-9x16.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/a-9x16.jpg" alt="ستوري وريلز 9:16" loading="lazy" /><span>ستوري وريلز 9:16</span></a></div><p class="hint">اضغط على أي مقاس تشوف الصورة بالحجم الكامل.</p>
+      <p class="src"><b>الصورة:</b> صورة من موقع Unsplash اتصورت فعلاً (مصوّر: Nick Page)، مش معمولة بالذكاء الاصطناعي. الراجل ضهره للكاميرا فمحدش يقدر يعرفه، واتقصّت من غير أي لوجو شركة طيران.</p>
+      
+<dl class="fields">
+  <dt>الكلام على الصورة</dt><dd>الغربة ليها آخر.. حضّرله / بأصل حقيقي في واحة الفرافرة / اطلب بروشور باسقات</dd>
+  <dt>العنوان تحت الصورة</dt><dd>باسقات: أصلها ثابت.. ويزيد</dd>
+  <dt>السطر اللي تحته</dt><dd>سيب رقمك ونبعتلك بروشور باسقات على الواتساب</dd>
+  <dt>الزرار</dt><dd>معرفة المزيد</dd>
+  <dt>بيودّي على</dt><dd dir="ltr">https://start.basseqat.com/start?v=expat</dd>
+</dl>
+      
+      
+    </div>
+  </div>
+  <div class="decide"><h4>تختاري البديل ده؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="concept-a" data-decision="approve"><input type="radio" name="concept-a" />موافق</label><label class="ap-radio hold-tone" data-item="concept-a" data-decision="changes"><input type="radio" name="concept-a" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="concept-a" data-decision="reject"><input type="radio" name="concept-a" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('concept-a', 'الغربة ليها آخر.. حضّرله')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="concept-a"></div></div>
+</article>
+<article class="card" id="concept-b">
+  <header class="card-h"><span class="pill">البديل التاني</span><h3>كل سفرية ليها رجعة</h3></header>
+  <p class="why">كراسي المطار الفاضية وقت الغروب: اللحظة اللي كل مغترب عارفها قبل السفر. الإعلان بيكلمه عن الرجعة نفسها، مش عن الغربة.</p>
+  <div class="two">
+    <div>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>كل مرة بتقعد في المطار مستني طيارة الرجوع، بتعدّ السنين اللي فاتت وبتسأل نفسك: أنا جهزت إيه لما أرجع؟</p><p>العقار غالي ومحتاج متابعة. والدهب بيحافظ على قيمته بس مش بيجيب دخل. والفلوس في البنك التضخم بياكلها.</p><p>فيه اختيار تاني: مشاركة في مشروع نخيل مجدول في واحة الفرافرة، بإدارة احترافية كاملة، وتقارير بتوصلك وإنت في مكانك.</p><p>الأرض مخصصة بأمر تخصيص رسمي من محافظة الوادي الجديد، والآبار محفورة، وشبكة الري موجودة.</p><p>والنخل أصل بياخد وقته: الإنتاج بيبدأ من السنة الرابعة تقريباً، وبنوضّحلك الأرقام كلها في المحادثة.</p><p>افهم الأول وبعدين قرر، ومن غير ما حد يستعجلك. اطلب بروشور باسقات، أو ابدأ محادثة على الواتساب.</p></div>
+  <img class="fb-img" src="../basseqat-ads-v4/assets/preview/b-4x5.jpg" alt="كل سفرية ليها رجعة" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b>باسقات: أصلها ثابت.. ويزيد</b><span class="fb-desc">سيب رقمك ونبعتلك بروشور باسقات على الواتساب</span></div><span class="fb-cta">معرفة المزيد</span></div>
+</figure></div>
+    <div>
+      <div class="sizes"><a class="sz" href="../basseqat-ads-v4/assets/creatives/b-1x1.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/b-1x1.jpg" alt="مربع 1:1" loading="lazy" /><span>مربع 1:1</span></a><a class="sz" href="../basseqat-ads-v4/assets/creatives/b-4x5.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/b-4x5.jpg" alt="طولي 4:5" loading="lazy" /><span>طولي 4:5</span></a><a class="sz" href="../basseqat-ads-v4/assets/creatives/b-9x16.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/b-9x16.jpg" alt="ستوري وريلز 9:16" loading="lazy" /><span>ستوري وريلز 9:16</span></a></div><p class="hint">اضغط على أي مقاس تشوف الصورة بالحجم الكامل.</p>
+      <p class="src"><b>الصورة:</b> صورة من موقع Unsplash اتصورت فعلاً (مصوّر: Aaron Mrvelj)، مش معمولة بالذكاء الاصطناعي، ومفيش فيها أي حد.</p>
+      
+<dl class="fields">
+  <dt>الكلام على الصورة</dt><dd>كل سفرية ليها رجعة / جهّز لرجعتك أصل في الفرافرة / اطلب بروشور باسقات</dd>
+  <dt>العنوان تحت الصورة</dt><dd>باسقات: أصلها ثابت.. ويزيد</dd>
+  <dt>السطر اللي تحته</dt><dd>سيب رقمك ونبعتلك بروشور باسقات على الواتساب</dd>
+  <dt>الزرار</dt><dd>معرفة المزيد</dd>
+  <dt>بيودّي على</dt><dd dir="ltr">https://start.basseqat.com/start?v=expat</dd>
+</dl>
+      
+      
+    </div>
+  </div>
+  <div class="decide"><h4>تختاري البديل ده؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="concept-b" data-decision="approve"><input type="radio" name="concept-b" />موافق</label><label class="ap-radio hold-tone" data-item="concept-b" data-decision="changes"><input type="radio" name="concept-b" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="concept-b" data-decision="reject"><input type="radio" name="concept-b" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('concept-b', 'كل سفرية ليها رجعة')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="concept-b"></div></div>
+</article>
+<article class="card" id="concept-c">
+  <header class="card-h"><span class="pill">البديل التالت</span><h3>المنظر ده مش بيتك</h3></header>
+  <p class="why">دبي بالليل من شباك عالي، المنظر اللي المغترب بيشوفه كل يوم. الصورة من غير أشخاص، بس اللي شايفها حاسس إنه هو اللي واقف ورا الشباك.</p>
+  <div class="two">
+    <div>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>المنظر من شباكك حلو، بس إنت عارف إنه مش بيتك. وكل سنة بتعدّي بتسأل نفسك: أنا بنيت إيه في مصر؟</p><p>العقار غالي ومحتاج متابعة. والدهب بيحافظ على قيمته بس مش بيجيب دخل. والفلوس في البنك التضخم بياكلها.</p><p>فيه اختيار تاني: مشاركة في مشروع نخيل مجدول في واحة الفرافرة، بإدارة احترافية كاملة، وتقارير بتوصلك وإنت في مكانك.</p><p>الأرض مخصصة بأمر تخصيص رسمي من محافظة الوادي الجديد، والآبار محفورة، وشبكة الري موجودة.</p><p>والنخل أصل بياخد وقته: الإنتاج بيبدأ من السنة الرابعة تقريباً، وبنوضّحلك الأرقام كلها في المحادثة.</p><p>افهم الأول وبعدين قرر، ومن غير ما حد يستعجلك. اطلب بروشور باسقات، أو ابدأ محادثة على الواتساب.</p></div>
+  <img class="fb-img" src="../basseqat-ads-v4/assets/preview/c-4x5.jpg" alt="المنظر ده مش بيتك" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b>باسقات: أصلها ثابت.. ويزيد</b><span class="fb-desc">سيب رقمك ونبعتلك بروشور باسقات على الواتساب</span></div><span class="fb-cta">معرفة المزيد</span></div>
+</figure></div>
+    <div>
+      <div class="sizes"><a class="sz" href="../basseqat-ads-v4/assets/creatives/c-1x1.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/c-1x1.jpg" alt="مربع 1:1" loading="lazy" /><span>مربع 1:1</span></a><a class="sz" href="../basseqat-ads-v4/assets/creatives/c-4x5.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/c-4x5.jpg" alt="طولي 4:5" loading="lazy" /><span>طولي 4:5</span></a><a class="sz" href="../basseqat-ads-v4/assets/creatives/c-9x16.png" target="_blank" rel="noopener"><img src="../basseqat-ads-v4/assets/preview/c-9x16.jpg" alt="ستوري وريلز 9:16" loading="lazy" /><span>ستوري وريلز 9:16</span></a></div><p class="hint">اضغط على أي مقاس تشوف الصورة بالحجم الكامل.</p>
+      <p class="src"><b>الصورة:</b> صورة من موقع Unsplash اتصورت فعلاً (مصوّر: Zanyar G)، مش معمولة بالذكاء الاصطناعي، ومفيش فيها أي حد.</p>
+      
+<dl class="fields">
+  <dt>الكلام على الصورة</dt><dd>المنظر ده مش بيتك / حضّر لرجعتك بأصل في الفرافرة / اطلب بروشور باسقات</dd>
+  <dt>العنوان تحت الصورة</dt><dd>باسقات: أصلها ثابت.. ويزيد</dd>
+  <dt>السطر اللي تحته</dt><dd>سيب رقمك ونبعتلك بروشور باسقات على الواتساب</dd>
+  <dt>الزرار</dt><dd>معرفة المزيد</dd>
+  <dt>بيودّي على</dt><dd dir="ltr">https://start.basseqat.com/start?v=expat</dd>
+</dl>
+      
+      
+    </div>
+  </div>
+  <div class="decide"><h4>تختاري البديل ده؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="concept-c" data-decision="approve"><input type="radio" name="concept-c" />موافق</label><label class="ap-radio hold-tone" data-item="concept-c" data-decision="changes"><input type="radio" name="concept-c" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="concept-c" data-decision="reject"><input type="radio" name="concept-c" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('concept-c', 'المنظر ده مش بيتك')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="concept-c"></div></div>
+</article>
+</section>
+  
+<section id="sec-b">
+  <h2 class="sec"><span class="secno">2</span> تعديل الكلام بس في 3 إعلانات فيسبوك شغالة</h2>
+  <p class="intro">الصورة زي ما هي. غيّرنا أقل حاجة ممكنة: «بروشور باسقات» بدل «دليل باسقات»، «من 2021» بدل «٦ سنين»، والسيوي بقى مذكور كخبرة بس. الكلام اللي اتشال باللون الأحمر، والجديد باللون الأخضر.</p>
+  
+<article class="card" id="fix-c5">
+  <header class="card-h"><span class="pill">إعلان شغال</span><h3 dir="ltr">EG | C5-v2 infra-checklist</h3></header>
+  <p class="src"><b>الصورة:</b> زي ما هي، مفيش فيها أي تغيير.</p>
+  <div class="ba">
+    <div><h4 class="lbl before-l">دلوقتي</h4>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>فيه مشاريع بتجمع فلوس علشان تبدأ تجهز. مشكلتها انها ممكن تتأخر بسبب تأخر التمويل، وللأسف ممكن تفشل في بعض الأحيان. باسقات جهزت الأول، وبعدين فتحت باب المشاركة. قبل ما نسأل حد يشارك: الأرض اتخصصت بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي، و٣ آبار عميقة اتحفرت، وشبكة الري اتركبت. وكل ده وراه خبرة زراعية على الأرض <del>عمرها ٦ سنين في زراعة النخيل السيوي والنباتات الطبية والعطرية.</del> الترتيب ده مش تفصيلة صغيرة. ده الفرق بين إنك تستنى وعود، وبين إنك تشوف حاجة موجودة قدامك. كل بند من دول ليه توثيق تقدر تطلبه وتراجعه. <del>حمّل دليل باسقات</del> من هنا وشوف البنية التحتية بالتفصيل، أو ابدأ محادثة واسألنا</p></div>
+  <img class="fb-img" src="assets/live/c5-infra-checklist.jpg" alt="" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b><del>باسقات &#8212; أصلها ثابت.. ويزيد</del></b><span class="fb-desc">استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة</span></div><span class="fb-cta">معرفة المزيد</span></div>
+  
+</figure></div>
+    <div><h4 class="lbl after-l">بعد التعديل</h4>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>فيه مشاريع بتجمع فلوس علشان تبدأ تجهز. مشكلتها انها ممكن تتأخر بسبب تأخر التمويل، وللأسف ممكن تفشل في بعض الأحيان. باسقات جهزت الأول، وبعدين فتحت باب المشاركة. قبل ما نسأل حد يشارك: الأرض اتخصصت بالأمر المباشر من محافظة الوادي الجديد وصندوق استصلاح الأراضي، و٣ آبار عميقة اتحفرت، وشبكة الري اتركبت. وكل ده وراه خبرة زراعية على الأرض <ins>من 2021 في زراعة النخيل السيوي والنباتات الطبية والعطرية، والخبرة دي هي اللي بنزرع بيها النخيل المجدول الجديد اللي بتشارك فيه.</ins> الترتيب ده مش تفصيلة صغيرة. ده الفرق بين إنك تستنى وعود، وبين إنك تشوف حاجة موجودة قدامك. كل بند من دول ليه توثيق تقدر تطلبه وتراجعه. <ins>حمّل بروشور باسقات</ins> من هنا وشوف البنية التحتية بالتفصيل، أو ابدأ محادثة واسألنا</p></div>
+  <img class="fb-img" src="assets/live/c5-infra-checklist.jpg" alt="" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b><ins>باسقات: أصلها ثابت.. ويزيد</ins></b><span class="fb-desc">استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة</span></div><span class="fb-cta">معرفة المزيد</span></div>
+  
+</figure></div>
+  </div>
+  <h4>اللي اتغير بس</h4>
+  <ul class="ticks"><li>«دليل باسقات» بقى «بروشور باسقات».</li><li>«٦ سنين» بقت «من 2021».</li><li>سطر السيوي بقى يقول إن السيوي هو خبرتنا، وإن اللي بتشارك فيه هو زراعة المجدول الجديدة.</li><li>الشَرطة الطويلة في العنوان بقت نقطتين (:)، زي باقي الإعلانات.</li></ul>
+  <div class="decide"><h4>موافقة على التعديل ده؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="fix-c5" data-decision="approve"><input type="radio" name="fix-c5" />موافق</label><label class="ap-radio hold-tone" data-item="fix-c5" data-decision="changes"><input type="radio" name="fix-c5" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="fix-c5" data-decision="reject"><input type="radio" name="fix-c5" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('fix-c5', 'EG | C5-v2 infra-checklist')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="fix-c5"></div></div>
+</article>
+<article class="card" id="fix-c7">
+  <header class="card-h"><span class="pill">إعلان شغال</span><h3 dir="ltr">EG | C7 editorial-farafra</h3></header>
+  <p class="src"><b>الصورة:</b> زي ما هي، مفيش فيها أي تغيير.</p>
+  <div class="ba">
+    <div><h4 class="lbl before-l">دلوقتي</h4>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>اللقطة دي من فوق أرض باسقات في الفرافرة. اللي بتشوفه مش تصميم ولا رسمة للمستقبل: أرض متخصصة بالأمر المباشر من محافظة الوادي الجديد، وشبكة ري شغالة، وبنية تحتية موجودة فعلا، ووراها خبرة زراعية على الأرض <del>عمرها ٦ سنين.</del> إحنا بننشر لقطات زي دي باستمرار، علشان ده أسهل رد على أي سؤال: المشروع موجود فعلا ولا لأ؟ ولو اللقطات مش كفاية بالنسبالك، تعالى عاين بنفسك أو <del>حمّل دليل باسقات</del>، وتواصل معانا</p></div>
+  <img class="fb-img" src="assets/live/c7-editorial-farafra.jpg" alt="" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b><del>باسقات &#8212; أصلها ثابت.. ويزيد</del></b><span class="fb-desc">استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة</span></div><span class="fb-cta">معرفة المزيد</span></div>
+  
+</figure></div>
+    <div><h4 class="lbl after-l">بعد التعديل</h4>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>اللقطة دي من فوق أرض باسقات في الفرافرة. اللي بتشوفه مش تصميم ولا رسمة للمستقبل: أرض متخصصة بالأمر المباشر من محافظة الوادي الجديد، وشبكة ري شغالة، وبنية تحتية موجودة فعلا، ووراها خبرة زراعية على الأرض <ins>من 2021.</ins> إحنا بننشر لقطات زي دي باستمرار، علشان ده أسهل رد على أي سؤال: المشروع موجود فعلا ولا لأ؟ ولو اللقطات مش كفاية بالنسبالك، تعالى عاين بنفسك أو <ins>حمّل بروشور باسقات</ins>، وتواصل معانا</p></div>
+  <img class="fb-img" src="assets/live/c7-editorial-farafra.jpg" alt="" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b><ins>باسقات: أصلها ثابت.. ويزيد</ins></b><span class="fb-desc">استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة</span></div><span class="fb-cta">معرفة المزيد</span></div>
+  
+</figure></div>
+  </div>
+  <h4>اللي اتغير بس</h4>
+  <ul class="ticks"><li>«دليل باسقات» بقى «بروشور باسقات».</li><li>«عمرها ٦ سنين» بقت «من 2021».</li><li>الشَرطة الطويلة في العنوان بقت نقطتين (:).</li></ul>
+  <div class="decide"><h4>موافقة على التعديل ده؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="fix-c7" data-decision="approve"><input type="radio" name="fix-c7" />موافق</label><label class="ap-radio hold-tone" data-item="fix-c7" data-decision="changes"><input type="radio" name="fix-c7" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="fix-c7" data-decision="reject"><input type="radio" name="fix-c7" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('fix-c7', 'EG | C7 editorial-farafra')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="fix-c7"></div></div>
+</article>
+<article class="card" id="fix-c8">
+  <header class="card-h"><span class="pill">إعلان شغال</span><h3 dir="ltr">GCC | C8 departure</h3></header>
+  <p class="src"><b>الصورة:</b> معمولة بالذكاء الاصطناعي، فمش هنسيبها. الإعلان ده هيتغير ببديل من الجزء 1، ولحد ما ده يحصل نصلح الكلام بس.</p>
+  <div class="ba">
+    <div><h4 class="lbl before-l">دلوقتي</h4>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>سنين بتعدي في الشغل والسفر، وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟ العقار غالي ومحتاج متابعة، والدهب صحيح بيحافظ على قيمته لكن مش بيجيب دخل، والفلوس في البنك التضخم بياكلها. فيه اختيار تاني ناس كتير اختارته قبلك: مشاركة في مشروع نخيل مجدول بإدارة احترافية كاملة وتقارير بتوصلك وانت في مكانك. من غير ما تحتاج تيجي، ومن غير ما حد يستعجلك. افهم الأول وبعدين قرر: <del>حمّل دليل باسقات</del>، أو ابدأ محادثة على الواتساب</p></div>
+  <img class="fb-img" src="assets/live/c8-departure.jpg" alt="" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b><del>باسقات &#8212; أصلها ثابت.. ويزيد</del></b><span class="fb-desc">استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة</span></div><span class="fb-cta">معرفة المزيد</span></div>
+  <figcaption class="ai">الصورة دي معمولة بالذكاء الاصطناعي، وهتتغير بالبديل اللي هتختاريه في الجزء 1</figcaption>
+</figure></div>
+    <div><h4 class="lbl after-l">بعد التعديل</h4>
+<figure class="fb">
+  <div class="fb-head"><img src="assets/logo-square.png" alt="" class="fb-av" /><div><b>باسقات</b><span>إعلان ممول</span></div></div>
+  <div class="fb-text"><p>سنين بتعدي في الشغل والسفر، وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟ العقار غالي ومحتاج متابعة، والدهب صحيح بيحافظ على قيمته لكن مش بيجيب دخل، والفلوس في البنك التضخم بياكلها. فيه اختيار تاني ناس كتير اختارته قبلك: مشاركة في مشروع نخيل مجدول بإدارة احترافية كاملة وتقارير بتوصلك وانت في مكانك. من غير ما تحتاج تيجي، ومن غير ما حد يستعجلك. افهم الأول وبعدين قرر: <ins>حمّل بروشور باسقات</ins>، أو ابدأ محادثة على الواتساب</p></div>
+  <img class="fb-img" src="assets/live/c8-departure.jpg" alt="" loading="lazy" />
+  <div class="fb-foot"><div><span class="fb-url">START.BASSEQAT.COM</span><b><ins>باسقات: أصلها ثابت.. ويزيد</ins></b><span class="fb-desc">استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة</span></div><span class="fb-cta">معرفة المزيد</span></div>
+  <figcaption class="ai">الصورة دي معمولة بالذكاء الاصطناعي، وهتتغير بالبديل اللي هتختاريه في الجزء 1</figcaption>
+</figure></div>
+  </div>
+  <h4>اللي اتغير بس</h4>
+  <ul class="ticks"><li>«دليل باسقات» بقى «بروشور باسقات».</li><li>الشَرطة الطويلة في العنوان بقت نقطتين (:).</li><li>الصورة دي معمولة بالذكاء الاصطناعي، فهتتغير بالبديل اللي هتختاريه في الجزء الأول.</li></ul>
+  <div class="decide"><h4>موافقة على التعديل ده؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="fix-c8" data-decision="approve"><input type="radio" name="fix-c8" />موافق</label><label class="ap-radio hold-tone" data-item="fix-c8" data-decision="changes"><input type="radio" name="fix-c8" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="fix-c8" data-decision="reject"><input type="radio" name="fix-c8" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('fix-c8', 'GCC | C8 departure')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="fix-c8"></div></div>
+</article>
+  <aside class="note">السطر الصغير تحت العنوان («استثمار زراعي في نخيل المجدول .. أصل حقيقي، بنية تحتية قائمة، وشفافية كاملة») مش مكتوب في الإعلانات نفسها، فيسبوك بياخده أوتوماتيك من وصف صفحة الموقع، فمش هنلمسه هنا.</aside>
+</section>
+  
+<section id="sec-c">
+  <h2 class="sec"><span class="secno">3</span> إعلانات جوجل (Performance Max)</h2>
+  <p class="intro">في حملة جوجل لقينا 3 جمل محتاجة تتغير، و7 صور مش بتاعتنا: 4 معمولين بالذكاء الاصطناعي من جوجل نفسه، و3 نسخ جوجل عدّلها أوتوماتيك من تصميماتنا. جوجل مش بيسمح بتعديل جملة، فهنضيف الجملة الجديدة ونشيل القديمة.</p>
+  
+<article class="card slim" id="pmax-h-brochure">
+  <header class="card-h"><span class="pill">عنوان قصير</span><h3>المجموعتين (Investor و Pension)</h3></header>
+  <div class="txtba">
+    <div class="old"><span>دلوقتي</span><del>دليل باسقات كامل ومجاني</del></div>
+    <div class="new"><span>بعد التعديل</span><ins>بروشور باسقات كامل ومجاني</ins></div>
+  </div>
+  <div class="decide"><div class="ap-row"><label class="ap-radio accept-tone" data-item="pmax-h-brochure" data-decision="approve"><input type="radio" name="pmax-h-brochure" />موافق</label><label class="ap-radio hold-tone" data-item="pmax-h-brochure" data-decision="changes"><input type="radio" name="pmax-h-brochure" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="pmax-h-brochure" data-decision="reject"><input type="radio" name="pmax-h-brochure" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('pmax-h-brochure', 'دليل باسقات كامل ومجاني')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="pmax-h-brochure"></div></div>
+</article>
+<article class="card slim" id="pmax-d-brochure">
+  <header class="card-h"><span class="pill">وصف</span><h3>المجموعتين (Investor و Pension)</h3></header>
+  <div class="txtba">
+    <div class="old"><span>دلوقتي</span><del>أصل زراعي طويل الأجل بإدارة محترفة وأوراق واضحة. اطلب دليل باسقات دلوقتي</del></div>
+    <div class="new"><span>بعد التعديل</span><ins>أصل زراعي طويل الأجل بإدارة محترفة وأوراق واضحة. اطلب بروشور باسقات دلوقتي</ins></div>
+  </div>
+  <div class="decide"><div class="ap-row"><label class="ap-radio accept-tone" data-item="pmax-d-brochure" data-decision="approve"><input type="radio" name="pmax-d-brochure" />موافق</label><label class="ap-radio hold-tone" data-item="pmax-d-brochure" data-decision="changes"><input type="radio" name="pmax-d-brochure" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="pmax-d-brochure" data-decision="reject"><input type="radio" name="pmax-d-brochure" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('pmax-d-brochure', 'أصل زراعي طويل الأجل بإدارة محترفة وأوراق واضحة. اطلب دليل باسقات دلوقتي')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="pmax-d-brochure"></div></div>
+</article>
+<article class="card slim" id="pmax-h-2021">
+  <header class="card-h"><span class="pill">عنوان قصير</span><h3>المجموعتين (Investor و Pension)</h3></header>
+  <div class="txtba">
+    <div class="old"><span>دلوقتي</span><del>مزرعة نخيل شغالة من 2020</del></div>
+    <div class="new"><span>بعد التعديل</span><ins>بنزرع في الفرافرة من 2021</ins></div>
+  </div>
+  <div class="decide"><div class="ap-row"><label class="ap-radio accept-tone" data-item="pmax-h-2021" data-decision="approve"><input type="radio" name="pmax-h-2021" />موافق</label><label class="ap-radio hold-tone" data-item="pmax-h-2021" data-decision="changes"><input type="radio" name="pmax-h-2021" />عايز تعديل</label><label class="ap-radio reject-tone" data-item="pmax-h-2021" data-decision="reject"><input type="radio" name="pmax-h-2021" />مش موافق</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('pmax-h-2021', 'مزرعة نخيل شغالة من 2020')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="pmax-h-2021"></div></div>
+</article>
+  <article class="card" id="pmax-images">
+    <header class="card-h"><span class="pill">صور</span><h3>نشيل الصور دي من الحملة</h3></header>
+    <p class="why">باقي الصور (تصميماتنا اللي وافقتوا عليها قبل كده) فاضلة زي ما هي، فالحملة هتفضل شغالة عادي.</p>
+    <div class="ggrid"><figure class="gimg"><img src="assets/pmax/427397014595.jpg" alt="" loading="lazy" /><figcaption><b>ذكاء اصطناعي</b> معمولة بالذكاء الاصطناعي من جوجل: صفوف نخيل وبيت صغير عليه ألواح شمسية.</figcaption></figure><figure class="gimg"><img src="assets/pmax/427397375465.jpg" alt="" loading="lazy" /><figcaption><b>ذكاء اصطناعي</b> معمولة بالذكاء الاصطناعي من جوجل: يافطة خشب مكتوب عليها «أصلها ثابت... ويزيد... نمو مستدام».</figcaption></figure><figure class="gimg"><img src="assets/pmax/427494749845.jpg" alt="" loading="lazy" /><figcaption><b>ذكاء اصطناعي</b> معمولة بالذكاء الاصطناعي من جوجل: نخيل كبير، واللوجو اللي عليها مش لوجو باسقات الحقيقي.</figcaption></figure><figure class="gimg"><img src="assets/pmax/427583536827.jpg" alt="" loading="lazy" /><figcaption><b>ذكاء اصطناعي</b> معمولة بالذكاء الاصطناعي من جوجل: نفس مشهد الصفوف والبيت الصغير.</figcaption></figure><figure class="gimg"><img src="assets/pmax/401995154912.jpg" alt="" loading="lazy" /><figcaption><b>تعديل أوتوماتيك من جوجل</b> نسخة جوجل عدّلتها أوتوماتيك من تصميم «أرض شغالة / كلام على ورق»، والتصميم اتقص من الناحيتين.</figcaption></figure><figure class="gimg"><img src="assets/pmax/401995163447.jpg" alt="" loading="lazy" /><figcaption><b>تعديل أوتوماتيك من جوجل</b> نسخة جوجل عملتها أوتوماتيك من تصميم «من قلب الفرافرة» ومدّت الخلفية حواليه.</figcaption></figure><figure class="gimg"><img src="assets/pmax/402096203719.jpg" alt="" loading="lazy" /><figcaption><b>تعديل أوتوماتيك من جوجل</b> نسخة جوجل عملتها أوتوماتيك من تصميم «مشروعنا جاهز منتظر مشاركتك» ومدّت الخلفية حواليه.</figcaption></figure></div>
+    <div class="decide"><h4>نشيل الصور دي؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="pmax-images" data-decision="approve"><input type="radio" name="pmax-images" />أيوه شيلوها</label><label class="ap-radio hold-tone" data-item="pmax-images" data-decision="changes"><input type="radio" name="pmax-images" />عايزة أتكلم الأول</label><label class="ap-radio reject-tone" data-item="pmax-images" data-decision="reject"><input type="radio" name="pmax-images" />لأ سيبوها</label></div></div>
+    <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('pmax-images', 'صور جوجل')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="pmax-images"></div></div>
+  </article>
+</section>
+  
+<section id="sec-d">
+  <h2 class="sec"><span class="secno">4</span> تصميمات بوستات المرحلة الأولى</h2>
+  <p class="intro">دي تصميماتنا للبوستات التلاتة الأولى، بكل المقاسات. سؤال واحد على كل واحد: ينفع نستخدمها في الإعلانات؟ الصور فيها نخيلنا السيوي ومكتوب عليها كده، علشان محدش يفهم إنه المجدول الجديد.</p>
+  
+<article class="card" id="post-phase1">
+  <header class="card-h"><span class="pill">تصميم بوست</span><h3>بوست 1: المرحلة الأولى 100 فدان</h3></header>
+  <div class="sizes"><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/phase1-onrecord/meta-1x1.9eeb03ec.png" target="_blank" rel="noopener"><img src="assets/posts/phase1-1x1.jpg" alt="مربع 1:1" loading="lazy" /><span>مربع 1:1</span></a><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/phase1-onrecord/meta-4x5.26886913.png" target="_blank" rel="noopener"><img src="assets/posts/phase1-4x5.jpg" alt="طولي 4:5" loading="lazy" /><span>طولي 4:5</span></a><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/phase1-onrecord/meta-9x16.2cff512f.png" target="_blank" rel="noopener"><img src="assets/posts/phase1-9x16.jpg" alt="ستوري وريلز 9:16" loading="lazy" /><span>ستوري وريلز 9:16</span></a></div>
+  <p class="hint">اضغط على أي مقاس تشوف الصورة بالحجم الكامل.</p>
+  <dl class="fields"><dt>الكلام على الصورة</dt><dd>100 فدان / المرحلة الأولى بدأت في الفرافرة / احجز فدانك معانا / من أرض الواقع: نخيلنا السيوي على نفس الأرض</dd></dl>
+  <div class="decide"><h4>ينفع نستخدمها في الإعلانات؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="post-phase1" data-decision="approve"><input type="radio" name="post-phase1" />أيوه ينفع</label><label class="ap-radio hold-tone" data-item="post-phase1" data-decision="changes"><input type="radio" name="post-phase1" />ينفع بعد تعديل</label><label class="ap-radio reject-tone" data-item="post-phase1" data-decision="reject"><input type="radio" name="post-phase1" />لأ</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('post-phase1', 'بوست 1: المرحلة الأولى 100 فدان')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="post-phase1"></div></div>
+</article>
+<article class="card" id="post-downpayment">
+  <header class="card-h"><span class="pill">تصميم بوست</span><h3>بوست 2: مقدم 247 ألف جنيه</h3></header>
+  <div class="sizes"><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/downpayment-onrecord/meta-1x1.2965e43e.png" target="_blank" rel="noopener"><img src="assets/posts/downpayment-1x1.jpg" alt="مربع 1:1" loading="lazy" /><span>مربع 1:1</span></a><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/downpayment-onrecord/meta-4x5.33d0ee0c.png" target="_blank" rel="noopener"><img src="assets/posts/downpayment-4x5.jpg" alt="طولي 4:5" loading="lazy" /><span>طولي 4:5</span></a><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/downpayment-onrecord/meta-9x16.31c185a7.png" target="_blank" rel="noopener"><img src="assets/posts/downpayment-9x16.jpg" alt="ستوري وريلز 9:16" loading="lazy" /><span>ستوري وريلز 9:16</span></a></div>
+  <p class="hint">اضغط على أي مقاس تشوف الصورة بالحجم الكامل.</p>
+  <dl class="fields"><dt>الكلام على الصورة</dt><dd>247 ألف جنيه مقدم بس / تقدر تحجز فدان نخيل باسمك، والباقي على سنة / احجز فدانك معانا / من أرض الواقع: نخيلنا السيوي على نفس الأرض</dd></dl>
+  <div class="decide"><h4>ينفع نستخدمها في الإعلانات؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="post-downpayment" data-decision="approve"><input type="radio" name="post-downpayment" />أيوه ينفع</label><label class="ap-radio hold-tone" data-item="post-downpayment" data-decision="changes"><input type="radio" name="post-downpayment" />ينفع بعد تعديل</label><label class="ap-radio reject-tone" data-item="post-downpayment" data-decision="reject"><input type="radio" name="post-downpayment" />لأ</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('post-downpayment', 'بوست 2: مقدم 247 ألف جنيه')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="post-downpayment"></div></div>
+</article>
+<article class="card" id="post-apartment">
+  <header class="card-h"><span class="pill">تصميم بوست</span><h3>بوست 3: بتمن شقة خد 10 فدان</h3></header>
+  <div class="sizes"><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/apartment-onrecord/meta-1x1.5a14dcc2.png" target="_blank" rel="noopener"><img src="assets/posts/apartment-1x1.jpg" alt="مربع 1:1" loading="lazy" /><span>مربع 1:1</span></a><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/apartment-onrecord/meta-4x5.af3e2d19.png" target="_blank" rel="noopener"><img src="assets/posts/apartment-4x5.jpg" alt="طولي 4:5" loading="lazy" /><span>طولي 4:5</span></a><a class="sz" href="https://storage.googleapis.com/admireworks-internal-os-brochures-2026/deliverables/basseqat/phase1-2026-10/apartment-onrecord/meta-9x16.a91d2846.png" target="_blank" rel="noopener"><img src="assets/posts/apartment-9x16.jpg" alt="ستوري وريلز 9:16" loading="lazy" /><span>ستوري وريلز 9:16</span></a></div>
+  <p class="hint">اضغط على أي مقاس تشوف الصورة بالحجم الكامل.</p>
+  <dl class="fields"><dt>الكلام على الصورة</dt><dd>بتقارن بين شقة صغيرة واستثمار زراعي؟ / اعرف تفاصيل المشاركة في نخيل باسقات / اطلب تفاصيل الاستثمار / من أرض الواقع: نخيلنا السيوي على نفس الأرض</dd></dl>
+  <div class="decide"><h4>ينفع نستخدمها في الإعلانات؟</h4><div class="ap-row"><label class="ap-radio accept-tone" data-item="post-apartment" data-decision="approve"><input type="radio" name="post-apartment" />أيوه ينفع</label><label class="ap-radio hold-tone" data-item="post-apartment" data-decision="changes"><input type="radio" name="post-apartment" />ينفع بعد تعديل</label><label class="ap-radio reject-tone" data-item="post-apartment" data-decision="reject"><input type="radio" name="post-apartment" />لأ</label></div></div>
+  <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('post-apartment', 'بوست 3: بتمن شقة خد 10 فدان')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="post-apartment"></div></div>
+</article>
+</section>
+  <section class="apply" id="apply">
+    <h3>اللي هيحصل بعد ما توافقي</h3>
+    <ul class="ticks">
+      <li>هننفّذ بس الحاجات اللي اخترتي عليها «موافق»، وأي حاجة عليها «عايز تعديل» هنعدلها ونحطها هنا على نفس الرابط الأول.</li>
+      <li>تعديل الكلام في فيسبوك بيخلي فيسبوك يراجع الإعلان تاني، وده بياخد عادة ساعات قليلة.</li>
+      <li>البديل اللي هتختاريه لإعلان الغربة هيتحط في نفس مجموعة المصريين في الخليج، وأول ما يشتغل نوقف الإعلان القديم.</li>
+      <li>مفيش أي حاجة هتتغير في الإعلانات غير بعد موافقتك.</li>
+    </ul>
+    <div class="apply-row">
+      <button type="button" class="apply-cta approve" id="cta-approve-all" onclick="submitItemDecision('apply-all','approve','موافقة على اللي اخترته')">موافقة على اللي اخترته فوق</button>
+      <button type="button" class="apply-cta hold" id="cta-hold-all" onclick="submitItemDecision('apply-all','hold','عايزين نتكلم الأول')">عايزين نتكلم الأول</button>
+    </div>
+    <p class="you-decided" id="you-decided"></p>
+    <div class="section-discuss"><button type="button" class="cmt-btn" onclick="openCmtModal('general', 'تعليق عام')">اكتب تعليق</button><div class="cmt-list" data-cmt-list="general"></div></div>
+  </section>
+</main>
+<footer class="foot"><div class="wrap">إعداد فريق Admireworks لباسقات · مفيش ولا صورة جديدة في الصفحة دي معمولة بالذكاء الاصطناعي</div></footer>
+
+<div class="cmt-modal" id="cmt-modal" role="dialog" aria-modal="true" aria-labelledby="cmt-modal-title">
+  <div class="cmt-modal-card">
+    <h3 id="cmt-modal-title">اكتب تعليقك</h3>
+    <p class="ctx" id="cmt-modal-ctx"></p>
+    <div class="cmt-row" id="cmt-name-row"><label for="cmt-name-input">اسمك (بيتسجّل مرة واحدة على الجهاز ده)</label><input type="text" id="cmt-name-input" /></div>
+    <div class="cmt-row"><label for="cmt-text-input">التعليق</label><textarea id="cmt-text-input" placeholder="اكتب اللي عايز تقوله أو تعدّله"></textarea></div>
+    <div class="cmt-actions"><button type="button" class="cmt-submit" onclick="submitComment()">إرسال</button><button type="button" class="cmt-cancel" onclick="closeCmtModal()">إلغاء</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyBQk7osdbUb2hLoFrirVKhHadZ1mi9x_5I",
+  authDomain: "admireworks---internal-os.firebaseapp.com",
+  projectId: "admireworks---internal-os",
+  storageBucket: "admireworks---internal-os.firebasestorage.app",
+  messagingSenderId: "712573851224",
+  appId: "1:712573851224:web:33541df018b7f51d8b1c2d"
+});
+const db = getFirestore(app);
+window.AW_FB = { db, DECK_SLUG: "basseqat-ads-v5", collection, addDoc, query, orderBy, onSnapshot, doc, setDoc, serverTimestamp };
+window.dispatchEvent(new Event("aw-fb-ready"));
+</script>
+<script>
+let fbReady=false,toastTimer=null;const stateDecisions={},stateComments={};const NAME_KEY="basseqat-ads-v5-reviewer-name";
+function getName(){try{return localStorage.getItem(NAME_KEY)||""}catch(e){return window.__awName||""}}
+function setName(n){try{localStorage.setItem(NAME_KEY,n)}catch(e){window.__awName=n}}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
+window.addEventListener("aw-fb-ready",()=>{fbReady=true;initSync()});
+function initSync(){const fb=window.AW_FB;if(!fb)return;
+ fb.onSnapshot(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"decisions"),snap=>{Object.keys(stateDecisions).forEach(k=>delete stateDecisions[k]);snap.forEach(d=>{stateDecisions[d.id]=d.data()});renderDecisions()},err=>console.error("decisions",err));
+ fb.onSnapshot(fb.query(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments"),fb.orderBy("createdAt","asc")),snap=>{Object.keys(stateComments).forEach(k=>delete stateComments[k]);snap.forEach(d=>{const x=d.data();(stateComments[x.sectionId]=stateComments[x.sectionId]||[]).push({id:d.id,...x})});document.querySelectorAll("[data-cmt-list]").forEach(el=>renderComments(el.dataset.cmtList))},err=>console.error("comments",err));}
+function fmt(ts){const t=ts&&ts.toDate?ts.toDate():new Date();return t.toLocaleString("ar-EG",{hour:"2-digit",minute:"2-digit",day:"numeric",month:"long",numberingSystem:"latn"})}
+function renderDecisions(){document.querySelectorAll(".ap-radio").forEach(r=>r.classList.remove("selected"));
+ Object.entries(stateDecisions).forEach(([k,d])=>{document.querySelectorAll('.ap-radio[data-item="'+CSS.escape(k)+'"][data-decision="'+CSS.escape(String(d.decision))+'"]').forEach(r=>r.classList.add("selected"))});
+ const a=document.getElementById("cta-approve-all"),h=document.getElementById("cta-hold-all"),b=document.getElementById("you-decided");a.classList.remove("is-active");h.classList.remove("is-active");
+ const all=stateDecisions["apply-all"];if(!all){b.textContent="";return}
+ (all.decision==="approve"?a:h).classList.add("is-active");
+ b.textContent="اتسجل: "+(all.decision==="approve"?"موافقة على اللي اخترته":"عايزين نتكلم الأول")+"، "+(all.name||"")+"، "+fmt(all.updatedAt);}
+async function submitItemDecision(itemKey,decision,label){if(!fbReady){showToast("لسه بيتصل، جرب كمان ثانية.");return}
+ let name=getName();if(!name){name=(prompt("اسمك (هيتسجل مرة واحدة):")||"").trim();if(!name){showToast("اكتب اسمك الأول.");return}setName(name)}
+ const fb=window.AW_FB;try{await fb.setDoc(fb.doc(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"decisions",itemKey),{decision,name,updatedAt:fb.serverTimestamp()});showToast("اتسجل: "+label)}catch(e){console.error(e);showToast("ماتسجلش، جرب تاني.")}}
+window.submitItemDecision=submitItemDecision;
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".ap-radio").forEach(l=>l.addEventListener("click",async e=>{e.preventDefault();const it=l.dataset.item;document.querySelectorAll('.ap-radio[data-item="'+CSS.escape(it)+'"]').forEach(r=>r.classList.remove("selected"));l.classList.add("selected");await submitItemDecision(it,l.dataset.decision,l.textContent.trim())}))});
+let activeKey=null,activeLabel="";
+function openCmtModal(k,label){activeKey=k;activeLabel=label;document.getElementById("cmt-modal-ctx").textContent="على: "+label;const has=getName();document.getElementById("cmt-name-row").style.display=has?"none":"block";document.getElementById("cmt-text-input").value="";document.getElementById("cmt-modal").classList.add("open");setTimeout(()=>document.getElementById(has?"cmt-text-input":"cmt-name-input").focus(),50)}
+function closeCmtModal(){document.getElementById("cmt-modal").classList.remove("open");activeKey=null}
+async function submitComment(){let name=getName();if(!name){name=(document.getElementById("cmt-name-input").value||"").trim();if(!name){showToast("اكتب اسمك الأول.");return}setName(name)}
+ const text=(document.getElementById("cmt-text-input").value||"").trim();if(!text){showToast("التعليق فاضي.");return}if(!fbReady){showToast("لسه بيتصل، جرب كمان ثانية.");return}
+ const fb=window.AW_FB;try{await fb.addDoc(fb.collection(fb.db,"adApprovalFeedback",fb.DECK_SLUG,"comments"),{sectionId:activeKey,sectionLabel:activeLabel,name,text,createdAt:fb.serverTimestamp()});closeCmtModal();showToast("التعليق وصل لفريق Admireworks.")}catch(e){console.error(e);showToast("ماتسجلش، جرب تاني.")}}
+function renderComments(k){const el=document.querySelector('[data-cmt-list="'+k+'"]');if(!el)return;const list=stateComments[k]||[];
+ el.innerHTML=list.map(c=>'<div class="cmt-item"><span class="cmt-author">'+escapeHtml(c.name)+'</span>'+escapeHtml(c.text)+'<span class="cmt-time">'+escapeHtml(fmt(c.createdAt))+'</span></div>').join("")}
+window.openCmtModal=openCmtModal;window.closeCmtModal=closeCmtModal;window.submitComment=submitComment;
+function showToast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2800)}
+document.getElementById("cmt-modal").addEventListener("click",e=>{if(e.target.id==="cmt-modal")closeCmtModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCmtModal()});
+</script>
+</body>
+</html>

@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="docRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myrette Academy | Brand Identity Book (Sunlit Institutional Authority)</title>
+  <link rel="icon" type="image/png" href="assets/myrette-avatar-teal-gold-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --myr-ivory: #FAF8F4;
+      --myr-stone: #EFECE6;
+      --myr-white: #FFFFFF;
+      --myr-hairline: #DDD6C9;
+      --myr-teal: #0D4F5C;
+      --myr-teal-deep: #08353E;
+      --myr-teal-mid: #1A6B7A;
+      --myr-teal-soft: #E5F0F2;
+      --myr-ink-deep: #232524;
+      --myr-charcoal: #3F3F3E;
+      --myr-muted: #595D5C;
+      --myr-gold: #EEBA2B;
+      --myr-gold-text: #855D0B;
+      --myr-gold-soft: #FBF3DC;
+      --myr-sage: #436854;
+      --myr-sage-soft: #E6EFEA;
+      --myr-danger: #9B2C2C;
+      --myr-danger-soft: #FDF2F2;
+      --myr-caption-bg: #3F3F3E;
+      --myr-caption-fg: #EFEFEF;
+      --font-display-en: "Cormorant Garamond", Georgia, serif;
+      --font-display-ar: "Amiri", "IBM Plex Sans Arabic", Georgia, serif;
+      --font-sans-en: "IBM Plex Sans", "IBM Plex Sans Arabic", sans-serif;
+      --font-sans-ar: "IBM Plex Sans Arabic", "IBM Plex Sans", sans-serif;
+      --shadow-card: 0 2px 14px rgba(8, 53, 62, 0.05), 0 1px 2px rgba(8, 53, 62, 0.04);
+      --shadow-elev: 0 16px 40px rgba(8, 53, 62, 0.10), 0 2px 6px rgba(8, 53, 62, 0.04);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--myr-ivory);
+      color: var(--myr-charcoal);
+      font-family: var(--font-sans-en);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    html[dir="rtl"] body {
+      font-family: var(--font-sans-ar);
+      line-height: 1.82;
+    }
+
+    /* Bilingual Visibility Controls */
+    html[lang="en"] .ar-only { display: none !important; }
+    html[lang="ar"] .en-only { display: none !important; }
+    .ltr-iso { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+    /* Typography */
+    h1, h2 {
+      font-family: var(--font-display-en);
+      color: var(--myr-ink-deep);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.12;
+    }
+    html[dir="rtl"] h1, html[dir="rtl"] h2 {
+      font-family: var(--font-sans-ar);
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.32;
+    }
+    .serif-ar { font-family: var(--font-display-ar); letter-spacing: 0 !important; }
+    .serif-en { font-family: var(--font-display-en); }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--myr-gold-text);
+      margin-bottom: 12px;
+    }
+    html[dir="rtl"] .eyebrow {
+      font-size: 0.84rem;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .eyebrow-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--myr-gold);
+      display: inline-block;
+    }
+
+    /* Layout */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 84px 0; border-bottom: 1px solid var(--myr-hairline); }
+    section:last-of-type { border-bottom: none; }
+    .section-head { max-width: 780px; margin-bottom: 44px; }
+    .section-head h2 { font-size: clamp(1.9rem, 3.2vw, 2.75rem); margin-bottom: 14px; }
+    .section-head p { color: var(--myr-muted); font-size: 1.05rem; }
+
+    /* Sticky Top Navigation */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 248, 244, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--myr-hairline);
+    }
+    .topbar-inner {
+      max-width: 1180px; margin: 0 auto; padding: 12px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand-lockup-mini {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+    }
+    .brand-lockup-mini img { height: 34px; width: auto; display: block; }
+    .brand-lockup-divider { width: 1px; height: 24px; background: var(--myr-hairline); }
+    .brand-lockup-text {
+      display: flex; flex-direction: column; line-height: 1.15;
+    }
+    .brand-lockup-text strong {
+      font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--myr-teal-deep);
+    }
+    html[dir="rtl"] .brand-lockup-text strong { letter-spacing: 0; text-transform: none; font-size: 0.92rem; }
+    .brand-lockup-text span { font-size: 0.72rem; color: var(--myr-muted); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none; font-size: 0.84rem; font-weight: 500;
+      color: var(--myr-charcoal); transition: color 0.18s;
+    }
+    .nav-links a:hover { color: var(--myr-teal); }
+
+    .topbar-actions { display: flex; align-items: center; gap: 8px; }
+    .lang-switch {
+      display: inline-flex; background: var(--myr-stone);
+      border: 1px solid var(--myr-hairline); border-radius: 999px; padding: 3px;
+    }
+    .lang-btn {
+      border: none; background: transparent; cursor: pointer;
+      padding: 5px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600;
+      color: var(--myr-muted); font-family: inherit; transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--myr-teal); color: var(--myr-ivory); }
+    .print-btn {
+      border: 1px solid var(--myr-hairline); background: var(--myr-white);
+      color: var(--myr-teal-deep); border-radius: 999px; padding: 7px 14px;
+      font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: inherit;
+      transition: all 0.2s;
+    }
+    .print-btn:hover { border-color: var(--myr-teal); background: var(--myr-teal-soft); }
+
+    /* Hero Cover */
+    .hero {
+      background: linear-gradient(145deg, var(--myr-teal-deep) 0%, var(--myr-teal) 65%, #125E6D 100%);
+      color: var(--myr-ivory);
+      padding: 88px 0 76px;
+      border-bottom: 4px solid var(--myr-gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 82% 18%, rgba(238, 186, 43, 0.11), transparent 46%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 48px; align-items: center;
+      position: relative; z-index: 2;
+    }
+    .hero .eyebrow { color: var(--myr-gold); }
+    .hero h1 {
+      color: var(--myr-ivory);
+      font-size: clamp(2.4rem, 4.6vw, 3.85rem);
+      margin-bottom: 20px;
+    }
+    .hero-lead {
+      font-size: 1.12rem; color: rgba(250, 248, 244, 0.88);
+      max-width: 640px; margin-bottom: 28px;
+    }
+    .hero-anchor-box {
+      background: rgba(250, 248, 244, 0.08);
+      border: 1px solid rgba(238, 186, 43, 0.35);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+    .hero-anchor-label {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--myr-gold); font-weight: 600; margin-bottom: 4px;
+    }
+    html[dir="rtl"] .hero-anchor-label { letter-spacing: 0; text-transform: none; font-size: 0.8rem; }
+    .hero-anchor-text { font-size: 0.98rem; color: var(--myr-ivory); font-weight: 500; }
+
+    .hero-meta-strip {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .hero-pill {
+      background: rgba(250, 248, 244, 0.11);
+      border: 1px solid rgba(250, 248, 244, 0.22);
+      color: var(--myr-ivory);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.8rem; font-weight: 500;
+    }
+    .hero-pill-gold {
+      background: var(--myr-gold);
+      color: var(--myr-teal-deep);
+      border-color: var(--myr-gold);
+      font-weight: 700;
+    }
+    .hero-card {
+      background: rgba(8, 53, 62, 0.55);
+      border: 1px solid rgba(238, 186, 43, 0.3);
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-elev);
+    }
+    .hero-card img.primary-mark {
+      width: 220px; max-width: 100%; height: auto; margin: 0 auto 22px; display: block;
+    }
+    .hero-card-title {
+      font-family: var(--font-sans-en);
+      font-size: 0.88rem; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--myr-ivory); font-weight: 600;
+    }
+    .hero-card-ar {
+      font-family: var(--font-display-ar);
+      font-size: 1.55rem; color: var(--myr-gold); margin-top: 6px;
+    }
+    .hero-card-rule {
+      width: 56px; height: 2px; background: var(--myr-gold);
+      margin: 18px auto;
+    }
+    .hero-card-sub {
+      font-size: 0.82rem; color: rgba(250, 248, 244, 0.78);
+    }
+
+    /* Cards & Grids */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .card {
+      background: var(--myr-white);
+      border: 1px solid var(--myr-hairline);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .card-stone { background: var(--myr-stone); }
+    .card h3 { font-size: 1.18rem; color: var(--myr-ink-deep); margin-bottom: 10px; font-weight: 600; }
+    .card p { font-size: 0.94rem; color: var(--myr-muted); }
+
+    /* Before vs After Diagnosis */
+    .compare-card { border-radius: 16px; overflow: hidden; border: 1px solid var(--myr-hairline); }
+    .compare-head {
+      padding: 14px 22px; font-weight: 700; font-size: 0.86rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .compare-before .compare-head { background: var(--myr-danger-soft); color: var(--myr-danger); border-bottom: 1px solid #F1C9C9; }
+    .compare-after .compare-head { background: var(--myr-teal-deep); color: var(--myr-ivory); }
+    .compare-body { padding: 24px; background: var(--myr-white); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .compare-list li { display: flex; gap: 10px; font-size: 0.93rem; align-items: flex-start; }
+    .badge-x {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--myr-danger-soft); color: var(--myr-danger);
+      font-weight: 700; font-size: 0.78rem; display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .badge-ok {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--myr-sage-soft); color: var(--myr-sage);
+      font-weight: 700; font-size: 0.78rem; display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .legacy-swatch-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
+    .legacy-chip {
+      font-size: 0.74rem; font-weight: 600; padding: 4px 10px; border-radius: 6px;
+      text-decoration: line-through;
+    }
+
+    /* Interactive Logo Stage */
+    .surface-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+    .surface-btn {
+      border: 1px solid var(--myr-hairline); background: var(--myr-white);
+      color: var(--myr-charcoal); padding: 8px 16px; border-radius: 999px;
+      font-size: 0.84rem; font-weight: 600; cursor: pointer; font-family: inherit;
+      display: inline-flex; align-items: center; gap: 8px; transition: all 0.18s;
+    }
+    .surface-btn .dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.18); }
+    .surface-btn.active { border-color: var(--myr-teal); background: var(--myr-teal); color: var(--myr-ivory); }
+    .logo-stage {
+      border-radius: 18px; padding: 36px; border: 1px solid var(--myr-hairline);
+      transition: background 0.25s ease;
+    }
+    .logo-stage[data-bg="ivory"] { background: var(--myr-ivory); color: var(--myr-ink-deep); }
+    .logo-stage[data-bg="teal"] { background: var(--myr-teal-deep); color: var(--myr-ivory); }
+    .logo-stage[data-bg="charcoal"] { background: var(--myr-charcoal); color: var(--myr-ivory); }
+    .logo-stage[data-bg="gold"] { background: var(--myr-gold); color: var(--myr-charcoal); }
+
+    .logo-tile {
+      border: 1px dashed rgba(128, 128, 128, 0.35);
+      border-radius: 14px; padding: 26px 20px; text-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      min-height: 210px;
+    }
+    .logo-tile img { max-height: 105px; max-width: 86%; width: auto; object-fit: contain; margin: auto 0; }
+    .logo-tile-meta { margin-top: 14px; font-size: 0.78rem; opacity: 0.85; font-weight: 600; }
+
+    /* Institutional Lockup Showcase */
+    .lockup-banner {
+      margin-top: 24px;
+      background: var(--myr-white);
+      border: 1px solid var(--myr-hairline);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+    }
+    .inst-lockup {
+      display: inline-flex; align-items: center; gap: 18px;
+    }
+    .inst-lockup img { height: 74px; width: auto; }
+    .inst-lockup-sep { width: 1.5px; height: 54px; background: var(--myr-gold); }
+    .inst-lockup-words { display: flex; flex-direction: column; gap: 2px; }
+    .inst-lockup-en {
+      font-family: var(--font-sans-en); font-size: 1.05rem; font-weight: 700;
+      letter-spacing: 0.22em; color: var(--myr-teal-deep);
+    }
+    .inst-lockup-ar {
+      font-family: var(--font-display-ar); font-size: 1.55rem; font-weight: 700;
+      color: var(--myr-teal); line-height: 1.25;
+    }
+    .efti-box {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--myr-stone); padding: 14px 20px; border-radius: 12px;
+      border: 1px solid var(--myr-hairline); max-width: 440px;
+    }
+    .efti-box img { height: 48px; width: auto; flex-shrink: 0; }
+    .efti-box p { font-size: 0.8rem; color: var(--myr-charcoal); line-height: 1.45; }
+
+    /* Color Swatches */
+    .swatch-card {
+      background: var(--myr-white); border: 1px solid var(--myr-hairline);
+      border-radius: 14px; overflow: hidden; cursor: pointer;
+      transition: transform 0.16s, box-shadow 0.16s;
+    }
+    .swatch-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-elev); }
+    .swatch-fill {
+      height: 118px; padding: 14px; display: flex; flex-direction: column;
+      justify-content: space-between; align-items: flex-start;
+    }
+    .wcag-badge {
+      font-size: 0.7rem; font-weight: 700; padding: 3px 9px; border-radius: 999px;
+      background: rgba(255,255,255,0.92); color: var(--myr-teal-deep);
+    }
+    .swatch-info { padding: 14px 16px; }
+    .swatch-name { font-weight: 700; font-size: 0.94rem; color: var(--myr-ink-deep); }
+    .swatch-hex { font-family: monospace; font-size: 0.82rem; color: var(--myr-teal); font-weight: 600; margin: 2px 0 6px; }
+    .swatch-role { font-size: 0.78rem; color: var(--myr-muted); line-height: 1.45; }
+
+    .banned-banner {
+      margin-top: 28px; background: var(--myr-danger-soft);
+      border: 1px solid #ECC4C4; border-radius: 16px; padding: 24px 28px;
+    }
+    .banned-banner h3 { color: var(--myr-danger); font-size: 1.05rem; margin-bottom: 12px; }
+    .bc009-demo {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px;
+    }
+    .contrast-pill {
+      padding: 14px 18px; border-radius: 10px; font-weight: 700; font-size: 0.88rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    }
+
+    /* Typography & Interactive Video Caption Simulator */
+    .type-specimen {
+      background: var(--myr-white); border: 1px solid var(--myr-hairline);
+      border-radius: 16px; padding: 30px; margin-bottom: 24px;
+    }
+    .type-row {
+      display: grid; grid-template-columns: 200px 1fr; gap: 24px;
+      padding: 18px 0; border-bottom: 1px solid var(--myr-hairline); align-items: baseline;
+    }
+    .type-row:last-child { border-bottom: none; }
+    .type-meta { font-size: 0.78rem; color: var(--myr-muted); }
+    .type-meta strong { display: block; color: var(--myr-teal-deep); font-size: 0.85rem; }
+
+    .reel-lab {
+      display: grid; grid-template-columns: 320px 1fr; gap: 36px; align-items: center;
+      background: var(--myr-stone); border: 1px solid var(--myr-hairline);
+      border-radius: 20px; padding: 32px;
+    }
+    .phone-frame {
+      width: 300px; height: 533px; border-radius: 28px; overflow: hidden;
+      position: relative; background: #1c2224;
+      border: 6px solid #232524; box-shadow: var(--shadow-elev);
+      margin: 0 auto;
+    }
+    .phone-frame img.plate-bg {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .phone-watermark {
+      position: absolute; top: 34px; left: 18px; width: 78px; opacity: 0.92; z-index: 4;
+      filter: drop-shadow(0 1px 4px rgba(8,53,62,0.35));
+    }
+    .phone-caption-wrap {
+      position: absolute; left: 16px; right: 56px; bottom: 202px; z-index: 5;
+      text-align: center; direction: rtl; font-family: var(--font-sans-ar);
+    }
+    .phone-caption-box {
+      display: inline-block; background: var(--myr-caption-bg); color: var(--myr-caption-fg);
+      padding: 8px 13px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+      line-height: 1.55; box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+    }
+    .phone-caption-hi {
+      background: var(--myr-gold); color: var(--myr-charcoal);
+      padding: 1px 6px; border-radius: 4px; font-weight: 700;
+    }
+    .safe-zone-overlay {
+      position: absolute; inset: 0; pointer-events: none; z-index: 6; transition: opacity 0.2s;
+    }
+    .safe-zone-overlay.hidden { opacity: 0; }
+    .sz-bottom {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 35%;
+      background: rgba(155, 44, 44, 0.26); border-top: 2px dashed rgba(255,255,255,0.85);
+      display: flex; align-items: flex-end; justify-content: center; padding: 12px;
+      color: #fff; font-size: 0.7rem; font-weight: 700; text-shadow: 0 1px 3px #000;
+    }
+    .sz-right {
+      position: absolute; top: 24%; right: 0; width: 46px; bottom: 35%;
+      background: rgba(155, 44, 44, 0.26); border-left: 2px dashed rgba(255,255,255,0.85);
+      display: flex; flex-direction: column; align-items: center; justify-content: space-around;
+      color: #fff; font-size: 0.65rem; font-weight: 700;
+    }
+    .caption-btn {
+      display: block; width: 100%; text-align: start;
+      border: 1px solid var(--myr-hairline); background: var(--myr-white);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; cursor: pointer;
+      font-family: inherit; transition: all 0.18s;
+    }
+    .caption-btn.active { border-color: var(--myr-teal); background: var(--myr-teal-soft); }
+    .caption-btn strong { display: block; font-size: 0.85rem; color: var(--myr-teal-deep); margin-bottom: 3px; }
+    .caption-btn span { font-size: 0.86rem; color: var(--myr-charcoal); font-family: var(--font-sans-ar); }
+
+    /* Interactive Territory & Practice-Case Funnel Demo */
+    .territory-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tab-pill {
+      border: 1px solid var(--myr-hairline); background: var(--myr-white);
+      color: var(--myr-charcoal); padding: 10px 20px; border-radius: 999px;
+      font-weight: 600; font-size: 0.9rem; cursor: pointer; font-family: inherit;
+    }
+    .tab-pill.active { background: var(--myr-teal); color: var(--myr-ivory); border-color: var(--myr-teal); }
+    .territory-panel { display: none; }
+    .territory-panel.active { display: block; }
+
+    .case-widget {
+      background: var(--myr-teal-deep); color: var(--myr-ivory);
+      border-radius: 20px; padding: 34px; margin-top: 24px;
+      border: 1px solid rgba(238, 186, 43, 0.35);
+    }
+    .case-option {
+      width: 100%; text-align: start; padding: 15px 18px; margin-top: 10px;
+      border-radius: 12px; border: 1px solid rgba(250,248,244,0.22);
+      background: rgba(250,248,244,0.07); color: var(--myr-ivory);
+      cursor: pointer; font-family: inherit; font-size: 0.95rem; transition: all 0.18s;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .case-option:hover, .case-option.selected {
+      background: rgba(238, 186, 43, 0.16); border-color: var(--myr-gold);
+    }
+    .case-response {
+      margin-top: 18px; padding: 18px 20px; border-radius: 12px;
+      background: var(--myr-ivory); color: var(--myr-charcoal);
+      border-inline-start: 4px solid var(--myr-gold);
+      font-size: 0.94rem;
+    }
+    .case-response strong { color: var(--myr-teal-deep); display: block; margin-bottom: 6px; }
+
+    /* Studio Plates Gallery */
+    .plate-card {
+      background: var(--myr-white); border: 1px solid var(--myr-hairline);
+      border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card);
+    }
+    .plate-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .plate-card-body { padding: 18px 20px; }
+    .plate-card-body h4 { color: var(--myr-ink-deep); font-size: 1rem; margin-bottom: 6px; }
+    .plate-card-body p { font-size: 0.86rem; color: var(--myr-muted); }
+
+    /* Real-World Application Mockups */
+    .mockup-browser {
+      background: var(--myr-ivory); border: 1px solid var(--myr-hairline);
+      border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-elev);
+    }
+    .mockup-bar {
+      background: var(--myr-stone); padding: 10px 16px;
+      border-bottom: 1px solid var(--myr-hairline);
+      display: flex; align-items: center; gap: 8px; font-size: 0.76rem; color: var(--myr-muted);
+    }
+    .mockup-dot { width: 9px; height: 9px; border-radius: 50%; background: #CEC7B8; }
+    .mockup-hero {
+      padding: 36px 32px;
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: center;
+    }
+    .btn-primary {
+      display: inline-block; background: var(--myr-teal); color: var(--myr-ivory);
+      padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; border: none;
+    }
+    .btn-gold {
+      display: inline-block; background: var(--myr-gold); color: var(--myr-teal-deep);
+      padding: 12px 22px; border-radius: 10px; font-weight: 700; font-size: 0.9rem;
+      text-decoration: none; border: none;
+    }
+    .cert-mockup {
+      background: var(--myr-ivory);
+      border: 10px solid var(--myr-teal-deep);
+      outline: 2px solid var(--myr-gold);
+      outline-offset: -18px;
+      border-radius: 8px;
+      padding: 38px 32px;
+      text-align: center;
+    }
+
+    /* Tables */
+    .table-wrap { overflow-x: auto; border: 1px solid var(--myr-hairline); border-radius: 14px; background: var(--myr-white); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th, td { padding: 14px 16px; text-align: start; border-bottom: 1px solid var(--myr-hairline); vertical-align: top; }
+    th { background: var(--myr-stone); color: var(--myr-teal-deep); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    html[dir="rtl"] th { text-transform: none; letter-spacing: 0; font-size: 0.86rem; }
+    tr:last-child td { border-bottom: none; }
+    .tag-id {
+      display: inline-block; font-family: monospace; font-size: 0.76rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 6px; background: var(--myr-teal-soft); color: var(--myr-teal-deep);
+    }
+    .tag-crit { background: var(--myr-danger-soft); color: var(--myr-danger); }
+    .tag-gate { background: var(--myr-gold-soft); color: var(--myr-gold-text); }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: var(--myr-teal-deep); color: var(--myr-ivory);
+      padding: 10px 20px; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+      opacity: 0; pointer-events: none; transition: all 0.25s; z-index: 999;
+      box-shadow: var(--shadow-elev);
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    footer {
+      background: var(--myr-teal-deep); color: rgba(250,248,244,0.82);
+      padding: 40px 0; font-size: 0.84rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid, .grid-2, .grid-3, .grid-4, .reel-lab, .mockup-hero, .bc009-demo, .type-row {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+      .mockup-nav span:not(:last-child) { display: none; }
+    }
+    html[dir="rtl"] .swatch-hex, html[dir="rtl"] .wcag-badge, html[dir="rtl"] .legacy-chip, html[dir="rtl"] code, .phone-caption-hi[dir="ltr"] { direction: ltr; unicode-bidi: isolate; }
+    html[dir="rtl"] .swatch-hex { text-align: right; }
+    .card[style*="rtl"] .tag-id { font-family: var(--font-sans-ar); letter-spacing: 0; }
+    @media print {
+      .topbar, .surface-tabs, .territory-tabs, .toast { display: none !important; }
+      section { padding: 28px 0; break-inside: auto; }
+      .hero { min-height: 0 !important; padding: 40px 0 !important; }
+      .grid-2, .hero-grid, .mockup-hero, .bc009-demo { grid-template-columns: repeat(2, 1fr) !important; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
+      .grid-4 { grid-template-columns: repeat(4, 1fr) !important; }
+      .territory-panel { display: block !important; margin-bottom: 18px; }
+      .reel-lab { grid-template-columns: 1fr 1fr !important; break-inside: avoid; }
+      .phone-frame, .type-row, .swatch-card, .mockup-browser { break-inside: avoid; }
+      h2, h3, .section-head { break-after: avoid; }
+      .section-head { break-inside: avoid; }
+      .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn, .lang-switch, .caption-btn, #szToggle { display: none !important; }
+      .card, .compare-card, .case-widget, .cert-mockup, tr, img { break-inside: avoid; }
+      .table-wrap { overflow: visible !important; }
+    }
+    @page { size: A4; margin: 12mm; }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand-lockup-mini" href="#cover">
+        <img src="assets/myrette-primary-bird-signature-teal.svg" alt="Myrette Academy Mark">
+        <span class="brand-lockup-divider"></span>
+        <span class="brand-lockup-text">
+          <strong class="en-only">MYRETTE ACADEMY</strong>
+          <strong class="ar-only">أكاديمية ميريت</strong>
+          <span class="en-only">Brand Identity Book · v1.1</span>
+          <span class="ar-only">دليل الهوية البصرية واللفظية · الإصدار 1.1</span>
+        </span>
+      </a>
+      <nav class="nav-links">
+        <a href="#diagnosis"><span class="en-only">Diagnosis</span><span class="ar-only">التشخيص</span></a>
+        <a href="#marks"><span class="en-only">Logo System</span><span class="ar-only">الشعارات</span></a>
+        <a href="#colors"><span class="en-only">Colors</span><span class="ar-only">الألوان</span></a>
+        <a href="#typography"><span class="en-only">Typography &amp; Captions</span><span class="ar-only">الخطوط والترجمة</span></a>
+        <a href="#territories"><span class="en-only">Territories A/B/C</span><span class="ar-only">مسارات الرسالة</span></a>
+        <a href="#studio"><span class="en-only">Studio &amp; RVM</span><span class="ar-only">التصوير والاستوديو</span></a>
+        <a href="#governance"><span class="en-only">Governance</span><span class="ar-only">الحوكمة والامتثال</span></a>
+      </nav>
+      <div class="topbar-actions">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btnAr" onclick="setLang('ar')">العربية</button>
+        </div>
+        <button class="print-btn" onclick="window.print()">
+          <span class="en-only">Export PDF</span>
+          <span class="ar-only">طباعة PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 01. EXECUTIVE COVER -->
+  <section class="hero" id="cover">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span class="en-only">BRAND IDENTITY BOOK · MYRETTE ACADEMY</span>
+            <span class="ar-only">دليل الهوية · أكاديمية ميريت</span>
+          </div>
+          <h1 class="en-only">Sunlit Institutional Authority.</h1>
+          <h1 class="ar-only">الرصانة المؤسسية المشرقة.</h1>
+          <p class="hero-lead en-only">
+            A calm, bilingual identity for a certifying academy, built for working coaches across Egypt and the Gulf. It rests on three real things: Myrette El Sokkari's own signature, her accreditation as an EFT International Master Trainer, and, separately, her 35+ years in economics and financial advising.
+          </p>
+          <p class="hero-lead ar-only">
+            هوية هادئة بالعربية والإنجليزية لأكاديمية تدريب معتمدة، موجّهة للكوتشز في مصر والخليج. مبنية على ثلاثة أشياء حقيقية: توقيع ميريت السكري بخط إيدها، واعتمادها كمدربة مدربين لدى <span class="ltr-iso">EFT International</span>، وخبرتها لأكثر من 35 عاماً في الاقتصاد والاستشارات المالية كمسار مهني منفصل.
+          </p>
+          <div class="hero-anchor-box">
+            <div class="hero-anchor-label">
+              <span class="en-only">Approved Positioning Line</span>
+              <span class="ar-only">جملة التعريف المعتمدة</span>
+            </div>
+            <div class="hero-anchor-text en-only">
+              "Cairo-based Accredited Certified EFT Master Trainer, listed by EFT International in Arabic and English."
+            </div>
+            <div class="hero-anchor-text ar-only">
+              "مدربة مدربين معتمدة في تقنية الحرية النفسية (<span class="ltr-iso">EFT Master Trainer</span>)، مقرها القاهرة، ومُدرجة رسمياً لدى منظمة <span class="ltr-iso">EFT International</span> باللغتين العربية والإنجليزية."
+            </div>
+          </div>
+          <div class="hero-meta-strip">
+            <span class="hero-pill hero-pill-gold">
+              <span class="en-only">For review: Myrette &amp; Yasser</span>
+              <span class="ar-only">للمراجعة: ميريت وياسر</span>
+            </span>
+            <span class="hero-pill">WCAG 2.1 AA/AAA Verified</span>
+            <span class="hero-pill"><span class="en-only">Paid ads: EG · SA · AE · QA · BH · OM · JO (Kuwait excluded)</span><span class="ar-only">الإعلانات الممولة: مصر والخليج والأردن (بدون الكويت)</span></span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img class="primary-mark" src="assets/myrette-primary-bird-signature-gold.svg" alt="Myrette Academy Authentic Signature and Bird Mark">
+          <div class="hero-card-title">MYRETTE ACADEMY</div>
+          <div class="hero-card-ar">أكاديمية ميريت</div>
+          <div class="hero-card-rule"></div>
+          <div class="hero-card-sub en-only">
+            Authentic handwritten signature &amp; soaring bird vector-cleaned from master guidelines.<br>
+            Heritage Gold (#EEBA2B) on Deep Harbor Teal (#08353E) · <strong>7.36:1 AAA</strong>
+          </div>
+          <div class="hero-card-sub ar-only">
+            التوقيع اليدوي الأصلي وعلامة الطائر بعد التنظيف الفيكتور الدقيق.<br>
+            ذهبي تراثي (<span class="ltr-iso">#EEBA2B</span>) على أزرق مائي داكن (<span class="ltr-iso">#08353E</span>) · تباين <span class="ltr-iso">7.36:1 AAA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. FORENSIC DIAGNOSIS & BEFORE/AFTER -->
+  <section id="diagnosis">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">01 · STRATEGIC DIAGNOSIS</span><span class="ar-only">01 · التشخيص الاستراتيجي</span></div>
+        <h2 class="en-only">Closing the Gap Between Institutional Pedigree and Legacy Packaging</h2>
+        <h2 class="ar-only">إغلاق الفجوة بين القيمة المهنية العالية والتغليف البصري القديم</h2>
+        <p class="en-only">
+          In UAE and Saudi Arabia, ICF Level 1 (ACC) coaching programs price at <strong>USD 3,500 to USD 6,000</strong> (Level 2 PCC at USD 6,500 to USD 12,000+). Kuwait's Ministry of Health Decision No. 225 of 2026 has also restricted energy-healing and Law-of-Attraction promotion. Coaches paying at that level compare programs on structure and proof, so the brand has to look and read like an institution. <small style="color:var(--myr-muted);">(Price range: Admireworks market scan, Nov 2026.)</small>
+        </p>
+        <p class="ar-only">
+          في الإمارات والسعودية، تتراوح برامج اعتماد الكوتشينج (<span class="ltr-iso">ICF Level 1 ACC</span>) بين <strong>3,500 و6,000 دولار</strong> (والمستوى الثاني حتى 12,000 دولار). وقرار وزارة الصحة الكويتية رقم 225 لسنة 2026 قيّد الترويج للعلاج بالطاقة وقانون الجذب. الكوتش اللي بيدفع المبلغ ده بيقارن البرامج على أساس المنهج والإثبات، فالهوية لازم تبان وتتكلم زي مؤسسة تعليمية. <small style="color:var(--myr-muted);">(نطاق الأسعار: مسح سوق من Admireworks، نوفمبر 2026.)</small>
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="compare-card compare-before">
+          <div class="compare-head">
+            <span class="en-only">BEFORE · What the current brand is carrying</span>
+            <span class="ar-only">قبل · اللي الهوية الحالية شايلاه</span>
+            <span class="en-only">Today</span><span class="ar-only">الحالي</span>
+          </div>
+          <div class="compare-body">
+            <div class="legacy-swatch-row">
+              <span class="legacy-chip" style="background:#FF5698;color:#fff;">#FF5698 Hot Pink</span>
+              <span class="legacy-chip" style="background:#f5a524;color:#232524;">#F5A524 Heavy Amber</span>
+              <span class="legacy-chip" style="background:#AD7BBD;color:#fff;">#AD7BBD Purple</span>
+              <span class="legacy-chip" style="background:#68B749;color:#fff;">#68B749 Lime</span>
+            </div>
+            <ul class="compare-list">
+              <li><span class="badge-x">✕</span><span class="en-only"><strong>Pink and heavy gold on the website:</strong> Myrette asked to move away from these colours on the 23 Nov call; they read as consumer wellness to senior coaches in Riyadh and Dubai.</span><span class="ar-only"><strong>ألوان وردي وذهبي ثقيل على الموقع:</strong> ميريت طلبت نبعد عنها في مكالمة 23 نوفمبر، وبتدي انطباع استهلاكي ما يناسبش الكوتشز المحترفين في مصر والخليج.</span></li>
+              <li><span class="badge-x">✕</span><span class="en-only"><strong>Fragmented sub-brands &amp; retired seals:</strong> Mixed obsolete AAMET globe, Quantum Jewelry, Quantum Freedom, golden vortex icon, and a crossover bio shared with another venture.</span><span class="ar-only"><strong>تشتت الهويات والعلامات المنتهية:</strong> خلط بين شعار <span class="ltr-iso">AAMET</span> القديم، و<span class="ltr-iso">Quantum Jewelry</span>، وأيقونة الدوامة، وتعريف مشترك مع مشروع تاني.</span></li>
+              <li><span class="badge-x">✕</span><span class="en-only"><strong>Zero Arabic typography &amp; broken contrast:</strong> Latin-only PDF fonts; white text on #EEBA2B gold failed WCAG at 1.80:1; broken counters ("0 Years").</span><span class="ar-only"><strong>غياب الخط العربي وفشل التباين:</strong> خطوط لاتينية فقط في الدليل القديم، نص أبيض على ذهبي بنسبة <span class="ltr-iso">1.80:1</span> غير مقروءة، وعدادات مكسورة على الموقع.</span></li>
+              <li><span class="badge-x">✕</span><span class="en-only"><strong>Claims to retire:</strong> the "only in the Middle East" line, quick-results wording on /casestudy/, and 33 archive clips held back from ads until they are reviewed.</span><span class="ar-only"><strong>جمل لازم تتشال:</strong> جملة "الوحيدة في الشرق الأوسط"، وصياغة النتائج السريعة في صفحة /casestudy/، و33 مقطع من الأرشيف موقوفين عن الإعلانات لحد ما يتراجعوا.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="compare-card compare-after">
+          <div class="compare-head">
+            <span class="en-only">AFTER · Sunlit Institutional Authority</span>
+            <span class="ar-only">بعد · الرصانة المؤسسية المشرقة</span>
+            <span class="en-only">New palette</span><span class="ar-only">الألوان الجديدة</span>
+          </div>
+          <div class="compare-body">
+            <div class="legacy-swatch-row">
+              <span class="legacy-chip" style="background:#FAF8F4;color:#0D4F5C;border:1px solid #DDD6C9;text-decoration:none;">#FAF8F4 Ivory</span>
+              <span class="legacy-chip" style="background:#0D4F5C;color:#FAF8F4;text-decoration:none;">#0D4F5C Med. Teal</span>
+              <span class="legacy-chip" style="background:#3F3F3E;color:#EFEFEF;text-decoration:none;">#3F3F3E Charcoal</span>
+              <span class="legacy-chip" style="background:#436854;color:#FAF8F4;text-decoration:none;">#436854 Sage</span>
+              <span class="legacy-chip" style="background:#EEBA2B;color:#08353E;text-decoration:none;">#EEBA2B Gold</span>
+            </div>
+            <ul class="compare-list">
+              <li><span class="badge-ok">✓</span><span class="en-only"><strong>One unified certifying academy:</strong> 100% consolidated under <strong>Myrette Academy | أكاديمية ميريت</strong> kept fully separate from Edrak Space.</span><span class="ar-only"><strong>مؤسسة تدريبية واحدة واضحة:</strong> توحيد كامل تحت <strong>أكاديمية ميريت | <span class="ltr-iso">Myrette Academy</span></strong> مع فصل كامل عن <span class="ltr-iso">Edrak Space</span>.</span></li>
+              <li><span class="badge-ok">✓</span><span class="en-only"><strong>Preserved heritage, elevated precision:</strong> Original handwritten signature + soaring bird vector-cleaned; official EFT International mark separated cleanly.</span><span class="ar-only"><strong>الحفاظ على أصالة التوقيع والطائر:</strong> تنظيف التوقيع اليدوي وعلامة الطائر بدقة فيكتور عالية مع فصل شعار <span class="ltr-iso">EFT International</span> الرسمي.</span></li>
+              <li><span class="badge-ok">✓</span><span class="en-only"><strong>Engineered bilingual typography &amp; AAA contrast:</strong> IBM Plex Sans Arabic + IBM Plex Sans + Amiri + Cormorant Garamond; every color pair AA/AAA verified.</span><span class="ar-only"><strong>نظام خطوط عربي-إنجليزي متناغم:</strong> <span class="ltr-iso">IBM Plex Sans Arabic</span> مع <span class="ltr-iso">Amiri</span> وتباين مقروء بنسبة <span class="ltr-iso">AA/AAA</span> في الموقع وترجمة الفيديوهات.</span></li>
+              <li><span class="badge-ok">✓</span><span class="en-only"><strong>Judgment-led positioning (Territories A/B/C):</strong> Shows when NOT to use EFT, separates attendance, certification and accreditation, and keeps paid ads out of Kuwait.</span><span class="ar-only"><strong>تموضع مهني قائم على الحكم المهني:</strong> يعرض متى لا نستخدم الـ <span class="ltr-iso">EFT</span>، يفصل مراحل الاعتماد بشفافية، ويستبعد الكويت من الإعلانات الممولة.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. LOGO & MARK SYSTEM -->
+  <section id="marks">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">02 · VECTOR IDENTITY &amp; MARK GOVERNANCE</span><span class="ar-only">02 · منظومة الشعارات والأختام</span></div>
+        <h2 class="en-only">Authentic Heritage Marks, Cleaned to Vector Precision</h2>
+        <h2 class="ar-only">العلامة الأصلية لميريت بدقة فيكتور نظيفة وحوكمة واضحة</h2>
+        <p class="en-only">
+          Extracted directly from Myrette's original master alpha masks so her genuine handwriting and soaring bird remain 100% authentic (never AI-redrawn). Test all four marks across approved surfaces below:
+        </p>
+        <p class="ar-only">
+          تم استخراج التوقيع اليدوي وعلامة الطائر من الأصول الأصلية دون إعادة رسم عشوائية بالذكاء الاصطناعي للحفاظ على الهوية الحقيقية بنسبة 100%. جرّب عرض الشعارات على الخلفيات المعتمدة:
+        </p>
+      </div>
+
+      <div class="surface-tabs" role="group" aria-label="Surface preview switcher">
+        <button class="surface-btn active" onclick="setLogoSurface('ivory', this)"><span class="dot" style="background:#FAF8F4;"></span><span class="en-only">Sunlit Ivory (#FAF8F4)</span><span class="ar-only">عاجي مشرق</span></button>
+        <button class="surface-btn" onclick="setLogoSurface('teal', this)"><span class="dot" style="background:#08353E;"></span><span class="en-only">Deep Harbor Teal (#08353E)</span><span class="ar-only">أزرق مائي داكن</span></button>
+        <button class="surface-btn" onclick="setLogoSurface('charcoal', this)"><span class="dot" style="background:#3F3F3E;"></span><span class="en-only">Editorial Charcoal (#3F3F3E)</span><span class="ar-only">فحمي دافئ</span></button>
+        <button class="surface-btn" onclick="setLogoSurface('gold', this)"><span class="dot" style="background:#EEBA2B;"></span><span class="en-only">Heritage Gold (#EEBA2B · Dark Ink Only!)</span><span class="ar-only">ذهبي تراثي (حبر داكن فقط!)</span></button>
+      </div>
+
+      <div class="logo-stage" id="logoStage" data-bg="ivory">
+        <div class="grid-4">
+          <div class="logo-tile">
+            <img id="logoPrimary" src="assets/myrette-primary-bird-signature-teal.svg" alt="Primary Bird and Signature">
+            <div class="logo-tile-meta">
+              <span class="en-only">1. Primary Bird + Signature<br><small>True 3:2 Ratio (Fixes legacy 1:9 typo)</small></span>
+              <span class="ar-only">1. الشعار الرئيسي (الطائر + التوقيع)<br><small>نسبة 3:2 دقيقة</small></span>
+            </div>
+          </div>
+          <div class="logo-tile">
+            <img id="logoSig" src="assets/myrette-signature-only-teal.svg" alt="Founder Signature Only">
+            <div class="logo-tile-meta">
+              <span class="en-only">2. Founder Signature Only<br><small>Letters, books, email sign-offs, Eid</small></span>
+              <span class="ar-only">2. توقيع ميريت فقط<br><small>للخطابات والكتب وإيميلات ميريت</small></span>
+            </div>
+          </div>
+          <div class="logo-tile">
+            <img id="logoBird" src="assets/myrette-bird-emblem-teal.svg" alt="Standalone Bird Emblem">
+            <div class="logo-tile-meta">
+              <span class="en-only">3. Soaring Bird Emblem<br><small>Favicon (24px+), avatars, directory badge</small></span>
+              <span class="ar-only">3. أيقونة الطائر المنفردة<br><small>للأفاتار وأيقونة الموقع والدليل</small></span>
+            </div>
+          </div>
+          <div class="logo-tile">
+            <img id="logoArc" src="assets/myrette-bird-arc-emblem-teal.svg" alt="Bird and Dotted Arc Crest">
+            <div class="logo-tile-meta">
+              <span class="en-only">4. Bird + Dotted Arc Crest<br><small>Certificate seal &amp; subtle watermark</small></span>
+              <span class="ar-only">4. ختم الطائر والقوس المنقط<br><small>للشهادات والعلامة المائية</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Institutional Bilingual Lockup + EFTi Separation -->
+      <div class="lockup-banner">
+        <div class="inst-lockup">
+          <img src="assets/myrette-primary-bird-signature-teal.svg" alt="Myrette Mark">
+          <span class="inst-lockup-sep"></span>
+          <div class="inst-lockup-words">
+            <span class="inst-lockup-en">MYRETTE ACADEMY</span>
+            <span class="inst-lockup-ar">أكاديمية ميريت</span>
+          </div>
+        </div>
+        <div class="efti-box">
+          <img src="assets/eft-international-official.png" alt="EFT International Official Logo">
+          <p class="en-only"><strong>External Standards Mark:</strong> Never merge into Myrette's mark or recolor. Always accompany with clear separation of Attendance, Certification, and EFTi Internal Accreditation (VF-004).</p>
+          <p class="ar-only"><strong>شعار جهة الاعتماد الدولية:</strong> يُعرض منفصلاً دون تعديل ألوانه أو دمجه مع شعار الأكاديمية، ومع توضيح الفرق بين الحضور وشهادة المدرب واعتماد <span class="ltr-iso">EFTi</span>.</p>
+        </div>
+      </div>
+
+      <!-- Retired Marks -->
+      <div class="card card-stone" style="margin-top:20px;">
+        <h3 class="en-only" style="color:var(--myr-danger);">Permanently Retired &amp; Quarantined Marks (Never Use on Academy Surfaces)</h3>
+        <h3 class="ar-only" style="color:var(--myr-danger);">العلامات المُلغاة نهائياً من واجهات الأكاديمية</h3>
+        <p class="en-only" style="margin-top:6px;">
+          <strong>1. Obsolete AAMET Blue Globe Seal</strong> (superseded by EFT International) ·
+          <strong>2. Golden Spiral / Vortex Icon</strong> (page 6 of old PDF; invites cosmic/Law-of-Attraction framing banned under BC-010) ·
+          <strong>3. Quantum Jewelry &amp; Quantum Freedom</strong> (unrelated consumer sub-brands) ·
+          <strong>4. Legacy commercial aliases</strong> (Taller than a Palm Tree Academy, Myrette for Better Life, EFT Experts Academy, public misspelling "Mirette") ·
+          <strong>5. Edrak Space marks and joint videos</strong> (the two brands stay fully separate).
+        </p>
+        <p class="ar-only" style="margin-top:6px;">
+          <strong>1. ختم <span class="ltr-iso">AAMET</span> الأزرق القديم</strong> (استُبدل بمنظمة <span class="ltr-iso">EFT International</span>) ·
+          <strong>2. أيقونة الدوامة الذهبية</strong> (توحي بطاقة كونية/قانون جذب محظور وفق <span class="ltr-iso">BC-010</span>) ·
+          <strong>3. <span class="ltr-iso">Quantum Jewelry</span> و<span class="ltr-iso">Quantum Freedom</span></strong> ·
+          <strong>4. المسميات التجارية القديمة والكتابة الخاطئة "<span class="ltr-iso">Mirette</span>"</strong> ·
+          <strong>5. أي شعار أو فيديو تابع لـ <span class="ltr-iso">Edrak Space</span></strong> (البراندين منفصلين تماماً).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. COLOR ARCHITECTURE -->
+  <section id="colors">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">03 · WCAG-VERIFIED COLOR ARCHITECTURE</span><span class="ar-only">03 · منظومة الألوان المعتمدة (WCAG 2.1)</span></div>
+        <h2 class="en-only">70% Sunlit Limestone · 20% Mediterranean Teal &amp; Charcoal · 10% Botanical &amp; Heritage Brass</h2>
+        <h2 class="ar-only">70% عاجي مشرق · 20% تركواز متوسطي وفحمي · 10% زيتوني وذهبي منضبط</h2>
+        <p class="en-only">Click any swatch to copy its HEX code. Every foreground/background pairing is mathematically checked against WCAG 2.1 AA/AAA.</p>
+        <p class="ar-only">اضغط على أي لون لنسخ كود <span class="ltr-iso">HEX</span> فوراً. كل أزواج الألوان تم فحص تباينها رياضياً وفق معايير <span class="ltr-iso">WCAG 2.1</span>.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="swatch-card" onclick="copyHex('#FAF8F4')">
+          <div class="swatch-fill" style="background:#FAF8F4;border-bottom:1px solid #DDD6C9;">
+            <span class="wcag-badge">Canvas · 70%</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Sunlit Ivory</span><span class="ar-only">عاجي مشرق</span></div>
+            <div class="swatch-hex">#FAF8F4 · --myr-ivory</div>
+            <div class="swatch-role"><span class="en-only">Primary page ground, calm daylight breathing space.</span><span class="ar-only">خلفية الصفحات الأساسية بضوء نهاري هادئ.</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#EFECE6')">
+          <div class="swatch-fill" style="background:#EFECE6;border-bottom:1px solid #DDD6C9;">
+            <span class="wcag-badge">Surface</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Cairo Limestone</span><span class="ar-only">حجر قاهري</span></div>
+            <div class="swatch-hex">#EFECE6 · --myr-stone</div>
+            <div class="swatch-role"><span class="en-only">Syllabus tables, proof cards, gentle section alternation.</span><span class="ar-only">جداول المنهج وبطاقات الإثبات والخلفيات الثانوية.</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#0D4F5C')">
+          <div class="swatch-fill" style="background:#0D4F5C;">
+            <span class="wcag-badge">8.65:1 AAA on Ivory</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Deep Mediterranean Teal</span><span class="ar-only">تركواز متوسطي عميق</span></div>
+            <div class="swatch-hex">#0D4F5C · --myr-teal</div>
+            <div class="swatch-role"><span class="en-only">Primary institutional anchor, buttons, directory badges.</span><span class="ar-only">اللون المؤسسي الرئيسي للأزرار والعناوين والشارات.</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#08353E')">
+          <div class="swatch-fill" style="background:#08353E;">
+            <span class="wcag-badge">12.46:1 AAA on Ivory</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Deep Harbor Teal</span><span class="ar-only">أزرق مائي داكن</span></div>
+            <div class="swatch-hex">#08353E · --myr-teal-deep</div>
+            <div class="swatch-role"><span class="en-only">Dark authority bands, cover heroes, certificate frames.</span><span class="ar-only">الخلفيات الداكنة، أغلفة العروض، وإطارات الشهادات.</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#3F3F3E')">
+          <div class="swatch-fill" style="background:#3F3F3E;">
+            <span class="wcag-badge">9.94:1 AAA · Caption Bar</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Editorial Charcoal</span><span class="ar-only">فحمي دافئ (أصل الدليل)</span></div>
+            <div class="swatch-hex">#3F3F3E · --myr-charcoal</div>
+            <div class="swatch-role"><span class="en-only">Legacy PDF anchor: body ink &amp; video caption bar (#EFEFEF text = 9.17:1).</span><span class="ar-only">نصوص القراءة وخلفية ترجمة الفيديوهات (<span class="ltr-iso">9.17:1</span>).</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#EEBA2B')">
+          <div class="swatch-fill" style="background:#EEBA2B;">
+            <span class="wcag-badge" style="background:#08353E;color:#FAF8F4;">Dark Ink Only (5.87:1)</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Heritage Gold</span><span class="ar-only">ذهبي تراثي (أصل التوقيع)</span></div>
+            <div class="swatch-hex">#EEBA2B · --myr-gold</div>
+            <div class="swatch-role"><span class="en-only">Signature on dark teal, thin rules, dark-ink highlight pills ONLY.</span><span class="ar-only">التوقيع على الداكن والخطوط الفاصلة مع حبر داكن فقط.</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#855D0B')">
+          <div class="swatch-fill" style="background:#855D0B;">
+            <span class="wcag-badge">5.55:1 AA on Ivory</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Brushed Brass Ink</span><span class="ar-only">نحاسي للنصوص</span></div>
+            <div class="swatch-hex">#855D0B · --myr-gold-text</div>
+            <div class="swatch-role"><span class="en-only">Accessible gold overlines &amp; eyebrows on light Ivory/Stone surfaces.</span><span class="ar-only">العناوين الفرعية الذهبية المقروءة فوق الخلفيات الفاتحة.</span></div>
+          </div>
+        </div>
+
+        <div class="swatch-card" onclick="copyHex('#436854')">
+          <div class="swatch-fill" style="background:#436854;">
+            <span class="wcag-badge">5.92:1 AA on Ivory</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name"><span class="en-only">Botanical Olive Sage</span><span class="ar-only">أخضر زيتوني هادئ</span></div>
+            <div class="swatch-hex">#436854 · --myr-sage</div>
+            <div class="swatch-role"><span class="en-only">Replaces loud #68B749; verified status tags &amp; calm accents.</span><span class="ar-only">بديل الأخضر الفاقع؛ لشارات الاعتماد والحالات الهادئة.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BC-009 Hard Contrast Guardrail -->
+      <div class="banned-banner">
+        <h3>
+          <span class="en-only">Hard Accessibility Guardrail (BC-009 &amp; VF-008): Never White on Heritage Gold</span>
+          <span class="ar-only">قاعدة التباين الإلزامية (BC-009): ممنوع النص الأبيض فوق الذهبي نهائياً</span>
+        </h3>
+        <div class="bc009-demo">
+          <div class="contrast-pill" style="background:#EEBA2B;color:#FFFFFF;border:2px solid #9B2C2C;">
+            <span>White on #EEBA2B</span>
+            <span style="background:#9B2C2C;color:#fff;padding:2px 8px;border-radius:6px;font-size:0.74rem;">1.80:1 FAIL</span>
+          </div>
+          <div class="contrast-pill" style="background:#EEBA2B;color:#3F3F3E;">
+            <span>Charcoal on #EEBA2B</span>
+            <span style="background:#3F3F3E;color:#FAF8F4;padding:2px 8px;border-radius:6px;font-size:0.74rem;">5.87:1 AA PASS</span>
+          </div>
+          <div class="contrast-pill" style="background:#3F3F3E;color:#EFEFEF;">
+            <span>#EFEFEF on Charcoal</span>
+            <span style="background:#436854;color:#FAF8F4;padding:2px 8px;border-radius:6px;font-size:0.74rem;">9.17:1 AAA PASS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05. BILINGUAL TYPOGRAPHY & VIDEO CAPTION LAB -->
+  <section id="typography">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">04 · BILINGUAL TYPOGRAPHY &amp; VIDEO CAPTIONS</span><span class="ar-only">04 · نظام الخطوط العربية والإنجليزية وترجمة الفيديو</span></div>
+        <h2 class="en-only">Foundry-Matched Arabic + English Clarity, Built for Mixed Script</h2>
+        <h2 class="ar-only">خطوط مصممة معاً للعربية والإنجليزية دون اهتزاز في السطر المختلط</h2>
+        <p class="en-only">
+          IBM Plex Sans Arabic &amp; IBM Plex Sans were designed as one family, so lines mixing Arabic and English (such as EFT International) align seamlessly. Paired with Amiri &amp; Cormorant Garamond serifs for institutional depth.
+        </p>
+        <p class="ar-only">
+          عائلة <span class="ltr-iso">IBM Plex Sans Arabic</span> و<span class="ltr-iso">IBM Plex Sans</span> مصممتين كعائلة واحدة، فتظهر الجمل المختلطة (عربي مع مصطلحات <span class="ltr-iso">EFT</span>) بسلاسة تامة، مع <span class="ltr-iso">Amiri</span> و<span class="ltr-iso">Cormorant Garamond</span> للاقتباسات والشهادات.
+        </p>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-row">
+          <div class="type-meta"><strong>Cormorant Garamond</strong>English Editorial Display · 600</div>
+          <div class="serif-en" style="font-size:2.3rem;line-height:1.12;color:var(--myr-ink-deep);" dir="ltr">When a coaching session hits a wall that good questions cannot move.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><strong>IBM Plex Sans Arabic</strong>Primary Arabic Headlines &amp; UI · 700</div>
+          <div style="font-family:var(--font-sans-ar);font-size:1.75rem;font-weight:700;direction:rtl;text-align:right;color:var(--myr-ink-deep);">لما جلسة الكوتشينج تخبط في حيطة، وحتى الأسئلة الصح مش بتحرّكها.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><strong>Mixed-Script Bidi Test</strong>IBM Plex Arabic + Isolated Latin</div>
+          <div style="font-family:var(--font-sans-ar);font-size:1.12rem;direction:rtl;text-align:right;color:var(--myr-charcoal);">
+            تدريب ممارسي الـ <span class="ltr-iso" style="font-weight:600;color:var(--myr-teal);">EFT</span> المعتمد من <span class="ltr-iso" style="font-weight:600;color:var(--myr-teal);">Myrette Academy</span> وفق معايير <span class="ltr-iso" style="font-weight:600;color:var(--myr-teal);">EFT International</span> (امتحان <span class="ltr-iso">GBP 15</span>).
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><strong>Amiri Serif (Arabic)</strong>Pull-Quotes &amp; Certificates · 700</div>
+          <div class="serif-ar" style="font-size:1.55rem;direction:rtl;text-align:right;color:var(--myr-teal-deep);">
+            «الاحتراف الحقيقي في الكوتشينج يبدأ حين تعرف متى تستخدم الأداة، ومتى تتركها جانباً.»
+          </div>
+        </div>
+      </div>
+
+      <!-- Live 9:16 Video Caption & Safe Zone Simulator -->
+      <div class="reel-lab">
+        <div>
+          <div class="phone-frame">
+            <img class="plate-bg" src="assets/plate-02-cairo-sunlit-study-9x16.jpg" alt="Cairo Sunlit Study 9x16 RVM Plate">
+            <img class="phone-watermark" src="assets/myrette-primary-bird-signature-teal.svg" alt="Safe Top-Left Watermark">
+            <div class="phone-caption-wrap">
+              <div class="phone-caption-box" id="simCaption">
+                لو <span class="phone-caption-hi">إنت كوتش</span> ولقيت نفسك واقف مع العميل في نص الرحلة...
+              </div>
+            </div>
+            <div class="safe-zone-overlay" id="safeZoneOverlay">
+              <div class="sz-right">
+                <span>♡</span><span>💬</span><span>↗</span><span>•••</span>
+              </div>
+              <div class="sz-bottom">BOTTOM 35% REELS / TIKTOK UI ZONE (KEEP CLEAR)</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">LIVE 9:16 REELS SAFE-ZONE &amp; CAPTION SIMULATOR</span><span class="ar-only">محاكي ترجمة الريلز ومنطقة الأمان على الموبايل</span></div>
+          <h3 style="font-size:1.4rem;color:var(--myr-ink-deep);margin-bottom:10px;">
+            <span class="en-only">Verified 9.17:1 AAA Captions Clearing Every Mobile Button</span>
+            <span class="ar-only">ترجمة واضحة بنسبة 9.17:1 بعيدة تماماً عن أزرار إنستجرام وتيك توك</span>
+          </h3>
+          <p style="font-size:0.92rem;color:var(--myr-muted);margin-bottom:18px;">
+            <span class="en-only">Fixes the legacy PDF "down right corner" logo collision defect. Click any verified Myrette hook below to test RTL Arabic + Latin caption rendering live:</span>
+            <span class="ar-only">يعالج خطأ الدليل القديم بوضع الشعار أسفل اليمين خلف أزرار الريلز. اضغط على أي جملة من كلام ميريت الحقيقي لتجربتها مباشرة:</span>
+          </p>
+
+          <button class="caption-btn active" onclick="setCaption(0, this)">
+            <strong>Territory A · Verbatim Stuck-Client Hook</strong>
+            <span>لو إنت كوتش ولقيت نفسك واقف مع العميل في نص الرحلة...</span>
+          </button>
+          <button class="caption-btn" onclick="setCaption(1, this)">
+            <strong>Territory C · Founder Quote Dilemma (Pilot Cut A)</strong>
+            <span>صاحب مشروع خلص عرض السعر من 3 أيام ولسه ما بعتوش... تسأله إيه الأول؟</span>
+          </button>
+          <button class="caption-btn" onclick="setCaption(2, this)">
+            <strong>Territory B · Mixed-Script Accreditation Clarity</strong>
+            <span>شهادة الحضور غير شهادة المدرب، واعتماد <span dir="ltr">EFT International</span> مسار تالت لوحده.</span>
+          </button>
+
+          <div style="margin-top:16px;display:flex;align-items:center;gap:12px;">
+            <button class="print-btn" id="szToggle" onclick="toggleSafeZone()">
+              <span class="en-only">Hide Platform Safe-Zone Overlay</span>
+              <span class="ar-only">إخفاء خطوط منطقة الأمان</span>
+            </button>
+            <span style="font-size:0.78rem;color:var(--myr-muted);">Panel #3F3F3E · Text #EFEFEF (9.17:1) · Highlight #EEBA2B (5.87:1)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06. VERBAL IDENTITY & TERRITORIES A/B/C -->
+  <section id="territories">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">05 · VERBAL IDENTITY &amp; POSITIONING TERRITORIES</span><span class="ar-only">05 · الهوية اللفظية ومسارات الرسالة (A / B / C)</span></div>
+        <h2 class="en-only">Three Territories, Each With One Job</h2>
+        <h2 class="ar-only">ثلاثة مسارات للرسالة، ولكل مسار دوره</h2>
+        <p class="en-only">Every headline, landing page, and Pilot Shoot cut sits inside one of three evidence-backed territories anchored in Myrette's authentic Cairene executive voice.</p>
+        <p class="ar-only">كل إعلان وصفحة هبوط وحلقة محتوى تتحرك داخل ثلاثة مسارات مدروسة بصوت ميريت المصري المهني الواضح.</p>
+      </div>
+
+      <div class="territory-tabs">
+        <button class="tab-pill active" onclick="setTerritory('A', this)"><span class="en-only">Territory A · When a Session Gets Stuck</span><span class="ar-only">المسار A · لما الجلسة تقف</span></button>
+        <button class="tab-pill" onclick="setTerritory('B', this)"><span class="en-only">Territory B · After the Weekends</span><span class="ar-only">المسار B · بعد الويك إند</span></button>
+        <button class="tab-pill" onclick="setTerritory('C', this)"><span class="en-only">Territory C · Where Money Conversations Stall</span><span class="ar-only">المسار C · لما كلام الفلوس يقف</span></button>
+      </div>
+
+      <div class="territory-panel active" id="terrA">
+        <div class="grid-2">
+          <div class="card" dir="ltr" style="text-align:left;">
+            <span class="tag-id">LEAD BRAND TERRITORY · TOP OF FUNNEL</span>
+            <h3 style="margin-top:12px;">When a coaching session hits a wall that good questions cannot move.</h3>
+            <p style="margin-top:8px;">Shows how Myrette thinks with a client who is stuck: the first question she asks, and the moment she decides tapping is not the right tool. Mastery shows in judgment, including <strong>when NOT to use EFT</strong>.</p>
+          </div>
+          <div class="card" style="direction:rtl;text-align:right;font-family:var(--font-sans-ar);">
+            <span class="tag-id">المسار الرئيسي · قمة القمع التسويقي</span>
+            <h3 style="margin-top:12px;">لما جلسة الكوتشينج تخبط في حيطة، وحتى الأسئلة الصح مش بتحرّكها.</h3>
+            <p style="margin-top:8px;">بنوري إزاي ميريت بتفكر مع عميل واقف في نص الطريق: أول سؤال بتسأله، وإمتى بتقرر إن الـ <span class="ltr-iso">EFT</span> مش هو الأداة المناسبة. التدريب الجد بيبدأ لما تعرف إمتى تستخدم الأداة، وإمتى تسيبها في الدرج.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="territory-panel" id="terrB">
+        <div class="grid-2">
+          <div class="card" dir="ltr" style="text-align:left;">
+            <span class="tag-id">ENROLLMENT PROOF · SYLLABUS &amp; DIRECTORY</span>
+            <h3 style="margin-top:12px;">What actually happens after the two live weekends?</h3>
+            <p style="margin-top:8px;">Answers the question every serious applicant asks. Separates (1) Course Attendance: two live online weekends in Arabic, (2) Trainer Certification: practice cases, supervised peer sessions and an assessment, and (3) EFT International Accreditation: a separate pathway run by EFT International, with its own published fees (<strong>GBP 15</strong> exam, <strong>GBP 35/yr</strong> student, <strong>GBP 75/yr</strong> practitioner). Tuition and inclusions are published when applications open.</p>
+          </div>
+          <div class="card" style="direction:rtl;text-align:right;font-family:var(--font-sans-ar);">
+            <span class="tag-id">إثبات التسجيل · المنهج والدليل المعتمد</span>
+            <h3 style="margin-top:12px;">بعد ويك إندين التدريب المباشر، إيه اللي بيحصل فعلاً؟</h3>
+            <p style="margin-top:8px;">بيرد على السؤال اللي كل متقدم جاد بيسأله، وبيفصل بين: (1) حضور التدريب: ويك إندين أونلاين مباشر بالعربي، (2) شهادة المدرب: حالات تطبيق، وجلسات تبادل تحت إشراف، وتقييم، و(3) اعتماد <span class="ltr-iso">EFT International</span>: مسار منفصل بتديره المنظمة نفسها، ورسومه المنشورة 15 جنيه إسترليني للامتحان، و35 في السنة لعضوية الطالب، و75 في السنة لعضوية الممارس. الرسوم وتفاصيل البرنامج بتتنشر كاملة مع فتح التقديم.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="territory-panel" id="terrC">
+        <div class="grid-2">
+          <div class="card" dir="ltr" style="text-align:left;">
+            <span class="tag-id">SPECIALTY ENTRY · 35+ YRS ECONOMICS SPINE (VF-002)</span>
+            <h3 style="margin-top:12px;">Telling a broken offer apart from a block inside the founder.</h3>
+            <p style="margin-top:8px;">Grounded strictly in Myrette's 35+ years in economics, banking, and financial advising (never conflated with EFT years). Zero financial advice, zero Law of Attraction, zero income guarantees.</p>
+          </div>
+          <div class="card" style="direction:rtl;text-align:right;font-family:var(--font-sans-ar);">
+            <span class="tag-id">مدخل تخصصي · خبرة 35+ سنة اقتصاد وتمويل (VF-002)</span>
+            <h3 style="margin-top:12px;">إزاي تفرّق بين مشكلة في العرض نفسه، وحاجة جوّه صاحبه بتوقّفه؟</h3>
+            <p style="margin-top:8px;">مبني على خبرة ميريت السكري لأكثر من 35 عاماً في الاقتصاد والبنوك والاستشارات المالية، بدون أي وعود دخل أو كلام عن قانون الجذب أو استشارات استثمارية.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Interactive Practice-Case Demo (Wave 4 Funnel Preview) -->
+      <div class="case-widget">
+        <div class="eyebrow" style="color:var(--myr-gold);"><span class="eyebrow-dot"></span><span class="en-only">INTERACTIVE PRACTICE-CASE FUNNEL PROTOTYPE (TERRITORY A/C)</span><span class="ar-only">نموذج تفاعلي لتجربة "حالة الكوتشينج" على الموقع الجديد</span></div>
+        <h3 style="color:var(--myr-ivory);font-size:1.38rem;margin-bottom:8px;">
+          <span class="en-only">Fictional Coaching Case: A founder finished revising a client quote 3 days ago and still has not pressed send. What do you ask first?</span>
+          <span class="ar-only">حالة كوتشينج افتراضية: صاحب مشروع خلّص تعديل عرض السعر لعميل مهم من 3 أيام، ولسه ما بعتوش. ككوتش معاه، هتبدأ بإيه؟</span>
+        </h3>
+        <p style="color:rgba(250,248,244,0.78);font-size:0.88rem;margin-bottom:14px;">
+          <span class="en-only">Pick a branch to see the talking points for Myrette's recorded reply. Fictional, non-clinical case. The text below is a draft for Myrette to rewrite and record in her own words; nothing here goes live in her voice until she records it.</span>
+          <span class="ar-only">اختار إجابة عشان تشوف النقاط اللي ميريت هتسجل ردها عليها. الحالة افتراضية وغير طبية. الكلام اللي تحت مسودة، ميريت هتعيد صياغته بكلامها وتسجله بصوتها، ومفيش حاجة منه هتنزل بصوتها قبل ما تسجلها.</span>
+        </p>
+
+        <button class="case-option selected" onclick="selectCase(0, this)">
+          <span class="en-only"><strong>Branch 1:</strong> Check if the client scope and deliverables are actually agreed before touching emotions.</span>
+          <span class="ar-only"><strong>الاختيار 1:</strong> أتأكد الأول إن نطاق الشغل والمطلوب متفق عليه مع العميل، قبل ما أقرّب من أي حاجة ليها علاقة بالمشاعر.</span>
+          <span class="tag-id" style="background:var(--myr-gold);color:var(--myr-teal-deep);">NO EFT FIRST</span>
+        </button>
+        <button class="case-option" onclick="selectCase(1, this)">
+          <span class="en-only"><strong>Branch 2:</strong> Check whether the founder tested the pricing structure against comparable offers.</span>
+          <span class="ar-only"><strong>الاختيار 2:</strong> أراجع معاه التسعير: مبني على مقارنة حقيقية بالسوق، ولا رقم متخمّن؟</span>
+          <span class="tag-id">COMMERCIAL TEST</span>
+        </button>
+        <button class="case-option" onclick="selectCase(2, this)">
+          <span class="en-only"><strong>Branch 3:</strong> Explore the sudden hesitation or hidden belief showing up right before pressing send.</span>
+          <span class="ar-only"><strong>الاختيار 3:</strong> أفهم معاه التردد اللي ظهر فجأة، أو القناعة اللي بتوقّف إيده قبل ما يدوس إرسال.</span>
+          <span class="tag-id">EFT INQUIRY</span>
+        </button>
+
+        <div class="case-response" id="caseResponse"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07. PHOTOGRAPHY, WARDROBE & RVM STUDIO PLATES -->
+  <section id="studio">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">06 · PHOTOGRAPHY, WARDROBE &amp; RVM STUDIO DIRECTION</span><span class="ar-only">06 · التصوير والملابس وخلفيات الاستوديو (RVM)</span></div>
+        <h2 class="en-only">100% Real Founder Performance Inside a Sunlit Architectural World</h2>
+        <h2 class="ar-only">أداء ميريت الحقيقي بنسبة 100% داخل بيئة معمارية مشرقة</h2>
+        <p class="en-only">
+          No AI faces and no voice cloning. Myrette is filmed for real; only the room behind her changes. Background replacement keeps every natural expression and hand gesture and places her in one of these three architectural studio backdrops:
+        </p>
+        <p class="ar-only">
+          بدون أي وجوه مولّدة بالذكاء الاصطناعي وبدون استنساخ صوت. ميريت بتتصور بشكل حقيقي، واللي بيتغير هو الأوضة اللي وراها بس. تغيير الخلفية بيحافظ على ملامحها وحركة إيديها وصوتها زي ما هي، ويحطها في واحدة من الخلفيات المعمارية التلاتة دي:
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="plate-card">
+          <img src="assets/plate-01-cairo-sunlit-study-16x9.jpg" alt="Plate 01 Cairo Sunlit Study 16x9">
+          <div class="plate-card-body">
+            <h4><span class="en-only">Plate 01 · Cairo Sunlit Study (16:9)</span><span class="ar-only">خلفية 01 · مكتب القاهرة المشرق (16:9)</span></h4>
+            <p class="en-only">For YouTube teaching, webinars, Territory B syllabus walkthroughs, and horizontal interviews. Pale oak desk + arched daylight + Mediterranean teal vessel with olive branches.</p>
+            <p class="ar-only">لفيديوهات يوتيوب، والويبينار، وشرح المنهج. مكتب خشبي فاتح، شباك قوسي مشرق، ولمسة تركواز متوسطي مع أغصان زيتون.</p>
+          </div>
+        </div>
+        <div class="plate-card">
+          <img src="assets/plate-02-cairo-sunlit-study-9x16.jpg" alt="Plate 02 Cairo Sunlit Study 9x16">
+          <div class="plate-card-body">
+            <h4><span class="en-only">Plate 02 · Sunlit Study Vertical (9:16)</span><span class="ar-only">خلفية 02 · الاستوديو الرأسي للريلز (9:16)</span></h4>
+            <p class="en-only">Built specifically for Pilot Cut A / Cut B Reels &amp; Shorts. Warm travertine table edge, sunlit limestone archways, and clean headroom for captions and top-left watermark.</p>
+            <p class="ar-only">مصممة خصيصاً لإعلانات الريلز والشورتس (<span class="ltr-iso">Cut A / Cut B</span>) مع مساحة مريحة للترجمة والشعار.</p>
+          </div>
+        </div>
+        <div class="plate-card">
+          <img src="assets/plate-03-editorial-coaching-desk-3x2.jpg" alt="Plate 03 Editorial Coaching Desk 3x2">
+          <div class="plate-card-body">
+            <h4><span class="en-only">Plate 03 · Editorial Desk Still Life (3:2)</span><span class="ar-only">خلفية 03 · تفاصيل المكتب التحريري (3:2)</span></h4>
+            <p class="en-only">For Practice-Case cards, syllabus PDF covers, and Email Studio headers. Unprinted teal-linen notebook, brushed brass pen, limestone daylight, zero text or clichés.</p>
+            <p class="ar-only">لبطاقات دراسة الحالة، وأغلفة المنهج، ورؤوس الإيميلات. دفتر كتان تركواز، قلم نحاسي، وضوء طبيعي بدون أي صور محفوظة مكررة.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:24px;">
+        <div class="card">
+          <h3 class="en-only">Approved Founder Wardrobe Palette</h3>
+          <h3 class="ar-only">ألوان الملابس المعتمدة لميريت أمام الكاميرا</h3>
+          <p class="en-only" style="margin-bottom:12px;">Replaces high-contrast black-and-white geometric patterns (which cause moire shimmer &amp; RVM edge chatter) and cherry-red clashes.</p>
+          <p class="ar-only" style="margin-bottom:12px;">بديلاً للنقشات المتداخلة بالأبيض والأسود (التي تسبب اهتزاز حواف في القص) والأحمر الصريح المتنافر مع الحجر الدافئ.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <span class="hero-pill" style="background:#0D4F5C;border-color:#0D4F5C;">Solid Deep Teal Blazer</span>
+            <span class="hero-pill" style="background:#FAF8F4;color:#232524;border-color:#DDD6C9;">Warm Ivory Linen</span>
+            <span class="hero-pill" style="background:#3F3F3E;border-color:#3F3F3E;">Soft Charcoal</span>
+            <span class="hero-pill" style="background:#436854;border-color:#436854;">Olive Sage</span>
+          </div>
+        </div>
+        <div class="card card-stone">
+          <h3 class="en-only">Pilot Shoot: "One Shoot, Two Openings, One Decision"</h3>
+          <h3 class="ar-only">جلسة التصوير التجريبية الأولى (~45 دقيقة)</h3>
+          <p class="en-only"><strong>Cut A (Founder Quote Dilemma)</strong> vs. <strong>Cut B (Plain Certification Invite)</strong> shot with identical lighting &amp; wardrobe + <strong>3 prerecorded voice branches</strong> (explicitly labeled recorded · BC-007) + Territory B syllabus walkthrough. Judged strictly on eligible applications per 100 landing sessions.</p>
+          <p class="ar-only">تصوير <strong>المقطع A (حالة عرض السعر)</strong> مقابل <strong>المقطع B (دعوة مباشرة للتدريب)</strong> بنفس الإضاءة والملابس + <strong>3 ردود صوتية مسجّلة</strong> + شرح منهج المسار B، وقياس النجاح بطلبات التقديم المؤهلة لكل 100 زيارة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08. REAL-WORLD APPLICATION PREVIEWS (WAVE 4 BLUEPRINT) -->
+  <section id="applications">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">07 · APPLICATION PREVIEWS</span><span class="ar-only">07 · نماذج التطبيق الفعلي</span></div>
+        <h2 class="en-only">How the System Lives Across Web, Directory &amp; Certificates</h2>
+        <h2 class="ar-only">كيف تبدو الهوية الجديدة على الموقع والدليل والشهادات</h2>
+      </div>
+
+      <!-- Homepage Hero Mockup -->
+      <div class="mockup-browser" dir="ltr" style="margin-bottom:28px;">
+        <div class="mockup-bar">
+          <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+          <span style="margin-inline-start:10px;font-family:monospace;">myrette.com (new site) · classroom stays on learn.myrette.com</span>
+        </div>
+        <div style="padding:14px 32px;border-bottom:1px solid var(--myr-hairline);display:flex;align-items:center;justify-content:space-between;background:var(--myr-white);">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="assets/myrette-primary-bird-signature-teal.svg" alt="Nav Logo" style="height:30px;">
+            <strong style="font-size:0.8rem;letter-spacing:0.15em;color:var(--myr-teal-deep);">MYRETTE ACADEMY</strong>
+          </div>
+          <div class="mockup-nav" style="display:flex;gap:18px;font-size:0.8rem;color:var(--myr-charcoal);align-items:center;">
+            <span>Certification</span><span>Practice Case</span><span>Practitioners Directory</span>
+            <span style="background:var(--myr-teal);color:var(--myr-ivory);padding:6px 14px;border-radius:8px;font-weight:600;">Apply for Cohort</span>
+          </div>
+        </div>
+        <div class="mockup-hero">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>EFT PRACTITIONER CERTIFICATION · LIVE ONLINE, IN ARABIC</div>
+            <h2 style="font-size:2.15rem;margin-bottom:12px;">When a coaching session hits a wall that good questions cannot move.</h2>
+            <p style="font-size:0.94rem;color:var(--myr-muted);margin-bottom:20px;">
+              Two live weekends of structured EFT training for coaches who already have clients. Taught in Arabic by Myrette El Sokkari, a Cairo-based Accredited Certified EFT Master Trainer, listed by EFT International in Arabic and English.
+            </p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <span class="btn-primary">Try a Stuck Coaching Case</span>
+              <span class="btn-gold">See What Happens After the Weekends</span>
+            </div>
+          </div>
+          <div>
+            <img src="assets/plate-03-editorial-coaching-desk-3x2.jpg" alt="Editorial Desk Preview" style="width:100%;border-radius:14px;box-shadow:var(--shadow-card);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Directory Card + Certificate Mockup -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">ACCREDITED PRACTITIONERS DIRECTORY CARD</span><span class="ar-only">بطاقة دليل الممارسين المعتمدين</span></div>
+          <div dir="ltr" style="background:var(--myr-ivory);border:1px solid var(--myr-hairline);border-radius:14px;padding:22px;margin-top:8px;text-align:left;">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img src="assets/myrette-avatar-teal-gold-512.png" alt="Badge" style="width:46px;height:46px;border-radius:12px;">
+                <div>
+                  <strong style="display:block;color:var(--myr-ink-deep);">[Graduate name, shown only with written consent]</strong>
+                  <span style="font-size:0.8rem;color:var(--myr-muted);">Cairo / Online · Arabic &amp; English</span>
+                </div>
+              </div>
+              <span style="background:var(--myr-sage-soft);color:var(--myr-sage);font-size:0.74rem;font-weight:700;padding:4px 10px;border-radius:999px;">Trainer Certified</span>
+            </div>
+            <p style="font-size:0.84rem;color:var(--myr-charcoal);margin-bottom:12px;">
+              Attended the live cohort, completed supervised peer practice and passed the trainer assessment at Myrette Academy. Non-clinical coaching practice.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;font-size:0.76rem;color:var(--myr-muted);border-top:1px solid var(--myr-hairline);padding-top:10px;">
+              <span>Attendance ✓ · Trainer Certification ✓ · EFTi accreditation: check EFT International's own directory</span>
+              <span style="color:var(--myr-teal);font-weight:700;">Verify Credential →</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-mockup" dir="ltr">
+          <img src="assets/myrette-bird-arc-emblem-teal.svg" alt="Certificate Crest" style="height:56px;margin:0 auto 10px;display:block;">
+          <div style="font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--myr-gold-text);font-weight:700;">MYRETTE ACADEMY · أكاديمية ميريت</div>
+          <h3 class="serif-en" style="font-size:1.75rem;color:var(--myr-teal-deep);margin:8px 0 4px;">Certificate of Attendance</h3>
+          <div class="serif-ar" dir="rtl" style="font-size:1.15rem;color:var(--myr-charcoal);margin-bottom:14px;">شهادة حضور تدريب ممارسي الـ EFT</div>
+          <p style="font-size:0.78rem;color:var(--myr-muted);max-width:360px;margin:0 auto 18px;">
+            Awarded for attending the live EFT practitioner training. Attendance is a separate milestone from Trainer Certification and from EFT International accreditation.
+          </p>
+          <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--myr-hairline);padding-top:14px;">
+            <img src="assets/myrette-signature-only-teal.svg" alt="Myrette Signature" style="height:34px;">
+            <img src="assets/eft-international-official.png" alt="EFTi Logo" style="height:30px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09. COMPLIANCE FIREWALLS & WAVE 4 DECISION GATES -->
+  <section id="governance">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span class="en-only">08 · COMPLIANCE RULES &amp; OPEN QUESTIONS</span><span class="ar-only">08 · ضوابط الامتثال والأسئلة المفتوحة</span></div>
+        <h2 class="en-only">Zero-Tolerance Guardrails Built Directly Into the Brand Kit</h2>
+        <h2 class="ar-only">ضوابط غير قابلة للتجاوز مدمجة داخل ملف الهوية</h2>
+      </div>
+
+      <div class="table-wrap" dir="ltr">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th><span class="en-only">Hard Rule / Gate</span><span class="ar-only">القاعدة أو البوابة</span></th>
+              <th><span class="en-only">Enforcement Standard</span><span class="ar-only">معيار التطبيق</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag-id tag-crit">BC-001</span></td>
+              <td><strong>No "Only EFT Master Trainer in the Middle East"</strong></td>
+              <td>Always use VF-001: <em>"Cairo-based Accredited Certified EFT Master Trainer, listed by EFT International in Arabic and English."</em></td>
+            </tr>
+            <tr>
+              <td><span class="tag-id tag-crit">BC-002</span></td>
+              <td><strong>Separate 35+ Years Economics from EFT Tenure</strong></td>
+              <td>35+ years is strictly economics &amp; financial advising (AUC, banking, EGX, USAID, World Bank, EFA). Exact EFT start year pending <code>UV-005</code>.</td>
+            </tr>
+            <tr>
+              <td><span class="tag-id tag-crit">BC-003 / 004</span></td>
+              <td><strong>Zero Medical Cures, Med-Stopping, or Income Guarantees</strong></td>
+              <td>Educational non-clinical practitioner training only. Legacy <code>myrette.com/casestudy/</code> quick-results claims and 33 flagged archive clips stay quarantined.</td>
+            </tr>
+            <tr>
+              <td><span class="tag-id tag-crit">BC-006</span></td>
+              <td><strong>Myrette Academy Stays Separate From Edrak Space</strong></td>
+              <td>No shared email lists, contacts, ad accounts or joint videos between the two brands.</td>
+            </tr>
+            <tr>
+              <td><span class="tag-id tag-crit">BC-010</span></td>
+              <td><strong>Kuwait Excluded + No Energy-Healing Framing</strong></td>
+              <td>Per Kuwait MOH Ministerial Decision No. 225 of 2026 (Aug 2026): hard-exclude <code>KW</code> from paid EFT ads; zero Law of Attraction, vortex, chakra, or Reiki language.</td>
+            </tr>
+            <tr>
+              <td><span class="tag-id tag-crit">BC-007 / 009</span></td>
+              <td><strong>No AI Voice Cloning · No White on #EEBA2B</strong></td>
+              <td>Real recorded audio (labeled recorded) or batched real replies only. Dark ink (#3F3F3E / #08353E) on Heritage Gold only.</td>
+            </tr>
+            <tr>
+              <td><span class="tag-id tag-gate">UV-001..007</span></td>
+              <td><strong>Pending Client Onboarding Confirmations</strong></td>
+              <td>Confirm USD 3,500 / EGP tuition inclusions (<code>UV-001</code>), active IG handle &amp; Meta BM (<code>UV-002</code>), WhatsApp <code>+201222431939</code> (<code>UV-003</code>), WP/DNS/GA4 (<code>UV-004</code>), EFT start year &amp; 4 books (<code>UV-005</code>), trainee releases &amp; "Website" Drive photos (<code>UV-006</code>), and 5k email list consent hygiene before Resend import (<code>UV-007</code>).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div>
+        <strong style="color:var(--myr-ivory);">Myrette Academy · Brand Identity Book (v1.1)</strong><br>
+        <span>Prepared by Admireworks for Myrette Academy</span>
+      </div>
+      <div style="font-family:monospace;font-size:0.78rem;color:var(--myr-gold);">
+        v1.1 · 27 Nov 2026
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script>
+    function setLang(lang) {
+      const root = document.getElementById('docRoot');
+      root.setAttribute('lang', lang);
+      root.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+      document.getElementById('btnAr').classList.toggle('active', lang === 'ar');
+      renderCaseResponse(currentCaseIdx);
+    }
+
+    function setLogoSurface(bg, btn) {
+      const stage = document.getElementById('logoStage');
+      stage.setAttribute('data-bg', bg);
+      document.querySelectorAll('.surface-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const variant = (bg === 'ivory') ? 'teal' : (bg === 'teal' ? 'gold' : (bg === 'charcoal' ? 'ivory' : 'charcoal'));
+      document.getElementById('logoPrimary').src = `assets/myrette-primary-bird-signature-${variant}.svg`;
+      document.getElementById('logoSig').src = `assets/myrette-signature-only-${variant}.svg`;
+      document.getElementById('logoBird').src = `assets/myrette-bird-emblem-${variant}.svg`;
+      document.getElementById('logoArc').src = `assets/myrette-bird-arc-emblem-${variant}.svg`;
+    }
+
+    function copyHex(hex) {
+      if (navigator.clipboard) navigator.clipboard.writeText(hex);
+      const t = document.getElementById('toast');
+      t.textContent = `Copied ${hex}`;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 1600);
+    }
+
+    const CAPTIONS = [
+      'لو <span class="phone-caption-hi">إنت كوتش</span> ولقيت نفسك واقف مع العميل في نص الرحلة...',
+      'صاحب مشروع خلص <span class="phone-caption-hi">عرض السعر</span> من 3 أيام ولسه ما بعتوش... تسأله إيه الأول؟',
+      'شهادة الحضور غير شهادة المدرب، واعتماد <span class="phone-caption-hi" dir="ltr">EFT International</span> مسار تالت لوحده.'
+    ];
+    function setCaption(idx, btn) {
+      document.getElementById('simCaption').innerHTML = CAPTIONS[idx];
+      document.querySelectorAll('.caption-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    let szVisible = true;
+    function toggleSafeZone() {
+      szVisible = !szVisible;
+      document.getElementById('safeZoneOverlay').classList.toggle('hidden', !szVisible);
+      document.getElementById('szToggle').innerHTML = szVisible
+        ? '<span class="en-only">Hide Platform Safe-Zone Overlay</span><span class="ar-only">إخفاء خطوط منطقة الأمان</span>'
+        : '<span class="en-only">Show Platform Safe-Zone Overlay</span><span class="ar-only">إظهار خطوط منطقة الأمان</span>';
+    }
+
+    function setTerritory(key, btn) {
+      ['A', 'B', 'C'].forEach(k => {
+        document.getElementById('terr' + k).classList.toggle('active', k === key);
+      });
+      document.querySelectorAll('.tab-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    let currentCaseIdx = 0;
+    const CASE_RESPONSES = [
+      {
+        enTitle: "Talking points for Myrette (Branch 1 · No EFT yet):",
+        enBody: "A good first check. Before any tapping, confirm the scope and deliverables are agreed with the client. If the founder is hesitating because the offer itself is unclear, a clear business conversation fixes it, and no technique replaces that. Knowing this is what makes a disciplined practitioner.",
+        arTitle: "نقاط لرد ميريت (الاختيار 1 · لسه مش وقت الـ EFT):",
+        arBody: "بداية كويسة. قبل أي تابينج، نتأكد إن نطاق الشغل والمطلوب متفق عليه مع العميل. لو التردد جاي من إن العرض نفسه مش واضح، يبقى الحل كلام بيزنس واضح، ومفيش تقنية هتعمل ده بداله. والفرق ده هو اللي بيميز الممارس المحترف."
+      },
+      {
+        enTitle: "Talking points for Myrette (Branch 2 · Check the price first):",
+        enBody: "Check whether the number is grounded in the market before anything else. This is where Myrette's years in economics and financial advising show. If the founder agrees the price is fair and still freezes in front of the send button, that is the signal to move from the commercial question to the inner one.",
+        arTitle: "نقاط لرد ميريت (الاختيار 2 · نراجع السعر الأول):",
+        arBody: "نتأكد الأول إن الرقم منطقي ومقارن بالسوق، وده مكان خبرة ميريت في الاقتصاد والاستشارات المالية. لو صاحب المشروع مقتنع إن السعر عادل، وبرضه واقف متجمد قدام زرار الإرسال، هنا بس ننتقل من سؤال البيزنس للسؤال اللي جوّاه."
+      },
+      {
+        enTitle: "Talking points for Myrette (Branch 3 · Where EFT comes in):",
+        enBody: "Once scope and price are settled, a sudden freeze right before sending often points to something specific inside, what Myrette calls hidden loyalty or the money thermostat. Here a trained practitioner works with EFT on that exact moment, rather than on general positive affirmations.",
+        arTitle: "نقاط لرد ميريت (الاختيار 3 · هنا يدخل الـ EFT):",
+        arBody: "بعد ما نطمن إن العرض والسعر مظبوطين، التجمد المفاجئ قبل الإرسال غالباً وراه حاجة محددة جوّاه، زي الولاء المستخبي أو ثرموستات الفلوس. هنا الممارس المدرّب بيشتغل بالـ EFT على اللحظة دي بالظبط، بدل التوكيدات العامة."
+      }
+    ];
+    function selectCase(idx, btn) {
+      currentCaseIdx = idx;
+      document.querySelectorAll('.case-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      renderCaseResponse(idx);
+    }
+    function renderCaseResponse(idx) {
+      const lang = document.getElementById('docRoot').getAttribute('lang') || 'en';
+      const r = CASE_RESPONSES[idx];
+      document.getElementById('caseResponse').innerHTML = lang === 'ar'
+        ? `<strong>${r.arTitle}</strong><p>${r.arBody}</p>`
+        : `<strong>${r.enTitle}</strong><p>${r.enBody}</p>`;
+    }
+    renderCaseResponse(0);
+  </script>
+</body>
+</html>

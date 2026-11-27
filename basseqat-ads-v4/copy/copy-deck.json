@@ -1,0 +1,94 @@
+{
+  "wave": "basseqat-ads-v4",
+  "ledger": "Basseqat BSQ-242 (replaces BSQ-187's «GCC | C8 departure»), Desk AWD-PHSP",
+  "written": "2026-11-08",
+  "brief": "Eman, 5 Nov on basseqat-ads-v3: keep «الغربة ليها آخر.. حضّرله» running and funded until a new design; the new one is about being abroad, so farm photos are not required; people must be real, never AI; they should read as Egyptians living abroad; make it creative. Owner, 8 Nov: real photos with NO recognisable face (no model releases on stock).",
+  "rules": {
+    "imagery": "Real Unsplash photographs only (free Unsplash License, hash-pinned in assets/source/PROVENANCE.jsonl), no recognisable face, no readable airline or card logo, no image model anywhere. No «من أرض الواقع» label: these are not farm photos.",
+    "copy": "Egyptian colloquial. No guaranteed or safe returns, no return percentage, no em dash, booklet is «بروشور باسقات». The body is v3 concept A's reviewed text (facts from the live expat page, start?v=expat); only the opening line changes per concept.",
+    "ctaButton": "LEARN_MORE on every Meta ad (same as C8). Flat CTA line on the image, never a painted button."
+  },
+  "concepts": {
+    "a": {
+      "key": "a-airport-window",
+      "replaces": "GCC | C8 departure (52553091092472)",
+      "adset": "GCC Expats (52540611423072)",
+      "destination": "https://start.basseqat.com/start?v=expat",
+      "photo": "airport-window-man.jpg",
+      "onImage": {
+        "headline": "الغربة ليها آخر.. حضّرله",
+        "sub": "بأصل حقيقي في واحة الفرافرة",
+        "cta": "اطلب بروشور باسقات"
+      },
+      "meta": {
+        "headline": "باسقات: أصلها ثابت.. ويزيد",
+        "linkDescription": "سيب رقمك ونبعتلك بروشور باسقات على الواتساب",
+        "cta": "LEARN_MORE",
+        "primaryText": [
+          "سنين بتعدّي في الشغل والسفر، وكل مرة بترجع فيها مصر بتسأل نفسك نفس السؤال: أنا بنيت هنا إيه؟",
+          "العقار غالي ومحتاج متابعة. والدهب بيحافظ على قيمته بس مش بيجيب دخل. والفلوس في البنك التضخم بياكلها.",
+          "فيه اختيار تاني: مشاركة في مشروع نخيل مجدول في واحة الفرافرة، بإدارة احترافية كاملة، وتقارير بتوصلك وإنت في مكانك.",
+          "الأرض مخصصة بأمر تخصيص رسمي من محافظة الوادي الجديد، والآبار محفورة، وشبكة الري موجودة.",
+          "والنخل أصل بياخد وقته: الإنتاج بيبدأ من السنة الرابعة تقريباً، وبنوضّحلك الأرقام كلها في المحادثة.",
+          "افهم الأول وبعدين قرر، ومن غير ما حد يستعجلك. اطلب بروشور باسقات، أو ابدأ محادثة على الواتساب."
+        ]
+      },
+      "why": "نفس الجملة اللي شغالة كويس مع المصريين في الخليج، والصورة لراجل واقف فعلاً في المطار وضهره لينا، بيبص على الطيارات. اللي شايف الإعلان يحط نفسه مكانه.",
+      "photoNote": "صورة من موقع Unsplash اتصورت فعلاً (مصوّر: Nick Page)، مش معمولة بالذكاء الاصطناعي. الراجل ضهره للكاميرا فمحدش يقدر يعرفه، واتقصّت من غير أي لوجو شركة طيران."
+    },
+    "b": {
+      "key": "b-gate-sunset",
+      "replaces": "GCC | C8 departure (52553091092472)",
+      "adset": "GCC Expats (52540611423072)",
+      "destination": "https://start.basseqat.com/start?v=expat",
+      "photo": "gate-seats-sunset.jpg",
+      "onImage": {
+        "headline": "كل سفرية ليها رجعة",
+        "sub": "جهّز لرجعتك أصل في الفرافرة",
+        "cta": "اطلب بروشور باسقات"
+      },
+      "meta": {
+        "headline": "باسقات: أصلها ثابت.. ويزيد",
+        "linkDescription": "سيب رقمك ونبعتلك بروشور باسقات على الواتساب",
+        "cta": "LEARN_MORE",
+        "primaryText": [
+          "كل مرة بتقعد في المطار مستني طيارة الرجوع، بتعدّ السنين اللي فاتت وبتسأل نفسك: أنا جهزت إيه لما أرجع؟",
+          "العقار غالي ومحتاج متابعة. والدهب بيحافظ على قيمته بس مش بيجيب دخل. والفلوس في البنك التضخم بياكلها.",
+          "فيه اختيار تاني: مشاركة في مشروع نخيل مجدول في واحة الفرافرة، بإدارة احترافية كاملة، وتقارير بتوصلك وإنت في مكانك.",
+          "الأرض مخصصة بأمر تخصيص رسمي من محافظة الوادي الجديد، والآبار محفورة، وشبكة الري موجودة.",
+          "والنخل أصل بياخد وقته: الإنتاج بيبدأ من السنة الرابعة تقريباً، وبنوضّحلك الأرقام كلها في المحادثة.",
+          "افهم الأول وبعدين قرر، ومن غير ما حد يستعجلك. اطلب بروشور باسقات، أو ابدأ محادثة على الواتساب."
+        ]
+      },
+      "why": "كراسي المطار الفاضية وقت الغروب: اللحظة اللي كل مغترب عارفها قبل السفر. الإعلان بيكلمه عن الرجعة نفسها، مش عن الغربة.",
+      "photoNote": "صورة من موقع Unsplash اتصورت فعلاً (مصوّر: Aaron Mrvelj)، مش معمولة بالذكاء الاصطناعي، ومفيش فيها أي حد."
+    },
+    "c": {
+      "key": "c-dubai-window",
+      "replaces": "GCC | C8 departure (52553091092472)",
+      "adset": "GCC Expats (52540611423072)",
+      "destination": "https://start.basseqat.com/start?v=expat",
+      "photo": "dubai-night-window.jpg",
+      "onImage": {
+        "headline": "المنظر ده مش بيتك",
+        "sub": "حضّر لرجعتك بأصل في الفرافرة",
+        "cta": "اطلب بروشور باسقات"
+      },
+      "meta": {
+        "headline": "باسقات: أصلها ثابت.. ويزيد",
+        "linkDescription": "سيب رقمك ونبعتلك بروشور باسقات على الواتساب",
+        "cta": "LEARN_MORE",
+        "primaryText": [
+          "المنظر من شباكك حلو، بس إنت عارف إنه مش بيتك. وكل سنة بتعدّي بتسأل نفسك: أنا بنيت إيه في مصر؟",
+          "العقار غالي ومحتاج متابعة. والدهب بيحافظ على قيمته بس مش بيجيب دخل. والفلوس في البنك التضخم بياكلها.",
+          "فيه اختيار تاني: مشاركة في مشروع نخيل مجدول في واحة الفرافرة، بإدارة احترافية كاملة، وتقارير بتوصلك وإنت في مكانك.",
+          "الأرض مخصصة بأمر تخصيص رسمي من محافظة الوادي الجديد، والآبار محفورة، وشبكة الري موجودة.",
+          "والنخل أصل بياخد وقته: الإنتاج بيبدأ من السنة الرابعة تقريباً، وبنوضّحلك الأرقام كلها في المحادثة.",
+          "افهم الأول وبعدين قرر، ومن غير ما حد يستعجلك. اطلب بروشور باسقات، أو ابدأ محادثة على الواتساب."
+        ]
+      },
+      "why": "دبي بالليل من شباك عالي، المنظر اللي المغترب بيشوفه كل يوم. الصورة من غير أشخاص، بس اللي شايفها حاسس إنه هو اللي واقف ورا الشباك.",
+      "photoNote": "صورة من موقع Unsplash اتصورت فعلاً (مصوّر: Zanyar G)، مش معمولة بالذكاء الاصطناعي، ومفيش فيها أي حد."
+    }
+  }
+}
